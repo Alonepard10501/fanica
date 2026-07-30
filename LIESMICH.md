@@ -1,33 +1,28 @@
 # FaNiCa — Entwickler-Website
 
+## 🌐 Die Seite ist online
+
+**https://alonepard10501.github.io/fanica/**
+
 Deine Seite als Entwickler: Wer du bist, was du gebaut hast, wo man es bekommt.
-Drei Kapitel — Instinct Scoring, FaNiCa Fun, NeonPunkt — plus „Über mich" und Kontakt.
+Drei Kapitel — Instinct Scoring, FaNiCa Fun, NeonPunkt — plus „Über mich" und
+Kontakt. Vollständig auf Deutsch und Englisch (Knopf oben rechts).
 
 ---
 
-## ✅ Bereit zum Veröffentlichen
+## Etwas ändern und neu veröffentlichen
 
-Die Anschrift steht im Impressum (Am Hasselberg 19, 25813 Husum) — an zwei Stellen:
-als eigene Seite `impressum.html` und als **aufklappbarer Bereich** unten auf der
-Startseite, direkt neben einem ebenso aufklappbaren Kontaktbereich.
+Der Webseiten-Ordner ist gleichzeitig das Git-Repository. Nach einer Änderung:
 
-**Warum das nötig war, obwohl es nur GitHub Pages ist:** Die Impressumspflicht
-hängt an der öffentlichen Abrufbarkeit, nicht an einer gekauften Domain. Eine
-öffentliche `github.io`-Seite, die Apps mit Abos vorstellt, gilt als geschäftsmäßig
-(§ 5 DDG). Mit der Anschrift ist das erledigt.
+```bash
+cd "C:\Users\falkc\Desktop\KI-Studio\Obsidian Vault\Projekte\Webseite"
+git add -A
+git commit -m "Was du geändert hast"
+git push
+```
 
-### Zwei Dinge, die nur noch schöner wären
-
-**1. Zwei Instinct-Screenshots sind rechts angeschnitten** — man sieht es am Text
-„Internet ist nie Vorausse**tzu**" und am letzten Navi-Symbol „M**e**". Das steckt
-schon in deiner Original-Aufnahme; ich habe alle drei Store-Fassungen geprüft
-(Apple 6.7", Apple 6.5", Google Play), überall derselbe Anschnitt. Nachbearbeiten
-hilft nicht — die Pixel fehlen. Nimm Startseite und „Neue Runde" einmal neu auf,
-dann baue ich sie in einer Minute ein.
-
-**2. Die englische Fassung ist erst zu 7 % gefüllt** (15 von 227 Textstellen).
-Der EN-Knopf ist deshalb ausgeblendet. Sobald der `en:`-Block in `texte.js` steht,
-einfach das `hidden` am `#sprachknopf` entfernen — mehr ist nicht nötig.
+Nach etwa einer Minute ist es live. Der Ordner `_nicht-verwendet/` wird dabei
+automatisch ausgelassen.
 
 ---
 
