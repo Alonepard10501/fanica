@@ -742,12 +742,31 @@ de: {
     kennung: "Kapitel 05",
     titel: "Schreib mir",
     text: "Fragen zu einer App, ein Fehler gefunden, eine Idee? Ich lese jede Mail selbst — es gibt ja niemand anderen.",
-    knopf: "falkcarstensen@web.de",
-    mail: "falkcarstensen@web.de",
+    knopf: "fanicafuntipp@gmail.com",
+    mail: "fanicafuntipp@gmail.com",
 
     /* --- Aufklappbarer Kontaktbereich (Falk 30.07.) --- */
-    klappTitel: "Kontakt aufnehmen",
-    klappText: "Am schnellsten geht es per E-Mail. Schreib einfach, worum es geht — ich antworte meist noch am selben Tag.",
+    klappTitel: "Nachricht schreiben",
+    klappText: "Wähle ein Thema, trag deinen Namen und deine E-Mail ein und schreib, worum es geht. Beim Absenden öffnet sich dein E-Mail-Programm mit der fertigen Nachricht — du musst sie nur noch abschicken.",
+
+    /* --- Formularfelder --- */
+    formThema: "Worum geht es?",
+    formThemen: [
+      "Fehler in einer App",
+      "Wunsch für eine Funktion",
+      "Frage zum Abo",
+      "Frage zu einer App",
+      "Etwas anderes"
+    ],
+    formName: "Dein Name",
+    formNamePlatz: "Vorname genügt",
+    formMail: "Deine E-Mail",
+    formMailPlatz: "damit ich antworten kann",
+    formText: "Deine Nachricht",
+    formTextPlatz: "Schreib einfach los …",
+    formKnopf: "Nachricht schreiben",
+    formHinweis: "Es öffnet sich dein E-Mail-Programm mit allem schon eingetragen. Nichts wird von dieser Seite aus verschickt oder gespeichert.",
+    formFehlt: "Bitte fülle Thema, Name und Nachricht aus.",
     wobei: [
       { was: "Fehler gefunden", text: "Schreib mir, welche App, welches Gerät und was passiert ist. Ein Screenshot hilft sehr." },
       { was: "Funktion gewünscht", text: "Sag mir, was dir fehlt und warum. Vieles ist schneller gebaut, als man denkt." },
@@ -1499,11 +1518,29 @@ en: {
     kennung: "Chapter 05",
     titel: "Write to me",
     text: "Questions about an app, found a bug, got an idea? I read every email myself — there's nobody else.",
-    knopf: "falkcarstensen@web.de",
-    mail: "falkcarstensen@web.de",
+    knopf: "fanicafuntipp@gmail.com",
+    mail: "fanicafuntipp@gmail.com",
 
-    klappTitel: "Get in touch",
-    klappText: "Email is quickest. Just write what it's about — I usually answer the same day.",
+    klappTitel: "Write a message",
+    klappText: "Pick a topic, enter your name and email and write what it's about. When you send, your email program opens with the message ready — you just hit send.",
+
+    formThema: "What's it about?",
+    formThemen: [
+      "A bug in an app",
+      "A feature request",
+      "Question about the subscription",
+      "Question about an app",
+      "Something else"
+    ],
+    formName: "Your name",
+    formNamePlatz: "first name is enough",
+    formMail: "Your email",
+    formMailPlatz: "so I can reply",
+    formText: "Your message",
+    formTextPlatz: "Just start writing …",
+    formKnopf: "Write the message",
+    formHinweis: "Your email program opens with everything filled in. Nothing is sent or stored from this page.",
+    formFehlt: "Please fill in topic, name and message.",
     wobei: [
       { was: "Found a bug", text: "Tell me which app, which device and what happened. A screenshot helps a lot." },
       { was: "Want a feature", text: "Tell me what's missing and why. Plenty of things are quicker to build than you'd think." },

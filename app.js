@@ -655,6 +655,66 @@
   }
 
   /* ========================================================
+     10b) KONTAKTFORMULAR
+     Eine reine HTML-Seite kann selbst keine Mail verschicken. Das
+     Formular baut deshalb eine fertige mailto-Nachricht und oeffnet
+     damit das E-Mail-Programm des Besuchers. Von dieser Seite aus
+     wird nichts verschickt und nichts gespeichert.
+     ======================================================== */
+  const KONTAKT_MAIL = "fanicafuntipp@gmail.com";
+
+  function formularEinrichten() {
+    const form = document.getElementById("kontakt-form");
+    if (!form) return;
+
+    const thema  = document.getElementById("kf-thema");
+    const name   = document.getElementById("kf-name");
+    const mail   = document.getElementById("kf-mail");
+    const text   = document.getElementById("kf-text");
+    const fehler = document.getElementById("kf-fehler");
+
+    // Themenauswahl aus texte.js fuellen
+    const themen = T("kontakt.formThemen") || [];
+    if (thema) {
+      thema.innerHTML = themen.map(function (t) {
+        const sicher = String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+                                .replace(/"/g, "&quot;");
+        return '<option value="' + sicher + '">' + sicher + '</option>';
+      }).join("");
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const fehlt = !name.value.trim() || !text.value.trim();
+      if (fehler) fehler.hidden = !fehlt;
+      if (fehlt) {
+        (!name.value.trim() ? name : text).focus();
+        return;
+      }
+
+      const betreff = "[FaNiCa] " + (thema ? thema.value : "Nachricht");
+      const koerper =
+        text.value.trim() + "\n\n" +
+        "---\n" +
+        "Von: " + name.value.trim() +
+        (mail.value.trim() ? "\nAntwort an: " + mail.value.trim() : "") +
+        "\nGesendet ueber die FaNiCa-Website";
+
+      window.location.href = "mailto:" + KONTAKT_MAIL +
+        "?subject=" + encodeURIComponent(betreff) +
+        "&body=" + encodeURIComponent(koerper);
+    });
+
+    // Tippt jemand nach einer Fehlermeldung weiter, verschwindet sie
+    [name, text].forEach(function (f) {
+      if (f) f.addEventListener("input", function () {
+        if (fehler) fehler.hidden = true;
+      });
+    });
+  }
+
+  /* ========================================================
      11) JAHR IM FUSS
      ======================================================== */
   function jahrEinrichten() {
@@ -848,6 +908,7 @@
     qrEinrichten();
     spurenEinrichten();
     markenpunkteEinrichten();
+    formularEinrichten();
     jahrEinrichten();
     fortschrittEinrichten();
     neigenEinrichten();

@@ -1464,6 +1464,71 @@ h1.hero-text,
 .klapp-inhalt .begriffe { margin-top: 1.2rem; }
 .klapp-inhalt .preis { margin-top: 1.2rem; }
 
+
+/* ---- Kontaktformular ---- */
+.kformular {
+  display: grid; gap: 1rem;
+  margin-top: 1.4rem;
+}
+@media (min-width: 640px) {
+  .kformular { grid-template-columns: 1fr 1fr; }
+  .kfeld-breit { grid-column: 1 / -1; }
+}
+.kfeld { display: grid; gap: .4rem; }
+.kfeld > span {
+  font-size: .78rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--grau); font-weight: 600;
+}
+.kfeld input, .kfeld select, .kfeld textarea {
+  width: 100%; font: inherit; font-size: .92rem;
+  color: var(--creme);
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: var(--radius);
+  padding: .7rem .9rem;
+  transition: border-color .3s var(--weich), background .3s var(--weich);
+}
+.kfeld textarea { resize: vertical; min-height: 120px; line-height: 1.55; }
+.kfeld select {
+  appearance: none;
+  /* Pfeil als Hintergrundbild, damit kein fremdes Symbol nötig ist */
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--akzent-hell) 50%),
+    linear-gradient(135deg, var(--akzent-hell) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 2.4rem;
+}
+.kfeld select option { background: #12140F; color: var(--creme); }
+.kfeld input::placeholder, .kfeld textarea::placeholder { color: rgba(154,160,166,.6); }
+.kfeld input:focus, .kfeld select:focus, .kfeld textarea:focus {
+  outline: none;
+  border-color: var(--akzent);
+  background: rgba(255,255,255,.07);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--akzent) 22%, transparent);
+}
+.kformular button { width: 100%; margin-top: .3rem; }
+.kf-hinweis {
+  margin: .9rem 0 0; font-size: .78rem; color: var(--grau);
+  line-height: 1.5;
+}
+.kf-fehler {
+  margin: .7rem 0 0; font-size: .84rem; font-weight: 600;
+  color: var(--rot-hell);
+}
+
+/* Name im Fuß als Mail-Link */
+.fuss-mail {
+  color: var(--grau); text-decoration: none;
+  border-bottom: 1px dotted rgba(255,255,255,.3);
+  transition: color .3s, border-color .3s;
+}
+.fuss-mail:hover {
+  color: var(--creme);
+  border-bottom-color: var(--akzent-hell);
+}
+
 /* ---- Vergleichstabelle der drei Apps ---- */
 .vergleich {
   width: 100%; border-collapse: collapse;
