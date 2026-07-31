@@ -11,6 +11,94 @@
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
+  /* ============================================================
+     WO ES DIE APPS GIBT — die EINE Wahrheit für alle Seiten.
+     Hier stehen die echten Paket-IDs (Android) und ASC-App-IDs
+     (Apple) sowie die Browser-Fassungen. Ändert sich etwas, wird
+     es NUR hier geändert — Startseite und Unterseiten holen es
+     sich von hier.
+
+     🔴 STATUS je Weg (Stand 31.07.2026, alle sechs Store-Seiten
+     liefern geprüft 404 — deshalb sind sie noch keine Links):
+       "live"    = öffentlich erreichbar, wird zum Knopf
+       "test"    = Google Play, geschlossener Test (Falk 31.07.)
+       "pruefung"= Apple prüft noch
+     Sobald etwas freigegeben ist, hier auf "live" setzen —
+     mehr ist nicht nötig, Startseite und Unterseiten ziehen nach.
+     ============================================================ */
+  const BEZUG = {
+    fanica: {
+      android: "https://play.google.com/store/apps/details?id=com.fanica.fun",
+      apple:   "https://apps.apple.com/de/app/id6795424070",
+      browser: "https://alonepard10501.github.io/fanica-fun/spiel/",
+      standAndroid: "test", standApple: "pruefung", stil: "b-ripple"
+    },
+    instinct: {
+      android: "https://play.google.com/store/apps/details?id=de.bogensportinstinct.instinct_scoring",
+      apple:   "https://apps.apple.com/de/app/id6795424223",
+      browser: "https://alonepard10501.github.io/instinct-scoring/",
+      standAndroid: "test", standApple: "pruefung", stil: "b-grass"
+    },
+    neonpunkt: {
+      android: "https://play.google.com/store/apps/details?id=de.fanica.neonpunkt",
+      apple:   "https://apps.apple.com/de/app/id6795088815",
+      browser: "https://alonepard10501.github.io/fanica-fun/neonpunkt/",
+      standAndroid: "test", standApple: "pruefung", stil: "b-helix"
+    }
+  };
+  window.BEZUG = BEZUG;   // damit app.js dieselben Adressen nutzt
+
+  /* Baut die Drei-Wege-Leiste: Android · Apple · Browser.
+     Nur ein „live"-Weg wird zum echten Link. Alles andere ist ein
+     <span> mit der ehrlichen Beschriftung — so klickt niemand auf
+     eine 404-Seite und weiß trotzdem, woran er ist. */
+  function bezugsLeiste(schluessel, hol) {
+    const b = BEZUG[schluessel];
+    if (!b) return "";
+    const wege = [
+      { art: "android", ziel: b.android, stand: b.standAndroid,
+        knopf: hol("aktion.androidKnopf"), unter: hol("aktion.androidUnter") },
+      { art: "apple",   ziel: b.apple,   stand: b.standApple,
+        knopf: hol("aktion.appleKnopf"),   unter: hol("aktion.appleUnter") },
+      { art: "browser", ziel: b.browser, stand: "live",
+        knopf: hol("aktion.browserKnopf"), unter: hol("aktion.browserUnter") }
+    ];
+    /* Beschriftung und Erklärung je Zustand */
+    const wartetext = (stand) => stand === "test"
+      ? hol("aktion.standTest") : hol("aktion.standPruefung");
+    const offen = wege.filter(w => w.stand !== "live");
+
+    return `
+      <div class="bezug">
+        ${wege.map(w => w.stand === "live" ? `
+          <a class="bezug-weg bezug-${w.art}" href="${sicher(w.ziel)}"
+             target="_blank" rel="noopener">
+            <span class="bezug-zeichen" aria-hidden="true">${ZEICHEN[w.art]}</span>
+            <span class="bezug-text"><b>${sicher(w.knopf)}</b>
+              <em>${sicher(w.unter)}</em></span>
+          </a>` : `
+          <span class="bezug-weg bezug-${w.art} bezug-wartet">
+            <span class="bezug-zeichen" aria-hidden="true">${ZEICHEN[w.art]}</span>
+            <span class="bezug-text"><b>${sicher(w.knopf)}</b>
+              <em>${sicher(wartetext(w.stand))}</em></span>
+          </span>`).join("")}
+      </div>
+      ${offen.length ? `<p class="bezug-hinweis">${sicher(hol("aktion.bezugHinweis"))}</p>` : ""}`;
+  }
+
+  /* Schlichte, selbstgezeichnete Zeichen — keine fremden Logos
+     (Marken-Richtlinien von Apple und Google), kein Nachladen. */
+  const ZEICHEN = {
+    android: `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+      <path d="M6 9h12v8a1.5 1.5 0 0 1-1.5 1.5H15V22a1.5 1.5 0 0 1-3 0v-3.5h-1.5V22a1.5 1.5 0 0 1-3 0v-3.5H7.5A1.5 1.5 0 0 1 6 17V9Zm-2.5 0A1.5 1.5 0 0 1 5 10.5v4a1.5 1.5 0 0 1-3 0v-4A1.5 1.5 0 0 1 3.5 9Zm17 0a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4A1.5 1.5 0 0 1 20.5 9ZM8.6 2.6l-.9-1.6a.4.4 0 0 1 .7-.4l.9 1.7A7.4 7.4 0 0 1 12 1.7c1 0 2 .2 2.8.6l.9-1.7a.4.4 0 0 1 .7.4l-.9 1.6A6 6 0 0 1 18 7.8H6a6 6 0 0 1 2.6-5.2ZM9.4 5.4a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Zm5.2 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Z"/></svg>`,
+    apple: `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+      <path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.8-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.7 1.1 8.9.8 1.1 1.7 2.3 2.9 2.2 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.2 1.3-2.5 1.3-2.5s-2.5-1-2.5-3.5ZM14.2 5.4c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.8-1.3Z"/></svg>`,
+    browser: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+      stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>
+      <path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18Z"/></svg>`
+  };
+
   function bauen() {
     const t = TEXTE[window.SPRACHE] && TEXTE[window.SPRACHE].instinct
       ? TEXTE[window.SPRACHE] : TEXTE.de;
@@ -384,6 +472,15 @@
           <figcaption>${sicher(b.titel)}</figcaption>
         </figure>`).join("");
     }
+
+    /* ---------------- WO ES DIE APPS GIBT ----------------
+       Jede Stelle mit <div id="bezug-fanica"> (bzw. -instinct,
+       -neonpunkt) bekommt die Drei-Wege-Leiste. Funktioniert auf
+       der Startseite UND auf den Unterseiten, ohne Doppelpflege. */
+    ["fanica", "instinct", "neonpunkt"].forEach(k => {
+      const ziel = el("bezug-" + k);
+      if (ziel) ziel.innerHTML = bezugsLeiste(k, hol);
+    });
 
     /* ---------------- FANICA: echte laufende Runde ----------------
        Zahlen aus `runde.js` (aus der echten App-Datenlage gerechnet,

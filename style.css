@@ -443,6 +443,20 @@ p:last-child { margin-bottom: 0; }
 .kopf-nav a:hover, .kopf-nav a:focus-visible { color: var(--creme); }
 .kopf-nav a:hover::after { transform: scaleX(1); }
 
+/* Die Seite, auf der man gerade steht — kein Link, sondern Markierung.
+   (Die Unterseiten verlinken seit 31.07. untereinander; ohne das
+   wüsste man nicht, wo man ist.) */
+.kopf-hier {
+  color: var(--creme); font-size: .9rem; font-weight: 700;
+  padding: 8px 4px; position: relative; cursor: default;
+  white-space: nowrap;
+}
+.kopf-hier::after {
+  content: ""; position: absolute; left: 4px; right: 4px; bottom: 2px;
+  height: 2px; border-radius: 2px;
+  background: var(--kopf-akzent, var(--rot));
+}
+
 /* Auf dem Handy bleiben ALLE Punkte erreichbar — vorher waren sie
    ausgeblendet und es gab keinen Ersatz. Jetzt nur kürzer und enger. */
 @media (max-width: 640px) {
@@ -452,6 +466,16 @@ p:last-child { margin-bottom: 0; }
   .kopf-marke span { font-size: .92rem; }
   .kopf-marke img { width: 26px; height: 26px; }
   .sprachknopf { padding: 5px 10px; font-size: .72rem; }
+
+  /* Auf den Unterseiten stehen seit 31.07. zusätzlich die drei
+     App-Namen im Kopf. Zu viert brechen sie auf dem Handy zweizeilig
+     um und die Kopfzeile kippt. Dort bleibt deshalb nur der Rückweg —
+     die drei Apps sind auf der Startseite ohnehin als Kacheln direkt
+     anklickbar, es geht also nichts verloren. */
+  .kopf-nav a[href$="fanica-fun.html"],
+  .kopf-nav a[href$="instinct-scoring.html"],
+  .kopf-nav a[href$="neonpunkt.html"],
+  .kopf-hier { display: none; }
 }
 @media (max-width: 400px) {
   /* Die Wortmarke bleibt lesbar — nur kleiner. Ganz ausblenden ließ
@@ -2548,4 +2572,83 @@ body { line-height: 1.72; letter-spacing: .005em; }
 
 @media (prefers-reduced-motion: reduce) {
   .balken-fuellung, .anteil-teil { animation: none; }
+}
+
+/* ============================================================
+   WO ES DIE APPS GIBT — Android · Apple · Browser
+   Falk 31.07.2026: „sorge fuer die richtige anbindung und
+   bennenung Android/Apple/Browser."
+   Ein verfuegbarer Weg ist ein <a> und leuchtet in der Kapitel-
+   farbe; ein noch nicht freigegebener ist ein <span> (.bezug-wartet),
+   sichtbar gedaempft und NICHT anklickbar — so laeuft niemand in
+   eine 404-Seite.
+   ============================================================ */
+.bezug-titel {
+  margin: 0 0 .9rem;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+}
+.bezug {
+  display: grid; gap: .7rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  max-width: 760px;
+}
+.bezug-weg {
+  display: flex; align-items: center; gap: .85rem;
+  padding: .85rem 1.1rem;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 13px;
+  background: rgba(255,255,255,.035);
+  text-decoration: none; color: var(--creme);
+  transition: transform .3s var(--weich), border-color .3s var(--weich),
+              background .3s var(--weich), box-shadow .3s var(--weich);
+}
+.bezug-zeichen {
+  flex: 0 0 auto; display: grid; place-items: center;
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,.07);
+  color: var(--creme);
+}
+.bezug-text { display: flex; flex-direction: column; line-height: 1.25; }
+.bezug-text b {
+  font-family: var(--schrift-kopf); font-size: 1rem; font-weight: 700;
+}
+.bezug-text em {
+  font-style: normal; font-size: .78rem; color: var(--grau);
+  letter-spacing: .04em;
+}
+
+/* Verfuegbar: reagiert auf die Maus, leuchtet in der Kapitelfarbe */
+a.bezug-weg:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--akzent) 60%, transparent);
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 16px 34px -20px var(--akzent);
+  color: var(--creme);
+}
+a.bezug-weg:hover .bezug-zeichen {
+  background: color-mix(in srgb, var(--akzent) 26%, transparent);
+  color: var(--akzent-hell);
+}
+a.bezug-weg .bezug-text em { color: var(--akzent-hell); }
+
+/* Noch nicht freigegeben: gedaempft, kein Zeiger, kein Hover */
+.bezug-wartet {
+  opacity: .62;
+  border-style: dashed;
+  cursor: default;
+}
+.bezug-wartet .bezug-text em {
+  color: var(--grau);
+  text-transform: uppercase; letter-spacing: .1em; font-size: .7rem;
+  font-weight: 700;
+}
+
+.bezug-hinweis {
+  margin: 1rem 0 0; max-width: 62ch;
+  font-size: .88rem; line-height: 1.6; color: var(--grau-hell);
+}
+
+@media (max-width: 520px) {
+  .bezug { grid-template-columns: 1fr; }
+  .bezug-weg { padding: .75rem .9rem; }
 }
