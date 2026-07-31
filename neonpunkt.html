@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NeonPunkt — das minimalistischste Spiel der Welt</title>
+<meta name="description" content="Alles über NeonPunkt: worum es geht, alle Regeln, die sechzehn Farben, beide Bestenlisten und das Widget für den Startbildschirm.">
+<meta name="theme-color" content="#07070A">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-kapitel="neonpunkt">
+
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<div class="kulisse" aria-hidden="true"
+     style="background:linear-gradient(180deg,#000,#030308 60%,#000)"></div>
+<div class="hologramm" aria-hidden="true"></div>
+<div class="gitter" aria-hidden="true"></div>
+<div class="koerner" aria-hidden="true"></div>
+
+<header class="kopf fest">
+ <div class="kopf-innen">
+  <a class="kopf-marke" href="index.html">
+    <img src="bilder/marke/icon-fanica.webp" alt="" width="30" height="30">
+    <span>FaNiCa<b>.</b></span>
+  </a>
+  <nav class="kopf-nav" aria-label="Navigation">
+    <a href="index.html">← Startseite</a>
+  </nav>
+ </div>
+</header>
+
+<main id="inhalt" class="unterseite">
+  <div class="huelle">
+
+    <div class="kapitelkopf">
+      <p class="kennung">NeonPunkt</p>
+      <img class="kapitel-logo kapitel-logo-klein" src="bilder/marke/app-neonpunkt.webp"
+           alt="NeonPunkt — App-Symbol" width="140" height="140">
+      <h1>Das minimalistischste Spiel der Welt</h1>
+      <p class="kooperationszeile" data-t="neonpunkt.untertitel"></p>
+    </div>
+
+    <!-- ---------- Worum geht es ---------- -->
+    <section class="unter-block">
+      <h2 data-t="neonpunkt.worumTitel">Worum geht es eigentlich?</h2>
+      <p class="gross" style="max-width:64ch" data-t="neonpunkt.worumText"></p>
+      <p style="max-width:64ch" data-t="neonpunkt.worumZwei"></p>
+    </section>
+
+    <!-- ---------- Das Spiel zum Ausprobieren ---------- -->
+    <section class="unter-block">
+      <h2 data-t="neonpunkt.spielTitel">Probier es hier aus</h2>
+      <p class="leise" style="max-width:62ch" data-t="neonpunkt.spielText"></p>
+      <div class="spielfeld" id="spielfeld" role="button" tabindex="0"
+           aria-label="Neon-Punkt zum Antippen">
+        <div class="spielzaehler">
+          <span><span data-t="neonpunkt.spielKlicks">Klicks</span>
+                <b id="spiel-klicks">0</b></span>
+          <span><span data-t="neonpunkt.spielFarbe">Farbe</span>
+                <b id="spiel-farbe">1</b>
+                <span data-t="neonpunkt.spielVon">von 16</span></span>
+        </div>
+        <div class="spielpunkt" aria-hidden="true"></div>
+        <div class="spielhinweis" data-t="neonpunkt.spielHinweis">Tipp den Punkt an</div>
+      </div>
+    </section>
+
+    <!-- ---------- Alle Regeln ---------- -->
+    <section class="unter-block">
+      <h2 data-t="neonpunkt.reglnTitel">Die ganzen Regeln</h2>
+      <div class="begriffe drei" id="neonpunkt-regeln"></div>
+    </section>
+
+    <!-- ---------- Funktionsumfang ---------- -->
+    <section class="unter-block">
+      <h2 data-t="neonpunkt.umfangTitel">Klein, aber vollständig</h2>
+      <p class="leise" style="max-width:64ch" data-t="neonpunkt.umfangText"></p>
+      <div class="funktionen" id="neonpunkt-umfang-liste"></div>
+      <h3 style="margin-top:clamp(1.8rem,3.4vw,2.6rem)"
+          data-t="neonpunkt.umfangAnzeigenTitel"></h3>
+      <ul class="anzeigen" id="neonpunkt-umfang-anzeigen"></ul>
+      <p class="preis" data-t="neonpunkt.umfangFilter"></p>
+    </section>
+
+    <!-- ---------- Die 16 Farben ---------- -->
+    <section class="unter-block">
+      <h2 data-t="neonpunkt.farbenTitel">Die sechzehn Farben</h2>
+      <p class="leise" data-t="neonpunkt.farbenText"></p>
+      <div class="farbreihe" id="neonpunkt-farben"></div>
+    </section>
+
+    <!-- ---------- Bilder ---------- -->
+    <section class="unter-block">
+      <div class="galerie" id="neonpunkt-galerie"></div>
+    </section>
+
+    <!-- ---------- Blöcke ---------- -->
+    <section class="unter-block">
+      <div class="raster raster-2" id="neonpunkt-bloecke"></div>
+    </section>
+
+    <!-- ---------- Aktion ---------- -->
+    <section class="unter-block">
+      <div class="aktionen">
+        <a class="nbtn b-helix gross-knopf"
+           href="https://alonepard10501.github.io/fanica-fun/neonpunkt/"
+           target="_blank" rel="noopener">
+          <span data-t="aktion.browserSpielen">Im Browser spielen</span></a>
+        <a class="nbtn b-scratch" href="index.html#neonpunkt">
+          <span data-t="zurueckKnopf">← Zurück zur Startseite</span></a>
+      </div>
+      <p class="preis" data-t="neonpunkt.preis"></p>
+      <p class="preis" data-t="neonpunkt.zahlenFuss"></p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="fuss">
+  <div class="huelle">
+    <div class="fuss-unten">
+      <nav class="fuss-links" aria-label="Rechtliches">
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html" data-t="fuss.impressum">Impressum</a>
+        <a href="datenschutz.html" data-t="fuss.datenschutz">Datenschutz</a>
+        <a href="bildquellen.html" data-t="fuss.bildquellen">Bildquellen</a>
+      </nav>
+      <span>© <span id="jahr">2026</span> FaNiCa</span>
+    </div>
+  </div>
+</footer>
+
+<script src="texte.js"></script>
+<script src="inhalte.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

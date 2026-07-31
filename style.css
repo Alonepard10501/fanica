@@ -1973,3 +1973,374 @@ h1.hero-text,
   .morph-buehne, .spielfeld { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* ============================================================
+   BUTTONS — Falks Lieblingsdesigns aus Obsidian
+   (Erinnerung: button-designs-hover-effekte · 6 Hover-Effekte)
+   Muster: dunkler Grund, Farbverlauf, ::before-Sweep beim Hover,
+   Beschriftung im <span> darüber.
+   ============================================================ */
+.nbtn {
+  position: relative; overflow: hidden;
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .6rem;
+  padding: 13px 26px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 11px;
+  background: #0c1220;
+  color: var(--creme);
+  font-family: var(--schrift-kopf);
+  font-size: .98rem; font-weight: 700; letter-spacing: .02em;
+  text-decoration: none; cursor: pointer;
+  transition: transform .15s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.nbtn span { position: relative; z-index: 2; }
+.nbtn:hover { transform: translateY(-2px); color: var(--creme); }
+.nbtn:focus-visible { outline: 3px solid var(--akzent-hell); outline-offset: 3px; }
+.nbtn.gross-knopf { padding: 15px 32px; font-size: 1.04rem; }
+
+/* Ripple — Welle vom Zentrum (FaNiCa Fun, rot) */
+.nbtn.b-ripple {
+  background: linear-gradient(180deg, #3a0d14, #24080e);
+  border-color: var(--rot); color: #ffe0e4;
+}
+.nbtn.b-ripple::before {
+  content: ""; position: absolute; left: 50%; top: 50%;
+  width: 0; height: 0; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,120,140,.55), transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width .5s ease, height .5s ease;
+}
+.nbtn.b-ripple:hover::before { width: 300px; height: 300px; }
+.nbtn.b-ripple:hover { box-shadow: 0 0 22px -4px var(--rot); }
+
+/* Grass — Halme wachsen von unten (Instinct, oliv) */
+.nbtn.b-grass {
+  background: linear-gradient(180deg, #1b2612, #101809);
+  border-color: var(--oliv); color: #e6f4c9;
+}
+.nbtn.b-grass::before {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 0;
+  background: linear-gradient(0deg, rgba(167,188,85,.55), transparent);
+  transition: height .35s ease;
+}
+.nbtn.b-grass:hover::before { height: 100%; }
+.nbtn.b-grass:hover { box-shadow: 0 0 22px -4px var(--oliv-hell); }
+
+/* Helix — Schimmer-Sweep (NeonPunkt, neon) */
+.nbtn.b-helix {
+  background: linear-gradient(135deg, #0d2b12, #06180c);
+  border-color: #39FF14; color: #d8ffcd;
+}
+.nbtn.b-helix::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(115deg, transparent 30%,
+              rgba(120,255,90,.45) 50%, transparent 70%);
+  transform: translateX(-120%); transition: transform .6s ease;
+}
+.nbtn.b-helix:hover::before { transform: translateX(120%); }
+.nbtn.b-helix:hover { box-shadow: 0 0 22px -4px #39FF14; }
+
+/* Scratch — Metall-Glanz (neutrale Knöpfe, z. B. Zurück) */
+.nbtn.b-scratch {
+  background: linear-gradient(120deg, #2a2e34, #454a53 50%, #2a2e34);
+  border-color: rgba(255,255,255,.32); color: var(--creme);
+}
+.nbtn.b-scratch::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 40%,
+              rgba(255,255,255,.5) 50%, transparent 60%);
+  transform: translateX(-120%); transition: transform .55s ease;
+}
+.nbtn.b-scratch:hover::before { transform: translateX(120%); }
+
+/* Heat — warmes Glühen von unten */
+.nbtn.b-heat {
+  background: linear-gradient(180deg, #2a100c, #180a08);
+  border-color: #d8552f; color: #ffd8c9;
+}
+.nbtn.b-heat::before {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 35%;
+  background: linear-gradient(0deg, rgba(255,120,50,.6), transparent);
+  opacity: .4; transition: opacity .3s ease, height .3s ease;
+}
+.nbtn.b-heat:hover::before { opacity: 1; height: 100%; }
+
+/* Lantern — Laternenschein */
+.nbtn.b-lantern {
+  background: linear-gradient(180deg, #2a230c, #181206);
+  border-color: #d8b52f; color: #ffedb0;
+}
+.nbtn.b-lantern::before {
+  content: ""; position: absolute; left: 50%; top: 50%;
+  width: 0; height: 0; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,214,90,.55), transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width .45s ease, height .45s ease;
+}
+.nbtn.b-lantern:hover::before { width: 260px; height: 260px; }
+
+/* ---- App-Kacheln im Hero: die drei Apps zum Anklicken ---- */
+.app-reihe {
+  display: grid; gap: clamp(.8rem, 2.2vw, 1.6rem);
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 760px; margin: clamp(2.4rem, 6vh, 4rem) auto 0;
+}
+.app-kachel {
+  display: flex; flex-direction: column; align-items: center; gap: .55rem;
+  padding: clamp(1rem, 2.4vw, 1.5rem) .8rem;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: var(--radius-gross);
+  background: rgba(255,255,255,.03);
+  text-decoration: none; color: var(--creme);
+  transition: transform .35s var(--weich), border-color .35s var(--weich),
+              box-shadow .35s var(--weich), background .35s var(--weich);
+}
+.app-kachel img {
+  width: clamp(52px, 9vw, 76px); height: auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px -10px rgba(0,0,0,.8);
+  transition: transform .35s var(--weich);
+}
+/* Der Name darf zwei Zeilen brauchen ("Instinct Scoring"), soll die
+   Kachel aber nicht höher machen als die Nachbarn — deshalb bekommt er
+   festen Platz für zwei Zeilen und die Kurzform sitzt darunter am Fuß. */
+.app-kachel b {
+  font-family: var(--schrift-kopf); font-size: clamp(.86rem, 1.5vw, 1.02rem);
+  letter-spacing: .01em; text-align: center; line-height: 1.2;
+  min-height: 2.4em;
+  display: flex; align-items: center; justify-content: center;
+}
+.app-kachel span {
+  margin-top: auto;
+  font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--af); font-weight: 700; text-align: center;
+  line-height: 1.3; hyphens: none;
+}
+.app-kachel:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--af) 65%, transparent);
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 20px 44px -22px var(--af);
+  color: var(--creme);
+}
+.app-kachel:hover img { transform: scale(1.08); }
+
+/* ---- Logo-Paar: eigenes Logo × Kooperationslogo ---- */
+.hero-logos {
+  display: flex; align-items: center; justify-content: center;
+  gap: clamp(1rem, 3vw, 2.4rem); flex-wrap: wrap;
+  margin-bottom: clamp(1.2rem, 3vw, 2rem);
+}
+/* Das Kooperationslogo steht neben Falks Logo, aber untergeordnet —
+   es ist der Partner, nicht die Hauptmarke. Rund 62 % der Größe. */
+.hero-logo-klein { width: clamp(112px, 17vw, 285px); }
+.hero-logos-klein { margin: 0; }
+.hero-logos-klein img { max-width: 220px; }
+.hero-logos-klein img + img { max-width: 140px; }
+.logo-paar {
+  display: flex; align-items: center; gap: clamp(.8rem, 2.4vw, 1.6rem);
+  flex-wrap: wrap; margin-bottom: 1.2rem;
+}
+.logo-mal {
+  font-family: var(--schrift-kopf); font-size: 1.6rem;
+  color: var(--grau); font-weight: 300;
+}
+.kapitel-logo-klein { width: clamp(90px, 13vw, 150px) !important; }
+
+/* ---- Weiterlesen-Bereich ---- */
+.weiterlesen {
+  margin-top: clamp(2.4rem, 5vw, 3.6rem);
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-gross);
+  background:
+    radial-gradient(120% 90% at 50% 0%,
+      color-mix(in srgb, var(--akzent) 12%, transparent), transparent 62%),
+    rgba(255,255,255,.026);
+  text-align: center;
+}
+.weiter-hinweis {
+  margin: 1rem auto 0; max-width: 58ch;
+  font-size: .9rem; color: var(--grau-hell); line-height: 1.6;
+}
+.store-hinweis {
+  font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--grau); align-self: center;
+}
+
+/* ---- Unterseiten ---- */
+.unterseite {
+  padding: clamp(110px, 14vh, 160px) 0 clamp(60px, 10vh, 100px);
+}
+.unter-block {
+  margin-top: clamp(2.6rem, 6vw, 4.4rem);
+  scroll-margin-top: 100px;
+}
+.unter-block > h2 {
+  font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+  margin-bottom: .5em;
+}
+.unter-block > h2::before {
+  content: ""; display: block;
+  width: 52px; height: 3px; border-radius: 3px;
+  margin-bottom: .7rem;
+  background: linear-gradient(90deg, var(--akzent), transparent);
+}
+
+/* ============================================================
+   LESBARKEIT — Falk 31.07.2026: "Die Schriften muessen deutlicher
+   sein und besser lesbar gemacht werden."
+   Vorgehen: hellere Grautoene (mehr Kontrast gegen Schwarz),
+   etwas groessere Grundschrift, kraeftigere Strichstaerke bei
+   Kleintext. Wirkt ueberall, weil an den Variablen gedreht wird.
+   ============================================================ */
+:root {
+  --grau:      #A9B0B9;   /* vorher zu dunkel gegen Schwarz */
+  --grau-hell: #DDE1E6;
+}
+html { font-size: 17px; }             /* rem-Basis: alles waechst mit */
+body { line-height: 1.72; letter-spacing: .005em; }
+
+/* Kleintext war der schwaechste Punkt — hier Groesse + Gewicht hoch */
+.leise      { color: var(--grau-hell); font-size: .97rem; }
+.preis      { color: var(--grau); font-size: .9rem; }
+.bogen-text,
+.block-text ul li,
+.weiter-hinweis { font-size: .96rem; color: var(--grau-hell); }
+.bogen-daten b,
+.kennung        { font-weight: 700; }
+.bogen-daten b  { color: var(--grau-hell); font-size: .76rem; }
+
+/* ============================================================
+   HANDY-OPTIMIERUNG — Falk 31.07.2026
+   "die Boegen werden klappbar und nicht so gross auf dem Handy
+    dargestellt, die scheibe kann man auf dem Handy auch nicht
+    lesen und das scrollen ist fuer das handy sehr anstrengend
+    da die seiten nicht wirklich nachladen."
+   ============================================================ */
+
+/* ---- Boegen: klappbar (<details>) ---- */
+.bogen > summary.bogen-kopf {
+  display: flex; align-items: center; gap: .9rem;
+  padding: .85rem 1rem;
+  cursor: pointer; list-style: none;
+  transition: background .3s var(--weich);
+}
+.bogen > summary.bogen-kopf::-webkit-details-marker { display: none; }
+.bogen > summary.bogen-kopf:hover { background: rgba(255,255,255,.04); }
+.bogen-vorschau {
+  flex: 0 0 auto; width: 42px; height: 56px;
+  display: grid; place-items: center; border-radius: 10px;
+  background: radial-gradient(70% 90% at 50% 100%,
+              color-mix(in srgb, var(--bf) 26%, transparent), #0C0F0B 72%);
+}
+.bogen-vorschau svg { width: auto; height: 82%; }
+.bogen-titel { flex: 1 1 auto; min-width: 0; }
+.bogen-titel b {
+  display: block; font-family: var(--schrift-kopf);
+  font-size: 1.05rem; line-height: 1.25; color: var(--creme);
+}
+.bogen-titel .bogen-kurz {
+  display: block; font-size: .74rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--bf, var(--akzent-hell));
+  font-weight: 700; margin: .15em 0 0;
+}
+.bogen-pfeil {
+  flex: 0 0 auto; width: 11px; height: 11px;
+  border-right: 2px solid var(--grau); border-bottom: 2px solid var(--grau);
+  transform: rotate(45deg); margin-right: .35rem;
+  transition: transform .3s var(--weich);
+}
+.bogen[open] > summary .bogen-pfeil { transform: rotate(-135deg); }
+.bogen-inhalt { padding-bottom: .3rem; }
+.bogen-inhalt .bogen-buehne { border-top: 1px solid rgba(255,255,255,.09); }
+.bogen-inhalt .bogen-text { padding-top: 1rem; }
+
+/* Ab Tablet-Breite dauerhaft offen — am Rechner soll niemand erst
+   klicken muessen. Der Kopf bleibt als Ueberschrift stehen, verliert
+   aber Klapp-Pfeil, Mini-Vorschau und Klickbarkeit.
+   WICHTIG: `display` auf dem Inhalt ueberstimmt das Zu-Sein von
+   <details> — deshalb reicht CSS allein, ohne JS und ohne [open]. */
+@media (min-width: 780px) {
+  .bogen > .bogen-inhalt { display: block; }
+  .bogen > summary.bogen-kopf {
+    pointer-events: none; cursor: default;
+    padding: clamp(1.1rem,2.4vw,1.5rem) clamp(1.1rem,2.4vw,1.5rem) .2rem;
+  }
+  .bogen > summary.bogen-kopf:hover { background: none; }
+  .bogen-vorschau, .bogen-pfeil { display: none; }
+  .bogen-titel b { font-size: clamp(1.1rem, 1.9vw, 1.32rem); }
+  .bogen-inhalt .bogen-buehne { border-top: 0; }
+}
+
+/* Auf schmalen Schirmen die Bogen-Zeichnung kleiner halten */
+@media (max-width: 779px) {
+  .boegen { grid-template-columns: 1fr; gap: .7rem; }
+  .bogen-buehne { aspect-ratio: 16 / 11; }
+  .bogen-buehne svg { height: 92%; max-width: 62%; }
+}
+
+/* ---- Zielscheibe auf dem Handy lesbar ---- */
+@media (max-width: 700px) {
+  .scheibe-block { grid-template-columns: 1fr; gap: 1.2rem; }
+  .scheibe-buehne {
+    width: 100%; max-width: 420px; margin-inline: auto;
+  }
+  /* Die Ringzahlen waren bei 320-420 px Breite nur noch Punkte.
+     SVG-Text skaliert mit dem viewBox, deshalb hier hochsetzen. */
+  .scheibe-buehne text {
+    font-size: 13px !important; font-weight: 800 !important;
+    paint-order: stroke fill;
+    stroke: rgba(0,0,0,.72); stroke-width: 3px; stroke-linejoin: round;
+  }
+  .scheibe-liste li { font-size: .95rem; }
+}
+
+/* ---- Fluessiges Scrollen + echtes Nachladen ---- */
+@media (max-width: 900px) {
+  /* Grosse, dauerhaft animierte Hintergrundebenen sind auf dem Handy
+     der Hauptgrund fuer hakeliges Scrollen (jede Bewegung erzwingt ein
+     Neuzeichnen der ganzen Flaeche). Sie bleiben sichtbar, stehen aber. */
+  /* NUR die Bewegung anhalten — die Deckkraft bleibt, wie sie ist.
+     (Ein früherer Versuch setzte hier opacity:.5 und färbte damit den
+     ganzen Hintergrund bunt statt dunkel. Deckkraft nie anfassen.) */
+  .hologramm, .gitter, .koerner { animation: none !important; }
+  .hologramm::before, .hologramm::after { animation: none !important; }
+  .kulisse { background-attachment: scroll !important; }
+
+  /* backdrop-filter ist auf Mobilgeraeten teuer — nur der Kopf behaelt ihn */
+  .karte, .block, .stufe, .frage { backdrop-filter: none !important; }
+
+  /* Ruckelfreies Scrollen: die teuren Ebenen sind oben schon
+     stillgelegt. Zusätzlich bekommt jeder Abschnitt eine eigene
+     Zeichenebene, damit der Browser beim Scrollen nur den sichtbaren
+     Teil neu malen muss.
+     BEWUSST OHNE content-visibility: das Einblenden (.auf → .da) hängt
+     an einem IntersectionObserver, und ausgelagerte Abschnitte feuern
+     ihn nicht — die halbe Seite blieb dann blass stehen. */
+  main > section { contain: paint; }
+
+  /* Auftauch-Bewegung kurz halten, damit nichts nachzieht */
+  .auf {
+    transition-duration: .3s !important;
+    transform: none !important;
+  }
+
+  /* 3D-Neigung der Handy-Bilder auf Touch abschalten */
+  [data-neigen] { transform: none !important; }
+
+  html { scroll-behavior: auto; }   /* Sprungmarken ohne langes Gleiten */
+}
+
+/* Sehr schmale Geraete: kompaktere Abstaende, sonst scrollt man ewig */
+@media (max-width: 520px) {
+  .app-reihe { gap: .55rem; }
+  .app-kachel { padding: .8rem .45rem; }
+  .app-kachel span { font-size: .66rem; letter-spacing: .08em; }
+  .unter-block { margin-top: 2.2rem; }
+  .nbtn { width: 100%; }
+  .aktionen { flex-direction: column; align-items: stretch; }
+  .logo-paar { justify-content: center; gap: .8rem; }
+  .logo-paar img { max-width: 42vw; }
+}

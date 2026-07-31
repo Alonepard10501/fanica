@@ -3,23 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FaNiCa — Falk Carstensen · Apps aus einem Ein-Mann-Studio</title>
-<meta name="description" content="Drei fertige Apps aus einem Ein-Mann-Medienstudio: Instinct Scoring für Bogensport, FaNiCa Fun als private Tipprunde und NeonPunkt, das minimalistischste Spiel der Welt.">
-<meta name="author" content="Falk Carstensen">
+<title>FaNiCa — Apps aus einem Ein-Mann-Studio in Nordfriesland</title>
+<meta name="description" content="Drei fertige Apps aus einem Ein-Mann-Medienstudio: FaNiCa Fun als private Tipprunde, Instinct Scoring für Bogensport und NeonPunkt, das minimalistischste Spiel der Welt.">
+<meta name="author" content="FaNiCa">
 <meta name="theme-color" content="#07070A">
 <meta name="color-scheme" content="dark">
 
 <!-- Social-Vorschau -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="FaNiCa — Ich baue Apps. Drei sind fertig.">
-<meta property="og:description" content="Instinct Scoring, FaNiCa Fun und NeonPunkt — drei Apps aus einem Ein-Mann-Medienstudio. Offline, ohne Tracking, ohne Konto.">
+<meta property="og:title" content="FaNiCa — Drei Apps aus einem Ein-Mann-Studio">
+<meta property="og:description" content="FaNiCa Fun, Instinct Scoring und NeonPunkt — offline, ohne Tracking, ohne Konto.">
 <meta property="og:image" content="bilder/marke/og-bild.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FaNiCa — Ich baue Apps. Drei sind fertig.">
-<meta name="twitter:description" content="Instinct Scoring, FaNiCa Fun und NeonPunkt — drei Apps aus einem Ein-Mann-Medienstudio.">
+<meta name="twitter:title" content="FaNiCa — Drei Apps aus einem Ein-Mann-Studio">
+<meta name="twitter:description" content="FaNiCa Fun, Instinct Scoring und NeonPunkt — offline, ohne Tracking, ohne Konto.">
 <meta name="twitter:image" content="bilder/marke/og-bild.png">
 
 <link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
@@ -31,7 +31,7 @@
 
 <a class="sprunglink" href="#inhalt" data-t="nav.sprung">Zum Inhalt springen</a>
 
-<!-- Hintergrund-Ebenen: verwandeln sich beim Scrollen -->
+<!-- Hintergrund-Ebenen -->
 <div class="kulisse" aria-hidden="true"></div>
 <div class="hologramm" aria-hidden="true"></div>
 <div class="gitter" aria-hidden="true"></div>
@@ -48,11 +48,9 @@
     <span>FaNiCa<b>.</b></span>
   </a>
   <nav class="kopf-nav" aria-label="Hauptnavigation">
-    <a href="#instinct" data-t="nav.apps">Die Apps</a>
+    <a href="#fanica" data-t="nav.apps">Die Apps</a>
     <a href="#ueber" data-t="nav.ueber">Über mich</a>
     <a href="#kontakt" data-t="nav.kontakt">Kontakt</a>
-    <!-- Beschriftung kommt aus texte.js (meta.sprachknopf): steht die Seite
-         auf Deutsch, zeigt der Knopf "EN" — und umgekehrt. -->
     <button class="sprachknopf" id="sprachknopf" data-t="meta.sprachknopf"
             title="Switch to English">EN</button>
   </nav>
@@ -65,232 +63,43 @@
 <section class="hero abschnitt" id="oben" data-kapitel="intro">
   <div class="licht licht-intro" aria-hidden="true"><span></span><span></span></div>
 
-  <img class="hero-logo" src="bilder/marke/logo-fanica.webp"
-       alt="FaNiCa Fun — Logo" width="420" height="225" fetchpriority="high">
+  <!-- Falks Logo: FaNiCa Fun, daneben das Kooperationslogo -->
+  <div class="hero-logos">
+    <img class="hero-logo" src="bilder/marke/logo-fanica.webp"
+         alt="FaNiCa Fun — Logo" width="420" height="225" fetchpriority="high">
+    <img class="hero-logo hero-logo-klein" src="bilder/marke/logo-kooperation.webp"
+         alt="In Kooperation mit Bogensport Instinct" width="300" height="264"
+         loading="lazy">
+  </div>
 
   <p class="kennung zentriert" data-t="hero.augenbraue">Ein-Mann-Medienstudio</p>
 
-  <!-- Falk 30.07.: Die grosse Titelzeile ist entfernt. Der Satz traegt jetzt
-       die H1 — jede Seite braucht genau eine, sonst fehlt Suchmaschinen und
-       Screenreadern die Hauptueberschrift. Optisch bleibt er normaler Text. -->
   <h1 class="gross hero-text" data-t="hero.text"></h1>
 
-  <div class="hero-knoepfe">
-    <a class="knopf knopf-voll" href="#instinct" data-t="hero.knopfApps">Die Apps ansehen</a>
-    <a class="knopf knopf-rand" href="#ueber" data-t="hero.knopfUeber">Über mich</a>
-  </div>
-
-  <div class="markenpunkte">
-    <button class="markenpunkt" data-ziel="#instinct" style="--pf:#A7BC55">
-      <i aria-hidden="true"></i><span>Instinct Scoring</span>
-    </button>
-    <button class="markenpunkt" data-ziel="#fanica" style="--pf:#FF4257">
-      <i aria-hidden="true"></i><span>FaNiCa Fun</span>
-    </button>
-    <button class="markenpunkt" data-ziel="#neonpunkt" style="--pf:#39FF14">
-      <i aria-hidden="true"></i><span>NeonPunkt</span>
-    </button>
+  <!-- Die drei Apps als anklickbare Symbole -->
+  <div class="app-reihe" aria-label="Die drei Apps">
+    <a class="app-kachel" href="#fanica" style="--af:#FF4257">
+      <img src="bilder/marke/app-fanica.webp" alt="" width="72" height="72" loading="lazy">
+      <b>FaNiCa Fun</b>
+      <span data-t="hero.appFanica">Tipprunde</span>
+    </a>
+    <a class="app-kachel" href="#instinct" style="--af:#A7BC55">
+      <img src="bilder/marke/app-instinct.webp" alt="" width="72" height="72" loading="lazy">
+      <b>Instinct Scoring</b>
+      <span data-t="hero.appInstinct">Bogensport</span>
+    </a>
+    <a class="app-kachel" href="#neonpunkt" style="--af:#7BFF5C">
+      <img src="bilder/marke/app-neonpunkt.webp" alt="" width="72" height="72" loading="lazy">
+      <b>NeonPunkt</b>
+      <span data-t="hero.appNeon">Klick-Spiel</span>
+    </a>
   </div>
 
   <div class="scrollhinweis" aria-hidden="true"><span data-t="hero.scrollHinweis">Scrollen</span></div>
 </section>
 
 
-<!-- ================================ KAPITEL 1 — INSTINCT SCORING -->
-<section class="abschnitt" id="instinct" data-kapitel="instinct">
-  <div class="licht licht-wald" aria-hidden="true"><span></span><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf auf">
-      <p class="kennung" data-t="instinct.kennung">Kapitel 01</p>
-      <img class="kapitel-logo" src="bilder/marke/logo-kooperation.webp"
-           alt="Gemeinsames Logo von FaNiCa Fun und Bogensport Instinkt"
-           width="380" height="335" loading="lazy">
-      <h2 data-t="instinct.name">Instinct Scoring</h2>
-      <p class="kooperationszeile" data-t="instinct.kooperation"></p>
-    </div>
-
-    <div class="auf einstieg">
-      <div>
-        <div class="claim" aria-label="Track. Score. Improve.">
-          <span>TRACK.</span><span>SCORE.</span><span>IMPROVE.</span>
-        </div>
-        <p class="gross leise" data-t="instinct.claimDeutsch"></p>
-      </div>
-      <div>
-        <blockquote class="zitat" data-t="instinct.zitat"></blockquote>
-        <p class="gross" style="max-width:64ch" data-t="instinct.positionierung"></p>
-      </div>
-    </div>
-
-
-    <!-- ---------------------------------------- DIE STARTSEITE (echte App) -->
-    <div class="auf" style="margin-top:clamp(2.6rem,6vw,4.4rem)">
-      <h3 data-t="instinct.startTitel">Die Startseite</h3>
-      <p class="leise" style="max-width:64ch" data-t="instinct.startText"></p>
-
-      <div class="startseite">
-        <div class="startseite-bild">
-          <div class="handy" data-neigen>
-            <img src="bilder/instinct/start.webp"
-                 srcset="bilder/instinct/start.webp 1x, bilder/instinct/start@2x.webp 2x"
-                 width="300" height="649" loading="lazy" decoding="async"
-                 data-t="instinct.bildStart2Alt" data-t-attr="alt" alt="">
-            <div class="handy-glanz" aria-hidden="true"></div>
-          </div>
-        </div>
-        <div class="startseite-text">
-          <ol class="startpunkte" id="instinct-start-punkte"></ol>
-          <p class="startzeile" data-t="instinct.startZeile"></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ---------------------------------------- FUNKTIONSUMFANG -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="instinct.umfangTitel">Was drinsteckt</h3>
-      <p class="leise" style="max-width:64ch" data-t="instinct.umfangText"></p>
-      <div class="zahlen" id="instinct-umfang-zahlen"></div>
-      <div class="funktionen" id="instinct-umfang-liste"></div>
-      <h4 style="margin-top:clamp(2rem,4vw,3rem)" data-t="instinct.umfangAnzeigenTitel"></h4>
-      <ul class="anzeigen" id="instinct-umfang-anzeigen"></ul>
-      <p class="preis" style="margin-top:1.4rem" data-t="instinct.umfangFilter"></p>
-    </div>
-    <!-- ---------------------------------------- FUNKTIONSBLÖCKE -->
-    <div id="instinct-bloecke" style="margin-top:clamp(2.8rem,6vw,4.6rem)"></div>
-
-    <!-- ---------------------------------------- ZIELSCHEIBE + WERTUNG -->
-    <div class="auf" style="margin-top:clamp(2.6rem,6vw,4.4rem)">
-      <h3 data-t="instinct.scheibeTitel">Fünf Wertungssysteme, eine Scheibe</h3>
-      <p class="leise" style="max-width:60ch" data-t="instinct.scheibeText"></p>
-      <div class="scheibe-block">
-        <div class="scheibe-buehne" id="scheibe-buehne"></div>
-        <div>
-          <div id="scheibe-tafel"></div>
-          <p class="preis" style="margin-top:1.4rem" data-t="instinct.scheibeFussnote"></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ---------------------------------------- BOGENARTEN -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="instinct.boegenTitel">Für welche Bögen?</h3>
-      <p class="leise" style="max-width:62ch" data-t="instinct.boegenText"></p>
-      <div class="boegen" id="instinct-boegen"></div>
-    </div>
-
-    <!-- ---------------------------------------- PFEIL-BEGRIFFE -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="instinct.pfeileTitel">Und was am Pfeil zählt</h3>
-      <p class="leise" style="max-width:62ch" data-t="instinct.pfeileText"></p>
-      <div class="begriffe zwei" id="instinct-pfeile"></div>
-    </div>
-
-    <!-- ---------------------------------------- SPINE-RECHNER -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="instinct.spineTitel">Der Spine-Rechner</h3>
-      <div class="spine">
-        <div>
-          <h4 data-t="instinct.spineFrage">Was ist Spine überhaupt?</h4>
-          <p data-t="instinct.spineAntwort"></p>
-          <p data-t="instinct.spineWarum"></p>
-          <h4 style="margin-top:1.8rem" data-t="instinct.spineErgebnisTitel">Das kommt heraus</h4>
-          <p data-t="instinct.spineErgebnis"></p>
-          <p class="preis" data-t="instinct.spineHinweis"></p>
-        </div>
-        <div>
-          <h4 data-t="instinct.spineEingabeTitel">Das gibst du ein</h4>
-          <div class="spine-felder" id="instinct-spine-felder"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ---------------------------------------- PARCOURS-BEGRIFFE -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="instinct.parcoursTitel">Parcours, Pflock, Duell — kurz erklärt</h3>
-      <div class="begriffe drei" id="instinct-begriffe"></div>
-    </div>
-
-    <!-- ---------------------------------------- GLOSSAR + VERBÄNDE -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="instinct.glossarTitel">Die Begriffe am Bogen</h3>
-      <p class="leise" style="max-width:64ch" data-t="instinct.glossarText"></p>
-      <div class="begriffe drei" id="instinct-glossar"></div>
-    </div>
-
-    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
-      <h3 data-t="instinct.verbaendeTitel">Wer legt die Wertungen fest?</h3>
-      <div class="verbaende" id="instinct-verbaende"></div>
-    </div>
-
-    <!-- ---------------------------------------- DATEN GEHÖREN DIR -->
-    <div class="karte auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="instinct.datenTitel">Deine Daten gehören dir</h3>
-      <p data-t="instinct.datenText"></p>
-      <ul class="liste" id="instinct-daten"></ul>
-    </div>
-
-    <!-- ---------------------------------------- DIE DREI STUFEN -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="instinct.stufenTitel">Drei Stufen</h3>
-      <p class="leise" style="max-width:60ch" data-t="instinct.stufenText"></p>
-      <div class="stufen" id="instinct-stufen"></div>
-    </div>
-
-    <!-- ---------------------------------------- VERSPRECHEN -->
-    <div class="auf" style="margin-top:clamp(2.6rem,6vw,4rem)">
-      <h3 data-t="instinct.versprechenTitel">Gebaut für draußen</h3>
-      <div class="zahlen" id="instinct-versprechen"></div>
-    </div>
-
-    <!-- ---------------------------------------- ZIELGRUPPE + AKTION -->
-    <div class="auf" style="margin-top:clamp(2.6rem,6vw,4rem)">
-      <div class="marken" id="instinct-zielgruppe"></div>
-
-      <div class="aktionen">
-        <a class="knopf knopf-voll" href="https://alonepard10501.github.io/instinct-scoring/"
-           target="_blank" rel="noopener" data-t="aktion.browser">Im Browser testen</a>
-
-        <a class="badge" aria-disabled="true" tabindex="-1"
-           title="Google Play — bald verfügbar">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l.1.1 9.9-9.9v-.2L3.6 1.8z"/><path fill="#fff" d="M17 15.8l-3.3-3.3v-.2L17 9l.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3L17 15.8z"/><path fill="#fff" d="M17.1 15.7L13.7 12.3 3.6 22.4c.4.4 1 .4 1.7.1l11.8-6.8"/><path fill="#fff" d="M17.1 8.9L5.3 2.1c-.7-.4-1.3-.4-1.7 0l10.1 10.1 3.4-3.3z"/></svg>
-          <span class="badge-text">
-            <small data-t="aktion.inPruefung">in Prüfung</small>
-            <strong>Google Play</strong>
-          </span>
-        </a>
-
-        <a class="badge" aria-disabled="true" tabindex="-1"
-           title="App Store — bald verfügbar">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.4.8-.7 0-1.8-.8-2.9-.8-1.5 0-2.9.9-3.6 2.2-1.6 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.9.7c1.2 0 1.9-1.1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.1-.8-2.1-3.6zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.7-.9 2.6 1 .1 2-.5 2.6-1.2z"/></svg>
-          <span class="badge-text">
-            <small data-t="aktion.inPruefung">in Prüfung</small>
-            <strong>App Store</strong>
-          </span>
-        </a>
-
-        <a class="knopf knopf-rand"
-           href="https://alonepard10501.github.io/instinct-scoring/datenschutz.html"
-           target="_blank" rel="noopener" data-t="aktion.datenschutz">Datenschutz</a>
-      </div>
-
-      <div class="qr">
-        <div data-qr="https://alonepard10501.github.io/instinct-scoring/"></div>
-        <div class="qr-text">
-          <h4 data-t="aktion.qrTitel">Mit dem Handy öffnen</h4>
-          <p data-t="aktion.qrText"></p>
-        </div>
-      </div>
-
-      <p class="preis" data-t="instinct.preis"></p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ================================ KAPITEL 2 — FANICA FUN -->
+<!-- ================================ KAPITEL 1 — FANICA FUN -->
 <section class="abschnitt" id="fanica" data-kapitel="fanica">
   <div class="licht licht-spuren" aria-hidden="true"><span></span><span></span></div>
   <div class="spuren" aria-hidden="true"></div>
@@ -298,122 +107,150 @@
   <div class="huelle">
 
     <div class="kapitelkopf auf">
-      <p class="kennung" data-t="fanica.kennung">Kapitel 02</p>
+      <p class="kennung" data-t="fanica.kennung">Kapitel 01</p>
+      <img class="kapitel-logo" src="bilder/marke/logo-fanica.webp"
+           alt="FaNiCa Fun — Logo" width="380" height="204" loading="lazy">
       <h2 data-t="fanica.name">FaNiCa Fun</h2>
       <p class="kooperationszeile" data-t="fanica.untertitel"></p>
     </div>
 
-    <div class="block">
-      <div class="block-text auf">
+    <div class="block auf">
+      <div class="block-text">
         <h3 style="font-size:clamp(1.5rem,3.6vw,2.5rem)">
           <span data-t="fanica.claim">Tippe die ersten Fünf.</span><br>
           <span class="leise" data-t="fanica.claimZwei"></span>
         </h3>
         <p class="gross" data-t="fanica.positionierung"></p>
-
-        <div class="karte" style="margin-top:2rem">
+        <div class="karte" style="margin-top:1.6rem">
           <h4 data-t="fanica.kernTitel">Der Kniff</h4>
           <p data-t="fanica.kernText"></p>
         </div>
-
-        <h4 style="margin-top:2.2rem" data-t="fanica.punkteTitel">So werden Punkte vergeben</h4>
-        <div class="regeln" id="fanica-regeln"></div>
       </div>
-
-      <div class="block-bild auf v2">
+      <div class="block-bild">
         <div class="handy" data-neigen>
-          <img src="bilder/fanica/profil.webp"
-               srcset="bilder/fanica/profil.webp 1x, bilder/fanica/profil@2x.webp 2x"
+          <img src="bilder/fanica/tippen.webp"
+               srcset="bilder/fanica/tippen.webp 1x, bilder/fanica/tippen@2x.webp 2x"
                width="300" height="649" loading="lazy" decoding="async"
-               data-t="fanica.bildProfilAlt" data-t-attr="alt" alt="">
+               alt="FaNiCa Fun: Tipp-Bildschirm mit den fünf Positionen">
           <div class="handy-glanz" aria-hidden="true"></div>
         </div>
       </div>
     </div>
 
-
-    <!-- ---------------------------------------- FUNKTIONSUMFANG -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="fanica.umfangTitel">Was drinsteckt</h3>
-      <p class="leise" style="max-width:64ch" data-t="fanica.umfangText"></p>
-      <div class="zahlen" id="fanica-umfang-zahlen"></div>
-      <div class="funktionen" id="fanica-umfang-liste"></div>
-      <h4 style="margin-top:clamp(2rem,4vw,3rem)" data-t="fanica.umfangAnzeigenTitel"></h4>
-      <ul class="anzeigen" id="fanica-umfang-anzeigen"></ul>
-      <p class="preis" style="margin-top:1.4rem" data-t="fanica.umfangFilter"></p>
-    </div>
-    <!-- ---------------------------------------- ABLAUF DER RENN-WOCHE -->
-    <div class="auf" style="margin-top:clamp(2.6rem,6vw,4.2rem)">
-      <h3 data-t="fanica.ablaufTitel">So läuft eine Renn-Woche</h3>
-      <div class="schritte" id="fanica-ablauf"></div>
+    <!-- Punkte kurz + Zahlen -->
+    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
+      <h3 data-t="fanica.punkteTitel">So werden Punkte vergeben</h3>
+      <div class="regeln" id="fanica-regeln"></div>
+      <div class="zahlen" id="fanica-umfang-zahlen" style="margin-top:2rem"></div>
     </div>
 
-    <!-- ---------------------------------------- TROPHÄEN -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="fanica.trophaeenTitel">Die Trophäen und wie du sie bekommst</h3>
-      <p class="leise" style="max-width:60ch" data-t="fanica.trophaeenText"></p>
-      <div class="trophaeen" id="fanica-trophaeen"></div>
-      <p class="preis" style="margin-top:1.6rem" data-t="fanica.trophaeenFuss"></p>
+    <!-- Die Bildergalerie steht auf der Unterseite fanica-fun.html —
+         die Startseite bleibt bewusst kompakt (Falk 31.07.: "weniger
+         auf die ganze seite packen, mehr kompakt"). -->
+
+    <!-- Weiterlesen -->
+    <div class="auf weiterlesen">
+      <a class="nbtn b-ripple" href="fanica-fun.html">
+        <span data-t="fanica.mehrKnopf">Alles über FaNiCa Fun</span></a>
+      <p class="weiter-hinweis" data-t="fanica.mehrText"></p>
     </div>
 
-    <!-- ---------------------------------------- STRECKEN -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="fanica.streckenTitel">Auf welche Rennen wird getippt?</h3>
-      <p class="leise" style="max-width:64ch" data-t="fanica.streckenText"></p>
-      <div class="zahlen" id="fanica-strecken-zahlen"></div>
-      <div class="marken" id="fanica-strecken-beispiele" style="margin-top:1.8rem"></div>
-      <p class="preis" style="margin-top:1.6rem" data-t="fanica.streckenQuelle"></p>
-    </div>
-
-    <!-- ---------------------------------------- BEITRITT -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="fanica.beitrittTitel">Wie komme ich in eine Runde?</h3>
-      <div class="schritte" id="fanica-beitritt"></div>
-      <p class="preis" style="margin-top:1.6rem" data-t="fanica.beitrittHinweis"></p>
-    </div>
-
-    <div class="raster raster-2" id="fanica-bloecke" style="margin-top:clamp(2.8rem,6vw,4.6rem)"></div>
-
-    <div class="auf" style="margin-top:clamp(2.6rem,6vw,4rem)">
+    <!-- Aktionen -->
+    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
       <div class="aktionen">
-        <a class="knopf knopf-voll" href="https://alonepard10501.github.io/fanica-fun/spiel/"
-           target="_blank" rel="noopener" data-t="aktion.browserSpielen">Im Browser spielen</a>
-
-        <a class="badge" aria-disabled="true" tabindex="-1" title="Google Play — bald verfügbar">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l.1.1 9.9-9.9v-.2L3.6 1.8z"/><path fill="#fff" d="M17 15.8l-3.3-3.3v-.2L17 9l.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3L17 15.8z"/><path fill="#fff" d="M17.1 15.7L13.7 12.3 3.6 22.4c.4.4 1 .4 1.7.1l11.8-6.8"/><path fill="#fff" d="M17.1 8.9L5.3 2.1c-.7-.4-1.3-.4-1.7 0l10.1 10.1 3.4-3.3z"/></svg>
-          <span class="badge-text">
-            <small data-t="aktion.inPruefung">in Prüfung</small>
-            <strong>Google Play</strong>
-          </span>
-        </a>
-
-        <a class="badge" aria-disabled="true" tabindex="-1" title="App Store — bald verfügbar">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.4.8-.7 0-1.8-.8-2.9-.8-1.5 0-2.9.9-3.6 2.2-1.6 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.9.7c1.2 0 1.9-1.1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.1-.8-2.1-3.6zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.7-.9 2.6 1 .1 2-.5 2.6-1.2z"/></svg>
-          <span class="badge-text">
-            <small data-t="aktion.inPruefung">in Prüfung</small>
-            <strong>App Store</strong>
-          </span>
-        </a>
-
-        <a class="knopf knopf-rand"
-           href="https://alonepard10501.github.io/fanica-fun/datenschutz.html"
-           target="_blank" rel="noopener" data-t="aktion.datenschutz">Datenschutz</a>
+        <a class="nbtn b-ripple gross-knopf"
+           href="https://alonepard10501.github.io/fanica-fun/spiel/"
+           target="_blank" rel="noopener">
+          <span data-t="aktion.browserSpielen">Im Browser spielen</span></a>
+        <span class="store-hinweis" data-t="aktion.inPruefung">in Prüfung</span>
       </div>
-
-      <div class="qr">
-        <div data-qr="https://alonepard10501.github.io/fanica-fun/spiel/"></div>
-        <div class="qr-text">
-          <h4 data-t="aktion.qrTitel">Mit dem Handy öffnen</h4>
-          <p data-t="aktion.qrText"></p>
-        </div>
-      </div>
-
       <p class="preis" data-t="fanica.preis"></p>
-
       <div class="hinweis">
         <p data-t="fanica.hinweis"></p>
         <p data-t="fanica.unabhaengig"></p>
       </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================ KAPITEL 2 — INSTINCT SCORING -->
+<section class="abschnitt" id="instinct" data-kapitel="instinct">
+  <div class="licht licht-wald" aria-hidden="true"><span></span><span></span></div>
+
+  <div class="huelle">
+
+    <div class="kapitelkopf auf">
+      <p class="kennung" data-t="instinct.kennung">Kapitel 02</p>
+      <!-- Eigenes App-Logo, daneben das Kooperationslogo -->
+      <div class="logo-paar">
+        <img class="kapitel-logo" src="bilder/marke/logo-instinct.webp"
+             alt="Instinct Scoring — Logo" width="260" height="260" loading="lazy">
+        <span class="logo-mal" aria-hidden="true">×</span>
+        <img class="kapitel-logo kapitel-logo-klein" src="bilder/marke/logo-kooperation.webp"
+             alt="In Kooperation mit Bogensport Instinct" width="240" height="211"
+             loading="lazy">
+      </div>
+      <h2 data-t="instinct.name">Instinct Scoring</h2>
+      <p class="kooperationszeile" data-t="instinct.kooperation"></p>
+    </div>
+
+    <div class="block auf">
+      <div class="block-text">
+        <div class="claim" aria-label="Track. Score. Improve.">
+          <span>TRACK.</span><span>SCORE.</span><span>IMPROVE.</span>
+        </div>
+        <p class="gross leise" data-t="instinct.claimDeutsch"></p>
+        <blockquote class="zitat" data-t="instinct.zitat"></blockquote>
+        <p class="gross" data-t="instinct.positionierung"></p>
+      </div>
+      <div class="block-bild">
+        <div class="handy" data-neigen>
+          <img src="bilder/instinct/start.webp"
+               srcset="bilder/instinct/start.webp 1x, bilder/instinct/start@2x.webp 2x"
+               width="300" height="649" loading="lazy" decoding="async"
+               data-t="instinct.bildStart2Alt" data-t-attr="alt" alt="">
+          <div class="handy-glanz" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zahlen -->
+    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
+      <div class="zahlen" id="instinct-umfang-zahlen"></div>
+    </div>
+
+    <!-- Zielscheibe: auf dem Handy klappbar -->
+    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
+      <h3 data-t="instinct.scheibeTitel">Fünf Wertungssysteme, eine Scheibe</h3>
+      <p class="leise" style="max-width:60ch" data-t="instinct.scheibeText"></p>
+      <div class="scheibe-block">
+        <div class="scheibe-buehne" id="scheibe-buehne"></div>
+        <div>
+          <div id="scheibe-tafel"></div>
+          <p class="preis" style="margin-top:1.2rem" data-t="instinct.scheibeFussnote"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weiterlesen -->
+    <div class="auf weiterlesen">
+      <a class="nbtn b-grass" href="instinct-scoring.html">
+        <span data-t="instinct.mehrKnopf">Alles über Instinct Scoring</span></a>
+      <p class="weiter-hinweis" data-t="instinct.mehrText"></p>
+    </div>
+
+    <!-- Aktionen -->
+    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
+      <div class="aktionen">
+        <a class="nbtn b-grass gross-knopf"
+           href="https://alonepard10501.github.io/instinct-scoring/"
+           target="_blank" rel="noopener">
+          <span data-t="aktion.browser">Im Browser testen</span></a>
+        <span class="store-hinweis" data-t="aktion.inPruefung">in Prüfung</span>
+      </div>
+      <p class="preis" data-t="instinct.preis"></p>
     </div>
 
   </div>
@@ -428,6 +265,8 @@
 
     <div class="kapitelkopf mitte auf">
       <p class="kennung zentriert" data-t="neonpunkt.kennung">Kapitel 03</p>
+      <img class="kapitel-logo kapitel-logo-klein" src="bilder/marke/app-neonpunkt.webp"
+           alt="NeonPunkt — App-Symbol" width="150" height="150" loading="lazy">
       <h2 data-t="neonpunkt.name">NeonPunkt</h2>
       <p class="kooperationszeile" data-t="neonpunkt.untertitel"></p>
     </div>
@@ -440,23 +279,16 @@
       <p class="gross" data-t="neonpunkt.positionierung"></p>
     </div>
 
-    <!-- ---------------------------------------- WORUM GEHT ES? -->
-    <div class="auf huelle-schmal" style="margin-top:clamp(2.6rem,6vw,4rem)">
-      <h3 data-t="neonpunkt.worumTitel">Worum geht es eigentlich?</h3>
-      <p data-t="neonpunkt.worumText"></p>
-      <p data-t="neonpunkt.worumZwei"></p>
-    </div>
-
-    <!-- ---------------------------------------- ZEITRAFFER (der Morph) -->
-    <div class="raffer auf" id="raffer" style="margin-top:clamp(2.6rem,6vw,4.4rem)">
+    <!-- Zeitraffer -->
+    <div class="raffer auf" id="raffer" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
       <div class="raffer-kopf">
         <div>
           <h3 data-t="neonpunkt.rafferTitel">48 Stunden in zwölf Sekunden</h3>
           <p data-t="neonpunkt.rafferText"></p>
           <p id="raffer-statisch" hidden data-t="neonpunkt.rafferStatisch"></p>
         </div>
-        <button class="knopf knopf-voll" id="raffer-knopf" aria-pressed="false"
-                data-t="neonpunkt.rafferKnopfStart">▶ Zeitraffer starten</button>
+        <button class="nbtn b-grass" id="raffer-knopf" aria-pressed="false">
+          <span data-t="neonpunkt.rafferKnopfStart">▶ Zeitraffer starten</span></button>
       </div>
 
       <div class="raffer-buehne" id="raffer-buehne" role="button" tabindex="0"
@@ -468,107 +300,31 @@
           <span><em data-t="neonpunkt.rafferGroesse">Größe</em>
                 <b id="raffer-prozent">0 %</b></span>
         </div>
-        <div class="raffer-balken" aria-hidden="true">
-          <i id="raffer-fortschritt"></i>
-        </div>
+        <div class="raffer-balken" aria-hidden="true"><i id="raffer-fortschritt"></i></div>
         <div class="raffer-hinweis" id="raffer-hinweis"
              data-t="neonpunkt.rafferHinweis">Tipp den Punkt an, während er läuft</div>
       </div>
     </div>
 
-    <!-- ---------------------------------------- ECHTES SPIEL -->
-    <div class="auf">
-      <div class="huelle-schmal mittig" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
-        <h3 data-t="neonpunkt.spielTitel">Probier es hier aus</h3>
-        <p class="leise" data-t="neonpunkt.spielText"></p>
-      </div>
+    <!-- Zahlen -->
+    <div class="zahlen auf" id="neonpunkt-zahlen" style="margin-top:clamp(2rem,4vw,3rem)"></div>
 
-      <div class="spielfeld" id="spielfeld" role="button" tabindex="0"
-           aria-label="Neon-Punkt zum Antippen — er beginnt klein von vorn und wechselt die Farbe">
-        <div class="spielzaehler">
-          <span><span data-t="neonpunkt.spielKlicks">Klicks</span>
-                <b id="spiel-klicks">0</b></span>
-          <span><span data-t="neonpunkt.spielFarbe">Farbe</span>
-                <b id="spiel-farbe">1</b>
-                <span data-t="neonpunkt.spielVon">von 16</span></span>
-        </div>
-        <div class="spielpunkt" aria-hidden="true"></div>
-        <div class="spielhinweis" data-t="neonpunkt.spielHinweis">Tipp den Punkt an</div>
-      </div>
+    <!-- Weiterlesen -->
+    <div class="auf weiterlesen">
+      <a class="nbtn b-helix" href="neonpunkt.html">
+        <span data-t="neonpunkt.mehrKnopf">Alles über NeonPunkt</span></a>
+      <p class="weiter-hinweis" data-t="neonpunkt.mehrText"></p>
     </div>
 
-    <!-- ---------------------------------------- ZAHLEN -->
-    <div class="zahlen auf" id="neonpunkt-zahlen"></div>
-    <p class="preis mittig auf" style="margin-top:1.4rem;border:0;padding:0"
-       data-t="neonpunkt.zahlenFuss"></p>
-
-
-    <!-- ---------------------------------------- FUNKTIONSUMFANG -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.6rem)">
-      <h3 data-t="neonpunkt.umfangTitel">Was drinsteckt</h3>
-      <p class="leise" style="max-width:64ch" data-t="neonpunkt.umfangText"></p>
-      <div class="zahlen" id="neonpunkt-umfang-zahlen"></div>
-      <div class="funktionen" id="neonpunkt-umfang-liste"></div>
-      <h4 style="margin-top:clamp(2rem,4vw,3rem)" data-t="neonpunkt.umfangAnzeigenTitel"></h4>
-      <ul class="anzeigen" id="neonpunkt-umfang-anzeigen"></ul>
-      <p class="preis" style="margin-top:1.4rem" data-t="neonpunkt.umfangFilter"></p>
-    </div>
-    <!-- ---------------------------------------- DIE REGELN -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.4rem)">
-      <h3 data-t="neonpunkt.reglnTitel">Die ganzen Regeln</h3>
-      <div class="begriffe drei" id="neonpunkt-regeln"></div>
-    </div>
-
-    <!-- ---------------------------------------- DIE 16 FARBEN -->
-    <div class="auf" style="margin-top:clamp(2.8rem,6vw,4.4rem)">
-      <h3 data-t="neonpunkt.farbenTitel">Die sechzehn Farben</h3>
-      <p class="leise" data-t="neonpunkt.farbenText"></p>
-      <div class="farbreihe" id="neonpunkt-farben"></div>
-    </div>
-
-    <!-- ---------------------------------------- BILDER -->
-    <div class="galerie auf" id="neonpunkt-galerie"
-         style="margin-top:clamp(2.8rem,6vw,4.4rem)"></div>
-
-    <!-- ---------------------------------------- BLÖCKE -->
-    <div class="raster raster-2 auf" id="neonpunkt-bloecke"
-         style="margin-top:clamp(2.6rem,6vw,4rem)"></div>
-
-    <!-- ---------------------------------------- AKTION -->
-    <div class="auf" style="margin-top:clamp(2.6rem,6vw,4rem)">
+    <!-- Aktionen -->
+    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
       <div class="aktionen">
-        <a class="knopf knopf-voll" href="https://alonepard10501.github.io/fanica-fun/neonpunkt/"
-           target="_blank" rel="noopener" data-t="aktion.browserSpielen">Im Browser spielen</a>
-
-        <a class="badge" aria-disabled="true" tabindex="-1" title="Google Play — bald verfügbar">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l.1.1 9.9-9.9v-.2L3.6 1.8z"/><path fill="#fff" d="M17 15.8l-3.3-3.3v-.2L17 9l.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3L17 15.8z"/><path fill="#fff" d="M17.1 15.7L13.7 12.3 3.6 22.4c.4.4 1 .4 1.7.1l11.8-6.8"/><path fill="#fff" d="M17.1 8.9L5.3 2.1c-.7-.4-1.3-.4-1.7 0l10.1 10.1 3.4-3.3z"/></svg>
-          <span class="badge-text">
-            <small data-t="aktion.inPruefung">in Prüfung</small>
-            <strong>Google Play</strong>
-          </span>
-        </a>
-
-        <a class="badge" aria-disabled="true" tabindex="-1" title="App Store — bald verfügbar">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.4.8-.7 0-1.8-.8-2.9-.8-1.5 0-2.9.9-3.6 2.2-1.6 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.9.7c1.2 0 1.9-1.1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.1-.8-2.1-3.6zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.7-.9 2.6 1 .1 2-.5 2.6-1.2z"/></svg>
-          <span class="badge-text">
-            <small data-t="aktion.inPruefung">in Prüfung</small>
-            <strong>App Store</strong>
-          </span>
-        </a>
-
-        <a class="knopf knopf-rand"
-           href="https://alonepard10501.github.io/fanica-fun/neonpunkt-datenschutz.html"
-           target="_blank" rel="noopener" data-t="aktion.datenschutz">Datenschutz</a>
+        <a class="nbtn b-helix gross-knopf"
+           href="https://alonepard10501.github.io/fanica-fun/neonpunkt/"
+           target="_blank" rel="noopener">
+          <span data-t="aktion.browserSpielen">Im Browser spielen</span></a>
+        <span class="store-hinweis" data-t="aktion.inPruefung">in Prüfung</span>
       </div>
-
-      <div class="qr">
-        <div data-qr="https://alonepard10501.github.io/fanica-fun/neonpunkt/"></div>
-        <div class="qr-text">
-          <h4 data-t="aktion.qrTitel">Mit dem Handy öffnen</h4>
-          <p data-t="aktion.qrText"></p>
-        </div>
-      </div>
-
       <p class="preis" data-t="neonpunkt.preis"></p>
     </div>
 
@@ -590,7 +346,7 @@
     <div class="tabelle-huelle auf" id="vergleich-tabelle"></div>
     <p class="preis auf" style="margin-top:1.2rem" data-t="vergleich.fuss"></p>
 
-    <div class="auf" style="margin-top:clamp(3rem,6vw,4.8rem)">
+    <div class="auf" style="margin-top:clamp(2.6rem,5vw,4rem)">
       <p class="kennung" data-t="fragen.kennung">Häufige Fragen</p>
       <h2 style="font-size:clamp(1.6rem,3.4vw,2.6rem)" data-t="fragen.titel">Was oft gefragt wird</h2>
       <div class="fragen" id="fragen-liste"></div>
@@ -610,18 +366,22 @@
         <h2 data-t="ueber.titel">Ein Mensch, ein Studio</h2>
         <p class="gross" data-t="ueber.text"></p>
         <p data-t="ueber.textZwei"></p>
-        <div class="zahlen" id="ueber-zahlen" style="margin-top:2.4rem"></div>
+        <div class="zahlen" id="ueber-zahlen" style="margin-top:2.2rem"></div>
       </div>
 
       <div class="block-bild auf v2">
-        <img class="portraet" src="bilder/marke/portraet.webp"
-             width="320" height="320" loading="lazy"
-             data-t="ueber.portraetAlt" data-t-attr="alt" alt="">
+        <div class="hero-logos hero-logos-klein">
+          <img src="bilder/marke/logo-fanica.webp" alt="FaNiCa Fun — Logo"
+               width="260" height="140" loading="lazy">
+          <img src="bilder/marke/logo-kooperation.webp"
+               alt="In Kooperation mit Bogensport Instinct"
+               width="220" height="194" loading="lazy">
+        </div>
       </div>
     </div>
 
     <div class="auf">
-      <h3 style="margin-top:clamp(2.4rem,5vw,3.4rem)" data-t="ueber.ablaufTitel">
+      <h3 style="margin-top:clamp(2.2rem,4vw,3rem)" data-t="ueber.ablaufTitel">
         Wie ein Projekt entsteht</h3>
       <div class="ablauf" id="ueber-ablauf"></div>
     </div>
@@ -636,11 +396,9 @@
     <p class="kennung zentriert" data-t="kontakt.kennung">Kapitel 05</p>
     <h2 data-t="kontakt.titel">Schreib mir</h2>
     <p class="gross" data-t="kontakt.text"></p>
-    <a class="knopf knopf-voll" href="mailto:fanicafuntipp@gmail.com"
-       data-t="kontakt.knopf">fanicafuntipp@gmail.com</a>
+    <a class="nbtn b-ripple gross-knopf" href="mailto:fanicafuntipp@gmail.com">
+      <span data-t="kontakt.knopf">fanicafuntipp@gmail.com</span></a>
 
-    <!-- Kontaktformular, eingeklappt (Falk 30.07.). Das Impressum steht
-         bewusst NUR noch in der Fusszeile. -->
     <div class="klapp">
       <details class="frage">
         <summary data-t="kontakt.klappTitel">Nachricht schreiben</summary>
@@ -652,28 +410,24 @@
               <span data-t="kontakt.formThema">Worum geht es?</span>
               <select id="kf-thema" required></select>
             </label>
-
             <label class="kfeld">
               <span data-t="kontakt.formName">Dein Name</span>
               <input type="text" id="kf-name" required
                      data-t="kontakt.formNamePlatz" data-t-attr="placeholder">
             </label>
-
             <label class="kfeld">
               <span data-t="kontakt.formMail">Deine E-Mail</span>
               <input type="email" id="kf-mail"
                      data-t="kontakt.formMailPlatz" data-t-attr="placeholder">
             </label>
-
             <label class="kfeld kfeld-breit">
               <span data-t="kontakt.formText">Deine Nachricht</span>
               <textarea id="kf-text" rows="5" required
                         data-t="kontakt.formTextPlatz" data-t-attr="placeholder"></textarea>
             </label>
-
             <div class="kfeld-breit">
-              <button type="submit" class="knopf knopf-voll"
-                      data-t="kontakt.formKnopf">Nachricht schreiben</button>
+              <button type="submit" class="nbtn b-ripple gross-knopf">
+                <span data-t="kontakt.formKnopf">Nachricht schreiben</span></button>
               <p class="kf-hinweis" data-t="kontakt.formHinweis"></p>
               <p class="kf-fehler" id="kf-fehler" role="alert" hidden
                  data-t="kontakt.formFehlt"></p>
@@ -713,7 +467,9 @@
     </div>
     <div class="fuss-unten">
       <span data-t="fuss.kooperation"></span>
-      <span>© <span id="jahr">2026</span> FaNiCa · <a class="fuss-mail" href="mailto:fanicafuntipp@gmail.com" title="fanicafuntipp@gmail.com">Falk Carstensen</a></span>
+      <span>© <span id="jahr">2026</span> FaNiCa ·
+        <a class="fuss-mail" href="mailto:fanicafuntipp@gmail.com"
+           title="fanicafuntipp@gmail.com">Falk Carstensen</a></span>
     </div>
     <p style="margin-top:1.2rem;font-size:.78rem;color:var(--grau)" data-t="fuss.kein"></p>
   </div>

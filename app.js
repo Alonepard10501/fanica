@@ -146,6 +146,17 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
 
     teile.forEach(t => b.observe(t));
+
+    /* Sicherheitsnetz: Wer beim Laden schon im Bild ist oder wen der
+       Beobachter aus irgendeinem Grund nicht meldet, wird nach kurzer
+       Zeit trotzdem sichtbar. Ohne das blieb auf dem Handy schon mal
+       ein halber Abschnitt blass stehen. */
+    setTimeout(() => {
+      teile.forEach(t => {
+        const r = t.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) t.classList.add("da");
+      });
+    }, 900);
   }
 
   /* ========================================================
@@ -895,6 +906,30 @@
     }, { passive: true });
   }
 
+  /* ---- Bögen: auf dem Handy klappbar, ab 780 px dauerhaft offen ----
+     Falk 31.07.: „die Bögen werden klappbar und nicht so groß auf dem
+     Handy dargestellt". <details> ist von Haus aus zu; ab Tablet-Breite
+     öffnen wir alle und lassen sie offen (das CSS blendet dort Pfeil und
+     Mini-Vorschau aus, so wirkt der Kopf wie eine normale Überschrift). */
+  function boegenEinrichten() {
+    const boegen = document.querySelectorAll("details.bogen");
+    if (!boegen.length) return;
+    const breit = window.matchMedia("(min-width: 780px)");
+
+    function anpassen() {
+      boegen.forEach(b => {
+        if (breit.matches) b.open = true;
+        else b.removeAttribute("open");
+      });
+    }
+    anpassen();
+    /* Beim Umschalten der Breite (Drehen des Handys, Fenster ziehen)
+       nachziehen — sonst bliebe ein am Rechner geöffneter Bogen auf
+       dem Handy aufgeklappt und die Seite wäre wieder zu lang. */
+    if (breit.addEventListener) breit.addEventListener("change", anpassen);
+    else breit.addListener(anpassen);          /* ältere Browser */
+  }
+
   /* ======================================================== START */
   function start() {
     texteEinsetzen();
@@ -914,6 +949,7 @@
     neigenEinrichten();
     kartenLichtEinrichten();
     scheibeEinrichten();
+    boegenEinrichten();
   }
 
   if (document.readyState === "loading") {

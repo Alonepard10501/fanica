@@ -35,12 +35,15 @@ de: {
       { farbe: "rot", name: "FaNiCa Fun", ziel: "#fanica" },
       { farbe: "neon", name: "NeonPunkt", ziel: "#neonpunkt" }
     ],
+    appFanica: "Tipprunde",
+    appInstinct: "Bogensport",
+    appNeon: "Klick-Spiel",
     scrollHinweis: "Scrollen"
   },
 
   /* ====================== KAPITEL 1 — INSTINCT SCORING ================ */
   instinct: {
-    kennung: "Kapitel 01",
+    kennung: "Kapitel 02",
     kooperation: "by Bogensport Instinct · in Kooperation mit FaNiCa Fun",
     name: "Instinct Scoring",
     claim: ["TRACK.", "SCORE.", "IMPROVE."],
@@ -346,13 +349,15 @@ de: {
 
     zielgruppe: ["Recurve", "Langbogen", "Blankbogen", "Compound", "traditionell"],
     preis: "Sieben Tage Premium+ gratis testen, danach ab 1,99 € je 4 Wochen. Runden schießen und werten bleibt dauerhaft kostenlos.",
+    mehrKnopf: "Alles über Instinct Scoring",
+    mehrText: "Die vier Bogenarten mit Zeichnung, der Spine-Rechner erklärt, das Glossar der Bogen-Begriffe, wer welche Wertung festlegt und die drei Preisstufen im Vergleich.",
     bildStart: "bilder/instinct/start.webp",
     bildStartAlt: "Instinct Scoring: Startbildschirm mit Bogenschützen-Logo vor Waldkulisse"
   },
 
   /* ====================== KAPITEL 2 — FANICA FUN ====================== */
   fanica: {
-    kennung: "Kapitel 02",
+    kennung: "Kapitel 01",
     name: "FaNiCa Fun",
     untertitel: "Die Tipprunde für Motorsport-Freunde",
     claim: "Tippe die ersten Fünf.",
@@ -460,7 +465,7 @@ de: {
         punkte: [
           "Private Gruppen mit Code",
           "Zugang nur über den Organisator",
-          "Läuft auf Android und im Browser",
+          "Läuft überall: Android, iPhone, im Browser und auf dem Rechner",
           "Rennergebnisse aus öffentlichen Datenquellen"
         ]
       }
@@ -513,6 +518,24 @@ de: {
         text: "Der Mitspieler trägt seinen Namen und den Code ein, fertig. Niemand stolpert zufällig in eine fremde Runde." }
     ],
     beitrittHinweis: "Dein Profil gehört dir, nicht der Gruppe: Ein einmal abgeschlossenes Abo gilt in allen Runden, in denen du mitspielst.",
+
+    mehrKnopf: "Alles über FaNiCa Fun",
+    mehrText: "Die fünf Trophäen mit ihren echten Bedingungen, der Ablauf einer Renn-Woche, alle 22 Strecken, die 16 Karriere-Kennzahlen und wie man einer Runde beitritt.",
+    galerieTitel: "Ein Blick in die App",
+    bilder: [
+      { pfad: "bilder/fanica/tippen.webp", hoch: true,
+        alt: "FaNiCa Fun: Tippschein mit der Startaufstellung",
+        titel: "Der Tippschein" },
+      { pfad: "bilder/fanica/fahrer.webp", hoch: true,
+        alt: "FaNiCa Fun: Fahrerübersicht mit Punkten und Platzierungen",
+        titel: "Die Fahrer" },
+      { pfad: "bilder/fanica/teilnahme.webp", hoch: true,
+        alt: "FaNiCa Fun: Teilnahme an einer Runde bestätigen",
+        titel: "Runde beitreten" },
+      { pfad: "bilder/fanica/chat.webp", hoch: true,
+        alt: "FaNiCa Fun: Gruppen-Chat der Tipprunde",
+        titel: "Der Runden-Chat" }
+    ],
 
     bildProfil: "bilder/fanica/profil.webp",
     bildProfilAlt: "FaNiCa Fun: Profil anlegen — einmal registrieren, überall mitspielen",
@@ -651,6 +674,8 @@ de: {
     ],
 
     preis: "Die ersten 500 Klicks sind frei. Danach schaltet Premium unbegrenztes Weiterspielen, die Bestenlisten und die Sitzungsanzeige frei: 0,49 € je 4 Wochen oder 4,99 € im Jahr. Nichts geht verloren — das Spiel pausiert nur.",
+    mehrKnopf: "Alles über NeonPunkt",
+    mehrText: "Worum es eigentlich geht, alle Regeln, die sechzehn Farben in ihrer Reihenfolge, die beiden Bestenlisten und das Widget für den Startbildschirm.",
     zahlenFuss: "Keine Werbung, keine Berechtigungen, kein Konto, kein Internet. Alles bleibt auf deinem Gerät."
   },
 
@@ -673,7 +698,7 @@ de: {
   ueber: {
     kennung: "Kapitel 04",
     titel: "Ein Mensch, ein Studio",
-    text: "Ich bin Falk Carstensen und arbeite allein. Kein Team, kein Büro, kein Investor. Was ich habe, ist eine klare Vorstellung davon, wie eine App sich anfühlen soll — und KI als Werkzeugkasten, der mir die Arbeit abnimmt, für die früher fünf Leute nötig waren.",
+    text: "Ich bin aus Nordfriesland und arbeite allein. Kein Team, kein Büro, kein Investor. Was ich habe, ist eine klare Vorstellung davon, wie eine App sich anfühlen soll — und KI als Werkzeugkasten, der mir die Arbeit abnimmt, für die früher fünf Leute nötig waren.",
     textZwei: "Meine Apps haben eines gemeinsam: Sie funktionieren offline, sie sammeln nichts über dich, und sie bevormunden dich nicht. Das ist keine Marketing-Haltung, sondern die einzige, die ich selbst auf meinem Handy dulden würde.",
 
     ablaufTitel: "Wie ein Projekt entsteht",
@@ -709,7 +734,7 @@ de: {
       { name: "Sprachen",      werte: ["2", "2", "16"] },
       { name: "Kostenlos nutzbar", werte: ["Runden schießen & werten", "Tippen & laufende Saison", "Die ersten 500 Klicks"] },
       { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "0,99 € / 4 Wochen", "0,49 € / 4 Wochen"] },
-      { name: "Plattform",     werte: ["Android · iOS · Browser", "Android · iOS · Browser", "Android · iOS"] }
+      { name: "Plattform",     werte: ["Android · iOS · Browser", "Android · iOS · Browser · Windows", "Android · iOS"] }
     ],
     fuss: "Alle Preise mit sieben Tagen kostenlosem Test."
   },
@@ -833,12 +858,15 @@ en: {
       { farbe: "rot", name: "FaNiCa Fun", ziel: "#fanica" },
       { farbe: "neon", name: "NeonPunkt", ziel: "#neonpunkt" }
     ],
+    appFanica: "Predictions",
+    appInstinct: "Archery",
+    appNeon: "Tap game",
     scrollHinweis: "Scroll"
   },
 
   /* ====================== CHAPTER 1 — INSTINCT SCORING ================ */
   instinct: {
-    kennung: "Chapter 01",
+    kennung: "Chapter 02",
     kooperation: "by Bogensport Instinct · in cooperation with FaNiCa Fun",
     name: "Instinct Scoring",
     claim: ["TRACK.", "SCORE.", "IMPROVE."],
@@ -1130,13 +1158,15 @@ en: {
 
     zielgruppe: ["Recurve", "Longbow", "Barebow", "Compound", "traditional"],
     preis: "Seven days of Premium+ free, then from €1.99 per four weeks. Shooting and scoring rounds stays free forever.",
+    mehrKnopf: "Everything about Instinct Scoring",
+    mehrText: "The four bow types with drawings, the spine calculator explained, the glossary of archery terms, who defines which scoring and the three tiers compared.",
     bildStart: "bilder/instinct/start.webp",
     bildStartAlt: "Instinct Scoring: home screen with archer logo against a forest backdrop"
   },
 
   /* ====================== CHAPTER 2 — FANICA FUN ====================== */
   fanica: {
-    kennung: "Chapter 02",
+    kennung: "Chapter 01",
     name: "FaNiCa Fun",
     untertitel: "The prediction game for motorsport friends",
     claim: "Predict the top five.",
@@ -1287,10 +1317,28 @@ en: {
         punkte: [
           "Private groups with a code",
           "Access only through the organiser",
-          "Runs on Android and in the browser",
+          "Runs everywhere: Android, iPhone, in the browser and on your computer",
           "Race results from public data sources"
         ]
       }
+    ],
+
+    mehrKnopf: "Everything about FaNiCa Fun",
+    mehrText: "The five trophies with their real conditions, how a race week runs, all 22 circuits, the 16 career figures and how to join a group.",
+    galerieTitel: "A look inside the app",
+    bilder: [
+      { pfad: "bilder/fanica/tippen.webp", hoch: true,
+        alt: "FaNiCa Fun: prediction slip with the starting grid",
+        titel: "The prediction slip" },
+      { pfad: "bilder/fanica/fahrer.webp", hoch: true,
+        alt: "FaNiCa Fun: driver overview with points and positions",
+        titel: "The drivers" },
+      { pfad: "bilder/fanica/teilnahme.webp", hoch: true,
+        alt: "FaNiCa Fun: confirming participation in a group",
+        titel: "Joining a group" },
+      { pfad: "bilder/fanica/chat.webp", hoch: true,
+        alt: "FaNiCa Fun: group chat of the prediction round",
+        titel: "The group chat" }
     ],
 
     bildProfil: "bilder/fanica/profil.webp",
@@ -1388,6 +1436,8 @@ en: {
       { zahl: "16", einheit: "colours", text: "one after another, always in order" },
       { zahl: "0", einheit: "permissions", text: "no ads, no internet, no account" }
     ],
+    mehrKnopf: "Everything about NeonPunkt",
+    mehrText: "What the point actually is, all the rules, the sixteen colours in order, both leaderboards and the home screen widget.",
     zahlenFuss: "No ads, no permissions, no account, no internet. Everything stays on your device.",
 
     bloecke: [
@@ -1460,7 +1510,7 @@ en: {
       { name: "Languages",      werte: ["2", "2", "16"] },
       { name: "Free to use",    werte: ["Shooting & scoring rounds", "Predicting & current season", "The first 500 taps"] },
       { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€0.99 / 4 weeks", "€0.49 / 4 weeks"] },
-      { name: "Platform",       werte: ["Android · iOS · browser", "Android · iOS · browser", "Android · iOS"] }
+      { name: "Platform",       werte: ["Android · iOS · browser", "Android · iOS · browser · Windows", "Android · iOS"] }
     ],
     fuss: "All prices with a seven-day free trial."
   },
@@ -1492,7 +1542,7 @@ en: {
   ueber: {
     kennung: "Chapter 04",
     titel: "One person, one studio",
-    text: "I'm Falk Carstensen and I work alone. No team, no office, no investor. What I do have is a clear idea of how an app should feel — and AI as a toolbox that takes on the work that used to need five people.",
+    text: "I'm from Northern Germany and I work alone. No team, no office, no investor. What I do have is a clear idea of how an app should feel — and AI as a toolbox that takes on the work that used to need five people.",
     textZwei: "My apps have one thing in common: they work offline, they collect nothing about you, and they don't patronise you. That isn't a marketing stance but the only one I'd tolerate on my own phone.",
 
     ablaufTitel: "How a project comes about",

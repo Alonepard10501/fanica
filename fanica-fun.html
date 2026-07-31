@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FaNiCa Fun — die Tipprunde für Motorsport-Freunde</title>
+<meta name="description" content="Alles über FaNiCa Fun: fünf Trophäen mit ihren Bedingungen, der Ablauf einer Renn-Woche, 22 Strecken, 16 Karriere-Kennzahlen.">
+<meta name="theme-color" content="#07070A">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-kapitel="fanica">
+
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<div class="kulisse" aria-hidden="true"
+     style="background:linear-gradient(180deg,#0A0406,#12070B 50%,#08070C)"></div>
+<div class="hologramm" aria-hidden="true"></div>
+<div class="gitter" aria-hidden="true"></div>
+<div class="koerner" aria-hidden="true"></div>
+
+<header class="kopf fest">
+ <div class="kopf-innen">
+  <a class="kopf-marke" href="index.html">
+    <img src="bilder/marke/icon-fanica.webp" alt="" width="30" height="30">
+    <span>FaNiCa<b>.</b></span>
+  </a>
+  <nav class="kopf-nav" aria-label="Navigation">
+    <a href="index.html">← Startseite</a>
+  </nav>
+ </div>
+</header>
+
+<main id="inhalt" class="unterseite">
+  <div class="huelle">
+
+    <div class="kapitelkopf">
+      <p class="kennung">FaNiCa Fun</p>
+      <img class="kapitel-logo" src="bilder/marke/logo-fanica.webp"
+           alt="FaNiCa Fun — Logo" width="340" height="182">
+      <h1>Die Tipprunde für Motorsport-Freunde</h1>
+      <p class="kooperationszeile" data-t="fanica.untertitel"></p>
+    </div>
+
+    <p class="gross" style="max-width:64ch" data-t="fanica.positionierung"></p>
+
+    <!-- ---------- Ablauf einer Renn-Woche ---------- -->
+    <section class="unter-block">
+      <h2 data-t="fanica.ablaufTitel">So läuft eine Renn-Woche</h2>
+      <div class="schritte" id="fanica-ablauf"></div>
+    </section>
+
+    <!-- ---------- Trophäen ---------- -->
+    <section class="unter-block">
+      <h2 data-t="fanica.trophaeenTitel">Die Trophäen und wie du sie bekommst</h2>
+      <p class="leise" style="max-width:60ch" data-t="fanica.trophaeenText"></p>
+      <div class="trophaeen" id="fanica-trophaeen"></div>
+      <p class="preis" style="margin-top:1.4rem" data-t="fanica.trophaeenFuss"></p>
+    </section>
+
+    <!-- ---------- Funktionsumfang ---------- -->
+    <section class="unter-block">
+      <h2 data-t="fanica.umfangTitel">Was drinsteckt</h2>
+      <p class="leise" style="max-width:64ch" data-t="fanica.umfangText"></p>
+      <div class="funktionen" id="fanica-umfang-liste"></div>
+      <h3 style="margin-top:clamp(1.8rem,3.4vw,2.6rem)"
+          data-t="fanica.umfangAnzeigenTitel"></h3>
+      <ul class="anzeigen" id="fanica-umfang-anzeigen"></ul>
+      <p class="preis" data-t="fanica.umfangFilter"></p>
+    </section>
+
+    <!-- ---------- Strecken ---------- -->
+    <section class="unter-block">
+      <h2 data-t="fanica.streckenTitel">Auf welche Rennen wird getippt?</h2>
+      <p class="leise" style="max-width:64ch" data-t="fanica.streckenText"></p>
+      <div class="zahlen" id="fanica-strecken-zahlen"></div>
+      <div class="marken" id="fanica-strecken-beispiele" style="margin-top:1.6rem"></div>
+      <p class="preis" style="margin-top:1.4rem" data-t="fanica.streckenQuelle"></p>
+    </section>
+
+    <!-- ---------- Beitritt ---------- -->
+    <section class="unter-block">
+      <h2 data-t="fanica.beitrittTitel">Wie komme ich in eine Runde?</h2>
+      <div class="schritte" id="fanica-beitritt"></div>
+      <p class="preis" style="margin-top:1.4rem" data-t="fanica.beitrittHinweis"></p>
+    </section>
+
+    <!-- ---------- Funktionsblöcke ---------- -->
+    <section class="unter-block">
+      <div id="fanica-bloecke"></div>
+    </section>
+
+    <!-- ---------- Bilder aus der App ---------- -->
+    <section class="unter-block">
+      <h2 data-t="fanica.galerieTitel">Ein Blick in die App</h2>
+      <div class="galerie" id="fanica-galerie"></div>
+    </section>
+
+    <!-- ---------- Aktion ---------- -->
+    <section class="unter-block">
+      <div class="aktionen">
+        <a class="nbtn b-ripple gross-knopf"
+           href="https://alonepard10501.github.io/fanica-fun/spiel/"
+           target="_blank" rel="noopener">
+          <span data-t="aktion.browserSpielen">Im Browser spielen</span></a>
+        <a class="nbtn b-scratch" href="index.html#fanica">
+          <span data-t="zurueckKnopf">← Zurück zur Startseite</span></a>
+      </div>
+      <p class="preis" data-t="fanica.preis"></p>
+      <div class="hinweis">
+        <p data-t="fanica.hinweis"></p>
+        <p data-t="fanica.unabhaengig"></p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="fuss">
+  <div class="huelle">
+    <div class="fuss-unten">
+      <nav class="fuss-links" aria-label="Rechtliches">
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html" data-t="fuss.impressum">Impressum</a>
+        <a href="datenschutz.html" data-t="fuss.datenschutz">Datenschutz</a>
+        <a href="bildquellen.html" data-t="fuss.bildquellen">Bildquellen</a>
+      </nav>
+      <span>© <span id="jahr">2026</span> FaNiCa</span>
+    </div>
+  </div>
+</footer>
+
+<script src="texte.js"></script>
+<script src="inhalte.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

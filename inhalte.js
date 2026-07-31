@@ -147,19 +147,28 @@
 
     const iBoegen = el("instinct-boegen");
     if (iBoegen) {
+      /* Klappbar (<details>): auf dem Handy zugeklappt und schmal,
+         ab 780 px per CSS dauerhaft offen (Falk 31.07.: „die Bögen werden
+         klappbar und nicht so groß auf dem Handy dargestellt"). */
       iBoegen.innerHTML = hol("instinct.boegen").map(b => `
-        <article class="bogen auf" style="--bf:${sicher(b.farbe)}">
-          <div class="bogen-buehne">${BOGEN_SVG[b.name] || ""}</div>
-          <div class="bogen-kopf">
-            <h4>${sicher(b.name)}</h4>
-            <p class="bogen-kurz">${sicher(b.kurz)}</p>
+        <details class="bogen auf" style="--bf:${sicher(b.farbe)}">
+          <summary class="bogen-kopf">
+            <span class="bogen-vorschau" aria-hidden="true">${BOGEN_SVG[b.name] || ""}</span>
+            <span class="bogen-titel">
+              <b>${sicher(b.name)}</b>
+              <span class="bogen-kurz">${sicher(b.kurz)}</span>
+            </span>
+            <span class="bogen-pfeil" aria-hidden="true"></span>
+          </summary>
+          <div class="bogen-inhalt">
+            <div class="bogen-buehne">${BOGEN_SVG[b.name] || ""}</div>
+            <p class="bogen-text">${sicher(b.text)}</p>
+            <div class="bogen-daten">
+              <span>${sicher(hol("instinct.boegenErfasst"))}</span>
+              ${b.erfasst.map(e => `<b>${sicher(e)}</b>`).join("")}
+            </div>
           </div>
-          <p class="bogen-text">${sicher(b.text)}</p>
-          <div class="bogen-daten">
-            <span>${sicher(hol("instinct.boegenErfasst"))}</span>
-            ${b.erfasst.map(e => `<b>${sicher(e)}</b>`).join("")}
-          </div>
-        </article>`).join("");
+        </details>`).join("");
     }
 
     /* ---------------- INSTINCT: Pfeil-Begriffe ---------------- */
@@ -367,6 +376,20 @@
     if (nGal) {
       // Alle vier Bilder im gleichen 9:16-Ausschnitt, je 1x und 2x.
       nGal.innerHTML = hol("neonpunkt.bilder").map(b => `
+        <figure>
+          <img src="${sicher(b.pfad)}"
+               srcset="${sicher(b.pfad)} 1x, ${sicher(zwei(b.pfad))} 2x"
+               alt="${sicher(b.alt)}"
+               width="340" height="604" loading="lazy" decoding="async">
+          <figcaption>${sicher(b.titel)}</figcaption>
+        </figure>`).join("");
+    }
+
+    /* ---------------- FANICA: Galerie ---------------- */
+    const fGal = el("fanica-galerie");
+    if (fGal) {
+      // Vier echte Screenshots aus der App, gleiches 9:16-Maß wie oben.
+      fGal.innerHTML = hol("fanica.bilder").map(b => `
         <figure>
           <img src="${sicher(b.pfad)}"
                srcset="${sicher(b.pfad)} 1x, ${sicher(zwei(b.pfad))} 2x"
