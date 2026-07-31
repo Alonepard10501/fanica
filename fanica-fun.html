@@ -92,6 +92,30 @@
       <div id="fanica-bloecke"></div>
     </section>
 
+    <!-- ---------- Echte Zahlen aus einer laufenden Runde ---------- -->
+    <section class="unter-block" id="echte-runde">
+      <h2 data-t="fanica.rundeTitel">Wie es wirklich aussieht</h2>
+      <p class="gross" style="max-width:64ch" data-t="fanica.rundeText"></p>
+      <p class="leise" style="max-width:64ch" data-t="fanica.rundeQuelle"></p>
+      <div class="zahlen" id="runde-zahlen" style="margin-top:2rem"></div>
+      <h3 style="margin-top:clamp(2.2rem,4vw,3.2rem)"
+          data-t="fanica.rundeTabelleTitel">Der Stand</h3>
+      <p class="leise" style="max-width:62ch" data-t="fanica.rundeTabelleText"></p>
+      <div class="balken" id="runde-balken"></div>
+      <h3 style="margin-top:clamp(2.2rem,4vw,3.2rem)"
+          data-t="fanica.rundeTrefferTitel">Wie oft trifft man?</h3>
+      <p class="leise" style="max-width:62ch" data-t="fanica.rundeTrefferText"></p>
+      <div class="anteil" id="runde-treffer"></div>
+      <p class="merksatz" id="runde-merksatz"></p>
+      <h3 style="margin-top:clamp(2.2rem,4vw,3.2rem)"
+          data-t="fanica.rundeStreckenTitel">Nicht jede Strecke gleich schwer</h3>
+      <p class="leise" style="max-width:62ch" data-t="fanica.rundeStreckenText"></p>
+      <div class="balken balken-schmal" id="runde-strecken"></div>
+      <h3 style="margin-top:clamp(2.2rem,4vw,3.2rem)"
+          data-t="fanica.rundeSiegerTitel">Fünf Jahre</h3>
+      <div class="sieger" id="runde-sieger"></div>
+    </section>
+
     <!-- ---------- Bilder aus der App ---------- -->
     <section class="unter-block">
       <h2 data-t="fanica.galerieTitel">Ein Blick in die App</h2>
@@ -133,6 +157,7 @@
 </footer>
 
 <script src="texte.js"></script>
+<script src="runde.js"></script>
 <script src="inhalte.js"></script>
 <script src="app.js"></script>
 </body>

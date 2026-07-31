@@ -385,6 +385,100 @@
         </figure>`).join("");
     }
 
+    /* ---------------- FANICA: echte laufende Runde ----------------
+       Zahlen aus `runde.js` (aus der echten App-Datenlage gerechnet,
+       nichts geschätzt). Der Block erscheint nur, wenn runde.js
+       geladen ist — sonst bleiben die Container leer und unsichtbar. */
+    const RU = window.RUNDE;
+    if (RU) {
+      const rZahlen = el("runde-zahlen");
+      if (rZahlen) {
+        const z = [
+          { zahl: RU.jahre,       einheit: "Jahre",  text: "läuft die Runde schon" },
+          { zahl: RU.gesamtTipps, einheit: "Tipps",  text: "insgesamt abgegeben" },
+          { zahl: RU.spieler,     einheit: "Spieler", text: "in dieser Saison" },
+          { zahl: RU.abstand,     einheit: "Punkt",  text: "trennt Platz 1 von Platz 2" }
+        ];
+        rZahlen.innerHTML = z.map(x => `
+          <div class="zahl">
+            <b data-zaehler="${x.zahl}">0</b>
+            <em>${sicher(x.einheit)}</em>
+            <span>${sicher(x.text)}</span>
+          </div>`).join("");
+      }
+
+      /* Tabellenstand als Balken — Länge = Anteil am Führenden */
+      const rBalken = el("runde-balken");
+      if (rBalken) {
+        const spitze = RU.tabelle[0].punkte || 1;
+        rBalken.innerHTML = RU.tabelle.map(t => `
+          <div class="balken-zeile">
+            <span class="balken-platz">${t.platz}</span>
+            <span class="balken-name">${sicher(t.name)}</span>
+            <span class="balken-spur">
+              <span class="balken-fuellung" style="--anteil:${Math.round(100 * t.punkte / spitze)}%;--bf:${sicher(t.farbe)}"></span>
+            </span>
+            <span class="balken-wert">${t.punkte}</span>
+            <span class="balken-zusatz">${t.exakt}× exakt · ${t.quote}&nbsp;%</span>
+          </div>`).join("");
+      }
+
+      /* Trefferbilanz als ein durchgehender Anteilsbalken */
+      const rTreffer = el("runde-treffer");
+      if (rTreffer) {
+        const b = RU.bilanz;
+        const teile = [
+          { klasse: "a-exakt",   wert: b.exaktProzent,   name: "exakt richtig" },
+          { klasse: "a-dabei",   wert: b.dabeiProzent,   name: "Fahrer richtig, Platz daneben" },
+          { klasse: "a-daneben", wert: b.danebenProzent, name: "daneben" }
+        ];
+        rTreffer.innerHTML =
+          `<div class="anteil-spur">` +
+          teile.map(t => `<span class="anteil-teil ${t.klasse}"
+              style="--w:${t.wert}%" title="${sicher(t.name)}: ${t.wert} %"></span>`).join("") +
+          `</div><div class="anteil-legende">` +
+          teile.map(t => `<span><i class="${t.klasse}"></i>${sicher(t.name)}
+              <b>${t.wert}&nbsp;%</b></span>`).join("") +
+          `</div>`;
+      }
+
+      /* Der stärkste Satz des Abschnitts: keine einzige perfekte Reihe */
+      const rMerk = el("runde-merksatz");
+      if (rMerk) {
+        const b = RU.bilanz;
+        rMerk.innerHTML = b.vollTreffer === 0
+          ? `In <b>${b.reihen}</b> abgegebenen Tippreihen lag noch
+             <b>kein einziges Mal</b> jemand auf allen fünf Plätzen richtig.`
+          : `In ${b.reihen} Tippreihen gab es ${b.vollTreffer}× alle fünf Plätze richtig.`;
+      }
+
+      /* Strecken: wo die Gruppe viele Punkte holt und wo kaum welche */
+      const rStr = el("runde-strecken");
+      if (rStr) {
+        const spitze = RU.strecken.length ? RU.strecken[0].punkte : 1;
+        rStr.innerHTML = RU.strecken.map(s => `
+          <div class="balken-zeile">
+            <span class="balken-name">${sicher(s.stadt)}</span>
+            <span class="balken-spur">
+              <span class="balken-fuellung" style="--anteil:${Math.round(100 * s.punkte / spitze)}%"></span>
+            </span>
+            <span class="balken-wert">${s.punkte}</span>
+          </div>`).join("");
+      }
+
+      /* Saisonsieger */
+      const rSieger = el("runde-sieger");
+      if (rSieger) {
+        rSieger.innerHTML = RU.sieger.map(s => `
+          <div class="sieger-karte${s.saison === RU.saison ? " laufend" : ""}">
+            <b>${s.saison}</b>
+            <span class="sieger-name">${sicher(s.name)}</span>
+            <span class="sieger-punkte">${s.punkte} Punkte</span>
+            ${s.saison === RU.saison ? '<span class="sieger-hinweis">läuft noch</span>' : ""}
+          </div>`).join("");
+      }
+    }
+
     /* ---------------- FANICA: Galerie ---------------- */
     const fGal = el("fanica-galerie");
     if (fGal) {

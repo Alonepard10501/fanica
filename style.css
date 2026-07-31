@@ -179,6 +179,15 @@ p:last-child { margin-bottom: 0; }
   --akzent: var(--rot);
   --akzent-hell: var(--rot-hell);
 }
+/* „Auf einen Blick" vergleicht ALLE DREI Apps — deshalb bekommt der
+   Abschnitt bewusst KEINE App-Farbe (rot gehörte FaNiCa Fun allein und
+   sah aus, als sei die Tabelle nur zu dieser einen App).
+   Falk 31.07.: „welche App ist für dich hat noch die falschen Farben".
+   Neutrales Silberweiß stellt die drei gleichberechtigt nebeneinander. */
+[data-kapitel="vergleich"] {
+  --akzent: #8E97A3;
+  --akzent-hell: #D7DDE4;
+}
 
 /* Der Hintergrund jedes Kapitels — weicher Wechsel, kein harter Schnitt */
 .kulisse {
@@ -2309,6 +2318,30 @@ body { line-height: 1.72; letter-spacing: .005em; }
   .hologramm::before, .hologramm::after { animation: none !important; }
   .kulisse { background-attachment: scroll !important; }
 
+  /* 🔴 DIE eigentliche Bremse (Falk 31.07.: „auf dem Handy muss
+     flüssiger laufen im Browser"): die .licht-Ebenen sind bis zu
+     120vw grosse Kreise mit blur(90px), die dauerhaft WANDERN. Ein
+     bewegter Weichzeichner dieser Groesse muss bei jedem Bild neu
+     berechnet werden — das kostet mehr als alles andere zusammen.
+     Loesung: Bewegung aus, Weichzeichner kleiner, Ebene einfrieren.
+     Das Licht bleibt sichtbar, es steht nur still. */
+  .licht span {
+    animation: none !important;
+    will-change: auto !important;      /* keine Dauer-Ebene mehr halten */
+    filter: blur(48px) !important;     /* statt bis zu 90px */
+  }
+  /* Auch der grosse Hologramm-Weichzeichner wird kleiner (war 150px) */
+  .hologramm { filter: blur(70px) saturate(1.3) !important;
+               will-change: auto !important; }
+
+  /* Die uebrigen Dauer-Schleifen anhalten: das „Atmen" des NeonPunkt-
+     Lichts, die wandernden Sternspuren und der rutschende Scroll-Pfeil.
+     (Klassennamen aus der Datei geprueft, nicht geraten.) */
+  .licht-punkt span, .spuren i, .scrollhinweis::after {
+    animation: none !important;
+  }
+  .spuren { display: none; }   /* viele bewegte Einzelteile, kaum sichtbar */
+
   /* backdrop-filter ist auf Mobilgeraeten teuer — nur der Kopf behaelt ihn */
   .karte, .block, .stufe, .frage { backdrop-filter: none !important; }
 
@@ -2343,4 +2376,148 @@ body { line-height: 1.72; letter-spacing: .005em; }
   .aktionen { flex-direction: column; align-items: stretch; }
   .logo-paar { justify-content: center; gap: .8rem; }
   .logo-paar img { max-width: 42vw; }
+}
+
+/* ============================================================
+   ECHTE LAUFENDE RUNDE — Balken, Anteile, Saisonsieger
+   Zahlen kommen aus runde.js (aus der echten App-Datenlage
+   gerechnet). Falk 31.07.: "vergleiche ziehen ... hoch
+   professionell ... Balkendiagramme".
+   ============================================================ */
+
+/* ---- Balkendiagramm: eine Zeile je Spieler bzw. Strecke ---- */
+.balken {
+  margin-top: clamp(1.4rem, 3vw, 2.2rem);
+  display: flex; flex-direction: column; gap: .55rem;
+}
+.balken-zeile {
+  display: grid; align-items: center;
+  grid-template-columns: 1.6rem 7.5rem 1fr 3rem;
+  gap: .7rem;
+  padding: .45rem .7rem;
+  border-radius: 11px;
+  background: rgba(255,255,255,.028);
+  border: 1px solid rgba(255,255,255,.07);
+}
+.balken-platz {
+  font-family: var(--schrift-kopf); font-weight: 800;
+  font-size: .92rem; color: var(--grau); text-align: right;
+}
+.balken-name {
+  font-family: var(--schrift-kopf); font-weight: 700;
+  font-size: .95rem; color: var(--creme);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.balken-spur {
+  position: relative; height: 13px; border-radius: 999px;
+  background: rgba(255,255,255,.07); overflow: hidden;
+}
+.balken-fuellung {
+  position: absolute; inset: 0 auto 0 0;
+  width: var(--anteil, 0%);
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    color-mix(in srgb, var(--bf, var(--akzent)) 55%, transparent),
+    var(--bf, var(--akzent)));
+  box-shadow: 0 0 14px -3px var(--bf, var(--akzent));
+  /* Wächst beim Einblenden von links nach rechts */
+  transform-origin: left center;
+  animation: balken-wachsen .9s var(--weich) both;
+}
+@keyframes balken-wachsen { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.balken-wert {
+  font-family: var(--schrift-kopf); font-weight: 800;
+  font-size: 1.02rem; color: var(--creme); text-align: right;
+}
+/* Zusatzangabe (Trefferquote) — rutscht auf dem Handy in eine eigene Zeile */
+.balken-zusatz {
+  grid-column: 2 / -1;
+  font-size: .78rem; color: var(--grau); letter-spacing: .01em;
+}
+.balken-schmal .balken-zeile { grid-template-columns: 7.5rem 1fr 3rem; }
+
+/* ---- Anteilsbalken: exakt / dabei / daneben in einer Spur ---- */
+.anteil { margin-top: clamp(1.2rem, 2.6vw, 1.8rem); }
+.anteil-spur {
+  display: flex; height: 26px; border-radius: 999px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.anteil-teil {
+  width: var(--w, 0%);
+  animation: balken-wachsen 1s var(--weich) both;
+  transform-origin: left center;
+}
+.a-exakt   { background: linear-gradient(180deg, #3ddc84, #1f9c58); }
+.a-dabei   { background: linear-gradient(180deg, #ffd166, #d9a441); }
+.a-daneben { background: linear-gradient(180deg, #4a5158, #343a40); }
+.anteil-legende {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.4rem;
+  margin-top: .9rem; font-size: .88rem; color: var(--grau-hell);
+}
+.anteil-legende span { display: inline-flex; align-items: center; gap: .45rem; }
+.anteil-legende i {
+  width: 13px; height: 13px; border-radius: 4px; display: inline-block;
+}
+.anteil-legende b { color: var(--creme); font-weight: 800; }
+
+/* Der Merksatz unter der Bilanz — die stärkste Aussage des Abschnitts */
+.merksatz {
+  margin-top: 1.4rem; padding: 1rem 1.2rem;
+  border-left: 3px solid var(--akzent);
+  border-radius: 0 12px 12px 0;
+  background: rgba(255,255,255,.032);
+  font-size: 1.02rem; line-height: 1.6; color: var(--creme);
+  max-width: 62ch;
+}
+.merksatz b { color: var(--akzent-hell); font-weight: 800; }
+
+/* ---- Saisonsieger ---- */
+.sieger {
+  display: grid; gap: .8rem; margin-top: clamp(1.4rem, 3vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+}
+.sieger-karte {
+  display: flex; flex-direction: column; gap: .2rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius-gross);
+  background: rgba(255,255,255,.03);
+}
+.sieger-karte.laufend {
+  border-color: color-mix(in srgb, var(--akzent) 55%, transparent);
+  background:
+    radial-gradient(120% 90% at 50% 0%,
+      color-mix(in srgb, var(--akzent) 14%, transparent), transparent 62%),
+    rgba(255,255,255,.03);
+}
+.sieger-karte > b {
+  font-family: var(--schrift-kopf); font-size: 1.5rem;
+  color: var(--akzent-hell); line-height: 1;
+}
+.sieger-name {
+  font-family: var(--schrift-kopf); font-weight: 700;
+  font-size: 1rem; color: var(--creme); margin-top: .35rem;
+}
+.sieger-punkte { font-size: .85rem; color: var(--grau); }
+.sieger-hinweis {
+  margin-top: .35rem; align-self: flex-start;
+  font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+  font-weight: 700; color: var(--akzent-hell);
+  padding: 3px 8px; border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--akzent) 50%, transparent);
+}
+
+/* ---- Handy: Balken schmaler aufteilen ---- */
+@media (max-width: 560px) {
+  .balken-zeile { grid-template-columns: 1.3rem 5.6rem 1fr 2.5rem; gap: .5rem; }
+  .balken-name { font-size: .88rem; }
+  .balken-wert { font-size: .95rem; }
+  .balken-zusatz { font-size: .72rem; }
+  .balken-schmal .balken-zeile { grid-template-columns: 5.6rem 1fr 2.5rem; }
+  .anteil-legende { font-size: .82rem; gap: .4rem 1rem; }
+  .merksatz { font-size: .96rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .balken-fuellung, .anteil-teil { animation: none; }
 }

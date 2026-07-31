@@ -362,7 +362,7 @@ de: {
     untertitel: "Die Tipprunde für Motorsport-Freunde",
     claim: "Tippe die ersten Fünf.",
     claimZwei: "Die anderen siehst du erst danach.",
-    positionierung: "Eine private Tipprunde für deine Freundesgruppe. Ein Organisator eröffnet die Runde, die Mitspieler kommen per Code dazu. Getippt wird auf die Top 5 jedes Rennens — ohne Geldeinsatz, nur um Punkte, Pokale und Ehre.",
+    positionierung: "Getippt wird auf die Top 5 jedes Rennens — ohne Geldeinsatz, nur um Punkte, Pokale und Ehre. Du kannst allein gegen deine eigene Bestleistung antreten oder eine private Runde mit Freunden eröffnen, zu der die anderen per Code dazukommen. Ein Profil legst du einmal an, danach zählt jeder Tipp auf deine Karriere ein.",
 
     kernTitel: "Der Kniff",
     kernText: "Kein Abschreiben: Die Tipps der anderen bleiben verborgen, bis du selbst abgegeben hast. Erst dann öffnet sich das Feld — und alle sehen alles.",
@@ -508,20 +508,37 @@ de: {
     umfangFilter: "Alles wahlweise für eine Gruppe, eine Saison oder deine gesamte Laufbahn.",
 
     /* --- Wie kommt man rein? (Main.qml) --- */
-    beitrittTitel: "Wie komme ich in eine Runde?",
+    beitrittTitel: "Wie fange ich an?",
     beitrittSchritte: [
-      { nr: "1", titel: "Einer eröffnet",
-        text: "Ein Organisator legt die Tipprunde an. Das kostet nichts. Bis zu zehn Spieler passen hinein." },
-      { nr: "2", titel: "Code weitergeben",
-        text: "Für jeden freien Platz erzeugt die App einen Beitritts-Code. Den schickt der Organisator seinen Leuten — per Nachricht, wie er mag." },
-      { nr: "3", titel: "Name und Code eingeben",
-        text: "Der Mitspieler trägt seinen Namen und den Code ein, fertig. Niemand stolpert zufällig in eine fremde Runde." }
+      { nr: "1", titel: "Profil anlegen",
+        text: "Einmal Name und Farbe wählen — das ist dein Profil. Es gehört dir und wandert mit dir durch alle Runden und Saisons." },
+      { nr: "2", titel: "Allein tippen",
+        text: "Du kannst sofort loslegen, ganz ohne Gruppe: gegen das Rennergebnis und gegen deine eigene Bestleistung. Die Karriere-Zahlen laufen genauso mit." },
+      { nr: "3", titel: "Oder eine Runde eröffnen",
+        text: "Wer zu mehreren spielen will, legt eine Runde an — kostet nichts, bis zu zehn Spieler. Für jeden freien Platz erzeugt die App einen Beitritts-Code." },
+      { nr: "4", titel: "Code weitergeben",
+        text: "Die Mitspieler tragen ihren Namen und den Code ein, fertig. Niemand stolpert zufällig in eine fremde Runde." }
     ],
     beitrittHinweis: "Dein Profil gehört dir, nicht der Gruppe: Ein einmal abgeschlossenes Abo gilt in allen Runden, in denen du mitspielst.",
 
     mehrKnopf: "Alles über FaNiCa Fun",
     mehrText: "Die fünf Trophäen mit ihren echten Bedingungen, der Ablauf einer Renn-Woche, alle 22 Strecken, die 16 Karriere-Kennzahlen und wie man einer Runde beitritt.",
     galerieTitel: "Ein Blick in die App",
+    rundeTitel: "Wie es wirklich aussieht",
+    rundeText: "Das hier ist keine Vorführ-Runde mit ausgedachten Namen. Es sind die echten Zahlen aus der Gruppe, für die ich die App überhaupt gebaut habe — seit 2022, mittlerweile im fünften Jahr.",
+    rundeQuelle: "Stand: nach neun von zweiundzwanzig Rennen der Saison 2026. Die Namen sind hier anonymisiert, alles andere ist unverändert.",
+
+    rundeTabelleTitel: "Der Stand nach neun Rennen",
+    rundeTabelleText: "Zwischen Platz eins und Platz zwei liegt ein einziger Punkt, zwischen dem Ersten und dem Letzten fünfundzwanzig. Genau das ist der Grund, warum niemand aussteigt: Nach dreizehn verbleibenden Rennen kann das noch jeder drehen.",
+
+    rundeTrefferTitel: "Wie oft trifft man überhaupt?",
+    rundeTrefferText: "In dieser Saison wurden 435 einzelne Tipps abgegeben. Ein gutes Viertel saß exakt, knapp die Hälfte traf den richtigen Fahrer auf dem falschen Platz — und weniger als ein Drittel lag ganz daneben. Das ist die Mischung, die eine Tipprunde trägt: oft knapp dran, selten perfekt.",
+
+    rundeStreckenTitel: "Nicht jede Strecke ist gleich schwer",
+    rundeStreckenText: "Wie viele Punkte die ganze Gruppe an einem Rennwochenende zusammen holt, sagt viel über die Strecke. Wo die Reihenfolge vorne stabil bleibt, sammeln alle; wo Safety-Cars und Ausfälle das Feld durcheinanderwirbeln, bleibt fast nichts übrig.",
+
+    rundeSiegerTitel: "Fünf Jahre, fünf Geschichten",
+
     bilder: [
       { pfad: "bilder/fanica/tippen.webp", hoch: true,
         alt: "FaNiCa Fun: Tippschein mit der Startaufstellung",
@@ -539,7 +556,7 @@ de: {
 
     bildProfil: "bilder/fanica/profil.webp",
     bildProfilAlt: "FaNiCa Fun: Profil anlegen — einmal registrieren, überall mitspielen",
-    preis: "Tippen, Punkte und die Trophäen der laufenden Saison sind kostenlos. Premium schaltet die Historie frei — ewige Bestenlisten, alte Saisons, Strecken-Rekorde und die Karriere-Statistik: 0,99 € je 4 Wochen oder 9,99 € im Jahr, die ersten 7 Tage kostenlos.",
+    preis: "Tippen kostet nichts, dauerhaft. Ohne Premium siehst du das aktuelle und das letzte Rennen. Premium öffnet den Rückblick: die komplette Saison, alle früheren Jahre, ewige Bestenlisten, Strecken-Rekorde und die Karriere-Statistik. 0,99 € je 4 Wochen oder 9,99 € im Jahr, die ersten 7 Tage kostenlos.",
     hinweis: "Ab 18 Jahren. Getippt wird ohne Geldeinsatz — Glücksspiel kann trotzdem süchtig machen. Hilfe unter check-dein-spiel.de.",
     hinweisLink: "https://www.check-dein-spiel.de",
     unabhaengig: "Eine unabhängige Fan-App. Keine Verbindung zur Formula One Group. Rennergebnisse stammen aus öffentlichen Datenquellen."
@@ -727,12 +744,12 @@ de: {
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz."] },
-      { name: "Allein oder zu mehreren", werte: ["Gruppe, 2–10 Spieler", "Beides", "Allein"] },
+      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein"] },
       { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nie", "Nie"] },
-      { name: "Konto nötig",   werte: ["Name + Code", "Nein", "Nein"] },
+      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein"] },
       { name: "Umfang",        werte: ["21 Ansichten", "23 Bildschirme", "1 Bildschirm"] },
       { name: "Sprachen",      werte: ["2", "2", "16"] },
-      { name: "Kostenlos nutzbar", werte: ["Tippen & laufende Saison", "Runden schießen & werten", "Die ersten 500 Klicks"] },
+      { name: "Kostenlos nutzbar", werte: ["Tippen; sichtbar sind aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks"] },
       { name: "Premium ab",    werte: ["0,99 € / 4 Wochen", "1,99 € / 4 Wochen", "0,49 € / 4 Wochen"] },
       { name: "Plattform",     werte: ["Android · iOS · Browser · Windows", "Android · iOS · Browser", "Android · iOS"] }
     ],
@@ -1171,7 +1188,7 @@ en: {
     untertitel: "The prediction game for motorsport friends",
     claim: "Predict the top five.",
     claimZwei: "You only see the others afterwards.",
-    positionierung: "A private prediction game for your circle of friends. One person opens the round, the others join with a code. You predict the top five of each race — no money involved, just points, trophies and bragging rights.",
+    positionierung: "You predict the top five of each race — no money involved, just points, trophies and bragging rights. Play solo against your own best score, or open a private round your friends join with a code. You create a profile once; from then on every prediction counts towards your career.",
 
     kernTitel: "The trick",
     kernText: "No copying: everyone else's predictions stay hidden until you've submitted your own. Only then does the field open up — and everybody sees everything.",
@@ -1261,14 +1278,16 @@ en: {
     streckenBeispiele: ["Melbourne", "Monaco", "Silverstone", "Spa", "Monza", "Las Vegas", "Abu Dhabi"],
     streckenQuelle: "The app fetches race results automatically from public motorsport data sources once race day arrives — including the official starting grid with every penalty applied.",
 
-    beitrittTitel: "How do I get into a group?",
+    beitrittTitel: "How do I start?",
     beitrittSchritte: [
-      { nr: "1", titel: "Someone opens it",
-        text: "An organiser creates the group. That costs nothing. Up to ten players fit inside." },
-      { nr: "2", titel: "Hand out the code",
-        text: "The app generates a joining code for every free seat. The organiser sends those to their people, however they like." },
-      { nr: "3", titel: "Enter name and code",
-        text: "The new player types in their name and the code, done. Nobody stumbles into a stranger's group by accident." }
+      { nr: "1", titel: "Create a profile",
+        text: "Pick a name and a colour once — that is your profile. It belongs to you and travels with you through every group and season." },
+      { nr: "2", titel: "Predict on your own",
+        text: "You can start right away without a group: against the race result and against your own best score. The career figures build up just the same." },
+      { nr: "3", titel: "Or open a group",
+        text: "If you want to play with others, create a group — it costs nothing, up to ten players. The app generates a joining code for every free seat." },
+      { nr: "4", titel: "Hand out the code",
+        text: "The others type in their name and the code, done. Nobody stumbles into a stranger's group by accident." }
     ],
     beitrittHinweis: "Your profile belongs to you, not to the group: a subscription you take out applies in every group you play in.",
 
@@ -1326,6 +1345,21 @@ en: {
     mehrKnopf: "Everything about FaNiCa Fun",
     mehrText: "The five trophies with their real conditions, how a race week runs, all 22 circuits, the 16 career figures and how to join a group.",
     galerieTitel: "A look inside the app",
+    rundeTitel: "What it actually looks like",
+    rundeText: "This is not a demo round with made-up names. These are the real numbers from the group I built the app for in the first place — running since 2022, now in its fifth year.",
+    rundeQuelle: "As of race nine of twenty-two in the 2026 season. Names are anonymised here; everything else is unchanged.",
+
+    rundeTabelleTitel: "The standings after nine races",
+    rundeTabelleText: "A single point separates first from second, twenty-five separate first from last. That is exactly why nobody drops out: with thirteen races left, anyone can still turn this around.",
+
+    rundeTrefferTitel: "How often do you actually get it right?",
+    rundeTrefferText: "435 individual predictions were made this season. A good quarter were spot on, almost half named the right driver in the wrong position — and fewer than a third missed entirely. That is the mix that keeps a prediction group alive: often close, rarely perfect.",
+
+    rundeStreckenTitel: "Not every circuit is equally hard",
+    rundeStreckenText: "How many points the whole group scores on a race weekend says a lot about the circuit. Where the order up front stays stable, everyone collects; where safety cars and retirements shuffle the field, almost nothing is left.",
+
+    rundeSiegerTitel: "Five years, five stories",
+
     bilder: [
       { pfad: "bilder/fanica/tippen.webp", hoch: true,
         alt: "FaNiCa Fun: prediction slip with the starting grid",
@@ -1343,7 +1377,7 @@ en: {
 
     bildProfil: "bilder/fanica/profil.webp",
     bildProfilAlt: "FaNiCa Fun: creating a profile — register once, play everywhere",
-    preis: "Predicting, points and the current season's trophies are free. Premium unlocks the history — all-time tables, past seasons, track records and your career statistics: €0.99 per four weeks or €9.99 per year, with the first seven days free.",
+    preis: "Predicting is free, permanently. Without Premium you see the current and the previous race. Premium opens up the archive: the full season, every earlier year, all-time tables, track records and your career statistics. €0.99 per four weeks or €9.99 per year, with the first seven days free.",
     hinweis: "Ages 18 and up. No money is involved — but gambling can still be addictive. Help at check-dein-spiel.de.",
     hinweisLink: "https://www.check-dein-spiel.de",
     unabhaengig: "An independent fan app. No connection to the Formula One Group. Race results come from public data sources."
@@ -1503,12 +1537,12 @@ en: {
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt"],
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal."] },
-      { name: "Alone or together", werte: ["Group of 2–10", "Both", "Alone"] },
+      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone"] },
       { name: "Internet needed", werte: ["Only to sync", "Never", "Never"] },
-      { name: "Account needed", werte: ["Name + code", "No", "No"] },
+      { name: "Profile needed", werte: ["Yes — created once", "No", "No"] },
       { name: "Size",           werte: ["21 views", "23 screens", "1 screen"] },
       { name: "Languages",      werte: ["2", "2", "16"] },
-      { name: "Free to use",    werte: ["Predicting & current season", "Shooting & scoring rounds", "The first 500 taps"] },
+      { name: "Free to use",    werte: ["Predicting; current and last race visible", "Shooting & scoring rounds", "The first 500 taps"] },
       { name: "Premium from",   werte: ["€0.99 / 4 weeks", "€1.99 / 4 weeks", "€0.49 / 4 weeks"] },
       { name: "Platform",       werte: ["Android · iOS · browser · Windows", "Android · iOS · browser", "Android · iOS"] }
     ],

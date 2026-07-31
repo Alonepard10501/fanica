@@ -68,6 +68,13 @@
       grund: "linear-gradient(180deg, #000000, #030308 60%, #000000)",
       akzent: "#39FF14", akzentHell: "#7BFF5C"
     },
+    // „Auf einen Blick" vergleicht alle drei Apps — bewusst NEUTRAL,
+    // damit die Tabelle nicht nach einer einzelnen App aussieht.
+    // (Falk 31.07.: „hat noch die falschen Farben in der Überschrift".)
+    vergleich: {
+      grund: "linear-gradient(180deg, #06070A, #0C0E13 55%, #07080B)",
+      akzent: "#8E97A3", akzentHell: "#D7DDE4"
+    },
     ueber: {
       grund: "linear-gradient(180deg, #06060A, #0B0A10 55%, #08060A)",
       akzent: "#E4192B", akzentHell: "#FF4257"
@@ -640,6 +647,10 @@
   function spurenEinrichten() {
     const feld = document.querySelector(".spuren");
     if (!feld || ruhig) return;
+    // Auf dem Handy gar nicht erst erzeugen: neun dauerhaft animierte
+    // Elemente kosten Bildrate, sind dort aber kaum zu sehen.
+    // (Falk 31.07.: „auf dem Handy muss flüssiger laufen im Browser".)
+    if (window.matchMedia("(max-width: 900px)").matches) return;
     const farben = ["var(--rot)", "var(--tuerkis)", "var(--violett)", "var(--gelb)"];
     for (let i = 0; i < 9; i++) {
       const s = document.createElement("i");
