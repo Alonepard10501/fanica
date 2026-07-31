@@ -6,3 +6,7 @@ _nicht-verwendet/
 # Windows
 Thumbs.db
 desktop.ini
+
+# Python-Zwischendateien gehoeren nicht auf die Website
+__pycache__/
+*.pyc
