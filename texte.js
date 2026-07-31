@@ -375,7 +375,7 @@ de: {
       { zahl: "0", text: "Kein Tipp abgegeben. Strafpunkte gibt es nicht." }
     ],
 
-    /* --- So läuft eine Tipprunde ab (Werte aus Main.qml / Rechner.js) --- */
+    /* --- So läuft eine Tipprunde ab (Werte aus lib/rechner.dart, lib/modelle.dart) --- */
     ablaufTitel: "So läuft eine Renn-Woche",
     ablaufSchritte: [
       { nr: "1", titel: "Mittwoch: Tippen öffnet",
@@ -465,7 +465,7 @@ de: {
         punkte: [
           "Private Gruppen mit Code",
           "Zugang nur über den Organisator",
-          "Läuft überall: Android, iPhone, im Browser und auf dem Rechner",
+          "Dieselbe App auf Android und iPhone",
           "Rennergebnisse aus öffentlichen Datenquellen"
         ]
       }
@@ -507,7 +507,7 @@ de: {
     ],
     umfangFilter: "Alles wahlweise für eine Gruppe, eine Saison oder deine gesamte Laufbahn.",
 
-    /* --- Wie kommt man rein? (Main.qml) --- */
+    /* --- Wie kommt man rein? (lib/beitritt.dart, lib/seiten/gruppen_seite.dart) --- */
     beitrittTitel: "Wie fange ich an?",
     beitrittSchritte: [
       { nr: "1", titel: "Profil anlegen",
@@ -556,7 +556,7 @@ de: {
 
     bildProfil: "bilder/fanica/profil.webp",
     bildProfilAlt: "FaNiCa Fun: Profil anlegen — einmal registrieren, überall mitspielen",
-    preis: "Tippen kostet nichts, dauerhaft. Ohne Premium siehst du das aktuelle und das letzte Rennen. Premium öffnet den Rückblick: die komplette Saison, alle früheren Jahre, ewige Bestenlisten, Strecken-Rekorde und die Karriere-Statistik. 0,99 € je 4 Wochen oder 9,99 € im Jahr, die ersten 7 Tage kostenlos.",
+    preis: "Tippen kostet nichts, dauerhaft. Ohne Premium siehst du das aktuelle und das letzte Rennen. Premium öffnet den Rückblick: die komplette Saison, alle früheren Jahre, ewige Bestenlisten, Strecken-Rekorde und die Karriere-Statistik. Bei Google Play 0,99 € je 4 Wochen oder 9,99 € im Jahr, im App Store 1,99 € beziehungsweise 14,99 € — die ersten 7 Tage sind überall kostenlos.",
     hinweis: "Ab 18 Jahren. Getippt wird ohne Geldeinsatz — Glücksspiel kann trotzdem süchtig machen. Hilfe unter check-dein-spiel.de.",
     hinweisLink: "https://www.check-dein-spiel.de",
     unabhaengig: "Eine unabhängige Fan-App. Keine Verbindung zur Formula One Group. Rennergebnisse stammen aus öffentlichen Datenquellen."
@@ -701,6 +701,7 @@ de: {
     browser: "Im Browser testen",
     browserSpielen: "Im Browser spielen",
     browserFehlt: "Web-Fassung folgt",
+    browserAelter: "Die Web-Fassung zeigt den Stand vor dem Neubau — die Store-App ist neuer.",
     play: "Bei Google Play",
     playBald: "Play Store — bald verfügbar",
     apple: "Im App Store",
@@ -722,7 +723,7 @@ de: {
     ablauf: [
       { nr: "01", titel: "Idee", text: "Meist ein Ärgernis aus dem Alltag. Instinct Scoring entstand, weil der Papierzettel im Regen aufweicht." },
       { nr: "02", titel: "Spezifikation", text: "Alles wird aufgeschrieben, bevor eine Zeile Code entsteht. Was die App NICHT kann, steht genauso drin." },
-      { nr: "03", titel: "Bau", text: "Flutter, Qt oder Kotlin — je nachdem, was zur App passt. KI schreibt mit, ich entscheide." },
+      { nr: "03", titel: "Bau", text: "Flutter für alles, was auf Android und iPhone gleich aussehen soll, Kotlin dort, wo es näher ans Gerät geht. KI schreibt mit, ich entscheide." },
       { nr: "04", titel: "Test", text: "Auf echten Geräten, draußen, mit Handschuh. Was am Schreibtisch gut aussieht, versagt oft im Wald." },
       { nr: "05", titel: "Store", text: "Google Play und App Store, beide Prüfungen, alle Formulare. Der langweiligste und lehrreichste Teil." }
     ],
@@ -751,7 +752,7 @@ de: {
       { name: "Sprachen",      werte: ["2", "2", "16"] },
       { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks"] },
       { name: "Premium ab",    werte: ["0,99 € / 4 Wochen", "1,99 € / 4 Wochen", "0,49 € / 4 Wochen"] },
-      { name: "Plattform",     werte: ["Android · iOS · Browser · Windows", "Android · iOS · Browser", "Android · iOS"] }
+      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS · Browser", "Android · iOS"] }
     ],
     fuss: "Alle Preise mit sieben Tagen kostenlosem Test."
   },
@@ -1336,7 +1337,7 @@ en: {
         punkte: [
           "Private groups with a code",
           "Access only through the organiser",
-          "Runs everywhere: Android, iPhone, in the browser and on your computer",
+          "The same app on Android and iPhone",
           "Race results from public data sources"
         ]
       }
@@ -1377,7 +1378,7 @@ en: {
 
     bildProfil: "bilder/fanica/profil.webp",
     bildProfilAlt: "FaNiCa Fun: creating a profile — register once, play everywhere",
-    preis: "Predicting is free, permanently. Without Premium you see the current and the previous race. Premium opens up the archive: the full season, every earlier year, all-time tables, track records and your career statistics. €0.99 per four weeks or €9.99 per year, with the first seven days free.",
+    preis: "Predicting is free, permanently. Without Premium you see the current and the previous race. Premium opens up the archive: the full season, every earlier year, all-time tables, track records and your career statistics. €0.99 per four weeks or €9.99 per year on Google Play, €1.99 and €14.99 on the App Store — the first seven days are free everywhere.",
     hinweis: "Ages 18 and up. No money is involved — but gambling can still be addictive. Help at check-dein-spiel.de.",
     hinweisLink: "https://www.check-dein-spiel.de",
     unabhaengig: "An independent fan app. No connection to the Formula One Group. Race results come from public data sources."
@@ -1519,6 +1520,7 @@ en: {
     browser: "Try it in the browser",
     browserSpielen: "Play in the browser",
     browserFehlt: "Web version coming",
+    browserAelter: "The web version shows the state before the rebuild — the store app is newer.",
     play: "On Google Play",
     playBald: "Play Store — coming soon",
     apple: "On the App Store",
@@ -1544,7 +1546,7 @@ en: {
       { name: "Languages",      werte: ["2", "2", "16"] },
       { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps"] },
       { name: "Premium from",   werte: ["€0.99 / 4 weeks", "€1.99 / 4 weeks", "€0.49 / 4 weeks"] },
-      { name: "Platform",       werte: ["Android · iOS · browser · Windows", "Android · iOS · browser", "Android · iOS"] }
+      { name: "Platform",       werte: ["Android · iOS", "Android · iOS · browser", "Android · iOS"] }
     ],
     fuss: "All prices with a seven-day free trial."
   },
@@ -1583,7 +1585,7 @@ en: {
     ablauf: [
       { nr: "01", titel: "Idea", text: "Usually an everyday annoyance. Instinct Scoring exists because paper scorecards go soggy in the rain." },
       { nr: "02", titel: "Specification", text: "Everything gets written down before a line of code exists. What the app will NOT do is in there too." },
-      { nr: "03", titel: "Building", text: "Flutter, Qt or Kotlin — whichever suits the app. AI writes alongside me, I decide." },
+      { nr: "03", titel: "Building", text: "Flutter for anything that should look the same on Android and iPhone, Kotlin where it needs to sit closer to the device. AI writes alongside me, I decide." },
       { nr: "04", titel: "Testing", text: "On real devices, outdoors, wearing a glove. What looks good at a desk often fails in the woods." },
       { nr: "05", titel: "Store", text: "Google Play and the App Store, both reviews, every form. The dullest and most instructive part." }
     ],

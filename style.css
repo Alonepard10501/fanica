@@ -2195,6 +2195,17 @@ h1.hero-text,
   color: var(--grau); align-self: center;
 }
 
+/* Ehrlicher Hinweis unter dem Browser-Knopf bei FaNiCa Fun: Die Web-Fassung
+   ist der Qt-Stand vor dem Flutter-Neubau, die Store-App ist neuer.
+   Bewusst leise — soll niemanden abschrecken, aber auch nicht in die Irre führen. */
+.web-aelter {
+  margin-top: .7rem;
+  font-size: .82rem;
+  line-height: 1.5;
+  color: var(--grau);
+  opacity: .85;
+}
+
 /* ---- Unterseiten ---- */
 .unterseite {
   padding: clamp(110px, 14vh, 160px) 0 clamp(60px, 10vh, 100px);
