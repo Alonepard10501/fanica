@@ -696,6 +696,20 @@ de: {
     zahlenFuss: "Keine Werbung, keine Berechtigungen, kein Konto, kein Internet. Alles bleibt auf deinem Gerät."
   },
 
+  /* ============ LIVE — automatisch geladene Renndaten ============ */
+  live: {
+    naechstesTitel: "Das nächste Rennen",
+    lauf: "Lauf",
+    von: "von",
+    start: "Start",
+    uhr: "Uhr",
+    rest: "Noch",
+    laeuft: "läuft gerade",
+    tag: "Tag",
+    tage: "Tage",
+    quelle: "Automatisch geladen — dieselbe öffentliche Quelle, aus der sich auch die App versorgt. Kalender, Ergebnisse und Countdown aktualisieren sich von selbst."
+  },
+
   /* ====================== AKTIONEN / STORE ============================ */
   aktion: {
     browser: "Im Browser testen",
@@ -1529,6 +1543,20 @@ en: {
   },
 
   /* ====================== ACTIONS / STORES ============================ */
+  /* ============ LIVE — automatically loaded race data ============ */
+  live: {
+    naechstesTitel: "The next race",
+    lauf: "Round",
+    von: "of",
+    start: "Start",
+    uhr: "",
+    rest: "In",
+    laeuft: "under way",
+    tag: "day",
+    tage: "days",
+    quelle: "Loaded automatically — the same public source the app itself uses. Calendar, results and countdown keep themselves up to date."
+  },
+
   aktion: {
     browser: "Try it in the browser",
     browserSpielen: "Play in the browser",

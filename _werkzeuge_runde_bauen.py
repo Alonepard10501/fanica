@@ -4,20 +4,18 @@
 Falk 31.07.: "du hast eine Laufende Gruppe bei fanica fun ... vergleiche
 ziehen ... du hast viele informationen die nicht jeder hat."
 
-WICHTIG - Datenschutz: Auf der oeffentlichen Website stehen **Vornamen**,
-wie sie in der App als Spielernamen gefuehrt werden. Kein Nachname, keine
-Mail, kein Ort, kein Code. Das ist dieselbe Sichtbarkeit wie in jeder
-Sport-Tabelle. Falls Falk auch das nicht moechte, reicht es, unten
-`ANONYM = True` zu setzen - dann werden daraus "Spieler A/B/C...".
+NAMEN: Falk hat am 31.07.2026 entschieden - es werden die **echten
+Profilnamen** gezeigt, so wie sie in der App gefuehrt werden ("Jeder ist
+mit dem Namen aus seinem Profil verbunden"). Es sind nur Vornamen bzw.
+Spitznamen: kein Nachname, keine Mail, kein Ort, kein Beitrittscode -
+dieselbe Sichtbarkeit wie in jeder Vereins- oder Sport-Tabelle.
 
 Jede Zahl wird GERECHNET, nichts geschaetzt.
 """
 import io, json, os
 
-ANONYM = True           # True -> Namen durch "Spieler A" usw. ersetzen
-                        # Vorerst AN: echte Vornamen von Falks Mitspielern
-                        # gehen oeffentlich ins Netz - das entscheidet Falk,
-                        # nicht ich. Umschalten auf False, sobald er zustimmt.
+ANONYM = False          # False = echte Profilnamen (Falks Entscheidung 31.07.)
+                        # True  = "Spieler A/B/C" statt der Namen
 
 QUELLE = os.path.join("C:", os.sep, "Users", "falkc", "Desktop", "KI-Studio",
                       "Obsidian Vault", "Projekte", "FaNiCa Fun", "Google Play",

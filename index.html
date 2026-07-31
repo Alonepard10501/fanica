@@ -137,6 +137,11 @@
       </div>
     </div>
 
+    <!-- Nächstes Rennen: wird von live.js aus derselben öffentlichen
+         Quelle geladen wie die App selbst. Bleibt leer, wenn kein Netz
+         da ist — die Seite sieht dann trotzdem vollständig aus. -->
+    <div id="naechstes-rennen" class="auf live-feld"></div>
+
     <!-- Punkte kurz + Zahlen -->
     <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
       <h3 data-t="fanica.punkteTitel">So werden Punkte vergeben</h3>
@@ -462,7 +467,9 @@
 </footer>
 
 <script src="texte.js"></script>
+<script src="runde.js"></script>
 <script src="inhalte.js"></script>
 <script src="app.js"></script>
+<script src="live.js"></script>
 </body>
 </html>

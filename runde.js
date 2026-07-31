@@ -22,7 +22,7 @@ window.RUNDE = {
   "tabelle": [
     {
       "platz": 1,
-      "name": "Spieler A",
+      "name": "Sebastian",
       "punkte": 61,
       "exakt": 14,
       "dabei": 19,
@@ -33,7 +33,7 @@ window.RUNDE = {
     },
     {
       "platz": 2,
-      "name": "Spieler B",
+      "name": "Fabienne",
       "punkte": 60,
       "exakt": 14,
       "dabei": 18,
@@ -44,7 +44,7 @@ window.RUNDE = {
     },
     {
       "platz": 3,
-      "name": "Spieler C",
+      "name": "Quali",
       "punkte": 59,
       "exakt": 13,
       "dabei": 20,
@@ -55,7 +55,7 @@ window.RUNDE = {
     },
     {
       "platz": 4,
-      "name": "Spieler D",
+      "name": "Flo",
       "punkte": 57,
       "exakt": 13,
       "dabei": 18,
@@ -66,7 +66,7 @@ window.RUNDE = {
     },
     {
       "platz": 5,
-      "name": "Spieler E",
+      "name": "Fionn",
       "punkte": 56,
       "exakt": 13,
       "dabei": 17,
@@ -77,7 +77,7 @@ window.RUNDE = {
     },
     {
       "platz": 6,
-      "name": "Spieler F",
+      "name": "Torsten",
       "punkte": 56,
       "exakt": 12,
       "dabei": 20,
@@ -88,7 +88,7 @@ window.RUNDE = {
     },
     {
       "platz": 7,
-      "name": "Spieler G",
+      "name": "Lars",
       "punkte": 55,
       "exakt": 13,
       "dabei": 16,
@@ -99,7 +99,7 @@ window.RUNDE = {
     },
     {
       "platz": 8,
-      "name": "Spieler H",
+      "name": "Patrick",
       "punkte": 46,
       "exakt": 7,
       "dabei": 25,
@@ -110,7 +110,7 @@ window.RUNDE = {
     },
     {
       "platz": 9,
-      "name": "Spieler I",
+      "name": "Falk",
       "punkte": 42,
       "exakt": 6,
       "dabei": 24,
@@ -121,7 +121,7 @@ window.RUNDE = {
     },
     {
       "platz": 10,
-      "name": "Spieler J",
+      "name": "Timo",
       "punkte": 36,
       "exakt": 6,
       "dabei": 18,
@@ -145,27 +145,27 @@ window.RUNDE = {
   "sieger": [
     {
       "saison": 2026,
-      "name": "Spieler A",
+      "name": "Sebastian",
       "punkte": 61
     },
     {
       "saison": 2025,
-      "name": "Spieler G",
+      "name": "Lars",
       "punkte": 187
     },
     {
       "saison": 2024,
-      "name": "Spieler I",
+      "name": "Falk",
       "punkte": 163
     },
     {
       "saison": 2023,
-      "name": "Spieler F",
+      "name": "Torsten",
       "punkte": 115
     },
     {
       "saison": 2022,
-      "name": "Spieler I",
+      "name": "Falk",
       "punkte": 46
     }
   ],
@@ -209,7 +209,7 @@ window.RUNDE = {
   ],
   "verlauf": [
     {
-      "name": "Spieler A",
+      "name": "Sebastian",
       "farbe": "#DC3939",
       "staende": [
         10,
@@ -224,7 +224,7 @@ window.RUNDE = {
       ]
     },
     {
-      "name": "Spieler B",
+      "name": "Fabienne",
       "farbe": "#00FF00",
       "staende": [
         9,
@@ -239,7 +239,7 @@ window.RUNDE = {
       ]
     },
     {
-      "name": "Spieler C",
+      "name": "Quali",
       "farbe": "#548235",
       "staende": [
         7,
