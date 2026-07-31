@@ -83,7 +83,14 @@
               <em>${sicher(wartetext(w.stand))}</em></span>
           </span>`).join("")}
       </div>
-      ${offen.length ? `<p class="bezug-hinweis">${sicher(hol("aktion.bezugHinweis"))}</p>` : ""}`;
+      ${offen.length ? `<p class="bezug-hinweis">${sicher(hol("aktion.bezugHinweis"))}</p>` : ""}
+      <div class="qr">
+        <div data-qr="${sicher(b.browser)}"></div>
+        <div class="qr-text">
+          <h4>${sicher(hol("aktion.qrTitel"))}</h4>
+          <p>${sicher(hol("aktion.qrText"))}</p>
+        </div>
+      </div>`;
   }
 
   /* Schlichte, selbstgezeichnete Zeichen — keine fremden Logos
