@@ -1555,9 +1555,13 @@ h1.hero-text,
   border-bottom: 2px solid rgba(255,255,255,.16);
   padding-bottom: 1rem;
 }
-/* Je Spalte die Farbe ihrer App */
-.vergleich thead th.app-1 { color: var(--oliv-hell); }
-.vergleich thead th.app-2 { color: var(--rot-hell); }
+/* Je Spalte die Farbe ihrer App.
+   REIHENFOLGE BEACHTEN: Spalte 1 = FaNiCa Fun (rot), 2 = Instinct
+   Scoring (oliv), 3 = NeonPunkt (neongrün). Beim Spaltentausch am
+   31.07. blieben diese Farben zunächst stehen — rot und oliv waren
+   dadurch vertauscht. Wer die Spalten umsortiert, muss auch hier ran. */
+.vergleich thead th.app-1 { color: var(--rot-hell); }
+.vergleich thead th.app-2 { color: var(--oliv-hell); }
 .vergleich thead th.app-3 { color: #7BFF5C; }
 .vergleich tbody th {
   font-family: var(--schrift-text); font-weight: 600;
