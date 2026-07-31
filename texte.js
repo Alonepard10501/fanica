@@ -724,17 +724,17 @@ de: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
     text: "Drei Apps, drei völlig verschiedene Zwecke. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto.",
-    spalten: ["", "Instinct Scoring", "FaNiCa Fun", "NeonPunkt"],
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt"],
     zeilen: [
-      { name: "Wofür",        werte: ["Bogensport dokumentieren", "Mit Freunden tippen", "Nichts. Genau das ist der Reiz."] },
-      { name: "Allein oder zu mehreren", werte: ["Beides", "Gruppe, 2–10 Spieler", "Allein"] },
-      { name: "Internet nötig", werte: ["Nie", "Nur zum Abgleich", "Nie"] },
-      { name: "Konto nötig",   werte: ["Nein", "Name + Code", "Nein"] },
-      { name: "Umfang",        werte: ["23 Bildschirme", "21 Ansichten", "1 Bildschirm"] },
+      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz."] },
+      { name: "Allein oder zu mehreren", werte: ["Gruppe, 2–10 Spieler", "Beides", "Allein"] },
+      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nie", "Nie"] },
+      { name: "Konto nötig",   werte: ["Name + Code", "Nein", "Nein"] },
+      { name: "Umfang",        werte: ["21 Ansichten", "23 Bildschirme", "1 Bildschirm"] },
       { name: "Sprachen",      werte: ["2", "2", "16"] },
-      { name: "Kostenlos nutzbar", werte: ["Runden schießen & werten", "Tippen & laufende Saison", "Die ersten 500 Klicks"] },
-      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "0,99 € / 4 Wochen", "0,49 € / 4 Wochen"] },
-      { name: "Plattform",     werte: ["Android · iOS · Browser", "Android · iOS · Browser · Windows", "Android · iOS"] }
+      { name: "Kostenlos nutzbar", werte: ["Tippen & laufende Saison", "Runden schießen & werten", "Die ersten 500 Klicks"] },
+      { name: "Premium ab",    werte: ["0,99 € / 4 Wochen", "1,99 € / 4 Wochen", "0,49 € / 4 Wochen"] },
+      { name: "Plattform",     werte: ["Android · iOS · Browser · Windows", "Android · iOS · Browser", "Android · iOS"] }
     ],
     fuss: "Alle Preise mit sieben Tagen kostenlosem Test."
   },
@@ -1500,17 +1500,17 @@ en: {
     kennung: "At a glance",
     titel: "Which app is for you?",
     text: "Three apps, three entirely different purposes. What they share: they work offline, they collect nothing about you, and they don't ask for an account.",
-    spalten: ["", "Instinct Scoring", "FaNiCa Fun", "NeonPunkt"],
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt"],
     zeilen: [
-      { name: "What for",       werte: ["Recording archery", "Predicting with friends", "Nothing. That's the appeal."] },
-      { name: "Alone or together", werte: ["Both", "Group of 2–10", "Alone"] },
-      { name: "Internet needed", werte: ["Never", "Only to sync", "Never"] },
-      { name: "Account needed", werte: ["No", "Name + code", "No"] },
-      { name: "Size",           werte: ["23 screens", "21 views", "1 screen"] },
+      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal."] },
+      { name: "Alone or together", werte: ["Group of 2–10", "Both", "Alone"] },
+      { name: "Internet needed", werte: ["Only to sync", "Never", "Never"] },
+      { name: "Account needed", werte: ["Name + code", "No", "No"] },
+      { name: "Size",           werte: ["21 views", "23 screens", "1 screen"] },
       { name: "Languages",      werte: ["2", "2", "16"] },
-      { name: "Free to use",    werte: ["Shooting & scoring rounds", "Predicting & current season", "The first 500 taps"] },
-      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€0.99 / 4 weeks", "€0.49 / 4 weeks"] },
-      { name: "Platform",       werte: ["Android · iOS · browser", "Android · iOS · browser · Windows", "Android · iOS"] }
+      { name: "Free to use",    werte: ["Predicting & current season", "Shooting & scoring rounds", "The first 500 taps"] },
+      { name: "Premium from",   werte: ["€0.99 / 4 weeks", "€1.99 / 4 weeks", "€0.49 / 4 weeks"] },
+      { name: "Platform",       werte: ["Android · iOS · browser · Windows", "Android · iOS · browser", "Android · iOS"] }
     ],
     fuss: "All prices with a seven-day free trial."
   },
