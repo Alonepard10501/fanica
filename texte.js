@@ -749,7 +749,7 @@ de: {
       { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein"] },
       { name: "Umfang",        werte: ["21 Ansichten", "23 Bildschirme", "1 Bildschirm"] },
       { name: "Sprachen",      werte: ["2", "2", "16"] },
-      { name: "Kostenlos nutzbar", werte: ["Tippen; sichtbar sind aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks"] },
+      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks"] },
       { name: "Premium ab",    werte: ["0,99 € / 4 Wochen", "1,99 € / 4 Wochen", "0,49 € / 4 Wochen"] },
       { name: "Plattform",     werte: ["Android · iOS · Browser · Windows", "Android · iOS · Browser", "Android · iOS"] }
     ],
@@ -1542,7 +1542,7 @@ en: {
       { name: "Profile needed", werte: ["Yes — created once", "No", "No"] },
       { name: "Size",           werte: ["21 views", "23 screens", "1 screen"] },
       { name: "Languages",      werte: ["2", "2", "16"] },
-      { name: "Free to use",    werte: ["Predicting; current and last race visible", "Shooting & scoring rounds", "The first 500 taps"] },
+      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps"] },
       { name: "Premium from",   werte: ["€0.99 / 4 weeks", "€1.99 / 4 weeks", "€0.49 / 4 weeks"] },
       { name: "Platform",       werte: ["Android · iOS · browser · Windows", "Android · iOS · browser", "Android · iOS"] }
     ],

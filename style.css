@@ -1543,7 +1543,20 @@ h1.hero-text,
   width: 100%; border-collapse: collapse;
   margin-top: clamp(1.6rem, 3.4vw, 2.4rem);
   font-size: .92rem; min-width: 620px;
+  /* GLEICH BREITE SPALTEN. Ohne das richtet sich jede Spalte nach ihrem
+     längsten Text — die FaNiCa-Spalte war dadurch 442 px breit, Instinct
+     nur 261 px, und die beiden standen weit auseinander.
+     (Falk 31.07.: „sind nun ziemlich weit auseinander, führe sie wieder
+     näher zusammen.") Mit fixed + gleicher Breite je App-Spalte stehen
+     die drei sauber im Raster; lange Texte brechen dann um. */
+  table-layout: fixed;
 }
+/* Die Merkmal-Spalte links darf schmal bleiben, die drei App-Spalten
+   teilen sich den Rest zu gleichen Teilen. */
+.vergleich thead th:first-child { width: 15rem; }
+.vergleich thead th.app-1,
+.vergleich thead th.app-2,
+.vergleich thead th.app-3 { width: calc((100% - 15rem) / 3); }
 .vergleich th, .vergleich td {
   padding: .85rem 1rem; text-align: left;
   border-bottom: 1px solid rgba(255,255,255,.09);
