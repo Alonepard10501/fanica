@@ -50,6 +50,10 @@
       android: "https://play.google.com/store/apps/details?id=de.fanica.neonpunkt",
       apple:   "https://apps.apple.com/de/app/id6795088815",
       browser: "https://alonepard10501.github.io/fanica-fun/neonpunkt/",
+      /* Eigene App-Website („48 Stunden. Ein Punkt.“). Heißt bewusst
+         `neonpunkt-info` — `neonpunkt` daneben ist das SPIEL, nicht
+         die Seite. Beide liegen im selben Repo, nicht verwechseln. */
+      webseite: "https://alonepard10501.github.io/fanica-fun/neonpunkt-info/",
       standAndroid: "test", standApple: "pruefung", stil: "b-helix"
     }
   };
