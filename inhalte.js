@@ -31,6 +31,10 @@
       android: "https://play.google.com/store/apps/details?id=com.fanica.fun",
       apple:   "https://apps.apple.com/de/app/id6795424070",
       browser: "https://alonepard10501.github.io/fanica-fun/spiel/",
+      /* Eigene App-Website („FanicaFun.de — Eure private Tipprunde“).
+         Liegt in der WURZEL von fanica-fun; `/spiel/` darunter ist die
+         Web-Fassung der App, nicht die Website. Nicht verwechseln. */
+      webseite: "https://alonepard10501.github.io/fanica-fun/",
       standAndroid: "test", standApple: "pruefung", stil: "b-ripple"
     },
     instinct: {
