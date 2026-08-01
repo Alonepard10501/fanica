@@ -2592,6 +2592,13 @@ body { line-height: 1.72; letter-spacing: .005em; }
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   max-width: 760px;
 }
+/* Vier Wege (App mit eigener Website): sauberes 2x2 statt 3+1.
+   `auto-fit` wuerde drei Kaesten nebeneinander legen und den vierten
+   allein darunter — das liest sich wie ein Nachzuegler. */
+.bezug:has(.bezug-webseite) {
+  grid-template-columns: repeat(2, minmax(190px, 1fr));
+  max-width: 520px;
+}
 .bezug-weg {
   display: flex; align-items: center; gap: .85rem;
   padding: .85rem 1.1rem;
@@ -2631,6 +2638,19 @@ a.bezug-weg:hover .bezug-zeichen {
 }
 a.bezug-weg .bezug-text em { color: var(--akzent-hell); }
 
+/* Eigene App-Website: derselbe Kasten, aber dauerhaft in der
+   Kapitelfarbe angetippt — sie ist kein Store-Weg, sondern das
+   Ziel zum Weiterlesen und soll sich davon abheben.
+   Der Weg erscheint nur, wenn `webseite` in BEZUG steht (nur Instinct). */
+a.bezug-weg.bezug-webseite {
+  border-color: color-mix(in srgb, var(--akzent) 34%, transparent);
+  background: color-mix(in srgb, var(--akzent) 7%, rgba(255,255,255,.035));
+}
+a.bezug-weg.bezug-webseite .bezug-zeichen {
+  background: color-mix(in srgb, var(--akzent) 18%, transparent);
+  color: var(--akzent-hell);
+}
+
 /* Noch nicht freigegeben: gedaempft, kein Zeiger, kein Hover */
 .bezug-wartet {
   opacity: .62;
@@ -2649,7 +2669,11 @@ a.bezug-weg .bezug-text em { color: var(--akzent-hell); }
 }
 
 @media (max-width: 520px) {
-  .bezug { grid-template-columns: 1fr; }
+  /* `.bezug:has(…)` ist spezifischer als `.bezug` und wuerde sonst
+     auch auf schmalen Handys zwei Spalten erzwingen — deshalb hier
+     mit derselben Spezifitaet zurueckholen. */
+  .bezug,
+  .bezug:has(.bezug-webseite) { grid-template-columns: 1fr; }
   .bezug-weg { padding: .75rem .9rem; }
 }
 

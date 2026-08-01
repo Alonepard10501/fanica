@@ -37,6 +37,9 @@
       android: "https://play.google.com/store/apps/details?id=de.bogensportinstinct.instinct_scoring",
       apple:   "https://apps.apple.com/de/app/id6795424223",
       browser: "https://alonepard10501.github.io/instinct-scoring/",
+      /* Eigenständige App-Website (eigenes Repo instinct-scoring-web).
+         Nur Instinct hat eine — fehlt der Schlüssel, entfällt der Weg. */
+      webseite: "https://alonepard10501.github.io/instinct-scoring-web/",
       standAndroid: "test", standApple: "pruefung", stil: "b-grass"
     },
     neonpunkt: {
@@ -48,10 +51,14 @@
   };
   window.BEZUG = BEZUG;   // damit app.js dieselben Adressen nutzt
 
-  /* Baut die Drei-Wege-Leiste: Android · Apple · Browser.
+  /* Baut die Wege-Leiste: Android · Apple · Browser (+ eigene Website).
      Nur ein „live"-Weg wird zum echten Link. Alles andere ist ein
      <span> mit der ehrlichen Beschriftung — so klickt niemand auf
-     eine 404-Seite und weiß trotzdem, woran er ist. */
+     eine 404-Seite und weiß trotzdem, woran er ist.
+
+     Der vierte Weg „Website" erscheint NUR, wenn die App eine eigene
+     Seite hat (`webseite` in BEZUG). Stand 01.08.2026 ist das allein
+     Instinct Scoring — FaNiCa und NeonPunkt behalten drei Wege. */
   function bezugsLeiste(schluessel, hol) {
     const b = BEZUG[schluessel];
     if (!b) return "";
@@ -63,6 +70,10 @@
       { art: "browser", ziel: b.browser, stand: "live",
         knopf: hol("aktion.browserKnopf"), unter: hol("aktion.browserUnter") }
     ];
+    if (b.webseite) {
+      wege.push({ art: "webseite", ziel: b.webseite, stand: "live",
+        knopf: hol("aktion.webseiteKnopf"), unter: hol("aktion.webseiteUnter") });
+    }
     /* Beschriftung und Erklärung je Zustand */
     const wartetext = (stand) => stand === "test"
       ? hol("aktion.standTest") : hol("aktion.standPruefung");
@@ -103,7 +114,15 @@
     browser: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none"
       stroke="currentColor" stroke-width="1.8">
       <circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>
-      <path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18Z"/></svg>`
+      <path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18Z"/></svg>`,
+    /* Fensterrahmen mit Titelleiste = eigene Website (nicht die Web-App). */
+    webseite: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+      stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <rect x="2.5" y="4" width="19" height="16" rx="2.2"/>
+      <path d="M2.5 8.6h19"/>
+      <circle cx="5.7" cy="6.3" r=".85" fill="currentColor" stroke="none"/>
+      <circle cx="8.3" cy="6.3" r=".85" fill="currentColor" stroke="none"/>
+      <path d="M6 12.4h9M6 16h6"/></svg>`
   };
 
   function bauen() {
