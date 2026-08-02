@@ -2865,3 +2865,200 @@ a.bezug-weg.bezug-webseite .bezug-zeichen {
 @media (max-width: 900px) {
   .live-punkt { animation: none; }   /* Handy: keine Dauerschleife */
 }
+
+/* ============================================================
+   FANICA FUN — HINTERGRUND „Punkt-Raster-Regenbogen"
+   ------------------------------------------------------------
+   Von Falk geliefert (02.08.2026), Uiverse.io / SelfMadeSystem (MIT),
+   im Vault unter 04_Prompts\UI-Bausteine — Webseiten (CSS), Nr. 15.
+   Falks Vermerk dort: „für fanica fun Webseite".
+
+   Schwarzes Punktraster, hinter dem große Farbwolken wandern (40 s)
+   und der Farbton durchrotiert (6 s). Liegt NUR im FaNiCa-Bereich —
+   Instinct und NeonPunkt behalten ihre eigene Kulisse.
+
+   🔴 Das Elternteil braucht `position: relative; overflow: hidden`,
+   sonst legt sich der Hintergrund über die ganze Seite (Falks eigener
+   Hinweis bei dem Baustein). Der Inhalt liegt mit z-index darüber.
+   ============================================================ */
+.fanica-raster {
+  position: absolute;
+  inset: -1em;
+  z-index: 0;
+  pointer-events: none;
+  --c: 7px;
+  background-color: #000;
+  background-image:
+    radial-gradient(circle at 50% 50%, #0000 1.5px, #000 0 var(--c), #0000 var(--c)),
+    radial-gradient(circle at 50% 50%, #0000 1.5px, #000 0 var(--c), #0000 var(--c)),
+    radial-gradient(circle at 50% 50%, #f00, #f000 60%),
+    radial-gradient(circle at 50% 50%, #ff0, #ff00 60%),
+    radial-gradient(circle at 50% 50%, #0f0, #0f00 60%),
+    radial-gradient(ellipse at 50% 50%, #00f, #00f0 60%);
+  background-size:
+    12px 20.7846097px, 12px 20.7846097px,
+    200% 200%, 200% 200%, 200% 200%, 200% 20.7846097px;
+  --p: 0px 0px, 6px 10.39230485px;
+  background-position: var(--p), 0% 0%, 0% 0%, 0% 0px;
+  animation: wee 40s linear infinite, filt 6s linear infinite;
+  /* Etwas gedämpft, damit die weiße Schrift darüber lesbar bleibt —
+     der Effekt ist im Original sehr grell. */
+  opacity: .55;
+}
+@keyframes filt {
+  0%  { filter: hue-rotate(0deg); }
+  to  { filter: hue-rotate(360deg); }
+}
+@keyframes wee {
+  0% { background-position: var(--p), 800% 400%, 1000% -400%, -1200% -600%, 400% 41.5692194px; }
+  to { background-position: var(--p), 0% 0%, 0% 0%, 0% 0%, 0% 0%; }
+}
+
+/* Der Abschnitt, der den Hintergrund trägt */
+#fanica { position: relative; overflow: hidden; }
+/* Alles Sichtbare liegt darüber */
+#fanica > .huelle,
+#fanica > .licht { position: relative; z-index: 1; }
+/* Ein dunkler Schleier über dem Raster: der Effekt bleibt sichtbar,
+   die Texte behalten aber ihren Kontrast (Falks Regel „Schriften
+   müssen deutlich lesbar sein"). */
+#fanica::before {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(10,4,6,.55), transparent 60%),
+    linear-gradient(180deg, rgba(10,4,6,.72), rgba(10,4,6,.62));
+}
+
+/* Handy + „weniger Bewegung": Raster steht still (Falks eigener
+   Hinweis: hue-rotate kostet GPU; siehe website-handy-optimierung-fallen) */
+@media (max-width: 900px), (prefers-reduced-motion: reduce) {
+  .fanica-raster { animation: none; opacity: .38; }
+}
+
+/* ============================================================
+   GLITZER-KNOPF in den FaNiCa-Farben
+   ------------------------------------------------------------
+   Von Falk geliefert, Uiverse.io / StealthWorm (MIT), Baustein Nr. 17.
+   Original: Gelb/Pink/Violett/Blau — hier auf die Markenfarben aus
+   dem FaNiCa-Logo gezogen (fanica-fun-hintergrund-farben):
+   Marken-Rot #E10600 · helles Rot #FF4257 · Dunkelrot #750700 · Glut #FF8A3D.
+
+   🔴 Sternenfläche im Original 200rem — hier aufs Element begrenzt
+   (Falks eigener Hinweis beim Baustein), sonst riesige Fläche und
+   Scroll-Bremse.
+   ============================================================ */
+.glitzer {
+  position: relative;
+  display: inline-flex; justify-content: center; align-items: center;
+  padding: 0 2.2rem; min-height: 3.1rem;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5rem;
+  border: double 4px transparent;
+  background-size: 300% 300%;
+  /* Falks Rand-Trick: untere Ebene = dunkler Grund, obere = Farbverlauf.
+     Der Verlauf zeigt sich nur dort, wo der Grund nicht hinreicht —
+     also im Rahmen. */
+  background-image:
+    linear-gradient(#1a0508, #1a0508),
+    linear-gradient(137.48deg,
+      #FF8A3D 10%, #FF4257 45%, #E10600 67%, #750700 87%);
+  background-origin: border-box;
+  /* 🔴 padding-box statt content-box: content-box endet am Innenrand
+     des Innenabstands und ist ECKIG — der dunkle Kern sass dadurch als
+     Rechteck in der Pille. padding-box uebernimmt die Rundung. */
+  background-clip: padding-box, border-box;
+  animation: gradient_301 5s ease infinite;
+  transition: transform .4s var(--weich), box-shadow .4s var(--weich);
+  text-decoration: none;
+}
+/* Rundes Innenfeld: uebernimmt die Pillenform sauber. */
+.glitzer::before {
+  content: ; position: absolute; inset: 0; z-index: 0;
+  border-radius: 5rem;
+  background: #1a0508;
+}
+.glitzer > span {                     /* Beschriftung immer obenauf */
+  position: relative; z-index: 4;
+  font-family: var(--schrift-kopf);
+  font-size: .95rem; font-weight: 700; letter-spacing: .06em;
+  color: #fff; text-shadow: 0 0 6px rgba(255,120,120,.7);
+}
+.glitzer .sterne {                    /* das Glitzern */
+  position: absolute; inset: 0; z-index: 2;
+  overflow: hidden; border-radius: 5rem;
+}
+.glitzer .sterne::before,
+.glitzer .sterne::after {
+  content: ""; position: absolute;
+  background-image: radial-gradient(#fff 1px, transparent 1%);
+  background-size: 34px 34px;
+}
+.glitzer .sterne::before {
+  top: -50%; left: -50%; width: 200%; height: 400%;
+  animation: animStar 34s linear infinite;
+  opacity: .55;
+}
+.glitzer .sterne::after {
+  top: -120%; left: -120%; width: 340%; height: 340%;
+  animation: animStarRotate 70s linear infinite;
+  opacity: .38;
+}
+.glitzer .schein {                    /* zwei pulsierende Glut-Kreise */
+  position: absolute; inset: 0; z-index: 1;
+  display: flex; pointer-events: none;
+}
+.glitzer .schein i {
+  flex: 1; height: 30px; margin: auto 0;
+  filter: blur(1.6rem);
+  animation: pulse_3011 4s infinite;
+}
+.glitzer .schein i:nth-child(1) { background: rgba(225,6,0,.62); }
+.glitzer .schein i:nth-child(2) { background: rgba(255,138,61,.55); }
+
+.glitzer:hover { transform: scale(1.06); box-shadow: 0 0 30px -6px #E10600; }
+.glitzer:active {
+  border: double 4px #FF4257;
+  background-origin: border-box; background-clip: padding-box, border-box;
+  animation: none;
+}
+.glitzer:active .schein i { background: #FF4257; }
+.glitzer:focus-visible { outline: 3px solid #FF4257; outline-offset: 4px; }
+
+@keyframes animStar {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-120px); }
+}
+@keyframes animStarRotate {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0); }
+}
+@keyframes gradient_301 {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes pulse_3011 {
+  0%   { transform: scale(.75); }
+  70%  { transform: scale(1); }
+  100% { transform: scale(.75); }
+}
+
+/* Handy: Glitzer steht still, der Knopf bleibt aber vollständig */
+@media (max-width: 900px), (prefers-reduced-motion: reduce) {
+  .glitzer,
+  .glitzer .sterne::before,
+  .glitzer .sterne::after,
+  .glitzer .schein i { animation: none; }
+}
+
+/* Auf der FaNiCa-Unterseite liegt das Raster ganzseitig hinter allem
+   (dort gibt es keinen einzelnen Abschnitt, der es tragen koennte).
+   Etwas schwaecher als im Kapitel, weil es die ganze Seite begleitet. */
+.fanica-raster-fest {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  opacity: .3;
+}
