@@ -2049,86 +2049,188 @@ h1.hero-text,
 .nbtn:focus-visible { outline: 3px solid var(--akzent-hell); outline-offset: 3px; }
 .nbtn.gross-knopf { padding: 15px 32px; font-size: 1.04rem; }
 
-/* Ripple — Welle vom Zentrum (FaNiCa Fun, rot) */
+/* ============================================================
+   DIE SECHS EFFEKTE — nach Falks Vorlage "HOVER BUTTON EFFECTS"
+   ------------------------------------------------------------
+   Jeder Knopf spiegelt SEINEN Effekt wider, nicht nur eine Farbe.
+   Zwei davon folgen dem Mauszeiger: Ripple und Lantern lesen
+   --mx/--my (setzt app.js). Ohne JS sitzen sie in der Mitte —
+   der Effekt geht dann nicht verloren, er ist nur nicht ortsgenau.
+   ============================================================ */
+
+/* 1 · RIPPLE — Welle laeuft vom ZEIGERPUNKT nach aussen.
+   Zwei Ringe mit Versatz ergeben die Wellenbewegung, nicht nur
+   einen wachsenden Kreis. */
 .nbtn.b-ripple {
   background: linear-gradient(180deg, #3a0d14, #24080e);
   border-color: var(--rot); color: #ffe0e4;
 }
-.nbtn.b-ripple::before {
-  content: ""; position: absolute; left: 50%; top: 50%;
+.nbtn.b-ripple::before,
+.nbtn.b-ripple::after {
+  content: ""; position: absolute;
+  left: var(--mx, 50%); top: var(--my, 50%);
   width: 0; height: 0; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,120,140,.55), transparent 70%);
   transform: translate(-50%, -50%);
-  transition: width .5s ease, height .5s ease;
+  pointer-events: none;
 }
-.nbtn.b-ripple:hover::before { width: 300px; height: 300px; }
-.nbtn.b-ripple:hover { box-shadow: 0 0 22px -4px var(--rot); }
+.nbtn.b-ripple::before {
+  background: radial-gradient(circle,
+    rgba(255,140,160,.55) 0%, rgba(255,90,120,.28) 45%, transparent 70%);
+  transition: width .55s cubic-bezier(.22,.61,.36,1),
+              height .55s cubic-bezier(.22,.61,.36,1);
+}
+.nbtn.b-ripple::after {                    /* nachlaufender Ring = Welle */
+  border: 2px solid rgba(255,160,175,.5);
+  transition: width .55s cubic-bezier(.22,.61,.36,1) .08s,
+              height .55s cubic-bezier(.22,.61,.36,1) .08s,
+              opacity .55s ease .08s;
+  opacity: 1;
+}
+.nbtn.b-ripple:hover::before { width: 340px; height: 340px; }
+.nbtn.b-ripple:hover::after  { width: 300px; height: 300px; opacity: 0; }
+.nbtn.b-ripple:hover { box-shadow: 0 0 24px -4px var(--rot); }
 
-/* Grass — Halme wachsen von unten (Instinct, oliv) */
+/* 2 · SCRATCH — gebuerstetes Metall. Die Buerstung sind feine
+   Linien im Grund (repeating-linear-gradient); der Glanz wischt
+   beim Hover darueber hinweg. */
+.nbtn.b-scratch {
+  background:
+    repeating-linear-gradient(96deg,
+      rgba(255,255,255,.045) 0 1px, transparent 1px 3px),
+    linear-gradient(120deg, #2a2e34, #464b55 50%, #2a2e34);
+  border-color: rgba(255,255,255,.34); color: var(--creme);
+}
+.nbtn.b-scratch::before {
+  content: ""; position: absolute; inset: -40% -10%;
+  background: linear-gradient(108deg, transparent 44%,
+              rgba(255,255,255,.28) 47%,
+              rgba(255,255,255,.85) 50%,
+              rgba(255,255,255,.28) 53%, transparent 56%);
+  transform: translateX(-130%) rotate(2deg);
+  transition: transform .6s cubic-bezier(.3,.7,.4,1);
+  pointer-events: none;
+}
+.nbtn.b-scratch:hover::before { transform: translateX(130%) rotate(2deg); }
+.nbtn.b-scratch:hover { box-shadow: 0 0 20px -6px rgba(255,255,255,.5); }
+
+/* 3 · GRASS — echte HALME. Der wiederholte Verlauf zeichnet schmale
+   Spitzen; beim Hover wachsen sie von unten hoch und teilen sich
+   (der zweite Satz Halme ist versetzt und kommt leicht spaeter). */
 .nbtn.b-grass {
   background: linear-gradient(180deg, #1b2612, #101809);
   border-color: var(--oliv); color: #e6f4c9;
 }
-.nbtn.b-grass::before {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 0;
-  background: linear-gradient(0deg, rgba(167,188,85,.55), transparent);
-  transition: height .35s ease;
+.nbtn.b-grass::before,
+.nbtn.b-grass::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+  height: 100%;
+  transform: scaleY(0); transform-origin: bottom;
+  transition: transform .42s cubic-bezier(.34,.9,.4,1);
+  pointer-events: none;
 }
-.nbtn.b-grass:hover::before { height: 100%; }
+.nbtn.b-grass::before {
+  /* schmale Halme, jeder mit weicher Spitze */
+  background:
+    repeating-linear-gradient(90deg,
+      transparent 0 5px,
+      rgba(167,188,85,.55) 5px 7px,
+      transparent 7px 12px);
+  -webkit-mask-image: linear-gradient(0deg, #000 35%, transparent 95%);
+          mask-image: linear-gradient(0deg, #000 35%, transparent 95%);
+}
+.nbtn.b-grass::after {
+  /* zweiter, versetzter Satz — dadurch "teilen" sich die Halme */
+  background:
+    repeating-linear-gradient(90deg,
+      transparent 0 8px,
+      rgba(203,224,120,.4) 8px 9px,
+      transparent 9px 15px);
+  -webkit-mask-image: linear-gradient(0deg, #000 25%, transparent 85%);
+          mask-image: linear-gradient(0deg, #000 25%, transparent 85%);
+  transition-delay: .07s;
+}
+.nbtn.b-grass:hover::before,
+.nbtn.b-grass:hover::after { transform: scaleY(1); }
 .nbtn.b-grass:hover { box-shadow: 0 0 22px -4px var(--oliv-hell); }
 
-/* Helix — Schimmer-Sweep (NeonPunkt, neon) */
-.nbtn.b-helix {
-  background: linear-gradient(135deg, #0d2b12, #06180c);
-  border-color: #39FF14; color: #d8ffcd;
-}
-.nbtn.b-helix::before {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(115deg, transparent 30%,
-              rgba(120,255,90,.45) 50%, transparent 70%);
-  transform: translateX(-120%); transition: transform .6s ease;
-}
-.nbtn.b-helix:hover::before { transform: translateX(120%); }
-.nbtn.b-helix:hover { box-shadow: 0 0 22px -4px #39FF14; }
-
-/* Scratch — Metall-Glanz (neutrale Knöpfe, z. B. Zurück) */
-.nbtn.b-scratch {
-  background: linear-gradient(120deg, #2a2e34, #454a53 50%, #2a2e34);
-  border-color: rgba(255,255,255,.32); color: var(--creme);
-}
-.nbtn.b-scratch::before {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(110deg, transparent 40%,
-              rgba(255,255,255,.5) 50%, transparent 60%);
-  transform: translateX(-120%); transition: transform .55s ease;
-}
-.nbtn.b-scratch:hover::before { transform: translateX(120%); }
-
-/* Heat — warmes Glühen von unten */
+/* 4 · HEAT — Thermalbild: das Gluehen steigt von unten auf und
+   wechselt dabei von Rot ueber Orange nach Gelb, wie eine
+   Waermekamera. */
 .nbtn.b-heat {
   background: linear-gradient(180deg, #2a100c, #180a08);
   border-color: #d8552f; color: #ffd8c9;
 }
 .nbtn.b-heat::before {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 35%;
-  background: linear-gradient(0deg, rgba(255,120,50,.6), transparent);
-  opacity: .4; transition: opacity .3s ease, height .3s ease;
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+  height: 28%;
+  background: linear-gradient(0deg,
+    rgba(255,238,120,.75) 0%,
+    rgba(255,140,40,.6) 38%,
+    rgba(214,50,30,.35) 70%,
+    transparent 100%);
+  filter: blur(2px);
+  transition: height .42s cubic-bezier(.34,.9,.4,1), filter .42s ease;
+  pointer-events: none;
 }
-.nbtn.b-heat:hover::before { opacity: 1; height: 100%; }
+.nbtn.b-heat:hover::before { height: 115%; filter: blur(6px); }
+.nbtn.b-heat:hover { box-shadow: 0 0 26px -5px #ff7a2f; }
 
-/* Lantern — Laternenschein */
+/* 5 · LANTERN — warmer Laternenschein am ZEIGER, auf Holzmaserung.
+   Die Maserung sind unregelmaessige dunkle Baender im Grund. */
 .nbtn.b-lantern {
-  background: linear-gradient(180deg, #2a230c, #181206);
+  background:
+    repeating-linear-gradient(88deg,
+      rgba(0,0,0,.16) 0 2px, transparent 2px 7px,
+      rgba(0,0,0,.09) 7px 8px, transparent 8px 14px),
+    linear-gradient(180deg, #35290f, #1d1607);
   border-color: #d8b52f; color: #ffedb0;
 }
 .nbtn.b-lantern::before {
-  content: ""; position: absolute; left: 50%; top: 50%;
+  content: ""; position: absolute;
+  left: var(--mx, 50%); top: var(--my, 50%);
   width: 0; height: 0; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,214,90,.55), transparent 70%);
   transform: translate(-50%, -50%);
-  transition: width .45s ease, height .45s ease;
+  background: radial-gradient(circle,
+    rgba(255,238,180,.75) 0%, rgba(255,196,80,.42) 38%,
+    rgba(210,140,30,.15) 60%, transparent 76%);
+  filter: blur(4px);
+  transition: width .5s ease, height .5s ease;
+  pointer-events: none;
 }
-.nbtn.b-lantern:hover::before { width: 260px; height: 260px; }
+.nbtn.b-lantern:hover::before { width: 300px; height: 300px; }
+.nbtn.b-lantern:hover { box-shadow: 0 0 26px -6px #ffca4a; }
+
+/* 6 · HELIX — DNA-Doppelhelix in VIOLETT-BLAU (Falks Vorgabe;
+   vorher war der Knopf gruen). Zwei gegenlaeufige Schimmer-Baender
+   ergeben die verdrehten Straenge. */
+.nbtn.b-helix {
+  background: linear-gradient(135deg, #1b1038, #0c0820);
+  border-color: #8b5cf6; color: #e4dcff;
+}
+.nbtn.b-helix::before,
+.nbtn.b-helix::after {
+  content: ""; position: absolute; inset: -30% -15%;
+  pointer-events: none;
+  transition: transform .65s cubic-bezier(.3,.7,.4,1);
+}
+.nbtn.b-helix::before {                    /* Strang 1 — violett */
+  background: repeating-linear-gradient(58deg,
+    transparent 0 9px, rgba(167,120,255,.45) 9px 13px, transparent 13px 24px);
+  transform: translateX(-60%) skewX(-8deg);
+}
+.nbtn.b-helix::after {                     /* Strang 2 — blau, gegenlaeufig */
+  background: repeating-linear-gradient(-58deg,
+    transparent 0 9px, rgba(90,170,255,.4) 9px 13px, transparent 13px 24px);
+  transform: translateX(60%) skewX(8deg);
+}
+.nbtn.b-helix:hover::before { transform: translateX(60%) skewX(-8deg); }
+.nbtn.b-helix:hover::after  { transform: translateX(-60%) skewX(8deg); }
+.nbtn.b-helix:hover { box-shadow: 0 0 26px -5px #8b5cf6; }
+
+/* Ohne Bewegungswunsch: Effekte sofort und ohne Animation zeigen */
+@media (prefers-reduced-motion: reduce) {
+  .nbtn::before, .nbtn::after { transition: none !important; }
+}
 
 /* ---- App-Kacheln im Hero: die drei Apps zum Anklicken ---- */
 .app-reihe {

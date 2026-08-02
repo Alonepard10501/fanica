@@ -941,6 +941,31 @@
     else breit.addListener(anpassen);          /* ältere Browser */
   }
 
+  /* ---- Knöpfe: Effekt folgt dem Mauszeiger ----
+     Falks Vorlage schreibt für zwei der sechs Effekte ausdrücklich den
+     Zeigerpunkt vor: Ripple `surface: wave(x,y)` und Lantern
+     `light: glow(x,y)`. Ohne das gingen beide immer aus der Mitte los —
+     das war der Grund, warum sie „nicht den Effekt hatten".
+     Hier werden nur zwei CSS-Variablen gesetzt, die Optik macht das CSS.
+     Auf Touch-Geräten gibt es keinen Zeiger — dort bleibt die Mitte,
+     der Effekt geht also nicht verloren. */
+  function knopfZeigerEinrichten() {
+    if (matchMedia("(hover: none)").matches) return;
+    document.querySelectorAll(".nbtn.b-ripple, .nbtn.b-lantern").forEach(k => {
+      k.addEventListener("pointermove", (e) => {
+        const r = k.getBoundingClientRect();
+        k.style.setProperty("--mx", (e.clientX - r.left) + "px");
+        k.style.setProperty("--my", (e.clientY - r.top) + "px");
+      }, { passive: true });
+      /* Beim Verlassen zurücksetzen, sonst startet die nächste Welle
+         an der alten Stelle. */
+      k.addEventListener("pointerleave", () => {
+        k.style.removeProperty("--mx");
+        k.style.removeProperty("--my");
+      }, { passive: true });
+    });
+  }
+
   /* ======================================================== START */
   function start() {
     texteEinsetzen();
@@ -961,6 +986,7 @@
     kartenLichtEinrichten();
     scheibeEinrichten();
     boegenEinrichten();
+    knopfZeigerEinrichten();
   }
 
   if (document.readyState === "loading") {
