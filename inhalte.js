@@ -44,16 +44,17 @@
     instinct: {
       android: "https://play.google.com/store/apps/details?id=de.bogensportinstinct.instinct_scoring",
       apple:   "https://apps.apple.com/de/app/instinct-scoring/id6795424223",
-      browser: "https://alonepard10501.github.io/instinct-scoring/",
-      /* Eigenständige App-Website (eigenes Repo instinct-scoring-web).
-         Nur Instinct hat eine — fehlt der Schlüssel, entfällt der Weg. */
+      /* KEIN browser-Schlüssel (Falk 12.08.2026: „beide weg"). */
+      /* Eigenständige App-Website (eigenes Repo instinct-scoring-web). */
       webseite: "https://alonepard10501.github.io/instinct-scoring-web/",
       standAndroid: "test", standApple: "live", stil: "b-grass"
     },
     neonpunkt: {
       android: "https://play.google.com/store/apps/details?id=de.fanica.neonpunkt",
       apple:   "https://apps.apple.com/de/app/id6795088815",
-      browser: "https://alonepard10501.github.io/fanica-fun/neonpunkt/",
+      /* KEIN browser-Schlüssel (Falk 12.08.2026: „beide weg") — das
+         Spiel unter `/fanica-fun/neonpunkt/` liegt weiter da, wird aber
+         nirgends mehr verlinkt. */
       /* Eigene App-Website („48 Stunden. Ein Punkt.“). Heißt bewusst
          `neonpunkt-info` — `neonpunkt` daneben ist das SPIEL, nicht
          die Seite. Beide liegen im selben Repo, nicht verwechseln. */

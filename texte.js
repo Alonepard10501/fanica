@@ -802,7 +802,7 @@ de: {
     webseiteKnopf: "Website",
     webseiteUnter: "Eigene Seite zur App",
     holenTitel: "Wo es die App gibt",
-    holenText: "Auf dem Handy über den jeweiligen Store — und wo es eine Browser-Fassung gibt, läuft sie ohne Installation.",
+    holenText: "Auf dem Handy über den jeweiligen Store — dazu die Webseite der App mit allen Einzelheiten.",
     zurWebseite: "Zur App-Webseite ↗",
     standTest: "im Test",
     standPruefung: "in Prüfung",
@@ -852,7 +852,7 @@ de: {
       { name: "Sprachen",      werte: ["2", "2", "16"] },
       { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks"] },
       { name: "Premium ab",    werte: ["0,99 € / 4 Wochen", "1,99 € / 4 Wochen", "0,49 € / 4 Wochen"] },
-      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS · Browser", "Android · iOS"] }
+      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
     fuss: "Alle Preise mit sieben Tagen kostenlosem Test."
   },
@@ -1721,7 +1721,7 @@ en: {
     webseiteKnopf: "Website",
     webseiteUnter: "The app's own site",
     holenTitel: "Where to get the app",
-    holenText: "On your phone through the respective store — and where a browser version exists, it runs with no installation.",
+    holenText: "On your phone through the respective store — plus the app's own website with every detail.",
     zurWebseite: "Visit the app website ↗",
     standTest: "in testing",
     standPruefung: "in review",
@@ -1746,7 +1746,7 @@ en: {
       { name: "Languages",      werte: ["2", "2", "16"] },
       { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps"] },
       { name: "Premium from",   werte: ["€0.99 / 4 weeks", "€1.99 / 4 weeks", "€0.49 / 4 weeks"] },
-      { name: "Platform",       werte: ["Android · iOS", "Android · iOS · browser", "Android · iOS"] }
+      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
     fuss: "All prices with a seven-day free trial."
   },
