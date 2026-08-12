@@ -332,7 +332,7 @@ de: {
         kann: ["Beliebig viele Schützen", "Gruppen & Teams",
                "Mehrere Bögen & Setups", "Komplette Statistik",
                "Turniere", "Spine-Rechner", "Sicherung einspielen"],
-        grenze: "Historie 3 Runden · 10 Symbole · 1 Spine-Profil",
+        grenze: "Historie 3 Runden · 7 Farben · 10 Symbole · 1 Spine-Profil",
         hervor: true
       },
       {
@@ -342,7 +342,8 @@ de: {
         kann: ["Volle Historie", "Duell-Modus",
                "Parcours-Suche nach PLZ & Umkreis",
                "Alle 30 Farben & Symbole", "Spine-Profile speichern",
-               "Statistik-Export als CSV", "App-Symbol wechseln"],
+               "Statistik-Export als CSV", "Ergebnis als PDF teilen",
+               "Fotos & Tierart nachträglich ändern", "App-Symbol wechseln"],
         grenze: "Keine Grenzen"
       }
     ],
@@ -492,7 +493,9 @@ de: {
       { name: "Runden-Chat", text: "Antworten, eigene Nachrichten ändern, wichtige anpinnen." },
       { name: "Rennkalender", text: "Alle Termine mit Startzeit in deutscher Zeit." },
       { name: "Mehrere Gruppen", text: "Ein Profil, beliebig viele Tipprunden — du wechselst einfach." },
-      { name: "Organisator-Werkzeuge", text: "Spiel starten und pausieren, Codes vergeben, Punkte und Regeln festlegen." }
+      { name: "Organisator-Werkzeuge", text: "Spiel starten und pausieren, Codes vergeben, Punkte und Regeln festlegen." },
+      { name: "Wochenend-PDF", text: "Ein Rennwochenende als PDF: alle Tipps nebeneinander, Ergebnis, Punkte und Tabellenstand — zum Teilen." },
+      { name: "Startbildschirm-Widgets", text: "Rangliste und nächstes Rennen als Android-Widget, direkt auf dem Homescreen." }
     ],
     umfangAnzeigenTitel: "Die 16 Karriere-Kennzahlen",
     umfangAnzeigen: [
@@ -506,6 +509,44 @@ de: {
       "GoldTipps — die Treffer, die sonst keiner hatte"
     ],
     umfangFilter: "Alles wahlweise für eine Gruppe, eine Saison oder deine gesamte Laufbahn.",
+
+    /* --- Neu in der App (Stand 1.176, aus dem Quellcode) --- */
+    neuTitel: "Neu in der App",
+    neuText: "Was mit den letzten Updates dazugekommen ist — Stand Version 1.176.",
+    neuListe: [
+      { name: "Wochenend-PDF", text: "Nach jedem gewerteten Rennwochenende baut die App eine PDF-Seite: die Tipps aller Spieler nebeneinander, das echte Ergebnis, die Punkte und der Tabellenstand — zum Teilen in die Gruppe." },
+      { name: "Zwei Startbildschirm-Widgets", text: "Die Rangliste (Platz 1 bis 10 mit Farbe, Punkten und Trophäen) und das nächste Rennen mit Flagge, Ort und Startzeit — direkt auf dem Android-Homescreen." },
+      { name: "Ganze Saison im Diagramm", text: "Das Vollbild-Diagramm zeigt jetzt die komplette Saison auf einen Blick — umschaltbar auf die breite Ansicht zum Durchscrollen." },
+      { name: "54 Spielerfarben", text: "Die Farbpalette wurde auf 54 Töne erweitert: 15 Grundfarben sind frei, die Neontöne gehören zu Premium. Die erste Wahl beim Beitritt bleibt immer frei." },
+      { name: "Countdown führt in den Kalender", text: "Ein Tipp auf den Countdown öffnet den Rennkalender direkt beim aktuellen Rennen." },
+      { name: "Runde starten mit einem Knopf", text: "Der Organisator startet die Runde direkt von der Startseite — ab dem nächsten Rennen zählt jeder Tipp, alle beginnen gemeinsam bei null." },
+      { name: "Genauere Durchschnitte", text: "Punkteschnitte werden mit Nachkommastelle angezeigt — 8,4 und 8,5 sind jetzt unterscheidbar." }
+    ],
+
+    /* --- Gratis und Premium (Werte aus kasse.dart / gratis_grenze.dart) --- */
+    stufenTitel: "Gratis und Premium",
+    stufenText: "Tippen kostet nichts, dauerhaft. Premium öffnet den Rückblick — und die ersten sieben Tage sind kostenlos.",
+    stufen: [
+      {
+        name: "Gratis",
+        preis: "0 €",
+        zeile: "für immer",
+        kann: ["Tippen & Punkte, jedes Rennen", "Tabelle der Gruppe, immer aktuell",
+               "Aktuelles & letztes Rennen im Detail", "Runden-Chat",
+               "Rennkalender & Widgets", "Wochenend-PDF des letzten Rennens"],
+        grenze: "Rückblick: nur das zuletzt gefahrene Rennen"
+      },
+      {
+        name: "Premium",
+        preis: "0,99 €",
+        zeile: "je 4 Wochen · 9,99 € im Jahr — im App Store 1,99 € / 14,99 €",
+        kann: ["Die komplette Saison mit allen Diagrammen", "Alle früheren Jahre (Historie)",
+               "Ewige Bestenliste & Strecken-Rekorde", "Karriere-Statistik mit 16 Kennzahlen",
+               "39 zusätzliche Spielerfarben", "Name, Farbe & Symbol ändern"],
+        grenze: "Jahresabo: die bezahlte Saison bleibt dauerhaft sichtbar",
+        hervor: true
+      }
+    ],
 
     /* --- Wie kommt man rein? (lib/beitritt.dart, lib/seiten/gruppen_seite.dart) --- */
     beitrittTitel: "Wie fange ich an?",
@@ -522,7 +563,7 @@ de: {
     beitrittHinweis: "Dein Profil gehört dir, nicht der Gruppe: Ein einmal abgeschlossenes Abo gilt in allen Runden, in denen du mitspielst.",
 
     mehrKnopf: "Alles über FaNiCa Fun",
-    mehrText: "Die fünf Trophäen mit ihren echten Bedingungen, der Ablauf einer Renn-Woche, alle 22 Strecken, die 16 Karriere-Kennzahlen und wie man einer Runde beitritt.",
+    mehrText: "Die fünf Trophäen mit ihren echten Bedingungen, der Ablauf einer Renn-Woche, alle 22 Strecken, die 16 Karriere-Kennzahlen, die neuen Funktionen und was Premium kann.",
     galerieTitel: "Ein Blick in die App",
     rundeTitel: "Wie es wirklich aussieht",
     rundeText: "Das hier ist keine Vorführ-Runde mit ausgedachten Namen. Es sind die echten Zahlen aus der Gruppe, für die ich die App überhaupt gebaut habe — seit 2022, mittlerweile im fünften Jahr.",
@@ -541,11 +582,17 @@ de: {
 
     bilder: [
       { pfad: "bilder/fanica/tippen.webp", hoch: true,
-        alt: "FaNiCa Fun: Tippschein mit der Startaufstellung",
+        alt: "FaNiCa Fun: Tipp-Seite mit Countdown zum Rennen in Zandvoort und dem Top-5-Tipp",
         titel: "Der Tippschein" },
-      { pfad: "bilder/fanica/fahrer.webp", hoch: true,
-        alt: "FaNiCa Fun: Fahrerübersicht mit Punkten und Platzierungen",
-        titel: "Die Fahrer" },
+      { pfad: "bilder/fanica/ergebnis.webp", hoch: true,
+        alt: "FaNiCa Fun: Rennwochenende Monaco mit Ergebnis, Qualifying, Treppchen und den Tipps der Runde",
+        titel: "Ein Rennwochenende komplett" },
+      { pfad: "bilder/fanica/kalender.webp", hoch: true,
+        alt: "FaNiCa Fun: Rennkalender 2026 mit allen Sessions von Zandvoort",
+        titel: "Der Rennkalender" },
+      { pfad: "bilder/fanica/karriere.webp", hoch: true,
+        alt: "FaNiCa Fun: Karriere-Statistik eines Spielers mit Trefferquote, Rekorden und Punkteschnitt",
+        titel: "Die Karriere-Statistik" },
       { pfad: "bilder/fanica/teilnahme.webp", hoch: true,
         alt: "FaNiCa Fun: Teilnahme an einer Runde bestätigen",
         titel: "Runde beitreten" },
@@ -691,6 +738,29 @@ de: {
     ],
 
     preis: "Die ersten 500 Klicks sind frei. Danach schaltet Premium unbegrenztes Weiterspielen, die Bestenlisten und die Sitzungsanzeige frei: 0,49 € je 4 Wochen oder 4,99 € im Jahr. Nichts geht verloren — das Spiel pausiert nur.",
+
+    /* --- Gratis und Premium (Werte aus Kasse.kt / Parameter.kt) --- */
+    stufenTitel: "Gratis und Premium",
+    stufenText: "Erst spielen, dann entscheiden: Die ersten 500 Klicks kosten nichts. Danach pausiert das Spiel nur — nichts geht verloren.",
+    stufen: [
+      {
+        name: "Gratis",
+        preis: "0 €",
+        zeile: "die ersten 500 Klicks",
+        kann: ["Das ganze Spiel, alle 16 Farben", "Widget auf dem Startbildschirm",
+               "Beide Uhren & Vorwarnung ab Klick 450", "Alle 16 Sprachen"],
+        grenze: "Nach 500 Klicks pausiert das Spiel"
+      },
+      {
+        name: "Premium",
+        preis: "0,49 €",
+        zeile: "je 4 Wochen · 4,99 € im Jahr",
+        kann: ["Unbegrenzt weiterspielen", "Beide Bestenlisten (Top 5)",
+               "Durchschnitt je Sitzung", "Sitzungsanzeige"],
+        grenze: "Jederzeit kündbar — der Spielstand bleibt",
+        hervor: true
+      }
+    ],
     mehrKnopf: "Alles über NeonPunkt",
     mehrText: "Worum es eigentlich geht, alle Regeln, die sechzehn Farben in ihrer Reihenfolge, die beiden Bestenlisten und das Widget für den Startbildschirm.",
     zahlenFuss: "Keine Werbung, keine Berechtigungen, kein Konto, kein Internet. Alles bleibt auf deinem Gerät."
@@ -735,7 +805,7 @@ de: {
     holenText: "Auf dem Handy über den jeweiligen Store, am Rechner direkt im Browser — ohne Installation.",
     standTest: "im Test",
     standPruefung: "in Prüfung",
-    bezugHinweis: "Im Browser läuft die App schon jetzt vollständig — ohne Installation, ohne Konto. Die Android-Fassung steckt gerade im geschlossenen Test bei Google Play, die Apple-Fassung liegt zur Prüfung im App Store. Beide Knöpfe werden hier freigeschaltet, sobald es so weit ist.",
+    bezugHinweis: "Jeder Weg, der schon freigegeben ist, ist hier ein echter Knopf. Steht „im Test“ oder „in Prüfung“ dabei, ist die Fassung beim jeweiligen Store noch nicht öffentlich — der Knopf wird freigeschaltet, sobald es so weit ist.",
     pruefungKurz: "in Prüfung",
     pruefungLang: "Die Store-Fassungen liegen bei Apple und Google zur Prüfung. Bis sie freigeschaltet sind, führt der Knopf noch auf eine Fehlerseite — im Browser läuft die App schon jetzt vollständig.",
     inPruefung: "in Prüfung"
@@ -1188,7 +1258,7 @@ en: {
         kann: ["Any number of archers", "Groups & teams",
                "Several bows & setups", "Full statistics",
                "Tournaments", "Spine calculator", "Restore a backup"],
-        grenze: "History of 3 rounds · 10 symbols · 1 spine profile",
+        grenze: "History of 3 rounds · 7 colours · 10 symbols · 1 spine profile",
         hervor: true
       },
       {
@@ -1198,7 +1268,8 @@ en: {
         kann: ["Full history", "Duel mode",
                "Course search by postcode & radius",
                "All 30 colours & symbols", "Save spine profiles",
-               "Statistics export as CSV", "Change the app icon"],
+               "Statistics export as CSV", "Share results as PDF",
+               "Edit photos & animal type later", "Change the app icon"],
         grenze: "No limits"
       }
     ],
@@ -1251,7 +1322,9 @@ en: {
       { name: "Group chat", text: "Reply, edit your own messages, pin the important ones." },
       { name: "Race calendar", text: "Every date with start times in German local time." },
       { name: "Several groups", text: "One profile, any number of prediction groups — you simply switch." },
-      { name: "Organiser tools", text: "Start and pause the game, hand out codes, set points and rules." }
+      { name: "Organiser tools", text: "Start and pause the game, hand out codes, set points and rules." },
+      { name: "Weekend PDF", text: "A race weekend as a PDF: everyone's predictions side by side, the result, points and standings — ready to share." },
+      { name: "Home-screen widgets", text: "The standings and the next race as Android widgets, right on your home screen." }
     ],
     umfangAnzeigenTitel: "The 16 career figures",
     umfangAnzeigen: [
@@ -1265,6 +1338,44 @@ en: {
       "Gold picks — the calls nobody else made"
     ],
     umfangFilter: "All of it for one group, one season or your whole career.",
+
+    /* --- New in the app (version 1.176, from the source code) --- */
+    neuTitel: "New in the app",
+    neuText: "What the latest updates brought — as of version 1.176.",
+    neuListe: [
+      { name: "Weekend PDF", text: "After every scored race weekend the app builds a PDF page: everyone's predictions side by side, the real result, the points and the standings — ready to share with the group." },
+      { name: "Two home-screen widgets", text: "The standings (positions 1 to 10 with colour, points and trophies) and the next race with flag, location and start time — right on your Android home screen." },
+      { name: "The whole season in one chart", text: "The full-screen chart now shows the complete season at a glance — switchable to the wide view for scrolling through." },
+      { name: "54 player colours", text: "The palette grew to 54 colours: 15 base colours are free, the neon shades are part of Premium. Your first pick when joining is always free." },
+      { name: "Countdown opens the calendar", text: "Tapping the countdown takes you straight to the race calendar at the current race." },
+      { name: "Start the round with one button", text: "The organiser starts the round right from the home page — from the next race on every prediction counts, everyone starts together at zero." },
+      { name: "More precise averages", text: "Point averages now show one decimal place — 8.4 and 8.5 are no longer the same number." }
+    ],
+
+    /* --- Free and Premium (values from kasse.dart / gratis_grenze.dart) --- */
+    stufenTitel: "Free and Premium",
+    stufenText: "Predicting costs nothing, permanently. Premium opens up the archive — and the first seven days are free.",
+    stufen: [
+      {
+        name: "Free",
+        preis: "€0",
+        zeile: "forever",
+        kann: ["Predict & score, every race", "Your group's table, always current",
+               "Current & previous race in detail", "Group chat",
+               "Race calendar & widgets", "Weekend PDF of the latest race"],
+        grenze: "Archive: only the most recent race"
+      },
+      {
+        name: "Premium",
+        preis: "€0.99",
+        zeile: "per 4 weeks · €9.99 per year — App Store €1.99 / €14.99",
+        kann: ["The complete season with all charts", "Every earlier year (history)",
+               "All-time table & track records", "Career statistics with 16 figures",
+               "39 additional player colours", "Change name, colour & symbol"],
+        grenze: "Yearly plan: the paid season stays visible for good",
+        hervor: true
+      }
+    ],
 
     ablaufTitel: "How a race week runs",
     ablaufSchritte: [
@@ -1373,7 +1484,7 @@ en: {
     ],
 
     mehrKnopf: "Everything about FaNiCa Fun",
-    mehrText: "The five trophies with their real conditions, how a race week runs, all 22 circuits, the 16 career figures and how to join a group.",
+    mehrText: "The five trophies with their real conditions, how a race week runs, all 22 circuits, the 16 career figures, the new features and what Premium does.",
     galerieTitel: "A look inside the app",
     rundeTitel: "What it actually looks like",
     rundeText: "This is not a demo round with made-up names. These are the real numbers from the group I built the app for in the first place — running since 2022, now in its fifth year.",
@@ -1392,11 +1503,17 @@ en: {
 
     bilder: [
       { pfad: "bilder/fanica/tippen.webp", hoch: true,
-        alt: "FaNiCa Fun: prediction slip with the starting grid",
+        alt: "FaNiCa Fun: prediction page with the countdown to the Zandvoort race and the top-5 pick",
         titel: "The prediction slip" },
-      { pfad: "bilder/fanica/fahrer.webp", hoch: true,
-        alt: "FaNiCa Fun: driver overview with points and positions",
-        titel: "The drivers" },
+      { pfad: "bilder/fanica/ergebnis.webp", hoch: true,
+        alt: "FaNiCa Fun: Monaco race weekend with result, qualifying, podium and the group's predictions",
+        titel: "A complete race weekend" },
+      { pfad: "bilder/fanica/kalender.webp", hoch: true,
+        alt: "FaNiCa Fun: 2026 race calendar with every Zandvoort session",
+        titel: "The race calendar" },
+      { pfad: "bilder/fanica/karriere.webp", hoch: true,
+        alt: "FaNiCa Fun: a player's career statistics with hit rate, records and points average",
+        titel: "The career statistics" },
       { pfad: "bilder/fanica/teilnahme.webp", hoch: true,
         alt: "FaNiCa Fun: confirming participation in a group",
         titel: "Joining a group" },
@@ -1541,7 +1658,30 @@ en: {
         titel: "Your leaderboard" }
     ],
 
-    preis: "The first 500 taps are free. After that Premium unlocks unlimited play, the leaderboards and the session display: €0.49 per four weeks or €4.99 per year. Nothing is lost — the game simply pauses."
+    preis: "The first 500 taps are free. After that Premium unlocks unlimited play, the leaderboards and the session display: €0.49 per four weeks or €4.99 per year. Nothing is lost — the game simply pauses.",
+
+    /* --- Free and Premium (values from Kasse.kt / Parameter.kt) --- */
+    stufenTitel: "Free and Premium",
+    stufenText: "Play first, decide later: the first 500 taps cost nothing. After that the game only pauses — nothing is lost.",
+    stufen: [
+      {
+        name: "Free",
+        preis: "€0",
+        zeile: "the first 500 taps",
+        kann: ["The whole game, all 16 colours", "Home-screen widget",
+               "Both clocks & a warning from tap 450", "All 16 languages"],
+        grenze: "After 500 taps the game pauses"
+      },
+      {
+        name: "Premium",
+        preis: "€0.49",
+        zeile: "per 4 weeks · €4.99 per year",
+        kann: ["Play on without limits", "Both leaderboards (top 5)",
+               "Average per session", "Session display"],
+        grenze: "Cancel any time — your progress stays",
+        hervor: true
+      }
+    ]
   },
 
   /* ====================== ACTIONS / STORES ============================ */
@@ -1583,7 +1723,7 @@ en: {
     holenText: "On your phone through the respective store, on a computer straight in the browser — no installation.",
     standTest: "in testing",
     standPruefung: "in review",
-    bezugHinweis: "In the browser the app already runs in full — no installation, no account. The Android version is currently in closed testing on Google Play, the Apple version is under review in the App Store. Both buttons will go live here as soon as they are ready.",
+    bezugHinweis: "Every route that has been released is a real button here. Where it says “in testing” or “in review”, that version is not public on its store yet — the button goes live as soon as it is.",
     pruefungKurz: "in review",
     pruefungLang: "The store versions are with Apple and Google for review. Until they are approved the button still leads to an error page — in the browser the app already runs in full.",
     inPruefung: "in review"

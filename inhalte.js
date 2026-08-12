@@ -18,33 +18,35 @@
      es NUR hier geändert — Startseite und Unterseiten holen es
      sich von hier.
 
-     🔴 STATUS je Weg (Stand 31.07.2026, alle sechs Store-Seiten
-     liefern geprüft 404 — deshalb sind sie noch keine Links):
+     🔴 STATUS je Weg (Stand 12.08.2026, jede Adresse einzeln
+     per Abruf geprüft — nur bestätigte Wege sind Links):
        "live"    = öffentlich erreichbar, wird zum Knopf
-       "test"    = Google Play, geschlossener Test (Falk 31.07.)
+       "test"    = Google Play, geschlossener Test
        "pruefung"= Apple prüft noch
-     Sobald etwas freigegeben ist, hier auf "live" setzen —
-     mehr ist nicht nötig, Startseite und Unterseiten ziehen nach.
+     Geprüft 12.08.: FaNiCa Play 200 ✓ · FaNiCa Apple ✓ (1.170) ·
+     Instinct Apple ✓ (1.0.1) · Instinct Play 404 · NeonPunkt
+     Play/Apple 404. Sobald etwas freigegeben ist, hier auf "live"
+     setzen — mehr ist nicht nötig, alle Seiten ziehen nach.
      ============================================================ */
   const BEZUG = {
     fanica: {
       android: "https://play.google.com/store/apps/details?id=com.fanica.fun",
-      apple:   "https://apps.apple.com/de/app/id6795424070",
+      apple:   "https://apps.apple.com/de/app/fanica-fun/id6795424070",
       browser: "https://alonepard10501.github.io/fanica-fun/spiel/",
       /* Eigene App-Website („FanicaFun.de — Eure private Tipprunde“).
          Liegt in der WURZEL von fanica-fun; `/spiel/` darunter ist die
          Web-Fassung der App, nicht die Website. Nicht verwechseln. */
       webseite: "https://alonepard10501.github.io/fanica-fun/",
-      standAndroid: "test", standApple: "pruefung", stil: "b-ripple"
+      standAndroid: "live", standApple: "live", stil: "b-ripple"
     },
     instinct: {
       android: "https://play.google.com/store/apps/details?id=de.bogensportinstinct.instinct_scoring",
-      apple:   "https://apps.apple.com/de/app/id6795424223",
+      apple:   "https://apps.apple.com/de/app/instinct-scoring/id6795424223",
       browser: "https://alonepard10501.github.io/instinct-scoring/",
       /* Eigenständige App-Website (eigenes Repo instinct-scoring-web).
          Nur Instinct hat eine — fehlt der Schlüssel, entfällt der Weg. */
       webseite: "https://alonepard10501.github.io/instinct-scoring-web/",
-      standAndroid: "test", standApple: "pruefung", stil: "b-grass"
+      standAndroid: "test", standApple: "live", stil: "b-grass"
     },
     neonpunkt: {
       android: "https://play.google.com/store/apps/details?id=de.fanica.neonpunkt",
@@ -65,8 +67,8 @@
      eine 404-Seite und weiß trotzdem, woran er ist.
 
      Der vierte Weg „Website" erscheint NUR, wenn die App eine eigene
-     Seite hat (`webseite` in BEZUG). Stand 01.08.2026 ist das allein
-     Instinct Scoring — FaNiCa und NeonPunkt behalten drei Wege. */
+     Seite hat (`webseite` in BEZUG). Stand 12.08.2026 haben alle drei
+     Apps eine — jede Leiste zeigt also vier Wege (2×2-Raster). */
   function bezugsLeiste(schluessel, hol) {
     const b = BEZUG[schluessel];
     if (!b) return "";
@@ -344,16 +346,30 @@
         </div>`).join("");
     }
 
-    /* ---------------- INSTINCT: Die drei Stufen ---------------- */
-    const iStufen = el("instinct-stufen");
-    if (iStufen) {
-      iStufen.innerHTML = hol("instinct.stufen").map(s => `
+    /* ---------------- Preis-Stufen (alle drei Apps) ----------------
+       Instinct hat drei Karten, FaNiCa und NeonPunkt je zwei —
+       derselbe Baukasten, gefüttert aus `<app>.stufen` in texte.js. */
+    for (const app of ["instinct", "fanica", "neonpunkt"]) {
+      const feld = el(app + "-stufen");
+      if (!feld) continue;
+      feld.innerHTML = hol(app + ".stufen").map(s => `
         <div class="stufe auf ${s.hervor ? "hervor" : ""}">
           <h4>${sicher(s.name)}</h4>
           <div class="stufe-preis">${sicher(s.preis)}</div>
           <div class="stufe-zeile">${sicher(s.zeile)}</div>
           <ul>${s.kann.map(k => `<li>${sicher(k)}</li>`).join("")}</ul>
           <div class="stufe-grenze">${sicher(s.grenze)}</div>
+        </div>`).join("");
+    }
+
+    /* ---------------- FANICA: Neu in der App ----------------
+       Gleiche Kartenform wie der Funktionsumfang (`.funktionen`). */
+    const fNeu = el("fanica-neu");
+    if (fNeu) {
+      fNeu.innerHTML = hol("fanica.neuListe").map(f => `
+        <div class="funktion">
+          <b>${sicher(f.name)}</b>
+          <span>${sicher(f.text)}</span>
         </div>`).join("");
     }
 

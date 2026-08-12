@@ -1990,6 +1990,12 @@ h1.hero-text,
   .trophaeen  { grid-template-columns: repeat(5, 1fr); }
   .schritte   { grid-template-columns: repeat(3, 1fr); }
   .stufen     { grid-template-columns: repeat(3, 1fr); }
+  /* FaNiCa und NeonPunkt haben nur ZWEI Stufen-Karten (Gratis/Premium) —
+     ein festes Dreier-Raster ließe die dritte Spalte leer stehen. */
+  .stufen:has(> .stufe:nth-child(2):last-child) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 820px;
+  }
   .farbreihe  { grid-template-columns: repeat(8, 1fr); }
 }
 
