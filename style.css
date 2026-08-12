@@ -2700,10 +2700,12 @@ body { line-height: 1.72; letter-spacing: .005em; }
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   max-width: 760px;
 }
-/* Vier Wege (App mit eigener Website): sauberes 2x2 statt 3+1.
-   `auto-fit` wuerde drei Kaesten nebeneinander legen und den vierten
-   allein darunter — das liest sich wie ein Nachzuegler. */
-.bezug:has(.bezug-webseite) {
+/* VIER Wege: sauberes 2x2 statt 3+1 — `auto-fit` wuerde drei Kaesten
+   nebeneinander legen und den vierten allein darunter (Nachzuegler).
+   Haengt an der ANZAHL (4. Kind), nicht an der Website-Kachel:
+   FaNiCa hat seit 12.08.2026 nur noch drei Wege (Browser-Fassung raus)
+   und soll dreispaltig bleiben. */
+.bezug:has(> :nth-child(4)) {
   grid-template-columns: repeat(2, minmax(190px, 1fr));
   max-width: 520px;
 }
@@ -2781,7 +2783,7 @@ a.bezug-weg.bezug-webseite .bezug-zeichen {
      auch auf schmalen Handys zwei Spalten erzwingen — deshalb hier
      mit derselben Spezifitaet zurueckholen. */
   .bezug,
-  .bezug:has(.bezug-webseite) { grid-template-columns: 1fr; }
+  .bezug:has(> :nth-child(4)) { grid-template-columns: 1fr; }
   .bezug-weg { padding: .75rem .9rem; }
 }
 

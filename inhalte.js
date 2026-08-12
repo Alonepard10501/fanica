@@ -32,10 +32,12 @@
     fanica: {
       android: "https://play.google.com/store/apps/details?id=com.fanica.fun",
       apple:   "https://apps.apple.com/de/app/fanica-fun/id6795424070",
-      browser: "https://alonepard10501.github.io/fanica-fun/spiel/",
+      /* KEIN browser-Schlüssel mehr: `/fanica-fun/spiel/` war die alte
+         Qt-Web-Fassung von vor dem Flutter-Neubau — Falk 12.08.2026:
+         „Im Browser spielen muss raus". Der QR-Code zeigt deshalb
+         auf die App-Website. */
       /* Eigene App-Website („FanicaFun.de — Eure private Tipprunde“).
-         Liegt in der WURZEL von fanica-fun; `/spiel/` darunter ist die
-         Web-Fassung der App, nicht die Website. Nicht verwechseln. */
+         Liegt in der WURZEL von fanica-fun. */
       webseite: "https://alonepard10501.github.io/fanica-fun/",
       standAndroid: "live", standApple: "live", stil: "b-ripple"
     },
@@ -76,10 +78,15 @@
       { art: "android", ziel: b.android, stand: b.standAndroid,
         knopf: hol("aktion.androidKnopf"), unter: hol("aktion.androidUnter") },
       { art: "apple",   ziel: b.apple,   stand: b.standApple,
-        knopf: hol("aktion.appleKnopf"),   unter: hol("aktion.appleUnter") },
-      { art: "browser", ziel: b.browser, stand: "live",
-        knopf: hol("aktion.browserKnopf"), unter: hol("aktion.browserUnter") }
+        knopf: hol("aktion.appleKnopf"),   unter: hol("aktion.appleUnter") }
     ];
+    /* Browser-Weg nur, wenn die App eine gepflegte Web-Fassung hat.
+       FaNiCa hat seit dem Flutter-Neubau KEINE mehr (Falk 12.08.2026:
+       „Im Browser spielen muss raus") — der Schlüssel fehlt dort. */
+    if (b.browser) {
+      wege.push({ art: "browser", ziel: b.browser, stand: "live",
+        knopf: hol("aktion.browserKnopf"), unter: hol("aktion.browserUnter") });
+    }
     if (b.webseite) {
       wege.push({ art: "webseite", ziel: b.webseite, stand: "live",
         knopf: hol("aktion.webseiteKnopf"), unter: hol("aktion.webseiteUnter") });
@@ -106,7 +113,7 @@
       </div>
       ${offen.length ? `<p class="bezug-hinweis">${sicher(hol("aktion.bezugHinweis"))}</p>` : ""}
       <div class="qr">
-        <div data-qr="${sicher(b.browser)}"></div>
+        <div data-qr="${sicher(b.browser || b.webseite)}"></div>
         <div class="qr-text">
           <h4>${sicher(hol("aktion.qrTitel"))}</h4>
           <p>${sicher(hol("aktion.qrText"))}</p>
