@@ -15,7 +15,7 @@ Kontakt. Vollständig auf Deutsch und Englisch (Knopf oben rechts).
 Der Webseiten-Ordner ist gleichzeitig das Git-Repository. Nach einer Änderung:
 
 ```bash
-cd "C:\Users\falkc\Desktop\KI-Studio\Obsidian Vault\Projekte\Webseiten Online\Webseite"
+cd "C:\Users\Falk\Desktop\KI-Studio\Projekte\Webseiten\Webseite"
 git add -A
 git commit -m "Was du geändert hast"
 git push
@@ -57,7 +57,7 @@ Doppelklick auf `index.html` reicht **nicht** ganz — die Seite lädt Dateien n
 Besser ein kleiner lokaler Server:
 
 ```bash
-python -m http.server 8899 --directory "C:\Users\falkc\Desktop\KI-Studio\Obsidian Vault\Projekte\Webseiten Online\Webseite"
+python -m http.server 8899 --directory "C:\Users\Falk\Desktop\KI-Studio\Projekte\Webseiten\Webseite"
 ```
 
 Dann im Browser: `http://127.0.0.1:8899`

@@ -60,6 +60,18 @@
          die Seite. Beide liegen im selben Repo, nicht verwechseln. */
       webseite: "https://alonepard10501.github.io/fanica-fun/neonpunkt-info/",
       standAndroid: "test", standApple: "pruefung", stil: "b-helix"
+    },
+    /* 🔴 SetUpLeiste ist ein WINDOWS-PROGRAMM, kein Store-Produkt.
+       Statt Android/Apple gibt es genau einen Weg: die Installations-
+       datei aus dem GitHub-Release. Adresse am 19.08.2026 geprueft
+       (HTTP 200, 2.512.935 Bytes = exakt die Originaldatei).
+       Neue Fassung: neues Release anlegen und die Version hier
+       hochzaehlen — sonst laedt die Seite die alte Datei. */
+    setupleiste: {
+      windows: "https://github.com/Alonepard10501/fanica/releases/download/setupleiste-v1.0.0/SetUpLeiste-Setup-1.0.0.exe",
+      version: "1.0.0",
+      groesse: "2,5 MB",
+      stil: "b-lantern"
     }
   };
   window.BEZUG = BEZUG;   // damit app.js dieselben Adressen nutzt
@@ -122,6 +134,27 @@
       </div>`;
   }
 
+  /* Der Download-Kasten der SetUpLeiste. Bewusst NICHT `bezugsLeiste`:
+     Es gibt keinen Store, keinen Status und keinen QR-Code — nur eine
+     Datei zum Herunterladen. `download` sorgt fuer einen sprechenden
+     Dateinamen, `rel=noopener` fuer die Sicherheit. */
+  function downloadLeiste(hol) {
+    const b = BEZUG.setupleiste;
+    if (!b) return "";
+    return `
+      <div class="bezug bezug-download">
+        <a class="bezug-weg bezug-windows" href="${sicher(b.windows)}"
+           rel="noopener" download>
+          <span class="bezug-zeichen" aria-hidden="true">${ZEICHEN.windows}</span>
+          <span class="bezug-text"><b>${sicher(hol("aktion.windowsKnopf"))}</b>
+            <em>${sicher(hol("aktion.windowsUnter"))
+                  .replace("{version}", sicher(b.version))
+                  .replace("{groesse}", sicher(b.groesse))}</em></span>
+        </a>
+      </div>
+      <p class="bezug-hinweis">${sicher(hol("aktion.windowsHinweis"))}</p>`;
+  }
+
   /* Schlichte, selbstgezeichnete Zeichen — keine fremden Logos
      (Marken-Richtlinien von Apple und Google), kein Nachladen. */
   const ZEICHEN = {
@@ -133,6 +166,10 @@
       stroke="currentColor" stroke-width="1.8">
       <circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>
       <path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18Z"/></svg>`,
+    /* Vier Scheiben = Windows-Programm. Bewusst schlicht und selbst
+       gezeichnet — kein Microsoft-Logo (Markenrichtlinien). */
+    windows: `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+      <path d="M3 5.6 10.4 4.6v6.6H3V5.6Zm8.6-1.1L21 3.2v8H11.6V4.5ZM3 12.8h7.4v6.6L3 18.4v-5.6Zm8.6 0H21v8l-9.4-1.3v-6.7Z"/></svg>`,
     /* Fensterrahmen mit Titelleiste = eigene Website (nicht die Web-App). */
     webseite: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none"
       stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
@@ -540,6 +577,41 @@
       if (ziel) ziel.innerHTML = bezugsLeiste(k, hol);
     });
 
+    /* Die SetUpLeiste bekommt statt der Store-Wege den Download-Kasten. */
+    const dlZiel = el("bezug-setupleiste");
+    if (dlZiel) dlZiel.innerHTML = downloadLeiste(hol);
+
+    /* ---------------- SETUPLEISTE: Knoepfe und Ehrlichkeits-Liste ----------------
+       Zwei eigene Bausteine; die Messwert-Liste und die Zahlen laufen
+       ueber die gemeinsame `<app>-umfang-*`-Schleife weiter unten mit. */
+    const slKnoepfe = el("setupleiste-knoepfe");
+    if (slKnoepfe) {
+      slKnoepfe.innerHTML = hol("setupleiste.knoepfe").map(k => `
+        <div class="trophaee auf">
+          <span class="trophaee-zeichen" aria-hidden="true">${sicher(k.zeichen)}</span>
+          <h4>${sicher(k.name)}</h4>
+          <p>${sicher(k.text)}</p>
+        </div>`).join("");
+    }
+
+    const slEhrlich = el("setupleiste-ehrlich");
+    if (slEhrlich) {
+      slEhrlich.innerHTML = hol("setupleiste.ehrlich").map(e => `
+        <div class="funktion">
+          <b>${sicher(e.name)}</b>
+          <span>${sicher(e.text)}</span>
+        </div>`).join("");
+    }
+
+    const slTechnik = el("setupleiste-technik");
+    if (slTechnik) {
+      slTechnik.innerHTML = hol("setupleiste.technikPunkte").map(t => `
+        <div class="funktion">
+          <b>${sicher(t.name)}</b>
+          <span>${sicher(t.text)}</span>
+        </div>`).join("");
+    }
+
     /* ---------------- FANICA: echte laufende Runde ----------------
        Zahlen aus `runde.js` (aus der echten App-Datenlage gerechnet,
        nichts geschätzt). Der Block erscheint nur, wenn runde.js
@@ -685,8 +757,10 @@
 
     /* ---------------- FUNKTIONSUMFANG je App ----------------
        Dieselbe Bauart in allen drei Kapiteln: Zahlenreihe, dann die
-       wichtigsten Funktionen als Raster, dann die Anzeigen als Liste. */
-    ["instinct", "fanica", "neonpunkt"].forEach(app => {
+       wichtigsten Funktionen als Raster, dann die Anzeigen als Liste.
+       Die SetUpLeiste laeuft mit — sie hat Zahlen und Liste, aber keine
+       `umfangAnzeigen`; der Baustein ueberspringt fehlende Container. */
+    ["instinct", "fanica", "neonpunkt", "setupleiste"].forEach(app => {
       const zahlen = el(app + "-umfang-zahlen");
       if (zahlen) {
         zahlen.innerHTML = hol(app + ".umfangZahlen").map(z => `

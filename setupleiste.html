@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SetUpLeiste — die Leistungsanzeige für den Bildschirmrand</title>
+<meta name="description" content="Alles über die SetUpLeiste: elf Messwerte mit Bestwerten, die drei Knöpfe, was gemessen und was gerechnet ist. Kostenlos für Windows 10 und 11.">
+<meta name="theme-color" content="#07070A">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-kapitel="setupleiste">
+
+<a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
+
+<div class="kulisse" aria-hidden="true"
+     style="background:linear-gradient(180deg,#05080C,#0A1119 55%,#060A0F)"></div>
+<div class="hologramm" aria-hidden="true"></div>
+<div class="gitter" aria-hidden="true"></div>
+<div class="koerner" aria-hidden="true"></div>
+
+<header class="kopf fest">
+ <div class="kopf-innen">
+  <a class="kopf-marke" href="index.html">
+    <img src="bilder/marke/icon-fanica.webp" alt="" width="30" height="30">
+    <span>FaNiCa<b>.</b></span>
+  </a>
+  <nav class="kopf-nav" aria-label="Navigation">
+    <a href="index.html">← Startseite</a>
+    <a href="fanica-fun.html">FaNiCa Fun</a>
+    <a href="instinct-scoring.html">Instinct Scoring</a>
+    <a href="neonpunkt.html">NeonPunkt</a>
+    <span class="kopf-hier" aria-current="page">SetUpLeiste</span>
+  </nav>
+ </div>
+</header>
+
+<main id="inhalt" class="unterseite">
+  <div class="huelle">
+
+    <div class="kapitelkopf">
+      <p class="kennung" data-t="setupleiste.kennung">Kapitel 04</p>
+      <h1 data-t="setupleiste.untertitel">Die Leistungsanzeige für den Bildschirmrand</h1>
+    </div>
+
+    <p class="gross" style="max-width:64ch" data-t="setupleiste.positionierung"></p>
+
+    <!-- ---------- Was angezeigt wird ---------- -->
+    <section class="unter-block">
+      <h2 data-t="setupleiste.umfangTitel">Was angezeigt wird</h2>
+      <p class="leise" style="max-width:64ch" data-t="setupleiste.umfangText"></p>
+      <div class="zahlen" id="setupleiste-umfang-zahlen"></div>
+      <div class="funktionen" id="setupleiste-umfang-liste"
+           style="margin-top:clamp(1.8rem,3.4vw,2.6rem)"></div>
+    </section>
+
+    <!-- ---------- Die drei Knöpfe ---------- -->
+    <section class="unter-block">
+      <h2 data-t="setupleiste.knoepfeTitel">Drei Knöpfe, mehr braucht es nicht</h2>
+      <div class="trophaeen" id="setupleiste-knoepfe"></div>
+    </section>
+
+    <!-- ---------- Bestwerte ---------- -->
+    <section class="unter-block">
+      <h2 data-t="setupleiste.bestwerteTitel">Bestwerte, die mitlaufen</h2>
+      <p class="gross" style="max-width:64ch" data-t="setupleiste.bestwerteText"></p>
+    </section>
+
+    <!-- ---------- Gemessen oder gerechnet ---------- -->
+    <section class="unter-block">
+      <h2 data-t="setupleiste.ehrlichTitel">Was gemessen ist — und was gerechnet</h2>
+      <p class="leise" style="max-width:64ch" data-t="setupleiste.ehrlichText"></p>
+      <div class="funktionen" id="setupleiste-ehrlich"></div>
+    </section>
+
+    <!-- ---------- Technik ---------- -->
+    <section class="unter-block">
+      <h2 data-t="setupleiste.technikTitel">Technisch</h2>
+      <div class="funktionen" id="setupleiste-technik"></div>
+    </section>
+
+    <!-- ---------- Herunterladen ---------- -->
+    <section class="unter-block">
+      <h2 data-t="aktion.holenTitelProgramm">Wo es das Programm gibt</h2>
+      <div id="bezug-setupleiste"></div>
+      <div class="aktionen" style="margin-top:1.6rem">
+        <a class="nbtn b-scratch" href="index.html#setupleiste">
+          <span data-t="zurueckKnopf">← Zurück zur Startseite</span></a>
+      </div>
+      <p class="preis" data-t="setupleiste.preis"></p>
+      <div class="hinweis">
+        <p data-t="setupleiste.hinweis"></p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="fuss">
+  <div class="huelle">
+    <div class="fuss-unten">
+      <nav class="fuss-links" aria-label="Rechtliches">
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html" data-t="fuss.impressum">Impressum</a>
+        <a href="datenschutz.html" data-t="fuss.datenschutz">Datenschutz</a>
+        <a href="bildquellen.html" data-t="fuss.bildquellen">Bildquellen</a>
+      </nav>
+      <span>© <span id="jahr">2026</span> FaNiCa</span>
+    </div>
+  </div>
+</footer>
+
+<script src="texte.js"></script>
+<script src="inhalte.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

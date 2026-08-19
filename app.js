@@ -68,6 +68,12 @@
       grund: "linear-gradient(180deg, #000000, #030308 60%, #000000)",
       akzent: "#39FF14", akzentHell: "#7BFF5C"
     },
+    // Das vierte Produkt: kein Handy, sondern ein Windows-Programm.
+    // Stahlblau setzt es sichtbar von den drei Apps ab.
+    setupleiste: {
+      grund: "linear-gradient(180deg, #05080C, #0A1119 55%, #060A0F)",
+      akzent: "#2E88C7", akzentHell: "#58B6F0"
+    },
     // „Auf einen Blick" vergleicht alle drei Apps — bewusst NEUTRAL,
     // damit die Tabelle nicht nach einer einzelnen App aussieht.
     // (Falk 31.07.: „hat noch die falschen Farben in der Überschrift".)

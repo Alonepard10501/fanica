@@ -3,23 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FaNiCa — Apps aus einem Ein-Mann-Studio in Nordfriesland</title>
-<meta name="description" content="Drei fertige Apps aus einem Ein-Mann-Medienstudio: FaNiCa Fun als private Tipprunde, Instinct Scoring für Bogensport und NeonPunkt, das minimalistischste Spiel der Welt.">
+<title>FaNiCa — Apps und Werkzeuge aus einem Ein-Mann-Studio in Nordfriesland</title>
+<meta name="description" content="Vier fertige Produkte aus einem Ein-Mann-Medienstudio: FaNiCa Fun als private Tipprunde, Instinct Scoring für Bogensport, NeonPunkt als minimalistischstes Spiel der Welt und die SetUpLeiste für den Windows-Bildschirmrand.">
 <meta name="author" content="FaNiCa">
 <meta name="theme-color" content="#07070A">
 <meta name="color-scheme" content="dark">
 
 <!-- Social-Vorschau -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="FaNiCa — Drei Apps aus einem Ein-Mann-Studio">
-<meta property="og:description" content="FaNiCa Fun, Instinct Scoring und NeonPunkt — offline, ohne Tracking, ohne Konto.">
+<meta property="og:title" content="FaNiCa — Vier Produkte aus einem Ein-Mann-Studio">
+<meta property="og:description" content="FaNiCa Fun, Instinct Scoring, NeonPunkt und die SetUpLeiste — offline, ohne Tracking, ohne Konto.">
 <meta property="og:image" content="bilder/marke/og-bild.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FaNiCa — Drei Apps aus einem Ein-Mann-Studio">
-<meta name="twitter:description" content="FaNiCa Fun, Instinct Scoring und NeonPunkt — offline, ohne Tracking, ohne Konto.">
+<meta name="twitter:title" content="FaNiCa — Vier Produkte aus einem Ein-Mann-Studio">
+<meta name="twitter:description" content="FaNiCa Fun, Instinct Scoring, NeonPunkt und die SetUpLeiste — offline, ohne Tracking, ohne Konto.">
 <meta name="twitter:image" content="bilder/marke/og-bild.png">
 
 <link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
@@ -92,6 +92,13 @@
       <img src="bilder/marke/app-neonpunkt.webp" alt="" width="72" height="72" loading="lazy">
       <b>NeonPunkt</b>
       <span data-t="hero.appNeon">Klick-Spiel</span>
+    </a>
+    <!-- Das vierte Produkt hat (noch) kein App-Symbol — statt eines
+         gemalten Platzhalters steht hier das Zeichen aus der Leiste. -->
+    <a class="app-kachel" href="#setupleiste" style="--af:#58B6F0">
+      <span class="kachel-zeichen" aria-hidden="true">📊</span>
+      <b>SetUpLeiste</b>
+      <span data-t="hero.appSetup">PC-Anzeige</span>
     </a>
   </div>
 
@@ -330,6 +337,56 @@
   </div>
 </section>
 
+
+
+<!-- ================================ KAPITEL 04 — SETUPLEISTE
+     Das vierte Produkt und das einzige Windows-Programm. Bewusst
+     kompakt: die Einzelheiten stehen auf setupleiste.html. -->
+<section class="abschnitt" id="setupleiste" data-kapitel="setupleiste">
+  <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
+
+  <div class="huelle">
+
+    <div class="kapitelkopf mitte auf">
+      <p class="kennung zentriert" data-t="setupleiste.kennung">Kapitel 04</p>
+      <h2 data-t="setupleiste.name">SetUpLeiste</h2>
+      <p class="kooperationszeile" data-t="setupleiste.untertitel"></p>
+    </div>
+
+    <div class="huelle-schmal mittig auf">
+      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
+        <span data-t="setupleiste.claim">Was dein Rechner gerade tut.</span><br>
+        <span class="leise" data-t="setupleiste.claimZwei"></span>
+      </h3>
+      <p class="gross" data-t="setupleiste.positionierung"></p>
+    </div>
+
+    <!-- Zahlen -->
+    <div class="zahlen auf" id="setupleiste-umfang-zahlen"
+         style="margin-top:clamp(2.4rem,5vw,3.4rem)"></div>
+
+    <!-- Der Kniff -->
+    <div class="huelle-schmal mittig auf" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
+      <h3 data-t="setupleiste.kernTitel">Der Unterschied</h3>
+      <p class="gross" data-t="setupleiste.kernText"></p>
+    </div>
+
+    <!-- Weiterlesen -->
+    <div class="auf weiterlesen">
+      <a class="nbtn b-lantern" href="setupleiste.html">
+        <span data-t="setupleiste.mehrKnopf">Alles über die SetUpLeiste</span></a>
+      <p class="weiter-hinweis" data-t="setupleiste.mehrText"></p>
+    </div>
+
+    <!-- Herunterladen -->
+    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
+      <h3 class="bezug-titel" data-t="aktion.holenTitelProgramm">Wo es das Programm gibt</h3>
+      <div id="bezug-setupleiste"></div>
+      <p class="preis" data-t="setupleiste.preis"></p>
+    </div>
+
+  </div>
+</section>
 
 <!-- ================================ VERGLEICH & FRAGEN -->
 <section class="abschnitt" id="vergleich" data-kapitel="vergleich">

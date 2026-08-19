@@ -38,6 +38,7 @@ de: {
     appFanica: "Tipprunde",
     appInstinct: "Bogensport",
     appNeon: "Klick-Spiel",
+    appSetup: "PC-Anzeige",
     scrollHinweis: "Scrollen"
   },
 
@@ -768,6 +769,86 @@ de: {
     zahlenFuss: "Keine Werbung, keine Berechtigungen, kein Konto, kein Internet. Alles bleibt auf deinem Gerät."
   },
 
+  /* ============ KAPITEL 4 — SETUPLEISTE (Windows-Programm) ============
+     Alle Angaben aus dem Quellcode und der LIESMICH.txt des Programms:
+     Werkzeugkasten\Programme\PC Featers\SetUpLeiste     Messwerte-Liste = enum RekordId in sensoren.h (11 Eintraege),
+     Version + Herausgeber aus installer.iss. ============================ */
+  setupleiste: {
+    kennung: "Kapitel 04",
+    name: "SetUpLeiste",
+    untertitel: "Die Leistungsanzeige für den Bildschirmrand",
+    claim: "Was dein Rechner gerade tut.",
+    claimZwei: "Eine schmale Zeile, ganz oben.",
+    positionierung: "Kein Fenster, kein Programm im Vordergrund — eine schmale Leiste am oberen Bildschirmrand, die dir zeigt, was gerade wirklich läuft: Auslastung, Temperatur, Watt, Ping, Datenfluss, Akku. Sie sitzt immer mittig oben, klappt auf Wunsch ein und sammelt nebenbei deine Bestwerte.",
+
+    kernTitel: "Der Unterschied",
+    kernText: "Andere Werkzeuge öffnest du, wenn du etwas wissen willst. Diese Leiste ist schon da — im Spiel, beim Rendern, beim Arbeiten. Und sie merkt sich, was der Rechner an seinem besten Tag geschafft hat.",
+
+    /* --- Was angezeigt wird (LIESMICH + sensoren.h) --- */
+    umfangTitel: "Was angezeigt wird",
+    umfangText: "Jede Anzeige lässt sich einzeln ein- und ausschalten, dazu drei Größenstufen für die ganze Leiste.",
+    umfangZahlen: [
+      { zahl: "11", text: "Messwerte mit Bestwert" },
+      { zahl: "6", text: "Zeiträume je Bestwert" },
+      { zahl: "3", text: "Größenstufen" },
+      { zahl: "0", text: "Kosten" }
+    ],
+    umfangListe: [
+      { name: "Prozessor", text: "Auslastung und geschätzte Leistungsaufnahme in Watt." },
+      { name: "Grafikkarte", text: "Auslastung, Takt, belegter Grafikspeicher und gemessene Watt." },
+      { name: "Temperatur", text: "Grafikkarte immer, Prozessor nur mit Administratorrechten — sonst gibt Windows den Wert nicht heraus." },
+      { name: "Arbeitsspeicher", text: "Wie viel gerade belegt ist." },
+      { name: "Bilder je Sekunde", text: "Die FPS des Vollbild-Programms, das gerade vorne liegt." },
+      { name: "Ping", text: "Antwortzeit ins Netz, laufend gemessen." },
+      { name: "Datenfluss", text: "Was gerade wirklich hoch- und runtergeht — ohne Download steht dort fast null." },
+      { name: "Leitung", text: "Die gemessene Anschlussgeschwindigkeit, getrennt für WLAN und Kabel. Wird auf Knopfdruck gemessen." },
+      { name: "Akku", text: "Ladestand mit Balken und Restkapazität in mAh; beim Laden ein Blitz. Ohne Akku bleibt das Feld leer." },
+      { name: "Stromverbrauch", text: "Grafikkarte und Prozessor zusammen, aufsummiert für Tag, Woche, Monat, Jahr und gesamt." },
+      { name: "Laufzeit", text: "Wie lange der Rechner seit dem Start durchläuft." },
+      { name: "Auflösung", text: "Die aktuelle Bildschirmauflösung." }
+    ],
+
+    /* --- Die drei Knoepfe (LIESMICH.txt) --- */
+    knoepfeTitel: "Drei Knöpfe, mehr braucht es nicht",
+    knoepfe: [
+      { zeichen: "🏆", name: "Pokal",
+        text: "Öffnet die Bestwerte-Liste: zu jedem Messwert der Tiefst- und Höchstwert für Heute, Woche, Monat, Jahr, „Möglich“ und Gesamt — dazu der Stromverbrauch. Von hier startet auch die Geschwindigkeitsmessung." },
+      { zeichen: "⚙", name: "Zahnrad",
+        text: "Klappliste zum An- und Abwählen jeder einzelnen Anzeige, dazu die Größe der Leiste. Jeder Eintrag trägt die Farbe seines Segments." },
+      { zeichen: "▾", name: "Pfeil und X",
+        text: "Der Pfeil klappt die Leiste zu einem schmalen Streifen ein, ein zweiter Klick wieder aus. Das X beendet das Programm." }
+    ],
+
+    /* --- Bestwerte --- */
+    bestwerteTitel: "Bestwerte, die mitlaufen",
+    bestwerteText: "Die Leiste merkt sich zu jedem Messwert den höchsten und den tiefsten Stand — getrennt nach Heute, Woche, Monat, Jahr und über die gesamte Laufzeit. So siehst du nicht nur, was gerade ist, sondern auch, was war. Jeder Bestwert lässt sich dreistufig schalten: sichtbar, im Hintergrund weiterzählend oder ganz aus.",
+
+    /* --- Ehrliche Grenzen (aus der LIESMICH, Falks eigene Formulierung) --- */
+    ehrlichTitel: "Was gemessen ist — und was gerechnet",
+    ehrlichText: "Nicht jeder Wert kommt von einem Sensor. Wo gerechnet wird, steht es dabei — auch in der Leiste selbst.",
+    ehrlich: [
+      { name: "Prozessor-Watt ist geschätzt", text: "Windows gibt keine Wattzahl für den Prozessor heraus. Der Wert wird linear von der Leerlauf-Grundlast bis zur Dauerlast-Grenze über die gemessene Auslastung gerechnet. Die Watt der Grafikkarte sind dagegen echt gemessen." },
+      { name: "Akku in mAh ist umgerechnet", text: "Windows meldet Milliwattstunden, nicht Milliamperestunden. Die mAh entstehen über die aktuelle Spannung — und weil die mit dem Ladestand schwankt, schwankt die Zahl leicht mit. Darum steht ein Sternchen am Feld." },
+      { name: "Stromverbrauch ist nicht die Steckdose", text: "Gezählt werden Grafikkarte und Prozessor, nicht Bildschirm, Laufwerke, Mainboard oder Netzteilverluste. Und nur, solange die Leiste läuft." },
+      { name: "Prozessor-Temperatur braucht Rechte", text: "Ohne Administratorrechte rückt Windows sie nicht heraus — dann bleibt das Feld leer. Die Grafikkarten-Temperatur kommt immer." }
+    ],
+
+    /* --- Technik --- */
+    technikTitel: "Technisch",
+    technikPunkte: [
+      { name: "Windows 10 und 11", text: "64 Bit. Ein Installationsprogramm legt Desktop-Symbol, Startmenü-Eintrag und die Deinstallation an." },
+      { name: "2,5 MB", text: "Die komplette Installationsdatei. In C++ geschrieben, ohne Laufzeitumgebung, ohne Zusatzpakete." },
+      { name: "Kein Konto, keine Werbung", text: "Es wird nichts übertragen. Die Geschwindigkeitsmessung lädt nur auf Knopfdruck kurz Testdaten." },
+      { name: "Alles bleibt lokal", text: "Einstellungen, Stromzähler und Bestwerte liegen in deinem Benutzerordner. Beim Deinstallieren wirst du gefragt, ob sie mit weg sollen." },
+      { name: "NVIDIA für die GPU-Felder", text: "Die vier Grafikkarten-Werte kommen über nvidia-smi. Auf Rechnern mit AMD- oder Intel-Grafik blenden sie sich aus." }
+    ],
+
+    preis: "Kostenlos, ohne Konto und ohne Werbung. Die Installationsdatei ist 2,5 MB groß und läuft auf Windows 10 und 11 (64 Bit).",
+    mehrKnopf: "Alles über die SetUpLeiste",
+    mehrText: "Alle Messwerte im Einzelnen, die drei Knöpfe, wie die Bestwerte funktionieren, was gemessen und was gerechnet ist — und wo die Daten liegen.",
+    hinweis: "Ein Werkzeug für den eigenen Rechner, kein Verkaufsprodukt. Gebaut, weil ich beim Rendern und Bauen wissen wollte, was die Maschine gerade macht."
+  },
+
   /* ============ LIVE — automatisch geladene Renndaten ============ */
   live: {
     naechstesTitel: "Das nächste Rennen",
@@ -808,6 +889,11 @@ de: {
     holenTitel: "Wo es die App gibt",
     holenText: "Auf dem Handy über den jeweiligen Store — dazu die Webseite der App mit allen Einzelheiten.",
     zurWebseite: "Zur App-Webseite ↗",
+    /* Download der SetUpLeiste — {version} und {groesse} kommen aus BEZUG */
+    holenTitelProgramm: "Wo es das Programm gibt",
+    windowsKnopf: "Für Windows herunterladen",
+    windowsUnter: "Fassung {version} · {groesse}",
+    windowsHinweis: "Windows 10 und 11 (64 Bit). Die Datei installiert das Programm mit Desktop-Symbol und Deinstallation — kein Konto, keine Werbung, nichts wird übertragen.",
     standTest: "im Test",
     standPruefung: "in Prüfung",
     bezugHinweis: "Jeder Weg, der schon freigegeben ist, ist hier ein echter Knopf. Steht „im Test“ oder „in Prüfung“ dabei, ist die Fassung beim jeweiligen Store noch nicht öffentlich — der Knopf wird freigeschaltet, sobald es so weit ist.",
@@ -985,6 +1071,7 @@ en: {
     appFanica: "Predictions",
     appInstinct: "Archery",
     appNeon: "Tap game",
+    appSetup: "PC monitor",
     scrollHinweis: "Scroll"
   },
 
@@ -1692,6 +1779,78 @@ en: {
   },
 
   /* ====================== ACTIONS / STORES ============================ */
+  /* ============ CHAPTER 4 — SETUPLEISTE (Windows program) ============ */
+  setupleiste: {
+    kennung: "Chapter 04",
+    name: "SetUpLeiste",
+    untertitel: "The performance bar for your screen edge",
+    claim: "What your machine is doing.",
+    claimZwei: "One slim line, right at the top.",
+    positionierung: "No window, no program in the foreground — a slim bar along the top edge of your screen showing what is really going on: load, temperature, watts, ping, throughput, battery. It always sits centred at the top, folds away when you want it to, and quietly collects your best values.",
+
+    kernTitel: "The difference",
+    kernText: "Other tools you open when you want to know something. This bar is already there — while you game, render or work. And it remembers what your machine managed on its best day.",
+
+    umfangTitel: "What it shows",
+    umfangText: "Every reading can be switched on and off individually, and the bar comes in three sizes.",
+    umfangZahlen: [
+      { zahl: "11", text: "readings with best values" },
+      { zahl: "6", text: "periods per best value" },
+      { zahl: "3", text: "sizes" },
+      { zahl: "0", text: "cost" }
+    ],
+    umfangListe: [
+      { name: "Processor", text: "Load and estimated power draw in watts." },
+      { name: "Graphics card", text: "Load, clock speed, used video memory and measured watts." },
+      { name: "Temperature", text: "Graphics card always; processor only with administrator rights — otherwise Windows won't hand the value over." },
+      { name: "Memory", text: "How much is currently in use." },
+      { name: "Frames per second", text: "The FPS of whatever full-screen program is in front." },
+      { name: "Ping", text: "Network response time, measured continuously." },
+      { name: "Throughput", text: "What is actually moving up and down — with no download running it sits near zero." },
+      { name: "Line speed", text: "Measured connection speed, separately for Wi-Fi and cable. Measured at the push of a button." },
+      { name: "Battery", text: "Charge with a bar and remaining capacity in mAh; a bolt while charging. On a machine without a battery the field disappears." },
+      { name: "Power use", text: "Graphics card and processor combined, totalled for day, week, month, year and overall." },
+      { name: "Uptime", text: "How long the machine has been running since it started." },
+      { name: "Resolution", text: "The current screen resolution." }
+    ],
+
+    knoepfeTitel: "Three buttons, nothing more",
+    knoepfe: [
+      { zeichen: "🏆", name: "Trophy",
+        text: "Opens the best-values list: for every reading the lowest and highest figure for today, week, month, year, „possible“ and overall — plus power use. The speed test starts from here too." },
+      { zeichen: "⚙", name: "Cog",
+        text: "A drop-down for switching each reading on or off, plus the size of the bar. Every entry carries the colour of its segment." },
+      { zeichen: "▾", name: "Arrow and X",
+        text: "The arrow folds the bar into a narrow strip, a second click unfolds it. The X closes the program." }
+    ],
+
+    bestwerteTitel: "Best values that keep running",
+    bestwerteText: "The bar remembers the highest and lowest figure for every reading — separately for today, this week, this month, this year and across its whole lifetime. So you see not just what is, but what was. Each best value has three settings: visible, counting on in the background, or off entirely.",
+
+    ehrlichTitel: "What is measured — and what is calculated",
+    ehrlichText: "Not every value comes from a sensor. Where something is calculated, it says so — in the bar itself too.",
+    ehrlich: [
+      { name: "Processor watts are estimated", text: "Windows gives out no wattage for the processor. The figure is calculated linearly from idle draw to sustained-load limit across the measured utilisation. The graphics card watts, by contrast, are genuinely measured." },
+      { name: "Battery mAh is converted", text: "Windows reports milliwatt-hours, not milliamp-hours. The mAh figure comes from the current voltage — and since that shifts with the charge level, the number shifts slightly too. Hence the asterisk on the field." },
+      { name: "Power use is not the wall socket", text: "It counts the graphics card and processor, not the monitor, drives, mainboard or power-supply losses. And only while the bar is running." },
+      { name: "Processor temperature needs rights", text: "Without administrator rights Windows won't release it — then the field stays empty. The graphics card temperature always comes through." }
+    ],
+
+    technikTitel: "Technical",
+    technikPunkte: [
+      { name: "Windows 10 and 11", text: "64-bit. An installer creates the desktop icon, start-menu entry and uninstaller." },
+      { name: "2.5 MB", text: "The complete installer. Written in C++, with no runtime and no extra packages." },
+      { name: "No account, no ads", text: "Nothing is transmitted. The speed test only loads brief test data when you ask it to." },
+      { name: "Everything stays local", text: "Settings, the power counter and best values live in your user folder. Uninstalling asks whether they should go too." },
+      { name: "NVIDIA for the GPU fields", text: "The four graphics-card readings come from nvidia-smi. On machines with AMD or Intel graphics they hide themselves." }
+    ],
+
+    preis: "Free, with no account and no advertising. The installer is 2.5 MB and runs on Windows 10 and 11 (64-bit).",
+    mehrKnopf: "Everything about SetUpLeiste",
+    mehrText: "Every reading in detail, the three buttons, how the best values work, what is measured and what is calculated — and where the data lives.",
+    hinweis: "A tool for my own machine, not a product for sale. Built because I wanted to know what the thing was doing while rendering and building."
+  },
+
   /* ============ LIVE — automatically loaded race data ============ */
   live: {
     naechstesTitel: "The next race",
@@ -1731,6 +1890,10 @@ en: {
     holenTitel: "Where to get the app",
     holenText: "On your phone through the respective store — plus the app's own website with every detail.",
     zurWebseite: "Visit the app website ↗",
+    holenTitelProgramm: "Where to get the program",
+    windowsKnopf: "Download for Windows",
+    windowsUnter: "Version {version} · {groesse}",
+    windowsHinweis: "Windows 10 and 11 (64-bit). The file installs the program with a desktop icon and an uninstaller — no account, no advertising, nothing is transmitted.",
     standTest: "in testing",
     standPruefung: "in review",
     bezugHinweis: "Every route that has been released is a real button here. Where it says “in testing” or “in review”, that version is not public on its store yet — the button goes live as soon as it is.",

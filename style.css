@@ -172,6 +172,12 @@ p:last-child { margin-bottom: 0; }
   --akzent: var(--neon-gruen);
   --akzent-hell: #7BFF5C;
 }
+/* SetUpLeiste = das vierte Produkt und das einzige PC-Programm.
+   Kuehles Stahlblau, damit es sich klar von den drei Apps absetzt. */
+[data-kapitel="setupleiste"] {
+  --akzent: #2E88C7;
+  --akzent-hell: #58B6F0;
+}
 [data-kapitel="fanica"],
 [data-kapitel="intro"],
 [data-kapitel="ueber"],
@@ -2260,6 +2266,19 @@ h1.hero-text,
   box-shadow: 0 8px 22px -10px rgba(0,0,0,.8);
   transition: transform .35s var(--weich);
 }
+/* Die SetUpLeiste hat kein App-Symbol (sie ist ein PC-Programm).
+   Statt eines gemalten Platzhalters steht ein Zeichen im gleichen
+   Rahmenmass wie die Symbole daneben — sonst springt die Reihe. */
+.app-kachel .kachel-zeichen {
+  width: clamp(52px, 9vw, 76px); height: clamp(52px, 9vw, 76px);
+  display: grid; place-items: center;
+  font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+  border-radius: 18px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 8px 22px -10px rgba(0,0,0,.8);
+  transition: transform .35s var(--weich);
+}
 /* Der Name darf zwei Zeilen brauchen ("Instinct Scoring"), soll die
    Kachel aber nicht höher machen als die Nachbarn — deshalb bekommt er
    festen Platz für zwei Zeilen und die Kurzform sitzt darunter am Fuß. */
@@ -2282,7 +2301,8 @@ h1.hero-text,
   box-shadow: 0 20px 44px -22px var(--af);
   color: var(--creme);
 }
-.app-kachel:hover img { transform: scale(1.08); }
+.app-kachel:hover img,
+.app-kachel:hover .kachel-zeichen { transform: scale(1.08); }
 
 /* ---- Logo-Paar: eigenes Logo × Kooperationslogo ---- */
 .hero-logos {
@@ -2708,6 +2728,12 @@ body { line-height: 1.72; letter-spacing: .005em; }
 .bezug:has(> :nth-child(4)) {
   grid-template-columns: repeat(2, minmax(190px, 1fr));
   max-width: 520px;
+}
+/* Die SetUpLeiste hat genau EINEN Weg (Download) — der Kasten soll
+   dann nicht ueber die volle Breite laufen wie ein Vier-Wege-Raster. */
+.bezug-download {
+  grid-template-columns: 1fr;
+  max-width: 340px;
 }
 .bezug-weg {
   display: flex; align-items: center; gap: .85rem;
