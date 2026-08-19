@@ -393,9 +393,11 @@ de: {
         text: "Die App holt Renn- und Startaufstellung automatisch aus offenen Datenquellen, sobald das Renndatum erreicht ist, und verteilt Punkte und Trophäen." }
     ],
 
-    /* --- Die fünf Trophäen, exakt nach Rechner.js --- */
+    /* --- Vier sammelbare Trophäen + der Saison-Pokal (lib/modelle.dart:302
+       zählt Diamant+Krone+Podest+Gold; der Pokal ist die Endplatzierung
+       aus lib/profil_buch.dart und wird nicht mitgezählt). --- */
     trophaeenTitel: "Die Trophäen und wie du sie bekommst",
-    trophaeenText: "Fünf Auszeichnungen, alle rein aus deinem Tippergebnis. Nichts davon lässt sich kaufen.",
+    trophaeenText: "Vier Trophäen sammelst du Rennen für Rennen, dazu kommt der Pokal für die Endplatzierung der Saison. Alles rein aus deinem Tippergebnis — nichts davon lässt sich kaufen.",
     trophaeen: [
       { zeichen: "💎", name: "Diamant",
         bedingung: "15 Punkte in einem Rennen — also alle fünf Fahrer auf der exakt richtigen Position. Das perfekte Rennen." },
@@ -474,12 +476,12 @@ de: {
 
     /* --- Funktionsumfang FaNiCa (aus dem Quellcode gezaehlt) --- */
     umfangTitel: "Was drinsteckt",
-    umfangText: "Vier Reiter, dahinter deutlich mehr, als man auf den ersten Blick sieht: 21 Ansichten, 16 Karriere-Kennzahlen, neun Auswertungsblöcke.",
+    umfangText: "Fünf Reiter, dahinter deutlich mehr, als man auf den ersten Blick sieht: 18 Karriere-Kennzahlen und neun Auswertungsblöcke.",
     umfangZahlen: [
-      { zahl: "4", text: "Hauptbereiche" },
-      { zahl: "21", text: "Ansichten" },
-      { zahl: "16", text: "Karriere-Kennzahlen" },
-      { zahl: "5", text: "Trophäen-Arten" }
+      { zahl: "5", text: "Hauptbereiche" },
+      { zahl: "13", text: "Ansichten" },
+      { zahl: "18", text: "Karriere-Kennzahlen" },
+      { zahl: "4", text: "Trophäen zum Sammeln" }
     ],
     umfangListe: [
       { name: "Tippen", text: "Top 5 setzen, bis acht Stunden vor dem Start. Vorher jederzeit änderbar." },
@@ -489,7 +491,7 @@ de: {
       { name: "Rangverlauf", text: "Zweites Diagramm — wann es Führungswechsel gab." },
       { name: "Strecken-Rekorde", text: "Wer auf welcher Strecke die meisten Punkte geholt hat." },
       { name: "Ewige Bestenliste", text: "Gesamtpunkte über alle Jahre, dazu die beste Einzelsaison." },
-      { name: "Karriere-Profil", text: "16 Kennzahlen, filterbar nach Gesamt, Gruppe oder einzelner Saison." },
+      { name: "Karriere-Profil", text: "18 Kennzahlen, filterbar nach Gesamt, Gruppe oder einzelner Saison." },
       { name: "Runden-Chat", text: "Antworten, eigene Nachrichten ändern, wichtige anpinnen." },
       { name: "Rennkalender", text: "Alle Termine mit Startzeit in deutscher Zeit." },
       { name: "Mehrere Gruppen", text: "Ein Profil, beliebig viele Tipprunden — du wechselst einfach." },
@@ -497,7 +499,7 @@ de: {
       { name: "Wochenend-PDF", text: "Ein Rennwochenende als PDF: alle Tipps nebeneinander, Ergebnis, Punkte und Tabellenstand — zum Teilen." },
       { name: "Startbildschirm-Widgets", text: "Rangliste und nächstes Rennen als Android-Widget, direkt auf dem Homescreen." }
     ],
-    umfangAnzeigenTitel: "Die 16 Karriere-Kennzahlen",
+    umfangAnzeigenTitel: "Die 18 Karriere-Kennzahlen",
     umfangAnzeigen: [
       "Gesamtpunkte und Punkte-Quote",
       "Beste und schlechteste Platzierung",
@@ -510,9 +512,9 @@ de: {
     ],
     umfangFilter: "Alles wahlweise für eine Gruppe, eine Saison oder deine gesamte Laufbahn.",
 
-    /* --- Neu in der App (Stand 1.176, aus dem Quellcode) --- */
+    /* --- Neu in der App (Stand 1.181, aus dem Quellcode) --- */
     neuTitel: "Neu in der App",
-    neuText: "Was mit den letzten Updates dazugekommen ist — Stand Version 1.176.",
+    neuText: "Was mit den letzten Updates dazugekommen ist — Stand Version 1.181.",
     neuListe: [
       { name: "Wochenend-PDF", text: "Nach jedem gewerteten Rennwochenende baut die App eine PDF-Seite: die Tipps aller Spieler nebeneinander, das echte Ergebnis, die Punkte und der Tabellenstand — zum Teilen in die Gruppe." },
       { name: "Zwei Startbildschirm-Widgets", text: "Die Rangliste (Platz 1 bis 10 mit Farbe, Punkten und Trophäen) und das nächste Rennen mit Flagge, Ort und Startzeit — direkt auf dem Android-Homescreen." },
@@ -538,8 +540,8 @@ de: {
       },
       {
         name: "Premium",
-        preis: "0,99 €",
-        zeile: "je 4 Wochen · 9,99 € im Jahr — im App Store 1,99 € / 14,99 €",
+        preis: "1,99 €",
+        zeile: "je 4 Wochen · 14,99 € im Jahr — gleicher Preis in beiden Stores",
         kann: ["Die komplette Saison mit allen Diagrammen", "Alle früheren Jahre (Historie)",
                "Ewige Bestenliste & Strecken-Rekorde", "Karriere-Statistik mit 16 Kennzahlen",
                "39 zusätzliche Spielerfarben", "Name, Farbe & Symbol ändern"],
@@ -563,7 +565,7 @@ de: {
     beitrittHinweis: "Dein Profil gehört dir, nicht der Gruppe: Ein einmal abgeschlossenes Abo gilt in allen Runden, in denen du mitspielst.",
 
     mehrKnopf: "Alles über FaNiCa Fun",
-    mehrText: "Die fünf Trophäen mit ihren echten Bedingungen, der Ablauf einer Renn-Woche, alle 22 Strecken, die 16 Karriere-Kennzahlen, die neuen Funktionen und was Premium kann.",
+    mehrText: "Alle Trophäen mit ihren echten Bedingungen, der Ablauf einer Renn-Woche, alle 22 Strecken, die 18 Karriere-Kennzahlen, die neuen Funktionen und was Premium kann.",
     galerieTitel: "Ein Blick in die App",
     rundeTitel: "Wie es wirklich aussieht",
     rundeText: "Das hier ist keine Vorführ-Runde mit ausgedachten Namen. Es sind die echten Zahlen aus der Gruppe, für die ich die App überhaupt gebaut habe — seit 2022, mittlerweile im fünften Jahr.",
@@ -603,7 +605,7 @@ de: {
 
     bildProfil: "bilder/fanica/profil.webp",
     bildProfilAlt: "FaNiCa Fun: Profil anlegen — einmal registrieren, überall mitspielen",
-    preis: "Tippen kostet nichts, dauerhaft. Ohne Premium siehst du das aktuelle und das letzte Rennen. Premium öffnet den Rückblick: die komplette Saison, alle früheren Jahre, ewige Bestenlisten, Strecken-Rekorde und die Karriere-Statistik. Bei Google Play 0,99 € je 4 Wochen oder 9,99 € im Jahr, im App Store 1,99 € beziehungsweise 14,99 € — die ersten 7 Tage sind überall kostenlos.",
+    preis: "Tippen kostet nichts, dauerhaft. Ohne Premium siehst du das aktuelle und das letzte Rennen. Premium öffnet den Rückblick: die komplette Saison, alle früheren Jahre, ewige Bestenlisten, Strecken-Rekorde und die Karriere-Statistik. 1,99 € je 4 Wochen oder 14,99 € im Jahr — in beiden Stores derselbe Preis, und die ersten 7 Tage sind kostenlos.",
     hinweis: "Ab 18 Jahren. Getippt wird ohne Geldeinsatz — Glücksspiel kann trotzdem süchtig machen. Hilfe unter check-dein-spiel.de.",
     hinweisLink: "https://www.check-dein-spiel.de",
     unabhaengig: "Eine unabhängige Fan-App. Keine Verbindung zur Formula One Group. Rennergebnisse stammen aus öffentlichen Datenquellen."
@@ -783,7 +785,9 @@ de: {
   /* ====================== AKTIONEN / STORE ============================ */
   aktion: {
     browser: "Im Browser testen",
-    browserSpielen: "Im Browser spielen",
+    // ENTFERNT 12.08.2026 (Falk-Entscheid): "Im Browser spielen/testen" ist auf ALLEN Seiten raus.
+    // Nicht wieder einbauen — die Apps zeigen nur Android · Apple · eigene Webseite.
+    // browserSpielen: "Im Browser spielen",
     browserFehlt: "Web-Fassung folgt",
     browserAelter: "Die Web-Fassung zeigt den Stand vor dem Neubau — die Store-App ist neuer.",
     play: "Bei Google Play",
@@ -808,7 +812,9 @@ de: {
     standPruefung: "in Prüfung",
     bezugHinweis: "Jeder Weg, der schon freigegeben ist, ist hier ein echter Knopf. Steht „im Test“ oder „in Prüfung“ dabei, ist die Fassung beim jeweiligen Store noch nicht öffentlich — der Knopf wird freigeschaltet, sobald es so weit ist.",
     pruefungKurz: "in Prüfung",
-    pruefungLang: "Die Store-Fassungen liegen bei Apple und Google zur Prüfung. Bis sie freigeschaltet sind, führt der Knopf noch auf eine Fehlerseite — im Browser läuft die App schon jetzt vollständig.",
+    // ENTFERNT 12.08.2026 (Falk-Entscheid): "Im Browser spielen/testen" ist auf ALLEN Seiten raus.
+    // Nicht wieder einbauen — die Apps zeigen nur Android · Apple · eigene Webseite.
+    // pruefungLang: "Die Store-Fassungen liegen bei Apple und Google zur Prüfung. Bis sie freigeschaltet sind, führt der Knopf noch auf eine Fehlerseite — im Browser läuft die App schon jetzt vollständig.",
     inPruefung: "in Prüfung"
   },
 
@@ -846,12 +852,12 @@ de: {
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz."] },
       { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein"] },
-      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nie", "Nie"] },
+      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie"] },
       { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein"] },
-      { name: "Umfang",        werte: ["21 Ansichten", "23 Bildschirme", "1 Bildschirm"] },
+      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm"] },
       { name: "Sprachen",      werte: ["2", "2", "16"] },
       { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks"] },
-      { name: "Premium ab",    werte: ["0,99 € / 4 Wochen", "1,99 € / 4 Wochen", "0,49 € / 4 Wochen"] },
+      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen"] },
       { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
     fuss: "Alle Preise mit sieben Tagen kostenlosem Test."
@@ -1304,12 +1310,12 @@ en: {
     ],
 
     umfangTitel: "What's inside",
-    umfangText: "Four tabs, with a good deal more behind them than you'd first think: 21 views, 16 career figures, nine analysis blocks.",
+    umfangText: "Five tabs, with a good deal more behind them than you'd first think: 18 career figures and nine analysis blocks.",
     umfangZahlen: [
-      { zahl: "4", text: "main areas" },
-      { zahl: "21", text: "views" },
-      { zahl: "16", text: "career figures" },
-      { zahl: "5", text: "kinds of trophy" }
+      { zahl: "5", text: "main areas" },
+      { zahl: "13", text: "views" },
+      { zahl: "18", text: "career figures" },
+      { zahl: "4", text: "trophies to collect" }
     ],
     umfangListe: [
       { name: "Predicting", text: "Set your top five, up to eight hours before the start. Changeable any time before that." },
@@ -1319,7 +1325,7 @@ en: {
       { name: "Position chart", text: "A second chart — when the lead changed hands." },
       { name: "Track records", text: "Who scored the most points at which circuit." },
       { name: "All-time table", text: "Total points across every year, plus the best single season." },
-      { name: "Career profile", text: "16 figures, filterable by all-time, group or single season." },
+      { name: "Career profile", text: "18 figures, filterable by all-time, group or single season." },
       { name: "Group chat", text: "Reply, edit your own messages, pin the important ones." },
       { name: "Race calendar", text: "Every date with start times in German local time." },
       { name: "Several groups", text: "One profile, any number of prediction groups — you simply switch." },
@@ -1327,7 +1333,7 @@ en: {
       { name: "Weekend PDF", text: "A race weekend as a PDF: everyone's predictions side by side, the result, points and standings — ready to share." },
       { name: "Home-screen widgets", text: "The standings and the next race as Android widgets, right on your home screen." }
     ],
-    umfangAnzeigenTitel: "The 16 career figures",
+    umfangAnzeigenTitel: "The 18 career figures",
     umfangAnzeigen: [
       "Total points and points ratio",
       "Best and worst finishing position",
@@ -1340,9 +1346,9 @@ en: {
     ],
     umfangFilter: "All of it for one group, one season or your whole career.",
 
-    /* --- New in the app (version 1.176, from the source code) --- */
+    /* --- New in the app (version 1.181, from the source code) --- */
     neuTitel: "New in the app",
-    neuText: "What the latest updates brought — as of version 1.176.",
+    neuText: "What the latest updates brought — as of version 1.181.",
     neuListe: [
       { name: "Weekend PDF", text: "After every scored race weekend the app builds a PDF page: everyone's predictions side by side, the real result, the points and the standings — ready to share with the group." },
       { name: "Two home-screen widgets", text: "The standings (positions 1 to 10 with colour, points and trophies) and the next race with flag, location and start time — right on your Android home screen." },
@@ -1368,8 +1374,8 @@ en: {
       },
       {
         name: "Premium",
-        preis: "€0.99",
-        zeile: "per 4 weeks · €9.99 per year — App Store €1.99 / €14.99",
+        preis: "€1.99",
+        zeile: "per 4 weeks · €14.99 per year — same price in both stores",
         kann: ["The complete season with all charts", "Every earlier year (history)",
                "All-time table & track records", "Career statistics with 16 figures",
                "39 additional player colours", "Change name, colour & symbol"],
@@ -1395,7 +1401,7 @@ en: {
     ],
 
     trophaeenTitel: "The trophies and how to earn them",
-    trophaeenText: "Five awards, all of them purely down to how you predicted. None of them can be bought.",
+    trophaeenText: "Four trophies you collect race by race, plus the cup for your final position at the end of the season. All of it purely down to how you predicted — none of it can be bought.",
     trophaeen: [
       { zeichen: "💎", name: "Diamond",
         bedingung: "15 points in one race — all five drivers in exactly the right position. The perfect race." },
@@ -1485,7 +1491,7 @@ en: {
     ],
 
     mehrKnopf: "Everything about FaNiCa Fun",
-    mehrText: "The five trophies with their real conditions, how a race week runs, all 22 circuits, the 16 career figures, the new features and what Premium does.",
+    mehrText: "Every trophy with its real conditions, how a race week runs, all 22 circuits, the 18 career figures, the new features and what Premium does.",
     galerieTitel: "A look inside the app",
     rundeTitel: "What it actually looks like",
     rundeText: "This is not a demo round with made-up names. These are the real numbers from the group I built the app for in the first place — running since 2022, now in its fifth year.",
@@ -1525,7 +1531,7 @@ en: {
 
     bildProfil: "bilder/fanica/profil.webp",
     bildProfilAlt: "FaNiCa Fun: creating a profile — register once, play everywhere",
-    preis: "Predicting is free, permanently. Without Premium you see the current and the previous race. Premium opens up the archive: the full season, every earlier year, all-time tables, track records and your career statistics. €0.99 per four weeks or €9.99 per year on Google Play, €1.99 and €14.99 on the App Store — the first seven days are free everywhere.",
+    preis: "Predicting is free, permanently. Without Premium you see the current and the previous race. Premium opens up the archive: the full season, every earlier year, all-time tables, track records and your career statistics. €1.99 per four weeks or €14.99 per year — the same price in both stores, and the first seven days are free.",
     hinweis: "Ages 18 and up. No money is involved — but gambling can still be addictive. Help at check-dein-spiel.de.",
     hinweisLink: "https://www.check-dein-spiel.de",
     unabhaengig: "An independent fan app. No connection to the Formula One Group. Race results come from public data sources."
@@ -1702,7 +1708,9 @@ en: {
 
   aktion: {
     browser: "Try it in the browser",
-    browserSpielen: "Play in the browser",
+    // ENTFERNT 12.08.2026 (Falk-Entscheid): "Im Browser spielen/testen" ist auf ALLEN Seiten raus.
+    // Nicht wieder einbauen — die Apps zeigen nur Android · Apple · eigene Webseite.
+    // browserSpielen: "Play in the browser",
     browserFehlt: "Web version coming",
     browserAelter: "The web version shows the state before the rebuild — the store app is newer.",
     play: "On Google Play",
@@ -1727,7 +1735,9 @@ en: {
     standPruefung: "in review",
     bezugHinweis: "Every route that has been released is a real button here. Where it says “in testing” or “in review”, that version is not public on its store yet — the button goes live as soon as it is.",
     pruefungKurz: "in review",
-    pruefungLang: "The store versions are with Apple and Google for review. Until they are approved the button still leads to an error page — in the browser the app already runs in full.",
+    // ENTFERNT 12.08.2026 (Falk-Entscheid): "Im Browser spielen/testen" ist auf ALLEN Seiten raus.
+    // Nicht wieder einbauen — die Apps zeigen nur Android · Apple · eigene Webseite.
+    // pruefungLang: "The store versions are with Apple and Google for review. Until they are approved the button still leads to an error page — in the browser the app already runs in full.",
     inPruefung: "in review"
   },
 
@@ -1740,12 +1750,12 @@ en: {
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal."] },
       { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone"] },
-      { name: "Internet needed", werte: ["Only to sync", "Never", "Never"] },
+      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never"] },
       { name: "Profile needed", werte: ["Yes — created once", "No", "No"] },
-      { name: "Size",           werte: ["21 views", "23 screens", "1 screen"] },
+      { name: "Size",           werte: ["13 views", "23 screens", "1 screen"] },
       { name: "Languages",      werte: ["2", "2", "16"] },
       { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps"] },
-      { name: "Premium from",   werte: ["€0.99 / 4 weeks", "€1.99 / 4 weeks", "€0.49 / 4 weeks"] },
+      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks"] },
       { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
     fuss: "All prices with a seven-day free trial."
