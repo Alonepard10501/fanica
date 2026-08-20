@@ -1592,9 +1592,15 @@ h1.hero-text,
 /* Die Merkmal-Spalte links darf schmal bleiben, die drei App-Spalten
    teilen sich den Rest zu gleichen Teilen. */
 .vergleich thead th:first-child { width: 15rem; }
+/* 🔴 Seit 21.08.2026 FÜNF Produktspalten (Campus Clash + SetUpLeiste
+   kamen dazu). Breite und Farbe hängen an der SPALTENNUMMER — wer
+   umsortiert oder ergänzt, muss BEIDE Listen mitziehen (Merksatz aus
+   dem Skill: „Farbe hängt an der Spaltennummer, nicht am App-Namen"). */
 .vergleich thead th.app-1,
 .vergleich thead th.app-2,
-.vergleich thead th.app-3 { width: calc((100% - 15rem) / 3); }
+.vergleich thead th.app-3,
+.vergleich thead th.app-4,
+.vergleich thead th.app-5 { width: calc((100% - 15rem) / 5); }
 .vergleich th, .vergleich td {
   padding: .85rem 1rem; text-align: left;
   border-bottom: 1px solid rgba(255,255,255,.09);
@@ -1614,6 +1620,8 @@ h1.hero-text,
 .vergleich thead th.app-1 { color: var(--rot-hell); }
 .vergleich thead th.app-2 { color: var(--oliv-hell); }
 .vergleich thead th.app-3 { color: #7BFF5C; }
+.vergleich thead th.app-4 { color: #58B6F0; }   /* SetUpLeiste  */
+.vergleich thead th.app-5 { color: #FFB84D; }   /* Campus Clash */
 .vergleich tbody th {
   font-family: var(--schrift-text); font-weight: 600;
   font-size: .86rem; color: var(--grau);

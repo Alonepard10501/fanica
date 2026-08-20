@@ -998,20 +998,21 @@ de: {
   vergleich: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
-    text: "Drei Apps, drei völlig verschiedene Zwecke. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt"],
+    text: "Fünf Produkte, fünf völlig verschiedene Zwecke — vier fertig, eines in Arbeit. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto.",
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash"],
     zeilen: [
-      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz."] },
-      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein"] },
-      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie"] },
-      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein"] },
-      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm"] },
-      { name: "Sprachen",      werte: ["2", "2", "16"] },
-      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks"] },
-      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen"] },
-      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS"] }
+      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel"] },
+      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung"] },
+      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz"] },
+      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie"] },
+      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein"] },
+      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer"] },
+      { name: "Sprachen",      werte: ["2", "2", "16", "1", "1"] },
+      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen"] },
+      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen"] },
+      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS"] }
     ],
-    fuss: "Alle Preise mit sieben Tagen kostenlosem Test."
+    fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash steht noch nicht fest, ob und was etwas kosten wird."
   },
 
   fragen: {
@@ -2034,20 +2035,21 @@ en: {
   vergleich: {
     kennung: "At a glance",
     titel: "Which app is for you?",
-    text: "Three apps, three entirely different purposes. What they share: they work offline, they collect nothing about you, and they don't ask for an account.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt"],
+    text: "Five products, five entirely different purposes — four finished, one in progress. What they share: they work offline, they collect nothing about you, and they don't ask for an account.",
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash"],
     zeilen: [
-      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal."] },
-      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone"] },
-      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never"] },
-      { name: "Profile needed", werte: ["Yes — created once", "No", "No"] },
-      { name: "Size",           werte: ["13 views", "23 screens", "1 screen"] },
-      { name: "Languages",      werte: ["2", "2", "16"] },
-      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps"] },
-      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks"] },
-      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS"] }
+      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression"] },
+      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress"] },
+      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance"] },
+      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never"] },
+      { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No"] },
+      { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects"] },
+      { name: "Languages",      werte: ["2", "2", "16", "1", "1"] },
+      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet"] },
+      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet"] },
+      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS"] }
     ],
-    fuss: "All prices with a seven-day free trial."
+    fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash it is not yet decided whether anything will cost money."
   },
 
   fragen: {
