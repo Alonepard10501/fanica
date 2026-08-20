@@ -32,6 +32,7 @@
     <span class="kopf-hier" aria-current="page">Instinct Scoring</span>
     <a href="neonpunkt.html">NeonPunkt</a>
     <a href="setupleiste.html">SetUpLeiste</a>
+    <a href="campus-clash.html">Campus Clash</a>
   </nav>
  </div>
 </header>
@@ -41,6 +42,7 @@
 
     <div class="kapitelkopf">
       <p class="kennung">Instinct Scoring</p>
+      <p class="status-pille" data-t="instinct.statusPille"></p>
       <div class="logo-paar">
         <img class="kapitel-logo" src="bilder/marke/logo-instinct.webp"
              alt="Instinct Scoring — Logo" width="220" height="220">
@@ -78,6 +80,7 @@
     <!-- ---------- Funktionsumfang ---------- -->
     <section class="unter-block">
       <h2 data-t="instinct.umfangTitel">Was drinsteckt</h2>
+      <div class="zahlen" id="instinct-umfang-zahlen" style="margin-bottom:1.6rem"></div>
       <p class="leise" style="max-width:64ch" data-t="instinct.umfangText"></p>
       <div class="funktionen" id="instinct-umfang-liste"></div>
       <h3 style="margin-top:clamp(1.8rem,3.4vw,2.6rem)"
@@ -89,6 +92,20 @@
     <!-- ---------- Funktionsblöcke ---------- -->
     <section class="unter-block">
       <div id="instinct-bloecke"></div>
+    </section>
+
+    <!-- ---------- Zielscheibe (von der Startseite hierher gezogen,
+         Falk 20.08.: Hauptseite kurz und knapp) ---------- -->
+    <section class="unter-block">
+      <h2 data-t="instinct.scheibeTitel">Fünf Wertungssysteme, eine Scheibe</h2>
+      <p class="leise" style="max-width:60ch" data-t="instinct.scheibeText"></p>
+      <div class="scheibe-block">
+        <div class="scheibe-buehne" id="scheibe-buehne"></div>
+        <div>
+          <div id="scheibe-tafel"></div>
+          <p class="preis" style="margin-top:1.2rem" data-t="instinct.scheibeFussnote"></p>
+        </div>
+      </div>
     </section>
 
     <!-- ---------- Bogenarten (auf dem Handy klappbar) ---------- -->

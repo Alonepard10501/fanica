@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FaNiCa — Apps und Werkzeuge aus einem Ein-Mann-Studio in Nordfriesland</title>
-<meta name="description" content="Vier fertige Produkte aus einem Ein-Mann-Medienstudio: FaNiCa Fun als private Tipprunde, Instinct Scoring für Bogensport, NeonPunkt als minimalistischstes Spiel der Welt und die SetUpLeiste für den Windows-Bildschirmrand.">
+<meta name="description" content="Vier fertige Produkte und ein fünftes in Arbeit — aus einem Ein-Mann-Medienstudio: FaNiCa Fun (Tipprunde), Instinct Scoring (Bogensport), NeonPunkt (Klick-Spiel), die SetUpLeiste für Windows und Campus Clash in Bearbeitung.">
 <meta name="author" content="FaNiCa">
 <meta name="theme-color" content="#07070A">
 <meta name="color-scheme" content="dark">
@@ -77,7 +77,7 @@
   <h1 class="gross hero-text" data-t="hero.text"></h1>
 
   <!-- Die drei Apps als anklickbare Symbole -->
-  <div class="app-reihe" aria-label="Die drei Apps">
+  <div class="app-reihe" aria-label="Die Produkte">
     <a class="app-kachel" href="#fanica" style="--af:#FF4257">
       <img src="bilder/marke/app-fanica.webp" alt="" width="72" height="72" loading="lazy">
       <b>FaNiCa Fun</b>
@@ -100,6 +100,12 @@
       <b>SetUpLeiste</b>
       <span data-t="hero.appSetup">PC-Anzeige</span>
     </a>
+    <!-- In Bearbeitung: noch kein App-Symbol — Zeichen statt Platzhalter. -->
+    <a class="app-kachel" href="#campus" style="--af:#FFB84D">
+      <span class="kachel-zeichen" aria-hidden="true">🎒</span>
+      <b>Campus Clash</b>
+      <span data-t="hero.appCampus">In Bearbeitung</span>
+    </a>
   </div>
 
   <div class="scrollhinweis" aria-hidden="true"><span data-t="hero.scrollHinweis">Scrollen</span></div>
@@ -107,7 +113,7 @@
 
 
 <!-- ================================ KAPITEL 1 — FANICA FUN -->
-<section class="abschnitt" id="fanica" data-kapitel="fanica">
+<section class="abschnitt" id="fanica" data-kapitel="fanica" data-nr="01">
   <div class="licht licht-spuren" aria-hidden="true"><span></span><span></span></div>
   <div class="spuren" aria-hidden="true"></div>
 
@@ -115,6 +121,7 @@
 
     <div class="kapitelkopf auf">
       <p class="kennung" data-t="fanica.kennung">Kapitel 01</p>
+      <p class="status-pille" data-t="fanica.statusPille"></p>
       <img class="kapitel-logo" src="bilder/marke/logo-fanica.webp"
            alt="FaNiCa Fun — Logo" width="380" height="204" loading="lazy">
       <h2 data-t="fanica.name">FaNiCa Fun</h2>
@@ -128,10 +135,8 @@
           <span class="leise" data-t="fanica.claimZwei"></span>
         </h3>
         <p class="gross" data-t="fanica.positionierung"></p>
-        <div class="karte" style="margin-top:1.6rem">
-          <h4 data-t="fanica.kernTitel">Der Kniff</h4>
-          <p data-t="fanica.kernText"></p>
-        </div>
+        <!-- Der Kniff + Punkteregeln stehen seit 20.08. auf der
+             Unterseite (Falk: Hauptseite kurz und knapp halten). -->
       </div>
       <div class="block-bild">
         <div class="handy" data-neigen>
@@ -149,13 +154,6 @@
          da ist — die Seite sieht dann trotzdem vollständig aus. -->
     <div id="naechstes-rennen" class="auf live-feld"></div>
 
-    <!-- Punkte kurz + Zahlen -->
-    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
-      <h3 data-t="fanica.punkteTitel">So werden Punkte vergeben</h3>
-      <div class="regeln" id="fanica-regeln"></div>
-      <div class="zahlen" id="fanica-umfang-zahlen" style="margin-top:2rem"></div>
-    </div>
-
     <!-- Die Bildergalerie steht auf der Unterseite fanica-fun.html —
          die Startseite bleibt bewusst kompakt (Falk 31.07.: "weniger
          auf die ganze seite packen, mehr kompakt"). -->
@@ -164,7 +162,7 @@
     <div class="auf weiterlesen">
       <a class="nbtn b-ripple" href="fanica-fun.html">
         <span data-t="fanica.mehrKnopf">Alles über FaNiCa Fun</span></a>
-      <a class="nbtn b-scratch" href="https://alonepard10501.github.io/fanica-fun/"
+      <a class="nbtn b-kante" href="https://alonepard10501.github.io/fanica-fun/"
          target="_blank" rel="noopener">
         <span data-t="aktion.zurWebseite">Zur App-Webseite ↗</span></a>
       <p class="weiter-hinweis" data-t="fanica.mehrText"></p>
@@ -186,13 +184,14 @@
 
 
 <!-- ================================ KAPITEL 2 — INSTINCT SCORING -->
-<section class="abschnitt" id="instinct" data-kapitel="instinct">
+<section class="abschnitt" id="instinct" data-kapitel="instinct" data-nr="02">
   <div class="licht licht-wald" aria-hidden="true"><span></span><span></span></div>
 
   <div class="huelle">
 
     <div class="kapitelkopf auf">
       <p class="kennung" data-t="instinct.kennung">Kapitel 02</p>
+      <p class="status-pille" data-t="instinct.statusPille"></p>
       <!-- Eigenes App-Logo, daneben das Kooperationslogo -->
       <div class="logo-paar">
         <img class="kapitel-logo" src="bilder/marke/logo-instinct.webp"
@@ -226,29 +225,14 @@
       </div>
     </div>
 
-    <!-- Zahlen -->
-    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
-      <div class="zahlen" id="instinct-umfang-zahlen"></div>
-    </div>
-
-    <!-- Zielscheibe: auf dem Handy klappbar -->
-    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
-      <h3 data-t="instinct.scheibeTitel">Fünf Wertungssysteme, eine Scheibe</h3>
-      <p class="leise" style="max-width:60ch" data-t="instinct.scheibeText"></p>
-      <div class="scheibe-block">
-        <div class="scheibe-buehne" id="scheibe-buehne"></div>
-        <div>
-          <div id="scheibe-tafel"></div>
-          <p class="preis" style="margin-top:1.2rem" data-t="instinct.scheibeFussnote"></p>
-        </div>
-      </div>
-    </div>
+    <!-- Zahlen + Zielscheibe stehen seit 20.08. auf der Unterseite
+         (Falk: Hauptseite kurz und knapp halten). -->
 
     <!-- Weiterlesen -->
     <div class="auf weiterlesen">
       <a class="nbtn b-grass" href="instinct-scoring.html">
         <span data-t="instinct.mehrKnopf">Alles über Instinct Scoring</span></a>
-      <a class="nbtn b-scratch" href="https://alonepard10501.github.io/instinct-scoring-web/"
+      <a class="nbtn b-kante" href="https://alonepard10501.github.io/instinct-scoring-web/"
          target="_blank" rel="noopener">
         <span data-t="aktion.zurWebseite">Zur App-Webseite ↗</span></a>
       <p class="weiter-hinweis" data-t="instinct.mehrText"></p>
@@ -266,13 +250,14 @@
 
 
 <!-- ================================ KAPITEL 3 — NEONPUNKT -->
-<section class="abschnitt" id="neonpunkt" data-kapitel="neonpunkt">
+<section class="abschnitt" id="neonpunkt" data-kapitel="neonpunkt" data-nr="03">
   <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
 
   <div class="huelle">
 
     <div class="kapitelkopf mitte auf">
       <p class="kennung zentriert" data-t="neonpunkt.kennung">Kapitel 03</p>
+      <p class="status-pille" data-t="neonpunkt.statusPille"></p>
       <img class="kapitel-logo kapitel-logo-klein" src="bilder/marke/app-neonpunkt.webp"
            alt="NeonPunkt — App-Symbol" width="150" height="150" loading="lazy">
       <h2 data-t="neonpunkt.name">NeonPunkt</h2>
@@ -314,14 +299,13 @@
       </div>
     </div>
 
-    <!-- Zahlen -->
-    <div class="zahlen auf" id="neonpunkt-zahlen" style="margin-top:clamp(2rem,4vw,3rem)"></div>
+    <!-- Zahlen stehen seit 20.08. auf der Unterseite (Falk: kurz und knapp). -->
 
     <!-- Weiterlesen -->
     <div class="auf weiterlesen">
       <a class="nbtn b-helix" href="neonpunkt.html">
         <span data-t="neonpunkt.mehrKnopf">Alles über NeonPunkt</span></a>
-      <a class="nbtn b-scratch" href="https://alonepard10501.github.io/fanica-fun/neonpunkt-info/"
+      <a class="nbtn b-kante" href="https://alonepard10501.github.io/fanica-fun/neonpunkt-info/"
          target="_blank" rel="noopener">
         <span data-t="aktion.zurWebseite">Zur App-Webseite ↗</span></a>
       <p class="weiter-hinweis" data-t="neonpunkt.mehrText"></p>
@@ -342,13 +326,14 @@
 <!-- ================================ KAPITEL 04 — SETUPLEISTE
      Das vierte Produkt und das einzige Windows-Programm. Bewusst
      kompakt: die Einzelheiten stehen auf setupleiste.html. -->
-<section class="abschnitt" id="setupleiste" data-kapitel="setupleiste">
+<section class="abschnitt" id="setupleiste" data-kapitel="setupleiste" data-nr="04">
   <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
 
   <div class="huelle">
 
     <div class="kapitelkopf mitte auf">
       <p class="kennung zentriert" data-t="setupleiste.kennung">Kapitel 04</p>
+      <p class="status-pille" data-t="setupleiste.statusPille"></p>
       <h2 data-t="setupleiste.name">SetUpLeiste</h2>
       <p class="kooperationszeile" data-t="setupleiste.untertitel"></p>
     </div>
@@ -361,15 +346,7 @@
       <p class="gross" data-t="setupleiste.positionierung"></p>
     </div>
 
-    <!-- Zahlen -->
-    <div class="zahlen auf" id="setupleiste-umfang-zahlen"
-         style="margin-top:clamp(2.4rem,5vw,3.4rem)"></div>
-
-    <!-- Der Kniff -->
-    <div class="huelle-schmal mittig auf" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
-      <h3 data-t="setupleiste.kernTitel">Der Unterschied</h3>
-      <p class="gross" data-t="setupleiste.kernText"></p>
-    </div>
+    <!-- Zahlen + Der Unterschied stehen seit 20.08. auf der Unterseite. -->
 
     <!-- Weiterlesen -->
     <div class="auf weiterlesen">
@@ -387,6 +364,44 @@
 
   </div>
 </section>
+
+<!-- ================================ KAPITEL 05 — CAMPUS CLASH
+     IN BEARBEITUNG: spielbar gebaut, aber noch kein Store-Eintrag und
+     keine Bezahlfunktion — deshalb bewusst OHNE Bezugs-Leiste und
+     OHNE Preisangabe. Details auf campus-clash.html. -->
+<section class="abschnitt" id="campus" data-kapitel="campus" data-nr="05">
+  <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
+
+  <div class="huelle">
+
+    <div class="kapitelkopf mitte auf">
+      <p class="kennung zentriert" data-t="campus.kennung">Kapitel 05 · In Bearbeitung</p>
+      <p class="status-pille" data-t="campus.statusPille"></p>
+      <h2 data-t="campus.name">Campus Clash</h2>
+      <p class="kooperationszeile" data-t="campus.untertitel"></p>
+    </div>
+
+    <div class="huelle-schmal mittig auf">
+      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
+        <span data-t="campus.claim">Deine Schulzeit läuft weiter.</span><br>
+        <span class="leise" data-t="campus.claimZwei"></span>
+      </h3>
+      <p class="gross" data-t="campus.positionierung"></p>
+      <p class="preis" data-t="campus.inArbeit"></p>
+    </div>
+
+    <!-- Zahlen + Der Kniff stehen auf der Unterseite (kurz und knapp). -->
+
+    <!-- Weiterlesen -->
+    <div class="auf weiterlesen">
+      <a class="nbtn b-heat" href="campus-clash.html">
+        <span data-t="campus.mehrKnopf">Alles über Campus Clash</span></a>
+      <p class="weiter-hinweis" data-t="campus.mehrText"></p>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- ================================ VERGLEICH & FRAGEN -->
 <section class="abschnitt" id="vergleich" data-kapitel="vergleich">

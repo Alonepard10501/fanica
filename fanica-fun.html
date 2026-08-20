@@ -32,6 +32,7 @@
     <a href="instinct-scoring.html">Instinct Scoring</a>
     <a href="neonpunkt.html">NeonPunkt</a>
     <a href="setupleiste.html">SetUpLeiste</a>
+    <a href="campus-clash.html">Campus Clash</a>
   </nav>
  </div>
 </header>
@@ -41,6 +42,7 @@
 
     <div class="kapitelkopf">
       <p class="kennung">FaNiCa Fun</p>
+      <p class="status-pille" data-t="fanica.statusPille"></p>
       <img class="kapitel-logo" src="bilder/marke/logo-fanica.webp"
            alt="FaNiCa Fun — Logo" width="340" height="182">
       <h1>Die Tipprunde für Motorsport-Freunde</h1>
@@ -50,8 +52,22 @@
 
     <p class="gross" style="max-width:64ch" data-t="fanica.positionierung"></p>
 
+    <!-- Der Kniff — von der Startseite hierher gezogen (Falk 20.08.:
+         Hauptseite kurz und knapp, Informationsblöcke auf die Unterseite) -->
+    <div class="karte" style="max-width:64ch; margin-top:1.6rem">
+      <h4 data-t="fanica.kernTitel">Der Kniff</h4>
+      <p data-t="fanica.kernText"></p>
+    </div>
+
     <!-- Nächstes Rennen — von live.js automatisch geladen (siehe live.js) -->
     <div id="naechstes-rennen" class="live-feld"></div>
+
+    <!-- ---------- Punkte (von der Startseite hierher gezogen) ---------- -->
+    <section class="unter-block">
+      <h2 data-t="fanica.punkteTitel">So werden Punkte vergeben</h2>
+      <div class="regeln" id="fanica-regeln"></div>
+      <div class="zahlen" id="fanica-umfang-zahlen" style="margin-top:2rem"></div>
+    </section>
 
     <!-- ---------- Ablauf einer Renn-Woche ---------- -->
     <section class="unter-block">

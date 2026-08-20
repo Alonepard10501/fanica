@@ -39,12 +39,14 @@ de: {
     appInstinct: "Bogensport",
     appNeon: "Klick-Spiel",
     appSetup: "PC-Anzeige",
+    appCampus: "In Bearbeitung",
     scrollHinweis: "Scrollen"
   },
 
   /* ====================== KAPITEL 1 — INSTINCT SCORING ================ */
   instinct: {
     kennung: "Kapitel 02",
+    statusPille: "Im App Store · bei Play im Test",
     kooperation: "by Bogensport Instinct · in Kooperation mit FaNiCa Fun",
     name: "Instinct Scoring",
     claim: ["TRACK.", "SCORE.", "IMPROVE."],
@@ -360,6 +362,7 @@ de: {
   /* ====================== KAPITEL 2 — FANICA FUN ====================== */
   fanica: {
     kennung: "Kapitel 01",
+    statusPille: "Live bei Google Play & im App Store",
     name: "FaNiCa Fun",
     untertitel: "Die Tipprunde für Motorsport-Freunde",
     claim: "Tippe die ersten Fünf.",
@@ -615,6 +618,7 @@ de: {
   /* ====================== KAPITEL 3 — NEONPUNKT ======================= */
   neonpunkt: {
     kennung: "Kapitel 03",
+    statusPille: "Im Store-Test",
     name: "NeonPunkt",
     untertitel: "Das minimalistischste Spiel der Welt",
     claim: "Ein Punkt. 48 Stunden.",
@@ -775,6 +779,7 @@ de: {
      Version + Herausgeber aus installer.iss. ============================ */
   setupleiste: {
     kennung: "Kapitel 04",
+    statusPille: "Fertig · Gratis-Download für Windows",
     name: "SetUpLeiste",
     untertitel: "Die Leistungsanzeige für den Bildschirmrand",
     claim: "Was dein Rechner gerade tut.",
@@ -847,6 +852,66 @@ de: {
     mehrKnopf: "Alles über die SetUpLeiste",
     mehrText: "Alle Messwerte im Einzelnen, die drei Knöpfe, wie die Bestwerte funktionieren, was gemessen und was gerechnet ist — und wo die Daten liegen.",
     hinweis: "Ein Werkzeug für den eigenen Rechner, kein Verkaufsprodukt. Gebaut, weil ich beim Rendern und Bauen wissen wollte, was die Maschine gerade macht."
+  },
+
+  /* ============ KAPITEL 5 — CAMPUS CLASH (IN BEARBEITUNG) ============
+     Alle Zahlen aus dem Projekt (docs/01_PRODUCT.md, 02_FEATURES.md,
+     15_CURRENT_STATUS.md, skill_catalog.dart 40 Fächer, allianz_rolle.dart
+     4 Rollen/13 Rechte). 🔴 KEIN Preis nennen — es existiert noch keine
+     Bezahlfunktion (nur beschrifteter Testmodus). ===================== */
+  campus: {
+    kennung: "Kapitel 05 · In Bearbeitung",
+    statusPille: "In Bearbeitung — spielbar gebaut",
+    name: "Campus Clash",
+    untertitel: "Das endlose Schulspiel",
+    claim: "Deine Schulzeit läuft weiter.",
+    claimZwei: "Auch wenn du das Handy weglegst.",
+    positionierung: "Ein endloses Schul-Aufstiegsspiel: Du entwickelst einen Schüler über Jahre — lernst Fächer, verdienst mit Jobs Geld, steigst Klasse um Klasse auf. Trainiert wird mit echter Zeit, und das Training läuft weiter, wenn die App geschlossen ist. Komplett offline, ohne Konto und ohne Server.",
+    inArbeit: "🚧 In Bearbeitung: Die App ist spielbar gebaut und wird gerade geprüft. Es gibt noch keinen Store-Eintrag — und nichts zu kaufen.",
+
+    kernTitel: "Der Kniff",
+    kernText: "Es gibt keine Obergrenze: Klassen, Fächer-Stufen und Allianz-Level sind endlos. Jede Klasse kostet mehr Einsatz als die vorige — Klasse 2 hast du nach ein paar Minuten, Klasse 10 kostet einen halben Tag Training. Und nichts davon lässt sich kaufen.",
+
+    umfangTitel: "Was drinsteckt",
+    umfangText: "Acht Bereiche greifen ineinander: Was du lernst, macht dich stärker — was du verdienst, steckst du in Ausrüstung oder deine Allianz.",
+    umfangZahlen: [
+      { zahl: "8", text: "Bereiche" },
+      { zahl: "40", text: "Schulfächer" },
+      { zahl: "33", text: "Markt-Gegenstände" },
+      { zahl: "13", text: "Allianz-Rechte" }
+    ],
+    umfangListe: [
+      { name: "Campus", text: "Die Übersicht: dein Schüler, laufendes Training, laufende Jobs — alles auf einen Blick." },
+      { name: "Lernen", text: "Bis zu drei Fächer gleichzeitig trainieren, abholen, Level steigt. Mit echter Zeit — auch bei geschlossener App." },
+      { name: "Jobs", text: "Geld verdienen neben der Schule. Jobs kehren alle vier Klassen in einer höheren Stufe zurück — mehr Lohn, mehr Erfahrung." },
+      { name: "Umgebung", text: "Freunde treffen, Taschengeld kassieren und im Wissensduell gegeneinander antreten." },
+      { name: "Allianz", text: "Ab Klasse 5: gemeinsame Kasse, drei Ausbaupfade, vier Rollen mit dreizehn einzeln vergebbaren Rechten." },
+      { name: "Schule", text: "Klassensprecher werden und das Lerntempo der ganzen Klasse um zehn Prozent heben." },
+      { name: "Markt", text: "33 Gegenstände bis Klasse 25 kaufen, anlegen, ablegen — jedes Teil verändert deine Werte." },
+      { name: "Profil & Postfach", text: "Alle Werte, Fächer und Statistiken — dazu das Postfach mit den Nachrichten des Spiels." }
+    ],
+
+    besondersTitel: "Was es besonders macht",
+    besonders: [
+      { name: "Echte Zeit statt Countdown-Tricks", text: "Training und Jobs rechnen mit der Uhr, nicht mit der offenen App. Handy weglegen, später abholen — der Fortschritt ist da, sogar nach einem Geräteneustart." },
+      { name: "Endlos nach oben", text: "Klassen, Fächer-Stufen und Allianz-Level haben keine Decke. Jede Klasse kostet das 1,24-fache der vorigen — der Aufstieg bleibt immer spürbar." },
+      { name: "40 Fächer, 7 Fähigkeiten", text: "Sechs Fächer zum Start, danach schaltet jede Klasse ein weiteres frei. Alles zahlt auf sieben Fähigkeiten ein — von Sprache bis Technik." },
+      { name: "Freundescode ohne Server", text: "Dein Code trägt deine ganze Visitenkarte: Name, Klasse, Stärke. Freunde verbinden sich direkt — ohne Konto, ohne Server, mit Prüfsumme." },
+      { name: "Allianz mit echten Rollen", text: "Anführer, Stellvertreter, Offizier, Mitglied — dreizehn Rechte einzeln vergebbar. Die Allianz-Stärke kommt nur aus den Mitgliedern, nie aus Geld." },
+      { name: "Fair bleibt fair", text: "Kein Pay-to-Win, keine Werbung, kein Konto. Alles bleibt auf deinem Gerät." }
+    ],
+
+    statusTitel: "Ehrlicher Stand",
+    statusText: "Alle 41 geplanten Funktionen sind gebaut, 497 automatische Prüfungen laufen grün. Was noch fehlt, bevor es in die Stores geht:",
+    offenListe: [
+      "Die Abnahme auf echten Geräten — ein grüner Bau beweist noch kein gutes Spielgefühl",
+      "Der Online-Teil für Allianzen über mehrere Geräte (die Naht dafür ist fertig)",
+      "Store-Eintrag, Signatur und die Entscheidung, ob und was etwas kosten wird"
+    ],
+
+    mehrKnopf: "Alles über Campus Clash",
+    mehrText: "Die acht Bereiche im Einzelnen, das Endlos-System, die Allianz-Rollen, der Freundescode — und was bis zur Veröffentlichung noch passiert.",
+    hinweis: "Campus Clash ist in Entwicklung. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
 
   /* ============ LIVE — automatisch geladene Renndaten ============ */
@@ -1072,12 +1137,14 @@ en: {
     appInstinct: "Archery",
     appNeon: "Tap game",
     appSetup: "PC monitor",
+    appCampus: "In progress",
     scrollHinweis: "Scroll"
   },
 
   /* ====================== CHAPTER 1 — INSTINCT SCORING ================ */
   instinct: {
     kennung: "Chapter 02",
+    statusPille: "On the App Store · Play in testing",
     kooperation: "by Bogensport Instinct · in cooperation with FaNiCa Fun",
     name: "Instinct Scoring",
     claim: ["TRACK.", "SCORE.", "IMPROVE."],
@@ -1379,6 +1446,7 @@ en: {
   /* ====================== CHAPTER 2 — FANICA FUN ====================== */
   fanica: {
     kennung: "Chapter 01",
+    statusPille: "Live on Google Play & the App Store",
     name: "FaNiCa Fun",
     untertitel: "The prediction game for motorsport friends",
     claim: "Predict the top five.",
@@ -1627,6 +1695,7 @@ en: {
   /* ====================== CHAPTER 3 — NEONPUNKT ======================= */
   neonpunkt: {
     kennung: "Chapter 03",
+    statusPille: "In store testing",
     name: "NeonPunkt",
     untertitel: "The world's most minimal game",
     claim: "One dot. 48 hours.",
@@ -1782,6 +1851,7 @@ en: {
   /* ============ CHAPTER 4 — SETUPLEISTE (Windows program) ============ */
   setupleiste: {
     kennung: "Chapter 04",
+    statusPille: "Done · free Windows download",
     name: "SetUpLeiste",
     untertitel: "The performance bar for your screen edge",
     claim: "What your machine is doing.",
@@ -1849,6 +1919,62 @@ en: {
     mehrKnopf: "Everything about SetUpLeiste",
     mehrText: "Every reading in detail, the three buttons, how the best values work, what is measured and what is calculated — and where the data lives.",
     hinweis: "A tool for my own machine, not a product for sale. Built because I wanted to know what the thing was doing while rendering and building."
+  },
+
+  /* ============ CHAPTER 5 — CAMPUS CLASH (IN PROGRESS) ============ */
+  campus: {
+    kennung: "Chapter 05 · In progress",
+    statusPille: "In progress — built and playable",
+    name: "Campus Clash",
+    untertitel: "The endless school game",
+    claim: "Your school days keep running.",
+    claimZwei: "Even when you put the phone down.",
+    positionierung: "An endless school progression game: you develop a student over the years — learning subjects, earning money with jobs, climbing grade by grade. Training runs on real time and keeps going while the app is closed. Fully offline, no account, no server.",
+    inArbeit: "🚧 In progress: the app is built and playable, and currently being tested. There is no store listing yet — and nothing to buy.",
+
+    kernTitel: "The trick",
+    kernText: "There is no ceiling: grades, subject tiers and alliance levels are endless. Every grade costs more effort than the one before — grade 2 takes minutes, grade 10 costs half a day of training. And none of it can be bought.",
+
+    umfangTitel: "What's inside",
+    umfangText: "Eight areas interlock: what you learn makes you stronger — what you earn goes into gear or your alliance.",
+    umfangZahlen: [
+      { zahl: "8", text: "areas" },
+      { zahl: "40", text: "school subjects" },
+      { zahl: "33", text: "market items" },
+      { zahl: "13", text: "alliance permissions" }
+    ],
+    umfangListe: [
+      { name: "Campus", text: "The overview: your student, running training, running jobs — everything at a glance." },
+      { name: "Learning", text: "Train up to three subjects at once, collect, level up. On real time — even with the app closed." },
+      { name: "Jobs", text: "Earn money alongside school. Jobs return every four grades at a higher tier — more pay, more experience." },
+      { name: "Surroundings", text: "Meet friends, collect pocket money and face each other in the knowledge duel." },
+      { name: "Alliance", text: "From grade 5: a shared treasury, three upgrade paths, four roles with thirteen individually assignable permissions." },
+      { name: "School", text: "Become class representative and lift the whole class's learning speed by ten percent." },
+      { name: "Market", text: "Buy, equip and unequip 33 items up to grade 25 — every piece changes your stats." },
+      { name: "Profile & inbox", text: "All stats, subjects and statistics — plus the inbox with the game's messages." }
+    ],
+
+    besondersTitel: "What makes it special",
+    besonders: [
+      { name: "Real time, no countdown tricks", text: "Training and jobs run on the clock, not on the open app. Put the phone away, collect later — the progress is there, even after a device restart." },
+      { name: "Endless upwards", text: "Grades, subject tiers and alliance levels have no cap. Each grade costs 1.24 times the one before — the climb always stays noticeable." },
+      { name: "40 subjects, 7 abilities", text: "Six subjects to start, then every grade unlocks another. Everything feeds seven abilities — from language to engineering." },
+      { name: "Friend code without a server", text: "Your code carries your whole card: name, grade, strength. Friends connect directly — no account, no server, with a checksum." },
+      { name: "An alliance with real roles", text: "Leader, deputy, officer, member — thirteen permissions assignable one by one. Alliance strength comes only from its members, never from money." },
+      { name: "Fair stays fair", text: "No pay-to-win, no ads, no account. Everything stays on your device." }
+    ],
+
+    statusTitel: "Honest status",
+    statusText: "All 41 planned features are built, 497 automated checks run green. What's still missing before the stores:",
+    offenListe: [
+      "Sign-off on real devices — a green build proves nothing about how it feels to play",
+      "The online part for alliances across several devices (the seam for it is ready)",
+      "Store listing, signing, and the decision whether and what anything will cost"
+    ],
+
+    mehrKnopf: "Everything about Campus Clash",
+    mehrText: "The eight areas in detail, the endless system, the alliance roles, the friend code — and what happens before release.",
+    hinweis: "Campus Clash is under development. All details describe the current build state and may change before release."
   },
 
   /* ============ LIVE — automatically loaded race data ============ */

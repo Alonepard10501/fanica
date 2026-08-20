@@ -178,6 +178,12 @@ p:last-child { margin-bottom: 0; }
   --akzent: #2E88C7;
   --akzent-hell: #58B6F0;
 }
+/* Campus Clash = fuenftes Projekt, IN BEARBEITUNG. Bernstein/Gold —
+   Schulhof-Energie, kollidiert mit keiner der vier anderen Farben. */
+[data-kapitel="campus"] {
+  --akzent: #E8961E;
+  --akzent-hell: #FFB84D;
+}
 [data-kapitel="fanica"],
 [data-kapitel="intro"],
 [data-kapitel="ueber"],
@@ -481,6 +487,8 @@ p:last-child { margin-bottom: 0; }
   .kopf-nav a[href$="fanica-fun.html"],
   .kopf-nav a[href$="instinct-scoring.html"],
   .kopf-nav a[href$="neonpunkt.html"],
+  .kopf-nav a[href$="setupleiste.html"],
+  .kopf-nav a[href$="campus-clash.html"],
   .kopf-hier { display: none; }
 }
 @media (max-width: 400px) {
@@ -2212,6 +2220,70 @@ h1.hero-text,
 .nbtn.b-lantern:hover::before { width: 300px; height: 300px; }
 .nbtn.b-lantern:hover { box-shadow: 0 0 26px -6px #ffca4a; }
 
+/* ---- 7. Effekt: „Kanten-Licht" (Baustein 7 der Sammlung) ----
+   Quelle: Uiverse.io von milegelu (MIT), von Falk geliefert 02.08.2026,
+   akzentgetönt statt fester Farbe. BEDEUTUNG: der Weg HINAUS auf eine
+   eigene Produkt-Webseite („Zur App-Webseite ↗") — damit bleibt
+   b-scratch exklusiv den Zurück-Knöpfen. Färbt sich über die
+   Kapitel-Variable --akzent von selbst je Produkt. */
+.nbtn.b-kante {
+  background: linear-gradient(140deg,
+    color-mix(in srgb, var(--akzent) 55%, #0A0C10) 10%,
+    color-mix(in srgb, var(--akzent) 22%, #0A0C10) 100%);
+  box-shadow: inset 0.4px 1px 4px rgba(255,255,255,.42);
+  transition: transform .16s cubic-bezier(.22,.61,.36,1),
+              box-shadow .16s ease, letter-spacing .16s ease,
+              color .3s;
+}
+.nbtn.b-kante:hover {
+  transform: scale(1.06);
+  box-shadow: inset 0.4px 1px 4px rgba(255,255,255,.85),
+              2px 6px 14px rgba(0,0,0,.4),
+              0 0 22px -8px color-mix(in srgb, var(--akzent-hell) 80%, transparent);
+}
+.nbtn.b-kante:hover span {
+  text-shadow: 0 0 10px color-mix(in srgb, var(--akzent-hell) 75%, transparent);
+}
+.nbtn.b-kante:active { letter-spacing: .08em; transform: scale(1); }
+
+/* ---- Status-Pille je Kapitel (statisch — die Seite bleibt ruhig) ----
+   Zeigt unter der Kapitel-Kennung den ehrlichen Stand des Produkts:
+   live / im Test / Download / in Bearbeitung. Neon-Hausstil: dunkler
+   Grund, Akzent-Rand, weicher Glow — OHNE Animation. */
+.status-pille {
+  display: inline-flex; align-items: center; gap: .5rem;
+  margin-top: .9rem; padding: .4rem .95rem;
+  border: 1px solid color-mix(in srgb, var(--akzent) 55%, transparent);
+  border-radius: 999px;
+  font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+  font-weight: 700; color: var(--akzent-hell);
+  background: color-mix(in srgb, var(--akzent) 10%, transparent);
+  box-shadow: 0 0 18px -6px color-mix(in srgb, var(--akzent) 70%, transparent);
+}
+.status-pille::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--akzent-hell);
+  box-shadow: 0 0 8px var(--akzent-hell);
+}
+
+/* ---- Geister-Kapitelnummer (statisch) ----
+   Riesige Umriss-Ziffer je Kapitel — Editorial-Look im Neon-Hausstil,
+   kostet nichts (kein Bild, keine Animation). `overflow-x: clip`
+   verhindert, dass die Ziffer auf schmalen Schirmen Querscrollen
+   erzeugt; die Inhalte liegen über ihr (z-index). */
+.abschnitt[data-nr] { position: relative; overflow-x: clip; }
+.abschnitt[data-nr] > .huelle { position: relative; z-index: 1; }
+.abschnitt[data-nr]::before {
+  content: attr(data-nr);
+  position: absolute; top: clamp(.6rem, 3vw, 2.4rem); right: clamp(.4rem, 3vw, 3rem);
+  font-family: var(--schrift-kopf); font-weight: 900; line-height: 1;
+  font-size: clamp(5.5rem, 17vw, 14rem);
+  color: transparent;
+  -webkit-text-stroke: 2px color-mix(in srgb, var(--akzent) 30%, transparent);
+  opacity: .55;
+  pointer-events: none; user-select: none; z-index: 0;
+}
+
 /* 6 · HELIX — DNA-Doppelhelix in VIOLETT-BLAU (Falks Vorgabe;
    vorher war der Knopf gruen). Zwei gegenlaeufige Schimmer-Baender
    ergeben die verdrehten Straenge. */
@@ -2245,11 +2317,18 @@ h1.hero-text,
 }
 
 /* ---- App-Kacheln im Hero: die drei Apps zum Anklicken ---- */
+/* 🔴 Seit 20.08.2026 FÜNF Produkte. Bei drei festen Spalten brach die
+   Reihe 3+2 um und der Scroll-Hinweis lag hinter der letzten Kachel.
+   Jetzt: eine Reihe zu fünft (breit), zu dritt ab 900px, zu zweit auf
+   dem Handy — und unten genug Luft für den Hinweis. */
 .app-reihe {
   display: grid; gap: clamp(.8rem, 2.2vw, 1.6rem);
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 760px; margin: clamp(2.4rem, 6vh, 4rem) auto 0;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1080px;
+  margin: clamp(2.4rem, 6vh, 4rem) auto clamp(3.4rem, 8vh, 5rem);
 }
+@media (max-width: 900px) { .app-reihe { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .app-reihe { grid-template-columns: repeat(2, 1fr); } }
 .app-kachel {
   display: flex; flex-direction: column; align-items: center; gap: .55rem;
   padding: clamp(1rem, 2.4vw, 1.5rem) .8rem;
@@ -2517,7 +2596,8 @@ body { line-height: 1.72; letter-spacing: .005em; }
   /* Die uebrigen Dauer-Schleifen anhalten: das „Atmen" des NeonPunkt-
      Lichts, die wandernden Sternspuren und der rutschende Scroll-Pfeil.
      (Klassennamen aus der Datei geprueft, nicht geraten.) */
-  .licht-punkt span, .spuren i, .scrollhinweis::after {
+  .licht-punkt span, .spuren i, .scrollhinweis::after,
+  .live-punkt {
     animation: none !important;
   }
   .spuren { display: none; }   /* viele bewegte Einzelteile, kaum sichtbar */

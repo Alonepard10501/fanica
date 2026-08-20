@@ -612,6 +612,25 @@
         </div>`).join("");
     }
 
+    /* ---------------- CAMPUS CLASH (in Bearbeitung) ----------------
+       Besonderheiten als Funktions-Karten, der ehrliche Stand als
+       schlichte Liste. Zahlen/Bereiche laufen ueber die gemeinsame
+       `<app>-umfang-*`-Schleife mit. */
+    const cBesonders = el("campus-besonders");
+    if (cBesonders) {
+      cBesonders.innerHTML = hol("campus.besonders").map(b => `
+        <div class="funktion">
+          <b>${sicher(b.name)}</b>
+          <span>${sicher(b.text)}</span>
+        </div>`).join("");
+    }
+
+    const cOffen = el("campus-offen");
+    if (cOffen) {
+      cOffen.innerHTML = hol("campus.offenListe")
+        .map(o => `<li>${sicher(o)}</li>`).join("");
+    }
+
     /* ---------------- FANICA: echte laufende Runde ----------------
        Zahlen aus `runde.js` (aus der echten App-Datenlage gerechnet,
        nichts geschätzt). Der Block erscheint nur, wenn runde.js
@@ -760,7 +779,7 @@
        wichtigsten Funktionen als Raster, dann die Anzeigen als Liste.
        Die SetUpLeiste laeuft mit — sie hat Zahlen und Liste, aber keine
        `umfangAnzeigen`; der Baustein ueberspringt fehlende Container. */
-    ["instinct", "fanica", "neonpunkt", "setupleiste"].forEach(app => {
+    ["instinct", "fanica", "neonpunkt", "setupleiste", "campus"].forEach(app => {
       const zahlen = el(app + "-umfang-zahlen");
       if (zahlen) {
         zahlen.innerHTML = hol(app + ".umfangZahlen").map(z => `

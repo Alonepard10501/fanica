@@ -74,6 +74,11 @@
       grund: "linear-gradient(180deg, #05080C, #0A1119 55%, #060A0F)",
       akzent: "#2E88C7", akzentHell: "#58B6F0"
     },
+    // Campus Clash — in Bearbeitung, Bernstein.
+    campus: {
+      grund: "linear-gradient(180deg, #0B0803, #141005 55%, #0C0904)",
+      akzent: "#E8961E", akzentHell: "#FFB84D"
+    },
     // „Auf einen Blick" vergleicht alle drei Apps — bewusst NEUTRAL,
     // damit die Tabelle nicht nach einer einzelnen App aussieht.
     // (Falk 31.07.: „hat noch die falschen Farben in der Überschrift".)
