@@ -3092,3 +3092,193 @@ a.bezug-weg.bezug-webseite .bezug-zeichen {
 @media (max-width: 900px) {
   .live-punkt { animation: none; }   /* Handy: keine Dauerschleife */
 }
+
+/* ============================================================
+   🔴 TEMPO: bewegte Weichzeichner gedrosselt (Falk 22.08.2026)
+   ============================================================
+   „Das Laden der Seite muss ohne Verzoegerungen passieren und nicht
+   harken."
+
+   GEMESSEN, nicht vermutet: Das Laden dauert 154 ms — das war nie das
+   Problem. Die Bremse sind 20 bewegte Flaechen mit Weichzeichner,
+   zusammen 16,1 Millionen Pixel, die der Browser bei JEDEM Bild neu
+   rechnet:
+     • .hologramm  2084×1347 px mit blur(150px), dauerhaft driftend
+     • 13 .licht-Ebenen (eine je Kapitel) mit ~800×800 px, blur(90px)
+
+   Mit vier Produkten ging das auf. Mit NEUN sind es dreimal so viele
+   Lichtebenen — dieselbe Rechnung, dreifache Last.
+
+   Die Loesung stand seit dem 31.07. fuer das Handy bereit und ist dort
+   erprobt; sie gilt jetzt fuer ALLE Bildschirme. Das Licht bleibt
+   sichtbar, es steht nur still, der Weichzeichner ist kleiner.
+
+   🔴 Die DECKKRAFT wird nicht angefasst — ein Versuch damit machte den
+   Hintergrund am 31.07. bunt statt dunkel.
+
+   🔴 Steht bewusst am DATEIENDE: `.licht-intro span:nth-child(1)` ist
+   staerker als `.licht span`, eine Regel weiter oben haette verloren.
+   Gemessen: vorher liefen 29 Dauer-Animationen weiter, danach 0.
+
+   Bewegung, die etwas ERZAEHLT (Zeitraffer, Zaehler, Hover-Effekte),
+   bleibt unberuehrt. Angehalten wird nur, was im Hintergrund driftet. */
+/* 🔴 `:nth-child` mitnehmen — die Originalregeln heissen
+   `.licht-intro span:nth-child(1)` und sind damit staerker als ein
+   blosses `.licht-intro span`. Ohne diesen Zusatz lief die Bewegung
+   weiter (gemessen: 19 von 29 Animationen blieben aktiv). */
+.licht span,
+.licht span:nth-child(1), .licht span:nth-child(2),
+.licht span:nth-child(3), .licht span:nth-child(4),
+.licht-intro span:nth-child(1), .licht-intro span:nth-child(2),
+.licht-spuren span:nth-child(1), .licht-spuren span:nth-child(2),
+.licht-wald span:nth-child(1), .licht-wald span:nth-child(2),
+.licht-punkt span:nth-child(1), .licht-punkt span:nth-child(2),
+.licht-neon span:nth-child(1), .licht-neon span:nth-child(2) {
+  animation: none;
+  will-change: auto;
+  filter: blur(52px);                  /* statt bis zu 90px */
+}
+.hologramm {
+  animation: none;
+  will-change: auto;
+  filter: blur(80px) saturate(1.3);    /* statt 150px */
+}
+.hologramm::before, .hologramm::after,
+.gitter, .koerner, .spuren i { animation: none; }
+
+/* ============================================================
+   APP-KARUSSELL im Hero (Falk 22.08.2026)
+   ============================================================
+   Neun Karten im Kreis: Symbol, Name, Kurzinfo, Status. Ein Klick
+   fuehrt DIREKT auf die App-Seite.
+
+   🔴 Es dreht sich NICHT von selbst (Falks Vorgabe). Es gibt KEINE
+      `animation`-Regel hier — nur `transition`, und die kostet nur
+      etwas, waehrend wirklich gedreht wird. Wer eine Dauer-Rotation
+      ergaenzt, baut die Bremse wieder ein, die am 22.08. entfernt
+      wurde (29 Dauer-Animationen -> 0).
+
+   Der Ring wird ueber `--dreh` gedreht; jede Karte steht ueber ihren
+   eigenen Winkel `--i` fest im Kreis. Das Skript aendert nur `--dreh`. */
+.karussell {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  gap: clamp(.4rem, 1.5vw, 1.2rem);
+  margin: clamp(2.2rem, 5vh, 3.4rem) auto clamp(4.2rem, 8vh, 5.6rem);
+  /* 🔴 FESTE Breite (22.08.2026): Mit `max-width` schrumpfte das
+     Karussell auf die Breite seines Inhalts — der Ring ist nur 200 px
+     breit, die Karten stehen ueber `translateZ` davor. Die absolut
+     gesetzten Pfeile landeten dadurch mitten auf den Karten
+     (gemessen: x=540 und x=814 statt aussen). */
+  width: min(1100px, 94vw);
+}
+
+.karussell-buehne {
+  /* 🔴 Feste Breite statt `flex: 1 1 auto` (22.08.2026): Der Ring ist
+     nur 200 px breit, die Karten ragen ueber `translateZ` weit
+     darueber hinaus — ohne feste Breite schrumpfte die Buehne auf die
+     Ringbreite, und die Pfeile rutschten mitten zwischen die Karten
+     (gemessen: x=534 und x=820 statt aussen). */
+  flex: 1 1 auto;
+  padding: 0 60px;          /* Platz fuer die Pfeile am Rand */
+  height: 300px;
+  perspective: 1500px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.karussell-ring {
+  position: relative;
+  width: 200px; height: 250px;
+  transform-style: preserve-3d;
+  transform: rotateY(var(--dreh, 0deg));
+  transition: transform .7s var(--weich);
+}
+
+/* Jede Karte steht fest auf ihrem Platz im Kreis: 360°/9 = 40° je Karte.
+   `--i` kommt aus dem HTML, `translateZ` legt den Radius fest. */
+.app-karte {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: .5rem;
+  padding: 1rem .8rem;
+  text-decoration: none; color: var(--creme);
+  border: 1px solid color-mix(in srgb, var(--af) 42%, transparent);
+  border-radius: 18px;
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--af) 10%, #0C0C11) 0%,
+    #0A0A0F 100%);
+  transform: rotateY(calc(40deg * var(--i))) translateZ(300px);
+  backface-visibility: hidden;
+  transition: border-color .3s var(--weich), box-shadow .3s var(--weich);
+}
+
+.app-karte img {
+  width: 60px; height: 60px; border-radius: 14px;
+  filter: drop-shadow(0 4px 12px color-mix(in srgb, var(--af) 40%, transparent));
+}
+.app-karte b { font-size: .95rem; line-height: 1.2; text-align: center; }
+.karte-kurz {
+  font-size: .74rem; line-height: 1.35; color: var(--grau);
+  text-align: center;
+}
+.karte-status {
+  font-size: .64rem; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--af); font-weight: 700;
+}
+
+.app-karte:hover, .app-karte:focus-visible {
+  border-color: var(--af);
+  box-shadow: 0 0 28px -6px var(--af);
+}
+
+/* Die Pfeile — der einzige Weg, das Karussell zu drehen. */
+.karussell-pfeil {
+  /* 🔴 Absolut an den AUSSENRAND (22.08.2026): Im Textfluss landeten die
+     Pfeile mitten auf den Karten — der Ring ist nur 200 px breit, die
+     Karten ragen ueber `translateZ` weit darueber hinaus. `z-index`
+     hebt sie ueber die 3D-Ebene, sonst liegen sie dahinter. */
+  position: absolute; top: 50%; transform: translateY(-50%);
+  z-index: 3;
+  width: 46px; height: 46px;
+  font-size: 1.7rem; line-height: 1;
+  color: var(--creme);
+  background: #101018;
+  border: 1px solid #2A2A38;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color .25s, background .25s, transform .25s;
+}
+.karussell-pfeil.links  { left: 0; }
+.karussell-pfeil.rechts { right: 0; }
+.karussell-pfeil:hover, .karussell-pfeil:focus-visible {
+  border-color: var(--rot-hell);
+  background: #16161F;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.karussell-hinweis {
+  position: absolute; bottom: -2.9rem; left: 0; right: 0;
+  text-align: center;
+  font-size: .74rem; color: var(--grau);
+}
+
+/* Auf schmalen Schirmen wird der Kreis enger, sonst stehen die Karten
+   ausserhalb des Bildes. */
+@media (max-width: 900px) {
+  .karussell-buehne { height: 270px; }
+  .karussell-ring { width: 180px; height: 230px; }
+  .app-karte { transform: rotateY(calc(40deg * var(--i))) translateZ(250px); }
+}
+@media (max-width: 560px) {
+  .karussell-buehne { height: 250px; perspective: 1100px; }
+  .karussell-ring { width: 160px; height: 210px; }
+  .app-karte { transform: rotateY(calc(40deg * var(--i))) translateZ(200px); }
+  .app-karte img { width: 48px; height: 48px; }
+  .karte-kurz { display: none; }     /* auf dem Handy nur Name + Status */
+  .karussell-pfeil { width: 40px; height: 40px; font-size: 1.4rem; }
+}
+
+/* Wer keine Bewegung will, bekommt den Wechsel ohne Uebergang. */
+@media (prefers-reduced-motion: reduce) {
+  .karussell-ring { transition: none; }
+}

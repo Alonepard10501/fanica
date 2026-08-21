@@ -76,56 +76,101 @@
 
   <h1 class="gross hero-text" data-t="hero.text"></h1>
 
-  <!-- Die drei Apps als anklickbare Symbole -->
-  <div class="app-reihe" aria-label="Die Produkte">
-    <a class="app-kachel" href="#fanica" style="--af:#FF4257">
-      <img src="bilder/marke/app-fanica.webp" alt="" width="72" height="72" loading="lazy">
-      <b>FaNiCa Fun</b>
-      <span data-t="hero.appFanica">Tipprunde</span>
-    </a>
-    <a class="app-kachel" href="#instinct" style="--af:#A7BC55">
-      <img src="bilder/marke/app-instinct.webp" alt="" width="72" height="72" loading="lazy">
-      <b>Instinct Scoring</b>
-      <span data-t="hero.appInstinct">Bogensport</span>
-    </a>
-    <a class="app-kachel" href="#neonpunkt" style="--af:#7BFF5C">
-      <img src="bilder/marke/app-neonpunkt.webp" alt="" width="72" height="72" loading="lazy">
-      <b>NeonPunkt</b>
-      <span data-t="hero.appNeon">Klick-Spiel</span>
-    </a>
-    <a class="app-kachel" href="#setupleiste" style="--af:#58B6F0">
-      <img src="bilder/marke/app-setupleiste.webp" alt="" width="72" height="72" loading="lazy">
-      <b>SetUpLeiste</b>
-      <span data-t="hero.appSetup">PC-Anzeige</span>
-    </a>
-    <!-- 🔴 Jede App zeigt ihr ECHTES Symbol (Falk 22.08.2026). Die
-         Emoji-Platzhalter sind raus — die Symbole lagen in den
-         Projekten, nur an unterschiedlichen Orten. -->
-    <a class="app-kachel" href="#campus" style="--af:#FFB84D">
-      <img src="bilder/marke/app-campus.webp" alt="" width="72" height="72" loading="lazy">
-      <b>Campus Clash</b>
-      <span data-t="hero.appCampus">In Bearbeitung</span>
-    </a>
-    <a class="app-kachel" href="#yourfilm" style="--af:#B85CFF">
-      <img src="bilder/marke/app-yourfilm.webp" alt="" width="72" height="72" loading="lazy">
-      <b>YourFilm</b>
-      <span data-t="hero.appYourfilm">In Bearbeitung</span>
-    </a>
-    <a class="app-kachel" href="#tankbuch" style="--af:#E8944F">
-      <img src="bilder/marke/app-tankbuch.webp" alt="" width="72" height="72" loading="lazy">
-      <b>Tankbuch</b>
-      <span data-t="hero.appTankbuch">In Bearbeitung</span>
-    </a>
-    <a class="app-kachel" href="#familie" style="--af:#C2DA6B">
-      <img src="bilder/marke/app-familie.webp" alt="" width="72" height="72" loading="lazy">
-      <b>Instinct Familie</b>
-      <span data-t="hero.appFamilie">Coming Soon</span>
-    </a>
-    <a class="app-kachel" href="#zeitwissen" style="--af:#3FD0D0">
-      <img src="bilder/marke/app-zeitwissen.webp" alt="" width="72" height="72" loading="lazy">
-      <b>ZeitWissen</b>
-      <span data-t="hero.appZeitwissen">In Bearbeitung</span>
-    </a>
+  <!-- 🔴 App-Karussell (Falk 22.08.2026): Die neun Produkte nebeneinander,
+       jede Karte mit Symbol, Name, Kurzinfo und Status. Ein Klick führt
+       DIREKT auf die App-Seite — zum Kapitel auf dieser Seite kommt man
+       durch Scrollen.
+
+       Es dreht sich NICHT von selbst (Falks Vorgabe). Wer es drehen
+       will, zieht daran oder nimmt die Pfeile. Ein dauerhaft rotierendes
+       Karussell hätte neue Dauer-Animationen eingebaut — genau das, was
+       heute wegen des Hakens abgeschaltet wurde. So rechnet nichts,
+       solange niemand anfasst. -->
+  <div class="karussell" aria-label="Die Produkte">
+    <button class="karussell-pfeil links" type="button"
+            aria-label="Nach links drehen">‹</button>
+
+    <div class="karussell-buehne">
+      <div class="karussell-ring" id="karussell-ring">
+      <a class="app-karte" href="fanica-fun.html" style="--i:0;--af:#FF4257"
+         data-karte="0">
+        <img src="bilder/marke/app-fanica.webp" alt="" width="88" height="88"
+             loading="lazy">
+        <b>FaNiCa Fun</b>
+        <span class="karte-kurz" data-t="fanica.karteKurz"></span>
+        <span class="karte-status" data-t="fanica.karteStatus"></span>
+      </a>
+      <a class="app-karte" href="instinct-scoring.html" style="--i:1;--af:#A7BC55"
+         data-karte="1">
+        <img src="bilder/marke/app-instinct.webp" alt="" width="88" height="88"
+             loading="lazy">
+        <b>Instinct Scoring</b>
+        <span class="karte-kurz" data-t="instinct.karteKurz"></span>
+        <span class="karte-status" data-t="instinct.karteStatus"></span>
+      </a>
+      <a class="app-karte" href="neonpunkt.html" style="--i:2;--af:#7BFF5C"
+         data-karte="2">
+        <img src="bilder/marke/app-neonpunkt.webp" alt="" width="88" height="88"
+             loading="lazy">
+        <b>NeonPunkt</b>
+        <span class="karte-kurz" data-t="neonpunkt.karteKurz"></span>
+        <span class="karte-status" data-t="neonpunkt.karteStatus"></span>
+      </a>
+      <a class="app-karte" href="setupleiste.html" style="--i:3;--af:#58B6F0"
+         data-karte="3">
+        <img src="bilder/marke/app-setupleiste.webp" alt="" width="88" height="88"
+             loading="lazy">
+        <b>SetUpLeiste</b>
+        <span class="karte-kurz" data-t="setupleiste.karteKurz"></span>
+        <span class="karte-status" data-t="setupleiste.karteStatus"></span>
+      </a>
+      <a class="app-karte" href="campus-clash.html" style="--i:4;--af:#FFB84D"
+         data-karte="4">
+        <img src="bilder/marke/app-campus.webp" alt="" width="88" height="88"
+             loading="lazy">
+        <b>Campus Clash</b>
+        <span class="karte-kurz" data-t="campus.karteKurz"></span>
+        <span class="karte-status" data-t="campus.karteStatus"></span>
+      </a>
+      <a class="app-karte" href="yourfilm.html" style="--i:5;--af:#B85CFF"
+         data-karte="5">
+        <img src="bilder/marke/app-yourfilm.webp" alt="" width="88" height="88"
+             loading="lazy">
+        <b>YourFilm</b>
+        <span class="karte-kurz" data-t="yourfilm.karteKurz"></span>
+        <span class="karte-status" data-t="yourfilm.karteStatus"></span>
+      </a>
+      <a class="app-karte" href="tankbuch.html" style="--i:6;--af:#E8944F"
+         data-karte="6">
+        <img src="bilder/marke/app-tankbuch.webp" alt="" width="88" height="88"
+             loading="lazy">
+        <b>Tankbuch</b>
+        <span class="karte-kurz" data-t="tankbuch.karteKurz"></span>
+        <span class="karte-status" data-t="tankbuch.karteStatus"></span>
+      </a>
+      <a class="app-karte" href="instinct-familie.html" style="--i:7;--af:#C2DA6B"
+         data-karte="7">
+        <img src="bilder/marke/app-familie.webp" alt="" width="88" height="88"
+             loading="lazy">
+        <b>Instinct Familie</b>
+        <span class="karte-kurz" data-t="familie.karteKurz"></span>
+        <span class="karte-status" data-t="familie.karteStatus"></span>
+      </a>
+      <a class="app-karte" href="zeitwissen.html" style="--i:8;--af:#3FD0D0"
+         data-karte="8">
+        <img src="bilder/marke/app-zeitwissen.webp" alt="" width="88" height="88"
+             loading="lazy">
+        <b>ZeitWissen</b>
+        <span class="karte-kurz" data-t="zeitwissen.karteKurz"></span>
+        <span class="karte-status" data-t="zeitwissen.karteStatus"></span>
+      </a>
+      </div>
+    </div>
+
+    <button class="karussell-pfeil rechts" type="button"
+            aria-label="Nach rechts drehen">›</button>
+
+    <p class="karussell-hinweis" data-t="hero.karussellHinweis"></p>
   </div>
 
   <div class="scrollhinweis" aria-hidden="true"><span data-t="hero.scrollHinweis">Scrollen</span></div>

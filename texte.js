@@ -44,12 +44,15 @@ de: {
     appZeitwissen: "In Bearbeitung",
     appFamilie: "Coming Soon",
     appTankbuch: "In Bearbeitung",
-    scrollHinweis: "Scrollen"
+    scrollHinweis: "Scrollen",
+    karussellHinweis: "Antippen führt direkt zur App — die Pfeile drehen die Auswahl."
   },
 
   /* ====================== KAPITEL 1 — INSTINCT SCORING ================ */
   instinct: {
     kennung: "Kapitel 02",
+    karteKurz: "Bogenrunden werten auf 3D- und Feldparcours",
+    karteStatus: "Im App Store",
     statusPille: "Im App Store · bei Play im Test",
     kooperation: "by Bogensport Instinct · in Kooperation mit FaNiCa Fun",
     name: "Instinct Scoring",
@@ -386,6 +389,8 @@ de: {
   /* ====================== KAPITEL 2 — FANICA FUN ====================== */
   fanica: {
     kennung: "Kapitel 01",
+    karteKurz: "Mit Freunden auf die ersten Fünf tippen",
+    karteStatus: "Live in beiden Stores",
     statusPille: "Live bei Google Play & im App Store",
     name: "FaNiCa Fun",
     untertitel: "Die Tipprunde für Motorsport-Freunde",
@@ -651,6 +656,8 @@ de: {
   /* ====================== KAPITEL 3 — NEONPUNKT ======================= */
   neonpunkt: {
     kennung: "Kapitel 03",
+    karteKurz: "Ein Punkt, 48 Stunden, sonst nichts",
+    karteStatus: "Im Store-Test",
     statusPille: "Im Store-Test",
     name: "NeonPunkt",
     untertitel: "Das minimalistischste Spiel der Welt",
@@ -812,6 +819,8 @@ de: {
      Version + Herausgeber aus installer.iss. ============================ */
   setupleiste: {
     kennung: "Kapitel 04",
+    karteKurz: "Sehen, was der Rechner gerade tut",
+    karteStatus: "Zum Herunterladen",
     statusPille: "Fertig · Gratis-Download für Windows",
     name: "SetUpLeiste",
     untertitel: "Die Leistungsanzeige für den Bildschirmrand",
@@ -894,6 +903,8 @@ de: {
      Bezahlfunktion (nur beschrifteter Testmodus). ===================== */
   campus: {
     kennung: "Kapitel 05 · In Bearbeitung",
+    karteKurz: "Endlos aufsteigen im Schulspiel",
+    karteStatus: "In Bearbeitung",
     statusPille: "In Bearbeitung — spielbar gebaut",
     name: "Campus Clash",
     untertitel: "Das endlose Schulspiel",
@@ -949,6 +960,8 @@ de: {
 
   yourfilm: {
     kennung: "Kapitel 06 · In Bearbeitung",
+    karteKurz: "Filmsammlung scannen und ordnen",
+    karteStatus: "In Bearbeitung",
     statusPille: "In Bearbeitung — gebaut, wird getestet",
     name: "YourFilm",
     untertitel: "Deine Filmsammlung im Griff",
@@ -1001,6 +1014,8 @@ de: {
 
   zeitwissen: {
     kennung: "Kapitel 07 · In Bearbeitung",
+    karteKurz: "Arbeitszeit mit Zeitkonto",
+    karteStatus: "In Bearbeitung",
     statusPille: "In Bearbeitung — gebaut, wird getestet",
     name: "ZeitWissen",
     untertitel: "Arbeitszeit, die sich selbst erklärt",
@@ -1052,6 +1067,8 @@ de: {
   },
   familie: {
     kennung: "Kapitel 08 · In Bearbeitung",
+    karteKurz: "Zehn Apps rund um den Bogensport",
+    karteStatus: "Coming Soon",
     statusPille: "Coming Soon — im Bau",
     name: "Instinct Familie",
     untertitel: "Aus einer App wird eine Familie",
@@ -1106,6 +1123,8 @@ de: {
   },
   tankbuch: {
     kennung: "Kapitel 09 · In Bearbeitung",
+    karteKurz: "Was das Auto wirklich kostet",
+    karteStatus: "In Bearbeitung",
     statusPille: "In Bearbeitung — gebaut, wird getestet",
     name: "Tankbuch",
     untertitel: "Was das Auto wirklich kostet",
@@ -1387,12 +1406,15 @@ en: {
     appZeitwissen: "In progress",
     appFamilie: "Coming soon",
     appTankbuch: "In progress",
-    scrollHinweis: "Scroll"
+    scrollHinweis: "Scroll",
+    karussellHinweis: "Tap to go straight to the app — the arrows turn the selection."
   },
 
   /* ====================== CHAPTER 1 — INSTINCT SCORING ================ */
   instinct: {
     kennung: "Chapter 02",
+    karteKurz: "Scoring rounds on 3D and field courses",
+    karteStatus: "On the App Store",
     statusPille: "On the App Store · Play in testing",
     kooperation: "by Bogensport Instinct · in cooperation with FaNiCa Fun",
     name: "Instinct Scoring",
@@ -1713,6 +1735,8 @@ en: {
   /* ====================== CHAPTER 2 — FANICA FUN ====================== */
   fanica: {
     kennung: "Chapter 01",
+    karteKurz: "Predict the top five with friends",
+    karteStatus: "Live in both stores",
     statusPille: "Live on Google Play & the App Store",
     name: "FaNiCa Fun",
     untertitel: "The prediction game for motorsport friends",
@@ -1971,6 +1995,8 @@ en: {
   /* ====================== CHAPTER 3 — NEONPUNKT ======================= */
   neonpunkt: {
     kennung: "Chapter 03",
+    karteKurz: "One dot, 48 hours, nothing else",
+    karteStatus: "In store testing",
     statusPille: "In store testing",
     name: "NeonPunkt",
     untertitel: "The world's most minimal game",
@@ -2127,6 +2153,8 @@ en: {
   /* ============ CHAPTER 4 — SETUPLEISTE (Windows program) ============ */
   setupleiste: {
     kennung: "Chapter 04",
+    karteKurz: "See what your PC is doing",
+    karteStatus: "Free download",
     statusPille: "Done · free Windows download",
     name: "SetUpLeiste",
     untertitel: "The performance bar for your screen edge",
@@ -2200,6 +2228,8 @@ en: {
   /* ============ CHAPTER 5 — CAMPUS CLASH (IN PROGRESS) ============ */
   campus: {
     kennung: "Chapter 05 · In progress",
+    karteKurz: "Rise endlessly in the school game",
+    karteStatus: "In progress",
     statusPille: "In progress — built and playable",
     name: "Campus Clash",
     untertitel: "The endless school game",
@@ -2255,6 +2285,8 @@ en: {
 
   yourfilm: {
     kennung: "Chapter 06 · In progress",
+    karteKurz: "Scan and sort your film collection",
+    karteStatus: "In progress",
     statusPille: "In progress — built, being tested",
     name: "YourFilm",
     untertitel: "Your film collection, under control",
@@ -2307,6 +2339,8 @@ en: {
 
   zeitwissen: {
     kennung: "Chapter 07 · In progress",
+    karteKurz: "Working hours with a running balance",
+    karteStatus: "In progress",
     statusPille: "In progress — built, being tested",
     name: "ZeitWissen",
     untertitel: "Working hours that explain themselves",
@@ -2358,6 +2392,8 @@ en: {
   },
   familie: {
     kennung: "Chapter 08 · In progress",
+    karteKurz: "Ten apps around archery",
+    karteStatus: "Coming soon",
     statusPille: "Coming soon — in the works",
     name: "Instinct Family",
     untertitel: "One app becomes a family",
@@ -2412,6 +2448,8 @@ en: {
   },
   tankbuch: {
     kennung: "Chapter 09 · In progress",
+    karteKurz: "What the car actually costs",
+    karteStatus: "In progress",
     statusPille: "In progress — built, being tested",
     name: "Tankbuch",
     untertitel: "What the car actually costs",

@@ -193,6 +193,60 @@
     }, 900);
   }
 
+
+  /* ========================================================
+     APP-KARUSSELL — dreht sich NUR auf Zuruf
+     ========================================================
+     🔴 Falk 22.08.2026: „sie rotieren nicht von selbst man muss das
+        selber machen." Deshalb gibt es hier keinen Timer und keine
+        Animationsschleife — nur eine Zahl, die sich beim Klicken,
+        Ziehen oder Tastendruck aendert. Solange niemand anfasst,
+        rechnet nichts.
+
+     Neun Karten, 360°/9 = 40° je Schritt. */
+  function karussellEinrichten() {
+    const ring = document.getElementById("karussell-ring");
+    if (!ring) return;
+    const karten = ring.querySelectorAll(".app-karte");
+    if (!karten.length) return;
+
+    const schritt = 360 / karten.length;
+    let dreh = 0;
+
+    const setze = () => ring.style.setProperty("--dreh", dreh + "deg");
+    setze();
+
+    const drehen = (richtung) => { dreh += schritt * richtung; setze(); };
+
+    document.querySelector(".karussell-pfeil.links")
+      ?.addEventListener("click", () => drehen(1));
+    document.querySelector(".karussell-pfeil.rechts")
+      ?.addEventListener("click", () => drehen(-1));
+
+    /* Ziehen mit Maus oder Finger. Erst ab 40 px gilt es als Drehen —
+       darunter bleibt es ein Klick auf die Karte, sonst oeffnet jedes
+       versehentliche Wischen eine App. */
+    let start = null;
+    const buehne = document.querySelector(".karussell-buehne");
+    const anfang = (x) => { start = x; };
+    const ende = (x) => {
+      if (start === null) return;
+      const weg = x - start;
+      start = null;
+      if (Math.abs(weg) > 40) drehen(weg > 0 ? 1 : -1);
+    };
+
+    buehne?.addEventListener("pointerdown", (e) => anfang(e.clientX));
+    buehne?.addEventListener("pointerup", (e) => ende(e.clientX));
+    buehne?.addEventListener("pointercancel", () => { start = null; });
+
+    /* Tastatur: Pfeiltasten drehen, sobald eine Karte den Fokus hat. */
+    ring.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") { drehen(1); e.preventDefault(); }
+      if (e.key === "ArrowRight") { drehen(-1); e.preventDefault(); }
+    });
+  }
+
   /* ========================================================
      5) ZÄHLER — laufen einmal hoch
      ======================================================== */
@@ -1000,6 +1054,7 @@
     kopfEinrichten();
     kapitelEinrichten();
     einblendenEinrichten();
+    karussellEinrichten();
     zaehlerEinrichten();
     rafferEinrichten();
     spielEinrichten();
