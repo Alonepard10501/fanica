@@ -601,6 +601,15 @@ de: {
     rundeTabelleTitel: "Der Stand nach neun Rennen",
     rundeTabelleText: "Zwischen Platz eins und Platz zwei liegt ein einziger Punkt, zwischen dem Ersten und dem Letzten fünfundzwanzig. Genau das ist der Grund, warum niemand aussteigt: Nach dreizehn verbleibenden Rennen kann das noch jeder drehen.",
 
+    rundeZahlen: [
+      { einheit: "Jahre",   text: "läuft die Runde schon" },
+      { einheit: "Tipps",   text: "insgesamt abgegeben" },
+      { einheit: "Spieler", text: "in dieser Saison" },
+      { einheit: "Punkt",   text: "trennt Platz 1 von Platz 2" }
+    ],
+    rundeBilanz: ["exakt richtig", "Fahrer richtig, Platz daneben", "daneben"],
+    rundePunkte: "Punkte",
+    rundeLaeuftNoch: "läuft noch",
     rundeTrefferTitel: "Wie oft trifft man überhaupt?",
     rundeTrefferText: "In dieser Saison wurden 435 einzelne Tipps abgegeben. Ein gutes Viertel saß exakt, knapp die Hälfte traf den richtigen Fahrer auf dem falschen Platz — und weniger als ein Drittel lag ganz daneben. Das ist die Mischung, die eine Tipprunde trägt: oft knapp dran, selten perfekt.",
 
@@ -1281,7 +1290,9 @@ de: {
     zurueck: "Nach oben"
   },
 
-  zurueckKnopf: "← Zurück zur Startseite"
+  zurueckKnopf: "← Zurück zur Startseite",
+  startseiteKurz: "← Startseite",
+  startseiteFuss: "Startseite"
 },
 
 /* ---------------------------------------------------------- ENGLISCH
@@ -1858,6 +1869,15 @@ en: {
     rundeTabelleTitel: "The standings after nine races",
     rundeTabelleText: "A single point separates first from second, twenty-five separate first from last. That is exactly why nobody drops out: with thirteen races left, anyone can still turn this around.",
 
+    rundeZahlen: [
+      { einheit: "years",   text: "the round has been running" },
+      { einheit: "picks",   text: "submitted in total" },
+      { einheit: "players", text: "this season" },
+      { einheit: "point",   text: "separates first from second" }
+    ],
+    rundeBilanz: ["exactly right", "right driver, wrong place", "wide of the mark"],
+    rundePunkte: "points",
+    rundeLaeuftNoch: "still running",
     rundeTrefferTitel: "How often do you actually get it right?",
     rundeTrefferText: "435 individual predictions were made this season. A good quarter were spot on, almost half named the right driver in the wrong position — and fewer than a third missed entirely. That is the mix that keeps a prediction group alive: often close, rarely perfect.",
 
@@ -2519,7 +2539,9 @@ en: {
     zurueck: "Back to top"
   },
 
-  zurueckKnopf: "← Back to the home page"
+  zurueckKnopf: "← Back to the home page",
+  startseiteKurz: "← Home",
+  startseiteFuss: "Home"
 }
 };
 

@@ -509,17 +509,26 @@ p:last-child { margin-bottom: 0; }
   .kopf-marke img { width: 26px; height: 26px; }
   .sprachknopf { padding: 5px 10px; font-size: .72rem; }
 
-  /* Auf den Unterseiten stehen seit 31.07. zusätzlich die drei
-     App-Namen im Kopf. Zu viert brechen sie auf dem Handy zweizeilig
-     um und die Kopfzeile kippt. Dort bleibt deshalb nur der Rückweg —
-     die drei Apps sind auf der Startseite ohnehin als Kacheln direkt
-     anklickbar, es geht also nichts verloren. */
-  .kopf-nav a[href$="fanica-fun.html"],
-  .kopf-nav a[href$="instinct-scoring.html"],
-  .kopf-nav a[href$="neonpunkt.html"],
-  .kopf-nav a[href$="setupleiste.html"],
-  .kopf-nav a[href$="campus-clash.html"],
-  .kopf-hier { display: none; }
+  /* Auf den Unterseiten stehen die Produktnamen im Kopf. Auf dem Handy
+     brechen sie mehrzeilig um und die Kopfzeile kippt — dort bleibt
+     deshalb nur der Rückweg zur Startseite. Von dort sind alle Produkte
+     als Kacheln direkt anklickbar, es geht nichts verloren.
+
+     🔴 Die Regel gilt für JEDEN Produktlink, nicht für eine Liste von
+     Dateinamen (21.08.2026): Vorher standen hier fünf Namen fest
+     aufgezählt. Als YourFilm, ZeitWissen und die Instinct Familie
+     dazukamen, blieben genau die drei stehen — auf 500 px waren nur
+     3 von 9 Punkten sichtbar, obwohl der Kommentar das Gegenteil
+     behauptete. `:not()` statt Aufzählung: Wer ein Produkt ergänzt,
+     muss hier nichts mehr nachziehen. */
+  .kopf-nav a:not([href="index.html"]) { display: none; }
+
+  /* 🔴 Die AKTUELLE Seite bleibt stehen (21.08.2026). Vorher war sie
+     mit ausgeblendet — auf dem Handy stand dann nur noch
+     „← Startseite" da, und niemand sah mehr, auf welcher Seite er
+     gerade ist. Sie ist kein Link, kostet also keinen Platz für
+     Bedienung, gibt aber die Orientierung zurück. */
+  .kopf-hier { font-size: .76rem; }
 }
 @media (max-width: 400px) {
   /* Die Wortmarke bleibt lesbar — nur kleiner. Ganz ausblenden ließ

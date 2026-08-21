@@ -717,12 +717,15 @@
     if (RU) {
       const rZahlen = el("runde-zahlen");
       if (rZahlen) {
-        const z = [
-          { zahl: RU.jahre,       einheit: "Jahre",  text: "läuft die Runde schon" },
-          { zahl: RU.gesamtTipps, einheit: "Tipps",  text: "insgesamt abgegeben" },
-          { zahl: RU.spieler,     einheit: "Spieler", text: "in dieser Saison" },
-          { zahl: RU.abstand,     einheit: "Punkt",  text: "trennt Platz 1 von Platz 2" }
-        ];
+        /* 🔴 Beschriftungen aus texte.js, NICHT hier fest eintippen
+           (21.08.2026): Vorher standen sie als Zeichenketten hier —
+           auf der englischen Seite erschien mitten im Englischen
+           „Jahre / läuft die Runde schon". Die Zahlen kommen aus
+           runde.js, die Wörter aus der Übersetzung. */
+        const werte = [RU.jahre, RU.gesamtTipps, RU.spieler, RU.abstand];
+        const z = hol("fanica.rundeZahlen").map((b, i) => ({
+          zahl: werte[i], einheit: b.einheit, text: b.text
+        }));
         rZahlen.innerHTML = z.map(x => `
           <div class="zahl">
             <b data-zaehler="${x.zahl}">0</b>
@@ -751,10 +754,11 @@
       const rTreffer = el("runde-treffer");
       if (rTreffer) {
         const b = RU.bilanz;
+        const namen = hol("fanica.rundeBilanz");
         const teile = [
-          { klasse: "a-exakt",   wert: b.exaktProzent,   name: "exakt richtig" },
-          { klasse: "a-dabei",   wert: b.dabeiProzent,   name: "Fahrer richtig, Platz daneben" },
-          { klasse: "a-daneben", wert: b.danebenProzent, name: "daneben" }
+          { klasse: "a-exakt",   wert: b.exaktProzent,   name: namen[0] },
+          { klasse: "a-dabei",   wert: b.dabeiProzent,   name: namen[1] },
+          { klasse: "a-daneben", wert: b.danebenProzent, name: namen[2] }
         ];
         rTreffer.innerHTML =
           `<div class="anteil-spur">` +
@@ -797,8 +801,8 @@
           <div class="sieger-karte${s.saison === RU.saison ? " laufend" : ""}">
             <b>${s.saison}</b>
             <span class="sieger-name">${sicher(s.name)}</span>
-            <span class="sieger-punkte">${s.punkte} Punkte</span>
-            ${s.saison === RU.saison ? '<span class="sieger-hinweis">läuft noch</span>' : ""}
+            <span class="sieger-punkte">${s.punkte} ${sicher(hol("fanica.rundePunkte"))}</span>
+            ${s.saison === RU.saison ? `<span class="sieger-hinweis">${sicher(hol("fanica.rundeLaeuftNoch"))}</span>` : ""}
           </div>`).join("");
       }
     }
