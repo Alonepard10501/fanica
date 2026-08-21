@@ -1179,7 +1179,7 @@ de: {
   vergleich: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
-    text: "Sieben Produkte, sieben völlig verschiedene Zwecke — vier fertig, drei in Arbeit. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto.",
+    text: "Sieben Produkte, sieben völlig verschiedene Zwecke — vier fertig, drei in Arbeit. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitWissen"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen"] },
@@ -2395,7 +2395,7 @@ en: {
   vergleich: {
     kennung: "At a glance",
     titel: "Which app is for you?",
-    text: "Six products, six entirely different purposes — four finished, two in progress. What they share: they work offline, they collect nothing about you, and they don't ask for an account.",
+    text: "Seven products, seven entirely different purposes — four finished, three in progress. What they share: they work offline, they collect nothing about you, and they don't ask for an account. The Instinct Family is not listed here: it is not a single app but ten, and none of them is available yet.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitWissen"],
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours"] },

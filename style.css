@@ -457,10 +457,22 @@ p:last-child { margin-bottom: 0; }
   transition: color .5s var(--weich);
 }
 
-.kopf-nav { display: flex; align-items: center; gap: clamp(.5rem, 1.8vw, 1.7rem); }
+/* 🔴 Acht Produkte in der Kopfzeile (21.08.2026): Die Namen sind lang
+   („Instinct Scoring", „Instinct Familie", „Campus Clash") und brachen
+   selbst bei 1600 px zweizeilig um — die Leiste wirkte gedrängt und die
+   Einträge standen ungleichmäßig. `white-space: nowrap` hält jeden Namen
+   in einer Zeile, der kleinere Zwischenraum und die etwas kleinere Schrift
+   schaffen den nötigen Platz. Wer ein neuntes Produkt ergänzt, prüft das
+   hier nach. */
+.kopf-nav {
+  display: flex; align-items: center;
+  gap: clamp(.4rem, 1.1vw, 1.1rem);
+  flex-wrap: nowrap;
+}
+.kopf-nav a, .kopf-nav .kopf-hier { white-space: nowrap; }
 .kopf-nav a {
   color: var(--grau-hell); text-decoration: none;
-  font-size: .9rem; font-weight: 600;
+  font-size: clamp(.78rem, .95vw, .9rem); font-weight: 600;
   padding: 8px 4px; position: relative;
   transition: color .3s;
 }
