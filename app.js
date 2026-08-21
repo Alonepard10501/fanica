@@ -79,6 +79,10 @@
       grund: "linear-gradient(180deg, #0B0803, #141005 55%, #0C0904)",
       akzent: "#E8961E", akzentHell: "#FFB84D"
     },
+    yourfilm: {
+      grund: "linear-gradient(180deg, #0B0710, #150A20 50%, #0B0713)",
+      akzent: "#9A3FE0", akzentHell: "#B85CFF"
+    },
     // „Auf einen Blick" vergleicht alle drei Apps — bewusst NEUTRAL,
     // damit die Tabelle nicht nach einer einzelnen App aussieht.
     // (Falk 31.07.: „hat noch die falschen Farben in der Überschrift".)

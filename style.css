@@ -184,6 +184,10 @@ p:last-child { margin-bottom: 0; }
   --akzent: #E8961E;
   --akzent-hell: #FFB84D;
 }
+[data-kapitel="yourfilm"] {
+  --akzent: #9A3FE0;      /* YourFilm: Kino-Violett */
+  --akzent-hell: #B85CFF;
+}
 [data-kapitel="fanica"],
 [data-kapitel="intro"],
 [data-kapitel="ueber"],
@@ -1580,7 +1584,13 @@ h1.hero-text,
 .vergleich {
   width: 100%; border-collapse: collapse;
   margin-top: clamp(1.6rem, 3.4vw, 2.4rem);
-  font-size: .92rem; min-width: 620px;
+  /* 🔴 21.08.2026 (Falks Handy-Befund: „die Statistik unten ist
+     zusammengeschoben"): 620px stammte aus der Drei-App-Zeit. Bei fünf
+     (jetzt sechs) Produktspalten quetschte table-layout:fixed alles in
+     die Handy-Breite — die Spaltenköpfe schoben sich ineinander, Wörter
+     brachen buchstabenweise. Die Hülle scrollt seitwärts (steht oben,
+     .tabelle-huelle) — die Tabelle braucht dafür ihre ECHTE Breite. */
+  font-size: .92rem; min-width: 66rem;
   /* GLEICH BREITE SPALTEN. Ohne das richtet sich jede Spalte nach ihrem
      längsten Text — die FaNiCa-Spalte war dadurch 442 px breit, Instinct
      nur 261 px, und die beiden standen weit auseinander.
@@ -1600,7 +1610,8 @@ h1.hero-text,
 .vergleich thead th.app-2,
 .vergleich thead th.app-3,
 .vergleich thead th.app-4,
-.vergleich thead th.app-5 { width: calc((100% - 15rem) / 5); }
+.vergleich thead th.app-5,
+.vergleich thead th.app-6 { width: calc((100% - 15rem) / 6); }
 .vergleich th, .vergleich td {
   padding: .85rem 1rem; text-align: left;
   border-bottom: 1px solid rgba(255,255,255,.09);
@@ -1622,6 +1633,7 @@ h1.hero-text,
 .vergleich thead th.app-3 { color: #7BFF5C; }
 .vergleich thead th.app-4 { color: #58B6F0; }   /* SetUpLeiste  */
 .vergleich thead th.app-5 { color: #FFB84D; }   /* Campus Clash */
+.vergleich thead th.app-6 { color: #B85CFF; }   /* YourFilm     */
 .vergleich tbody th {
   font-family: var(--schrift-text); font-weight: 600;
   font-size: .86rem; color: var(--grau);

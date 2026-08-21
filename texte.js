@@ -40,6 +40,7 @@ de: {
     appNeon: "Klick-Spiel",
     appSetup: "PC-Anzeige",
     appCampus: "In Bearbeitung",
+    appYourfilm: "In Bearbeitung",
     scrollHinweis: "Scrollen"
   },
 
@@ -914,6 +915,58 @@ de: {
     hinweis: "Campus Clash ist in Entwicklung. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
 
+  yourfilm: {
+    kennung: "Kapitel 06 · In Bearbeitung",
+    statusPille: "In Bearbeitung — gebaut, wird getestet",
+    name: "YourFilm",
+    untertitel: "Deine Filmsammlung im Griff",
+    claim: "Scannen. Einsortieren. Fertig.",
+    claimZwei: "Deine Sammlung, sauber geordnet.",
+    positionierung: "Eine Filmsammlungs-App für DVDs und Blu-rays: Barcode scannen, die App ordnet den Film automatisch zu — das Werk, die Ausgabe, dein Exemplar. Vier getrennte Preise zeigen, was deine Sammlung gekostet hat und was sie heute wert ist. Komplett auf dem Gerät, ohne Konto.",
+    inArbeit: "🚧 In Bearbeitung: Die App ist gebaut und wird gerade an echten Discs getestet. Es gibt noch keinen Store-Eintrag — und nichts zu kaufen.",
+
+    kernTitel: "Der Kniff",
+    kernText: "Ein Film ist nicht sein Datenträger: YourFilm trennt das Werk (der Film selbst), die Ausgabe (Steelbook, Erstauflage, Neuauflage) und dein Exemplar (dein Stück im Regal). Drei Ausgaben desselben Films sind EIN Eintrag in der Liste — nicht drei. Und der Barcode-Scan ordnet automatisch zu, ohne Suchen und ohne Tipperei.",
+
+    umfangTitel: "Was drinsteckt",
+    umfangText: "Vom Scan bis zur Auswertung: erfassen, ordnen, wiederfinden — und am Ende wissen, was die Sammlung wert ist.",
+    umfangZahlen: [
+      { zahl: "13", text: "Bildschirme" },
+      { zahl: "11", text: "Bereiche" },
+      { zahl: "4", text: "Preise je Exemplar" },
+      { zahl: "13", text: "Sortier-Schlüssel" }
+    ],
+    umfangListe: [
+      { name: "Scannen", text: "Barcode der DVD oder Blu-ray scannen — die App erkennt Duplikate und ordnet den Film automatisch zu." },
+      { name: "Sammlung", text: "Werk, Ausgabe und Exemplar sauber getrennt — die Liste bleibt aufgeräumt, egal wie viele Fassungen du besitzt." },
+      { name: "Suche & Filter", text: "Suche über alle Felder samt Personen; Filter lassen sich kombinieren, sortiert wird nach dreizehn Schlüsseln." },
+      { name: "Vier Preise", text: "Ladenpreis von damals, UVP, dein Kaufpreis, heutiger Wert — vier getrennte Angaben je Exemplar." },
+      { name: "Statistik", text: "Ausgaben nach Monat und Jahr, Bestand und Werte deiner Sammlung auf einen Blick." },
+      { name: "Standorte", text: "Regal, Fach, Karton — ein frei tiefer Standort-Baum sagt dir, wo jedes Stück liegt." },
+      { name: "Sicherung", text: "Import, Export und Backup mit Prüfung — deine Sammlung bleibt deine Datei." },
+      { name: "Filmdaten", text: "Auf Wunsch holt die App Filmdaten aus einer Filmdatenbank — freiwillig, abschaltbar, ohne Konto." }
+    ],
+
+    besondersTitel: "Was es besonders macht",
+    besonders: [
+      { name: "Die Barcode-Kette", text: "Kein einzelner Dienst kennt Barcode UND Filmdaten. YourFilm verkettet beides: Ein Warenkatalog erkennt den Code, der Händlertitel wird gesäubert, die Filmdatenbank liefert die Daten — ein Scan, ein Treffer." },
+      { name: "Vier getrennte Preise", text: "Was der Film damals kostete, was er kosten sollte, was du bezahlt hast, was er heute wert ist — keiner der vier wird aus einem anderen geschätzt." },
+      { name: "Komplett auf dem Gerät", text: "Die Sammlung liegt in einer Datenbank auf deinem Handy. Die Filmdatenbank-Anbindung ist freiwillig — ohne sie läuft die App vollständig offline." }
+    ],
+
+    statusTitel: "Ehrlicher Stand",
+    statusText: "Gebaut und quergeprüft — 241 Tests halten den Stand fest. Was noch aussteht:",
+    offenListe: [
+      "Test an echten Discs läuft",
+      "Eigenes App-Symbol",
+      "Store-Eintrag (Google Play zuerst)"
+    ],
+
+    mehrKnopf: "Alles über YourFilm",
+    mehrText: "Die Dreiteilung, die Barcode-Kette, die vier Preise — und was bis zur Veröffentlichung noch passiert.",
+    hinweis: "YourFilm ist in Entwicklung. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+  },
+
   /* ============ LIVE — automatisch geladene Renndaten ============ */
   live: {
     naechstesTitel: "Das nächste Rennen",
@@ -998,21 +1051,21 @@ de: {
   vergleich: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
-    text: "Fünf Produkte, fünf völlig verschiedene Zwecke — vier fertig, eines in Arbeit. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash"],
+    text: "Sechs Produkte, sechs völlig verschiedene Zwecke — vier fertig, zwei in Arbeit. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto.",
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm"],
     zeilen: [
-      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel"] },
-      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung"] },
-      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz"] },
-      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie"] },
-      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein"] },
-      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer"] },
-      { name: "Sprachen",      werte: ["2", "2", "16", "1", "1"] },
-      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen"] },
-      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen"] },
-      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS"] }
+      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten"] },
+      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "In Bearbeitung"] },
+      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Allein"] },
+      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten (freiwillig)"] },
+      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein"] },
+      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer", "13 Bildschirme"] },
+      { name: "Sprachen",      werte: ["2", "2", "16", "1", "1", "1"] },
+      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Alles — es gibt noch nichts zu kaufen"] },
+      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "noch offen"] },
+      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android"] }
     ],
-    fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash steht noch nicht fest, ob und was etwas kosten wird."
+    fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash und YourFilm steht noch nicht fest, ob und was etwas kosten wird."
   },
 
   fragen: {
@@ -1139,6 +1192,7 @@ en: {
     appNeon: "Tap game",
     appSetup: "PC monitor",
     appCampus: "In progress",
+    appYourfilm: "In progress",
     scrollHinweis: "Scroll"
   },
 
@@ -1978,6 +2032,58 @@ en: {
     hinweis: "Campus Clash is under development. All details describe the current build state and may change before release."
   },
 
+  yourfilm: {
+    kennung: "Chapter 06 · In progress",
+    statusPille: "In progress — built, being tested",
+    name: "YourFilm",
+    untertitel: "Your film collection, under control",
+    claim: "Scan. Shelve. Done.",
+    claimZwei: "Your collection, neatly organised.",
+    positionierung: "A collection app for DVDs and Blu-rays: scan the barcode and the app files the film automatically — the work, the edition, your copy. Four separate prices show what your collection cost and what it is worth today. Entirely on your device, no account.",
+    inArbeit: "🚧 In progress: the app is built and currently being tested with real discs. There is no store listing yet — and nothing to buy.",
+
+    kernTitel: "The trick",
+    kernText: "A film is not its disc: YourFilm separates the work (the film itself), the edition (steelbook, first pressing, reissue) and your copy (the one on your shelf). Three editions of the same film are ONE entry in the list — not three. And the barcode scan files everything automatically, no searching, no typing.",
+
+    umfangTitel: "What is inside",
+    umfangText: "From scan to statistics: capture, organise, find again — and know what the collection is worth.",
+    umfangZahlen: [
+      { zahl: "13", text: "screens" },
+      { zahl: "11", text: "areas" },
+      { zahl: "4", text: "prices per copy" },
+      { zahl: "13", text: "sort keys" }
+    ],
+    umfangListe: [
+      { name: "Scanning", text: "Scan the barcode of a DVD or Blu-ray — the app detects duplicates and files the film automatically." },
+      { name: "Collection", text: "Work, edition and copy kept apart — the list stays tidy no matter how many editions you own." },
+      { name: "Search & filters", text: "Search across all fields including people; filters combine, sorting offers thirteen keys." },
+      { name: "Four prices", text: "Shop price back then, list price, what you paid, current value — four separate figures per copy." },
+      { name: "Statistics", text: "Spending by month and year, stock and value of your collection at a glance." },
+      { name: "Locations", text: "Shelf, compartment, box — a freely nested location tree tells you where every copy lives." },
+      { name: "Backup", text: "Import, export and backup with verification — your collection stays your file." },
+      { name: "Film data", text: "On request the app fetches film details from a film database — optional, can be switched off, no account." }
+    ],
+
+    besondersTitel: "What makes it special",
+    besonders: [
+      { name: "The barcode chain", text: "No single service knows both barcodes AND film data. YourFilm chains them: a product catalogue recognises the code, the retail title is cleaned, the film database delivers the details — one scan, one match." },
+      { name: "Four separate prices", text: "What the film cost back then, what it was supposed to cost, what you paid, what it is worth today — none of the four is guessed from another." },
+      { name: "Entirely on your device", text: "The collection lives in a database on your phone. The film-database link is optional — without it the app runs fully offline." }
+    ],
+
+    statusTitel: "Honest status",
+    statusText: "Built and cross-checked — 241 tests pin down the current state. Still open:",
+    offenListe: [
+      "Testing with real discs in progress",
+      "Its own app icon",
+      "Store listing (Google Play first)"
+    ],
+
+    mehrKnopf: "Everything about YourFilm",
+    mehrText: "The three-level model, the barcode chain, the four prices — and what happens before release.",
+    hinweis: "YourFilm is under development. All details describe the current build state and may change before release."
+  },
+
   /* ============ LIVE — automatically loaded race data ============ */
   live: {
     naechstesTitel: "The next race",
@@ -2035,21 +2141,21 @@ en: {
   vergleich: {
     kennung: "At a glance",
     titel: "Which app is for you?",
-    text: "Five products, five entirely different purposes — four finished, one in progress. What they share: they work offline, they collect nothing about you, and they don't ask for an account.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash"],
+    text: "Six products, six entirely different purposes — four finished, two in progress. What they share: they work offline, they collect nothing about you, and they don't ask for an account.",
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm"],
     zeilen: [
-      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression"] },
-      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress"] },
-      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance"] },
-      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never"] },
-      { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No"] },
-      { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects"] },
-      { name: "Languages",      werte: ["2", "2", "16", "1", "1"] },
-      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet"] },
-      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet"] },
-      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS"] }
+      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection"] },
+      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In progress"] },
+      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Alone"] },
+      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never", "Only for film data (optional)"] },
+      { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No", "No"] },
+      { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects", "13 screens"] },
+      { name: "Languages",      werte: ["2", "2", "16", "1", "1", "1"] },
+      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Everything — nothing to buy yet"] },
+      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "not decided yet"] },
+      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android"] }
     ],
-    fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash it is not yet decided whether anything will cost money."
+    fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash and YourFilm it is not yet decided whether anything will cost money."
   },
 
   fragen: {

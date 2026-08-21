@@ -631,6 +631,25 @@
         .map(o => `<li>${sicher(o)}</li>`).join("");
     }
 
+    /* ---------------- YOURFILM (in Bearbeitung) ----------------
+       Gleiches Muster wie Campus Clash: Besonderheiten als Karten,
+       der ehrliche Stand als Liste; Zahlen/Bereiche laufen ueber die
+       gemeinsame `<app>-umfang-*`-Schleife mit. */
+    const yBesonders = el("yourfilm-besonders");
+    if (yBesonders) {
+      yBesonders.innerHTML = hol("yourfilm.besonders").map(b => `
+        <div class="funktion">
+          <b>${sicher(b.name)}</b>
+          <span>${sicher(b.text)}</span>
+        </div>`).join("");
+    }
+
+    const yOffen = el("yourfilm-offen");
+    if (yOffen) {
+      yOffen.innerHTML = hol("yourfilm.offenListe")
+        .map(o => `<li>${sicher(o)}</li>`).join("");
+    }
+
     /* ---------------- FANICA: echte laufende Runde ----------------
        Zahlen aus `runde.js` (aus der echten App-Datenlage gerechnet,
        nichts geschätzt). Der Block erscheint nur, wenn runde.js
@@ -779,7 +798,7 @@
        wichtigsten Funktionen als Raster, dann die Anzeigen als Liste.
        Die SetUpLeiste laeuft mit — sie hat Zahlen und Liste, aber keine
        `umfangAnzeigen`; der Baustein ueberspringt fehlende Container. */
-    ["instinct", "fanica", "neonpunkt", "setupleiste", "campus"].forEach(app => {
+    ["instinct", "fanica", "neonpunkt", "setupleiste", "campus", "yourfilm"].forEach(app => {
       const zahlen = el(app + "-umfang-zahlen");
       if (zahlen) {
         zahlen.innerHTML = hol(app + ".umfangZahlen").map(z => `
