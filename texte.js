@@ -1072,17 +1072,17 @@ de: {
       { zahl: "0", text: "Konten nötig" }
     ],
     apps: [
-      { zeichen: "🎯", name: "Instinct Scoring", rolle: "Der Kern — live im Store", text: "Runden werten auf 3D- und Feldparcours. Die einzige App der Familie, die es schon gibt." },
-      { zeichen: "🏋️", name: "Instinct Coach", rolle: "Coming Soon", text: "Trainingsbegleitung, die sich dem Schützen anpasst — statt eines festen Plans für alle." },
-      { zeichen: "🏹", name: "Instinct Builder", rolle: "Coming Soon", text: "Pfeile zusammenstellen und verwalten: Spine, Länge, Befiederung, Farben." },
-      { zeichen: "🔧", name: "Instinct Tune", rolle: "Coming Soon", text: "Bögen einstellen und den Verlauf festhalten — mit Fotovergleich über die Zeit." },
-      { zeichen: "🌤️", name: "Instinct Weather", rolle: "Coming Soon", text: "Wetter am Parcours: Wind, Licht, Temperatur — die Bedingungen, unter denen geschossen wurde." },
-      { zeichen: "🎒", name: "Instinct Pack", rolle: "Coming Soon", text: "Ausrüstung im Blick: Inventar führen und Packlisten, damit vor dem Turnier nichts fehlt." },
-      { zeichen: "📍", name: "Instinct Range", rolle: "Coming Soon", text: "Training auf dem Platz: Einheiten festhalten und auswerten, getrennt vom Parcours." },
-      { zeichen: "👥", name: "Instinct Community", rolle: "Coming Soon", text: "Der Austausch mit anderen Schützen — Verein, Gruppe, gemeinsame Termine." },
-      { zeichen: "🔁", name: "Instinct Trade", rolle: "Coming Soon", text: "Material weitergeben: anbieten, suchen, finden — Bogensport-Zubehör aus zweiter Hand." },
-      { zeichen: "🤖", name: "AI-Instinct", rolle: "Coming Soon", text: "Fachberatung zum traditionellen Bogenschießen — fragen statt suchen." },
-      { zeichen: "🏛️", name: "Instinct Familie", rolle: "Die Dach-App", text: "Führt zusammen, was in den einzelnen Apps liegt: ein Blick auf alle Schützen, alle Ergebnisse, das Zusammenspiel." }
+      { bild: "scoring", name: "Instinct Scoring", rolle: "Der Kern — live im Store", text: "Runden werten auf 3D- und Feldparcours. Die einzige App der Familie, die es schon gibt." },
+      { bild: "coach", name: "Instinct Coach", rolle: "Coming Soon", text: "Trainingsbegleitung, die sich dem Schützen anpasst — statt eines festen Plans für alle." },
+      { bild: "builder", name: "Instinct Builder", rolle: "Coming Soon", text: "Pfeile zusammenstellen und verwalten: Spine, Länge, Befiederung, Farben." },
+      { bild: "tune", name: "Instinct Tune", rolle: "Coming Soon", text: "Bögen einstellen und den Verlauf festhalten — mit Fotovergleich über die Zeit." },
+      { bild: "weather", name: "Instinct Weather", rolle: "Coming Soon", text: "Wetter am Parcours: Wind, Licht, Temperatur — die Bedingungen, unter denen geschossen wurde." },
+      { bild: "pack", name: "Instinct Pack", rolle: "Coming Soon", text: "Ausrüstung im Blick: Inventar führen und Packlisten, damit vor dem Turnier nichts fehlt." },
+      { bild: "range", name: "Instinct Range", rolle: "Coming Soon", text: "Training auf dem Platz: Einheiten festhalten und auswerten, getrennt vom Parcours." },
+      { bild: "community", name: "Instinct Community", rolle: "Coming Soon", text: "Der Austausch mit anderen Schützen — Verein, Gruppe, gemeinsame Termine." },
+      { bild: "trade", name: "Instinct Trade", rolle: "Coming Soon", text: "Material weitergeben: anbieten, suchen, finden — Bogensport-Zubehör aus zweiter Hand." },
+      { bild: "ai", name: "AI-Instinct", rolle: "Coming Soon", text: "Fachberatung zum traditionellen Bogenschießen — fragen statt suchen." },
+      { bild: "familie", name: "Instinct Familie", rolle: "Die Dach-App", text: "Führt zusammen, was in den einzelnen Apps liegt: ein Blick auf alle Schützen, alle Ergebnisse, das Zusammenspiel." }
     ],
 
     besondersTitel: "Was für alle gilt",
@@ -2378,17 +2378,17 @@ en: {
       { zahl: "0", text: "accounts needed" }
     ],
     apps: [
-      { zeichen: "🎯", name: "Instinct Scoring", rolle: "The core — live in the store", text: "Scoring rounds on 3D and field courses. The only app in the family that already exists." },
-      { zeichen: "🏋️", name: "Instinct Coach", rolle: "Coming soon", text: "Training guidance that adapts to the archer, instead of one fixed plan for everyone." },
-      { zeichen: "🏹", name: "Instinct Builder", rolle: "Coming soon", text: "Building and managing arrows: spine, length, fletching, colours." },
-      { zeichen: "🔧", name: "Instinct Tune", rolle: "Coming soon", text: "Tuning bows and keeping the history — with photo comparison over time." },
-      { zeichen: "🌤️", name: "Instinct Weather", rolle: "Coming soon", text: "Weather at the course: wind, light, temperature — the conditions you shot in." },
-      { zeichen: "🎒", name: "Instinct Pack", rolle: "Coming soon", text: "Keeping track of kit: an inventory and packing lists, so nothing is missing before a tournament." },
-      { zeichen: "📍", name: "Instinct Range", rolle: "Coming soon", text: "Training on the range: recording and reviewing sessions, kept apart from course rounds." },
-      { zeichen: "👥", name: "Instinct Community", rolle: "Coming soon", text: "Talking to other archers — club, group, shared dates." },
-      { zeichen: "🔁", name: "Instinct Trade", rolle: "Coming soon", text: "Passing kit on: offer, search, find — second-hand archery gear." },
-      { zeichen: "🤖", name: "AI-Instinct", rolle: "Coming soon", text: "Expert advice on traditional archery — ask instead of search." },
-      { zeichen: "🏛️", name: "Instinct Family", rolle: "The parent app", text: "Brings together what sits in the individual apps: one view of all archers, all results, how it fits together." }
+      { bild: "scoring", name: "Instinct Scoring", rolle: "The core — live in the store", text: "Scoring rounds on 3D and field courses. The only app in the family that already exists." },
+      { bild: "coach", name: "Instinct Coach", rolle: "Coming soon", text: "Training guidance that adapts to the archer, instead of one fixed plan for everyone." },
+      { bild: "builder", name: "Instinct Builder", rolle: "Coming soon", text: "Building and managing arrows: spine, length, fletching, colours." },
+      { bild: "tune", name: "Instinct Tune", rolle: "Coming soon", text: "Tuning bows and keeping the history — with photo comparison over time." },
+      { bild: "weather", name: "Instinct Weather", rolle: "Coming soon", text: "Weather at the course: wind, light, temperature — the conditions you shot in." },
+      { bild: "pack", name: "Instinct Pack", rolle: "Coming soon", text: "Keeping track of kit: an inventory and packing lists, so nothing is missing before a tournament." },
+      { bild: "range", name: "Instinct Range", rolle: "Coming soon", text: "Training on the range: recording and reviewing sessions, kept apart from course rounds." },
+      { bild: "community", name: "Instinct Community", rolle: "Coming soon", text: "Talking to other archers — club, group, shared dates." },
+      { bild: "trade", name: "Instinct Trade", rolle: "Coming soon", text: "Passing kit on: offer, search, find — second-hand archery gear." },
+      { bild: "ai", name: "AI-Instinct", rolle: "Coming soon", text: "Expert advice on traditional archery — ask instead of search." },
+      { bild: "familie", name: "Instinct Family", rolle: "The parent app", text: "Brings together what sits in the individual apps: one view of all archers, all results, how it fits together." }
     ],
 
     besondersTitel: "What applies to all of them",

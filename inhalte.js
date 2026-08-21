@@ -658,9 +658,14 @@
     ["familie-apps", "familie-apps-unter"].forEach(id => {
       const ziel = el(id);
       if (!ziel) return;
+      /* 🔴 Echte App-Symbole statt Emoji (Falk 22.08.2026). Sie liegen
+         alle in `Instinct Familie\_Icons\` im selben Stil — nichts
+         ausgedacht. `alt=""` bleibt leer, weil der Name direkt darunter
+         steht: sonst liest ein Screenreader ihn zweimal vor. */
       ziel.innerHTML = hol("familie.apps").map(a => `
         <div class="familie-app">
-          <span class="familie-zeichen" aria-hidden="true">${sicher(a.zeichen)}</span>
+          <img class="familie-symbol" src="bilder/familie/${sicher(a.bild)}.webp"
+               alt="" width="64" height="64" loading="lazy">
           <b>${sicher(a.name)}</b>
           <span class="familie-rolle">${sicher(a.rolle)}</span>
           <span class="familie-text">${sicher(a.text)}</span>

@@ -2406,6 +2406,14 @@ h1.hero-text,
   border-radius: 14px;
   background: color-mix(in srgb, var(--akzent) 5%, transparent);
 }
+/* 🔴 Echtes App-Symbol statt Emoji (22.08.2026). Der weiche Rahmen
+   nimmt den Bildern die harte Kante — sie sind quadratisch, die Kachel
+   ist es nicht. */
+.familie-symbol {
+  width: 52px; height: 52px; border-radius: 12px;
+  display: block; margin-bottom: .15rem;
+}
+/* Bleibt fuer den Fall, dass irgendwo noch ein Zeichen steht. */
 .familie-zeichen { font-size: 1.65rem; line-height: 1.1; }
 .familie-app b { font-size: 1rem; }
 .familie-rolle {
