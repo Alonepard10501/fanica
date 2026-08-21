@@ -187,6 +187,13 @@ p:last-child { margin-bottom: 0; }
 /* ZeitWissen = siebtes Produkt, IN BEARBEITUNG. Tuerkis — die
    uebrigen sechs Farben (rot, oliv, neongruen, stahlblau,
    bernstein, violett) waren belegt. */
+/* Instinct Familie = Unterkategorie von Instinct Scoring, deshalb
+   bewusst DIESELBE Farbfamilie wie Instinct (oliv), nur heller —
+   sie soll zusammengehoeren, nicht konkurrieren. */
+[data-kapitel="familie"] {
+  --akzent: #93A84A;      /* Instinct Familie: helles Oliv */
+  --akzent-hell: #C2DA6B;
+}
 [data-kapitel="zeitwissen"] {
   --akzent: #17A2A2;      /* ZeitWissen: Uhren-Tuerkis */
   --akzent-hell: #3FD0D0;
@@ -2344,17 +2351,46 @@ h1.hero-text,
   .nbtn::before, .nbtn::after { transition: none !important; }
 }
 
+/* ---- Instinct Familie: die zehn Apps als Kacheln ----
+   Falk 21.08.2026: Symbole zeigen, Funktionen nennen, "Coming Soon" —
+   noch keine Inhalte. Deshalb bewusst schlicht: Zeichen, Name, Rolle,
+   ein Satz. Kein Bild, weil es noch keine echten Screenshots gibt
+   (Regel: nur echte App-Bilder, nie gemalte). */
+.familie-apps {
+  display: grid; gap: clamp(.7rem, 1.6vw, 1.1rem);
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  max-width: 1080px; margin: clamp(2rem, 5vh, 3.2rem) auto 0;
+}
+.familie-app {
+  display: flex; flex-direction: column; gap: .35rem;
+  padding: clamp(.9rem, 2vw, 1.25rem);
+  border: 1px solid color-mix(in srgb, var(--akzent) 26%, transparent);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--akzent) 5%, transparent);
+}
+.familie-zeichen { font-size: 1.65rem; line-height: 1.1; }
+.familie-app b { font-size: 1rem; }
+.familie-rolle {
+  font-size: .74rem; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--akzent-hell);
+}
+.familie-text { font-size: .9rem; color: var(--grau); line-height: 1.5; }
+@media (max-width: 560px) {
+  .familie-apps { grid-template-columns: 1fr 1fr; }
+  .familie-text { display: none; }   /* auf dem Handy nur Symbol + Rolle */
+}
+
 /* ---- App-Kacheln im Hero: die drei Apps zum Anklicken ---- */
-/* 🔴 Seit 21.08.2026 SIEBEN Produkte. Die Spaltenzahl muss zur Anzahl
+/* 🔴 Seit 21.08.2026 ACHT Produkte. Die Spaltenzahl muss zur Anzahl
    passen: Bei fünf festen Spalten brach die Reihe 5+2 um und der
    Scroll-Hinweis lag hinter der letzten Kachel (derselbe Fehler wie am
-   20.08. bei 3+2). Jetzt: eine Reihe zu siebt (breit), zu viert ab
+   20.08. bei 3+2). Jetzt: eine Reihe zu acht (breit), zu viert ab
    1100px, zu dritt ab 900px, zu zweit auf dem Handy — unten genug Luft
    für den Hinweis. Wer ein achtes Produkt ergänzt, zieht das hier mit. */
 .app-reihe {
   display: grid; gap: clamp(.7rem, 1.8vw, 1.2rem);
-  grid-template-columns: repeat(7, 1fr);
-  max-width: 1280px;
+  grid-template-columns: repeat(8, 1fr);
+  max-width: 1400px;
   margin: clamp(2.4rem, 6vh, 4rem) auto clamp(3.4rem, 8vh, 5rem);
 }
 @media (max-width: 1100px) { .app-reihe { grid-template-columns: repeat(4, 1fr); } }

@@ -79,6 +79,10 @@
       grund: "linear-gradient(180deg, #0B0803, #141005 55%, #0C0904)",
       akzent: "#E8961E", akzentHell: "#FFB84D"
     },
+    familie: {
+      grund: "linear-gradient(180deg, #0D0F0C, #171A14 48%, #0E1210)",
+      akzent: "#93A84A", akzentHell: "#C2DA6B"
+    },
     zeitwissen: {
       grund: "linear-gradient(180deg, #05100F, #0A1A19 50%, #061211)",
       akzent: "#17A2A2", akzentHell: "#3FD0D0"

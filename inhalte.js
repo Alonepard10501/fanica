@@ -650,6 +650,23 @@
         .map(o => `<li>${sicher(o)}</li>`).join("");
     }
 
+    /* ---------------- INSTINCT FAMILIE: die zehn Apps ----------------
+       Symbol, Name, Rolle, ein Satz — mehr nicht (Falk 21.08.2026:
+       "noch keine Inhalte sondern nur funktionen erwaehnen und Coming
+       Soon schreiben"). Steht auf der Startseite UND der Unterseite,
+       deshalb beide Container. */
+    ["familie-apps", "familie-apps-unter"].forEach(id => {
+      const ziel = el(id);
+      if (!ziel) return;
+      ziel.innerHTML = hol("familie.apps").map(a => `
+        <div class="familie-app">
+          <span class="familie-zeichen" aria-hidden="true">${sicher(a.zeichen)}</span>
+          <b>${sicher(a.name)}</b>
+          <span class="familie-rolle">${sicher(a.rolle)}</span>
+          <span class="familie-text">${sicher(a.text)}</span>
+        </div>`).join("");
+    });
+
     /* ---------------- INSTINCT: die DSB-Fassung im Bau ----------------
        Steht nur auf der Instinct-Unterseite. Auf allen anderen Seiten
        fehlt der Container und der Block entfällt lautlos. */
@@ -674,6 +691,21 @@
     const zOffen = el("zeitwissen-offen");
     if (zOffen) {
       zOffen.innerHTML = hol("zeitwissen.offenListe")
+        .map(o => `<li>${sicher(o)}</li>`).join("");
+    }
+
+    const fBesonders = el("familie-besonders");
+    if (fBesonders) {
+      fBesonders.innerHTML = hol("familie.besonders").map(b => `
+        <div class="funktion">
+          <b>${sicher(b.name)}</b>
+          <span>${sicher(b.text)}</span>
+        </div>`).join("");
+    }
+
+    const fOffen = el("familie-offen");
+    if (fOffen) {
+      fOffen.innerHTML = hol("familie.offenListe")
         .map(o => `<li>${sicher(o)}</li>`).join("");
     }
 
@@ -825,7 +857,7 @@
        wichtigsten Funktionen als Raster, dann die Anzeigen als Liste.
        Die SetUpLeiste laeuft mit — sie hat Zahlen und Liste, aber keine
        `umfangAnzeigen`; der Baustein ueberspringt fehlende Container. */
-    ["instinct", "fanica", "neonpunkt", "setupleiste", "campus", "yourfilm", "zeitwissen"].forEach(app => {
+    ["instinct", "fanica", "neonpunkt", "setupleiste", "campus", "yourfilm", "zeitwissen", "familie"].forEach(app => {
       const zahlen = el(app + "-umfang-zahlen");
       if (zahlen) {
         zahlen.innerHTML = hol(app + ".umfangZahlen").map(z => `

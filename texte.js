@@ -42,6 +42,7 @@ de: {
     appCampus: "In Bearbeitung",
     appYourfilm: "In Bearbeitung",
     appZeitwissen: "In Bearbeitung",
+    appFamilie: "Coming Soon",
     scrollHinweis: "Scrollen"
   },
 
@@ -1039,6 +1040,60 @@ de: {
     mehrText: "Das Zeitkonto, die Trennung von Projekt- und Personen-Soll — und was bis zur Veröffentlichung noch passiert.",
     hinweis: "ZeitWissen ist in Entwicklung. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
+  familie: {
+    kennung: "Kapitel 08 · In Bearbeitung",
+    statusPille: "Coming Soon — im Bau",
+    name: "Instinct Familie",
+    untertitel: "Aus einer App wird eine Familie",
+    claim: "Zehn Apps. Ein Bogensport.",
+    claimZwei: "Jede für sich. Alle zusammen.",
+    positionierung: "Instinct Scoring deckt eine Sache ab: die Runde werten. Aber zum Bogenschießen gehört mehr — Training, Material, Wetter, Ausrüstung, Gemeinschaft. Daraus wird eine Familie eigenständiger Apps, die dieselbe Sprache sprechen und ihre Daten miteinander teilen können. Wer nur werten will, nimmt weiter nur Instinct Scoring.",
+    inArbeit: "🚧 Coming Soon: Die Apps sind angelegt und werden gebaut. Noch gibt es keine Inhalte zu zeigen und keinen Store-Eintrag — dieser Abschnitt sagt nur, was kommt.",
+
+    kernTitel: "Warum eine Familie und nicht eine große App",
+    kernText: "Eine App, die alles kann, kann am Ende nichts richtig — und wer nur seine Runde werten will, müsste sich durch neun Bereiche wühlen, die ihn nicht interessieren. Deshalb bleibt jede Sache ihre eigene App: klein, verständlich, für sich benutzbar. Wer mehrere hat, bekommt sie über eine Dach-App zusammengeführt; die Apps teilen sich eine gemeinsame Grundlage, damit Schützen, Bögen und Ergebnisse überall dieselben sind und nicht doppelt gepflegt werden müssen.",
+
+    umfangTitel: "Die Familie",
+    umfangText: "Zehn Apps rund um Instinct Scoring — jede mit einem klaren Zweck. Was hier steht, ist der geplante Funktionsumfang; gebaut wird gerade.",
+    umfangZahlen: [
+      { zahl: "10", text: "Apps geplant" },
+      { zahl: "1", text: "Dach-App" },
+      { zahl: "1", text: "gemeinsame Grundlage" },
+      { zahl: "0", text: "Konten nötig" }
+    ],
+    apps: [
+      { zeichen: "🎯", name: "Instinct Scoring", rolle: "Der Kern — live im Store", text: "Runden werten auf 3D- und Feldparcours. Die einzige App der Familie, die es schon gibt." },
+      { zeichen: "🏋️", name: "Instinct Coach", rolle: "Coming Soon", text: "Trainingsbegleitung, die sich dem Schützen anpasst — statt eines festen Plans für alle." },
+      { zeichen: "🏹", name: "Instinct Builder", rolle: "Coming Soon", text: "Pfeile zusammenstellen und verwalten: Spine, Länge, Befiederung, Farben." },
+      { zeichen: "🔧", name: "Instinct Tune", rolle: "Coming Soon", text: "Bögen einstellen und den Verlauf festhalten — mit Fotovergleich über die Zeit." },
+      { zeichen: "🌤️", name: "Instinct Weather", rolle: "Coming Soon", text: "Wetter am Parcours: Wind, Licht, Temperatur — die Bedingungen, unter denen geschossen wurde." },
+      { zeichen: "🎒", name: "Instinct Pack", rolle: "Coming Soon", text: "Ausrüstung im Blick: Inventar führen und Packlisten, damit vor dem Turnier nichts fehlt." },
+      { zeichen: "📍", name: "Instinct Range", rolle: "Coming Soon", text: "Training auf dem Platz: Einheiten festhalten und auswerten, getrennt vom Parcours." },
+      { zeichen: "👥", name: "Instinct Community", rolle: "Coming Soon", text: "Der Austausch mit anderen Schützen — Verein, Gruppe, gemeinsame Termine." },
+      { zeichen: "🔁", name: "Instinct Trade", rolle: "Coming Soon", text: "Material weitergeben: anbieten, suchen, finden — Bogensport-Zubehör aus zweiter Hand." },
+      { zeichen: "🤖", name: "AI-Instinct", rolle: "Coming Soon", text: "Fachberatung zum traditionellen Bogenschießen — fragen statt suchen." },
+      { zeichen: "🏛️", name: "Instinct Familie", rolle: "Die Dach-App", text: "Führt zusammen, was in den einzelnen Apps liegt: ein Blick auf alle Schützen, alle Ergebnisse, das Zusammenspiel." }
+    ],
+
+    besondersTitel: "Was für alle gilt",
+    besonders: [
+      { name: "Jede App steht für sich", text: "Keine App braucht eine andere. Wer nur wertet, installiert nur Instinct Scoring — und merkt vom Rest nichts." },
+      { name: "Eine gemeinsame Grundlage", text: "Alle Apps teilen dieselbe Datensprache. Ein Schütze, ein Bogen, ein Ergebnis — überall dasselbe, nicht überall neu eingetippt." },
+      { name: "Ohne Konto, ohne Server", text: "Was für Instinct Scoring gilt, gilt für die ganze Familie: Die Daten bleiben auf dem Gerät." }
+    ],
+
+    statusTitel: "Ehrlicher Stand",
+    statusText: "Alle zehn Apps sind angelegt und im Bau — Gerüst, Datenmodell und erste Bildschirme stehen. Was noch fehlt:",
+    offenListe: [
+      "Inhalte: die Apps sind Gerüste, noch keine fertigen Produkte",
+      "Kein Store-Eintrag, kein Termin",
+      "Reihenfolge der Veröffentlichung noch offen"
+    ],
+
+    mehrKnopf: "Alles über die Instinct Familie",
+    mehrText: "Welche App was macht, warum es zehn sind und nicht eine — und was sie verbindet.",
+    hinweis: "Die Instinct Familie ist in Entwicklung. Alle Angaben beschreiben den geplanten Umfang und können sich ändern. Verfügbar ist bisher allein Instinct Scoring."
+  },
 
   /* ============ LIVE — automatisch geladene Renndaten ============ */
   live: {
@@ -1267,6 +1322,7 @@ en: {
     appCampus: "In progress",
     appYourfilm: "In progress",
     appZeitwissen: "In progress",
+    appFamilie: "Coming soon",
     scrollHinweis: "Scroll"
   },
 
@@ -2226,6 +2282,60 @@ en: {
     mehrKnopf: "All about ZeitWissen",
     mehrText: "The time balance, keeping project and personal targets apart — and what still happens before release.",
     hinweis: "ZeitWissen is in development. All details describe the current build and may change before release."
+  },
+  familie: {
+    kennung: "Chapter 08 · In progress",
+    statusPille: "Coming soon — in the works",
+    name: "Instinct Family",
+    untertitel: "One app becomes a family",
+    claim: "Ten apps. One sport.",
+    claimZwei: "Each on its own. All together.",
+    positionierung: "Instinct Scoring covers one thing: scoring the round. But archery is more than that — training, arrows, weather, kit, community. That is becoming a family of standalone apps that speak the same language and can share their data. If all you want is scoring, you still just take Instinct Scoring.",
+    inArbeit: "🚧 Coming soon: the apps exist and are being built. There is no content to show yet and no store listing — this section only says what is coming.",
+
+    kernTitel: "Why a family and not one big app",
+    kernText: "An app that does everything ends up doing nothing well — and someone who only wants to score a round would have to wade through nine areas that do not concern them. So each thing stays its own app: small, understandable, usable on its own. Anyone with several gets them tied together by a parent app; the apps share a common foundation so that archers, bows and results are the same everywhere instead of being maintained twice.",
+
+    umfangTitel: "The family",
+    umfangText: "Ten apps around Instinct Scoring — each with a clear purpose. What follows is the planned scope; building is under way.",
+    umfangZahlen: [
+      { zahl: "10", text: "apps planned" },
+      { zahl: "1", text: "parent app" },
+      { zahl: "1", text: "shared foundation" },
+      { zahl: "0", text: "accounts needed" }
+    ],
+    apps: [
+      { zeichen: "🎯", name: "Instinct Scoring", rolle: "The core — live in the store", text: "Scoring rounds on 3D and field courses. The only app in the family that already exists." },
+      { zeichen: "🏋️", name: "Instinct Coach", rolle: "Coming soon", text: "Training guidance that adapts to the archer, instead of one fixed plan for everyone." },
+      { zeichen: "🏹", name: "Instinct Builder", rolle: "Coming soon", text: "Building and managing arrows: spine, length, fletching, colours." },
+      { zeichen: "🔧", name: "Instinct Tune", rolle: "Coming soon", text: "Tuning bows and keeping the history — with photo comparison over time." },
+      { zeichen: "🌤️", name: "Instinct Weather", rolle: "Coming soon", text: "Weather at the course: wind, light, temperature — the conditions you shot in." },
+      { zeichen: "🎒", name: "Instinct Pack", rolle: "Coming soon", text: "Keeping track of kit: an inventory and packing lists, so nothing is missing before a tournament." },
+      { zeichen: "📍", name: "Instinct Range", rolle: "Coming soon", text: "Training on the range: recording and reviewing sessions, kept apart from course rounds." },
+      { zeichen: "👥", name: "Instinct Community", rolle: "Coming soon", text: "Talking to other archers — club, group, shared dates." },
+      { zeichen: "🔁", name: "Instinct Trade", rolle: "Coming soon", text: "Passing kit on: offer, search, find — second-hand archery gear." },
+      { zeichen: "🤖", name: "AI-Instinct", rolle: "Coming soon", text: "Expert advice on traditional archery — ask instead of search." },
+      { zeichen: "🏛️", name: "Instinct Family", rolle: "The parent app", text: "Brings together what sits in the individual apps: one view of all archers, all results, how it fits together." }
+    ],
+
+    besondersTitel: "What applies to all of them",
+    besonders: [
+      { name: "Every app stands alone", text: "No app needs another. If you only score, you only install Instinct Scoring — and never notice the rest." },
+      { name: "A shared foundation", text: "All apps speak the same data language. One archer, one bow, one result — the same everywhere, not typed in again each time." },
+      { name: "No account, no server", text: "What holds for Instinct Scoring holds for the whole family: the data stays on your device." }
+    ],
+
+    statusTitel: "Honest status",
+    statusText: "All ten apps exist and are being built — scaffolding, data model and first screens are in place. What is still missing:",
+    offenListe: [
+      "Content: the apps are scaffolding, not finished products yet",
+      "No store listing, no date",
+      "Release order still open"
+    ],
+
+    mehrKnopf: "All about the Instinct Family",
+    mehrText: "Which app does what, why there are ten and not one — and what ties them together.",
+    hinweis: "The Instinct Family is in development. All details describe the planned scope and may change. Only Instinct Scoring is available so far."
   },
 
   /* ============ LIVE — automatically loaded race data ============ */
