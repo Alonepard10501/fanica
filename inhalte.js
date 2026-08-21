@@ -650,6 +650,33 @@
         .map(o => `<li>${sicher(o)}</li>`).join("");
     }
 
+    /* ---------------- INSTINCT: die DSB-Fassung im Bau ----------------
+       Steht nur auf der Instinct-Unterseite. Auf allen anderen Seiten
+       fehlt der Container und der Block entfällt lautlos. */
+    const dsbDazu = el("instinct-dsb-dazu");
+    if (dsbDazu) {
+      dsbDazu.innerHTML = hol("instinct.dsbDazu").map(b => `
+        <div class="funktion">
+          <b>${sicher(b.name)}</b>
+          <span>${sicher(b.text)}</span>
+        </div>`).join("");
+    }
+
+    const zBesonders = el("zeitwissen-besonders");
+    if (zBesonders) {
+      zBesonders.innerHTML = hol("zeitwissen.besonders").map(b => `
+        <div class="funktion">
+          <b>${sicher(b.name)}</b>
+          <span>${sicher(b.text)}</span>
+        </div>`).join("");
+    }
+
+    const zOffen = el("zeitwissen-offen");
+    if (zOffen) {
+      zOffen.innerHTML = hol("zeitwissen.offenListe")
+        .map(o => `<li>${sicher(o)}</li>`).join("");
+    }
+
     /* ---------------- FANICA: echte laufende Runde ----------------
        Zahlen aus `runde.js` (aus der echten App-Datenlage gerechnet,
        nichts geschätzt). Der Block erscheint nur, wenn runde.js
@@ -798,7 +825,7 @@
        wichtigsten Funktionen als Raster, dann die Anzeigen als Liste.
        Die SetUpLeiste laeuft mit — sie hat Zahlen und Liste, aber keine
        `umfangAnzeigen`; der Baustein ueberspringt fehlende Container. */
-    ["instinct", "fanica", "neonpunkt", "setupleiste", "campus", "yourfilm"].forEach(app => {
+    ["instinct", "fanica", "neonpunkt", "setupleiste", "campus", "yourfilm", "zeitwissen"].forEach(app => {
       const zahlen = el(app + "-umfang-zahlen");
       if (zahlen) {
         zahlen.innerHTML = hol(app + ".umfangZahlen").map(z => `

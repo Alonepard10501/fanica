@@ -79,6 +79,10 @@
       grund: "linear-gradient(180deg, #0B0803, #141005 55%, #0C0904)",
       akzent: "#E8961E", akzentHell: "#FFB84D"
     },
+    zeitwissen: {
+      grund: "linear-gradient(180deg, #05100F, #0A1A19 50%, #061211)",
+      akzent: "#17A2A2", akzentHell: "#3FD0D0"
+    },
     yourfilm: {
       grund: "linear-gradient(180deg, #0B0710, #150A20 50%, #0B0713)",
       akzent: "#9A3FE0", akzentHell: "#B85CFF"

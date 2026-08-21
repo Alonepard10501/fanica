@@ -41,6 +41,7 @@ de: {
     appSetup: "PC-Anzeige",
     appCampus: "In Bearbeitung",
     appYourfilm: "In Bearbeitung",
+    appZeitwissen: "In Bearbeitung",
     scrollHinweis: "Scrollen"
   },
 
@@ -55,6 +56,26 @@ de: {
     zitat: "Der Schütze entscheidet. Die App dokumentiert.",
     positionierung: "Die Scoring-App für traditionelles und instinktives Bogenschießen auf 3D- und Feldparcours. Sie ersetzt den Papierzettel. Komplett offline. Sie bewertet nichts und korrigiert nichts — sie dokumentiert.",
 
+
+    /* --- DSB-Fassung im Bau (Falk 21.08.2026) --------------------
+       Die Live-App kann das NICHT. Deshalb steht ueberall dabei,
+       dass es eine kommende Fassung ist. */
+    dsbTitel: "In Arbeit: die DSB-Fassung",
+    dsbText: "Instinct Scoring wertet bisher, was auf dem Parcours zählt. Parallel entsteht eine Fassung für den Wettkampfbetrieb nach den Regeln des Deutschen Schützenbundes — mit allem, was ein Turnier dafür braucht. Sie steckt noch nicht in der App, die es im Store gibt.",
+    dsbWasTitel: "Was „DSB-konform“ bedeutet",
+    dsbWasText: "Im DSB wird nicht frei gewertet: Wie weit geschossen wird, auf welche Auflage, mit wie vielen Pfeilen und in welcher Zeit — das hängt an Bogenklasse, Altersklasse und Disziplin. Die App rechnet diese Klassen aus dem Jahrgang aus und zeigt beim Werten genau die Bedingungen des Schützen, der gerade dran ist. Die Werte stehen nicht im Programm, sondern in einer eigenen Regeldatei mit 112 Bedingungen, geprüft gegen die Sportordnung. Ändert der Verband etwas, wird die Datei getauscht — nicht die App.",
+    dsbDazuTitel: "Was dazukommt",
+    dsbDazu: [
+      { name: "DSB als sechstes Wertungssystem", text: "Zehnerringe mit X, Halle über drei Pfeile, im Freien über sechs — neben den fünf Systemen, die es schon gibt." },
+      { name: "Klassen aus dem Jahrgang", text: "Acht Bogenklassen, sieben Altersklassen, zwei Disziplinen. Beim Rundenende wird die Klasse eingefroren, damit dieselbe Runde nächstes Jahr nicht anders dasteht." },
+      { name: "Rolle Turnierleitung", text: "Eine eigene Oberfläche für den Leiter: Wettkampf anlegen, Startliste führen, Schützen auf Scheiben verteilen, Schießzeit freigeben." },
+      { name: "Gesperrte Passen", text: "Eine bestätigte Passe ist zu. Wer korrigieren will, stellt einen Antrag — die Leitung gibt ihn frei, mit Protokoll." },
+      { name: "Übergabe per QR oder Netz", text: "Die Scheiben gehen an die Leitung: entweder über einen QR-Code oder direkt über das WLAN vor Ort. Ohne Server, ohne Konto." },
+      { name: "Rangliste je Klasse", text: "Gewertet wird innerhalb der Klasse. Bei Gleichstand entscheidet die Disziplin — im Freien zählt zuerst das X." },
+      { name: "Ausdrucke", text: "Ergebnisliste zum Aushang, nach Klassen gegliedert. Und Schusszettel mit jeder Passe und Unterschriftsfeldern, wie die Sportordnung sie verlangt." }
+    ],
+    dsbStandTitel: "Ehrlicher Stand",
+    dsbStandText: "Ein Turnier ist von Anfang bis Ende durchführbar, 349 Tests halten den Stand fest. Was noch fehlt: die Strecke von Gerät zu Gerät im echten WLAN und ein bestandenes Apple-Review für die neuen Netz-Rechte. Ein Termin steht noch nicht fest.",
 
     /* --- Die Hauptseite der App vorstellen (Falk 30.07.) --- */
     startTitel: "Die Startseite",
@@ -967,6 +988,58 @@ de: {
     hinweis: "YourFilm ist in Entwicklung. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
 
+  zeitwissen: {
+    kennung: "Kapitel 07 · In Bearbeitung",
+    statusPille: "In Bearbeitung — gebaut, wird getestet",
+    name: "ZeitWissen",
+    untertitel: "Arbeitszeit, die sich selbst erklärt",
+    claim: "Einstempeln. Fertig.",
+    claimZwei: "Den Rest rechnet die App.",
+    positionierung: "Eine Arbeitszeit-App mit Zeitkonto: einstempeln, ausstempeln — Über- und Fehlstunden laufen von allein mit. Wer will, teilt die Zeit auf Projekte und Aufgaben auf und holt am Monatsende einen Bericht als Excel, PDF oder HTML heraus. Komplett auf dem Gerät, ohne Konto.",
+    inArbeit: "🚧 In Bearbeitung: Die App ist gebaut und läuft im Alltagstest. Es gibt noch keinen Store-Eintrag — und nichts zu kaufen.",
+
+    kernTitel: "Der Kniff",
+    kernText: "Die Gesamtzeit läuft vom Ein- bis zum Ausstempeln — Aufgaben laufen innerhalb davon und teilen diese Zeit nur auf, sie verlängern sie nicht. Wer drei Aufgaben nacheinander antippt, hat am Ende trotzdem genau seinen Arbeitstag. Und das Projekt-Soll ist vom persönlichen Soll getrennt: Arbeitest du in einem Monat an zwei Projekten, zählt jede Stunde für ihr Projekt und zusätzlich in deine Gesamtzeit.",
+
+    umfangTitel: "Was drinsteckt",
+    umfangText: "Vom einen Knopf bis zur Monatsauswertung: erfassen, aufteilen, nachweisen — ohne dass jemand eine Tabelle pflegen muss.",
+    umfangZahlen: [
+      { zahl: "14", text: "Bildschirme" },
+      { zahl: "4", text: "Bereiche" },
+      { zahl: "3", text: "Berichtsformate" },
+      { zahl: "147", text: "Tests" }
+    ],
+    umfangListe: [
+      { name: "Ein Knopf", text: "Einstempeln, ausstempeln — mehr braucht der Alltag nicht. Der Rest ist freiwillig." },
+      { name: "Zeitkonto", text: "Über- und Fehlstunden laufen automatisch mit, gegen die Sollzeit je Wochentag." },
+      { name: "Startbildschirm-Widget", text: "Ein- und ausstempeln direkt vom Startbildschirm, ohne die App zu öffnen." },
+      { name: "Projekte & Aufgaben", text: "Zeit auf Projekte und Aufgaben aufteilen — mit eigener Farbe, Kunde und Abrechnungsart." },
+      { name: "Eigenes Projekt-Soll", text: "Jedes Projekt kann eigene Arbeitsstunden und ein eigenes Konto führen, getrennt vom persönlichen." },
+      { name: "Berichte", text: "Zeitraum wählen und als Excel, PDF oder HTML teilen — fertig für die Abrechnung." },
+      { name: "Verdienst", text: "Stunden-, Wochen- oder Monatssatz je Projekt; die App rechnet den effektiven Stundensatz aus." },
+      { name: "Erinnerungen", text: "Meldet sich, wenn das Tagessoll erreicht ist oder du morgens noch nicht eingestempelt hast." }
+    ],
+
+    besondersTitel: "Was es besonders macht",
+    besonders: [
+      { name: "Eine Rechenstelle", text: "Alle Zeitwerte kommen aus derselben Stelle im Code. Kein Bildschirm rechnet selbst — deshalb kann die Wochenansicht nie eine andere Summe zeigen als der Monatsbericht." },
+      { name: "Die Dauer wird nie gespeichert", text: "Gespeichert werden nur Start und Ende, die Dauer wird immer neu gerechnet. Zwei Felder für dieselbe Wahrheit laufen sonst früher oder später auseinander." },
+      { name: "Sommerzeit gehört dazu", text: "Ein Tag hat bei der Umstellung 23 oder 25 Stunden. Die App zählt deshalb nie in festen Vierundzwanzig-Stunden-Schritten weiter, sondern immer über den echten Kalendertag." }
+    ],
+
+    statusTitel: "Ehrlicher Stand",
+    statusText: "Gebaut und im Alltagstest — 147 Tests halten den Stand fest. Was noch aussteht:",
+    offenListe: [
+      "Alltagstest über mehrere Wochen läuft",
+      "Store-Eintrag (Google Play zuerst)",
+      "Bisher nur Deutsch"
+    ],
+
+    mehrKnopf: "Alles über ZeitWissen",
+    mehrText: "Das Zeitkonto, die Trennung von Projekt- und Personen-Soll — und was bis zur Veröffentlichung noch passiert.",
+    hinweis: "ZeitWissen ist in Entwicklung. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+  },
+
   /* ============ LIVE — automatisch geladene Renndaten ============ */
   live: {
     naechstesTitel: "Das nächste Rennen",
@@ -1051,19 +1124,19 @@ de: {
   vergleich: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
-    text: "Sechs Produkte, sechs völlig verschiedene Zwecke — vier fertig, zwei in Arbeit. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm"],
+    text: "Sieben Produkte, sieben völlig verschiedene Zwecke — vier fertig, drei in Arbeit. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto.",
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitWissen"],
     zeilen: [
-      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten"] },
-      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "In Bearbeitung"] },
-      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Allein"] },
-      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten (freiwillig)"] },
-      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein"] },
-      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer", "13 Bildschirme"] },
-      { name: "Sprachen",      werte: ["2", "2", "16", "1", "1", "1"] },
-      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Alles — es gibt noch nichts zu kaufen"] },
-      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "noch offen"] },
-      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android"] }
+      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen"] },
+      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "In Bearbeitung", "In Bearbeitung"] },
+      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Allein", "Allein"] },
+      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten (freiwillig)", "Nie"] },
+      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein", "Nein"] },
+      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer", "13 Bildschirme", "14 Bildschirme"] },
+      { name: "Sprachen",      werte: ["2", "2", "16", "1", "1", "1", "1"] },
+      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Alles — es gibt noch nichts zu kaufen", "Alles — die ganze App"] },
+      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "noch offen", "—"] },
+      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android", "Android · iOS"] }
     ],
     fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash und YourFilm steht noch nicht fest, ob und was etwas kosten wird."
   },
@@ -1193,6 +1266,7 @@ en: {
     appSetup: "PC monitor",
     appCampus: "In progress",
     appYourfilm: "In progress",
+    appZeitwissen: "In progress",
     scrollHinweis: "Scroll"
   },
 
@@ -1206,6 +1280,24 @@ en: {
     claimDeutsch: "Your course. Your performance. Your progress.",
     zitat: "The archer decides. The app records.",
     positionierung: "The scoring app for traditional and instinctive archery on 3D and field courses. It replaces the paper scorecard. Fully offline. It doesn't judge and it doesn't correct — it records.",
+
+    /* --- DSB edition in progress (Falk 21.08.2026) --------------- */
+    dsbTitel: "In progress: the DSB edition",
+    dsbText: "Instinct Scoring currently scores what counts on the course. Alongside it, an edition for competition under the rules of the German Shooting Federation (DSB) is being built — with everything a tournament needs. It is not part of the app you can download today.",
+    dsbWasTitel: "What „DSB-compliant\u201c means",
+    dsbWasText: "The DSB does not leave scoring open: shooting distance, target face, arrow count and time limit all depend on bow class, age class and discipline. The app derives those classes from the year of birth and shows exactly the conditions of the archer whose turn it is. The values do not live in the program but in a separate rule file with 112 conditions, checked against the sporting regulations. If the federation changes something, the file is replaced — not the app.",
+    dsbDazuTitel: "What it adds",
+    dsbDazu: [
+      { name: "DSB as a sixth scoring system", text: "Ten-ring scoring with X, indoor over three arrows, outdoor over six — alongside the five systems already there." },
+      { name: "Classes from the year of birth", text: "Eight bow classes, seven age classes, two disciplines. The class is frozen when a round ends, so the same round does not read differently next year." },
+      { name: "Tournament director role", text: "A dedicated interface for the director: create the competition, keep the start list, assign archers to targets, release shooting time." },
+      { name: "Locked ends", text: "A confirmed end is closed. Corrections go through a request the director approves — with a record of what changed." },
+      { name: "Handover by QR or network", text: "Targets go to the director either by QR code or straight across the local Wi-Fi. No server, no account." },
+      { name: "Ranking per class", text: "Scoring happens within the class. Ties are broken by discipline — outdoors the X count comes first." },
+      { name: "Printouts", text: "A results list for the notice board, grouped by class. And score sheets with every end and signature fields, as the regulations require." }
+    ],
+    dsbStandTitel: "Honest status",
+    dsbStandText: "A tournament can be run from start to finish, and 349 tests hold that in place. Still missing: the device-to-device leg over real Wi-Fi, and a passed Apple review for the new network permissions. No date has been set.",
 
     startTitel: "The home screen",
     startText: "Everything starts here. One tap on the green button and your round is running — scoring system, mode and archers are already set from last time. Below that: profile, tournament and statistics. Anything that needs Premium says so openly; nothing is hidden.",
@@ -2084,6 +2176,58 @@ en: {
     hinweis: "YourFilm is under development. All details describe the current build state and may change before release."
   },
 
+  zeitwissen: {
+    kennung: "Chapter 07 · In progress",
+    statusPille: "In progress — built, being tested",
+    name: "ZeitWissen",
+    untertitel: "Working hours that explain themselves",
+    claim: "Clock in. Done.",
+    claimZwei: "The app does the rest of the maths.",
+    positionierung: "A working-hours app with a running balance: clock in, clock out — overtime and shortfall are tracked for you. If you want, split your time across projects and tasks and export a report as Excel, PDF or HTML at the end of the month. Entirely on your device, no account.",
+    inArbeit: "🚧 In progress: the app is built and in everyday testing. There is no store listing yet — and nothing to buy.",
+
+    kernTitel: "The trick",
+    kernText: "Total time runs from clocking in to clocking out — tasks run inside that window and only divide it up, they never extend it. Tap three tasks in a row and you still end up with exactly your working day. And project hours are kept apart from your personal target: work on two projects in a month and every hour counts towards its project and towards your total.",
+
+    umfangTitel: "What is inside",
+    umfangText: "From a single button to the monthly summary: record, divide, prove — without anyone maintaining a spreadsheet.",
+    umfangZahlen: [
+      { zahl: "14", text: "screens" },
+      { zahl: "4", text: "areas" },
+      { zahl: "3", text: "report formats" },
+      { zahl: "147", text: "tests" }
+    ],
+    umfangListe: [
+      { name: "One button", text: "Clock in, clock out — everyday use needs no more than that. The rest is optional." },
+      { name: "Time balance", text: "Overtime and shortfall are tracked automatically against your target hours per weekday." },
+      { name: "Home screen widget", text: "Clock in and out straight from the home screen, without opening the app." },
+      { name: "Projects & tasks", text: "Split time across projects and tasks — each with its own colour, client and billing mode." },
+      { name: "Per-project targets", text: "Every project can carry its own hours and its own balance, separate from your personal one." },
+      { name: "Reports", text: "Pick a period and share it as Excel, PDF or HTML — ready for invoicing." },
+      { name: "Earnings", text: "Hourly, weekly or monthly rate per project; the app works out the effective hourly rate." },
+      { name: "Reminders", text: "Nudges you when your daily target is reached, or when you have not clocked in by morning." }
+    ],
+
+    besondersTitel: "What makes it special",
+    besonders: [
+      { name: "One place that calculates", text: "Every time value comes from the same place in the code. No screen does its own maths — which is why the weekly view can never show a different total than the monthly report." },
+      { name: "Duration is never stored", text: "Only start and end are stored; the duration is always recalculated. Two fields holding the same truth drift apart sooner or later." },
+      { name: "Daylight saving is part of it", text: "A day has 23 or 25 hours when the clocks change. The app therefore never counts on in fixed twenty-four-hour steps, but always across the real calendar day." }
+    ],
+
+    statusTitel: "Honest status",
+    statusText: "Built and in everyday testing — 147 tests hold the state in place. Still to come:",
+    offenListe: [
+      "Multi-week everyday test under way",
+      "Store listing (Google Play first)",
+      "German only for now"
+    ],
+
+    mehrKnopf: "All about ZeitWissen",
+    mehrText: "The time balance, keeping project and personal targets apart — and what still happens before release.",
+    hinweis: "ZeitWissen is in development. All details describe the current build and may change before release."
+  },
+
   /* ============ LIVE — automatically loaded race data ============ */
   live: {
     naechstesTitel: "The next race",
@@ -2142,18 +2286,18 @@ en: {
     kennung: "At a glance",
     titel: "Which app is for you?",
     text: "Six products, six entirely different purposes — four finished, two in progress. What they share: they work offline, they collect nothing about you, and they don't ask for an account.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm"],
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitWissen"],
     zeilen: [
-      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection"] },
-      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In progress"] },
-      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Alone"] },
-      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never", "Only for film data (optional)"] },
-      { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No", "No"] },
-      { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects", "13 screens"] },
-      { name: "Languages",      werte: ["2", "2", "16", "1", "1", "1"] },
-      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Everything — nothing to buy yet"] },
-      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "not decided yet"] },
-      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android"] }
+      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours"] },
+      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In progress", "In progress"] },
+      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Alone", "Alone"] },
+      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never", "Only for film data (optional)", "Never"] },
+      { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No", "No", "No"] },
+      { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects", "13 screens", "14 screens"] },
+      { name: "Languages",      werte: ["2", "2", "16", "1", "1", "1", "1"] },
+      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Everything — nothing to buy yet", "Everything — the whole app"] },
+      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "not decided yet", "—"] },
+      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android", "Android · iOS"] }
     ],
     fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash and YourFilm it is not yet decided whether anything will cost money."
   },
