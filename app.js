@@ -79,6 +79,10 @@
       grund: "linear-gradient(180deg, #0B0803, #141005 55%, #0C0904)",
       akzent: "#E8961E", akzentHell: "#FFB84D"
     },
+    tankbuch: {
+      grund: "linear-gradient(180deg, #100A06, #1B120B 50%, #120C08)",
+      akzent: "#C2703A", akzentHell: "#E8944F"
+    },
     familie: {
       grund: "linear-gradient(180deg, #0D0F0C, #171A14 48%, #0E1210)",
       akzent: "#93A84A", akzentHell: "#C2DA6B"

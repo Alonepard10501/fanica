@@ -190,6 +190,13 @@ p:last-child { margin-bottom: 0; }
 /* Instinct Familie = Unterkategorie von Instinct Scoring, deshalb
    bewusst DIESELBE Farbfamilie wie Instinct (oliv), nur heller —
    sie soll zusammengehoeren, nicht konkurrieren. */
+/* Tankbuch = neuntes Produkt, IN BEARBEITUNG. Bernstein war
+   belegt (Campus Clash), Tuerkis auch (ZeitWissen) — deshalb
+   ein warmes Kupfer, das sich von beiden abhebt. */
+[data-kapitel="tankbuch"] {
+  --akzent: #C2703A;      /* Tankbuch: Kupfer */
+  --akzent-hell: #E8944F;
+}
 [data-kapitel="familie"] {
   --akzent: #93A84A;      /* Instinct Familie: helles Oliv */
   --akzent-hell: #C2DA6B;
@@ -1646,7 +1653,7 @@ h1.hero-text,
 .vergleich thead th.app-3,
 .vergleich thead th.app-4,
 .vergleich thead th.app-5,
-.vergleich thead th.app-7 { width: calc((100% - 15rem) / 7); }
+.vergleich thead th.app-7 { width: calc((100% - 15rem) / 8); }
 .vergleich th, .vergleich td {
   padding: .85rem 1rem; text-align: left;
   border-bottom: 1px solid rgba(255,255,255,.09);
@@ -1670,6 +1677,7 @@ h1.hero-text,
 .vergleich thead th.app-5 { color: #FFB84D; }   /* Campus Clash */
 .vergleich thead th.app-6 { color: #B85CFF; }   /* YourFilm     */
 .vergleich thead th.app-7 { color: #3FD0D0; }   /* ZeitWissen   */
+.vergleich thead th.app-8 { color: #E8944F; }   /* Tankbuch     */
 .vergleich tbody th {
   font-family: var(--schrift-text); font-weight: 600;
   font-size: .86rem; color: var(--grau);
@@ -2402,16 +2410,16 @@ h1.hero-text,
 }
 
 /* ---- App-Kacheln im Hero: die drei Apps zum Anklicken ---- */
-/* 🔴 Seit 21.08.2026 ACHT Produkte. Die Spaltenzahl muss zur Anzahl
+/* 🔴 Seit 21.08.2026 NEUN Produkte. Die Spaltenzahl muss zur Anzahl
    passen: Bei fünf festen Spalten brach die Reihe 5+2 um und der
    Scroll-Hinweis lag hinter der letzten Kachel (derselbe Fehler wie am
-   20.08. bei 3+2). Jetzt: eine Reihe zu acht (breit), zu viert ab
+   20.08. bei 3+2). Jetzt: eine Reihe zu neunt (breit), zu viert ab
    1100px, zu dritt ab 900px, zu zweit auf dem Handy — unten genug Luft
    für den Hinweis. Wer ein achtes Produkt ergänzt, zieht das hier mit. */
 .app-reihe {
   display: grid; gap: clamp(.7rem, 1.8vw, 1.2rem);
-  grid-template-columns: repeat(8, 1fr);
-  max-width: 1400px;
+  grid-template-columns: repeat(9, 1fr);
+  max-width: 1480px;
   margin: clamp(2.4rem, 6vh, 4rem) auto clamp(3.4rem, 8vh, 5rem);
 }
 @media (max-width: 1100px) { .app-reihe { grid-template-columns: repeat(4, 1fr); } }

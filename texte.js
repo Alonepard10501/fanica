@@ -43,6 +43,7 @@ de: {
     appYourfilm: "In Bearbeitung",
     appZeitwissen: "In Bearbeitung",
     appFamilie: "Coming Soon",
+    appTankbuch: "In Bearbeitung",
     scrollHinweis: "Scrollen"
   },
 
@@ -1103,6 +1104,57 @@ de: {
     mehrText: "Welche App was macht, warum es zehn sind und nicht eine — und was sie verbindet.",
     hinweis: "Die Instinct Familie ist in Entwicklung. Alle Angaben beschreiben den geplanten Umfang und können sich ändern. Verfügbar ist bisher allein Instinct Scoring."
   },
+  tankbuch: {
+    kennung: "Kapitel 09 · In Bearbeitung",
+    statusPille: "In Bearbeitung — gebaut, wird getestet",
+    name: "Tankbuch",
+    untertitel: "Was das Auto wirklich kostet",
+    claim: "Tanken. Eintippen.",
+    claimZwei: "Den Rest rechnet die App.",
+    positionierung: "Ein Tankbuch, das mitdenkt: Preis je Liter und Liter eintragen — den Gesamtpreis füllt die App selbst aus. Aus Kilometern und Litern wird der Verbrauch, aus Verbrauch und Preis werden die Kosten je 100 Kilometer. Am Jahresende steht da, was das Fahren wirklich gekostet hat. Komplett auf dem Gerät.",
+    inArbeit: "🚧 In Bearbeitung: Die App ist gebaut und läuft im Alltagstest. Es gibt noch keinen Store-Eintrag — und nichts zu kaufen.",
+
+    kernTitel: "Der Kniff",
+    kernText: "Drei Werte hängen zusammen: Preis je Liter, Liter, Gesamtpreis. Wer zwei davon einträgt, bekommt den dritten geschenkt — egal welche zwei. Das klingt klein, entscheidet aber, ob man an der Zapfsäule wirklich alles einträgt oder es sein lässt. Und weil die App den Verbrauch je Betankung mitrechnet, sieht man Ausreißer sofort, statt sie erst im Jahresmittel zu bemerken.",
+
+    umfangTitel: "Was drinsteckt",
+    umfangText: "Vom Beleg an der Säule bis zur Jahresbilanz: erfassen, vergleichen, auswerten — ohne Tabelle und ohne Konto irgendwo im Netz.",
+    umfangZahlen: [
+      { zahl: "4", text: "Bereiche" },
+      { zahl: "4", text: "Auswertungen" },
+      { zahl: "3", text: "Werte genügen" },
+      { zahl: "60", text: "Tests" }
+    ],
+    umfangListe: [
+      { name: "Zwei Werte reichen", text: "Preis und Liter, Preis und Gesamt, Liter und Gesamt — die App ergänzt den dritten Wert selbst." },
+      { name: "Verbrauch je Betankung", text: "Aus Kilometern und Litern: sofort sichtbar, nicht erst am Jahresende." },
+      { name: "Kosten je 100 km", text: "Was die Strecke wirklich kostet — die Zahl, die man beim Vergleichen braucht." },
+      { name: "Preis-Trend", text: "Der letzte Literpreis gegen das Mittel der letzten fünf Betankungen, als Kurve." },
+      { name: "Jahresbilanz", text: "Ausgaben, Strecke, getankte Liter, Verbrauch und Literpreis im Schnitt — je Jahr." },
+      { name: "Tankstellen", text: "Eigene Namen statt Kettenlogos: Autohof, Stadt, Arbeit — wie man sie selbst nennt." },
+      { name: "Auswertungen", text: "Nach Jahren, nach Monaten, nach Preis, nach Verbrauch — vier Blickwinkel auf dieselben Daten." },
+      { name: "Eigenes Profil", text: "Mehrere Fahrer, mehrere Autos: jedes Profil sieht nur seine eigenen Betankungen." }
+    ],
+
+    besondersTitel: "Was es besonders macht",
+    besonders: [
+      { name: "Das Profil bleibt auf dem Gerät", text: "Es gibt keinen Tankbuch-Server. Das Profil trennt die Daten mehrerer Fahrer auf demselben Handy — es verschickt nichts und verlangt keine Bestätigungsmail." },
+      { name: "Fahrtage statt nur Kilometer", text: "Wer notiert, an wie vielen Tagen er gefahren ist, sieht nicht nur was, sondern auch wie oft — und erkennt, ob eine teure Tankfüllung an langen Strecken lag oder am Preis." },
+      { name: "Keine Zahl wird geschätzt", text: "Was nicht eingetragen ist, bleibt leer. Die App rechnet aus vorhandenen Werten — sie erfindet keine, um eine Lücke zu füllen." }
+    ],
+
+    statusTitel: "Ehrlicher Stand",
+    statusText: "Gebaut und im Alltagstest — 60 Tests halten den Stand fest. Was noch aussteht:",
+    offenListe: [
+      "Alltagstest über mehrere Tankfüllungen läuft",
+      "Store-Eintrag (Google Play zuerst)",
+      "Bisher nur Deutsch"
+    ],
+
+    mehrKnopf: "Alles über das Tankbuch",
+    mehrText: "Die drei Werte, der Verbrauch je Betankung, die Jahresbilanz — und was bis zur Veröffentlichung noch passiert.",
+    hinweis: "Das Tankbuch ist in Entwicklung. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+  },
 
   /* ============ LIVE — automatisch geladene Renndaten ============ */
   live: {
@@ -1188,19 +1240,19 @@ de: {
   vergleich: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
-    text: "Sieben Produkte, sieben völlig verschiedene Zwecke — vier fertig, drei in Arbeit. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitWissen"],
+    text: "Acht Produkte, acht völlig verschiedene Zwecke — vier fertig, vier in Arbeit. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitWissen", "Tankbuch"],
     zeilen: [
-      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen"] },
-      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "In Bearbeitung", "In Bearbeitung"] },
-      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Allein", "Allein"] },
-      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten (freiwillig)", "Nie"] },
-      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein", "Nein"] },
-      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer", "13 Bildschirme", "14 Bildschirme"] },
-      { name: "Sprachen",      werte: ["2", "2", "16", "1", "1", "1", "1"] },
-      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Alles — es gibt noch nichts zu kaufen", "Alles — die ganze App"] },
-      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "noch offen", "—"] },
-      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android", "Android · iOS"] }
+      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten"] },
+      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "In Bearbeitung", "In Bearbeitung", "In Bearbeitung"] },
+      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Allein", "Allein", "Allein"] },
+      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten (freiwillig)", "Nie", "Nie"] },
+      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein", "Nein", "Ja — einmal anlegen"] },
+      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer", "13 Bildschirme", "14 Bildschirme", "5 Bildschirme"] },
+      { name: "Sprachen",      werte: ["2", "2", "16", "1", "1", "1", "1", "1"] },
+      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Alles — es gibt noch nichts zu kaufen", "Alles — die ganze App", "Alles — die ganze App"] },
+      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "noch offen", "—", "—"] },
+      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android", "Android · iOS", "Android · iOS"] }
     ],
     fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash und YourFilm steht noch nicht fest, ob und was etwas kosten wird."
   },
@@ -1334,6 +1386,7 @@ en: {
     appYourfilm: "In progress",
     appZeitwissen: "In progress",
     appFamilie: "Coming soon",
+    appTankbuch: "In progress",
     scrollHinweis: "Scroll"
   },
 
@@ -2357,6 +2410,57 @@ en: {
     mehrText: "Which app does what, why there are ten and not one — and what ties them together.",
     hinweis: "The Instinct Family is in development. All details describe the planned scope and may change. Only Instinct Scoring is available so far."
   },
+  tankbuch: {
+    kennung: "Chapter 09 · In progress",
+    statusPille: "In progress — built, being tested",
+    name: "Tankbuch",
+    untertitel: "What the car actually costs",
+    claim: "Fill up. Type it in.",
+    claimZwei: "The app does the rest of the maths.",
+    positionierung: "A fuel log that thinks along: enter price per litre and litres — the app fills in the total itself. Kilometres and litres become consumption; consumption and price become cost per 100 kilometres. At the end of the year it tells you what driving really cost. Entirely on your device.",
+    inArbeit: "🚧 In progress: the app is built and in everyday testing. There is no store listing yet — and nothing to buy.",
+
+    kernTitel: "The trick",
+    kernText: "Three values belong together: price per litre, litres, total. Enter any two and the third comes free. That sounds small, but it decides whether you actually log every fill-up at the pump or give up on it. And because the app works out consumption for each fill-up, outliers show immediately instead of hiding in the yearly average.",
+
+    umfangTitel: "What is inside",
+    umfangText: "From the receipt at the pump to the yearly balance: record, compare, evaluate — no spreadsheet and no account anywhere online.",
+    umfangZahlen: [
+      { zahl: "4", text: "areas" },
+      { zahl: "4", text: "views" },
+      { zahl: "3", text: "values suffice" },
+      { zahl: "60", text: "tests" }
+    ],
+    umfangListe: [
+      { name: "Two values are enough", text: "Price and litres, price and total, litres and total — the app supplies the third itself." },
+      { name: "Consumption per fill-up", text: "From kilometres and litres: visible right away, not only at the end of the year." },
+      { name: "Cost per 100 km", text: "What the distance really costs — the figure you need when comparing." },
+      { name: "Price trend", text: "The latest price per litre against the average of the last five fill-ups, as a curve." },
+      { name: "Yearly balance", text: "Spending, distance, litres, average consumption and average price per litre — per year." },
+      { name: "Filling stations", text: "Your own names instead of chain logos: motorway stop, town, work — whatever you call them." },
+      { name: "Views", text: "By year, by month, by price, by consumption — four angles on the same data." },
+      { name: "Own profile", text: "Several drivers, several cars: each profile only sees its own fill-ups." }
+    ],
+
+    besondersTitel: "What makes it special",
+    besonders: [
+      { name: "The profile stays on the device", text: "There is no Tankbuch server. The profile separates the data of several drivers on the same phone — it sends nothing and asks for no confirmation email." },
+      { name: "Driving days, not just kilometres", text: "Noting how many days you drove shows not only how much but how often — and reveals whether an expensive tank was down to long trips or to the price." },
+      { name: "No figure is guessed", text: "What is not entered stays empty. The app calculates from the values it has — it never invents one to fill a gap." }
+    ],
+
+    statusTitel: "Honest status",
+    statusText: "Built and in everyday testing — 60 tests hold that in place. Still to come:",
+    offenListe: [
+      "Everyday test across several tanks under way",
+      "Store listing (Google Play first)",
+      "German only for now"
+    ],
+
+    mehrKnopf: "All about Tankbuch",
+    mehrText: "The three values, consumption per fill-up, the yearly balance — and what still happens before release.",
+    hinweis: "Tankbuch is in development. All details describe the current build and may change before release."
+  },
 
   /* ============ LIVE — automatically loaded race data ============ */
   live: {
@@ -2415,19 +2519,19 @@ en: {
   vergleich: {
     kennung: "At a glance",
     titel: "Which app is for you?",
-    text: "Seven products, seven entirely different purposes — four finished, three in progress. What they share: they work offline, they collect nothing about you, and they don't ask for an account. The Instinct Family is not listed here: it is not a single app but ten, and none of them is available yet.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitWissen"],
+    text: "Eight products, eight entirely different purposes — four finished, four in progress. What they share: they work offline, they collect nothing about you, and they don't ask for an account. The Instinct Family is not listed here: it is not a single app but ten, and none of them is available yet.",
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitWissen", "Tankbuch"],
     zeilen: [
-      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours"] },
-      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In progress", "In progress"] },
-      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Alone", "Alone"] },
-      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never", "Only for film data (optional)", "Never"] },
-      { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No", "No", "No"] },
-      { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects", "13 screens", "14 screens"] },
-      { name: "Languages",      werte: ["2", "2", "16", "1", "1", "1", "1"] },
-      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Everything — nothing to buy yet", "Everything — the whole app"] },
-      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "not decided yet", "—"] },
-      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android", "Android · iOS"] }
+      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view"] },
+      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In progress", "In progress", "In progress"] },
+      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Alone", "Alone", "Alone"] },
+      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never", "Only for film data (optional)", "Never", "Never"] },
+      { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No", "No", "No", "Yes — created once"] },
+      { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects", "13 screens", "14 screens", "5 screens"] },
+      { name: "Languages",      werte: ["2", "2", "16", "1", "1", "1", "1", "1"] },
+      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Everything — nothing to buy yet", "Everything — the whole app", "Everything — the whole app"] },
+      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "not decided yet", "—", "—"] },
+      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android", "Android · iOS", "Android · iOS"] }
     ],
     fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash and YourFilm it is not yet decided whether anything will cost money."
   },
