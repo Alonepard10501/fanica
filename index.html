@@ -148,35 +148,18 @@
       <p class="kooperationszeile" data-t="fanica.untertitel"></p>
     </div>
 
-    <div class="block auf">
-      <div class="block-text">
-        <h3 style="font-size:clamp(1.5rem,3.6vw,2.5rem)">
-          <span data-t="fanica.claim">Tippe die ersten Fünf.</span><br>
-          <span class="leise" data-t="fanica.claimZwei"></span>
-        </h3>
-        <p class="gross" data-t="fanica.positionierung"></p>
-        <!-- Der Kniff + Punkteregeln stehen seit 20.08. auf der
-             Unterseite (Falk: Hauptseite kurz und knapp halten). -->
-      </div>
-      <div class="block-bild">
-        <div class="handy" data-neigen>
-          <img src="bilder/fanica/tippen.webp"
-               srcset="bilder/fanica/tippen.webp 1x, bilder/fanica/tippen@2x.webp 2x"
-               width="300" height="649" loading="lazy" decoding="async"
-               alt="FaNiCa Fun: Tipp-Bildschirm mit den fünf Positionen">
-          <div class="handy-glanz" aria-hidden="true"></div>
-        </div>
-      </div>
+    <!-- 🔴 Kurz und knapp (Falk 22.08.2026): Handy-Bild und Live-Rennfeld
+         stehen auf der Unterseite. Die Startseite trägt bei NEUN
+         Produkten nur noch Kopf, Claim, Positionierung, Weiterlesen und
+         die Bezugsleiste — sonst kommt niemand bis Kapitel 09. -->
+    <div class="huelle-schmal mittig auf">
+      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
+        <span data-t="fanica.claim">Tippe die ersten Fünf.</span><br>
+        <span class="leise" data-t="fanica.claimZwei"></span>
+      </h3>
+      <p class="gross" data-t="fanica.positionierung"></p>
     </div>
 
-    <!-- Nächstes Rennen: wird von live.js aus derselben öffentlichen
-         Quelle geladen wie die App selbst. Bleibt leer, wenn kein Netz
-         da ist — die Seite sieht dann trotzdem vollständig aus. -->
-    <div id="naechstes-rennen" class="auf live-feld"></div>
-
-    <!-- Die Bildergalerie steht auf der Unterseite fanica-fun.html —
-         die Startseite bleibt bewusst kompakt (Falk 31.07.: "weniger
-         auf die ganze seite packen, mehr kompakt"). -->
 
     <!-- Weiterlesen -->
     <div class="auf weiterlesen">
@@ -225,24 +208,16 @@
       <p class="kooperationszeile" data-t="instinct.kooperation"></p>
     </div>
 
-    <div class="block auf">
-      <div class="block-text">
-        <div class="claim" aria-label="Track. Score. Improve.">
-          <span>TRACK.</span><span>SCORE.</span><span>IMPROVE.</span>
-        </div>
-        <p class="gross leise" data-t="instinct.claimDeutsch"></p>
-        <blockquote class="zitat" data-t="instinct.zitat"></blockquote>
-        <p class="gross" data-t="instinct.positionierung"></p>
+    <!-- 🔴 Kurz und knapp (Falk 22.08.2026): Das Handy-Bild steht
+         bereits auf der Unterseite — hier faellt es weg, damit die
+         Startseite bei NEUN Produkten lesbar bleibt. -->
+    <div class="huelle-schmal mittig auf">
+      <div class="claim" aria-label="Track. Score. Improve.">
+        <span>TRACK.</span><span>SCORE.</span><span>IMPROVE.</span>
       </div>
-      <div class="block-bild">
-        <div class="handy" data-neigen>
-          <img src="bilder/instinct/start.webp"
-               srcset="bilder/instinct/start.webp 1x, bilder/instinct/start@2x.webp 2x"
-               width="300" height="649" loading="lazy" decoding="async"
-               data-t="instinct.bildStart2Alt" data-t-attr="alt" alt="">
-          <div class="handy-glanz" aria-hidden="true"></div>
-        </div>
-      </div>
+      <p class="gross leise" data-t="instinct.claimDeutsch"></p>
+      <blockquote class="zitat" data-t="instinct.zitat"></blockquote>
+      <p class="gross" data-t="instinct.positionierung"></p>
     </div>
 
     <!-- Zahlen + Zielscheibe stehen seit 20.08. auf der Unterseite
@@ -293,31 +268,6 @@
     </div>
 
     <!-- Zeitraffer -->
-    <div class="raffer auf" id="raffer" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
-      <div class="raffer-kopf">
-        <div>
-          <h3 data-t="neonpunkt.rafferTitel">48 Stunden in zwölf Sekunden</h3>
-          <p data-t="neonpunkt.rafferText"></p>
-          <p id="raffer-statisch" hidden data-t="neonpunkt.rafferStatisch"></p>
-        </div>
-        <button class="nbtn b-heat" id="raffer-knopf" aria-pressed="false">
-          <span data-t="neonpunkt.rafferKnopfStart">▶ Zeitraffer starten</span></button>
-      </div>
-
-      <div class="raffer-buehne" id="raffer-buehne" role="button" tabindex="0"
-           aria-label="Zeitraffer: Punkt antippen setzt ihn zurück">
-        <div class="raffer-punkt" id="raffer-punkt" aria-hidden="true"></div>
-        <div class="raffer-anzeige">
-          <span><em data-t="neonpunkt.rafferZeit">Vergangen</em>
-                <b id="raffer-zeit">0 Std 00 Min</b></span>
-          <span><em data-t="neonpunkt.rafferGroesse">Größe</em>
-                <b id="raffer-prozent">0 %</b></span>
-        </div>
-        <div class="raffer-balken" aria-hidden="true"><i id="raffer-fortschritt"></i></div>
-        <div class="raffer-hinweis" id="raffer-hinweis"
-             data-t="neonpunkt.rafferHinweis">Tipp den Punkt an, während er läuft</div>
-      </div>
-    </div>
 
     <!-- Zahlen stehen seit 20.08. auf der Unterseite (Falk: kurz und knapp). -->
 

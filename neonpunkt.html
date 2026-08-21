@@ -65,6 +65,39 @@
     <div class="zahlen" id="neonpunkt-zahlen" style="margin-top:1.6rem"></div>
 
     <!-- ---------- Das Spiel zum Ausprobieren ---------- -->
+    <!-- 🔴 Zeitraffer "48 Stunden in zwoelf Sekunden" — am 22.08.2026
+         von der Startseite hierher gezogen. Er trug dort 859 px bei,
+         und bei neun Produkten war die Startseite auf 22.000 px
+         gewachsen. Hier steht er bei denen, die ihn sehen wollen. -->
+    <section class="unter-block">
+      <h2 data-t="neonpunkt.rafferTitel">48 Stunden in zwölf Sekunden</h2>
+      <div class="raffer" id="raffer" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
+        <div class="raffer-kopf">
+          <div>
+            <h3 data-t="neonpunkt.rafferTitel">48 Stunden in zwölf Sekunden</h3>
+            <p data-t="neonpunkt.rafferText"></p>
+            <p id="raffer-statisch" hidden data-t="neonpunkt.rafferStatisch"></p>
+          </div>
+          <button class="nbtn b-heat" id="raffer-knopf" aria-pressed="false">
+            <span data-t="neonpunkt.rafferKnopfStart">▶ Zeitraffer starten</span></button>
+        </div>
+
+        <div class="raffer-buehne" id="raffer-buehne" role="button" tabindex="0"
+             aria-label="Zeitraffer: Punkt antippen setzt ihn zurück">
+          <div class="raffer-punkt" id="raffer-punkt" aria-hidden="true"></div>
+          <div class="raffer-anzeige">
+            <span><em data-t="neonpunkt.rafferZeit">Vergangen</em>
+                  <b id="raffer-zeit">0 Std 00 Min</b></span>
+            <span><em data-t="neonpunkt.rafferGroesse">Größe</em>
+                  <b id="raffer-prozent">0 %</b></span>
+          </div>
+          <div class="raffer-balken" aria-hidden="true"><i id="raffer-fortschritt"></i></div>
+          <div class="raffer-hinweis" id="raffer-hinweis"
+               data-t="neonpunkt.rafferHinweis">Tipp den Punkt an, während er läuft</div>
+        </div>
+      </div>
+    </section>
+
     <section class="unter-block">
       <h2 data-t="neonpunkt.spielTitel">Probier es hier aus</h2>
       <p class="leise" style="max-width:62ch" data-t="neonpunkt.spielText"></p>

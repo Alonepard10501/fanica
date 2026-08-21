@@ -1280,9 +1280,18 @@ h1.hero-text,
   font-size: .8rem; color: var(--creme); white-space: nowrap;
 }
 
-/* ---------------------------------------------- Einblenden beim Scrollen */
+/* ---------------------------------------------- Einblenden beim Scrollen
+   🔴 ABGESCHALTET am 22.08.2026 (Falk-Entscheid). Alles ist sofort
+   sichtbar. Vorher standen alle 43 Karten auf `opacity: 0` und wurden
+   erst beim Hinunterscrollen eingeblendet — bei neun Produkten und
+   22.000 px Seitenlänge blieben beim schnellen Durchscrollen ganze
+   Abschnitte leer, und wer per Anker sprang, sah eine leere Seite.
+
+   Die Klassen `.auf` und `.da` bleiben im HTML und im Skript stehen:
+   Sie schaden nichts, und ein Zurückdrehen wäre nur diese eine Regel.
+   Die sanfte Bewegung bleibt — nur der unsichtbare Startzustand ist weg. */
 .auf {
-  opacity: 0; transform: translateY(30px);
+  opacity: 1;
   transition: opacity .85s var(--weich), transform .85s var(--weich);
 }
 .auf.da { opacity: 1; transform: none; }
