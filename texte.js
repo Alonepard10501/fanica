@@ -10,6 +10,7 @@ const TEXTE = {
 de: {
 
   meta: {
+    kapitelWort: "Kapitel",
     titel: "FaNiCa — Falk Carstensen · Apps aus einem Ein-Mann-Studio",
     beschreibung: "Drei fertige Apps aus einem Ein-Mann-Medienstudio: Instinct Scoring für Bogensport, FaNiCa Fun als private Tipprunde und NeonPunkt, das minimalistischste Spiel der Welt.",
     sprachknopf: "EN",
@@ -1372,6 +1373,7 @@ de: {
 en: {
 
   meta: {
+    kapitelWort: "Chapter",
     titel: "FaNiCa — Falk Carstensen · Apps from a one-man studio",
     beschreibung: "Three finished apps from a one-man media studio: Instinct Scoring for archery, FaNiCa Fun as a private prediction game, and NeonPunkt, the world's most minimal game.",
     sprachknopf: "DE",

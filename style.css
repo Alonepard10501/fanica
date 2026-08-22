@@ -3539,3 +3539,83 @@ main.unterseite[data-nr]::before {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   „Kapitel" links neben die große Ziffer (Falk 22.08.2026)
+   „Die Pille Kapitel 3 muss entfernt werden, Kapitel kommt Links von
+    der Zahl Rechts hin so das das auf einer höhe ist und Kapitel
+    leuchtet so wie die zahl" · „spart platz und nichts ist doppelt"
+
+   Vorher stand die Kapitelnummer ZWEIMAL auf dem Schirm: als Pille
+   („KAPITEL 09 · IM TEST") und als große Ziffer („09"). Dazu der
+   Teststatus doppelt — einmal in der Pille, einmal in der Statuspille
+   darunter. Die Pille ist weg; das Wort „Kapitel" hängt jetzt als
+   ::after am selben Element wie die Ziffer.
+
+   Warum ::after und nicht ein zweites Element: So können die beiden
+   Teile nicht auseinanderlaufen — eine Position, eine Farbe, ein
+   Leuchten. Die Grundlinie teilen sie sich über `align-items: baseline`
+   am gemeinsamen Träger.
+   ══════════════════════════════════════════════════════════════════════ */
+
+.abschnitt[data-nr],
+main.unterseite[data-nr] {
+  /* Der Träger spannt beide Teile nebeneinander auf */
+  --nr-oben:   clamp(.6rem, 3vw, 2.4rem);
+  --nr-rechts: clamp(.4rem, 3vw, 3rem);
+}
+
+/* Das Wort „Kapitel" — gleiche Farbe, gleiches Leuchten, kleinere Schrift */
+.abschnitt[data-nr]::after,
+main.unterseite[data-nr]::after {
+  content: attr(data-wort);
+  position: absolute;
+
+  /* 🔴 Alle Maße hängen an EINER Größe: der Schrift der großen Ziffer.
+     Sonst laufen Wort und Ziffer beim Fensterändern auseinander.
+     Im Browser gemessen (1400 px breit, Ziffer „03"):
+       Ziffer  256 × 238 px  →  Breite = 1,08em ihrer Schrift
+       Ziffer endet 238 px unter der Oberkante  →  genau 1em
+       Wort     94 ×  31 px  →  Höhe = 1,75em SEINER Schrift */
+  --nr: clamp(5.5rem, 17vw, 14rem);
+
+  /* Rechts dort enden, wo die Ziffer links beginnt (plus etwas Luft) */
+  top: var(--nr-oben);
+  right: calc(var(--nr-rechts) + var(--nr) * 1.12 + .55rem);
+  /* 1,12 statt 1,08: Ziffern mit schmaler 1 ("01", "10") sind
+     schmaler als "03", dort rueckte das Wort sonst bis auf 0 px
+     heran (ueber alle neun Kapitel bei sechs Breiten gemessen). */
+
+  font-family: var(--schrift-kopf);
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: clamp(.72rem, 1.5vw, 1.05rem);
+
+  /* Unterkanten auf gleiche Höhe: um 1em der ZIFFER hinunter,
+     abzüglich der eigenen Höhe (1,75em der eigenen Schrift). */
+  transform: translateY(calc(var(--nr) - 1.75em));
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--akzent-hell) 90%, transparent);
+  opacity: .85;
+  filter:
+    drop-shadow(0 0  5px color-mix(in srgb, var(--akzent-hell) 90%, transparent))
+    drop-shadow(0 0 14px color-mix(in srgb, var(--akzent)      60%, transparent));
+  pointer-events: none; user-select: none; z-index: 0;
+  white-space: nowrap;
+}
+
+/* Auf schmalen Schirmen würde „Kapitel" neben der Ziffer den Rand
+   sprengen — dort bleibt nur die Ziffer stehen. */
+@media (max-width: 640px) {
+  .abschnitt[data-nr]::after,
+  main.unterseite[data-nr]::after { display: none; }
+}
+
+@supports not (background: color-mix(in oklab, red 50%, blue)) {
+  .abschnitt[data-nr]::after,
+  main.unterseite[data-nr]::after {
+    -webkit-text-stroke: 1px var(--akzent-hell);
+    filter: drop-shadow(0 0 5px var(--akzent-hell));
+  }
+}
