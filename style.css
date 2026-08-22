@@ -2350,7 +2350,7 @@ h1.hero-text,
   content: attr(data-nr);
   position: absolute; top: clamp(.6rem, 3vw, 2.4rem); right: clamp(.4rem, 3vw, 3rem);
   font-family: var(--schrift-kopf); font-weight: 900; line-height: 1;
-  font-size: clamp(5.5rem, 17vw, 14rem);
+  font-size: clamp(6rem, 17vw, 15rem);
   color: transparent;
   -webkit-text-stroke: 2px color-mix(in srgb, var(--akzent) 30%, transparent);
   opacity: .55;
@@ -3504,7 +3504,7 @@ main.unterseite[data-nr]::before {
   content: attr(data-nr);
   position: absolute; top: clamp(.6rem, 3vw, 2.4rem); right: clamp(.4rem, 3vw, 3rem);
   font-family: var(--schrift-kopf); font-weight: 900; line-height: 1;
-  font-size: clamp(5.5rem, 17vw, 14rem);
+  font-size: clamp(6rem, 17vw, 15rem);
   color: transparent;
   -webkit-text-stroke: 2.5px color-mix(in srgb, var(--akzent-hell) 85%, transparent);
   opacity: .85;
@@ -3582,7 +3582,7 @@ main.unterseite[data-nr]::after {
      Alle Maße hängen weiter an EINER Größe, damit nichts auseinander
      läuft. Gemessen bei 1400 px: Ziffer „03" = 256 × 238 px, also
      1,08em Breite und genau 1em bis zur Unterkante. */
-  --nr: clamp(5.5rem, 17vw, 14rem);
+  --nr: clamp(6rem, 17vw, 15rem);
 
   /* 🔴 „Kapitel" steht LINKS am Rand, die Ziffer rechts (Falk
      22.08.2026: „Kapitel soll Links stehen und die Zahl rechts").
@@ -3643,18 +3643,24 @@ main.unterseite[data-nr]::after {
    und App-Symbol standen mitten in den Buchstaben. Der Kapitelkopf
    beginnt jetzt unterhalb der Schriftzeile: eine Zeile Titel, darunter
    der Inhalt. */
+.abschnitt[data-nr],
+main.unterseite[data-nr] { padding-top: 0; }
 .abschnitt[data-nr] > .huelle,
 main.unterseite[data-nr] > .huelle {
-  padding-top: calc(clamp(5.5rem, 17vw, 14rem) * .82);
+  /* 🔴 Ersetzt das Polster des Abschnitts, statt es zu ergaenzen.
+     Gemessen: `.abschnitt` bringt schon 117 px mit; zusammen mit den
+     174 px hier begann der Inhalt erst bei 291 px, obwohl die
+     Schriftzeile bei 321 px Gesamthoehe endet - daher der leere Streifen.
+     1,0em der Ziffernschrift ist genau ihre Unterkante, plus .35em Luft. */
+  padding-top: calc(clamp(.6rem, 3vw, 2.4rem)
+               + clamp(6rem, 17vw, 15rem) * 1.0 + 1.1rem);
+  /* Der erste Summand ist --nr-oben, also der Abstand der Ziffer
+     zur Oberkante - der wurde vorher vergessen und fehlte als
+     Ueberlappung von 20 px. */
 }
 
 /* Auf schmalen Schirmen ist die Schriftzeile ausgeblendet (siehe unten),
    dort wäre der Abstand nur Leerraum. */
-@media (max-width: 640px) {
-  .abschnitt[data-nr] > .huelle,
-  main.unterseite[data-nr] > .huelle { padding-top: 0; }
-}
-
 /* ══════════════════════════════════════════════════════════════════════
    Ein Blick in die App — Screenshots mit Erklärung (Falk 22.08.2026)
    „füge die screenshots für die releases hinzu und erkläre daran die app"
@@ -3741,7 +3747,7 @@ main.unterseite[data-nr] > .huelle {
    braucht das Wort 357 px, die Ziffer 83 px, dazu die Ränder — es ragte
    links heraus. Bei 640 px stand es in Statuspille und App-Symbol.
 
-   Grund: `clamp(5.5rem, 17vw, 14rem)` hat bei 5,5rem seine Untergrenze;
+   Grund: `clamp(6rem, 17vw, 15rem)` hat bei 5,5rem seine Untergrenze;
    darunter schrumpft nur noch das Fenster, nicht die Schrift.
 
    Lösung: Unter 760 px hängt die Größe rein an der Fensterbreite (vw),
@@ -3754,12 +3760,14 @@ main.unterseite[data-nr] > .huelle {
   main.unterseite[data-nr]::after {
     /* 8,2vw: bei 390 px sind das 32 px Schrift → Wort ~123 px,
        Ziffer ~34 px. Zusammen 157 px von 390 px Breite. */
-    font-size: 8.2vw;
-    --nr: 8.2vw;
+    font-size: 13vw;
+    --nr: 13vw;
   }
   /* Der Kopfabstand richtet sich nach derselben Größe */
+  .abschnitt[data-nr] { padding-top: 0; }
   .abschnitt[data-nr] > .huelle,
   main.unterseite[data-nr] > .huelle {
-    padding-top: calc(8.2vw * 1.6);
+    padding-top: calc(clamp(.6rem, 3vw, 2.4rem) + 13vw * 1.0 + .7rem);
+    /* Auch hier ohne das Abschnittspolster gerechnet. */
   }
 }
