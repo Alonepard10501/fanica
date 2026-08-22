@@ -40,10 +40,10 @@ de: {
     appNeon: "Klick-Spiel",
     appSetup: "PC-Anzeige",
     appCampus: "In Bearbeitung",
-    appYourfilm: "In Bearbeitung",
-    appZeitwissen: "In Bearbeitung",
+    appYourfilm: "Im Test",
+    appZeitwissen: "Im Test",
     appFamilie: "Coming Soon",
-    appTankbuch: "In Bearbeitung",
+    appTankbuch: "Im Test",
     scrollHinweis: "Scrollen",
     karussellHinweis: "Antippen führt direkt zur App — die Pfeile drehen die Auswahl."
   },
@@ -784,26 +784,26 @@ de: {
         titel: "Deine Bestenliste" }
     ],
 
-    preis: "Die ersten 500 Klicks sind frei. Danach schaltet Premium unbegrenztes Weiterspielen, die Bestenlisten und die Sitzungsanzeige frei: 0,49 € je 4 Wochen oder 4,99 € im Jahr. Nichts geht verloren — das Spiel pausiert nur.",
+    preis: "Die ersten 500 Klicks sind frei. Premium testest du sieben Tage gratis, danach 0,49 € je 4 Wochen oder 4,99 € im Jahr — es schaltet unbegrenztes Weiterspielen, die Bestenlisten und den Durchschnitt frei. Nichts geht verloren — das Spiel pausiert nur.",
 
     /* --- Gratis und Premium (Werte aus Kasse.kt / Parameter.kt) --- */
     stufenTitel: "Gratis und Premium",
-    stufenText: "Erst spielen, dann entscheiden: Die ersten 500 Klicks kosten nichts. Danach pausiert das Spiel nur — nichts geht verloren.",
+    stufenText: "Erst spielen, dann entscheiden: Die ersten 500 Klicks kosten nichts. Premium testest du sieben Tage gratis — danach pausiert das Spiel nur, nichts geht verloren.",
     stufen: [
       {
         name: "Gratis",
         preis: "0 €",
         zeile: "die ersten 500 Klicks",
         kann: ["Das ganze Spiel, alle 16 Farben", "Widget auf dem Startbildschirm",
-               "Beide Uhren & Vorwarnung ab Klick 450", "Alle 16 Sprachen"],
+               "Sitzungsanzeige & Gesamtzähler", "Alle 16 Sprachen"],
         grenze: "Nach 500 Klicks pausiert das Spiel"
       },
       {
         name: "Premium",
         preis: "0,49 €",
-        zeile: "je 4 Wochen · 4,99 € im Jahr",
+        zeile: "7 Tage gratis · dann je 4 Wochen · 4,99 € im Jahr",
         kann: ["Unbegrenzt weiterspielen", "Beide Bestenlisten (Top 5)",
-               "Durchschnitt je Sitzung", "Sitzungsanzeige"],
+               "Durchschnitt je Sitzung", "Erste 7 Tage kostenlos"],
         grenze: "Jederzeit kündbar — der Spielstand bleibt",
         hervor: true
       }
@@ -959,16 +959,16 @@ de: {
   },
 
   yourfilm: {
-    kennung: "Kapitel 06 · In Bearbeitung",
+    kennung: "Kapitel 06 · Im Test",
     karteKurz: "Filmsammlung scannen und ordnen",
-    karteStatus: "In Bearbeitung",
-    statusPille: "In Bearbeitung — gebaut, wird getestet",
+    karteStatus: "Im Test",
+    statusPille: "Im Test — geschlossen bei Google Play",
     name: "YourFilm",
     untertitel: "Deine Filmsammlung im Griff",
     claim: "Scannen. Einsortieren. Fertig.",
     claimZwei: "Deine Sammlung, sauber geordnet.",
     positionierung: "Eine Filmsammlungs-App für DVDs und Blu-rays: Barcode scannen, die App ordnet den Film automatisch zu — das Werk, die Ausgabe, dein Exemplar. Vier getrennte Preise zeigen, was deine Sammlung gekostet hat und was sie heute wert ist. Komplett auf dem Gerät, ohne Konto.",
-    inArbeit: "🚧 In Bearbeitung: Die App ist gebaut und wird gerade an echten Discs getestet. Es gibt noch keinen Store-Eintrag — und nichts zu kaufen.",
+    inArbeit: "🧪 Im Test: Die App läuft im geschlossenen Test bei Google Play und wird dabei an echten Discs erprobt. Installieren kann sie nur, wer dafür freigeschaltet ist — öffentlich im Store steht sie noch nicht, und zu kaufen gibt es nichts.",
 
     kernTitel: "Der Kniff",
     kernText: "Ein Film ist nicht sein Datenträger: YourFilm trennt das Werk (der Film selbst), die Ausgabe (Steelbook, Erstauflage, Neuauflage) und dein Exemplar (dein Stück im Regal). Drei Ausgaben desselben Films sind EIN Eintrag in der Liste — nicht drei. Und der Barcode-Scan ordnet automatisch zu, ohne Suchen und ohne Tipperei.",
@@ -1009,20 +1009,20 @@ de: {
 
     mehrKnopf: "Alles über YourFilm",
     mehrText: "Die Dreiteilung, die Barcode-Kette, die vier Preise — und was bis zur Veröffentlichung noch passiert.",
-    hinweis: "YourFilm ist in Entwicklung. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+    hinweis: "YourFilm läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
 
   zeitwissen: {
-    kennung: "Kapitel 07 · In Bearbeitung",
+    kennung: "Kapitel 07 · Im Test",
     karteKurz: "Arbeitszeit mit Zeitkonto",
-    karteStatus: "In Bearbeitung",
-    statusPille: "In Bearbeitung — gebaut, wird getestet",
-    name: "ZeitWissen",
+    karteStatus: "Im Test",
+    statusPille: "Im Test — geschlossen bei Google Play",
+    name: "ZeitAnker",
     untertitel: "Arbeitszeit, die sich selbst erklärt",
     claim: "Einstempeln. Fertig.",
     claimZwei: "Den Rest rechnet die App.",
     positionierung: "Eine Arbeitszeit-App mit Zeitkonto: einstempeln, ausstempeln — Über- und Fehlstunden laufen von allein mit. Wer will, teilt die Zeit auf Projekte und Aufgaben auf und holt am Monatsende einen Bericht als Excel, PDF oder HTML heraus. Komplett auf dem Gerät, ohne Konto.",
-    inArbeit: "🚧 In Bearbeitung: Die App ist gebaut und läuft im Alltagstest. Es gibt noch keinen Store-Eintrag — und nichts zu kaufen.",
+    inArbeit: "🧪 Im Test: Die App läuft im geschlossenen Test bei Google Play. Installieren kann sie nur, wer dafür freigeschaltet ist — öffentlich im Store steht sie noch nicht, und zu kaufen gibt es nichts.",
 
     kernTitel: "Der Kniff",
     kernText: "Die Gesamtzeit läuft vom Ein- bis zum Ausstempeln — Aufgaben laufen innerhalb davon und teilen diese Zeit nur auf, sie verlängern sie nicht. Wer drei Aufgaben nacheinander antippt, hat am Ende trotzdem genau seinen Arbeitstag. Und das Projekt-Soll ist vom persönlichen Soll getrennt: Arbeitest du in einem Monat an zwei Projekten, zählt jede Stunde für ihr Projekt und zusätzlich in deine Gesamtzeit.",
@@ -1061,9 +1061,9 @@ de: {
       "Bisher nur Deutsch"
     ],
 
-    mehrKnopf: "Alles über ZeitWissen",
+    mehrKnopf: "Alles über ZeitAnker",
     mehrText: "Das Zeitkonto, die Trennung von Projekt- und Personen-Soll — und was bis zur Veröffentlichung noch passiert.",
-    hinweis: "ZeitWissen ist in Entwicklung. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+    hinweis: "ZeitAnker läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
   familie: {
     kennung: "Kapitel 08 · In Bearbeitung",
@@ -1122,16 +1122,16 @@ de: {
     hinweis: "Die Instinct Familie ist in Entwicklung. Alle Angaben beschreiben den geplanten Umfang und können sich ändern. Verfügbar ist bisher allein Instinct Scoring."
   },
   tankbuch: {
-    kennung: "Kapitel 09 · In Bearbeitung",
+    kennung: "Kapitel 09 · Im Test",
     karteKurz: "Was das Auto wirklich kostet",
-    karteStatus: "In Bearbeitung",
-    statusPille: "In Bearbeitung — gebaut, wird getestet",
+    karteStatus: "Im Test",
+    statusPille: "Im Test — geschlossen bei Google Play",
     name: "Tankbuch",
     untertitel: "Was das Auto wirklich kostet",
     claim: "Tanken. Eintippen.",
     claimZwei: "Den Rest rechnet die App.",
     positionierung: "Ein Tankbuch, das mitdenkt: Preis je Liter und Liter eintragen — den Gesamtpreis füllt die App selbst aus. Aus Kilometern und Litern wird der Verbrauch, aus Verbrauch und Preis werden die Kosten je 100 Kilometer. Am Jahresende steht da, was das Fahren wirklich gekostet hat. Komplett auf dem Gerät.",
-    inArbeit: "🚧 In Bearbeitung: Die App ist gebaut und läuft im Alltagstest. Es gibt noch keinen Store-Eintrag — und nichts zu kaufen.",
+    inArbeit: "🧪 Im Test: Die App läuft im geschlossenen Test bei Google Play. Installieren kann sie nur, wer dafür freigeschaltet ist — öffentlich im Store steht sie noch nicht, und zu kaufen gibt es nichts.",
 
     kernTitel: "Der Kniff",
     kernText: "Drei Werte hängen zusammen: Preis je Liter, Liter, Gesamtpreis. Wer zwei davon einträgt, bekommt den dritten geschenkt — egal welche zwei. Das klingt klein, entscheidet aber, ob man an der Zapfsäule wirklich alles einträgt oder es sein lässt. Und weil die App den Verbrauch je Betankung mitrechnet, sieht man Ausreißer sofort, statt sie erst im Jahresmittel zu bemerken.",
@@ -1172,7 +1172,7 @@ de: {
 
     mehrKnopf: "Alles über das Tankbuch",
     mehrText: "Die drei Werte, der Verbrauch je Betankung, die Jahresbilanz — und was bis zur Veröffentlichung noch passiert.",
-    hinweis: "Das Tankbuch ist in Entwicklung. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+    hinweis: "Das Tankbuch läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
 
   /* ============ LIVE — automatisch geladene Renndaten ============ */
@@ -1259,11 +1259,11 @@ de: {
   vergleich: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
-    text: "Acht Produkte, acht völlig verschiedene Zwecke — vier fertig, vier in Arbeit. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitWissen", "Tankbuch"],
+    text: "Acht Produkte, acht völlig verschiedene Zwecke — vier zu haben, drei im Test, eines noch im Bau. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankbuch"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten"] },
-      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "In Bearbeitung", "In Bearbeitung", "In Bearbeitung"] },
+      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "Im Test bei Google Play", "Im Test bei Google Play", "Im Test bei Google Play"] },
       { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Allein", "Allein", "Allein"] },
       { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten (freiwillig)", "Nie", "Nie"] },
       { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein", "Nein", "Ja — einmal anlegen"] },
@@ -1402,10 +1402,10 @@ en: {
     appNeon: "Tap game",
     appSetup: "PC monitor",
     appCampus: "In progress",
-    appYourfilm: "In progress",
-    appZeitwissen: "In progress",
+    appYourfilm: "In testing",
+    appZeitwissen: "In testing",
     appFamilie: "Coming soon",
-    appTankbuch: "In progress",
+    appTankbuch: "In testing",
     scrollHinweis: "Scroll",
     karussellHinweis: "Tap to go straight to the app — the arrows turn the selection."
   },
@@ -2123,26 +2123,26 @@ en: {
         titel: "Your leaderboard" }
     ],
 
-    preis: "The first 500 taps are free. After that Premium unlocks unlimited play, the leaderboards and the session display: €0.49 per four weeks or €4.99 per year. Nothing is lost — the game simply pauses.",
+    preis: "The first 500 taps are free. Premium is free for the first seven days, then €0.49 per four weeks or €4.99 per year — it unlocks unlimited play, the leaderboards and the average. Nothing is lost — the game simply pauses.",
 
     /* --- Free and Premium (values from Kasse.kt / Parameter.kt) --- */
     stufenTitel: "Free and Premium",
-    stufenText: "Play first, decide later: the first 500 taps cost nothing. After that the game only pauses — nothing is lost.",
+    stufenText: "Play first, decide later: the first 500 taps cost nothing. Premium is free for seven days — after that the game only pauses, nothing is lost.",
     stufen: [
       {
         name: "Free",
         preis: "€0",
         zeile: "the first 500 taps",
         kann: ["The whole game, all 16 colours", "Home-screen widget",
-               "Both clocks & a warning from tap 450", "All 16 languages"],
+               "Session display & lifetime total", "All 16 languages"],
         grenze: "After 500 taps the game pauses"
       },
       {
         name: "Premium",
         preis: "€0.49",
-        zeile: "per 4 weeks · €4.99 per year",
+        zeile: "7 days free · then per 4 weeks · €4.99 per year",
         kann: ["Play on without limits", "Both leaderboards (top 5)",
-               "Average per session", "Session display"],
+               "Average per session", "First 7 days free"],
         grenze: "Cancel any time — your progress stays",
         hervor: true
       }
@@ -2284,16 +2284,16 @@ en: {
   },
 
   yourfilm: {
-    kennung: "Chapter 06 · In progress",
+    kennung: "Chapter 06 · In testing",
     karteKurz: "Scan and sort your film collection",
-    karteStatus: "In progress",
-    statusPille: "In progress — built, being tested",
+    karteStatus: "In testing",
+    statusPille: "In testing — closed on Google Play",
     name: "YourFilm",
     untertitel: "Your film collection, under control",
     claim: "Scan. Shelve. Done.",
     claimZwei: "Your collection, neatly organised.",
     positionierung: "A collection app for DVDs and Blu-rays: scan the barcode and the app files the film automatically — the work, the edition, your copy. Four separate prices show what your collection cost and what it is worth today. Entirely on your device, no account.",
-    inArbeit: "🚧 In progress: the app is built and currently being tested with real discs. There is no store listing yet — and nothing to buy.",
+    inArbeit: "🧪 In testing: the app is in closed testing on Google Play and being tried out with real discs. Only testers who have been given access can install it — it is not publicly listed yet, and nothing to buy.",
 
     kernTitel: "The trick",
     kernText: "A film is not its disc: YourFilm separates the work (the film itself), the edition (steelbook, first pressing, reissue) and your copy (the one on your shelf). Three editions of the same film are ONE entry in the list — not three. And the barcode scan files everything automatically, no searching, no typing.",
@@ -2334,20 +2334,20 @@ en: {
 
     mehrKnopf: "Everything about YourFilm",
     mehrText: "The three-level model, the barcode chain, the four prices — and what happens before release.",
-    hinweis: "YourFilm is under development. All details describe the current build state and may change before release."
+    hinweis: "YourFilm is in closed testing on Google Play — only testers who have been given access can install it. All details describe the current build state and may change before release."
   },
 
   zeitwissen: {
-    kennung: "Chapter 07 · In progress",
+    kennung: "Chapter 07 · In testing",
     karteKurz: "Working hours with a running balance",
-    karteStatus: "In progress",
-    statusPille: "In progress — built, being tested",
-    name: "ZeitWissen",
+    karteStatus: "In testing",
+    statusPille: "In testing — closed on Google Play",
+    name: "ZeitAnker",
     untertitel: "Working hours that explain themselves",
     claim: "Clock in. Done.",
     claimZwei: "The app does the rest of the maths.",
     positionierung: "A working-hours app with a running balance: clock in, clock out — overtime and shortfall are tracked for you. If you want, split your time across projects and tasks and export a report as Excel, PDF or HTML at the end of the month. Entirely on your device, no account.",
-    inArbeit: "🚧 In progress: the app is built and in everyday testing. There is no store listing yet — and nothing to buy.",
+    inArbeit: "🧪 In testing: the app is in closed testing on Google Play. Only testers who have been given access can install it — it is not publicly listed yet, and there is nothing to buy.",
 
     kernTitel: "The trick",
     kernText: "Total time runs from clocking in to clocking out — tasks run inside that window and only divide it up, they never extend it. Tap three tasks in a row and you still end up with exactly your working day. And project hours are kept apart from your personal target: work on two projects in a month and every hour counts towards its project and towards your total.",
@@ -2386,9 +2386,9 @@ en: {
       "German only for now"
     ],
 
-    mehrKnopf: "All about ZeitWissen",
+    mehrKnopf: "All about ZeitAnker",
     mehrText: "The time balance, keeping project and personal targets apart — and what still happens before release.",
-    hinweis: "ZeitWissen is in development. All details describe the current build and may change before release."
+    hinweis: "ZeitAnker is in closed testing on Google Play — only testers who have been given access can install it. All details describe the current build and may change before release."
   },
   familie: {
     kennung: "Chapter 08 · In progress",
@@ -2447,16 +2447,16 @@ en: {
     hinweis: "The Instinct Family is in development. All details describe the planned scope and may change. Only Instinct Scoring is available so far."
   },
   tankbuch: {
-    kennung: "Chapter 09 · In progress",
+    kennung: "Chapter 09 · In testing",
     karteKurz: "What the car actually costs",
-    karteStatus: "In progress",
-    statusPille: "In progress — built, being tested",
+    karteStatus: "In testing",
+    statusPille: "In testing — closed on Google Play",
     name: "Tankbuch",
     untertitel: "What the car actually costs",
     claim: "Fill up. Type it in.",
     claimZwei: "The app does the rest of the maths.",
     positionierung: "A fuel log that thinks along: enter price per litre and litres — the app fills in the total itself. Kilometres and litres become consumption; consumption and price become cost per 100 kilometres. At the end of the year it tells you what driving really cost. Entirely on your device.",
-    inArbeit: "🚧 In progress: the app is built and in everyday testing. There is no store listing yet — and nothing to buy.",
+    inArbeit: "🧪 In testing: the app is in closed testing on Google Play. Only testers who have been given access can install it — it is not publicly listed yet, and there is nothing to buy.",
 
     kernTitel: "The trick",
     kernText: "Three values belong together: price per litre, litres, total. Enter any two and the third comes free. That sounds small, but it decides whether you actually log every fill-up at the pump or give up on it. And because the app works out consumption for each fill-up, outliers show immediately instead of hiding in the yearly average.",
@@ -2497,7 +2497,7 @@ en: {
 
     mehrKnopf: "All about Tankbuch",
     mehrText: "The three values, consumption per fill-up, the yearly balance — and what still happens before release.",
-    hinweis: "Tankbuch is in development. All details describe the current build and may change before release."
+    hinweis: "Tankbuch is in closed testing on Google Play — only testers who have been given access can install it. All details describe the current build and may change before release."
   },
 
   /* ============ LIVE — automatically loaded race data ============ */
@@ -2558,10 +2558,10 @@ en: {
     kennung: "At a glance",
     titel: "Which app is for you?",
     text: "Eight products, eight entirely different purposes — four finished, four in progress. What they share: they work offline, they collect nothing about you, and they don't ask for an account. The Instinct Family is not listed here: it is not a single app but ten, and none of them is available yet.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitWissen", "Tankbuch"],
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankbuch"],
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view"] },
-      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In progress", "In progress", "In progress"] },
+      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In closed testing on Google Play", "In closed testing on Google Play", "In closed testing on Google Play"] },
       { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Alone", "Alone", "Alone"] },
       { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never", "Only for film data (optional)", "Never", "Never"] },
       { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No", "No", "No", "Yes — created once"] },
