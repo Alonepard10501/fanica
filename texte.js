@@ -903,6 +903,15 @@ de: {
      4 Rollen/13 Rechte). 🔴 KEIN Preis nennen — es existiert noch keine
      Bezahlfunktion (nur beschrifteter Testmodus). ===================== */
   campus: {
+    bilderTitel: "Ein Blick in die App",
+    bilderText: "Fünf Bilder aus einem frischen Spielstand.",
+    bilder: [
+      { bild: "campus-1-campus", titel: "Dein Campus", text: "Oben Punkte, Energie und Geld; darunter die drei Bereiche und deine Stärken. Der Job läuft weiter, auch wenn das Handy in der Tasche steckt." },
+      { bild: "campus-2-schule", titel: "Der Schulalltag", text: "Lernen und Jobs, dazu der Zugang zur Allianz und die schulweiten Verbesserungen." },
+      { bild: "campus-3-lernen", titel: "64 Fächer", text: "Jedes Fach mit Dauer, Stufe und was es bringt. Drei laufen gleichzeitig — in echter Zeit, auch wenn die App zu ist." },
+      { bild: "campus-4-schulhof", titel: "Der Schulhof", text: "Mitschüler zum Anfreunden oder Herausfordern. Freunde kommen per Code dazu — ohne Server, der Code trägt die Daten selbst." },
+      { bild: "campus-5-markt", titel: "Der Flohmarkt", text: "39 Gegenstände in fünf Seltenheitsstufen. Das Angebot wechselt dreimal am Tag — oder sofort, gegen Gebühr." },
+    ],
     bereicheTitel: "Die Bereiche",
     bereicheText: "Drei Bereiche in der Hauptleiste, alles Weitere liegt darunter.",
     bereiche: [
@@ -1166,6 +1175,15 @@ de: {
     hinweis: "Die Instinct Familie ist in Entwicklung. Alle Angaben beschreiben den geplanten Umfang und können sich ändern. Verfügbar ist bisher allein Instinct Scoring."
   },
   tankspur: {
+    bilderTitel: "Ein Blick in die App",
+    bilderText: "Fünf Aufnahmen aus der laufenden Fassung. Die Betankungen darin sind Beispieldaten.",
+    bilder: [
+      { bild: "tankspur-1-uebersicht", titel: "Die Übersicht", text: "Letzte Betankung, Preis-Trend und das laufende Jahr mit Vergleich zum Vorjahr — alles auf einem Schirm." },
+      { bild: "tankspur-2-eintraege", titel: "Alle Betankungen", text: "Jeder Eintrag mit Datum, Tankstelle, Preis und Verbrauch. Antippen zum Ändern." },
+      { bild: "tankspur-3-statistik", titel: "Jahre im Vergleich", text: "Ausgaben und Verbrauch je Jahr nebeneinander. Acht Auswertungen gibt es — per Wischen umschaltbar." },
+      { bild: "tankspur-4-preis", titel: "Der Preisverlauf", text: "Wie sich der Literpreis über die Zeit bewegt hat — und wo die eigene letzte Tankfüllung dazu steht." },
+      { bild: "tankspur-5-eingabe", titel: "Erfassen", text: "Datum, Tankstelle, Preis und Liter — den Gesamtpreis rechnet die App. Benutzte Tankstellen stehen beim nächsten Mal bereit." },
+    ],
     bereicheTitel: "Die Bereiche",
     bereicheText: "Vier Reiter — mehr braucht es nicht.",
     bereiche: [
@@ -2280,6 +2298,15 @@ en: {
 
   /* ============ CHAPTER 5 — CAMPUS CLASH (IN PROGRESS) ============ */
   campus: {
+    bilderTitel: "A look inside",
+    bilderText: "Five shots from a fresh save.",
+    bilder: [
+      { bild: "campus-1-campus", titel: "Your campus", text: "Points, energy and money on top; the three areas and your skills below. The job keeps running even with the phone in your pocket." },
+      { bild: "campus-2-schule", titel: "School life", text: "Study and jobs, plus the way into your alliance and the school-wide upgrades." },
+      { bild: "campus-3-lernen", titel: "64 subjects", text: "Every subject with its duration, level and payoff. Three run at once — in real time, even with the app closed." },
+      { bild: "campus-4-schulhof", titel: "The schoolyard", text: "Classmates to befriend or challenge. Friends join by code — no server involved, the code carries the data itself." },
+      { bild: "campus-5-markt", titel: "The flea market", text: "39 items across five rarity tiers. Stock changes three times a day — or instantly, for a fee." },
+    ],
     bereicheTitel: "The areas",
     bereicheText: "Three areas in the main bar, everything else sits below them.",
     bereiche: [
@@ -2543,6 +2570,15 @@ en: {
     hinweis: "The Instinct Family is in development. All details describe the planned scope and may change. Only Instinct Scoring is available so far."
   },
   tankspur: {
+    bilderTitel: "A look inside",
+    bilderText: "Five shots from the running build. The fill-ups in them are sample data.",
+    bilder: [
+      { bild: "tankspur-1-uebersicht", titel: "The overview", text: "Last fill-up, price trend and the current year against the previous one — all on one screen." },
+      { bild: "tankspur-2-eintraege", titel: "Every fill-up", text: "Each entry with date, station, price and consumption. Tap to edit." },
+      { bild: "tankspur-3-statistik", titel: "Years compared", text: "Spending and consumption per year, side by side. Eight analyses in all — swipe to switch." },
+      { bild: "tankspur-4-preis", titel: "Price history", text: "How the price per litre moved over time — and where your last fill-up sits against it." },
+      { bild: "tankspur-5-eingabe", titel: "Logging a fill-up", text: "Date, station, price and litres — the app works out the total. Stations you have used are ready next time." },
+    ],
     bereicheTitel: "The areas",
     bereicheText: "Four tabs — that's all it takes.",
     bereiche: [
