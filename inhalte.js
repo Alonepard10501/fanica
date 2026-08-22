@@ -902,6 +902,22 @@
           </div>`).join("");
       }
 
+      /* Ein Blick in die App: Screenshot plus ein Satz, der erklaert,
+         was darauf zu sehen ist. `loading="lazy"` ist Pflicht - fuenf
+         Bilder je Seite waeren sonst Ladezeit beim Oeffnen. */
+      const bilder = el(app + "-bilder");
+      if (bilder) {
+        bilder.innerHTML = (hol(app + ".bilder") || []).map(b => `
+          <figure class="app-bild">
+            <img src="bilder/app/${sicher(b.bild)}.webp" alt="${sicher(b.titel)}"
+                 width="540" height="1200" loading="lazy" decoding="async">
+            <figcaption>
+              <b>${sicher(b.titel)}</b>
+              <span>${sicher(b.text)}</span>
+            </figcaption>
+          </figure>`).join("");
+      }
+
       const liste = el(app + "-umfang-liste");
       if (liste) {
         liste.innerHTML = hol(app + ".umfangListe").map(f => `

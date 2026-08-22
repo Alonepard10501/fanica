@@ -968,6 +968,15 @@ de: {
   },
 
   yourfilm: {
+    bilderTitel: "Ein Blick in die App",
+    bilderText: "Fünf Aufnahmen aus der laufenden Fassung. Die Filmtitel darin sind erfunden.",
+    bilder: [
+      { bild: "yourfilm-1-start", titel: "Der Einstieg", text: "Zuletzt hinzugefügt, was gerade verliehen ist und der schnelle Weg zum Scanner." },
+      { bild: "yourfilm-2-sammlung", titel: "Die Sammlung", text: "Alle Filme als Raster, oben die Filter nach Format — 4K, Blu-ray, DVD, FSK. Jede Kachel zeigt Trägerformat und Jahr." },
+      { bild: "yourfilm-3-film", titel: "Die Filmseite", text: "Ein Film mit seinen Veröffentlichungen und Exemplaren — getrennt, weil dieselbe Blu-ray in mehreren Editionen im Regal stehen kann." },
+      { bild: "yourfilm-4-statistik", titel: "Was die Sammlung sagt", text: "Anzahl, Ausgaben, Genres, Jahrzehnte und Laufzeit — gerechnet aus dem, was wirklich im Regal steht." },
+      { bild: "yourfilm-5-mehr", titel: "Standorte und Personen", text: "Jedes Exemplar bekommt seinen Platz im Regal; Schauspieler und Regie führen zu den eigenen Filmen." },
+    ],
     bereicheTitel: "Die Bereiche",
     bereicheText: "Fünf Reiter, vom Scannen bis zur Auswertung.",
     bereiche: [
@@ -1031,6 +1040,15 @@ de: {
   },
 
   zeitwissen: {
+    bilderTitel: "Ein Blick in die App",
+    bilderText: "Fünf Aufnahmen aus der laufenden Fassung — so sieht es auf dem Gerät aus.",
+    bilder: [
+      { bild: "zeitanker-1-heute", titel: "Die Stempeluhr", text: "Ein Tipp startet die Zeit, ein Tipp beendet sie. Darunter steht, auf welches Projekt gerade gebucht wird — wechselt man es, wandert die laufende Zeit mit." },
+      { bild: "zeitanker-2-zeitraum", titel: "Woche und Monat", text: "Soll und Ist nebeneinander, Tag für Tag. Was fehlt oder übrig ist, rechnet die App mit." },
+      { bild: "zeitanker-3-projekte", titel: "Projekte und Aufgaben", text: "Zeiten lassen sich unter Projekten bündeln, jedes mit Untertasks und eigenem Stundensatz." },
+      { bild: "zeitanker-4-mehr", titel: "Zeitkonto und Bericht", text: "Hier liegen Zeitkonto, Arbeitszeitmodell und der Bericht — als Excel, PDF oder HTML zum Weitergeben." },
+      { bild: "zeitanker-5-premium", titel: "Was Premium öffnet", text: "Bericht, Verdienst, Urlaubstage, Startbildschirm-Widget und beliebig viele Projekte. Das Erfassen selbst bleibt immer kostenlos — 9,99 € im Jahr oder 0,99 € im Monat." },
+    ],
     bereicheTitel: "Die Bereiche",
     bereicheText: "Vier Reiter — der Rest rechnet sich von selbst.",
     bereiche: [
@@ -2327,6 +2345,15 @@ en: {
   },
 
   yourfilm: {
+    bilderTitel: "A look inside",
+    bilderText: "Five shots from the running build. The film titles in them are made up.",
+    bilder: [
+      { bild: "yourfilm-1-start", titel: "The starting point", text: "Recently added, what is currently on loan, and quick access to the scanner." },
+      { bild: "yourfilm-2-sammlung", titel: "The collection", text: "Every film as a grid, with format filters on top — 4K, Blu-ray, DVD, age rating. Each tile shows its disc format and year." },
+      { bild: "yourfilm-3-film", titel: "The film page", text: "One film with its releases and copies — kept apart, because the same Blu-ray can sit on the shelf in several editions." },
+      { bild: "yourfilm-4-statistik", titel: "What the collection says", text: "Count, spending, genres, decades and runtime — computed from what is actually on the shelf." },
+      { bild: "yourfilm-5-mehr", titel: "Locations and people", text: "Every copy gets its place on the shelf; actors and directors lead to your own films." },
+    ],
     bereicheTitel: "The areas",
     bereicheText: "Five tabs, from scanning to analysis.",
     bereiche: [
@@ -2390,6 +2417,15 @@ en: {
   },
 
   zeitwissen: {
+    bilderTitel: "A look inside",
+    bilderText: "Five shots from the running build — this is how it looks on the device.",
+    bilder: [
+      { bild: "zeitanker-1-heute", titel: "The time clock", text: "One tap starts the clock, one stops it. Below it sits the project being booked to — switch it and the running time moves across." },
+      { bild: "zeitanker-2-zeitraum", titel: "Week and month", text: "Target and actual side by side, day by day. The app keeps the shortfall or surplus running." },
+      { bild: "zeitanker-3-projekte", titel: "Projects and tasks", text: "Hours group under projects, each with sub-tasks and its own rate." },
+      { bild: "zeitanker-4-mehr", titel: "Balance and reports", text: "Balance, target-hours model and the report live here — as Excel, PDF or HTML, ready to hand over." },
+      { bild: "zeitanker-5-premium", titel: "What premium opens", text: "Reports, earnings, leave days, a home-screen widget and unlimited projects. Tracking itself always stays free — €9.99 a year or €0.99 a month." },
+    ],
     bereicheTitel: "The areas",
     bereicheText: "Four tabs — the rest works itself out.",
     bereiche: [

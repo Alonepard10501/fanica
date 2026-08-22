@@ -3643,3 +3643,84 @@ main.unterseite[data-nr] > .huelle {
   .abschnitt[data-nr] > .huelle,
   main.unterseite[data-nr] > .huelle { padding-top: 0; }
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   Ein Blick in die App — Screenshots mit Erklärung (Falk 22.08.2026)
+   „füge die screenshots für die releases hinzu und erkläre daran die app"
+
+   Nicht nur Bilder aufhängen: Jedes trägt einen Titel und einen Satz,
+   der sagt, was darauf zu sehen ist. Deshalb <figure>/<figcaption>
+   statt eines nackten <img> — das ist auch für Vorleseprogramme die
+   richtige Form.
+
+   Die Bilder sind 540 × 1200 px (aus 1080 × 2400 halbiert) und als
+   WEBP gespeichert: aus 1,9 MB wurden 275 KB. `loading="lazy"` steht
+   im HTML — fünf Handybilder je Seite wären sonst Ladezeit beim Öffnen.
+   ══════════════════════════════════════════════════════════════════════ */
+
+.app-bilder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: clamp(1.2rem, 2.6vw, 2rem);
+  margin-top: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.app-bild {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+
+.app-bild img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+  /* Ein Handybild braucht eine Kante, sonst schwimmt es im Dunkeln */
+  border: 1px solid color-mix(in srgb, var(--akzent) 30%, transparent);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, .5),
+    0 0 0 1px rgba(255, 255, 255, .03) inset;
+  background: var(--grund, #07070A);
+}
+
+.app-bild figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.app-bild figcaption b {
+  font-family: var(--schrift-kopf);
+  font-size: 1.02rem;
+  color: var(--akzent-hell);
+  letter-spacing: .01em;
+}
+
+.app-bild figcaption span {
+  font-size: .93rem;
+  line-height: 1.55;
+  color: var(--grau);
+}
+
+/* Auf dem Handy nebeneinander scrollen statt untereinander stapeln —
+   fünf hochkante Bilder untereinander wären eine sehr lange Strecke. */
+@media (max-width: 560px) {
+  .app-bilder {
+    grid-auto-flow: column;
+    grid-auto-columns: 74vw;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: .6rem;
+    /* Am Rand ausbrechen, damit auch das erste Bild ganz beginnt */
+    margin-inline: calc(var(--rand, 1.2rem) * -1);
+    padding-inline: var(--rand, 1.2rem);
+  }
+  .app-bild { scroll-snap-align: start; }
+}
+
+@supports not (background: color-mix(in oklab, red 50%, blue)) {
+  .app-bild img { border-color: var(--akzent); }
+}
