@@ -3584,11 +3584,16 @@ main.unterseite[data-nr]::after {
      1,08em Breite und genau 1em bis zur Unterkante. */
   --nr: clamp(5.5rem, 17vw, 14rem);
 
-  /* Rechts dort enden, wo die Ziffer links beginnt (plus etwas Luft).
-     1,12 statt der gemessenen 1,08: Ziffern mit schmaler 1 („01",
-     „10") sind schmaler als „03" — dort berührten sich beide sonst. */
+  /* 🔴 „Kapitel" steht LINKS am Rand, die Ziffer rechts (Falk
+     22.08.2026: „Kapitel soll Links stehen und die Zahl rechts").
+
+     Vorher hingen beide rechts und das Wort schob sich nur nach links
+     weg — gemessen bei 1400 px: Wort ab 173 px, Ziffer ab 1102 px, aber
+     beide an derselben Kante verankert. Jetzt hängt jedes an seinem
+     eigenen Rand, die Zeile spannt sich über die volle Breite. */
   top: var(--nr-oben);
-  right: calc(var(--nr-rechts) + var(--nr) * 1.12 + .55rem);
+  left: var(--nr-rechts);
+  right: auto;
 
   font-family: var(--schrift-kopf);
   font-weight: 900;                  /* wie die Ziffer */
