@@ -3571,36 +3571,39 @@ main.unterseite[data-nr]::after {
   content: attr(data-wort);
   position: absolute;
 
-  /* 🔴 Alle Maße hängen an EINER Größe: der Schrift der großen Ziffer.
-     Sonst laufen Wort und Ziffer beim Fensterändern auseinander.
-     Im Browser gemessen (1400 px breit, Ziffer „03"):
-       Ziffer  256 × 238 px  →  Breite = 1,08em ihrer Schrift
-       Ziffer endet 238 px unter der Oberkante  →  genau 1em
-       Wort     94 ×  31 px  →  Höhe = 1,75em SEINER Schrift */
+  /* 🔴 „Kapitel" ist GENAUSO GROSS wie die Ziffer (Falk 22.08.2026:
+     „Kapitel hat die gleiche größe wie die zahl").
+
+     Vorher stand es klein daneben — mit 1 px Umriss auf 17,85 px
+     Schrift war es praktisch unsichtbar: Ein hohler Buchstabe ohne
+     Füllung braucht einen Strich, der zu seiner Größe passt. Die
+     Ziffer hat 2,5 px auf 238 px; dieselbe Regel gilt jetzt für beide.
+
+     Alle Maße hängen weiter an EINER Größe, damit nichts auseinander
+     läuft. Gemessen bei 1400 px: Ziffer „03" = 256 × 238 px, also
+     1,08em Breite und genau 1em bis zur Unterkante. */
   --nr: clamp(5.5rem, 17vw, 14rem);
 
-  /* Rechts dort enden, wo die Ziffer links beginnt (plus etwas Luft) */
+  /* Rechts dort enden, wo die Ziffer links beginnt (plus etwas Luft).
+     1,12 statt der gemessenen 1,08: Ziffern mit schmaler 1 („01",
+     „10") sind schmaler als „03" — dort berührten sich beide sonst. */
   top: var(--nr-oben);
   right: calc(var(--nr-rechts) + var(--nr) * 1.12 + .55rem);
-  /* 1,12 statt 1,08: Ziffern mit schmaler 1 ("01", "10") sind
-     schmaler als "03", dort rueckte das Wort sonst bis auf 0 px
-     heran (ueber alle neun Kapitel bei sechs Breiten gemessen). */
 
   font-family: var(--schrift-kopf);
-  font-weight: 800;
-  letter-spacing: .2em;
+  font-weight: 900;                  /* wie die Ziffer */
+  letter-spacing: -.01em;
   text-transform: uppercase;
-  font-size: clamp(.72rem, 1.5vw, 1.05rem);
+  line-height: 1;
+  font-size: var(--nr);              /* GLEICHE Größe wie die Ziffer */
 
-  /* Unterkanten auf gleiche Höhe: um 1em der ZIFFER hinunter,
-     abzüglich der eigenen Höhe (1,75em der eigenen Schrift). */
-  transform: translateY(calc(var(--nr) - 1.75em));
   color: transparent;
-  -webkit-text-stroke: 1px color-mix(in srgb, var(--akzent-hell) 90%, transparent);
+  -webkit-text-stroke: 2.5px color-mix(in srgb, var(--akzent-hell) 85%, transparent);
   opacity: .85;
   filter:
-    drop-shadow(0 0  5px color-mix(in srgb, var(--akzent-hell) 90%, transparent))
-    drop-shadow(0 0 14px color-mix(in srgb, var(--akzent)      60%, transparent));
+    drop-shadow(0 0  6px color-mix(in srgb, var(--akzent-hell) 90%, transparent))
+    drop-shadow(0 0 18px color-mix(in srgb, var(--akzent)      70%, transparent))
+    drop-shadow(0 0 42px color-mix(in srgb, var(--akzent)      40%, transparent));
   pointer-events: none; user-select: none; z-index: 0;
   white-space: nowrap;
 }
@@ -3618,4 +3621,25 @@ main.unterseite[data-nr]::after {
     -webkit-text-stroke: 1px var(--akzent-hell);
     filter: drop-shadow(0 0 5px var(--akzent-hell));
   }
+}
+
+/* ── „KAPITEL 03" braucht seine eigene Zeile ──────────────────────────
+   Seit „Kapitel" so groß ist wie die Ziffer (Falk 22.08.2026), spannt
+   sich die Schriftzeile über fast die ganze Breite — gemessen 909 px
+   für das Wort plus 256 px für die Ziffer bei 1400 px Fensterbreite.
+
+   Sie liegt zwar hinter dem Inhalt (z-index 0 gegen 1), aber Statuspille
+   und App-Symbol standen mitten in den Buchstaben. Der Kapitelkopf
+   beginnt jetzt unterhalb der Schriftzeile: eine Zeile Titel, darunter
+   der Inhalt. */
+.abschnitt[data-nr] > .huelle,
+main.unterseite[data-nr] > .huelle {
+  padding-top: calc(clamp(5.5rem, 17vw, 14rem) * .82);
+}
+
+/* Auf schmalen Schirmen ist die Schriftzeile ausgeblendet (siehe unten),
+   dort wäre der Abstand nur Leerraum. */
+@media (max-width: 640px) {
+  .abschnitt[data-nr] > .huelle,
+  main.unterseite[data-nr] > .huelle { padding-top: 0; }
 }
