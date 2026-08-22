@@ -3608,12 +3608,18 @@ main.unterseite[data-nr]::after {
   white-space: nowrap;
 }
 
-/* Auf schmalen Schirmen würde „Kapitel" neben der Ziffer den Rand
-   sprengen — dort bleibt nur die Ziffer stehen. */
-@media (max-width: 640px) {
-  .abschnitt[data-nr]::after,
-  main.unterseite[data-nr]::after { display: none; }
-}
+/* 🔴 Das Ausblenden unter 640 px ist WEG (Falk 22.08.2026: „kapitel steht
+   trotzdem noch nicht auf der webseite neben den zahlen").
+
+   Die Regel stammt aus der Zeit, als „Kapitel" klein neben der Ziffer
+   stand — damals hätte es auf dem Handy den Rand gesprengt. Seit es
+   dieselbe Schriftgröße hat, schrumpft es über `clamp()` mit der Ziffer
+   zusammen und passt: bei 390 px Fensterbreite sind es 258 px Wort plus
+   72 px Ziffer, gemessen.
+
+   Die Lehre daraus: Wer eine Schutzregel einbaut, muss sie mit dem
+   Grund zusammen verwerfen. Sonst versteckt sie später etwas, das
+   längst passt — und man sucht den Fehler woanders. */
 
 @supports not (background: color-mix(in oklab, red 50%, blue)) {
   .abschnitt[data-nr]::after,
@@ -3723,4 +3729,32 @@ main.unterseite[data-nr] > .huelle {
 
 @supports not (background: color-mix(in oklab, red 50%, blue)) {
   .app-bild img { border-color: var(--akzent); }
+}
+
+/* ── „Kapitel" auf schmalen Schirmen (Falk 22.08.2026) ────────────────
+   Gemessen nach dem Entfernen der Ausblendung: Bei 390 px Fensterbreite
+   braucht das Wort 357 px, die Ziffer 83 px, dazu die Ränder — es ragte
+   links heraus. Bei 640 px stand es in Statuspille und App-Symbol.
+
+   Grund: `clamp(5.5rem, 17vw, 14rem)` hat bei 5,5rem seine Untergrenze;
+   darunter schrumpft nur noch das Fenster, nicht die Schrift.
+
+   Lösung: Unter 760 px hängt die Größe rein an der Fensterbreite (vw),
+   sodass Wort und Ziffer mitschrumpfen. Ausgeblendet wird nichts mehr —
+   Falk will es sehen. */
+@media (max-width: 760px) {
+  .abschnitt[data-nr]::before,
+  main.unterseite[data-nr]::before,
+  .abschnitt[data-nr]::after,
+  main.unterseite[data-nr]::after {
+    /* 8,2vw: bei 390 px sind das 32 px Schrift → Wort ~123 px,
+       Ziffer ~34 px. Zusammen 157 px von 390 px Breite. */
+    font-size: 8.2vw;
+    --nr: 8.2vw;
+  }
+  /* Der Kopfabstand richtet sich nach derselben Größe */
+  .abschnitt[data-nr] > .huelle,
+  main.unterseite[data-nr] > .huelle {
+    padding-top: calc(8.2vw * 1.6);
+  }
 }
