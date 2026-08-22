@@ -891,6 +891,17 @@
           </div>`).join("");
       }
 
+      /* Die Bereiche: Was sieht man beim Oeffnen? Gleiche Kartenform
+         wie der Funktionsumfang, nur weiter oben auf der Seite. */
+      const bereiche = el(app + "-bereiche");
+      if (bereiche) {
+        bereiche.innerHTML = (hol(app + ".bereiche") || []).map(f => `
+          <div class="funktion">
+            <b>${sicher(f.name)}</b>
+            <span>${sicher(f.text)}</span>
+          </div>`).join("");
+      }
+
       const liste = el(app + "-umfang-liste");
       if (liste) {
         liste.innerHTML = hol(app + ".umfangListe").map(f => `

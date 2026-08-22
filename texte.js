@@ -903,6 +903,14 @@ de: {
      4 Rollen/13 Rechte). 🔴 KEIN Preis nennen — es existiert noch keine
      Bezahlfunktion (nur beschrifteter Testmodus). ===================== */
   campus: {
+    bereicheTitel: "Die Bereiche",
+    bereicheText: "Drei Bereiche in der Hauptleiste, alles Weitere liegt darunter.",
+    bereiche: [
+      { name: "🏫  Schule", text: "Lernen, Jobs und der Zugang zur Allianz." },
+      { name: "🏘️  Umgebung", text: "Das Klassenzimmer und wer sonst noch da ist." },
+      { name: "🛒  Markt", text: "Der Flohmarkt — Angebot wechselt dreimal am Tag." },
+      { name: "👤  Profil", text: "Skills, Ausrüstung, Premium und Einstellungen." },
+    ],
     kennung: "Kapitel 05 · In Bearbeitung",
     karteKurz: "Endlos aufsteigen im Schulspiel",
     karteStatus: "In Bearbeitung",
@@ -960,6 +968,15 @@ de: {
   },
 
   yourfilm: {
+    bereicheTitel: "Die Bereiche",
+    bereicheText: "Fünf Reiter, vom Scannen bis zur Auswertung.",
+    bereiche: [
+      { name: "🏠  Start", text: "Zuletzt hinzugefügt und was gerade verliehen ist." },
+      { name: "📚  Sammlung", text: "Alle Filme, sortier- und filterbar." },
+      { name: "📷  Scannen", text: "Kamera auf den Barcode — der Rest geht von allein." },
+      { name: "🔎  Suche", text: "Nach Titel, Person oder allem zusammen." },
+      { name: "➕  Mehr", text: "Statistik, Standorte, Personen, Einstellungen." },
+    ],
     kennung: "Kapitel 06 · Im Test",
     karteKurz: "Filmsammlung scannen und ordnen",
     karteStatus: "Im Test",
@@ -1014,6 +1031,14 @@ de: {
   },
 
   zeitwissen: {
+    bereicheTitel: "Die Bereiche",
+    bereicheText: "Vier Reiter — der Rest rechnet sich von selbst.",
+    bereiche: [
+      { name: "☀️  Heute", text: "Die Stempeluhr und der laufende Tag." },
+      { name: "📆  Zeitraum", text: "Woche und Monat, mit Soll und Ist nebeneinander." },
+      { name: "📁  Projekte", text: "Wohin die Zeit ging — je Projekt und Aufgabe." },
+      { name: "➕  Mehr", text: "Zeitkonto, Bericht, Arbeitszeitmodell, Einstellungen." },
+    ],
     kennung: "Kapitel 07 · Im Test",
     karteKurz: "Arbeitszeit mit Zeitkonto",
     karteStatus: "Im Test",
@@ -1123,6 +1148,14 @@ de: {
     hinweis: "Die Instinct Familie ist in Entwicklung. Alle Angaben beschreiben den geplanten Umfang und können sich ändern. Verfügbar ist bisher allein Instinct Scoring."
   },
   tankspur: {
+    bereicheTitel: "Die Bereiche",
+    bereicheText: "Vier Reiter — mehr braucht es nicht.",
+    bereiche: [
+      { name: "📋  Übersicht", text: "Der letzte Stand auf einen Blick: Preis-Trend, Hochrechnung, Kennzahlen." },
+      { name: "📝  Einträge", text: "Jede Betankung als Liste — antippen, ändern, löschen." },
+      { name: "📊  Statistik", text: "Acht Auswertungen, per Wischen umschaltbar." },
+      { name: "👤  Profil", text: "Fahrzeug, Konto und Datenschutz." },
+    ],
     kennung: "Kapitel 09 · Im Test",
     karteKurz: "Was das Auto wirklich kostet",
     karteStatus: "Im Test",
@@ -1131,7 +1164,7 @@ de: {
     untertitel: "Was das Auto wirklich kostet",
     claim: "Tanken. Eintippen.",
     claimZwei: "Den Rest rechnet die App.",
-    positionierung: "Ein Tankspur, das mitdenkt: Preis je Liter und Liter eintragen — den Gesamtpreis füllt die App selbst aus. Aus Kilometern und Litern wird der Verbrauch, aus Verbrauch und Preis werden die Kosten je 100 Kilometer. Am Jahresende steht da, was das Fahren wirklich gekostet hat. Komplett auf dem Gerät.",
+    positionierung: "Eine Tankspur, die mitdenkt: Preis je Liter und Liter eintragen — den Gesamtpreis füllt die App selbst aus. Aus Kilometern und Litern wird der Verbrauch, aus Verbrauch und Preis werden die Kosten je 100 Kilometer. Am Jahresende steht da, was das Fahren wirklich gekostet hat. Komplett auf dem Gerät.",
     inArbeit: "🧪 Im Test: Die App läuft im geschlossenen Test bei Google Play. Installieren kann sie nur, wer dafür freigeschaltet ist — öffentlich im Store steht sie noch nicht, und zu kaufen gibt es nichts.",
 
     kernTitel: "Der Kniff",
@@ -1171,9 +1204,9 @@ de: {
       "Bisher nur Deutsch"
     ],
 
-    mehrKnopf: "Alles über das Tankspur",
+    mehrKnopf: "Alles über Tankspur",
     mehrText: "Die drei Werte, der Verbrauch je Betankung, die Jahresbilanz — und was bis zur Veröffentlichung noch passiert.",
-    hinweis: "Das Tankspur läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+    hinweis: "Tankspur läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
 
   /* ============ LIVE — automatisch geladene Renndaten ============ */
@@ -2229,6 +2262,14 @@ en: {
 
   /* ============ CHAPTER 5 — CAMPUS CLASH (IN PROGRESS) ============ */
   campus: {
+    bereicheTitel: "The areas",
+    bereicheText: "Three areas in the main bar, everything else sits below them.",
+    bereiche: [
+      { name: "🏫  School", text: "Study, jobs and the way into your alliance." },
+      { name: "🏘️  Neighbourhood", text: "The classroom and who else is around." },
+      { name: "🛒  Market", text: "The flea market — stock changes three times a day." },
+      { name: "👤  Profile", text: "Skills, equipment, premium and settings." },
+    ],
     kennung: "Chapter 05 · In progress",
     karteKurz: "Rise endlessly in the school game",
     karteStatus: "In progress",
@@ -2286,6 +2327,15 @@ en: {
   },
 
   yourfilm: {
+    bereicheTitel: "The areas",
+    bereicheText: "Five tabs, from scanning to analysis.",
+    bereiche: [
+      { name: "🏠  Home", text: "Recently added and what is currently on loan." },
+      { name: "📚  Collection", text: "Every film, sortable and filterable." },
+      { name: "📷  Scan", text: "Camera on the barcode — the rest happens by itself." },
+      { name: "🔎  Search", text: "By title, by person, or everything at once." },
+      { name: "➕  More", text: "Statistics, locations, people, settings." },
+    ],
     kennung: "Chapter 06 · In testing",
     karteKurz: "Scan and sort your film collection",
     karteStatus: "In testing",
@@ -2340,6 +2390,14 @@ en: {
   },
 
   zeitwissen: {
+    bereicheTitel: "The areas",
+    bereicheText: "Four tabs — the rest works itself out.",
+    bereiche: [
+      { name: "☀️  Today", text: "The time clock and the day in progress." },
+      { name: "📆  Period", text: "Week and month, target and actual side by side." },
+      { name: "📁  Projects", text: "Where the time went — per project and task." },
+      { name: "➕  More", text: "Balance, reports, target-hours model, settings." },
+    ],
     kennung: "Chapter 07 · In testing",
     karteKurz: "Working hours with a running balance",
     karteStatus: "In testing",
@@ -2449,6 +2507,14 @@ en: {
     hinweis: "The Instinct Family is in development. All details describe the planned scope and may change. Only Instinct Scoring is available so far."
   },
   tankspur: {
+    bereicheTitel: "The areas",
+    bereicheText: "Four tabs — that's all it takes.",
+    bereiche: [
+      { name: "📋  Overview", text: "The latest state at a glance: price trend, projection, key figures." },
+      { name: "📝  Entries", text: "Every fill-up as a list — tap, edit, delete." },
+      { name: "📊  Statistics", text: "Eight analyses, swipe to switch." },
+      { name: "👤  Profile", text: "Vehicle, account and privacy." },
+    ],
     kennung: "Chapter 09 · In testing",
     karteKurz: "What the car actually costs",
     karteStatus: "In testing",
