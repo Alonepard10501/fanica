@@ -190,11 +190,11 @@ p:last-child { margin-bottom: 0; }
 /* Instinct Familie = Unterkategorie von Instinct Scoring, deshalb
    bewusst DIESELBE Farbfamilie wie Instinct (oliv), nur heller —
    sie soll zusammengehoeren, nicht konkurrieren. */
-/* Tankbuch = neuntes Produkt, IN BEARBEITUNG. Bernstein war
+/* Tankspur = neuntes Produkt, IN BEARBEITUNG. Bernstein war
    belegt (Campus Clash), Tuerkis auch (ZeitWissen) — deshalb
    ein warmes Kupfer, das sich von beiden abhebt. */
-[data-kapitel="tankbuch"] {
-  --akzent: #C2703A;      /* Tankbuch: Kupfer */
+[data-kapitel="tankspur"] {
+  --akzent: #C2703A;      /* Tankspur: Kupfer */
   --akzent-hell: #E8944F;
 }
 [data-kapitel="familie"] {
@@ -1686,7 +1686,7 @@ h1.hero-text,
 .vergleich thead th.app-5 { color: #FFB84D; }   /* Campus Clash */
 .vergleich thead th.app-6 { color: #B85CFF; }   /* YourFilm     */
 .vergleich thead th.app-7 { color: #3FD0D0; }   /* ZeitWissen   */
-.vergleich thead th.app-8 { color: #E8944F; }   /* Tankbuch     */
+.vergleich thead th.app-8 { color: #E8944F; }   /* Tankspur     */
 .vergleich tbody th {
   font-family: var(--schrift-text); font-weight: 600;
   font-size: .86rem; color: var(--grau);
@@ -3368,4 +3368,174 @@ a.bezug-weg.bezug-webseite .bezug-zeichen {
 
 @media (prefers-reduced-motion: reduce) {
   .app-symbol { transition: none; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Leuchtende Kapitelzahl (Falk 22.08.2026)
+   „die Kapitelzahl muss leuchten es gibt eine vorlage wie wir
+    leuchtende ränder darstellen"
+
+   Vorlage: UI-Baustein Nr. 17 „Gradient-Rand-Knopf" (Uiverse/StealthWorm)
+   aus `08_Assets\Design-Bausteine\UI-Bausteine — Webseiten (CSS).md` —
+   derselbe Rand-Trick wie beim App-Symbol darunter:
+     · zwei background-Ebenen, padding-box innen + border-box außen
+     · Verlauf bei 137,48°
+   🔴 Aus der Vorlage übernommen: `padding-box`, NICHT `content-box`.
+      Die content-box endet am Innenabstand und erbt `border-radius`
+      nicht — der dunkle Kern säße sonst als Rechteck in der Pille
+      (real aufgetreten am 02.08.2026, im Baustein vermerkt).
+
+   Farbe kommt wie beim Symbol aus `--akzent` der Sektion, also trägt
+   jedes Kapitel seine eigene leuchtende Zahl.
+   🔴 Ohne Animation — der Verlauf steht still (Tempo-Fund 22.08.2026).
+   ══════════════════════════════════════════════════════════════════════ */
+
+.kennung {
+  /* aus dem Fließtext zur eigenständigen Marke */
+  width: max-content;
+  max-width: 100%;
+  padding: .46em 1.1em;
+  border-radius: 999px;
+  border: double 3px transparent;      /* Rand-Trick, Vorlage Nr. 17 */
+  background:
+    linear-gradient(var(--grund, #07070A), var(--grund, #07070A)) padding-box,
+    linear-gradient(137.48deg,
+      var(--akzent-hell) 10%,
+      var(--akzent)      45%,
+      color-mix(in oklab, var(--akzent) 60%, #FFFFFF) 67%,
+      var(--akzent-hell) 87%) border-box;
+
+  /* Das eigentliche Leuchten: außen ein farbiger Hof, innen ein Saum */
+  box-shadow:
+    0 0 14px -2px color-mix(in oklab, var(--akzent) 65%, transparent),
+    0 0 30px -6px color-mix(in oklab, var(--akzent) 45%, transparent),
+    inset 0 0 10px -6px var(--akzent-hell);
+  text-shadow: 0 0 10px color-mix(in oklab, var(--akzent-hell) 70%, transparent);
+
+  /* Der Strich daneben passte zum Fließtext, nicht zur Pille */
+  gap: .55rem;
+}
+
+.kennung::after { display: none; }
+
+/* In zentrierten Köpfen mittig stellen (width:max-content kennt keine
+   eigene Mitte — margin übernimmt das). */
+.kapitelkopf .kennung,
+.kennung.zentriert {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+/* Kein color-mix? Dann leuchtet es einfarbig — der Rand bleibt. */
+@supports not (background: color-mix(in oklab, red 50%, blue)) {
+  .kennung {
+    background:
+      linear-gradient(var(--grund, #07070A), var(--grund, #07070A)) padding-box,
+      linear-gradient(137.48deg, var(--akzent-hell), var(--akzent)) border-box;
+    box-shadow: 0 0 14px -2px var(--akzent);
+    text-shadow: 0 0 10px var(--akzent-hell);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Die großen Umriss-Ziffern rechts (01…09) leuchten (Falk 22.08.2026)
+   „die kapitelzahl rechts im Bild soll im umriss leuchten … 03 04 05 06
+    … diese zahlen"
+
+   Vorher: `-webkit-text-stroke` mit 30 % Farbe bei 55 % Deckkraft —
+   ein blasser Strich, kein Licht. Der Umriss blieb, was fehlte, war
+   der Hof darum.
+
+   Ein Umriss leuchtet nicht über `text-shadow`: Der Schatten folgt der
+   FLÄCHE der Ziffer, und die ist hier `transparent`. Er würde die Ziffer
+   als gefüllten Block nachzeichnen statt ihrer Kontur zu folgen.
+   Deshalb `drop-shadow()` — der Filter arbeitet auf dem GERENDERTEN
+   Ergebnis, also auf dem Strich selbst. Drei gestaffelte Höfe ergeben
+   den Verlauf von scharf nach weich.
+
+   🔴 Kein Puls, keine Animation: Es sind neun Ziffern mit je ~200×200 px
+      Weichzeichner — bewegt wären das wieder Hunderttausende Pixel je
+      Bild (siehe „bewegte-weichzeichner-sind-die-bremse", 22.08.2026).
+   ══════════════════════════════════════════════════════════════════════ */
+
+.abschnitt[data-nr]::before {
+  /* Kräftigerer Strich in der vollen Kapitelfarbe statt 30 % davon */
+  -webkit-text-stroke: 2.5px color-mix(in srgb, var(--akzent-hell) 85%, transparent);
+  opacity: .85;
+
+  filter:
+    drop-shadow(0 0  6px color-mix(in srgb, var(--akzent-hell) 90%, transparent))
+    drop-shadow(0 0 18px color-mix(in srgb, var(--akzent)      70%, transparent))
+    drop-shadow(0 0 42px color-mix(in srgb, var(--akzent)      40%, transparent));
+}
+
+/* Kein color-mix? Dann leuchtet die Ziffer einfarbig weiter. */
+@supports not (background: color-mix(in oklab, red 50%, blue)) {
+  .abschnitt[data-nr]::before {
+    -webkit-text-stroke: 2.5px var(--akzent-hell);
+    filter: drop-shadow(0 0 6px var(--akzent-hell))
+            drop-shadow(0 0 20px var(--akzent));
+  }
+}
+
+/* ── Dasselbe auf den Unterseiten (Falk 22.08.2026:
+      „genau und auch auf allen unterseiten anwenden") ──────────────── */
+
+/* Das Symbol im Ring heißt dort `.symbol-bild` (vorher trug es die
+   Klasse `.kapitel-logo-klein` mit eigener Breite — die würde den Ring
+   sprengen). Der Ring selbst ist derselbe `.app-symbol` wie auf der
+   Startseite, die Farbe kommt aus `<body data-kapitel="…">`. */
+.app-symbol .symbol-bild {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 22%;
+  display: block;
+  /* Der Schlagschatten der alten Wortmarken-Regel gehört hier nicht hin */
+  filter: none;
+}
+
+/* Die große Umriss-Ziffer sitzt auf den Unterseiten am <main>, nicht an
+   einem Abschnitt — dieselbe Darstellung, anderer Träger. */
+main.unterseite[data-nr] { position: relative; overflow-x: clip; }
+main.unterseite[data-nr] > * { position: relative; z-index: 1; }
+main.unterseite[data-nr]::before {
+  content: attr(data-nr);
+  position: absolute; top: clamp(.6rem, 3vw, 2.4rem); right: clamp(.4rem, 3vw, 3rem);
+  font-family: var(--schrift-kopf); font-weight: 900; line-height: 1;
+  font-size: clamp(5.5rem, 17vw, 14rem);
+  color: transparent;
+  -webkit-text-stroke: 2.5px color-mix(in srgb, var(--akzent-hell) 85%, transparent);
+  opacity: .85;
+  filter:
+    drop-shadow(0 0  6px color-mix(in srgb, var(--akzent-hell) 90%, transparent))
+    drop-shadow(0 0 18px color-mix(in srgb, var(--akzent)      70%, transparent))
+    drop-shadow(0 0 42px color-mix(in srgb, var(--akzent)      40%, transparent));
+  pointer-events: none; user-select: none; z-index: 0;
+}
+
+@supports not (background: color-mix(in oklab, red 50%, blue)) {
+  main.unterseite[data-nr]::before {
+    -webkit-text-stroke: 2.5px var(--akzent-hell);
+    filter: drop-shadow(0 0 6px var(--akzent-hell))
+            drop-shadow(0 0 20px var(--akzent));
+  }
+}
+
+/* ── Kapitelkopf: eine Ausrichtung für alle Teile ──────────────────────
+   Gefunden beim Ansehen der Tankspur-Unterseite: Kapitelpille und
+   App-Symbol standen mittig (sie zentrieren sich per `margin: auto`
+   selbst), die Statuspille dagegen links — der Kopf ist per Vorgabe
+   `align-items: flex-start`. Drei Teile, zwei Ausrichtungen.
+
+   Statt jedem Teil einzeln eine Mitte zu geben, richtet jetzt der Kopf
+   selbst aus. So kann kein neues Element wieder ausscheren. */
+.kapitelkopf {
+  align-items: center;
+  text-align: center;
+}
+.kapitelkopf > * {
+  margin-left: auto;
+  margin-right: auto;
 }

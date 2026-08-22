@@ -43,7 +43,7 @@ de: {
     appYourfilm: "Im Test",
     appZeitwissen: "Im Test",
     appFamilie: "Coming Soon",
-    appTankbuch: "Im Test",
+    appTankspur: "Im Test",
     scrollHinweis: "Scrollen",
     karussellHinweis: "Antippen führt direkt zur App — die Pfeile drehen die Auswahl."
   },
@@ -1121,16 +1121,16 @@ de: {
     mehrText: "Welche App was macht, warum es zehn sind und nicht eine — und was sie verbindet.",
     hinweis: "Die Instinct Familie ist in Entwicklung. Alle Angaben beschreiben den geplanten Umfang und können sich ändern. Verfügbar ist bisher allein Instinct Scoring."
   },
-  tankbuch: {
+  tankspur: {
     kennung: "Kapitel 09 · Im Test",
     karteKurz: "Was das Auto wirklich kostet",
     karteStatus: "Im Test",
     statusPille: "Im Test — geschlossen bei Google Play",
-    name: "Tankbuch",
+    name: "Tankspur",
     untertitel: "Was das Auto wirklich kostet",
     claim: "Tanken. Eintippen.",
     claimZwei: "Den Rest rechnet die App.",
-    positionierung: "Ein Tankbuch, das mitdenkt: Preis je Liter und Liter eintragen — den Gesamtpreis füllt die App selbst aus. Aus Kilometern und Litern wird der Verbrauch, aus Verbrauch und Preis werden die Kosten je 100 Kilometer. Am Jahresende steht da, was das Fahren wirklich gekostet hat. Komplett auf dem Gerät.",
+    positionierung: "Ein Tankspur, das mitdenkt: Preis je Liter und Liter eintragen — den Gesamtpreis füllt die App selbst aus. Aus Kilometern und Litern wird der Verbrauch, aus Verbrauch und Preis werden die Kosten je 100 Kilometer. Am Jahresende steht da, was das Fahren wirklich gekostet hat. Komplett auf dem Gerät.",
     inArbeit: "🧪 Im Test: Die App läuft im geschlossenen Test bei Google Play. Installieren kann sie nur, wer dafür freigeschaltet ist — öffentlich im Store steht sie noch nicht, und zu kaufen gibt es nichts.",
 
     kernTitel: "Der Kniff",
@@ -1157,7 +1157,7 @@ de: {
 
     besondersTitel: "Was es besonders macht",
     besonders: [
-      { name: "Das Profil bleibt auf dem Gerät", text: "Es gibt keinen Tankbuch-Server. Das Profil trennt die Daten mehrerer Fahrer auf demselben Handy — es verschickt nichts und verlangt keine Bestätigungsmail." },
+      { name: "Das Profil bleibt auf dem Gerät", text: "Es gibt keinen Tankspur-Server. Das Profil trennt die Daten mehrerer Fahrer auf demselben Handy — es verschickt nichts und verlangt keine Bestätigungsmail." },
       { name: "Fahrtage statt nur Kilometer", text: "Wer notiert, an wie vielen Tagen er gefahren ist, sieht nicht nur was, sondern auch wie oft — und erkennt, ob eine teure Tankfüllung an langen Strecken lag oder am Preis." },
       { name: "Keine Zahl wird geschätzt", text: "Was nicht eingetragen ist, bleibt leer. Die App rechnet aus vorhandenen Werten — sie erfindet keine, um eine Lücke zu füllen." }
     ],
@@ -1170,9 +1170,9 @@ de: {
       "Bisher nur Deutsch"
     ],
 
-    mehrKnopf: "Alles über das Tankbuch",
+    mehrKnopf: "Alles über das Tankspur",
     mehrText: "Die drei Werte, der Verbrauch je Betankung, die Jahresbilanz — und was bis zur Veröffentlichung noch passiert.",
-    hinweis: "Das Tankbuch läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+    hinweis: "Das Tankspur läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
 
   /* ============ LIVE — automatisch geladene Renndaten ============ */
@@ -1260,7 +1260,7 @@ de: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
     text: "Acht Produkte, acht völlig verschiedene Zwecke — vier zu haben, drei im Test, eines noch im Bau. Was sie verbindet: Sie funktionieren offline, sammeln nichts über dich und verlangen kein Konto. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankbuch"],
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten"] },
       { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "Im Test bei Google Play", "Im Test bei Google Play", "Im Test bei Google Play"] },
@@ -1405,7 +1405,7 @@ en: {
     appYourfilm: "In testing",
     appZeitwissen: "In testing",
     appFamilie: "Coming soon",
-    appTankbuch: "In testing",
+    appTankspur: "In testing",
     scrollHinweis: "Scroll",
     karussellHinweis: "Tap to go straight to the app — the arrows turn the selection."
   },
@@ -2446,12 +2446,12 @@ en: {
     mehrText: "Which app does what, why there are ten and not one — and what ties them together.",
     hinweis: "The Instinct Family is in development. All details describe the planned scope and may change. Only Instinct Scoring is available so far."
   },
-  tankbuch: {
+  tankspur: {
     kennung: "Chapter 09 · In testing",
     karteKurz: "What the car actually costs",
     karteStatus: "In testing",
     statusPille: "In testing — closed on Google Play",
-    name: "Tankbuch",
+    name: "Tankspur",
     untertitel: "What the car actually costs",
     claim: "Fill up. Type it in.",
     claimZwei: "The app does the rest of the maths.",
@@ -2482,7 +2482,7 @@ en: {
 
     besondersTitel: "What makes it special",
     besonders: [
-      { name: "The profile stays on the device", text: "There is no Tankbuch server. The profile separates the data of several drivers on the same phone — it sends nothing and asks for no confirmation email." },
+      { name: "The profile stays on the device", text: "There is no Tankspur server. The profile separates the data of several drivers on the same phone — it sends nothing and asks for no confirmation email." },
       { name: "Driving days, not just kilometres", text: "Noting how many days you drove shows not only how much but how often — and reveals whether an expensive tank was down to long trips or to the price." },
       { name: "No figure is guessed", text: "What is not entered stays empty. The app calculates from the values it has — it never invents one to fill a gap." }
     ],
@@ -2495,9 +2495,9 @@ en: {
       "German only for now"
     ],
 
-    mehrKnopf: "All about Tankbuch",
+    mehrKnopf: "All about Tankspur",
     mehrText: "The three values, consumption per fill-up, the yearly balance — and what still happens before release.",
-    hinweis: "Tankbuch is in closed testing on Google Play — only testers who have been given access can install it. All details describe the current build and may change before release."
+    hinweis: "Tankspur is in closed testing on Google Play — only testers who have been given access can install it. All details describe the current build and may change before release."
   },
 
   /* ============ LIVE — automatically loaded race data ============ */
@@ -2558,7 +2558,7 @@ en: {
     kennung: "At a glance",
     titel: "Which app is for you?",
     text: "Eight products, eight entirely different purposes — four finished, four in progress. What they share: they work offline, they collect nothing about you, and they don't ask for an account. The Instinct Family is not listed here: it is not a single app but ten, and none of them is available yet.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankbuch"],
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur"],
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view"] },
       { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In closed testing on Google Play", "In closed testing on Google Play", "In closed testing on Google Play"] },

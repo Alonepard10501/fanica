@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tankbuch — was das Auto wirklich kostet (in Bearbeitung)</title>
-<meta name="description" content="Tankbuch in Bearbeitung: Preis und Liter eintragen, den Gesamtpreis rechnet die App. Verbrauch je Betankung, Kosten je 100 km, Jahresbilanz — komplett auf dem Gerät, ohne Server.">
+<title>Tankspur — was das Auto wirklich kostet (in Bearbeitung)</title>
+<meta name="description" content="Tankspur in Bearbeitung: Preis und Liter eintragen, den Gesamtpreis rechnet die App. Verbrauch je Betankung, Kosten je 100 km, Jahresbilanz — komplett auf dem Gerät, ohne Server.">
 <meta name="theme-color" content="#07070A">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-kapitel="tankbuch">
+<body data-kapitel="tankspur">
 
 <a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
 
@@ -36,55 +36,61 @@
     <a href="yourfilm.html">YourFilm</a>
     <a href="zeitwissen.html">ZeitAnker</a>
     <a href="instinct-familie.html">Instinct Familie</a>
-    <span class="kopf-hier" aria-current="page">Tankbuch</span>
+    <span class="kopf-hier" aria-current="page">Tankspur</span>
   </nav>
  </div>
 </header>
 
-<main id="inhalt" class="unterseite">
+<main id="inhalt" class="unterseite" data-nr="09">
   <div class="huelle">
 
     <div class="kapitelkopf">
-      <p class="kennung" data-t="tankbuch.kennung">Kapitel 09 · Im Test</p>
-      <p class="status-pille" data-t="tankbuch.statusPille"></p>
-      <h1 data-t="tankbuch.untertitel">Deine Filmsammlung im Griff</h1>
+      <p class="kennung" data-t="tankspur.kennung">Kapitel 09 · Im Test</p>
+      <p class="status-pille" data-t="tankspur.statusPille"></p>
+      <!-- App-Symbol im Farbring, wie auf der Startseite -->
+      <div class="app-symbol">
+        <img class="symbol-bild" src="bilder/marke/app-tankspur.webp"
+             alt="Tankspur — App-Symbol" width="128" height="128">
+      </div>
+
+      <h1 data-t="tankspur.untertitel">Deine Filmsammlung im Griff</h1>
     </div>
 
-    <p class="gross" style="max-width:64ch" data-t="tankbuch.positionierung"></p>
-    <p class="preis" data-t="tankbuch.inArbeit"></p>
+    <p class="gross" style="max-width:64ch" data-t="tankspur.positionierung"></p>
+    <p class="preis" data-t="tankspur.inArbeit"></p>
 
     <!-- ---------- Was drinsteckt ---------- -->
     <section class="unter-block">
-      <h2 data-t="tankbuch.umfangTitel">Was drinsteckt</h2>
-      <p class="leise" style="max-width:64ch" data-t="tankbuch.umfangText"></p>
-      <div class="zahlen" id="tankbuch-umfang-zahlen"></div>
-      <div class="funktionen" id="tankbuch-umfang-liste"
+      <h2 data-t="tankspur.umfangTitel">Was drinsteckt</h2>
+      <p class="leise" style="max-width:64ch" data-t="tankspur.umfangText"></p>
+      <div class="zahlen" id="tankspur-umfang-zahlen"></div>
+      <div class="funktionen" id="tankspur-umfang-liste"
            style="margin-top:clamp(1.8rem,3.4vw,2.6rem)"></div>
     </section>
 
     <!-- ---------- Der Kniff ---------- -->
     <section class="unter-block">
-      <h2 data-t="tankbuch.kernTitel">Der Kniff</h2>
-      <p class="gross" style="max-width:64ch" data-t="tankbuch.kernText"></p>
+      <h2 data-t="tankspur.kernTitel">Der Kniff</h2>
+      <p class="gross" style="max-width:64ch" data-t="tankspur.kernText"></p>
     </section>
 
     <!-- ---------- Besonderheiten ---------- -->
     <section class="unter-block">
-      <h2 data-t="tankbuch.besondersTitel">Was es besonders macht</h2>
-      <div class="funktionen" id="tankbuch-besonders"></div>
+      <h2 data-t="tankspur.besondersTitel">Was es besonders macht</h2>
+      <div class="funktionen" id="tankspur-besonders"></div>
     </section>
 
     <!-- ---------- Ehrlicher Stand ---------- -->
     <section class="unter-block">
-      <h2 data-t="tankbuch.statusTitel">Ehrlicher Stand</h2>
-      <p class="leise" style="max-width:64ch" data-t="tankbuch.statusText"></p>
-      <ul class="anzeigen" id="tankbuch-offen"></ul>
+      <h2 data-t="tankspur.statusTitel">Ehrlicher Stand</h2>
+      <p class="leise" style="max-width:64ch" data-t="tankspur.statusText"></p>
+      <ul class="anzeigen" id="tankspur-offen"></ul>
       <div class="aktionen" style="margin-top:1.6rem">
-        <a class="nbtn b-scratch" href="index.html#tankbuch">
+        <a class="nbtn b-scratch" href="index.html#tankspur">
           <span data-t="zurueckKnopf">← Zurück zur Startseite</span></a>
       </div>
       <div class="hinweis">
-        <p data-t="tankbuch.hinweis"></p>
+        <p data-t="tankspur.hinweis"></p>
       </div>
     </section>
 

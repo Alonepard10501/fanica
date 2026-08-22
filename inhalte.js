@@ -714,18 +714,18 @@
         .map(o => `<li>${sicher(o)}</li>`).join("");
     }
 
-    const tBesonders = el("tankbuch-besonders");
+    const tBesonders = el("tankspur-besonders");
     if (tBesonders) {
-      tBesonders.innerHTML = hol("tankbuch.besonders").map(b => `
+      tBesonders.innerHTML = hol("tankspur.besonders").map(b => `
         <div class="funktion">
           <b>${sicher(b.name)}</b>
           <span>${sicher(b.text)}</span>
         </div>`).join("");
     }
 
-    const tOffen = el("tankbuch-offen");
+    const tOffen = el("tankspur-offen");
     if (tOffen) {
-      tOffen.innerHTML = hol("tankbuch.offenListe")
+      tOffen.innerHTML = hol("tankspur.offenListe")
         .map(o => `<li>${sicher(o)}</li>`).join("");
     }
 
@@ -881,7 +881,7 @@
        wichtigsten Funktionen als Raster, dann die Anzeigen als Liste.
        Die SetUpLeiste laeuft mit — sie hat Zahlen und Liste, aber keine
        `umfangAnzeigen`; der Baustein ueberspringt fehlende Container. */
-    ["instinct", "fanica", "neonpunkt", "setupleiste", "campus", "yourfilm", "zeitwissen", "familie", "tankbuch"].forEach(app => {
+    ["instinct", "fanica", "neonpunkt", "setupleiste", "campus", "yourfilm", "zeitwissen", "familie", "tankspur"].forEach(app => {
       const zahlen = el(app + "-umfang-zahlen");
       if (zahlen) {
         zahlen.innerHTML = hol(app + ".umfangZahlen").map(z => `

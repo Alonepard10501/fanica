@@ -11,3 +11,9 @@ desktop.ini
 __pycache__/
 *.pyc
 _sicherung/
+# Screenshots aus Pruefungen gehoeren nicht ins Repo
+unter-*.png
+kap-*.png
+kenn-*.png
+ziff-*.png
+neu-*.png
