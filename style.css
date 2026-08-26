@@ -3164,7 +3164,10 @@ a.bezug-weg.bezug-webseite .bezug-zeichen {
   position: relative;
   display: flex; align-items: center; justify-content: center;
   gap: clamp(.4rem, 1.5vw, 1.2rem);
-  margin: clamp(2.2rem, 5vh, 3.4rem) auto clamp(4.2rem, 8vh, 5.6rem);
+  margin: clamp(2.2rem, 5vh, 3.4rem) auto clamp(5.6rem, 10vh, 7.5rem);
+  /* 🔴 Unten mehr Luft (22.08.2026 gemessen): Der Hinweis endete
+     bei 1127 px, der Scroll-Hinweis begann bei 1121 - sie lagen
+     6 px uebereinander. */
   /* 🔴 FESTE Breite (22.08.2026): Mit `max-width` schrumpfte das
      Karussell auf die Breite seines Inhalts — der Ring ist nur 200 px
      breit, die Karten stehen ueber `translateZ` davor. Die absolut
@@ -3207,7 +3210,12 @@ a.bezug-weg.bezug-webseite .bezug-zeichen {
   background: linear-gradient(180deg,
     color-mix(in srgb, var(--af) 10%, #0C0C11) 0%,
     #0A0A0F 100%);
-  transform: rotateY(calc(40deg * var(--i))) translateZ(300px);
+  /* Der Radius steckt in einer Variablen, damit er sich mit der
+     Fensterbreite ändern kann (Falk 22.08.2026: „am PC kann sich das
+     über die gesamte breite erstrecken"). Vorher stand hier fest
+     300px — dadurch blieb der Kreis bei 1600 px Fenster genauso eng
+     wie bei 900 px. */
+  transform: rotateY(calc(40deg * var(--i))) translateZ(var(--radius, 300px));
   backface-visibility: hidden;
   transition: border-color .3s var(--weich), box-shadow .3s var(--weich);
 }
@@ -3770,4 +3778,112 @@ main.unterseite[data-nr] > .huelle {
     padding-top: calc(clamp(.6rem, 3vw, 2.4rem) + 13vw * 1.0 + .7rem);
     /* Auch hier ohne das Abschnittspolster gerechnet. */
   }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   App-Bereich: schwebend, volle Breite am PC, Wischen auf dem Handy
+   (Falk 22.08.2026: „auf der webseite muss oben der bereich wo die apps
+    präsentiert werden, schweben, auf dem Handy muss man durch wischen
+    die Anzeige wechseln können, am PC kann sich das über die gesamte
+    breite erstrecken")
+
+   Drei Dinge, gemessen vorher: Das Karussell war auf 1100 px gedeckelt
+   und nutzte bei 1600 px Fenster nur zwei Drittel; es stand fest im
+   Fluss statt zu schweben; auf dem Handy drehte der 3D-Ring, statt zu
+   wischen.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ── 1 · SCHWEBEN ─────────────────────────────────────────────────────
+   Der Bereich hebt sich vom Hintergrund ab: eigene Fläche, weicher
+   Schatten darunter, leichter Rand. Kein `position: fixed` — das würde
+   beim Scrollen kleben; „schweben" heißt hier optisch abgehoben. */
+.karussell {
+  /* Die feste 1100px-Deckelung fällt weg (siehe Punkt 2) */
+  /* 🔴 `100%` statt `vw`: vw rechnet den Scrollbalken MIT, dadurch
+     ragte das Karussell bei 1100 px Fenster 11 px hinaus und
+     erzeugte Querscrollen (gemessen 22.08.2026). */
+  width: min(1560px, 100% - 2rem);
+
+  padding: clamp(1.4rem, 3vw, 2.4rem) clamp(1rem, 2vw, 1.8rem);
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--akzent) 7%, transparent),
+      color-mix(in srgb, var(--akzent) 2%, transparent));
+  border: 1px solid color-mix(in srgb, var(--akzent) 22%, transparent);
+  box-shadow:
+    0 30px 70px -30px rgba(0, 0, 0, .85),
+    0 10px 30px -18px color-mix(in srgb, var(--akzent) 45%, transparent),
+    0 0 0 1px rgba(255, 255, 255, .03) inset;
+  /* Der Schatten braucht Raum unter sich, sonst schneidet ihn der
+     nächste Abschnitt ab. */
+  isolation: isolate;
+}
+
+/* ── 2 · VOLLE BREITE AM PC ───────────────────────────────────────────
+   Die Bühne darf sich strecken; die Karten stehen weiter auf ihrem
+   Kreis, aber der Kreis wird größer, sodass mehr davon nebeneinander
+   Platz finden. */
+@media (min-width: 1000px) {
+  .karussell-buehne { padding: 0 clamp(60px, 6vw, 110px); }
+  /* Größerer Kreisradius = die Karten stehen weiter auseinander */
+  /* Gemessen bei 1536 px Karussellbreite: mit 24vw blieben 386 px
+     links und 411 px rechts leer. 30vw fuellt die Flaeche, die
+     Obergrenze 560 px laesst Platz fuer die Pfeile. */
+  .app-karte { --radius: clamp(320px, 30vw, 560px); }
+}
+
+@supports not (background: color-mix(in oklab, red 50%, blue)) {
+  .karussell {
+    background: rgba(255, 255, 255, .03);
+    border-color: var(--akzent);
+  }
+}
+
+/* ── 3 · HANDY: Wischen statt Gedränge ───────────────────────────────
+   Gemessen bei 390 px: Das Karussell war 316 px breit, davon gingen
+   2 × 60 px an das Pfeil-Polster — für den Ring blieben 196 px. Die
+   Karten (127 px) standen auf einem 300-px-Kreis und überlappten sich;
+   die Pfeile lagen mitten darauf (bei 1 px und 275 px, also innerhalb
+   der Kartenfläche).
+
+   Auf dem Handy wird gewischt (Falks Vorgabe) — die Pfeile sind dort
+   Beiwerk. Also: kleinerer Kreis, größere Karten, Pfeile schmaler und
+   halb durchsichtig, damit sie nicht stören. */
+@media (max-width: 700px) {
+  .karussell { padding: 1.2rem .6rem; }
+
+  .karussell-buehne {
+    /* Nur so viel Polster, dass die Pfeile am Rand sitzen */
+    padding: 0 34px;
+    height: 330px;
+  }
+
+  .app-karte {
+    /* Kleinerer Kreis: die Nachbarkarten treten zurück, statt sich
+       über die mittlere zu schieben. */
+    --radius: 190px;
+  }
+
+  .karussell-pfeil {
+    width: 34px; height: 34px;
+    font-size: 1.1rem;
+    opacity: .55;                 /* gewischt wird, nicht geklickt */
+  }
+  .karussell-pfeil:hover,
+  .karussell-pfeil:focus-visible { opacity: 1; }
+
+  /* Der Hinweis sagt auf dem Handy etwas anderes — dort wird gewischt */
+  .karussell-hinweis::after {
+    content: "";
+  }
+}
+
+/* Sehr schmale Geräte (320 px): Dort blieben nach Polster und Pfeilen
+   nur 178 px für eine 196 px breite Karte — der Pfeil lag darauf.
+   Gemessen 22.08.2026. */
+@media (max-width: 360px) {
+  .karussell-buehne { padding: 0 26px; }
+  .app-karte { --radius: 165px; }
+  .karussell-pfeil { width: 28px; height: 28px; }
 }

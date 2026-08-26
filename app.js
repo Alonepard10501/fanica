@@ -240,6 +240,46 @@
     buehne?.addEventListener("pointerup", (e) => ende(e.clientX));
     buehne?.addEventListener("pointercancel", () => { start = null; });
 
+    /* 🔴 Finger-Wischen braucht EIGENE Behandlung (Falk 22.08.2026,
+       gemessen): Mit nur pointerdown/-up passierte auf dem Handy
+       nichts — der Browser deutet die Wischgeste als Scrollen und
+       schickt `pointercancel`, bevor `pointerup` kommt.
+
+       Deshalb hier touchstart/-move/-end. Waagerecht wird gedreht und
+       das Scrollen unterbunden; senkrecht bleibt Scrollen, sonst käme
+       man über dem Karussell nicht mehr die Seite hinunter. */
+    let tx = null, ty = null, waagerecht = false;
+
+    buehne?.addEventListener("touchstart", (e) => {
+      const t = e.touches[0];
+      tx = t.clientX; ty = t.clientY; waagerecht = false;
+    }, { passive: true });
+
+    buehne?.addEventListener("touchmove", (e) => {
+      if (tx === null) return;
+      const t = e.touches[0];
+      const dx = t.clientX - tx, dy = t.clientY - ty;
+      /* Die Richtung wird EINMAL festgelegt und bleibt dann — sonst
+         kippt die Geste mitten im Wischen um. */
+      if (!waagerecht && Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy)) {
+        waagerecht = true;
+      }
+      if (waagerecht) e.preventDefault();
+    }, { passive: false });
+
+    buehne?.addEventListener("touchend", (e) => {
+      if (tx === null) return;
+      const t = e.changedTouches[0];
+      const weg = t.clientX - tx;
+      tx = ty = null;
+      if (waagerecht && Math.abs(weg) > 40) drehen(weg > 0 ? 1 : -1);
+      waagerecht = false;
+    });
+
+    buehne?.addEventListener("touchcancel", () => {
+      tx = ty = null; waagerecht = false;
+    });
+
     /* Tastatur: Pfeiltasten drehen, sobald eine Karte den Fokus hat. */
     ring.addEventListener("keydown", (e) => {
       if (e.key === "ArrowLeft") { drehen(1); e.preventDefault(); }
