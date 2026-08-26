@@ -3887,3 +3887,58 @@ main.unterseite[data-nr] > .huelle {
   .app-karte { --radius: 165px; }
   .karussell-pfeil { width: 28px; height: 28px; }
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   Sauberer Umriss ohne Linien IM Buchstaben (Falk 22.08.2026:
+   „Das Wort Kapitel sieht komisch aus … entferne die Verbindungen
+    innerhalb eines Buchstaben")
+
+   Das Problem: `-webkit-text-stroke` zeichnet JEDE Teilkontur eines
+   Zeichens nach. Die Buchstaben der Schrift „Saira" bestehen aus
+   überlappenden Teilformen — beim „K" liegen Stamm und Schrägstriche
+   übereinander, beim „A" der Querbalken. Der Strich malt deren Kanten
+   mit, obwohl sie im gefüllten Buchstaben unsichtbar wären.
+
+   Die Lösung: Statt eines Umrisses eine GEFÜLLTE Ebene, aus der eine
+   zweite, etwas kleinere Kopie ausgestanzt wird. Was übrig bleibt, ist
+   die Außenkontur — die inneren Nähte verschwinden, weil beide Ebenen
+   dort dasselbe zeichnen.
+
+   Umgesetzt über zwei Schatten in Gegenrichtung (`paint-order` genügt
+   hier nicht, weil es die Teilkonturen nicht zusammenführt):
+   Die Fläche bleibt gefüllt in Hintergrundfarbe, der Umriss entsteht
+   als Schatten rundum.
+   ══════════════════════════════════════════════════════════════════════ */
+
+.abschnitt[data-nr]::before,
+main.unterseite[data-nr]::before,
+.abschnitt[data-nr]::after,
+main.unterseite[data-nr]::after {
+  /* Fläche in der Hintergrundfarbe: deckt die inneren Nähte zu */
+  color: var(--grund, #07070A);
+  -webkit-text-stroke: 0;
+
+  /* Der Umriss als Ring aus acht Richtungen — sauber, weil er nur die
+     äußere Silhouette umschließt. 2,5 px wie vorher. */
+  /* 1,4 px statt 2,5: Ein Schatten-Ring liegt KOMPLETT aussen, ein
+     text-stroke dagegen mittig auf der Kontur - bei gleicher Zahl
+     wirkt der Ring doppelt so dick. */
+  text-shadow:
+     1.4px 0    0 var(--umriss),
+    -1.4px 0    0 var(--umriss),
+     0     1.4px 0 var(--umriss),
+     0    -1.4px 0 var(--umriss),
+     1px    1px  0 var(--umriss),
+    -1px    1px  0 var(--umriss),
+     1px   -1px  0 var(--umriss),
+    -1px   -1px  0 var(--umriss);
+
+  --umriss: color-mix(in srgb, var(--akzent-hell) 88%, transparent);
+}
+
+@supports not (background: color-mix(in oklab, red 50%, blue)) {
+  .abschnitt[data-nr]::before,
+  main.unterseite[data-nr]::before,
+  .abschnitt[data-nr]::after,
+  main.unterseite[data-nr]::after { --umriss: var(--akzent-hell); }
+}
