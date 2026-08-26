@@ -80,8 +80,6 @@ de: {
       { name: "Rangliste je Klasse", text: "Gewertet wird innerhalb der Klasse. Bei Gleichstand entscheidet die Disziplin — im Freien zählt zuerst das X." },
       { name: "Ausdrucke", text: "Ergebnisliste zum Aushang, nach Klassen gegliedert. Und Schusszettel mit jeder Passe und Unterschriftsfeldern, wie die Sportordnung sie verlangt." }
     ],
-    dsbStandTitel: "Ehrlicher Stand",
-    dsbStandText: "Ein Turnier ist von Anfang bis Ende durchführbar, 349 Tests halten den Stand fest. Was noch fehlt: die Strecke von Gerät zu Gerät im echten WLAN und ein bestandenes Apple-Review für die neuen Netz-Rechte. Ein Termin steht noch nicht fest.",
 
     /* --- Die Hauptseite der App vorstellen (Falk 30.07.) --- */
     startTitel: "Die Startseite",
@@ -963,13 +961,6 @@ de: {
       { name: "Fair bleibt fair", text: "Kein Pay-to-Win, keine Werbung, kein Konto. Alles bleibt auf deinem Gerät." }
     ],
 
-    statusTitel: "Ehrlicher Stand",
-    statusText: "Alle 41 geplanten Funktionen sind gebaut, 497 automatische Prüfungen laufen grün. Was noch fehlt, bevor es in die Stores geht:",
-    offenListe: [
-      "Die Abnahme auf echten Geräten — ein grüner Bau beweist noch kein gutes Spielgefühl",
-      "Der Online-Teil für Allianzen über mehrere Geräte (die Naht dafür ist fertig)",
-      "Store-Eintrag, Signatur und die Entscheidung, ob und was etwas kosten wird"
-    ],
 
     mehrKnopf: "Alles über Campus Clash",
     mehrText: "Die acht Bereiche im Einzelnen, das Endlos-System, die Allianz-Rollen, der Freundescode — und was bis zur Veröffentlichung noch passiert.",
@@ -1035,13 +1026,6 @@ de: {
       { name: "Komplett auf dem Gerät", text: "Die Sammlung liegt in einer Datenbank auf deinem Handy. Die Filmdatenbank-Anbindung ist freiwillig — ohne sie läuft die App vollständig offline." }
     ],
 
-    statusTitel: "Ehrlicher Stand",
-    statusText: "Gebaut und quergeprüft — 241 Tests halten den Stand fest. Was noch aussteht:",
-    offenListe: [
-      "Test an echten Discs läuft",
-      "Eigenes App-Symbol",
-      "Store-Eintrag (Google Play zuerst)"
-    ],
 
     mehrKnopf: "Alles über YourFilm",
     mehrText: "Die Dreiteilung, die Barcode-Kette, die vier Preise — und was bis zur Veröffentlichung noch passiert.",
@@ -1106,13 +1090,6 @@ de: {
       { name: "Sommerzeit gehört dazu", text: "Ein Tag hat bei der Umstellung 23 oder 25 Stunden. Die App zählt deshalb nie in festen Vierundzwanzig-Stunden-Schritten weiter, sondern immer über den echten Kalendertag." }
     ],
 
-    statusTitel: "Ehrlicher Stand",
-    statusText: "Gebaut und im Alltagstest — 147 Tests halten den Stand fest. Was noch aussteht:",
-    offenListe: [
-      "Alltagstest über mehrere Wochen läuft",
-      "Store-Eintrag (Google Play zuerst)",
-      "Bisher nur Deutsch"
-    ],
 
     mehrKnopf: "Alles über ZeitAnker",
     mehrText: "Das Zeitkonto, die Trennung von Projekt- und Personen-Soll — und was bis zur Veröffentlichung noch passiert.",
@@ -1162,13 +1139,6 @@ de: {
       { name: "Ohne Konto, ohne Server", text: "Was für Instinct Scoring gilt, gilt für die ganze Familie: Die Daten bleiben auf dem Gerät." }
     ],
 
-    statusTitel: "Ehrlicher Stand",
-    statusText: "Alle zehn Apps sind angelegt und im Bau — Gerüst, Datenmodell und erste Bildschirme stehen. Was noch fehlt:",
-    offenListe: [
-      "Inhalte: die Apps sind Gerüste, noch keine fertigen Produkte",
-      "Kein Store-Eintrag, kein Termin",
-      "Reihenfolge der Veröffentlichung noch offen"
-    ],
 
     mehrKnopf: "Alles über die Instinct Familie",
     mehrText: "Welche App was macht, warum es zehn sind und nicht eine — und was sie verbindet.",
@@ -1232,13 +1202,6 @@ de: {
       { name: "Keine Zahl wird geschätzt", text: "Was nicht eingetragen ist, bleibt leer. Die App rechnet aus vorhandenen Werten — sie erfindet keine, um eine Lücke zu füllen." }
     ],
 
-    statusTitel: "Ehrlicher Stand",
-    statusText: "Gebaut und im Alltagstest — 60 Tests halten den Stand fest. Was noch aussteht:",
-    offenListe: [
-      "Alltagstest über mehrere Tankfüllungen läuft",
-      "Store-Eintrag (Google Play zuerst)",
-      "Bisher nur Deutsch"
-    ],
 
     mehrKnopf: "Alles über Tankspur",
     mehrText: "Die drei Werte, der Verbrauch je Betankung, die Jahresbilanz — und was bis zur Veröffentlichung noch passiert.",
@@ -1509,8 +1472,6 @@ en: {
       { name: "Ranking per class", text: "Scoring happens within the class. Ties are broken by discipline — outdoors the X count comes first." },
       { name: "Printouts", text: "A results list for the notice board, grouped by class. And score sheets with every end and signature fields, as the regulations require." }
     ],
-    dsbStandTitel: "Honest status",
-    dsbStandText: "A tournament can be run from start to finish, and 349 tests hold that in place. Still missing: the device-to-device leg over real Wi-Fi, and a passed Apple review for the new network permissions. No date has been set.",
 
     startTitel: "The home screen",
     startText: "Everything starts here. One tap on the green button and your round is running — scoring system, mode and archers are already set from last time. Below that: profile, tournament and statistics. Anything that needs Premium says so openly; nothing is hidden.",
@@ -2358,13 +2319,6 @@ en: {
       { name: "Fair stays fair", text: "No pay-to-win, no ads, no account. Everything stays on your device." }
     ],
 
-    statusTitel: "Honest status",
-    statusText: "All 41 planned features are built, 497 automated checks run green. What's still missing before the stores:",
-    offenListe: [
-      "Sign-off on real devices — a green build proves nothing about how it feels to play",
-      "The online part for alliances across several devices (the seam for it is ready)",
-      "Store listing, signing, and the decision whether and what anything will cost"
-    ],
 
     mehrKnopf: "Everything about Campus Clash",
     mehrText: "The eight areas in detail, the endless system, the alliance roles, the friend code — and what happens before release.",
@@ -2430,13 +2384,6 @@ en: {
       { name: "Entirely on your device", text: "The collection lives in a database on your phone. The film-database link is optional — without it the app runs fully offline." }
     ],
 
-    statusTitel: "Honest status",
-    statusText: "Built and cross-checked — 241 tests pin down the current state. Still open:",
-    offenListe: [
-      "Testing with real discs in progress",
-      "Its own app icon",
-      "Store listing (Google Play first)"
-    ],
 
     mehrKnopf: "Everything about YourFilm",
     mehrText: "The three-level model, the barcode chain, the four prices — and what happens before release.",
@@ -2501,13 +2448,6 @@ en: {
       { name: "Daylight saving is part of it", text: "A day has 23 or 25 hours when the clocks change. The app therefore never counts on in fixed twenty-four-hour steps, but always across the real calendar day." }
     ],
 
-    statusTitel: "Honest status",
-    statusText: "Built and in everyday testing — 147 tests hold the state in place. Still to come:",
-    offenListe: [
-      "Multi-week everyday test under way",
-      "Store listing (Google Play first)",
-      "German only for now"
-    ],
 
     mehrKnopf: "All about ZeitAnker",
     mehrText: "The time balance, keeping project and personal targets apart — and what still happens before release.",
@@ -2557,13 +2497,6 @@ en: {
       { name: "No account, no server", text: "What holds for Instinct Scoring holds for the whole family: the data stays on your device." }
     ],
 
-    statusTitel: "Honest status",
-    statusText: "All ten apps exist and are being built — scaffolding, data model and first screens are in place. What is still missing:",
-    offenListe: [
-      "Content: the apps are scaffolding, not finished products yet",
-      "No store listing, no date",
-      "Release order still open"
-    ],
 
     mehrKnopf: "All about the Instinct Family",
     mehrText: "Which app does what, why there are ten and not one — and what ties them together.",
@@ -2627,13 +2560,6 @@ en: {
       { name: "No figure is guessed", text: "What is not entered stays empty. The app calculates from the values it has — it never invents one to fill a gap." }
     ],
 
-    statusTitel: "Honest status",
-    statusText: "Built and in everyday testing — 60 tests hold that in place. Still to come:",
-    offenListe: [
-      "Everyday test across several tanks under way",
-      "Store listing (Google Play first)",
-      "German only for now"
-    ],
 
     mehrKnopf: "All about Tankspur",
     mehrText: "The three values, consumption per fill-up, the yearly balance — and what still happens before release.",
