@@ -887,6 +887,55 @@
 
       /* Die Bereiche: Was sieht man beim Oeffnen? Gleiche Kartenform
          wie der Funktionsumfang, nur weiter oben auf der Seite. */
+      /* Kennzahlen, Ablauf und Funktionsliste - dieselben Bausteine
+         wie auf der FaNiCa-Seite, nur je App aus texte.js gefuellt. */
+      /* SetUpLeiste: die Leiste nachgebaut statt fotografiert - es gibt
+         keine Screenshots, das Programm laeuft auf dem Rechner. */
+      const vorschau = el(app + "-vorschau");
+      if (vorschau) {
+        vorschau.innerHTML = (hol(app + ".vorschauFelder") || []).map(f => `
+          <span class="leisten-feld">
+            <b>${sicher(f.name)}</b><em>${sicher(f.wert)}</em>
+          </span>`).join("");
+      }
+
+      const vorschauText = el(app + "-vorschau-erklaerung");
+      if (vorschauText) {
+        vorschauText.innerHTML = (hol(app + ".vorschauErklaerung") || []).map(f => `
+          <div class="funktion">
+            <b>${sicher(f.name)}</b>
+            <span>${sicher(f.text)}</span>
+          </div>`).join("");
+      }
+
+      const kennzahlen = el(app + "-kennzahlen");
+      if (kennzahlen) {
+        kennzahlen.innerHTML = (hol(app + ".kennzahlen") || []).map(z => `
+          <div class="zahl auf">
+            <b data-zaehler="${sicher(z.zahl)}">0</b>
+            <span>${sicher(z.text)}</span>
+          </div>`).join("");
+      }
+
+      const ablauf = el(app + "-ablauf");
+      if (ablauf) {
+        ablauf.innerHTML = (hol(app + ".ablaufSchritte") || []).map(s => `
+          <div class="schritt auf">
+            <b class="nr">${sicher(s.nr)}</b>
+            <h4>${sicher(s.titel)}</h4>
+            <p>${sicher(s.text)}</p>
+          </div>`).join("");
+      }
+
+      const koennen = el(app + "-koennen");
+      if (koennen) {
+        koennen.innerHTML = (hol(app + ".koennenListe") || []).map(f => `
+          <div class="funktion">
+            <b>${sicher(f.name)}</b>
+            <span>${sicher(f.text)}</span>
+          </div>`).join("");
+      }
+
       const bereiche = el(app + "-bereiche");
       if (bereiche) {
         bereiche.innerHTML = (hol(app + ".bereiche") || []).map(f => `
