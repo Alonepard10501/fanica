@@ -603,8 +603,6 @@ de: {
     rundeText: "Das hier ist keine Vorführ-Runde mit ausgedachten Namen. Es sind die echten Zahlen aus der Gruppe, für die ich die App überhaupt gebaut habe — seit 2022, mittlerweile im fünften Jahr.",
     rundeQuelle: "Stand: nach neun von zweiundzwanzig Rennen der Saison 2026. Die Namen sind hier anonymisiert, alles andere ist unverändert.",
 
-    rundeTabelleTitel: "Der Stand nach neun Rennen",
-    rundeTabelleText: "Zwischen Platz eins und Platz zwei liegt ein einziger Punkt, zwischen dem Ersten und dem Letzten fünfundzwanzig. Genau das ist der Grund, warum niemand aussteigt: Nach dreizehn verbleibenden Rennen kann das noch jeder drehen.",
 
     rundeZahlen: [
       { einheit: "Jahre",   text: "läuft die Runde schon" },
@@ -1323,7 +1321,6 @@ de: {
     kennung: "Über mich",
     titel: "Ein Mensch, ein Studio",
     text: "Ich bin aus Nordfriesland und arbeite allein. Kein Team, kein Büro, kein Investor. Was ich habe, ist eine klare Vorstellung davon, wie eine App sich anfühlen soll — und KI als Werkzeugkasten, der mir die Arbeit abnimmt, für die früher fünf Leute nötig waren.",
-    textZwei: "Meine Apps haben eines gemeinsam: Sie funktionieren offline, sie sammeln nichts über dich, und sie bevormunden dich nicht. Das ist keine Marketing-Haltung, sondern die einzige, die ich selbst auf meinem Handy dulden würde.",
 
     ablaufTitel: "Wie ein Projekt entsteht",
     ablauf: [
@@ -2030,8 +2027,6 @@ en: {
     rundeText: "This is not a demo round with made-up names. These are the real numbers from the group I built the app for in the first place — running since 2022, now in its fifth year.",
     rundeQuelle: "As of race nine of twenty-two in the 2026 season. Names are anonymised here; everything else is unchanged.",
 
-    rundeTabelleTitel: "The standings after nine races",
-    rundeTabelleText: "A single point separates first from second, twenty-five separate first from last. That is exactly why nobody drops out: with thirteen races left, anyone can still turn this around.",
 
     rundeZahlen: [
       { einheit: "years",   text: "the round has been running" },
@@ -2778,7 +2773,6 @@ en: {
     kennung: "About me",
     titel: "One person, one studio",
     text: "I'm from Northern Germany and I work alone. No team, no office, no investor. What I do have is a clear idea of how an app should feel — and AI as a toolbox that takes on the work that used to need five people.",
-    textZwei: "My apps have one thing in common: they work offline, they collect nothing about you, and they don't patronise you. That isn't a marketing stance but the only one I'd tolerate on my own phone.",
 
     ablaufTitel: "How a project comes about",
     ablauf: [

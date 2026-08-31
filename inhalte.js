@@ -763,22 +763,6 @@
           </div>`).join("");
       }
 
-      /* Tabellenstand als Balken — Länge = Anteil am Führenden */
-      const rBalken = el("runde-balken");
-      if (rBalken) {
-        const spitze = RU.tabelle[0].punkte || 1;
-        rBalken.innerHTML = RU.tabelle.map(t => `
-          <div class="balken-zeile">
-            <span class="balken-platz">${t.platz}</span>
-            <span class="balken-name">${sicher(t.name)}</span>
-            <span class="balken-spur">
-              <span class="balken-fuellung" style="--anteil:${Math.round(100 * t.punkte / spitze)}%;--bf:${sicher(t.farbe)}"></span>
-            </span>
-            <span class="balken-wert">${t.punkte}</span>
-            <span class="balken-zusatz">${t.exakt}× exakt · ${t.quote}&nbsp;%</span>
-          </div>`).join("");
-      }
-
       /* Trefferbilanz als ein durchgehender Anteilsbalken */
       const rTreffer = el("runde-treffer");
       if (rTreffer) {
