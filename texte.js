@@ -1230,7 +1230,7 @@ de: {
     inArbeit: "🧪 Im Test: ScheinBar läuft als Testfassung außerhalb der Stores. In den Stores steht sie noch nicht, und der Abopreis ist noch nicht festgelegt.",
 
     kernTitel: "Der Kniff",
-    kernText: "Gewinne werden nie gespeichert, sondern bei jedem Aufruf neu gerechnet. Das klingt nach einem Detail, entscheidet aber alles: Trägt man eine Ziehung nach, ändert sich sofort der Status jedes betroffenen Scheins — rückwirkend, ohne dass irgendetwas neu geprüft werden müsste. Und weil die Erkennung nur einen Vorschlag liefert, den man bestätigt, steht am Ende immer das, was wirklich auf dem Schein steht.",
+    kernText: "Ein Gewinn ist kein gespeicherter Wert, sondern ein Ergebnis aus Schein und Ziehung. Das klingt nach einem Detail, entscheidet aber alles: Trägt man eine Ziehung nach oder berichtigt eine Zahl, stimmt der Status jedes betroffenen Scheins sofort — auch rückwirkend, ohne dass man irgendetwas noch einmal prüfen müsste. Und weil die Erkennung nur einen Vorschlag liefert, den man bestätigt, steht am Ende immer das, was wirklich auf dem Schein steht.",
 
     umfangTitel: "Was drinsteckt",
     umfangText: "Vom abfotografierten Schein bis zur Auswertung über Monate: erfassen, prüfen, vergleichen — ohne Konto und ohne Server.",
@@ -2643,7 +2643,7 @@ en: {
     inArbeit: "🧪 In testing: ScheinBar is a test build outside the stores. It is not yet listed, and the subscription price has not been set.",
 
     kernTitel: "The trick",
-    kernText: "Wins are never stored, they are recalculated every time you look. That sounds like a detail but decides everything: add a draw later and the status of every affected ticket changes at once — retroactively, without anything having to be re-checked. And because recognition only ever offers a suggestion to confirm, what ends up saved is what the ticket actually says.",
+    kernText: "A win is not a stored value but a result derived from ticket and draw. That sounds like a detail but decides everything: add a draw later or correct a number, and the status of every affected ticket is right at once — retroactively, without anything having to be re-checked. And because recognition only ever offers a suggestion to confirm, what ends up saved is what the ticket actually says.",
 
     umfangTitel: "What is inside",
     umfangText: "From a photographed ticket to an analysis spanning months: record, check, compare — no account, no server.",
