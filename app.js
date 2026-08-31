@@ -95,6 +95,10 @@
       grund: "linear-gradient(180deg, #0B0710, #150A20 50%, #0B0713)",
       akzent: "#9A3FE0", akzentHell: "#B85CFF"
     },
+    scheinbar: {
+      grund: "linear-gradient(180deg, #0D050A, #180814 50%, #0D0509)",
+      akzent: "#D6247E", akzentHell: "#FF5FA8"
+    },
     // „Auf einen Blick" vergleicht alle drei Apps — bewusst NEUTRAL,
     // damit die Tabelle nicht nach einer einzelnen App aussieht.
     // (Falk 31.07.: „hat noch die falschen Farben in der Überschrift".)
@@ -203,7 +207,9 @@
         Ziehen oder Tastendruck aendert. Solange niemand anfasst,
         rechnet nichts.
 
-     Neun Karten, 360°/9 = 40° je Schritt. */
+     Der Schritt ergibt sich aus der Kartenzahl (360° geteilt durch
+     ihre Anzahl). Der Winkel im CSS (.app-karte rotateY) muss dazu
+     passen — kommt eine Karte dazu, ist er dort mitzuziehen. */
   function karussellEinrichten() {
     const ring = document.getElementById("karussell-ring");
     if (!ring) return;

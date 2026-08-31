@@ -209,6 +209,13 @@ p:last-child { margin-bottom: 0; }
   --akzent: #9A3FE0;      /* YourFilm: Kino-Violett */
   --akzent-hell: #B85CFF;
 }
+/* ScheinBar = zehntes Produkt, IM TEST. Sattes Pink-Magenta — die
+   neun anderen Farben (rot, oliv, neongruen, stahlblau, bernstein,
+   violett, tuerkis, helloliv, kupfer) waren belegt. */
+[data-kapitel="scheinbar"] {
+  --akzent: #D6247E;      /* ScheinBar: Magenta */
+  --akzent-hell: #FF5FA8;
+}
 [data-kapitel="fanica"],
 [data-kapitel="intro"],
 [data-kapitel="ueber"],
@@ -1641,7 +1648,7 @@ h1.hero-text,
      die Handy-Breite — die Spaltenköpfe schoben sich ineinander, Wörter
      brachen buchstabenweise. Die Hülle scrollt seitwärts (steht oben,
      .tabelle-huelle) — die Tabelle braucht dafür ihre ECHTE Breite. */
-  font-size: .92rem; min-width: 66rem;
+  font-size: .92rem; min-width: 73rem;
   /* GLEICH BREITE SPALTEN. Ohne das richtet sich jede Spalte nach ihrem
      längsten Text — die FaNiCa-Spalte war dadurch 442 px breit, Instinct
      nur 261 px, und die beiden standen weit auseinander.
@@ -1662,7 +1669,10 @@ h1.hero-text,
 .vergleich thead th.app-3,
 .vergleich thead th.app-4,
 .vergleich thead th.app-5,
-.vergleich thead th.app-7 { width: calc((100% - 15rem) / 8); }
+.vergleich thead th.app-6,
+.vergleich thead th.app-7,
+.vergleich thead th.app-8,
+.vergleich thead th.app-9 { width: calc((100% - 15rem) / 9); }
 .vergleich th, .vergleich td {
   padding: .85rem 1rem; text-align: left;
   border-bottom: 1px solid rgba(255,255,255,.09);
@@ -1687,6 +1697,7 @@ h1.hero-text,
 .vergleich thead th.app-6 { color: #B85CFF; }   /* YourFilm     */
 .vergleich thead th.app-7 { color: #3FD0D0; }   /* ZeitWissen   */
 .vergleich thead th.app-8 { color: #E8944F; }   /* Tankspur     */
+.vergleich thead th.app-9 { color: #FF5FA8; }   /* ScheinBar    */
 .vergleich tbody th {
   font-family: var(--schrift-text); font-weight: 600;
   font-size: .86rem; color: var(--grau);
@@ -3215,7 +3226,7 @@ a.bezug-weg.bezug-webseite .bezug-zeichen {
      über die gesamte breite erstrecken"). Vorher stand hier fest
      300px — dadurch blieb der Kreis bei 1600 px Fenster genauso eng
      wie bei 900 px. */
-  transform: rotateY(calc(40deg * var(--i))) translateZ(var(--radius, 300px));
+  transform: rotateY(calc(36deg * var(--i))) translateZ(var(--radius, 300px));
   backface-visibility: hidden;
   transition: border-color .3s var(--weich), box-shadow .3s var(--weich);
 }
@@ -3275,12 +3286,12 @@ a.bezug-weg.bezug-webseite .bezug-zeichen {
 @media (max-width: 900px) {
   .karussell-buehne { height: 270px; }
   .karussell-ring { width: 180px; height: 230px; }
-  .app-karte { transform: rotateY(calc(40deg * var(--i))) translateZ(250px); }
+  .app-karte { transform: rotateY(calc(36deg * var(--i))) translateZ(250px); }
 }
 @media (max-width: 560px) {
   .karussell-buehne { height: 250px; perspective: 1100px; }
   .karussell-ring { width: 160px; height: 210px; }
-  .app-karte { transform: rotateY(calc(40deg * var(--i))) translateZ(200px); }
+  .app-karte { transform: rotateY(calc(36deg * var(--i))) translateZ(200px); }
   .app-karte img { width: 48px; height: 48px; }
   .karte-kurz { display: none; }     /* auf dem Handy nur Name + Status */
   .karussell-pfeil { width: 40px; height: 40px; font-size: 1.4rem; }
@@ -3510,7 +3521,8 @@ main.unterseite[data-nr] { position: relative; overflow-x: clip; }
 main.unterseite[data-nr] > * { position: relative; z-index: 1; }
 main.unterseite[data-nr]::before {
   content: attr(data-nr);
-  position: absolute; top: clamp(.6rem, 3vw, 2.4rem); right: clamp(.4rem, 3vw, 3rem);
+  position: absolute; top: var(--nr-oben, clamp(.6rem, 3vw, 2.4rem));
+  right: var(--nr-rechts, clamp(.4rem, 3vw, 3rem));
   font-family: var(--schrift-kopf); font-weight: 900; line-height: 1;
   font-size: clamp(6rem, 17vw, 15rem);
   color: transparent;
@@ -3771,12 +3783,23 @@ main.unterseite[data-nr] > .huelle {
     font-size: 13vw;
     --nr: 13vw;
   }
+  /* Auf einer UNTERSEITE liegt die feste Kopfzeile über der Schriftzeile:
+     die Ziffer begann bei 15 px, die Kopfleiste endet erst bei rund
+     50 px — der Seitenname rechts lief mitten durch die Ziffer.
+     Auf der Startseite gibt es das nicht, dort steht die Zeile in einem
+     Abschnitt weit unterhalb des Kopfes. */
+  main.unterseite[data-nr] { --nr-oben: 68px; }
+
   /* Der Kopfabstand richtet sich nach derselben Größe */
   .abschnitt[data-nr] { padding-top: 0; }
-  .abschnitt[data-nr] > .huelle,
-  main.unterseite[data-nr] > .huelle {
+  .abschnitt[data-nr] > .huelle {
     padding-top: calc(clamp(.6rem, 3vw, 2.4rem) + 13vw * 1.0 + .7rem);
     /* Auch hier ohne das Abschnittspolster gerechnet. */
+  }
+  main.unterseite[data-nr] > .huelle {
+    /* Erster Summand ist --nr-oben, damit der Inhalt der nach unten
+       gerückten Schriftzeile folgt statt sie zu überdecken. */
+    padding-top: calc(var(--nr-oben) + 13vw * 1.0 + .7rem);
   }
 }
 

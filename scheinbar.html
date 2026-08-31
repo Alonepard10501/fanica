@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tankspur — was das Auto wirklich kostet (im Test)</title>
-<meta name="description" content="Tankspur im Test: Preis und Liter eintragen, den Gesamtpreis rechnet die App. Verbrauch je Betankung, Kosten je 100 km, Jahresbilanz — komplett auf dem Gerät, ohne Server.">
+<title>ScheinBar — Schein fotografieren, Gewinn sehen (im Test)</title>
+<meta name="description" content="ScheinBar im Test: Spielscheine für BINGO!, Lotto 6aus49 und Eurojackpot fotografieren, Ziehungen sammeln, Gewinnklassen nachrechnen. Texterkennung auf dem Gerät, Daten bleiben lokal.">
 <meta name="theme-color" content="#07070A">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-kapitel="tankspur">
+<body data-kapitel="scheinbar">
 
 <a class="sprunglink" href="#inhalt">Zum Inhalt springen</a>
 
 <div class="kulisse" aria-hidden="true"
-     style="background:linear-gradient(180deg,#0B0803,#141005 55%,#0C0904)"></div>
+     style="background:linear-gradient(180deg,#0D050A,#180814 50%,#0D0509)"></div>
 <div class="hologramm" aria-hidden="true"></div>
 <div class="gitter" aria-hidden="true"></div>
 <div class="koerner" aria-hidden="true"></div>
@@ -36,72 +36,63 @@
     <a href="yourfilm.html">YourFilm</a>
     <a href="zeitwissen.html">ZeitAnker</a>
     <a href="instinct-familie.html">Instinct Familie</a>
-    <span class="kopf-hier" aria-current="page">Tankspur</span>
-    <a href="scheinbar.html">ScheinBar</a>
+    <a href="tankspur.html">Tankspur</a>
+    <span class="kopf-hier" aria-current="page">ScheinBar</span>
   </nav>
  </div>
 </header>
 
-<main id="inhalt" class="unterseite" data-nr="09" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
+<main id="inhalt" class="unterseite" data-nr="10" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
   <div class="huelle">
 
     <div class="kapitelkopf">
-      <p class="status-pille" data-t="tankspur.statusPille"></p>
-      <!-- App-Symbol im Farbring, wie auf der Startseite -->
+      <p class="status-pille" data-t="scheinbar.statusPille"></p>
       <div class="app-symbol">
-        <img class="symbol-bild" src="bilder/marke/app-tankspur.webp"
-             alt="Tankspur — App-Symbol" width="128" height="128">
+        <img class="symbol-bild" src="bilder/marke/app-scheinbar.webp"
+             alt="ScheinBar — App-Symbol" width="128" height="128">
       </div>
 
-      <h1 data-t="tankspur.untertitel">Was das Auto wirklich kostet</h1>
+      <h1 data-t="scheinbar.untertitel">Schein fotografieren, Gewinn sehen</h1>
     </div>
 
-    <p class="gross" style="max-width:64ch" data-t="tankspur.positionierung"></p>
-    <p class="preis" data-t="tankspur.inArbeit"></p>
+    <p class="gross" style="max-width:64ch" data-t="scheinbar.positionierung"></p>
+    <p class="preis" data-t="scheinbar.inArbeit"></p>
 
     <!-- ---------- Die Bereiche ---------- -->
     <section class="unter-block">
-      <h2 data-t="tankspur.bereicheTitel">Die Bereiche</h2>
-      <p class="leise" style="max-width:64ch" data-t="tankspur.bereicheText"></p>
-      <div class="funktionen" id="tankspur-bereiche"></div>
+      <h2 data-t="scheinbar.bereicheTitel">Die Bereiche</h2>
+      <p class="leise" style="max-width:64ch" data-t="scheinbar.bereicheText"></p>
+      <div class="funktionen" id="scheinbar-bereiche"></div>
     </section>
 
     <!-- ---------- Was drinsteckt ---------- -->
     <section class="unter-block">
-      <h2 data-t="tankspur.umfangTitel">Was drinsteckt</h2>
-      <p class="leise" style="max-width:64ch" data-t="tankspur.umfangText"></p>
-      <div class="zahlen" id="tankspur-umfang-zahlen"></div>
-      <div class="funktionen" id="tankspur-umfang-liste"
+      <h2 data-t="scheinbar.umfangTitel">Was drinsteckt</h2>
+      <p class="leise" style="max-width:64ch" data-t="scheinbar.umfangText"></p>
+      <div class="zahlen" id="scheinbar-umfang-zahlen"></div>
+      <div class="funktionen" id="scheinbar-umfang-liste"
            style="margin-top:clamp(1.8rem,3.4vw,2.6rem)"></div>
     </section>
 
-    <!-- ---------- Ein Blick in die App ---------- -->
-    <section class="unter-block">
-      <h2 data-t="tankspur.bilderTitel">Ein Blick in die App</h2>
-      <p class="leise" style="max-width:64ch" data-t="tankspur.bilderText"></p>
-      <div class="app-bilder" id="tankspur-bilder"></div>
-    </section>
-
-
     <!-- ---------- Der Kniff ---------- -->
     <section class="unter-block">
-      <h2 data-t="tankspur.kernTitel">Der Kniff</h2>
-      <p class="gross" style="max-width:64ch" data-t="tankspur.kernText"></p>
+      <h2 data-t="scheinbar.kernTitel">Der Kniff</h2>
+      <p class="gross" style="max-width:64ch" data-t="scheinbar.kernText"></p>
     </section>
 
     <!-- ---------- Besonderheiten ---------- -->
     <section class="unter-block">
-      <h2 data-t="tankspur.besondersTitel">Was es besonders macht</h2>
-      <div class="funktionen" id="tankspur-besonders"></div>
+      <h2 data-t="scheinbar.besondersTitel">Was es besonders macht</h2>
+      <div class="funktionen" id="scheinbar-besonders"></div>
     </section>
 
     <section class="unter-block">
       <div class="aktionen" style="margin-top:1.6rem">
-        <a class="nbtn b-scratch" href="index.html#tankspur">
+        <a class="nbtn b-scratch" href="index.html#scheinbar">
           <span data-t="zurueckKnopf">← Zurück zur Startseite</span></a>
       </div>
       <div class="hinweis">
-        <p data-t="tankspur.hinweis"></p>
+        <p data-t="scheinbar.hinweis"></p>
       </div>
     </section>
 
