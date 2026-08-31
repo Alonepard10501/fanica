@@ -1070,7 +1070,7 @@ de: {
       { zahl: "14", text: "Bildschirme" },
       { zahl: "4", text: "Bereiche" },
       { zahl: "3", text: "Berichtsformate" },
-      { zahl: "147", text: "Tests" }
+      { zahl: "4", text: "Sollzeiten" }
     ],
     umfangListe: [
       { name: "Ein Knopf", text: "Einstempeln, ausstempeln — mehr braucht der Alltag nicht. Der Rest ist freiwillig." },
@@ -1182,7 +1182,7 @@ de: {
       { zahl: "4", text: "Bereiche" },
       { zahl: "4", text: "Auswertungen" },
       { zahl: "3", text: "Werte genügen" },
-      { zahl: "60", text: "Tests" }
+      { zahl: "5", text: "Jahres-Kennzahlen" }
     ],
     umfangListe: [
       { name: "Zwei Werte reichen", text: "Preis und Liter, Preis und Gesamt, Liter und Gesamt — die App ergänzt den dritten Wert selbst." },
@@ -1238,7 +1238,7 @@ de: {
       { zahl: "3", text: "Spiele" },
       { zahl: "12", text: "Bildschirme" },
       { zahl: "4", text: "Reiter" },
-      { zahl: "66", text: "Tests" }
+      { zahl: "4", text: "Zeitfenster" }
     ],
     umfangListe: [
       { name: "Drei Spiele", text: "BINGO!, Lotto 6aus49 und Eurojackpot — jedes mit eigenem Zahlenraum, eigener Zusatzzahl und eigenen Gewinnklassen." },
@@ -2483,7 +2483,7 @@ en: {
       { zahl: "14", text: "screens" },
       { zahl: "4", text: "areas" },
       { zahl: "3", text: "report formats" },
-      { zahl: "147", text: "tests" }
+      { zahl: "4", text: "target times" }
     ],
     umfangListe: [
       { name: "One button", text: "Clock in, clock out — everyday use needs no more than that. The rest is optional." },
@@ -2595,7 +2595,7 @@ en: {
       { zahl: "4", text: "areas" },
       { zahl: "4", text: "views" },
       { zahl: "3", text: "values suffice" },
-      { zahl: "60", text: "tests" }
+      { zahl: "5", text: "yearly figures" }
     ],
     umfangListe: [
       { name: "Two values are enough", text: "Price and litres, price and total, litres and total — the app supplies the third itself." },
@@ -2651,7 +2651,7 @@ en: {
       { zahl: "3", text: "games" },
       { zahl: "12", text: "screens" },
       { zahl: "4", text: "tabs" },
-      { zahl: "66", text: "tests" }
+      { zahl: "4", text: "time filters" }
     ],
     umfangListe: [
       { name: "Three games", text: "BINGO!, Lotto 6aus49 and Eurojackpot — each with its own number range, its own bonus number and its own prize tiers." },
