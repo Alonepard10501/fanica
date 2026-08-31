@@ -380,7 +380,8 @@
       const gesamtMin = anteil * STUNDEN * 60;
       const std = Math.floor(gesamtMin / 60);
       const min = Math.floor(gesamtMin % 60);
-      return `${std} Std ${String(min).padStart(2, "0")} Min`;
+      return T("neonpunkt.rafferStunden")
+        .replace("{h}", std).replace("{m}", String(min).padStart(2, "0"));
     };
 
     const male = (anteil) => {

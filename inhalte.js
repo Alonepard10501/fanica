@@ -787,10 +787,10 @@
       const rMerk = el("runde-merksatz");
       if (rMerk) {
         const b = RU.bilanz;
-        rMerk.innerHTML = b.vollTreffer === 0
-          ? `In <b>${b.reihen}</b> abgegebenen Tippreihen lag noch
-             <b>kein einziges Mal</b> jemand auf allen fünf Plätzen richtig.`
-          : `In ${b.reihen} Tippreihen gab es ${b.vollTreffer}× alle fünf Plätze richtig.`;
+        rMerk.innerHTML = (b.vollTreffer === 0
+          ? T("fanica.merksatzKeiner")
+          : T("fanica.merksatzTreffer"))
+          .replace("{n}", b.reihen).replace("{t}", b.vollTreffer);
       }
 
       /* Strecken: wo die Gruppe viele Punkte holt und wo kaum welche */
