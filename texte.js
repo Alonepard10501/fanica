@@ -1264,9 +1264,9 @@ de: {
     bilderText: "Fünf Aufnahmen aus der laufenden Fassung — ein frisch eingerichtetes Gerät, noch ohne eigene Runden.",
     bilder: [
       { bild: "familie-1-start", titel: "Alle Apps auf einen Blick", text: "Oben der Weg zur Analyse, darunter die zehn Apps mit Nummer, Symbol, Farbe und der Zahl ihrer Funktionen." },
-      { bild: "familie-2-module", titel: "Was enthalten ist", text: "Ein Merkzeichen an jeder Karte sagt, ob die App hier mitläuft oder noch entsteht." },
+      { bild: "familie-2-module", titel: "Alle zehn, bis zum Schluss", text: "Ein Merkzeichen an jeder Karte sagt, ob die App hier mitläuft. Unten steht, wie viele davon schon im Store sind." },
       { bild: "familie-3-analyse", titel: "Was du tun solltest", text: "Die Empfehlungen quer über alle Bereiche, das Dringendste zuerst — mit Begründung und den Bereichen, aus denen sie stammen." },
-      { bild: "familie-4-zielwerte", titel: "Wo du stehst", text: "Jede Kennzahl mit ihrem Zielbereich als Band und dem eigenen Wert als Marke darauf — dazu, aus welcher App sie kommt." },
+      { bild: "familie-4-zielwerte", titel: "Die Zahlen dahinter", text: "Jede Kennzahl mit Zielbereich, Urteil und einem Satz, warum sie zählt — Böen etwa sind schlimmer als gleichmäßiger Wind." },
       { bild: "familie-5-modul", titel: "Eine App von innen", text: "Instinct Scoring läuft mit voller eigener Oberfläche in der Familie. Unten links geht es zurück." },
     ],
     kennzahlen: [{ zahl: "10", text: "Apps unter einem Dach" }, { zahl: "9", text: "davon voll enthalten" }, { zahl: "58", text: "Funktionen insgesamt" }, { zahl: "10", text: "Datenwege zwischen Apps" }],
@@ -2975,9 +2975,9 @@ en: {
     bilderText: "Five shots from the running build — a freshly set up device, no rounds of its own yet.",
     bilder: [
       { bild: "familie-1-start", titel: "Every app at a glance", text: "The route to the analysis at the top, below it all ten apps with number, icon, colour and how many features each brings." },
-      { bild: "familie-2-module", titel: "What is included", text: "A marker on every card says whether that app runs here or is still being built." },
+      { bild: "familie-2-module", titel: "All ten, down to the last", text: "A marker on every card says whether that app runs here. At the bottom: how many of them are in the store already." },
       { bild: "familie-3-analyse", titel: "What you should do", text: "Recommendations across every area, the most urgent first — each with its reasoning and the areas it came from." },
-      { bild: "familie-4-zielwerte", titel: "Where you stand", text: "Every metric with its target range as a band and your own value marked on it — plus which app it comes from." },
+      { bild: "familie-4-zielwerte", titel: "The numbers behind it", text: "Every metric with its target range, a verdict and one line on why it matters — gusts, for one, are worse than steady wind." },
       { bild: "familie-5-modul", titel: "An app from the inside", text: "Instinct Scoring runs with its full own interface inside the family. Bottom left takes you back." },
     ],
     kennung: "Chapter 08 · In progress",

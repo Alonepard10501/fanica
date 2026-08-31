@@ -3697,7 +3697,7 @@ main.unterseite[data-nr] > .huelle {
 
 .app-bilder {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: clamp(1.2rem, 2.6vw, 2rem);
   margin-top: clamp(1.6rem, 3vw, 2.4rem);
 }
@@ -3707,11 +3707,26 @@ main.unterseite[data-nr] > .huelle {
   display: flex;
   flex-direction: column;
   gap: .9rem;
+  grid-column: span 2;
+}
+
+/* Bei fuenf Aufnahmen ruecken die letzten beiden um eine halbe Spalte ein
+   und stehen mittig unter den ersten dreien statt einzeln am Rand. */
+.app-bild:nth-child(4):nth-last-child(2) { grid-column: 2 / span 2; }
+.app-bild:nth-child(5):nth-last-child(1) { grid-column: 4 / span 2; }
+
+@media (max-width: 900px) {
+  .app-bilder { grid-template-columns: repeat(2, 1fr); }
+  .app-bild,
+  .app-bild:nth-child(4):nth-last-child(2),
+  .app-bild:nth-child(5):nth-last-child(1) { grid-column: auto; }
 }
 
 .app-bild img {
   width: 100%;
   height: auto;
+  aspect-ratio: 540 / 1200;
+  object-fit: contain;
   border-radius: 18px;
   display: block;
   /* Ein Handybild braucht eine Kante, sonst schwimmt es im Dunkeln */
