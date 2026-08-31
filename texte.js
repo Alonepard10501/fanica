@@ -1214,7 +1214,7 @@ de: {
     bereiche: [
       { name: "🏠  Start", text: "Die aktiven Scheine mit ihrem Gewinnstatus und die letzte Ziehung je Spiel." },
       { name: "🧾  Scheine", text: "Alle Scheine, aktive und archivierte getrennt. Antippen zeigt jedes Tippfeld einzeln." },
-      { name: "🎲  Ziehungen", text: "Das Ziehungsarchiv je Spiel — erfassen, ändern, nachladen." },
+      { name: "🎲  Ziehungen", text: "Das Ziehungsarchiv je Spiel — selbst erfassen, ändern oder die gepflegte Liste holen." },
       { name: "📊  Statistik", text: "Drei Auswertungsbereiche mit gemeinsamem Zeitfenster." },
     ],
 
@@ -1226,7 +1226,7 @@ de: {
     untertitel: "Schein fotografieren, Gewinn sehen",
     claim: "Fotografieren.",
     claimZwei: "Nachrechnen übernimmt die App.",
-    positionierung: "Ein Begleiter für BINGO!, Lotto 6aus49 und Eurojackpot: Spielschein abfotografieren, Zahlen kurz prüfen, fertig. Die App vergleicht jeden Schein mit den erfassten Ziehungen und sagt, ob und in welcher Gewinnklasse etwas dabei ist. Die Texterkennung läuft auf dem Gerät, gespeichert wird ausschließlich dort.",
+    positionierung: "Ein Begleiter für BINGO!, Lotto 6aus49 und Eurojackpot: Spielschein abfotografieren, Zahlen kurz prüfen, fertig. Die Ziehungen holt sich die App selbst — beim ersten Start die letzten sechs Monate, danach laufend die neuen. Sie sagt Ihnen, ob und in welcher Gewinnklasse etwas dabei ist. Die Texterkennung läuft auf dem Gerät, gespeichert wird ausschließlich dort.",
     inArbeit: "🧪 Im Test: ScheinBar läuft als Testfassung außerhalb der Stores. In den Stores steht sie noch nicht, und der Abopreis ist noch nicht festgelegt.",
 
     kernTitel: "Der Kniff",
@@ -1245,17 +1245,17 @@ de: {
       { name: "Schein fotografieren", text: "Die Texterkennung läuft auf dem Gerät und liefert einen Vorschlag, den man in der Korrektur-Ansicht bestätigt oder ändert." },
       { name: "Auch ganz ohne Kamera", text: "Die Eingabe von Hand ist ein gleichwertiger Weg, kein Notbehelf — die App fordert keine eigene Kamera-Berechtigung an." },
       { name: "Gewinnklassen statt Trefferzahl", text: "Neun Klassen bei Lotto, zwölf bei Eurojackpot; bei BINGO! zählen volle Reihen — waagerecht, senkrecht und diagonal." },
-      { name: "Ziehungsarchiv", text: "Ziehungen selbst erfassen mit Bereichsprüfung je Zahl — oder eine gepflegte Sechs-Monats-Liste nachladen, die nur fehlende Tage ergänzt." },
+      { name: "Ziehungen kommen von selbst", text: "Beim ersten Start holt die App die Ziehungen der letzten sechs Monate, danach ergänzt jeder Start die neu hinzugekommenen. Sie liegen dann auf dem Gerät — auch ohne Verbindung." },
       { name: "Statistik in drei Bereichen", text: "Gezogen (häufigste und überfällige Zahlen), Meine Zahlen (gespielt gegen gezogen) und Gewinne (je Klasse, Treffer je Feld)." },
       { name: "Zeitfenster", text: "Alles, sechs Monate, drei Monate oder dreißig Tage — der Filter gilt für alle drei Bereiche gleichzeitig." },
-      { name: "Startbestand aus Excel", text: "Eine vorhandene Ziehungsliste lässt sich einlesen; jede Abweichung wird einzeln gemeldet statt still übernommen." }
+      { name: "Sichern und zurückholen", text: "Scheine und Ziehungen lassen sich als Datei sichern und ebenso wieder einlesen — beim Gerätewechsel oder als eigene Sicherheitskopie. Dazu lässt sich ein Startbestand aus Excel übernehmen; jede Abweichung wird einzeln gemeldet statt still übernommen." },
     ],
 
     besondersTitel: "Was es besonders macht",
     besonders: [
       { name: "Kein Glücksspiel", text: "Die App nimmt keine Tipps entgegen, verkauft keine Scheine, lost nichts aus und zahlt nichts aus. Sie verwaltet, was längst gespielt ist — mehr nicht." },
       { name: "Keine Vorhersage", text: "Die Statistik beschreibt, was war. Sie sagt keine Zahlen voraus und verspricht keine besseren Gewinnchancen — solche Versprechen wären schlicht unwahr." },
-      { name: "Der Kern braucht kein Netz", text: "Erfassen, Prüfen und Auswerten laufen ohne Verbindung. Ins Internet geht die App nur für den Abo-Kauf im Store, die Ziehungs-Nachladung und die Update-Prüfung." }
+      { name: "Der Kern braucht kein Netz", text: "Erfassen, Prüfen und Auswerten laufen ohne Verbindung — auch die geholten Ziehungen liegen auf dem Gerät. Ins Internet geht die App nur, um die Ziehungen zu holen, für den Abo-Kauf im Store und die Update-Prüfung." }
     ],
 
     mehrKnopf: "Alles über ScheinBar",
@@ -2627,7 +2627,7 @@ en: {
     bereiche: [
       { name: "🏠  Home", text: "Your active tickets with their win status and the latest draw for each game." },
       { name: "🧾  Tickets", text: "Every ticket, active and archived kept apart. Tap one to see each number field on its own." },
-      { name: "🎲  Draws", text: "The draw archive per game — record, edit, download." },
+      { name: "🎲  Draws", text: "The draw archive per game — record and edit yourself, or fetch the maintained list." },
       { name: "📊  Statistics", text: "Three areas of analysis sharing one time filter." },
     ],
 
@@ -2639,7 +2639,7 @@ en: {
     untertitel: "Photograph the ticket, see the win",
     claim: "Take a photo.",
     claimZwei: "The app does the checking.",
-    positionierung: "A companion for BINGO!, Lotto 6aus49 and Eurojackpot: photograph the ticket, check the numbers, done. The app compares every ticket against the draws you have recorded and tells you whether anything came up and in which prize tier. Text recognition runs on the device, and everything is stored there and nowhere else.",
+    positionierung: "A companion for BINGO!, Lotto 6aus49 and Eurojackpot: photograph the ticket, check the numbers, done. The app fetches the draws itself — the past six months on first start, the new ones from then on. It tells you whether anything came up and in which prize tier. Text recognition runs on the device, and everything is stored there and nowhere else.",
     inArbeit: "🧪 In testing: ScheinBar is a test build outside the stores. It is not yet listed, and the subscription price has not been set.",
 
     kernTitel: "The trick",
@@ -2658,17 +2658,17 @@ en: {
       { name: "Photograph the ticket", text: "Text recognition runs on the device and offers a suggestion to confirm or correct before anything is saved." },
       { name: "Works without a camera too", text: "Typing the numbers is an equal path, not a fallback — the app requests no camera permission of its own." },
       { name: "Prize tiers, not just hits", text: "Nine tiers for Lotto, twelve for Eurojackpot; for BINGO! complete rows count — horizontal, vertical and diagonal." },
-      { name: "Draw archive", text: "Record draws yourself with a range check on every number — or download a maintained six-month list that only fills in missing days." },
+      { name: "Draws arrive on their own", text: "On first start the app fetches the draws of the past six months, and every start after that adds the new ones. They then live on your device — available without a connection." },
       { name: "Statistics in three areas", text: "Drawn (most frequent and overdue numbers), My numbers (played against drawn) and Wins (per tier, hits per field)." },
       { name: "Time filter", text: "Everything, six months, three months or thirty days — the filter applies to all three areas at once." },
-      { name: "Starting set from Excel", text: "An existing list of draws can be imported; every discrepancy is reported individually instead of being absorbed silently." }
+      { name: "Back up and restore", text: "Tickets and draws can be saved as a file and read back in just as easily — when changing device or as your own safety copy. A starting set can also be imported from Excel; every discrepancy is reported individually instead of being absorbed silently." },
     ],
 
     besondersTitel: "What makes it special",
     besonders: [
       { name: "Not gambling", text: "The app accepts no bets, sells no tickets, holds no draws and pays nothing out. It manages what has already been played — nothing more." },
       { name: "No predictions", text: "The statistics describe what happened. They predict no numbers and promise no better odds — such promises would simply be untrue." },
-      { name: "The core needs no connection", text: "Recording, checking and analysing all work offline. The app goes online only for the store purchase, the draw download and the update check." }
+      { name: "The core needs no connection", text: "Recording, checking and analysing all work offline — the fetched draws live on your device too. The app goes online only to fetch the draws, for the store purchase and the update check." }
     ],
 
     mehrKnopf: "All about ScheinBar",
