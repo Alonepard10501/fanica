@@ -216,6 +216,10 @@ p:last-child { margin-bottom: 0; }
   --akzent: #D6247E;      /* ScheinBar: Magenta */
   --akzent-hell: #FF5FA8;
 }
+[data-kapitel="ablesebar"] {
+  --akzent: #2E7FC2;      /* AbleseBar: Blau wie das Zifferblatt */
+  --akzent-hell: #6BB4EE;
+}
 [data-kapitel="fanica"],
 [data-kapitel="intro"],
 [data-kapitel="ueber"],
