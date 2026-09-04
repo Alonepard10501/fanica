@@ -99,6 +99,10 @@
       grund: "linear-gradient(180deg, #0D050A, #180814 50%, #0D0509)",
       akzent: "#D6247E", akzentHell: "#FF5FA8"
     },
+    ablesebar: {
+      grund: "linear-gradient(180deg, #05080C, #0D1420 52%, #070A10)",
+      akzent: "#2E7FC2", akzentHell: "#6BB4EE"
+    },
     // „Auf einen Blick" vergleicht alle drei Apps — bewusst NEUTRAL,
     // damit die Tabelle nicht nach einer einzelnen App aussieht.
     // (Falk 31.07.: „hat noch die falschen Farben in der Überschrift".)
