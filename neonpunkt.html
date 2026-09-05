@@ -48,16 +48,40 @@
   <div class="huelle">
 
     <div class="kapitelkopf">
-      <p class="kennung">NeonPunkt</p>
+      <p class="kennung" data-t="neonpunkt.name">NeonPunkt</p>
       <p class="status-pille" data-t="neonpunkt.statusPille"></p>
       <div class="app-symbol">
         <img class="symbol-bild" src="bilder/marke/app-neonpunkt.webp"
            alt="NeonPunkt — App-Symbol" width="140" height="140">
       </div>
       <h1 data-t="neonpunkt.untertitel">Das minimalistischste Spiel der Welt</h1>
-
     </div>
 
+    <div class="raffer" id="raffer">
+      <div class="raffer-kopf">
+        <div>
+          <h3 data-t="neonpunkt.rafferTitel">48 Stunden in zwölf Sekunden</h3>
+          <p data-t="neonpunkt.rafferText"></p>
+          <p id="raffer-statisch" hidden data-t="neonpunkt.rafferStatisch"></p>
+        </div>
+        <button class="nbtn b-heat" id="raffer-knopf" aria-pressed="false">
+          <span data-t="neonpunkt.rafferKnopfStart">▶ Zeitraffer starten</span></button>
+      </div>
+
+      <div class="raffer-buehne" id="raffer-buehne" role="button" tabindex="0"
+           aria-label="Zeitraffer: Punkt antippen setzt ihn zurück">
+        <div class="raffer-punkt" id="raffer-punkt" aria-hidden="true"></div>
+        <div class="raffer-anzeige">
+          <span><em data-t="neonpunkt.rafferZeit">Vergangen</em>
+                <b id="raffer-zeit">0 Std 00 Min</b></span>
+          <span><em data-t="neonpunkt.rafferGroesse">Größe</em>
+                <b id="raffer-prozent">0 %</b></span>
+        </div>
+        <div class="raffer-balken" aria-hidden="true"><i id="raffer-fortschritt"></i></div>
+        <div class="raffer-hinweis" id="raffer-hinweis"
+             data-t="neonpunkt.rafferHinweis">Tipp den Punkt an, während er läuft</div>
+      </div>
+    </div>
 
     <section class="unter-block">
       <div class="zahlen" id="neonpunkt-kennzahlen"></div>
@@ -85,35 +109,6 @@
     </section>
 
     <div class="zahlen" id="neonpunkt-zahlen" style="margin-top:1.6rem"></div>
-
-    <section class="unter-block">
-      <h2 data-t="neonpunkt.rafferTitel">48 Stunden in zwölf Sekunden</h2>
-      <div class="raffer" id="raffer" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
-        <div class="raffer-kopf">
-          <div>
-            <h3 data-t="neonpunkt.rafferTitel">48 Stunden in zwölf Sekunden</h3>
-            <p data-t="neonpunkt.rafferText"></p>
-            <p id="raffer-statisch" hidden data-t="neonpunkt.rafferStatisch"></p>
-          </div>
-          <button class="nbtn b-heat" id="raffer-knopf" aria-pressed="false">
-            <span data-t="neonpunkt.rafferKnopfStart">▶ Zeitraffer starten</span></button>
-        </div>
-
-        <div class="raffer-buehne" id="raffer-buehne" role="button" tabindex="0"
-             aria-label="Zeitraffer: Punkt antippen setzt ihn zurück">
-          <div class="raffer-punkt" id="raffer-punkt" aria-hidden="true"></div>
-          <div class="raffer-anzeige">
-            <span><em data-t="neonpunkt.rafferZeit">Vergangen</em>
-                  <b id="raffer-zeit">0 Std 00 Min</b></span>
-            <span><em data-t="neonpunkt.rafferGroesse">Größe</em>
-                  <b id="raffer-prozent">0 %</b></span>
-          </div>
-          <div class="raffer-balken" aria-hidden="true"><i id="raffer-fortschritt"></i></div>
-          <div class="raffer-hinweis" id="raffer-hinweis"
-               data-t="neonpunkt.rafferHinweis">Tipp den Punkt an, während er läuft</div>
-        </div>
-      </div>
-    </section>
 
     <section class="unter-block">
       <h2 data-t="neonpunkt.spielTitel">Probier es hier aus</h2>

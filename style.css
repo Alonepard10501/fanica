@@ -1503,6 +1503,121 @@ h1.hero-text,
   .raffer-punkt { transition: none !important; }
 }
 
+/* ---- NeonPunkt: Kopf mit Kennung im Raster, Zeitraffer im ersten Bild ---- */
+body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf {
+  margin-bottom: clamp(.6rem, 1.6vw, 1.1rem);
+}
+
+/* Bei abgeschalteter Bewegung bleibt der Startknopf weg */
+body[data-kapitel="neonpunkt"] .raffer-kopf .nbtn[hidden] { display: none; }
+
+@media (min-width: 720px) {
+  body[data-kapitel="neonpunkt"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + clamp(6rem, 17vw, 15rem) * .78 + .5rem);
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf {
+    grid-template-columns: auto auto 1fr;
+    grid-template-areas:
+      "symbol kennung pille"
+      "symbol titel   titel";
+    column-gap: clamp(.9rem, 2vw, 1.8rem);
+    row-gap: .3rem;
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf .kennung {
+    grid-area: kennung; align-self: end; margin: 0;
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf .status-pille {
+    margin-top: 0;
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+  }
+  body[data-kapitel="neonpunkt"] .raffer { padding: clamp(.9rem, 1.8vw, 1.4rem); }
+  body[data-kapitel="neonpunkt"] .raffer-kopf { margin-bottom: .8rem; }
+  body[data-kapitel="neonpunkt"] .raffer-kopf h3 { font-size: clamp(1.1rem, 1.9vw, 1.5rem); }
+  body[data-kapitel="neonpunkt"] .raffer-kopf p { max-width: 76ch; }
+  body[data-kapitel="neonpunkt"] .raffer-buehne {
+    min-height: 220px; max-height: 33vh;
+  }
+}
+
+/* Flache Notebook-Schirme: Kopf und Buehne ruecken weiter zusammen */
+@media (min-width: 720px) and (max-height: 820px) {
+  body[data-kapitel="neonpunkt"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + clamp(5rem, 12vw, 11rem) + .6rem);
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf .app-symbol {
+    width: clamp(56px, 5vw, 72px);
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.14;
+  }
+  body[data-kapitel="neonpunkt"] .raffer { padding: .8rem 1rem; }
+  body[data-kapitel="neonpunkt"] .raffer-kopf { margin-bottom: .6rem; }
+  body[data-kapitel="neonpunkt"] .raffer-buehne {
+    min-height: 200px; max-height: 30vh;
+  }
+}
+
+@media (max-width: 720px) {
+  body[data-kapitel="neonpunkt"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + 13vw * .8 + .4rem);
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "symbol kennung"
+      "symbol pille"
+      "titel  titel";
+    justify-items: start; text-align: left;
+    column-gap: .75rem; row-gap: .2rem; margin-bottom: .5rem;
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf > * {
+    margin-left: 0; margin-right: 0;
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf .app-symbol {
+    grid-area: symbol; align-self: center; margin: 0; width: 54px;
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf .kennung {
+    grid-area: kennung; align-self: end; margin: 0;
+    font-size: .66rem; letter-spacing: .18em;
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf .status-pille {
+    grid-area: pille; align-self: start; margin: 0;
+    font-size: .58rem; padding: .22rem .6rem;
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf h1 {
+    grid-area: titel; align-self: start; margin: 0;
+    font-size: clamp(1.15rem, 5.4vw, 1.55rem); line-height: 1.12;
+  }
+  body[data-kapitel="neonpunkt"] .raffer { padding: .9rem; }
+  body[data-kapitel="neonpunkt"] .raffer-kopf { margin-bottom: .7rem; gap: .6rem; }
+  body[data-kapitel="neonpunkt"] .raffer-kopf h3 { font-size: 1.1rem; }
+  body[data-kapitel="neonpunkt"] .raffer-kopf p { font-size: .82rem; }
+  body[data-kapitel="neonpunkt"] .raffer-buehne {
+    aspect-ratio: 1 / 1; min-height: 260px; max-height: 44vh;
+  }
+}
+
+/* Kleine Handys: Kopf auf das Noetigste, Buehne bleibt trotzdem im Bild */
+@media (max-width: 420px) and (max-height: 620px) {
+  body[data-kapitel="neonpunkt"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) - .6rem);
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf .app-symbol {
+    width: 38px;
+  }
+  body[data-kapitel="neonpunkt"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(1rem, 4.8vw, 1.25rem);
+  }
+  body[data-kapitel="neonpunkt"] .raffer { padding: .7rem; }
+  body[data-kapitel="neonpunkt"] .raffer-kopf { margin-bottom: .5rem; }
+  body[data-kapitel="neonpunkt"] .raffer-kopf p { font-size: .74rem; }
+  body[data-kapitel="neonpunkt"] .raffer-buehne {
+    min-height: 170px; max-height: 35vh;
+  }
+}
 
 
 /* Scrollbare Tabelle: Fokusrahmen sichtbar + Schatten rechts als Hinweis,
@@ -3530,7 +3645,8 @@ main.unterseite[data-nr]::before {
   position: absolute; top: var(--nr-oben, clamp(.6rem, 3vw, 2.4rem));
   right: var(--nr-rechts, clamp(.4rem, 3vw, 3rem));
   font-family: var(--schrift-kopf); font-weight: 900; line-height: 1;
-  font-size: clamp(6rem, 17vw, 15rem);
+  --nr: clamp(6rem, 17vw, 15rem);
+  font-size: var(--nr);
   color: transparent;
   -webkit-text-stroke: 2.5px color-mix(in srgb, var(--akzent-hell) 85%, transparent);
   opacity: .85;
@@ -4052,6 +4168,75 @@ main.unterseite[data-nr]::after {
 @supports not (background: color-mix(in oklab, red 50%, blue)) {
   .leisten-vorschau { border-color: var(--akzent); }
   .leisten-feld b { color: var(--akzent-hell); }
+}
+
+/* Unterschrift unter der Leiste */
+.leisten-fuss {
+  margin: .6rem 0 0;
+  max-width: 64ch;
+  font-size: .8rem;
+}
+
+/* Kapitelkopf nur dieser Seite: die Leiste bleibt im ersten Bildschirm */
+body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf {
+  margin-bottom: clamp(.5rem, 1.4vw, 1rem);
+}
+body[data-kapitel="setupleiste"] .leisten-vorschau {
+  margin-top: clamp(.4rem, 1vw, .8rem);
+}
+
+/* Auf breiten Schirmen steht die Leiste in einer Zeile — wie im Programm */
+@media (min-width: 1180px) {
+  body[data-kapitel="setupleiste"] .leisten-feld { padding: .45rem .5rem; }
+}
+
+@media (min-width: 720px) {
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf .app-symbol {
+    width: clamp(72px, 6.4vw, 96px);
+  }
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(1.7rem, 3.1vw, 2.6rem); line-height: 1.1;
+  }
+}
+
+@media (max-height: 820px) and (min-width: 720px) {
+  body[data-kapitel="setupleiste"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + clamp(1rem, 2.6vw, 2rem));
+  }
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf {
+    gap: .2rem; margin-bottom: .5rem;
+  }
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf .app-symbol {
+    width: clamp(56px, 5vw, 72px);
+  }
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.14;
+  }
+}
+
+@media (max-width: 720px) {
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf {
+    gap: .15rem; margin-bottom: .4rem;
+  }
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf .status-pille {
+    margin: 0; font-size: .62rem;
+  }
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf .app-symbol {
+    width: 48px; margin: .2rem auto;
+  }
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf h1 {
+    margin: 0; font-size: clamp(1.15rem, 5.2vw, 1.55rem); line-height: 1.12;
+  }
+  body[data-kapitel="setupleiste"] .leisten-fuss { font-size: .72rem; }
+}
+
+@media (max-height: 620px) and (max-width: 420px) {
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf .app-symbol {
+    width: 38px; margin: .1rem auto;
+  }
+  body[data-kapitel="setupleiste"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(1rem, 4.8vw, 1.25rem);
+  }
 }
 
 .kopf-nav a,
@@ -5086,6 +5271,12 @@ body[data-kapitel="scheinbar"] .trommel-fuss { padding-top: 0; }
   body[data-kapitel="scheinbar"] .trommel-karte { width: min(clamp(110px, 42vw, 260px), 26vh); }
 }
 
+@media (max-height: 760px) and (min-width: 720px) {
+  body[data-kapitel="scheinbar"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + clamp(6rem, 17vw, 15rem) * .56 + .3rem);
+  }
+}
+
 @media (max-width: 720px) {
   body[data-kapitel="scheinbar"] main.unterseite[data-nr] > .huelle {
     padding-top: calc(var(--nr-oben) + 13vw * .78 + .3rem);
@@ -5327,7 +5518,7 @@ body[data-kapitel="scheinbar"] .trommel-fuss { padding-top: 0; }
 }
 
 /* Handy-Hochformat: Kopf schrumpft, damit die Tafel ins erste Bild passt */
-@media (max-width: 700px) and (min-height: 621px) and (max-height: 900px) {
+@media (max-width: 700px) and (min-height: 701px) and (max-height: 900px) {
   body[data-kapitel="campus"] main.unterseite[data-nr] > .huelle {
     padding-top: calc(var(--nr-oben) + 3.2rem);
   }
@@ -5824,6 +6015,9 @@ body[data-kapitel="familie"] .kapitelkopf h1 { font-size: clamp(1.3rem, 3.2vw, 2
 }
 
 @media (max-height: 800px) and (min-width: 720px) {
+  body[data-kapitel="familie"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + clamp(6rem, 17vw, 15rem) * .78 + .5rem);
+  }
   body[data-kapitel="familie"] main.unterseite .kapitelkopf .app-symbol { width: 56px; }
   body[data-kapitel="familie"] main.unterseite .kapitelkopf { margin-bottom: .6rem; }
   body[data-kapitel="familie"] .drehscheibe { margin-top: .4rem; }
@@ -5864,4 +6058,382 @@ body[data-kapitel="familie"] .kapitelkopf h1 { font-size: clamp(1.3rem, 3.2vw, 2
   .drehscheibe-wert em { color: var(--akzent-hell); }
   .drehscheibe-band i { background: var(--akzent); }
   .drehscheibe-phasen span.an { background: var(--akzent-hell); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   FANICA FUN — Kopf mit Symbol, Logo und Text nebeneinander; darunter
+   direkt das Live-Feld mit dem naechsten Rennen.
+   ══════════════════════════════════════════════════════════════════════ */
+
+body[data-kapitel="fanica"] main.unterseite .live-feld {
+  margin-top: clamp(.4rem, 1.2vw, .9rem);
+}
+
+@media (min-width: 720px) {
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf {
+    grid-template-columns: auto auto minmax(0, 1fr);
+    grid-template-areas:
+      "symbol logo kennung"
+      "symbol logo pille"
+      "symbol logo titel";
+    column-gap: clamp(1rem, 2.2vw, 1.8rem);
+    row-gap: .3rem;
+    margin-bottom: clamp(.6rem, 1.6vw, 1.1rem);
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .kennung {
+    grid-area: kennung; align-self: end; margin: 0;
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .kapitel-logo {
+    grid-area: logo; align-self: center; margin: 0;
+    width: clamp(104px, 11vw, 150px);
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(1.7rem, 3.4vw, 2.7rem);
+  }
+}
+
+/* Ab hier ist Platz, die beiden Pillen nebeneinander zu stellen. */
+@media (min-width: 1000px) {
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf {
+    grid-template-columns: auto auto auto minmax(0, 1fr);
+    grid-template-areas:
+      "symbol logo kennung pille"
+      "symbol logo titel   titel";
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .kennung,
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .status-pille {
+    align-self: center;
+  }
+}
+
+@media (max-height: 820px) and (min-width: 720px) {
+  body[data-kapitel="fanica"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + clamp(1rem, 2.6vw, 2rem));
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .app-symbol {
+    width: clamp(64px, 6vw, 84px);
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .kapitel-logo {
+    width: clamp(88px, 8vw, 116px);
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  }
+}
+
+@media (max-width: 719px) {
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "symbol kennung"
+      "symbol pille"
+      "logo   titel";
+    align-items: center;
+    justify-items: start;
+    text-align: left;
+    column-gap: .7rem;
+    row-gap: .2rem;
+    margin-bottom: .45rem;
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf > * { margin: 0; }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .app-symbol {
+    grid-area: symbol; width: 56px; justify-self: center;
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .kapitel-logo {
+    grid-area: logo; width: 74px; justify-self: center;
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .kennung {
+    grid-area: kennung; align-self: end;
+    font-size: .56rem; letter-spacing: .18em; padding: .3em .8em;
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .status-pille {
+    grid-area: pille; align-self: start;
+    font-size: .56rem; letter-spacing: .1em; padding: .28rem .7rem;
+  }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf h1 {
+    grid-area: titel;
+    font-size: clamp(1.1rem, 5.2vw, 1.55rem); line-height: 1.14;
+  }
+}
+
+@media (max-height: 620px) and (max-width: 420px) {
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .app-symbol { width: 42px; }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .kapitel-logo { width: 60px; }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(.98rem, 4.6vw, 1.2rem);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   INSTINCT SCORING — Logo-Paar links, Kennung/Titel/Kooperation rechts;
+   die Zielscheibe steht direkt hinter dem Kapitelkopf.
+   ══════════════════════════════════════════════════════════════════════ */
+
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-template-areas:
+    "logos kennung pille"
+    "logos titel   titel"
+    "logos koop    koop";
+  align-items: center;
+  justify-items: start;
+  text-align: left;
+  column-gap: clamp(.9rem, 2.2vw, 1.8rem);
+  row-gap: .3rem;
+  margin-bottom: clamp(.6rem, 1.6vw, 1.1rem);
+}
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf > * {
+  margin-left: 0; margin-right: 0;
+}
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf .kennung {
+  grid-area: kennung; margin: 0;
+  font-size: clamp(.58rem, 1vw, .74rem); letter-spacing: .2em;
+  padding: .34em .9em; gap: .4rem;
+}
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf .status-pille {
+  grid-area: pille; align-self: center; margin: 0;
+  font-size: clamp(.54rem, .9vw, .68rem); padding: .3rem .8rem;
+}
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf .logo-paar {
+  grid-area: logos; align-self: center; flex-wrap: nowrap;
+  gap: clamp(.4rem, 1.2vw, .9rem); margin: 0;
+}
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf .kapitel-logo {
+  width: clamp(58px, 7.6vw, 96px); margin: 0;
+}
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf .app-symbol {
+  width: clamp(46px, 6vw, 76px); margin: 0;
+}
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf .logo-mal {
+  font-size: clamp(.8rem, 1.4vw, 1.2rem);
+}
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf h1 {
+  grid-area: titel; align-self: center; margin: 0;
+  font-size: clamp(1.4rem, 3.2vw, 2.6rem); line-height: 1.08;
+}
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf .kooperationszeile {
+  grid-area: koop; align-self: start; margin: 0;
+  font-size: clamp(.56rem, 1vw, .74rem); letter-spacing: .1em;
+}
+
+/* Zielscheibe: erster Block hinter dem Kopf, deshalb enger gesetzt */
+body[data-kapitel="instinct"] main.unterseite .kapitelkopf + .unter-block {
+  margin-top: clamp(.5rem, 1.4vw, .9rem);
+}
+body[data-kapitel="instinct"] .kapitelkopf + .unter-block > h2 {
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem); margin-bottom: .35em;
+}
+body[data-kapitel="instinct"] .kapitelkopf + .unter-block > h2::before {
+  margin-bottom: .4rem;
+}
+body[data-kapitel="instinct"] .kapitelkopf + .unter-block > .leise {
+  margin: 0; font-size: .92rem;
+}
+body[data-kapitel="instinct"] .kapitelkopf + .unter-block .scheibe-block {
+  align-items: start; margin-top: clamp(.6rem, 1.4vw, 1rem);
+}
+body[data-kapitel="instinct"] main.unterseite > .huelle > .gross {
+  margin-top: clamp(1.8rem, 4vw, 3rem);
+}
+
+@media (min-width: 900px) {
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block .scheibe-buehne {
+    max-width: min(400px, 36vh);
+  }
+}
+
+/* Flache Bildschirme: die Schriftzeile schrumpft mit, damit die
+   Zielscheibe ganz ins erste Bild passt, ohne den Kopf zu ueberlagern */
+@media (min-width: 720px) and (max-height: 940px) {
+  body[data-kapitel="instinct"] main.unterseite[data-nr]::before,
+  body[data-kapitel="instinct"] main.unterseite[data-nr]::after {
+    --nr: clamp(4.5rem, 15vh, 9rem);
+  }
+  body[data-kapitel="instinct"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + clamp(4.5rem, 15vh, 9rem) + .6rem);
+  }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block .scheibe-buehne {
+    max-width: min(360px, 34vh);
+  }
+}
+
+@media (min-width: 720px) and (max-height: 820px) {
+  body[data-kapitel="instinct"] main.unterseite[data-nr]::before,
+  body[data-kapitel="instinct"] main.unterseite[data-nr]::after {
+    --nr: clamp(3.4rem, 11vh, 6rem);
+  }
+  body[data-kapitel="instinct"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + clamp(3.4rem, 11vh, 6rem) + .5rem);
+  }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .kapitel-logo {
+    width: clamp(56px, 6vw, 76px);
+  }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .app-symbol {
+    width: clamp(44px, 4.8vw, 60px);
+  }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(1.3rem, 2.6vw, 2rem);
+  }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block .scheibe-buehne {
+    max-width: min(320px, 32vh);
+  }
+}
+
+@media (max-width: 719px) {
+  body[data-kapitel="instinct"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + 3rem);
+  }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "logos kennung"
+      "logos pille"
+      "logos titel"
+      "logos koop";
+    column-gap: .7rem; row-gap: .2rem; margin-bottom: .5rem;
+  }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .kapitel-logo { width: 66px; }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .app-symbol { width: 54px; }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .logo-mal { font-size: .8rem; }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .kennung {
+    font-size: .5rem; letter-spacing: .16em; padding: .3em .8em;
+  }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .status-pille {
+    font-size: .48rem; letter-spacing: .08em; padding: .22rem .6rem; gap: .35rem;
+  }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(1rem, 4.4vw, 1.3rem); line-height: 1.12;
+  }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .kooperationszeile {
+    font-size: .55rem; letter-spacing: .06em; line-height: 1.35;
+  }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block > h2 { font-size: 1.1rem; }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block > .leise { font-size: .82rem; }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block .scheibe-buehne {
+    max-width: min(420px, 52vh);
+  }
+}
+
+@media (max-height: 620px) and (max-width: 420px) {
+  body[data-kapitel="instinct"] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) - .4rem);
+  }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .kapitel-logo { width: 40px; }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .app-symbol { width: 34px; }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf h1 {
+    font-size: clamp(.95rem, 4.4vw, 1.15rem);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Kleine Handys (≈375 × 667): Kopf und Abstand schrumpfen, damit das
+   Erlebnis über der Falte bleibt.
+   ══════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 719px) and (min-height: 480px) and (max-height: 800px) {
+  body[data-kapitel] main.unterseite[data-nr]::before,
+  body[data-kapitel] main.unterseite[data-nr]::after {
+    --nr: min(10vw, 5.5vh); font-size: min(10vw, 5.5vh);
+  }
+  body[data-kapitel] main.unterseite[data-nr] > .huelle {
+    padding-top: calc(var(--nr-oben) + min(10vw, 5.5vh) + .4rem);
+  }
+
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .app-symbol { width: 42px; }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .kapitel-logo { width: 56px; }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .status-pille {
+    font-size: .52rem; letter-spacing: .06em; padding: .22rem .6rem;
+  }
+  body[data-kapitel="fanica"] .live-quelle { font-size: .72rem; margin-top: .5rem; }
+
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .kapitel-logo { width: 54px; }
+  body[data-kapitel="instinct"] main.unterseite .kapitelkopf .app-symbol { width: 44px; }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block > h2 { font-size: 1.05rem; }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block > .leise { font-size: .8rem; }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block .scheibe-block {
+    margin-top: .6rem;
+  }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block .scheibe-buehne {
+    max-width: min(300px, 38vh);
+  }
+
+  body[data-kapitel="neonpunkt"] .raffer-kopf { margin-bottom: .6rem; }
+  body[data-kapitel="neonpunkt"] .raffer-buehne {
+    min-height: 180px; max-height: 30vh;
+  }
+
+  body[data-kapitel="familie"] .kapitelkopf { margin-bottom: .4rem; }
+  body[data-kapitel="familie"] .app-symbol { width: 46px; margin: .2rem auto .3rem; }
+  body[data-kapitel="familie"] .drehscheibe-buehne { height: 104px; }
+
+  body[data-kapitel="scheinbar"] .kapitelkopf { margin-bottom: .3rem; }
+  body[data-kapitel="scheinbar"] .trommel-karte { width: min(42vw, 24vh); }
+
+  body[data-kapitel="yourfilm"] main.unterseite .kapitelkopf {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "symbol pille" "symbol titel";
+    align-items: center; justify-items: start; text-align: left;
+    column-gap: .7rem; row-gap: .2rem; margin-bottom: .6rem;
+  }
+  body[data-kapitel="yourfilm"] main.unterseite .kapitelkopf > * { margin: 0; }
+  body[data-kapitel="yourfilm"] main.unterseite .kapitelkopf .app-symbol {
+    grid-area: symbol; width: 56px;
+  }
+  body[data-kapitel="yourfilm"] main.unterseite .kapitelkopf .status-pille {
+    grid-area: pille; align-self: end;
+    font-size: .55rem; padding: .2rem .55rem; letter-spacing: .08em;
+  }
+  body[data-kapitel="yourfilm"] main.unterseite .kapitelkopf h1 {
+    grid-area: titel; align-self: start;
+    font-size: clamp(1.05rem, 5vw, 1.35rem); line-height: 1.12;
+  }
+  .scanlauf-sucher { max-height: 32vh; }
+}
+
+@media (max-width: 700px) and (min-height: 621px) and (max-height: 700px) {
+  body[data-kapitel="campus"] main.unterseite .kapitelkopf {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "symbol pille" "symbol titel";
+    align-items: center; justify-items: start; text-align: left;
+    column-gap: .7rem; row-gap: .2rem; margin-bottom: .6rem;
+  }
+  body[data-kapitel="campus"] main.unterseite .kapitelkopf > * { margin: 0; }
+  body[data-kapitel="campus"] main.unterseite .kapitelkopf .app-symbol {
+    grid-area: symbol; width: 56px;
+  }
+  body[data-kapitel="campus"] main.unterseite .kapitelkopf .status-pille {
+    grid-area: pille; align-self: end;
+    font-size: .55rem; padding: .2rem .55rem;
+  }
+  body[data-kapitel="campus"] main.unterseite .kapitelkopf h1 {
+    grid-area: titel; align-self: start;
+    font-size: clamp(1.1rem, 5.2vw, 1.4rem); line-height: 1.12;
+  }
+  body[data-kapitel="campus"] .plan-kopf { margin-bottom: .5rem; }
+}
+
+@media (max-width: 719px) and (min-height: 480px) and (max-height: 620px) {
+  body[data-kapitel="neonpunkt"] .raffer-buehne {
+    min-height: 150px; max-height: 26vh;
+  }
+}
+
+@media (max-width: 340px) and (min-height: 480px) and (max-height: 620px) {
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .kapitel-logo { width: 46px; }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf .app-symbol { width: 36px; }
+  body[data-kapitel="fanica"] main.unterseite .kapitelkopf h1 { font-size: 1rem; }
+  body[data-kapitel="fanica"] .live-quelle { display: none; }
+  body[data-kapitel="fanica"] .live-zahlen { gap: .5rem; }
+  body[data-kapitel="fanica"] .live-rennen { padding: .8rem .9rem; }
+  body[data-kapitel="fanica"] .live-ort { font-size: 1.35rem; }
+
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block > h2 { font-size: .95rem; }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block > .leise { font-size: .74rem; }
+  body[data-kapitel="instinct"] .kapitelkopf + .unter-block .scheibe-buehne {
+    max-width: min(240px, 33vh);
+  }
 }

@@ -1027,6 +1027,25 @@
     });
 
     zeigen(vonAussen.length - 1);   // Start: innerste Zone (Spot)
+
+    /// Zeigt die Zonen von innen nach aussen, bis der Besucher selbst waehlt.
+    if (ruhig) return;
+    let nr = vonAussen.length - 1;
+    let takt = 0;
+    let laeuft = true;
+    const anhalten = () => { laeuft = false; clearInterval(takt); takt = 0; };
+    const weiter = () => {
+      nr = (nr + vonAussen.length - 1) % vonAussen.length;
+      zeigen(nr);
+    };
+    ["pointerdown", "keydown", "focusin"].forEach((e) =>
+      buehne.addEventListener(e, anhalten));
+    new IntersectionObserver((eintraege) => {
+      eintraege.forEach((e) => {
+        if (e.isIntersecting && laeuft && !takt) takt = setInterval(weiter, 2400);
+        else if (!e.isIntersecting && takt) { clearInterval(takt); takt = 0; }
+      });
+    }, { threshold: .3 }).observe(buehne);
   }
 
   /* ========================================================
@@ -2444,6 +2463,44 @@
     });
   }
 
+  /* ========================================================
+     LEISTE — die nachgebaute Anzeige laeuft weiter: Ping, FPS,
+     Prozessor und Grafikkarte wandern um ihren Ausgangswert.
+     ======================================================== */
+  function leisteEinrichten() {
+    const leiste = document.getElementById("setupleiste-vorschau");
+    if (!leiste || ruhig) return;
+
+    const SPANNE = { PING: 6, FPS: 14, CPU: 9, GPU: 10 };
+    const felder = [...leiste.querySelectorAll(".leisten-feld")].map(f => {
+      const name = (f.querySelector("b").textContent || "").trim();
+      const wert = f.querySelector("em");
+      const zahl = wert ? parseInt((wert.textContent.match(/\d+/) || [])[0], 10) : NaN;
+      return (SPANNE[name] && isFinite(zahl))
+        ? { wert, muster: wert.textContent, grund: zahl, spanne: SPANNE[name] }
+        : null;
+    }).filter(Boolean);
+    if (!felder.length) return;
+
+    let uhr = null, imBild = false;
+    const schritt = () => felder.forEach(f => {
+      const neu = Math.max(1, f.grund + Math.round((Math.random() - .5) * 2 * f.spanne));
+      f.wert.textContent = f.muster.replace(/\d+/, neu);
+    });
+    const starten = () => { if (!uhr) uhr = setInterval(schritt, 1400); };
+    const stoppen = () => { if (uhr) { clearInterval(uhr); uhr = null; } };
+
+    new IntersectionObserver(e => {
+      imBild = e[0].isIntersecting;
+      if (imBild && !document.hidden) starten(); else stoppen();
+    }, { threshold: 0.2 }).observe(leiste);
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stoppen();
+      else if (imBild) starten();
+    });
+  }
+
   /* ======================================================== START */
   function start() {
     texteEinsetzen();
@@ -2473,6 +2530,7 @@
     scanlaufEinrichten();
     kontoEinrichten();
     saeuleEinrichten();
+    leisteEinrichten();
   }
 
   if (document.readyState === "loading") {

@@ -82,7 +82,8 @@
     Qatar: "Katar", UAE: "V. A. Emirate", France: "Frankreich",
     Portugal: "Portugal", Germany: "Deutschland"
   };
-  const land = (s) => LAND[s] || s;
+  const land = (s) =>
+    (window.SPRACHE === "en") ? s : (LAND[s] || s);
 
   /* ---------- Countdown bis zum nächsten Rennen ---------- */
   function countdownStarten(kachel, ziel, texte) {
