@@ -69,10 +69,10 @@ siehe `apple-trader-status-eu-sperre`. Also auch dort erst messen.
 **2. Zwei alte Instinct-Screenshots** wären als Neuaufnahme besser (der angeschnittene
 ist beschnitten und sieht jetzt sauber aus — kein Blocker).
 
-**3. ScheinBar hat noch keine Screenshots** auf seiner Unterseite (Kapitel 10, seit
-31.08.2026 online). Sobald welche im Emulator entstehen: `scheinbar.bilder` in
-`texte.js` füllen und einen `<div id="scheinbar-bilder">` samt Überschrift auf
-`scheinbar.html` ergänzen — der Baustein in `inhalte.js` läuft schon mit.
+**3. ~~ScheinBar hat noch keine Screenshots~~ — erledigt 05.09.2026.** Fünf
+Aufnahmen im Dunkelmodus aus dem Emulator liegen als `bilder/app/scheinbar-1-start`
+bis `-5-statistik` (Luminanz 29–44). Gleichzeitig neu: AbleseBar, YourFilm,
+Campus Clash und ZeitAnker.
 
 **4. ScheinBar-Preis** steht noch nicht fest (Falk-Entscheid). In der Vergleichstabelle
 steht deshalb „noch offen"; sobald der Preis da ist, `vergleich.zeilen` in BEIDEN
