@@ -4,6 +4,7 @@
    ============================================================ */
 
 :root {
+  color-scheme: dark;
   /* --- Grundfarben (Intro / Abschluss) --- */
   --schwarz:        #07070A;
   --schwarz-tief:   #000000;
