@@ -44,6 +44,7 @@
 </header>
 
 <main id="inhalt" class="unterseite" data-nr="07" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
+  <div class="kapitel-licht" aria-hidden="true"></div>
   <div class="huelle">
 
     <div class="kapitelkopf">
@@ -55,6 +56,26 @@
       </div>
 
       <h1 data-t="zeitwissen.untertitel">Arbeitszeit, die sich selbst erklärt</h1>
+    </div>
+
+    <div class="konto" id="zeit-konto">
+      <div class="konto-kopf">
+        <p class="konto-stand">
+          <em data-t="zeitwissen.kontoUeber"></em>
+          <b id="konto-summe">+0:00 h</b>
+        </p>
+        <span class="konto-laeuft" id="konto-laeuft" hidden>
+          <i class="konto-punkt" aria-hidden="true"></i>
+          <span data-t="zeitwissen.kontoLaeuft"></span>
+        </span>
+      </div>
+
+      <div class="konto-buehne" id="konto-buehne"></div>
+
+      <p class="konto-fuss">
+        <span class="konto-deutung" id="konto-deutung"></span>
+        <span data-t="zeitwissen.kontoFuss"></span>
+      </p>
     </div>
 
     <p class="gross" style="max-width:64ch" data-t="zeitwissen.positionierung"></p>

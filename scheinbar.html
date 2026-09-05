@@ -44,6 +44,7 @@
 </header>
 
 <main id="inhalt" class="unterseite" data-nr="10" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
+  <div class="kapitel-licht" aria-hidden="true"></div>
   <div class="huelle">
 
     <div class="kapitelkopf">
@@ -54,6 +55,28 @@
       </div>
 
       <h1 data-t="scheinbar.untertitel">Schein fotografieren, Gewinn sehen</h1>
+    </div>
+
+    <div class="trommel" id="trommel">
+      <div class="trommel-karte" id="trommel-karte" aria-hidden="true"></div>
+
+      <div class="trommel-anzeige">
+        <div class="trommel-kugel" id="trommel-kugel"></div>
+        <div class="trommel-werte">
+          <span><em data-t="scheinbar.trommelGezogen"></em>
+                <b id="trommel-zahl"></b></span>
+          <span><em data-t="scheinbar.trommelReihen"></em>
+                <b id="trommel-reihen-zahl"></b></span>
+        </div>
+        <div class="trommel-reihen" id="trommel-striche" aria-hidden="true"></div>
+        <p class="trommel-ruf" id="trommel-ruf" role="status"></p>
+      </div>
+
+      <div class="trommel-fuss">
+        <p id="trommel-text" data-t="scheinbar.trommelText"></p>
+        <button class="nbtn b-scratch" id="trommel-knopf">
+          <span id="trommel-knopf-text" data-t="scheinbar.trommelKnopf"></span></button>
+      </div>
     </div>
 
     <p class="gross" style="max-width:64ch" data-t="scheinbar.positionierung"></p>

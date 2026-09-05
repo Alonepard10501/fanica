@@ -973,6 +973,18 @@ de: {
      4 Rollen/13 Rechte). 🔴 KEIN Preis nennen — es existiert noch keine
      Bezahlfunktion (nur beschrifteter Testmodus). ===================== */
   campus: {
+    planTitel: "Dein Stundenplan läuft weiter",
+    planFachEins: "Deutsch",
+    planFachZwei: "Chemie",
+    planFachDrei: "Kraftraum",
+    planStufe: "Level {n}",
+    planAbholen: "Fertig · abholen",
+    planStd: "{h} h {m} min",
+    planMin: "{m} min {s} s",
+    planSek: "{s} s",
+    planFuss: "Läuft weiter, auch wenn die App zu ist — Stufe für Stufe.",
+    planRuhig: "Standbild: Stand nach zweieinhalb Stunden Abwesenheit.",
+
     kennzahlen: [{ zahl: "64", text: "Schulfächer zum Lernen" }, { zahl: "50", text: "Schülerjobs" }, { zahl: "47", text: "Ausrüstungsstücke" }, { zahl: "5", text: "Bereiche in der Leiste" }],
     ablaufTitel: "So fängst du an",
     ablaufSchritte: [
@@ -1091,6 +1103,34 @@ de: {
   },
 
   yourfilm: {
+    scanTitel: "Eine Zahl, drei Ebenen",
+    scanPruefungGut: "{art} · Prüfziffer {ziffer} stimmt",
+    scanEbeneFilm: "Film — das Werk",
+    scanEbeneAusgabe: "Veröffentlichung — die Ausgabe",
+    scanEbeneExemplar: "Exemplar — dein Stück",
+    scanScheiben: [
+      {
+        code: "402356712088", art: "EAN-13", format: "4K UHD",
+        film: "Nachtblende", filmZusatz: "1987 · Thriller · 118 Min · FSK 16",
+        ausgabe: "4K UHD Blu-ray · Steelbook", ausgabeZusatz: "2 Discs · Dolby Atmos · UVP 34,99 €",
+        exemplar: "Sehr gut · gekauft 12.03.2026", exemplarZusatz: "24,90 € bezahlt · noch nicht gesehen",
+        regal: "Wohnzimmer › Schrank links › Regal 2 › Fach C"
+      },
+      {
+        code: "507103364117", art: "EAN-13", format: "Blu-ray",
+        film: "Der lange Zug", filmZusatz: "2004 · Drama · 141 Min · FSK 12",
+        ausgabe: "Blu-ray · Mediabook", ausgabeZusatz: "1 Disc · DTS-HD · UVP 24,99 €",
+        exemplar: "Gut · verliehen an Marek", exemplarZusatz: "zurück erwartet am 19.09.2026",
+        regal: "Arbeitszimmer › Regal Fenster › Fach 4"
+      },
+      {
+        code: "88857420311", art: "UPC-A", format: "DVD",
+        film: "Salzwind", filmZusatz: "1996 · Doku · 92 Min · FSK 0",
+        ausgabe: "DVD · Standard Edition", ausgabeZusatz: "1 Disc · Stereo · UVP 12,99 €",
+        exemplar: "Neu / versiegelt · Favorit", exemplarZusatz: "9,50 € bezahlt · gesehen 04.08.2026",
+        regal: "Keller › Filmschrank › Regal 1 › Fach A"
+      },
+    ],
     kennzahlen: [{ zahl: "3", text: "Ebenen je Film" }, { zahl: "9", text: "Trägerformate" }, { zahl: "11", text: "Editionsarten" }, { zahl: "13", text: "Sortierungen" }],
     ablaufTitel: "So fängst du an",
     ablaufSchritte: [
@@ -1201,6 +1241,18 @@ de: {
   },
 
   zeitwissen: {
+    kontoUeber: "Dein Zeitkonto",
+    kontoLaeuft: "Arbeitszeit läuft",
+    kontoSoll: "Soll",
+    kontoIst: "Ist",
+    kontoOffen: "läuft noch",
+    kontoFehlt: "noch offen bis Soll",
+    kontoPlus: "So viele Überstunden hast du angesammelt.",
+    kontoMinus: "So viel Zeit fehlt dir noch.",
+    kontoNull: "Du bist genau im Soll.",
+    kontoHeute: "Heute läuft noch — der Stand bleibt, bis du ausstempelst.",
+    kontoFuss: "Jeder abgeschlossene Tag rechnet gearbeitet minus Soll. Der laufende Tag steht neutral auf der Soll-Linie und zählt erst mit, wenn du ausstempelst — sonst stündest du jeden Morgen im Minus.",
+    kontoTage: ["Mo", "Di", "Mi", "Do", "Fr"],
     kennzahlen: [{ zahl: "4", text: "Bereiche in der App" }, { zahl: "4", text: "Sollzeit-Modelle" }, { zahl: "3", text: "Berichts-Formate" }, { zahl: "7", text: "Einstellungs-Bereiche" }],
     ablaufTitel: "So fängst du an",
     ablaufSchritte: [
@@ -1307,6 +1359,45 @@ de: {
     hinweis: "ZeitAnker läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
   familie: {
+    drehDaten: [
+      { id: "weather",   zahl: 26,   von: 0,  bis: 20,  skalaVon: 0, skalaBis: 40,  einheit: "km/h" },
+      { id: "range",     zahl: 54,   von: 60, bis: 100, skalaVon: 0, skalaBis: 100, einheit: "" },
+      { id: "builder",   zahl: 7.4,  von: 8,  bis: 12,  skalaVon: 6, skalaBis: 14,  einheit: "gr/lbs" },
+      { id: "coach",     zahl: 140,  von: 0,  bis: 0,   einheit: "" },
+      { id: "tune",      zahl: 2,    von: 0,  bis: 0,   einheit: "" },
+      { id: "scoring",   zahl: 86,   von: 80, bis: 100, skalaVon: 0, skalaBis: 100, einheit: "%" },
+      { id: "pack",      zahl: 96,   von: 90, bis: 100, skalaVon: 0, skalaBis: 100, einheit: "%" },
+      { id: "community", zahl: null, von: 0,  bis: 0,   einheit: "" },
+      { id: "trade",     zahl: null, von: 0,  bis: 0,   einheit: "" },
+      { id: "ai",        zahl: null, von: 0,  bis: 0,   einheit: "" }
+    ],
+    drehTitel: "Die Drehscheibe, live",
+    drehMitte: "Drehscheibe",
+    drehSammelt: "sammelt ein",
+    drehBewertet: "bewertet",
+    drehSchickt: "schickt zurück",
+    drehBand: "Zielbereich",
+    drehUrteilGut: "im Band",
+    drehUrteilKnapp: "knapp",
+    drehUrteilRaus: "außerhalb",
+    drehStatisch: "Wind 26 km/h liegt außerhalb von 0–20 km/h, der Eye Score bei 54 von 100. Der Coach verbindet beides und schickt an Instinct Range: Distanzschätzen heute verschieben.",
+    drehWerte: [
+      { id: "weather",   app: "Instinct Weather",   kurz: "Weather",   label: "Wind",               wert: "26 km/h" },
+      { id: "range",     app: "Instinct Range",     kurz: "Range",     label: "Eye Score",          wert: "54 von 100" },
+      { id: "builder",   app: "Instinct Builder",   kurz: "Builder",   label: "Grain je Pfund",     wert: "7,4 gr/lbs" },
+      { id: "coach",     app: "Instinct Coach",     kurz: "Coach",     label: "Pfeile diese Woche", wert: "140" },
+      { id: "tune",      app: "Instinct Tune",      kurz: "Tune",      label: "Fällige Wartungen",  wert: "2" },
+      { id: "scoring",   app: "Instinct Scoring",   kurz: "Scoring",   label: "Trefferquote",       wert: "86 %" },
+      { id: "pack",      app: "Instinct Pack",      kurz: "Pack",      label: "Packliste",          wert: "96 %" },
+      { id: "community", app: "Instinct Community", kurz: "Community", label: "Nächstes Event",     wert: "in 6 Tagen" },
+      { id: "trade",     app: "Instinct Trade",     kurz: "Trade",     label: "Offene Anzeigen",    wert: "1" },
+      { id: "ai",        app: "Instinct AI",        kurz: "AI",        label: "Offene Fragen",      wert: "0" }
+    ],
+    drehRat: [
+      { anId: "range",   stufe: "Hinweis",  titel: "Distanzschätzen heute verschieben", grund: "Bei 26 km/h Wind trennt keine Schätzung mehr, ob der Fehler vom Auge oder vom Abdrift kommt. Übe an einem ruhigen Tag." },
+      { anId: "builder", stufe: "Dringend", titel: "Pfeilgewicht erhöhen",              grund: "Bei 7,4 gr/lbs bleibt Energie in den Wurfarmen statt im Pfeil. Schwerere Spitzen sind billiger als Wurfarme." },
+      { anId: "tune",    stufe: "Dringend", titel: "Wartung nachholen",                 grund: "Zwei Wartungen offen, das Training läuft weiter. Verschleiß wächst mit jedem Schuss, nicht mit der Zeit." }
+    ],
     bilderTitel: "Ein Blick in die App",
     bilderText: "Fünf Aufnahmen aus der laufenden Fassung — ein frisch eingerichtetes Gerät, noch ohne eigene Runden.",
     bilder: [
@@ -1408,6 +1499,16 @@ de: {
     hinweis: "Die Instinct Familie ist in Entwicklung. Alle Angaben beschreiben den geplanten Umfang und können sich ändern. Verfügbar ist bisher allein Instinct Scoring."
   },
   tankspur: {
+    saeuleZapft: "Zapfsäule · zählt mit",
+    saeuleBetrag: "Zu zahlen",
+    saeuleWaehrung: "€",
+    saeuleLiter: "Liter",
+    saeulePreis: "Preis je Liter",
+    saeuleMal: "mal",
+    saeuleErgibt: "ergibt",
+    saeuleGeprueft: "nachgerechnet",
+    saeuleLaeuft: "Der Preis je Liter steht fest — Menge und Betrag laufen mit.",
+    saeuleNochmal: "Noch einmal",
     kennzahlen: [{ zahl: "8", text: "Auswertungs-Bereiche" }, { zahl: "26", text: "Hersteller im Katalog" }, { zahl: "159", text: "Modelle offline im Gerät" }, { zahl: "11", text: "Kraftstoff-Sorten" }],
     ablaufTitel: "So fängst du an",
     ablaufSchritte: [
@@ -1517,6 +1618,16 @@ de: {
   },
 
   scheinbar: {
+    trommelGezogen: "Gezogen",
+    trommelReihen: "Volle Reihen",
+    trommelVon: "{a} von {b}",
+    trommelLeer: "—",
+    trommelBingo: "Bingo!",
+    trommelDoppelt: "Doppelt-Bingo!",
+    trommelJackpot: "Jackpot!",
+    trommelKnopf: "Neue Ziehung",
+    trommelKnopfLaeuft: "Läuft …",
+    trommelText: "22 von 75 Zahlen fallen — und die App zählt mit, welche der zwölf Reihen dabei voll wird: fünf quer, fünf längs, zwei diagonal. Genau diese Rechnung steckt hinter jedem BINGO!-Schein.",
     bilderTitel: "Ein Blick in die App",
     bilderText: "Fünf Aufnahmen aus der laufenden Fassung. Der Schein darin ist ein Beispiel.",
     bilder: [
@@ -1623,6 +1734,16 @@ de: {
   },
 
   ablesebar: {
+    zaehlerwerkStand: "Zählerstand",
+    zaehlerwerkVerbrauch: "Verbrauch im Monat",
+    zaehlerwerkVormonat: "Stand im Vormonat",
+    zaehlerwerkSaldo: "Gegen die Abschläge",
+    zaehlerwerkBereich: "Bereich wählen",
+    zaehlerwerkGas: "Gas",
+    zaehlerwerkWasser: "Wasser",
+    zaehlerwerkStrom: "Strom",
+    zaehlerwerkVorlesen: "{bereich}: Zählerstand {stand}, Verbrauch im Monat {verbrauch}.",
+
     bilderTitel: "Ein Blick in die App",
     bilderText: "Fünf Aufnahmen aus der laufenden Fassung. Die Zahlen darin sind Beispielwerte.",
     bilder: [
@@ -2809,6 +2930,18 @@ en: {
 
   /* ============ CHAPTER 5 — CAMPUS CLASH (IN PROGRESS) ============ */
   campus: {
+    planTitel: "Your timetable keeps running",
+    planFachEins: "German",
+    planFachZwei: "Chemistry",
+    planFachDrei: "Weight room",
+    planStufe: "Level {n}",
+    planAbholen: "Done · collect",
+    planStd: "{h} h {m} min",
+    planMin: "{m} min {s} s",
+    planSek: "{s} s",
+    planFuss: "Keeps running even when the app is closed — level after level.",
+    planRuhig: "Still image: state after two and a half hours away.",
+
     kennzahlen: [{ zahl: "64", text: "school subjects to study" }, { zahl: "50", text: "student jobs" }, { zahl: "47", text: "pieces of equipment" }, { zahl: "5", text: "areas in the bar" }],
     ablaufTitel: "How to get started",
     ablaufSchritte: [
@@ -2927,6 +3060,34 @@ en: {
   },
 
   yourfilm: {
+    scanTitel: "One number, three layers",
+    scanPruefungGut: "{art} · check digit {ziffer} matches",
+    scanEbeneFilm: "Film — the work",
+    scanEbeneAusgabe: "Release — the edition",
+    scanEbeneExemplar: "Copy — your own",
+    scanScheiben: [
+      {
+        code: "402356712088", art: "EAN-13", format: "4K UHD",
+        film: "Night Aperture", filmZusatz: "1987 · thriller · 118 min · age 16",
+        ausgabe: "4K UHD Blu-ray · steelbook", ausgabeZusatz: "2 discs · Dolby Atmos · RRP €34.99",
+        exemplar: "Very good · bought 12 Mar 2026", exemplarZusatz: "€24.90 paid · not watched yet",
+        regal: "Living room › left cabinet › shelf 2 › slot C"
+      },
+      {
+        code: "507103364117", art: "EAN-13", format: "Blu-ray",
+        film: "The Long Haul", filmZusatz: "2004 · drama · 141 min · age 12",
+        ausgabe: "Blu-ray · mediabook", ausgabeZusatz: "1 disc · DTS-HD · RRP €24.99",
+        exemplar: "Good · on loan to Marek", exemplarZusatz: "due back 19 Sep 2026",
+        regal: "Study › window shelf › slot 4"
+      },
+      {
+        code: "88857420311", art: "UPC-A", format: "DVD",
+        film: "Salt Wind", filmZusatz: "1996 · documentary · 92 min · age 0",
+        ausgabe: "DVD · standard edition", ausgabeZusatz: "1 disc · stereo · RRP €12.99",
+        exemplar: "New / sealed · favourite", exemplarZusatz: "€9.50 paid · watched 4 Aug 2026",
+        regal: "Basement › film cabinet › shelf 1 › slot A"
+      },
+    ],
     kennzahlen: [{ zahl: "3", text: "levels per film" }, { zahl: "9", text: "disc formats" }, { zahl: "11", text: "edition types" }, { zahl: "13", text: "sort orders" }],
     ablaufTitel: "How to get started",
     ablaufSchritte: [
@@ -3037,6 +3198,18 @@ en: {
   },
 
   zeitwissen: {
+    kontoUeber: "Your time account",
+    kontoLaeuft: "Clocked in",
+    kontoSoll: "Target",
+    kontoIst: "Actual",
+    kontoOffen: "still running",
+    kontoFehlt: "still to go until target",
+    kontoPlus: "That is how much overtime you have built up.",
+    kontoMinus: "That is how much time you still owe.",
+    kontoNull: "You are exactly on target.",
+    kontoHeute: "Today is still running — the balance holds until you clock out.",
+    kontoFuss: "Every finished day counts worked minus target. The running day sits neutral on the target line and only counts once you clock out — otherwise you would start every morning in the red.",
+    kontoTage: ["Mon", "Tue", "Wed", "Thu", "Fri"],
     kennzahlen: [{ zahl: "4", text: "Areas in the app" }, { zahl: "4", text: "Target-hours models" }, { zahl: "3", text: "Report formats" }, { zahl: "7", text: "Settings areas" }],
     ablaufTitel: "How to get started",
     ablaufSchritte: [
@@ -3143,6 +3316,45 @@ en: {
     hinweis: "ZeitAnker is in closed testing on Google Play — only testers who have been given access can install it. All details describe the current build and may change before release."
   },
   familie: {
+    drehDaten: [
+      { id: "weather",   zahl: 26,   von: 0,  bis: 20,  skalaVon: 0, skalaBis: 40,  einheit: "km/h" },
+      { id: "range",     zahl: 54,   von: 60, bis: 100, skalaVon: 0, skalaBis: 100, einheit: "" },
+      { id: "builder",   zahl: 7.4,  von: 8,  bis: 12,  skalaVon: 6, skalaBis: 14,  einheit: "gr/lbs" },
+      { id: "coach",     zahl: 140,  von: 0,  bis: 0,   einheit: "" },
+      { id: "tune",      zahl: 2,    von: 0,  bis: 0,   einheit: "" },
+      { id: "scoring",   zahl: 86,   von: 80, bis: 100, skalaVon: 0, skalaBis: 100, einheit: "%" },
+      { id: "pack",      zahl: 96,   von: 90, bis: 100, skalaVon: 0, skalaBis: 100, einheit: "%" },
+      { id: "community", zahl: null, von: 0,  bis: 0,   einheit: "" },
+      { id: "trade",     zahl: null, von: 0,  bis: 0,   einheit: "" },
+      { id: "ai",        zahl: null, von: 0,  bis: 0,   einheit: "" }
+    ],
+    drehTitel: "The hub, live",
+    drehMitte: "Hub",
+    drehSammelt: "collecting",
+    drehBewertet: "judging",
+    drehSchickt: "sending back",
+    drehBand: "Target range",
+    drehUrteilGut: "in range",
+    drehUrteilKnapp: "borderline",
+    drehUrteilRaus: "out of range",
+    drehStatisch: "Wind at 26 km/h sits outside 0–20 km/h, the Eye Score at 54 out of 100. The Coach connects the two and tells Instinct Range: leave distance estimation for another day.",
+    drehWerte: [
+      { id: "weather",   app: "Instinct Weather",   kurz: "Weather",   label: "Wind",             wert: "26 km/h" },
+      { id: "range",     app: "Instinct Range",     kurz: "Range",     label: "Eye Score",        wert: "54 out of 100" },
+      { id: "builder",   app: "Instinct Builder",   kurz: "Builder",   label: "Grain per pound",  wert: "7.4 gr/lbs" },
+      { id: "coach",     app: "Instinct Coach",     kurz: "Coach",     label: "Arrows this week", wert: "140" },
+      { id: "tune",      app: "Instinct Tune",      kurz: "Tune",      label: "Maintenance due",  wert: "2" },
+      { id: "scoring",   app: "Instinct Scoring",   kurz: "Scoring",   label: "Hit rate",         wert: "86 %" },
+      { id: "pack",      app: "Instinct Pack",      kurz: "Pack",      label: "Packing list",     wert: "96 %" },
+      { id: "community", app: "Instinct Community", kurz: "Community", label: "Next event",       wert: "in 6 days" },
+      { id: "trade",     app: "Instinct Trade",     kurz: "Trade",     label: "Open listings",    wert: "1" },
+      { id: "ai",        app: "Instinct AI",        kurz: "AI",        label: "Open questions",   wert: "0" }
+    ],
+    drehRat: [
+      { anId: "range",   stufe: "Note",   titel: "Leave distance estimation for today", grund: "At 26 km/h no estimate can tell your eye from the arrow drifting. Practise on a calm day." },
+      { anId: "builder", stufe: "Urgent", titel: "Increase arrow weight",               grund: "At 7.4 gr/lbs energy stays in the limbs instead of the arrow. Heavier points are cheaper than limbs." },
+      { anId: "tune",    stufe: "Urgent", titel: "Catch up on maintenance",             grund: "Two services overdue while training continues. Wear grows with every shot, not with time." }
+    ],
     kennzahlen: [{ zahl: "10", text: "Apps under one roof" }, { zahl: "9", text: "of them fully included" }, { zahl: "58", text: "Features in total" }, { zahl: "10", text: "Data paths between apps" }],
     ablaufTitel: "How to get started",
     ablaufSchritte: [
@@ -3244,6 +3456,16 @@ en: {
     hinweis: "The Instinct Family is in development. All details describe the planned scope and may change. Only Instinct Scoring is available so far."
   },
   tankspur: {
+    saeuleZapft: "Pump · counting",
+    saeuleBetrag: "To pay",
+    saeuleWaehrung: "€",
+    saeuleLiter: "Litres",
+    saeulePreis: "Price per litre",
+    saeuleMal: "times",
+    saeuleErgibt: "makes",
+    saeuleGeprueft: "recalculated",
+    saeuleLaeuft: "The price per litre is fixed — volume and amount count along.",
+    saeuleNochmal: "Again",
     kennzahlen: [{ zahl: "8", text: "Analysis sections" }, { zahl: "26", text: "Manufacturers in the catalogue" }, { zahl: "159", text: "Models offline on the device" }, { zahl: "11", text: "Fuel types" }],
     ablaufTitel: "How to get started",
     ablaufSchritte: [
@@ -3353,6 +3575,16 @@ en: {
   },
 
   scheinbar: {
+    trommelGezogen: "Drawn",
+    trommelReihen: "Full lines",
+    trommelVon: "{a} of {b}",
+    trommelLeer: "—",
+    trommelBingo: "Bingo!",
+    trommelDoppelt: "Double Bingo!",
+    trommelJackpot: "Jackpot!",
+    trommelKnopf: "New draw",
+    trommelKnopfLaeuft: "Drawing …",
+    trommelText: "22 of 75 numbers come up — and the app keeps count of which of the twelve lines fills up: five across, five down, two diagonal. That is exactly the calculation behind every BINGO! ticket.",
     bilderTitel: "A look inside",
     bilderText: "Five shots from the running build. The ticket in them is an example.",
     bilder: [
@@ -3459,6 +3691,16 @@ en: {
   },
 
   ablesebar: {
+    zaehlerwerkStand: "Meter reading",
+    zaehlerwerkVerbrauch: "Consumption this month",
+    zaehlerwerkVormonat: "Last month's reading",
+    zaehlerwerkSaldo: "Against the instalments",
+    zaehlerwerkBereich: "Choose area",
+    zaehlerwerkGas: "Gas",
+    zaehlerwerkWasser: "Water",
+    zaehlerwerkStrom: "Electricity",
+    zaehlerwerkVorlesen: "{bereich}: meter reading {stand}, consumption this month {verbrauch}.",
+
     bilderTitel: "A look inside",
     bilderText: "Five shots from the running build. The figures in them are sample values.",
     bilder: [

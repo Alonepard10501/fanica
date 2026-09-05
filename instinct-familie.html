@@ -44,6 +44,7 @@
 </header>
 
 <main id="inhalt" class="unterseite" data-nr="08" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
+  <div class="kapitel-licht" aria-hidden="true"></div>
   <div class="huelle">
 
     <div class="kapitelkopf">
@@ -56,6 +57,29 @@
 
       <h1 data-t="familie.untertitel">Aus einer App wird eine Familie</h1>
     </div>
+
+    <section class="drehscheibe" aria-labelledby="drehscheibe-titel">
+      <div class="drehscheibe-kopf">
+        <h2 id="drehscheibe-titel" data-t="familie.drehTitel"></h2>
+        <div class="drehscheibe-phasen" id="drehscheibe-phasen" aria-hidden="true">
+          <span data-t="familie.drehSammelt"></span>
+          <span data-t="familie.drehBewertet"></span>
+          <span data-t="familie.drehSchickt"></span>
+        </div>
+      </div>
+
+      <div class="drehscheibe-buehne" id="drehscheibe-buehne">
+        <svg class="drehscheibe-draht" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="drehscheibe-mitte">
+          <em data-t="familie.drehMitte"></em>
+          <b id="drehscheibe-zaehler"></b>
+          <i id="drehscheibe-lage"></i>
+        </div>
+      </div>
+
+      <div class="drehscheibe-lesen" id="drehscheibe-lesen" aria-live="polite"></div>
+      <p class="drehscheibe-statisch" id="drehscheibe-statisch" hidden data-t="familie.drehStatisch"></p>
+    </section>
 
     <p class="gross" style="max-width:64ch" data-t="familie.positionierung"></p>
     <p class="preis" data-t="familie.inArbeit"></p>

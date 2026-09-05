@@ -1098,6 +1098,1352 @@
     });
   }
 
+  /// Baut die Zeitkonto-Woche und zaehlt den Saldo Tag fuer Tag hoch.
+  function kontoEinrichten() {
+    const kasten = document.getElementById("zeit-konto");
+    if (!kasten) return;
+
+    const buehne = document.getElementById("konto-buehne");
+    const standEl = document.getElementById("konto-summe");
+    const deutung = document.getElementById("konto-deutung");
+    const laeuftEl = document.getElementById("konto-laeuft");
+    if (!buehne || !standEl) return;
+
+    const SOLL = 480;
+    const START = 95;
+    const TAGE = [
+      { ist: 528, heute: false },
+      { ist: 451, heute: false },
+      { ist: 505, heute: false },
+      { ist: 462, heute: false },
+      { ist: 337, heute: true }
+    ];
+    const namen = T("zeitwissen.kontoTage") || ["Mo", "Di", "Mi", "Do", "Fr"];
+
+    const alsDifferenz = (min) => {
+      const abs = Math.abs(Math.round(min));
+      return (min < 0 ? "-" : "+") + Math.floor(abs / 60) +
+        ":" + String(abs % 60).padStart(2, "0") + " h";
+    };
+    const alsStunden = (min) => {
+      const abs = Math.abs(Math.round(min));
+      return Math.floor(abs / 60) + ":" + String(abs % 60).padStart(2, "0") + " h";
+    };
+
+    /// Gemeinsame Skala aus den abgeschlossenen Tagen.
+    const groesste = Math.max(
+      ...TAGE.filter(t => !t.heute).map(t => Math.abs(t.ist - SOLL)), 1);
+
+    buehne.innerHTML = "";
+    const linie = document.createElement("div");
+    linie.className = "konto-linie";
+    linie.setAttribute("aria-hidden", "true");
+    buehne.appendChild(linie);
+
+    const sollText = document.createElement("span");
+    sollText.className = "konto-soll";
+    sollText.setAttribute("aria-hidden", "true");
+    sollText.textContent = T("zeitwissen.kontoSoll") + " " + alsStunden(SOLL);
+    buehne.appendChild(sollText);
+
+    const saeulen = TAGE.map((tag, i) => {
+      const diff = tag.ist - SOLL;
+      const knopf = document.createElement("button");
+      knopf.type = "button";
+      knopf.className = "konto-tag" +
+        (tag.heute ? " heute" : (diff < 0 ? " minus" : ""));
+      knopf.setAttribute("aria-label",
+        namen[i] + ": " + T("zeitwissen.kontoIst") + " " + alsStunden(tag.ist) +
+        ", " + T("zeitwissen.kontoSoll") + " " + alsStunden(SOLL) +
+        (tag.heute ? " (" + T("zeitwissen.kontoOffen") + ", " +
+                     alsStunden(diff) + " " + T("zeitwissen.kontoFehlt") + ")"
+                   : " (" + alsDifferenz(diff) + ")"));
+
+      const oben = document.createElement("span");
+      oben.className = "konto-haelfte oben";
+      const unten = document.createElement("span");
+      unten.className = "konto-haelfte unten";
+
+      const saeule = document.createElement("i");
+      saeule.className = "konto-saeule";
+      if (tag.heute) knopf.appendChild(saeule);
+      else (diff < 0 ? unten : oben).appendChild(saeule);
+
+      const blase = document.createElement("span");
+      blase.className = "konto-blase";
+      blase.innerHTML =
+        T("zeitwissen.kontoIst") + " <b>" + alsStunden(tag.ist) + "</b> · " +
+        T("zeitwissen.kontoSoll") + " <b>" + alsStunden(SOLL) + "</b><br><b>" +
+        (tag.heute ? alsStunden(diff) + "</b> " + T("zeitwissen.kontoFehlt")
+                   : alsDifferenz(diff) + "</b>");
+
+      const name = document.createElement("span");
+      name.className = "konto-name";
+      name.textContent = namen[i];
+
+      knopf.append(oben, unten, blase, name);
+      buehne.appendChild(knopf);
+
+      const anteil = tag.heute ? 0 : Math.min(1, Math.abs(diff) / groesste);
+      return { knopf, saeule, diff: tag.heute ? 0 : diff, heute: !!tag.heute, anteil };
+    });
+
+    const standSetzen = (min, offen) => {
+      standEl.textContent = alsDifferenz(min);
+      kasten.classList.toggle("ist-minus", min < 0);
+      if (!deutung) return;
+      deutung.textContent = offen
+        ? T("zeitwissen.kontoHeute")
+        : (min === 0 ? T("zeitwissen.kontoNull")
+          : (min < 0 ? T("zeitwissen.kontoMinus") : T("zeitwissen.kontoPlus")));
+    };
+
+    const summe = START + saeulen.reduce((s, x) => s + x.diff, 0);
+
+    /// Setzt die Buehne auf den Zustand nach den ersten n Tagen.
+    const zeigeBis = (n) => {
+      let stand = START;
+      saeulen.forEach((s, i) => {
+        const da = i < n;
+        s.knopf.classList.toggle("gesetzt", da);
+        if (!s.heute) s.saeule.style.height = da ? (s.anteil * 100) + "%" : "0%";
+        if (da && i === n - 1) s.knopf.setAttribute("aria-current", "true");
+        else s.knopf.removeAttribute("aria-current");
+        if (da) stand += s.diff;
+      });
+      standSetzen(stand, n >= saeulen.length || (n > 0 && saeulen[n - 1].heute));
+    };
+
+    if (laeuftEl) laeuftEl.hidden = false;
+
+    if (ruhig) { zeigeBis(saeulen.length); return; }
+
+    let uhr = null, schritt = 0, sichtbar = false;
+
+    const anhalten = () => { if (uhr) { clearTimeout(uhr); uhr = null; } };
+
+    const naechster = () => {
+      uhr = null;
+      schritt = Math.min(schritt + 1, saeulen.length);
+      zeigeBis(schritt);
+      if (schritt < saeulen.length) planen(780);
+      else setTimeout(() => saeulen.forEach(
+        s => s.knopf.removeAttribute("aria-current")), 700);
+    };
+
+    const planen = (ms) => {
+      anhalten();
+      if (!sichtbar || document.hidden || schritt >= saeulen.length) return;
+      uhr = setTimeout(naechster, ms);
+    };
+
+    zeigeBis(0);
+
+    /// Laeuft nur, solange der Kasten im Bild und der Tab sichtbar ist.
+    new IntersectionObserver((eintraege) => {
+      eintraege.forEach(e => {
+        sichtbar = e.isIntersecting;
+        if (sichtbar) planen(schritt === 0 ? 420 : 780); else anhalten();
+      });
+    }, { threshold: 0.35 }).observe(kasten);
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) anhalten(); else planen(420);
+    });
+  }
+
+  /* ========================================================
+     ZAPFSÄULE — eine echte Betankung läuft mit
+     ======================================================== */
+  function saeuleEinrichten() {
+    const saeule = document.getElementById("saeule");
+    if (!saeule) return;
+
+    const aLiter  = document.getElementById("saeule-liter");
+    const aBetrag = document.getElementById("saeule-betrag");
+    const aPreis  = document.getElementById("saeule-preis");
+    const aBeleg  = document.getElementById("saeule-beleg");
+    const aProbe  = document.getElementById("saeule-probe");
+    const fluss   = document.getElementById("saeule-fluss");
+    const knopf   = document.getElementById("saeule-knopf");
+
+    const TANKUNGEN = [
+      { datum: "2021-06-29", ort: "Oil Husum",     preis: 1.540, liter: 60.67 },
+      { datum: "2021-07-23", ort: "BFT Hattstedt", preis: 1.580, liter: 12.67 },
+      { datum: "2021-07-28", ort: "Oil Husum",     preis: 1.620, liter: 18.52 },
+      { datum: "2021-08-01", ort: "BFT Hattstedt", preis: 1.600, liter: 15.67 }
+    ];
+
+    const ZAPF_MS = 5200;
+    const HALT_MS = 2600;
+
+    const ort = () => (window.SPRACHE === "en" ? "en-GB" : "de-DE");
+    const zahl = (wert, stellen) => wert.toLocaleString(ort(),
+      { minimumFractionDigits: stellen, maximumFractionDigits: stellen });
+    const datum = (iso) => new Date(iso + "T12:00:00").toLocaleDateString(ort(),
+      { day: "2-digit", month: "2-digit", year: "numeric" });
+
+    let nr = 0, uhr = null, wartet = null, haltOffen = false;
+    let laeuft = false, sichtbar = false, start = 0, verbraucht = 0, runde = 0;
+
+    const male = (t, anteil) => {
+      const liter = t.liter * anteil;
+      aLiter.textContent  = zahl(liter, 2);
+      aBetrag.textContent = zahl(Math.round(t.preis * liter * 100) / 100, 2);
+      fluss.style.width = (anteil * 100).toFixed(1) + "%";
+    };
+
+    const ruesten = (t) => {
+      saeule.classList.remove("fertig");
+      aPreis.textContent = zahl(t.preis, 3);
+      aBeleg.textContent = datum(t.datum) + " · " + t.ort;
+      aProbe.textContent = T("tankspur.saeuleLaeuft");
+      male(t, 0);
+    };
+
+    /// Zeigt die Rechnung Preis mal Menge gleich Betrag.
+    const probeZeigen = (t) => {
+      const betrag = Math.round(t.preis * t.liter * 100) / 100;
+      aProbe.innerHTML =
+        '<i>' + zahl(t.preis, 3) + '</i> ' + T("tankspur.saeuleMal") +
+        ' <i>' + zahl(t.liter, 2) + '</i> ' + T("tankspur.saeuleErgibt") +
+        ' <i>' + zahl(betrag, 2) + '</i> ' +
+        '<span class="saeule-haken">' + T("tankspur.saeuleGeprueft") + '</span>';
+      saeule.classList.add("fertig");
+    };
+
+    const weiterstellen = () => {
+      nr = (nr + 1) % TANKUNGEN.length;
+      verbraucht = 0;
+      if (nr === 0) runde += 1;
+    };
+
+    const schritt = (jetzt) => {
+      uhr = null;
+      if (!laeuft) return;
+      const t = TANKUNGEN[nr];
+      const anteil = Math.min(1, Math.max(0, (verbraucht + (jetzt - start)) / ZAPF_MS));
+      male(t, anteil * (2 - anteil));
+      if (anteil < 1) { uhr = requestAnimationFrame(schritt); return; }
+      laeuft = false;
+      saeule.classList.remove("zapft");
+      probeZeigen(t);
+      if (nr === TANKUNGEN.length - 1) {
+        runde += 1;
+        if (knopf) knopf.hidden = false;
+        return;
+      }
+      wartet = setTimeout(() => {
+        wartet = null;
+        weiterstellen();
+        anfangen();
+      }, HALT_MS);
+    };
+
+    const anfangen = () => {
+      if (!sichtbar || document.hidden || laeuft || wartet || runde > 0) return;
+      if (haltOffen) { haltOffen = false; weiterstellen(); }
+      if (verbraucht === 0) ruesten(TANKUNGEN[nr]);
+      laeuft = true;
+      saeule.classList.add("zapft");
+      start = performance.now();
+      uhr = requestAnimationFrame(schritt);
+    };
+
+    /// Haelt an und merkt sich gezapfte Zeit samt offenem Halt.
+    const anhalten = () => {
+      if (laeuft) verbraucht += performance.now() - start;
+      laeuft = false;
+      if (uhr) { cancelAnimationFrame(uhr); uhr = null; }
+      if (wartet) { clearTimeout(wartet); wartet = null; haltOffen = true; }
+      saeule.classList.remove("zapft");
+    };
+
+    if (ruhig) {
+      const t = TANKUNGEN[0];
+      ruesten(t);
+      male(t, 1);
+      probeZeigen(t);
+      return;
+    }
+
+    ruesten(TANKUNGEN[0]);
+
+    if (knopf) knopf.addEventListener("click", () => {
+      knopf.hidden = true;
+      runde = 0; nr = 0; verbraucht = 0; haltOffen = false;
+      ruesten(TANKUNGEN[0]);
+      anfangen();
+    });
+
+    new IntersectionObserver((eintraege) => {
+      eintraege.forEach(e => {
+        sichtbar = e.isIntersecting;
+        if (sichtbar) anfangen(); else anhalten();
+      });
+    }, { threshold: 0.01 }).observe(saeule);
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) anhalten(); else anfangen();
+    });
+  }
+
+  /// Zaehlerwerk: Rollen zaehlen vom Vormonatsstand auf den neuen Stand hoch.
+  function zaehlerwerkEinrichten() {
+    const werk = document.getElementById("zaehlerwerk");
+    if (!werk) return;
+
+    const rollen     = document.getElementById("zw-rollen");
+    const aEinheit   = document.getElementById("zw-einheit");
+    const aVerbrauch = document.getElementById("zw-verbrauch");
+    const aVormonat  = document.getElementById("zw-vormonat");
+    const aSaldo     = document.getElementById("zw-saldo");
+    const aVorlesen  = document.getElementById("zw-vorlesen");
+    const feldSaldo  = document.getElementById("zw-saldo-feld");
+    const balken     = document.getElementById("zw-fortschritt");
+    const knoepfe    = [...werk.querySelectorAll(".zw-reiter-knopf")];
+    if (!rollen) return;
+
+    /// Staende in Tausendstel der Einheit, Preis und Abschlag in Cent.
+    const BEREICHE = {
+      gas:    { ton: "#F2B705", hell: "#FFD34D", einheit: "m³",
+                vorher: 4128637,  nachher: 4142905,  preis: 118, abschlag: 9500 },
+      wasser: { ton: "#1E88E5", hell: "#6BB4EE", einheit: "m³",
+                vorher: 361284,   nachher: 364117,   preis: 542, abschlag: 2600 },
+      strom:  { ton: "#43A047", hell: "#7BD88F", einheit: "kWh",
+                vorher: 28714000, nachher: 28937000, preis: 34,  abschlag: 8800 }
+    };
+    const FOLGE = ["gas", "wasser", "strom"];
+    const DAUER = 3200;
+    const PAUSE = 1800;
+
+    /// Baut so viele Vorkommarollen, wie der hoechste Stand des Bereichs braucht.
+    let ketten = [], vorkomma = 0;
+    const rollenBauen = (name) => {
+      const b = BEREICHE[name];
+      vorkomma = String(Math.floor(b.nachher / 1000)).length;
+      rollen.textContent = "";
+      ketten = [];
+      for (let i = 0; i <= vorkomma; i++) {
+        if (i === vorkomma) {
+          const komma = document.createElement("span");
+          komma.className = "zw-komma";
+          komma.textContent = (1.1).toLocaleString(window.SPRACHE).charAt(1);
+          rollen.appendChild(komma);
+        }
+        const rolle = document.createElement("div");
+        rolle.className = "zw-rolle" + (i === vorkomma ? " zw-nachkomma" : "");
+        const kette = document.createElement("div");
+        kette.className = "zw-kette";
+        for (let z = 0; z <= 10; z++) {
+          const s = document.createElement("span");
+          s.textContent = String(z % 10);
+          kette.appendChild(s);
+        }
+        rolle.appendChild(kette);
+        rollen.appendChild(rolle);
+        ketten.push(kette);
+      }
+    };
+
+    /// Dreht die Rollen auf den Stand; `rasten` haelt sie auf ganzen Ziffern.
+    const rollenMalen = (tausendstel, rasten) => {
+      const anzeige = tausendstel / 100;
+      for (let i = ketten.length - 1; i >= 0; i--) {
+        const teiler = Math.pow(10, ketten.length - 1 - i);
+        const eigen  = anzeige / teiler;
+        const stelle = Math.floor(eigen) % 10;
+        const bruch  = eigen - Math.floor(eigen);
+        const dreht  = rasten ? 0
+                     : (i === ketten.length - 1) ? bruch
+                     : (bruch > 0.9 ? (bruch - 0.9) * 10 : 0);
+        ketten[i].style.setProperty("--wert", (stelle + dreht).toFixed(3));
+      }
+    };
+
+    const zahl = (wert, stellen) => wert.toLocaleString(window.SPRACHE, {
+      minimumFractionDigits: stellen, maximumFractionDigits: stellen });
+
+    const euro = (cent) => zahl(Math.abs(cent) / 100, 2) + " €";
+    const menge = (tausendstel, einheit) =>
+      zahl(tausendstel / 1000, 3) + " " + einheit;
+
+    let nr = 0, uhr = null, wecker = null, start = 0;
+    let sichtbar = true, durchgelaufen = false;
+    let anteilJetzt = 0, ruhtInPause = false;
+
+    const bereichSetzen = (name) => {
+      const b = BEREICHE[name];
+      rollenBauen(name);
+      werk.dataset.bereich = name;
+      werk.style.setProperty("--bt", b.ton);
+      werk.style.setProperty("--bt-hell", b.hell);
+      aEinheit.textContent = b.einheit;
+      aVormonat.textContent = menge(b.vorher, b.einheit);
+      knoepfe.forEach(k =>
+        k.setAttribute("aria-pressed", String(k.dataset.b === name)));
+    };
+
+    const malen = (name, anteil, rasten) => {
+      const b = BEREICHE[name];
+      anteilJetzt = anteil;
+      const stand = b.vorher + (b.nachher - b.vorher) * anteil;
+      rollenMalen(stand, rasten);
+
+      const verbrauch = Math.round((b.nachher - b.vorher) * anteil);
+      aVerbrauch.textContent = menge(verbrauch, b.einheit);
+
+      const saldo = b.abschlag - Math.round(verbrauch / 1000 * b.preis);
+      aSaldo.textContent = (saldo >= 0 ? "+ " : "− ") + euro(saldo);
+      feldSaldo.classList.toggle("gut",  saldo >= 0);
+      feldSaldo.classList.toggle("nach", saldo < 0);
+
+      if (balken) balken.style.width = (anteil * 100).toFixed(1) + "%";
+
+      if (aVorlesen && (rasten || anteil === 0)) {
+        aVorlesen.textContent = T("ablesebar.zaehlerwerkVorlesen")
+          .replace("{bereich}", T("ablesebar.zaehlerwerk" +
+            name.charAt(0).toUpperCase() + name.slice(1)))
+          .replace("{stand}", menge(Math.round(stand), b.einheit))
+          .replace("{verbrauch}", menge(verbrauch, b.einheit));
+      }
+    };
+
+    /// Haelt an und friert Rollen wie Balken auf dem erreichten Anteil ein.
+    function anhalten() {
+      if (uhr)    { cancelAnimationFrame(uhr); uhr = null; }
+      if (wecker) { clearTimeout(wecker); wecker = null; ruhtInPause = true; }
+      werk.classList.add("zw-still");
+      ketten.forEach(k => {
+        const lauf = getComputedStyle(k).transform;
+        k.style.transform = lauf === "none" ? "" : lauf;
+      });
+    }
+
+    /// Gibt die eingefrorenen Rollen wieder frei.
+    function loesen() {
+      werk.classList.remove("zw-still");
+      ketten.forEach(k => { k.style.transform = ""; });
+    }
+
+    /// Liegt der Block gerade im Fenster?
+    const imBild = () => {
+      const r = werk.getBoundingClientRect();
+      const h = window.innerHeight || 0;
+      return r.bottom > h * 0.1 && r.top < h * 0.9;
+    };
+
+    const schritt = (jetzt) => {
+      if (document.hidden || !imBild()) { uhr = null; sichtbar = false; anhalten(); return; }
+      sichtbar = true;
+      const anteil = Math.min(1, (jetzt - start) / DAUER);
+      if (anteil < 1) { malen(FOLGE[nr], anteil); uhr = requestAnimationFrame(schritt); return; }
+      uhr = null;
+      malen(FOLGE[nr], 1, true);
+      if (nr === FOLGE.length - 1) { durchgelaufen = true; return; }
+      wecker = setTimeout(() => { wecker = null; nr += 1; laufen(); }, PAUSE);
+    };
+
+    /// Startet den Bereich von vorn.
+    const laufen = () => {
+      anhalten();
+      loesen();
+      ruhtInPause = false;
+      bereichSetzen(FOLGE[nr]);
+      malen(FOLGE[nr], 0);
+      start = performance.now();
+      uhr = requestAnimationFrame(schritt);
+    };
+
+    /// Setzt dort fort, wo angehalten wurde.
+    const fortsetzen = () => {
+      if (uhr || wecker || durchgelaufen) return;
+      if (document.hidden || !imBild()) return;
+      sichtbar = true;
+      loesen();
+      if (ruhtInPause) {
+        ruhtInPause = false;
+        wecker = setTimeout(() => { wecker = null; nr += 1; laufen(); }, PAUSE);
+        return;
+      }
+      start = performance.now() - anteilJetzt * DAUER;
+      uhr = requestAnimationFrame(schritt);
+    };
+
+    /// Ein Reiterklick zeigt den Bereich fertig gerastet.
+    knoepfe.forEach(k => k.addEventListener("click", () => {
+      anhalten();
+      loesen();
+      ruhtInPause = false;
+      durchgelaufen = true;
+      nr = Math.max(0, FOLGE.indexOf(k.dataset.b));
+      bereichSetzen(FOLGE[nr]);
+      malen(FOLGE[nr], 1, true);
+    }));
+
+    /// Ohne Bewegung: Endstand des letzten Bereichs, alles steht still.
+    if (ruhig) {
+      nr = FOLGE.length - 1;
+      durchgelaufen = true;
+      bereichSetzen(FOLGE[nr]);
+      malen(FOLGE[nr], 1, true);
+      return;
+    }
+
+    bereichSetzen("gas");
+    malen("gas", 0);
+    laufen();
+
+    new IntersectionObserver((eintraege) => {
+      eintraege.forEach(e => {
+        if (!e.isIntersecting) { sichtbar = false; anhalten(); }
+        else fortsetzen();
+      });
+    }, { threshold: 0.2 }).observe(werk);
+
+    addEventListener("scroll", fortsetzen, { passive: true });
+    addEventListener("resize", fortsetzen, { passive: true });
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) anhalten(); else fortsetzen();
+    });
+  }
+
+  /* ========================================================
+     STUNDENPLAN — Trainings laufen an einem festen Endzeitpunkt ab.
+     ======================================================== */
+  function stundenplanEinrichten() {
+    const tafel = document.getElementById("plan-tafel");
+    if (!tafel) return;
+
+    const felder = [...tafel.querySelectorAll(".plan-fach")];
+    if (!felder.length) return;
+
+    const uhrFeld = document.getElementById("plan-uhr");
+    const zeiger  = document.getElementById("plan-weg");
+    const hinweis = document.getElementById("plan-hinweis");
+
+    const BASIS = 45, WACHSTUM = 1.135, KNICK = 60, SPAET = 1.012;
+    const HALTEN = 1.6, SPIELTEMPO = 300, ZIFFERSTUNDEN = 6;
+
+    /// Trainingsdauer einer Stufe in Spielsekunden
+    const dauer = (lv) => lv <= KNICK
+      ? BASIS * Math.pow(WACHSTUM, lv - 1)
+      : BASIS * Math.pow(WACHSTUM, KNICK - 1) * Math.pow(SPAET, lv - KNICK);
+
+    const zeitText = (s) => {
+      s = Math.max(0, Math.round(s));
+      const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60);
+      if (h > 0) return T("campus.planStd").replace("{h}", h)
+                    .replace("{m}", String(m).padStart(2, "0"));
+      if (m > 0) return T("campus.planMin").replace("{m}", m)
+                    .replace("{s}", String(s % 60).padStart(2, "0"));
+      return T("campus.planSek").replace("{s}", s);
+    };
+
+    const faecher = felder.map((el) => {
+      const level = Number(el.dataset.level) || 1;
+      return {
+        el,
+        balken: el.querySelector(".plan-balken i"),
+        rest:   el.querySelector(".plan-rest"),
+        stufe:  el.querySelector(".plan-stufe"),
+        level,
+        lief:   (Number(el.dataset.ab) || 0) / 100 * dauer(level),
+        halten: 0,
+        frisch: 0
+      };
+    });
+
+    let weg = 0, laeuft = false, letzte = 0, bild = null;
+
+    const zeichnen = () => {
+      faecher.forEach((f) => {
+        const ganz   = dauer(f.level);
+        const anteil = Math.min(1, f.lief / ganz);
+        if (f.balken) f.balken.style.width = (anteil * 100).toFixed(2) + "%";
+        const fertig = f.halten > 0;
+        f.el.classList.toggle("fertig", fertig);
+        f.el.classList.toggle("frisch", f.frisch > 0);
+        if (f.rest) f.rest.textContent = fertig
+          ? T("campus.planAbholen")
+          : zeitText(ganz - f.lief);
+        if (f.stufe) f.stufe.textContent =
+          T("campus.planStufe").replace("{n}", f.level);
+      });
+      if (uhrFeld) uhrFeld.textContent = zeitText(weg);
+      if (zeiger) zeiger.style.transform =
+        "rotate(" + ((weg / 3600) * (360 / ZIFFERSTUNDEN)).toFixed(1) + "deg)";
+    };
+
+    /// alle Faecher und die Uhr laufen mit demselben Spielzeit-Massstab
+    const rechnen = (dt) => {
+      const zuwachs = dt * SPIELTEMPO;
+      weg += zuwachs;
+      faecher.forEach((f) => {
+        if (f.frisch > 0) f.frisch -= dt;
+        if (f.halten > 0) {
+          f.halten -= dt;
+          if (f.halten <= 0) {
+            f.halten = 0; f.level += 1; f.lief = 0; f.frisch = 0.9;
+          }
+          return;
+        }
+        f.lief += zuwachs;
+        const ganz = dauer(f.level);
+        if (f.lief >= ganz) { f.lief = ganz; f.halten = HALTEN; }
+      });
+    };
+
+    /// eine Pause wird uebersprungen statt nachgeholt: der Stand laeuft weiter
+    const schritt = (jetzt) => {
+      if (!laeuft) return;
+      const roh = (jetzt - letzte) / 1000;
+      const dt = roh > 0.12 ? 0 : roh;
+      letzte = jetzt;
+      rechnen(dt);
+      zeichnen();
+      bild = requestAnimationFrame(schritt);
+    };
+
+    let imBild = false;
+
+    const starten = () => {
+      if (laeuft || ruhig || document.hidden || !imBild) return;
+      laeuft = true;
+      letzte = performance.now();
+      bild = requestAnimationFrame(schritt);
+    };
+
+    const stoppen = () => {
+      if (!laeuft) return;
+      laeuft = false;
+      if (bild) { cancelAnimationFrame(bild); bild = null; }
+    };
+
+    /* Bewegung abgeschaltet: einen in sich stimmigen Stand zeigen */
+    if (ruhig) {
+      faecher.forEach((f, i) => {
+        if (i === 0) { f.lief = dauer(f.level); f.halten = 1; }
+        else f.lief = dauer(f.level) * (i === 1 ? 0.72 : 0.38);
+      });
+      weg = 9000;
+      zeichnen();
+      if (hinweis) hinweis.hidden = false;
+      return;
+    }
+
+    zeichnen();
+
+    const sicht = new IntersectionObserver((eintraege) => {
+      eintraege.forEach((e) => {
+        imBild = e.isIntersecting;
+        if (imBild) starten(); else stoppen();
+      });
+    }, { threshold: 0.15 });
+    sicht.observe(tafel);
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stoppen(); else starten();
+    });
+  }
+
+  /* ========================================================
+     YOURFILM — Barcode-Lauf
+     Eine gescannte Zahl faechert sich in Film, Ausgabe und
+     Exemplar auf und landet zuletzt im Regal.
+     ======================================================== */
+  function scanlaufEinrichten() {
+    const wurzel = document.getElementById("scanlauf");
+    if (!wurzel) return;
+
+    const sucher = wurzel.querySelector(".scanlauf-sucher");
+    const huelle = document.getElementById("scanlauf-huelle");
+    const strahl = document.getElementById("scanlauf-strahl");
+    const ziffern = document.getElementById("scanlauf-ziffern");
+    const format = document.getElementById("scanlauf-format");
+    const pruefung = document.getElementById("scanlauf-pruefung");
+    const regal = document.getElementById("scanlauf-regal");
+    const ebenen = [...wurzel.querySelectorAll(".scanlauf-ebenen li")];
+
+    const scheiben = T("yourfilm.scanScheiben") || [];
+    if (!scheiben.length) return;
+
+    const STRAHL_START = 340, STRAHL_DAUER = 1500;
+
+    /* Pruefziffer wie in der App: von rechts abwechselnd mal 3 und mal 1. */
+    const pruefziffer = (rumpf) => {
+      let summe = 0;
+      for (let i = 0; i < rumpf.length; i++) {
+        const z = Number(rumpf[rumpf.length - 1 - i]);
+        summe += (i % 2 === 0) ? z * 3 : z;
+      }
+      return (10 - (summe % 10)) % 10;
+    };
+
+    const setzen = (id, wert) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = wert;
+    };
+
+    let nr = -1, uhren = [];
+    const aufraeumen = () => { uhren.forEach(clearTimeout); uhren = []; };
+    const spaeter = (fn, ms) => uhren.push(setTimeout(fn, ms));
+
+    const zurueck = () => {
+      ebenen.forEach(li => li.classList.remove("an"));
+      regal.classList.remove("an");
+      pruefung.classList.remove("gut");
+      pruefung.textContent = "";
+      [...ziffern.children].forEach(i => i.classList.remove("an"));
+    };
+
+    const scheibeSetzen = (s) => {
+      const code = s.code + pruefziffer(s.code);
+      format.textContent = s.format;
+      ziffern.replaceChildren(...[...code].map(z => {
+        const i = document.createElement("i");
+        i.textContent = z;
+        return i;
+      }));
+      setzen("scanlauf-film", s.film);
+      setzen("scanlauf-filmZusatz", s.filmZusatz);
+      setzen("scanlauf-ausgabe", s.ausgabe);
+      setzen("scanlauf-ausgabeZusatz", s.ausgabeZusatz);
+      setzen("scanlauf-exemplar", s.exemplar);
+      setzen("scanlauf-exemplarZusatz", s.exemplarZusatz);
+      regal.textContent = s.regal;
+      return code;
+    };
+
+    const endstand = (s, code) => {
+      [...ziffern.children].forEach(i => i.classList.add("an"));
+      pruefung.textContent = T("yourfilm.scanPruefungGut")
+        .replace("{art}", s.art).replace("{ziffer}", code.slice(-1));
+      pruefung.classList.add("gut");
+      ebenen.forEach(li => li.classList.add("an"));
+      regal.classList.add("an");
+    };
+
+    let versatz = 0, startZeit = 0, dauerGesamt = 0;
+
+    /* Ein Durchgang ab Millisekunde `ab`: Strahl wandert, Ziffern rasten ein. */
+    const durchgang = (ab) => {
+      aufraeumen();
+      zurueck();
+      const s = scheiben[nr];
+      const code = scheibeSetzen(s);
+      const guteMeldung = T("yourfilm.scanPruefungGut")
+        .replace("{art}", s.art).replace("{ziffer}", code.slice(-1));
+
+      huelle.classList.remove("wechselt");
+      huelle.style.transition = "none";
+      huelle.offsetHeight;
+      strahl.style.transition = "none";
+      strahl.style.transform = "translateY(0)";
+      strahl.style.opacity = "0";
+
+      const hoehe = sucher.clientHeight || 1;
+      const zeit = (y) => STRAHL_START + Math.max(0, Math.min(1, y / hoehe)) * STRAHL_DAUER;
+
+      /* Die Ziffern rasten ein, waehrend der Strahl die Zeile durchquert. */
+      let lauf = ziffern;
+      let oben = 0;
+      while (lauf && lauf !== sucher) { oben += lauf.offsetTop; lauf = lauf.offsetParent; }
+      const unten = oben + ziffern.offsetHeight;
+
+      const stellen = [...ziffern.children];
+      const beginn = zeit(oben), ende = zeit(unten);
+      const takt = stellen.length > 1 ? (ende - beginn) / (stellen.length - 1) : 0;
+      const nachCode = ende + 220;
+      const nachEbenen = nachCode + 380 + ebenen.length * 520;
+      dauerGesamt = nachEbenen + 2950;
+
+      /* Was vor `ab` faellig war, wird sofort gesetzt statt nachgeholt. */
+      const planen = (fn, ms) => { if (ms <= ab) fn(); else spaeter(fn, ms - ab); };
+
+      const strahlAb = Math.max(0, ab - STRAHL_START);
+      if (strahlAb >= STRAHL_DAUER || ab >= nachCode) {
+        strahl.style.opacity = "0";
+      } else {
+        planen(() => {
+          const rest = Math.max(0, STRAHL_DAUER - strahlAb);
+          strahl.style.transform =
+            "translateY(" + (hoehe * strahlAb / STRAHL_DAUER) + "px)";
+          strahl.offsetHeight;
+          strahl.style.transition =
+            "transform " + (rest / 1000) + "s linear, opacity .3s linear";
+          strahl.style.opacity = "1";
+          strahl.style.transform = "translateY(" + hoehe + "px)";
+        }, STRAHL_START);
+      }
+
+      stellen.forEach((i, k) => planen(() => i.classList.add("an"), beginn + k * takt));
+
+      planen(() => {
+        strahl.style.opacity = "0";
+        pruefung.textContent = guteMeldung;
+        pruefung.classList.add("gut");
+      }, nachCode);
+
+      ebenen.forEach((li, k) =>
+        planen(() => li.classList.add("an"), nachCode + 380 + k * 520));
+
+      planen(() => regal.classList.add("an"), nachEbenen);
+      planen(() => {
+        huelle.style.transition = "";
+        huelle.classList.add("wechselt");
+      }, nachEbenen + 2400);
+      spaeter(() => {
+        nr = (nr + 1) % scheiben.length;
+        versatz = 0;
+        startZeit = Date.now();
+        durchgang(0);
+      }, Math.max(0, dauerGesamt - ab));
+    };
+
+    /* Bewegung abgeschaltet: den fertigen Endzustand zeigen. */
+    if (ruhig) {
+      nr = 0;
+      const s = scheiben[0];
+      endstand(s, scheibeSetzen(s));
+      return;
+    }
+
+    nr = 0;
+    let laeuft = false, imBild = false;
+
+    const anhalten = () => {
+      if (!laeuft) return;
+      laeuft = false;
+      aufraeumen();
+      versatz = Math.min(Date.now() - startZeit, dauerGesamt || Infinity);
+    };
+    const anwerfen = () => {
+      if (laeuft || !imBild || document.hidden) return;
+      laeuft = true;
+      startZeit = Date.now() - versatz;
+      durchgang(versatz);
+    };
+
+    const b = new IntersectionObserver((eintraege) => {
+      eintraege.forEach(e => {
+        imBild = e.isIntersecting;
+        if (imBild) anwerfen(); else anhalten();
+      });
+    }, { threshold: 0.25 });
+    b.observe(wurzel);
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) anhalten();
+      else anwerfen();
+    });
+  }
+
+  /* ========================================================
+     ZIEHUNGSTROMMEL — 22 Kugeln gegen eine BINGO!-Karte
+     ======================================================== */
+  function trommelEinrichten() {
+    const trommel = document.getElementById("trommel");
+    if (!trommel) return;
+
+    const karte   = document.getElementById("trommel-karte");
+    const kugel   = document.getElementById("trommel-kugel");
+    const aZahl   = document.getElementById("trommel-zahl");
+    const aReihen = document.getElementById("trommel-reihen-zahl");
+    const striche = document.getElementById("trommel-striche");
+    const ruf     = document.getElementById("trommel-ruf");
+    const knopf   = document.getElementById("trommel-knopf");
+    const knopfTx = document.getElementById("trommel-knopf-text");
+
+    const GEZOGEN = 22, REIHEN = 12, TAKT = 620;
+
+    /* Die zwoelf Reihen: fuenf quer, fuenf laengs, zwei diagonal. */
+    const REIHEN_FELDER = [];
+    for (let r = 0; r < 5; r++) REIHEN_FELDER.push([0,1,2,3,4].map(s => r*5+s));
+    for (let s = 0; s < 5; s++) REIHEN_FELDER.push([0,1,2,3,4].map(r => r*5+s));
+    REIHEN_FELDER.push([0,6,12,18,24], [4,8,12,16,20]);
+
+    let felder = [], zahlen = [], gezogen = [], schritt = 0, uhr = null, laeuft = false;
+    let sichtbar = false, schonGestartet = false;
+
+    const mischen = (liste) => {
+      for (let i = liste.length-1; i > 0; i--) {
+        const j = Math.floor(Math.random()*(i+1));
+        [liste[i], liste[j]] = [liste[j], liste[i]];
+      }
+      return liste;
+    };
+
+    const volleZaehlen = (plaetze) =>
+      REIHEN_FELDER.filter(r => r.every(p => plaetze.has(p))).length;
+
+    /* Positionsechte Karte: Spalte s haelt die Zahlen 15s+1 bis 15s+15. */
+    const karteBauen = () => {
+      const spalten = [];
+      for (let s = 0; s < 5; s++) {
+        const topf = [];
+        for (let z = s*15+1; z <= s*15+15; z++) topf.push(z);
+        spalten.push(mischen(topf).slice(0, 5));
+      }
+      const werte = [];
+      for (let r = 0; r < 5; r++) for (let s = 0; s < 5; s++) werte.push(spalten[s][r]);
+      return werte;
+    };
+
+    /* Drei zufaellige Reihen werden voll — und wirklich nur diese drei. */
+    const zielFelderWuerfeln = () => {
+      for (let versuch = 0; versuch < 300; versuch++) {
+        const wahl = mischen([...Array(REIHEN).keys()]).slice(0, 3);
+        const ziel = new Set();
+        wahl.forEach(r => REIHEN_FELDER[r].forEach(p => ziel.add(p)));
+        if (ziel.size > 14) continue;
+        if (volleZaehlen(ziel) === 3) return { ziel, wahl };
+      }
+      const ersatz = new Set();
+      [0, 6, 11].forEach(r => REIHEN_FELDER[r].forEach(p => ersatz.add(p)));
+      return { ziel: ersatz, wahl: [0, 6, 11] };
+    };
+
+    /* Die Ziehung in drei Fenstern: eine Reihe faellt frueh, eine mittig,
+       die dritte zum Schluss. */
+    const ziehungBauen = (karteZahlen) => {
+      const { ziel: zielFelder, wahl } = zielFelderWuerfeln();
+      const offen = GEZOGEN - zielFelder.size;
+
+      const streu = new Set();
+      const andere = [];
+      for (let p = 0; p < 25; p++) if (!zielFelder.has(p)) andere.push(p);
+      mischen(andere).forEach(p => {
+        if (streu.size >= Math.min(4, offen - 1)) return;
+        const probe = new Set([...zielFelder, ...streu, p]);
+        if (volleZaehlen(probe) === 3) streu.add(p);
+      });
+
+      const aufKarte = new Set(karteZahlen);
+      const nieten = [];
+      for (let z = 1; z <= 75; z++) if (!aufKarte.has(z)) nieten.push(z);
+
+      const stufe = new Map();
+      wahl.forEach((r, i) => REIHEN_FELDER[r].forEach(p => {
+        if (!stufe.has(p)) stufe.set(p, i);
+      }));
+      const teil = (i) => [...zielFelder].filter(p => stufe.get(p) === i);
+      const frueh = teil(0), mitte = teil(1);
+
+      const spaet = [...mischen(teil(2)), ...streu].map(p => karteZahlen[p]);
+      const fehlt = GEZOGEN - (frueh.length + mitte.length + spaet.length);
+      const fuell = mischen(nieten).slice(0, fehlt);
+
+      const grenzeA = Math.max(0, 9 - frueh.length);
+      const grenzeB = grenzeA + Math.max(0, 6 - mitte.length);
+      return [
+        ...mischen([...mischen(frueh).map(p => karteZahlen[p]),
+                    ...fuell.slice(0, grenzeA)]),
+        ...mischen([...mischen(mitte).map(p => karteZahlen[p]),
+                    ...fuell.slice(grenzeA, grenzeB)]),
+        ...mischen([...spaet, ...fuell.slice(grenzeB)])
+      ];
+    };
+
+    const aufbauen = () => {
+      karte.textContent = "";
+      striche.textContent = "";
+      ["B","I","N","G","O"].forEach(b => {
+        const k = document.createElement("div");
+        k.className = "trommel-spalte"; k.textContent = b;
+        karte.appendChild(k);
+      });
+      zahlen = karteBauen();
+      felder = zahlen.map(z => {
+        const f = document.createElement("div");
+        f.className = "trommel-feld"; f.textContent = z;
+        karte.appendChild(f);
+        return f;
+      });
+      for (let i = 0; i < REIHEN; i++) striche.appendChild(document.createElement("i"));
+      gezogen = ziehungBauen(zahlen);
+      schritt = 0;
+    };
+
+    const vollePruefen = (offen) => {
+      let voll = 0;
+      const inReihe = new Set();
+      REIHEN_FELDER.forEach((reihe, i) => {
+        const komplett = reihe.every(p => offen.has(zahlen[p]));
+        striche.children[i].classList.toggle("voll", komplett);
+        if (komplett) { voll++; reihe.forEach(p => inReihe.add(p)); }
+      });
+      felder.forEach((f, i) => f.classList.toggle("inReihe", inReihe.has(i)));
+      return voll;
+    };
+
+    const anzeigen = (frisch) => {
+      const offen = new Set(gezogen.slice(0, schritt));
+      felder.forEach((f, i) => {
+        f.classList.toggle("getroffen", offen.has(zahlen[i]));
+        if (frisch !== undefined && zahlen[i] === frisch) {
+          f.classList.remove("frisch"); void f.offsetWidth; f.classList.add("frisch");
+        }
+      });
+      const voll = vollePruefen(offen);
+      aZahl.textContent = T("scheinbar.trommelVon")
+        .replace("{a}", schritt).replace("{b}", GEZOGEN);
+      aReihen.textContent = T("scheinbar.trommelVon")
+        .replace("{a}", voll).replace("{b}", REIHEN);
+      const neu = voll > 0
+        ? T(voll === 1 ? "scheinbar.trommelBingo"
+          : voll === 2 ? "scheinbar.trommelDoppelt"
+          : "scheinbar.trommelJackpot")
+        : "";
+      if (ruf.textContent !== neu) ruf.textContent = neu;
+      ruf.classList.toggle("zeigen", voll > 0);
+    };
+
+    const stoppen = () => {
+      laeuft = false;
+      if (uhr) { clearTimeout(uhr); uhr = null; }
+    };
+
+    const beenden = () => {
+      stoppen();
+      knopfTx.textContent = T("scheinbar.trommelKnopf");
+    };
+
+    const ziehen = () => {
+      const zahl = gezogen[schritt];
+      schritt++;
+      kugel.textContent = zahl;
+      kugel.classList.toggle("daneben", zahlen.indexOf(zahl) < 0);
+      kugel.classList.remove("rollt"); void kugel.offsetWidth; kugel.classList.add("rollt");
+      anzeigen(zahl);
+      if (schritt >= GEZOGEN) beenden();
+    };
+
+    const takten = () => {
+      if (!laeuft) return;
+      ziehen();
+      if (laeuft) uhr = setTimeout(takten, TAKT);
+    };
+
+    /* Weiterlaufen, wo der Lauf unterbrochen wurde. */
+    const fortsetzen = () => {
+      if (laeuft || schritt >= GEZOGEN) return;
+      laeuft = true;
+      knopfTx.textContent = T("scheinbar.trommelKnopfLaeuft");
+      uhr = setTimeout(takten, TAKT);
+    };
+
+    const starten = () => {
+      stoppen();
+      aufbauen();
+      kugel.textContent = T("scheinbar.trommelLeer");
+      kugel.classList.remove("daneben");
+      anzeigen();
+      laeuft = true;
+      knopfTx.textContent = T("scheinbar.trommelKnopfLaeuft");
+      uhr = setTimeout(takten, 500);
+    };
+
+    /* Ohne Bewegung: fertige Ziehung zeigen, Knopf mischt neu. */
+    const endstandZeigen = () => {
+      stoppen();
+      aufbauen();
+      schritt = GEZOGEN;
+      const letzte = gezogen[GEZOGEN-1];
+      kugel.textContent = letzte;
+      kugel.classList.toggle("daneben", zahlen.indexOf(letzte) < 0);
+      anzeigen();
+      knopfTx.textContent = T("scheinbar.trommelKnopf");
+    };
+
+    if (ruhig) {
+      endstandZeigen();
+      knopf.addEventListener("click", endstandZeigen);
+      return;
+    }
+
+    aufbauen();
+    kugel.textContent = T("scheinbar.trommelLeer");
+    anzeigen();
+    knopf.addEventListener("click", starten);
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stoppen();
+      else if (sichtbar) fortsetzen();
+    });
+
+    const beobachter = new IntersectionObserver((eintraege) => {
+      eintraege.forEach(e => {
+        sichtbar = e.isIntersecting;
+        if (!sichtbar) { stoppen(); return; }
+        if (document.hidden) return;
+        if (!schonGestartet) { schonGestartet = true; starten(); }
+        else fortsetzen();
+      });
+    }, { threshold: 0.01 });
+    beobachter.observe(trommel);
+  }
+
+  /* ========================================================
+     DREHSCHEIBE — zehn Knoten liefern ein, die Mitte urteilt
+     gegen das Zielband, eine Empfehlung geht an genau einen
+     Knoten zurueck.
+     ======================================================== */
+  function drehscheibeEinrichten() {
+    const buehne = document.getElementById("drehscheibe-buehne");
+    if (!buehne) return;
+
+    const daten = T("familie.drehDaten") || [];
+    const texte = T("familie.drehWerte") || [];
+    const raete = T("familie.drehRat") || [];
+    if (!daten.length || !texte.length) return;
+
+    /* Zahlen stehen einmal in drehDaten, Sprache in drehWerte. */
+    const werte = daten.map(d => Object.assign({}, d, texte.find(t => t.id === d.id) || {}));
+
+    const draht = buehne.querySelector(".drehscheibe-draht");
+    const mitte = buehne.querySelector(".drehscheibe-mitte");
+    const mZahl = document.getElementById("drehscheibe-zaehler");
+    const mText = document.getElementById("drehscheibe-lage");
+    const lesen = document.getElementById("drehscheibe-lesen");
+    const phasen = document.querySelectorAll("#drehscheibe-phasen span");
+
+    const N = werte.length;
+    const RX = 42;
+
+    /* Die Bahn haelt Abstand zur Mitte, auch wenn die Buehne flach wird. */
+    const bahnRY = () => {
+      const hoch = buehne.clientHeight || 1;
+      const mittePx = mitte.getBoundingClientRect().height || 0;
+      const punkt = knoten && knoten.length
+        ? knoten[0].el.querySelector(".drehscheibe-punkt").getBoundingClientRect().width
+        : 11;
+      const noetig = ((mittePx / 2 + punkt + 9) / hoch) * 100;
+      return Math.min(47, Math.max(26, noetig));
+    };
+
+    let knoten = null;
+    let RY = 40;
+    const ort = (i, ry) => {
+      const w = (i / N) * Math.PI * 2 - Math.PI / 2;
+      return { x: 50 + Math.cos(w) * RX, y: 50 + Math.sin(w) * (ry === undefined ? RY : ry) };
+    };
+
+    knoten = werte.map((w, i) => {
+      const p = ort(i);
+      const el = document.createElement("div");
+      el.className = "drehscheibe-knoten";
+      el.style.left = p.x + "%";
+      el.style.top = p.y + "%";
+      el.innerHTML = '<span class="drehscheibe-punkt"></span><b></b>';
+      el.querySelector("b").textContent = w.kurz || "";
+      buehne.appendChild(el);
+
+      const l = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      l.setAttribute("x1", p.x); l.setAttribute("y1", p.y);
+      l.setAttribute("x2", 50); l.setAttribute("y2", 50);
+      draht.appendChild(l);
+      return { el, linie: l, ort: p, id: w.id };
+    });
+
+    const bahnSetzen = () => {
+      RY = bahnRY();
+      knoten.forEach((k, i) => {
+        const p = ort(i);
+        k.ort = p;
+        k.el.style.left = p.x + "%";
+        k.el.style.top = p.y + "%";
+        k.linie.setAttribute("x1", p.x);
+        k.linie.setAttribute("y1", p.y);
+      });
+    };
+    bahnSetzen();
+    addEventListener("resize", bahnSetzen, { passive: true });
+    if (window.ResizeObserver) new ResizeObserver(bahnSetzen).observe(buehne);
+
+    const funke = document.createElement("i");
+    funke.className = "drehscheibe-funke";
+    buehne.appendChild(funke);
+
+    const urteil = (w) => {
+      if (w.zahl === null || w.von === w.bis) return null;
+      const rand = (w.bis - w.von) * 0.1;
+      if (w.zahl < w.von || w.zahl > w.bis) return "raus";
+      if (w.zahl - w.von <= rand || w.bis - w.zahl <= rand) return "knapp";
+      return "gut";
+    };
+
+    /* Der Balken zeigt die feste Skala der Groesse, nicht das Zielband. */
+    const bandBild = (w, u) => {
+      if (w.zahl === null || w.von === w.bis || w.skalaVon === undefined) return "";
+      const von = w.skalaVon, bis = w.skalaBis;
+      const spanne = (bis - von) || 1;
+      const anteil = (v) => Math.max(0, Math.min(100, ((v - von) / spanne) * 100));
+      const l = anteil(w.von), b = anteil(w.bis) - l, z = anteil(w.zahl);
+      return '<div class="drehscheibe-band">'
+        + '<i style="left:' + l.toFixed(1) + '%;width:' + b.toFixed(1) + '%"></i>'
+        + '<u class="' + (u === "raus" ? "raus" : "") + '" style="left:'
+        + z.toFixed(1) + '%"></u></div>';
+    };
+
+    const wertZeigen = (w) => {
+      const u = urteil(w);
+      const marke = u
+        ? '<span class="drehscheibe-urteil ' + u + '">'
+          + T("familie.drehUrteil" + (u === "gut" ? "Gut" : u === "knapp" ? "Knapp" : "Raus"))
+          + "</span>"
+        : "";
+      const band = (w.zahl !== null && w.von !== w.bis)
+        ? "<span>" + T("familie.drehBand") + " " + w.von + "–" + w.bis
+          + (w.einheit ? " " + w.einheit : "") + "</span>"
+        : "";
+      lesen.innerHTML = '<div class="drehscheibe-wert"><em>' + w.app + "</em><b>"
+        + w.label + " " + w.wert + "</b>" + band + marke + "</div>" + bandBild(w, u);
+    };
+
+    const ratZeigen = (r) => {
+      const an = werte.find(w => w.id === r.anId);
+      lesen.innerHTML = '<div class="drehscheibe-rat"><em>' + r.stufe
+        + " → " + (an ? an.app : "") + "</em><b>" + r.titel + "</b><p>"
+        + r.grund + "</p></div>";
+    };
+
+    const phase = (n) => phasen.forEach((p, i) => p.classList.toggle("an", i === n));
+
+    if (ruhig) {
+      knoten.forEach(k => k.el.classList.add("sendet"));
+      const raus = werte.find(w => urteil(w) === "raus") || werte[0];
+      const kr = knoten.find(k => k.id === raus.id);
+      if (kr) kr.el.classList.add("jetzt");
+      wertZeigen(raus);
+      if (mZahl) mZahl.textContent = N + "/" + N;
+      if (mText) mText.textContent = T("familie.drehBewertet");
+      phase(1);
+      const st = document.getElementById("drehscheibe-statisch");
+      if (st) st.hidden = false;
+      return;
+    }
+
+    let uhr = null, laeuft = false, schritt = 0, ratNr = 0;
+
+    const flug = (von, bis, dauer, klasse, fertig) => {
+      funke.className = "drehscheibe-funke " + (klasse || "");
+      const t0 = performance.now();
+      const zug = (jetzt) => {
+        if (!laeuft) return;
+        const a = Math.min(1, (jetzt - t0) / dauer);
+        const e = a < .5 ? 2 * a * a : 1 - Math.pow(-2 * a + 2, 2) / 2;
+        funke.style.left = (von.x + (bis.x - von.x) * e) + "%";
+        funke.style.top = (von.y + (bis.y - von.y) * e) + "%";
+        funke.style.opacity = a < .12 ? a / .12 : (a > .88 ? (1 - a) / .12 : 1);
+        if (a < 1) uhr = requestAnimationFrame(zug);
+        else { funke.style.opacity = 0; fertig(); }
+      };
+      uhr = requestAnimationFrame(zug);
+    };
+
+    const M = { x: 50, y: 50 };
+
+    const weiter = () => {
+      ratNr++;
+      uhr = setTimeout(() => {
+        if (!laeuft) return;
+        if (ratNr % raete.length === 0) {
+          schritt = 0;
+          knoten.forEach(k => k.el.classList.remove("sendet", "empfaengt", "jetzt"));
+        }
+        takt();
+      }, 3200);
+    };
+
+    /* Die Empfehlung fliegt an den Knoten, der sie umsetzen kann. */
+    const zurueck = (r, ziel) => {
+      if (!ziel) {
+        knoten.forEach(k => k.el.classList.remove("empfaengt", "jetzt"));
+        ratZeigen(r);
+        weiter();
+        return;
+      }
+      ziel.linie.classList.add("aktiv");
+      flug(M, ziel.ort, 720, "raus", () => {
+        ziel.linie.classList.remove("aktiv");
+        knoten.forEach(k => k.el.classList.remove("empfaengt", "jetzt"));
+        ziel.el.classList.add("empfaengt", "jetzt");
+        ratZeigen(r);
+        weiter();
+      });
+    };
+
+    const takt = () => {
+      if (!laeuft) return;
+
+      if (schritt < N) {
+        const i = schritt, w = werte[i], k = knoten[i];
+        phase(0);
+        knoten.forEach(x => x.el.classList.remove("jetzt"));
+        k.el.classList.add("sendet", "jetzt");
+        k.linie.classList.add("aktiv");
+        wertZeigen(w);
+        if (mZahl) mZahl.textContent = (i + 1) + "/" + N;
+        if (mText) mText.textContent = T("familie.drehSammelt");
+
+        flug(k.ort, M, 300, "", () => {
+          k.linie.classList.remove("aktiv");
+          mitte.classList.add("schlag");
+          setTimeout(() => mitte.classList.remove("schlag"), 500);
+          schritt++;
+          uhr = setTimeout(takt, 120);
+        });
+        return;
+      }
+
+      const r = raete[ratNr % raete.length];
+      const ziel = knoten.find(k => k.id === r.anId);
+
+      phase(1);
+      if (mText) mText.textContent = T("familie.drehBewertet");
+      mitte.classList.add("schlag");
+      setTimeout(() => mitte.classList.remove("schlag"), 500);
+
+      uhr = setTimeout(() => {
+        if (!laeuft) return;
+        phase(2);
+        if (mText) mText.textContent = T("familie.drehSchickt");
+        zurueck(r, ziel);
+      }, 620);
+    };
+
+    const starten = () => {
+      if (laeuft) return;
+      laeuft = true;
+      phase(0);
+      takt();
+    };
+    const stoppen = () => {
+      laeuft = false;
+      if (uhr) { cancelAnimationFrame(uhr); clearTimeout(uhr); uhr = null; }
+    };
+
+    if (mZahl) mZahl.textContent = "0/" + N;
+    if (mText) mText.textContent = T("familie.drehSammelt");
+
+    let imBild = false;
+    const b = new IntersectionObserver((eintraege) => {
+      eintraege.forEach(e => {
+        imBild = e.isIntersecting;
+        if (imBild && !document.hidden) starten();
+        else stoppen();
+      });
+    }, { threshold: 0.2 });
+    b.observe(buehne);
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stoppen();
+      else if (imBild) starten();
+    });
+  }
+
   /* ======================================================== START */
   function start() {
     texteEinsetzen();
@@ -1108,6 +2454,8 @@
     karussellEinrichten();
     zaehlerEinrichten();
     rafferEinrichten();
+    zaehlerwerkEinrichten();
+    stundenplanEinrichten();
     spielEinrichten();
     qrEinrichten();
     spurenEinrichten();
@@ -1120,6 +2468,11 @@
     scheibeEinrichten();
     boegenEinrichten();
     knopfZeigerEinrichten();
+    drehscheibeEinrichten();
+    trommelEinrichten();
+    scanlaufEinrichten();
+    kontoEinrichten();
+    saeuleEinrichten();
   }
 
   if (document.readyState === "loading") {

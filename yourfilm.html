@@ -44,6 +44,7 @@
 </header>
 
 <main id="inhalt" class="unterseite" data-nr="06" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
+  <div class="kapitel-licht" aria-hidden="true"></div>
   <div class="huelle">
 
     <div class="kapitelkopf">
@@ -56,6 +57,51 @@
 
       <h1 data-t="yourfilm.untertitel">Deine Filmsammlung im Griff</h1>
     </div>
+
+    <section class="scanlauf" id="scanlauf" aria-labelledby="scanlauf-titel">
+      <h2 class="scanlauf-titel" id="scanlauf-titel" data-t="yourfilm.scanTitel"></h2>
+
+      <div class="scanlauf-buehne">
+        <div class="scanlauf-sucher" aria-hidden="true">
+          <span class="scanlauf-ecke o-l"></span><span class="scanlauf-ecke o-r"></span>
+          <span class="scanlauf-ecke u-l"></span><span class="scanlauf-ecke u-r"></span>
+
+          <div class="scanlauf-huelle" id="scanlauf-huelle">
+            <b class="scanlauf-format" id="scanlauf-format"></b>
+            <div class="scanlauf-code" id="scanlauf-code">
+              <div class="scanlauf-striche"></div>
+              <div class="scanlauf-ziffern" id="scanlauf-ziffern"></div>
+            </div>
+          </div>
+
+          <div class="scanlauf-strahl" id="scanlauf-strahl"></div>
+        </div>
+
+        <div class="scanlauf-auswertung" aria-live="polite" aria-atomic="true">
+          <p class="scanlauf-pruefung" id="scanlauf-pruefung"></p>
+
+          <ol class="scanlauf-ebenen" id="scanlauf-ebenen">
+            <li>
+              <em data-t="yourfilm.scanEbeneFilm"></em>
+              <b id="scanlauf-film"></b>
+              <span id="scanlauf-filmZusatz"></span>
+            </li>
+            <li>
+              <em data-t="yourfilm.scanEbeneAusgabe"></em>
+              <b id="scanlauf-ausgabe"></b>
+              <span id="scanlauf-ausgabeZusatz"></span>
+            </li>
+            <li>
+              <em data-t="yourfilm.scanEbeneExemplar"></em>
+              <b id="scanlauf-exemplar"></b>
+              <span id="scanlauf-exemplarZusatz"></span>
+            </li>
+          </ol>
+
+          <p class="scanlauf-regal" id="scanlauf-regal"></p>
+        </div>
+      </div>
+    </section>
 
     <p class="gross" style="max-width:64ch" data-t="yourfilm.positionierung"></p>
     <p class="preis" data-t="yourfilm.inArbeit"></p>

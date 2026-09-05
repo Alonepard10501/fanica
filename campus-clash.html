@@ -44,6 +44,7 @@
 </header>
 
 <main id="inhalt" class="unterseite" data-nr="05" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
+  <div class="kapitel-licht" aria-hidden="true"></div>
   <div class="huelle">
 
     <div class="kapitelkopf">
@@ -55,6 +56,57 @@
       </div>
 
       <h1 data-t="campus.untertitel">Das endlose Schulspiel</h1>
+    </div>
+
+    <div class="plan" id="plan-tafel">
+      <div class="plan-kopf">
+        <h3 data-t="campus.planTitel"></h3>
+        <div class="plan-uhr-feld">
+          <span class="plan-zifferblatt" aria-hidden="true">
+            <i class="plan-weg" id="plan-weg"></i>
+          </span>
+          <b id="plan-uhr"></b>
+        </div>
+      </div>
+
+      <div class="plan-gitter">
+        <div class="plan-fach" data-level="28" data-ab="34">
+          <span class="plan-symbol" aria-hidden="true">📕</span>
+          <div class="plan-mitte">
+            <b data-t="campus.planFachEins"></b>
+            <em class="plan-stufe"></em>
+          </div>
+          <div class="plan-werte">
+            <span class="plan-balken"><i></i></span>
+            <span class="plan-rest"></span>
+          </div>
+        </div>
+        <div class="plan-fach" data-level="34" data-ab="12">
+          <span class="plan-symbol" aria-hidden="true">🧪</span>
+          <div class="plan-mitte">
+            <b data-t="campus.planFachZwei"></b>
+            <em class="plan-stufe"></em>
+          </div>
+          <div class="plan-werte">
+            <span class="plan-balken"><i></i></span>
+            <span class="plan-rest"></span>
+          </div>
+        </div>
+        <div class="plan-fach" data-level="40" data-ab="61">
+          <span class="plan-symbol" aria-hidden="true">🏋️</span>
+          <div class="plan-mitte">
+            <b data-t="campus.planFachDrei"></b>
+            <em class="plan-stufe"></em>
+          </div>
+          <div class="plan-werte">
+            <span class="plan-balken"><i></i></span>
+            <span class="plan-rest"></span>
+          </div>
+        </div>
+      </div>
+
+      <p class="plan-fuss" data-t="campus.planFuss"></p>
+      <p class="plan-fuss" id="plan-hinweis" hidden data-t="campus.planRuhig"></p>
     </div>
 
     <p class="gross" style="max-width:64ch" data-t="campus.positionierung"></p>

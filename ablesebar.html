@@ -44,6 +44,7 @@
 </header>
 
 <main id="inhalt" class="unterseite" data-nr="11" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
+  <div class="kapitel-licht" aria-hidden="true"></div>
   <div class="huelle">
 
     <div class="kapitelkopf">
@@ -54,6 +55,44 @@
       </div>
 
       <h1 data-t="ablesebar.untertitel">Zählerstände ablesen, Betriebskosten prüfen</h1>
+    </div>
+
+    <div class="zaehlerwerk" id="zaehlerwerk">
+      <div class="zw-werk">
+        <span class="zw-marke" data-t="ablesebar.zaehlerwerkStand"></span>
+        <div class="zw-rollen" id="zw-rollen" aria-hidden="true"></div>
+        <span class="zw-einheit" id="zw-einheit"></span>
+        <p class="zw-vorlesen" id="zw-vorlesen" aria-live="polite"></p>
+      </div>
+
+      <div class="zw-leiste">
+        <div class="zw-reiter" id="zw-reiter"
+             data-t="ablesebar.zaehlerwerkBereich" data-t-attr="aria-label">
+          <button class="zw-reiter-knopf" type="button" data-b="gas"
+                  aria-pressed="true" data-t="ablesebar.zaehlerwerkGas"></button>
+          <button class="zw-reiter-knopf" type="button" data-b="wasser"
+                  aria-pressed="false" data-t="ablesebar.zaehlerwerkWasser"></button>
+          <button class="zw-reiter-knopf" type="button" data-b="strom"
+                  aria-pressed="false" data-t="ablesebar.zaehlerwerkStrom"></button>
+        </div>
+
+        <div class="zw-werte">
+          <div class="zw-wert">
+            <em data-t="ablesebar.zaehlerwerkVerbrauch"></em>
+            <b id="zw-verbrauch"></b>
+          </div>
+          <div class="zw-wert">
+            <em data-t="ablesebar.zaehlerwerkVormonat"></em>
+            <b id="zw-vormonat"></b>
+          </div>
+          <div class="zw-wert zw-saldo" id="zw-saldo-feld">
+            <em data-t="ablesebar.zaehlerwerkSaldo"></em>
+            <b id="zw-saldo"></b>
+          </div>
+        </div>
+      </div>
+
+      <div class="zw-balken" aria-hidden="true"><i id="zw-fortschritt"></i></div>
     </div>
 
     <p class="gross" style="max-width:64ch" data-t="ablesebar.positionierung"></p>

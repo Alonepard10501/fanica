@@ -44,6 +44,7 @@
 </header>
 
 <main id="inhalt" class="unterseite" data-nr="09" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
+  <div class="kapitel-licht" aria-hidden="true"></div>
   <div class="huelle">
 
     <div class="kapitelkopf">
@@ -55,6 +56,36 @@
       </div>
 
       <h1 data-t="tankspur.untertitel">Was das Auto wirklich kostet</h1>
+    </div>
+
+    <div class="saeule" id="saeule">
+      <div class="saeule-kopf">
+        <span class="saeule-marke" data-t="tankspur.saeuleZapft"></span>
+        <span class="saeule-beleg" id="saeule-beleg"></span>
+      </div>
+
+      <div class="saeule-werk">
+        <div class="saeule-feld gross">
+          <em data-t="tankspur.saeuleBetrag"></em>
+          <b><span id="saeule-betrag">0,00</span> <span data-t="tankspur.saeuleWaehrung"></span></b>
+        </div>
+        <div class="saeule-feld">
+          <em data-t="tankspur.saeuleLiter"></em>
+          <b id="saeule-liter">0,00</b>
+        </div>
+        <div class="saeule-feld fest">
+          <em data-t="tankspur.saeulePreis"></em>
+          <b id="saeule-preis">0,000</b>
+        </div>
+      </div>
+
+      <div class="saeule-fluss" aria-hidden="true"><i id="saeule-fluss"></i></div>
+
+      <div class="saeule-zeile">
+        <p class="saeule-probe" id="saeule-probe" aria-live="polite"></p>
+        <button type="button" class="saeule-knopf" id="saeule-knopf" hidden
+                data-t="tankspur.saeuleNochmal"></button>
+      </div>
     </div>
 
     <p class="gross" style="max-width:64ch" data-t="tankspur.positionierung"></p>
