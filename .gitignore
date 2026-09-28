@@ -1,4 +1,4 @@
-# Beiseite gelegte Dateien - gehoeren nicht auf die Website
+﻿# Beiseite gelegte Dateien - gehoeren nicht auf die Website
 _nicht-verwendet/
 *.sicherung
 *.vor-englisch
@@ -17,3 +17,10 @@ kap-*.png
 kenn-*.png
 ziff-*.png
 neu-*.png
+
+# Signaturschluessel und Zertifikate
+key.properties
+*.jks
+*.keystore
+*.p12
+*.p8
