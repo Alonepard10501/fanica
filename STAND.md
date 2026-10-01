@@ -40,6 +40,9 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   Knopf mit Falks Hover-Effekt. Alles Ausführliche steht auf der Unterseite je Produkt.
   Kapitelreihenfolge ist fest; die Karten tragen die alten Anker (`#fanica` …).
 - Neue Startseiten-Teile liegen in `start.css`/`start.js`, nicht in `style.css`/`app.js`.
+- Unter „Ein-Mann-Medienstudio“ im Hero steht Falks Neon-Schriftzug „STUDIO“
+  (`bilder/marke/studio-neon.webp`, Blender-Render, freigestellt). Höhe in `start.css` je
+  Bildschirmklasse gedeckelt — bei 1366×768 beginnt das Karussell bei 513 px.
 - Produktseiten (alle elf) auf einem Gerüst: Kopfkarte (`produkt.css`, `wege.js`) und darunter
   alles aus EINER Vorlage `aufbau.js` + `aufbau.css`, befüllt aus `daten/<app>.js` (DE + EN,
   Symbole aus `symbole.js`). Reihenfolge: Auf einen Blick → Erlebnis (der app-eigene Block, steht
@@ -63,6 +66,12 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 - Ein neues Produkt braucht die volle Checkliste im Skill.
   → [[neue-app-auf-webseite-braucht-sechs-stellen]]
 - HTML ohne Kommentare.
+- `texte.js` enthält nur Schlüssel, die eine Seite wirklich abruft (am 01.10.2026 per
+  Laufzeitmessung über alle Seiten DE + EN von 682 auf 267 gekürzt). Ein neuer Schlüssel
+  braucht immer einen Abruf (`data-t`, `T("…")`), sonst ist er tot.
+- Die Zapfsäule auf `tankspur.html` (`TANKUNGEN` in `app.js`) zeigt erfundene Beispieldaten —
+  nie Daten aus Falks Tankbuch, die sind privat.
+- `einladung.html` heißt „Motorsport-Tipprunde“ — „F1“ ist keine Produktbezeichnung.
 
 **Bezugswege**
 - Alle Store- und App-Adressen stehen an EINER Stelle: `const BEZUG` in `inhalte.js`. Ein Weg
@@ -95,6 +104,8 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 - Die Instinct-Seite ist ein eigenes Repo (`Projekte\Web\Webseiten\Webseite-Instinct\`) mit
   eigenen Kopien von CSS, JS und Bildern — Instinct-Änderungen betreffen oft beide.
 
+- Campus Clash wird nicht verlinkt — die GitHub-Fassung ist privat (Falk 01.10.2026).
+
 - App-Name „AblesBar“ (Falks Entscheidung 01.10.2026); Datei `ablesbar.html`; `ablesebar.html` ist nur noch eine Weiterleitung für alte Links.
 
 ## Bekannt und bewusst belassen
@@ -105,23 +116,18 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 ## Offen
 1. **Neue Fassung pushen** (Falks Wort): die Überarbeitung vom 01.10.2026 ist lokal committet.
 2. **Store-Wege freischalten**, sobald Instinct Play bzw. NeonPunkt (Play und Apple) live sind:
-   `standAndroid`/`standApple` in `inhalte.js`, vorher die Adresse prüfen.
-3. **Bild unter „Ein-Mann-Medienstudio“** im Hero von `index.html` einbauen (Falks Auftrag aus
-   Chat `d4fe0350`, Ende 21.08.2026 — welches Bild, steht nur dort; nicht umgesetzt,
-   `hero.augenbraue` steht ohne Bild).
-4. **Pfade in `_werkzeuge_runde_bauen.py` veraltet:** `QUELLE` zeigt auf
-   `KI-Workflow\Vault\Projekte\Apps\…\daten.json`, `ZIEL` auf `KI-Workflow\Projekte\Webseiten\…`;
-   beide gibt es nicht. Richtig: `Projekte\Apps\FaNiCa Fun\Google Play\5 Webseite und
-   Webversion\daten.json` und `Projekte\Web\Webseiten\Webseite\runde.js`. Dieselbe falsche
-   Ordnerangabe steht in `LIESMICH.md`. Vor dem nächsten Lauf berichtigen.
-5. **Campus Clash:** 4.13.0 liegt seit 30.09.2026 als öffentliches GitHub-Release vor; die Seite
-   nennt keinen Bezugsweg (Falks Entscheidung, ob verlinkt wird).
-6. **Neue Dunkelmodus-Aufnahmen fehlen** (Galerie entfällt bis dahin): Campus Clash (alle alten
+   `standAndroid`/`standApple` in `inhalte.js`, vorher die Adresse prüfen. Gegenprobe
+   01.10.2026 nachmittags: Instinct Play 404, NeonPunkt Play 404, NeonPunkt Apple-Lookup
+   `resultCount 0` — bleibt `test`/`spaeter`.
+3. **Toter Code in `inhalte.js`:** die alten Bausteine (Funktionsblöcke, Umfang-Schleife,
+   Bögen, Spine-Rechner, Trophäen, Bezugsleiste mit QR …) greifen auf Container, die es auf
+   keiner Seite mehr gibt; ihre Texte sind aus `texte.js` entfernt. Beim nächsten Umbau
+   mitentfernen.
+4. **Neue Dunkelmodus-Aufnahmen fehlen** (Galerie entfällt bis dahin): Campus Clash (alle alten
    Bilder zeigen den Stand vor 4.x), YourFilm (Reiter „Suche“ statt „Freunde“), AblesBar (Reiter
    „Zähler“ statt „Objekt“, alte Gas-Zählermiete), Instinct Familie (nur Hellmodus), NeonPunkt
    (nur gerenderte Bilder). Tankspur hat nur zwei, ScheinBar drei, FaNiCa drei aktuelle.
-7. **Zapfsäule Tankspur** (`app.js`, `TANKUNGEN`) zeigt echte Tankstellennamen aus Falks Daten.
-8. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
+5. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
    nächsten Produkt mitziehen.
 
 **Wissen:** Skill `entwickler-website` · [[statische-website-bauen-und-veroeffentlichen]]

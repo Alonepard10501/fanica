@@ -17,13 +17,11 @@ import io, json, os
 ANONYM = False          # False = echte Profilnamen (Falks Entscheidung 31.07.)
                         # True  = "Spieler A/B/C" statt der Namen
 
-# Pfade berichtigt 13.08.2026 (Rechner-Umzug: Benutzer falkc -> Falk, Apps liegen
-# heute unter "Vault\Projekte\Apps\", die Website unter "Projekte\Webseiten\").
 STUDIO = os.path.join("C:", os.sep, "Users", "Falk", "Desktop", "KI-Workflow")
 
-QUELLE = os.path.join(STUDIO, "Vault", "Projekte", "Apps", "FaNiCa Fun",
+QUELLE = os.path.join(STUDIO, "Projekte", "Apps", "FaNiCa Fun",
                       "Google Play", "5 Webseite und Webversion", "daten.json")
-ZIEL = os.path.join(STUDIO, "Projekte", "Webseiten", "Webseite", "runde.js")
+ZIEL = os.path.join(STUDIO, "Projekte", "Web", "Webseiten", "Webseite", "runde.js")
 
 d = json.loads(io.open(QUELLE, encoding="utf-8").read())
 W = d["wertung"]; R = d["rennen"]; S = d["saisons"]; ST = d["spielerstats"]

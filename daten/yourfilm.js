@@ -2,7 +2,13 @@
 window.PRODUKT_DATEN = {
   app: "yourfilm", seite: "yourfilm", stil: "b-heat",
   symbol: "bilder/marke/app-yourfilm.webp",
-  bilder: [],
+  bilder: [
+    { datei: "bilder/app/yourfilm-start.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/yourfilm-sammlung.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/yourfilm-filmseite.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/yourfilm-regal.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/yourfilm-statistik.webp", b: 540, h: 1200 }
+  ],
   de: {
     fakten: ["Android · iOS", "Ohne Konto", "Bis 40 Exemplare kostenlos"],
     blickSatz: "Eine Datenbank für die eigene DVD-, Blu-ray- und 4K-Sammlung: Barcode scannen, und die App ordnet Film, Ausgabe und dein Exemplar zu.",
@@ -13,6 +19,13 @@ window.PRODUKT_DATEN = {
       { symbol: "schloss", titel: "Ohne Konto", text: "Kein Konto, kein eigener Server: Die Sammlung liegt in einer Datenbank auf deinem Handy." }
     ],
     erlebnis: { titel: "Vom Barcode zum Regalplatz", kurz: "Scan", text: "Die App prüft die Prüfziffer und ordnet danach Film, Ausgabe und Exemplar zu — hier mit erfundenen Beispielen." },
+    galerie: { text: "Fünf Aufnahmen aus Fassung 2.8.0 im Dunkelmodus. Die Filme darin sind Beispiele; die Cover zeigen den Platzhalter der App.", bilder: [
+      { titel: "Die Startseite", text: "Anzahl der Filme, Exemplare und Formate, darunter Film scannen, Sammlung öffnen und Suchen — dazu Ungesehen, Verliehen, Statistik sowie Schauspieler und Regie." },
+      { titel: "Die Sammlung", text: "Alle Filme als Cover-Raster mit Schnellfiltern, Formatplakette und Herz für Favoriten; oben schaltest du auf Liste, Sortierung und Filter." },
+      { titel: "Die Filmseite", text: "Der Steckbrief mit Jahr, Laufzeit, Land, Freigabe und Exemplaren, mit Knöpfen für Favorit und Gesehen — darunter Handlung, Veröffentlichungen und Besetzung." },
+      { titel: "Zimmer, Regal, Fach", text: "Der Reiter Regal gliedert die Sammlung nach Standort; jedes Fach zeigt seine Filme und deren Zahl. Neue Standorte legst du oben an." },
+      { titel: "Auswerten", text: "Statistik mit Ausgaben und Preisvergleich zur UVP; zwei weitere Reiter bieten Filter und Suche." }
+    ] },
     funktionen: [
       { gruppe: "Erfassen", symbol: "scan", liste: [
         { symbol: "barcode", name: "Barcode scannen", text: "EAN-13, EAN-8, UPC-A, UPC-E und ISBN werden erkannt und auf ihre Prüfziffer geprüft." },
@@ -75,6 +88,13 @@ window.PRODUKT_DATEN = {
       { symbol: "schloss", titel: "No account", text: "No account, no own server: the collection lives in a database on your phone." }
     ],
     erlebnis: { titel: "From barcode to shelf", kurz: "Scan", text: "The app checks the check digit, then assigns film, release and copy — shown here with made-up examples." },
+    galerie: { text: "Five captures of version 2.8.0 in dark mode. The films shown are examples; the covers show the app’s placeholder.", bilder: [
+      { titel: "The home screen", text: "Number of films, copies and formats, then Scan movie, Open collection and Search — plus Not watched yet, Lent out, Statistics and Cast & crew." },
+      { titel: "The collection", text: "All films as a cover grid with quick filters, format badge and a heart for favourites; the top bar switches to a list, sorting and filters." },
+      { titel: "The film page", text: "The fact sheet with year, running time, country, age rating and copies, with buttons for Favorite and Watched — below it plot, releases and cast." },
+      { titel: "Room, shelf, compartment", text: "The Shelf tab arranges the collection by location; each compartment shows its films and their count. New locations are added at the top." },
+      { titel: "Insights", text: "Statistics with spending and a price comparison against the RRP; two more tabs offer Filter and Search." }
+    ] },
     funktionen: [
       { gruppe: "Adding", symbol: "scan", liste: [
         { symbol: "barcode", name: "Scan the barcode", text: "EAN-13, EAN-8, UPC-A, UPC-E and ISBN are recognised and checked against their check digit." },

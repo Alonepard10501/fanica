@@ -5,8 +5,9 @@
 **https://alonepard10501.github.io/fanica/**
 
 Deine Seite als Entwickler: Wer du bist, was du gebaut hast, wo man es bekommt.
-Drei Kapitel — Instinct Scoring, FaNiCa Fun, NeonPunkt — plus „Über mich" und
-Kontakt. Vollständig auf Deutsch und Englisch (Knopf oben rechts).
+Elf Produkte — Startseite mit Karussell und Produktkarten, je Produkt eine eigene
+Unterseite — plus Vergleich, „Über mich" und Kontakt. Vollständig auf Deutsch und
+Englisch (Knopf oben rechts).
 
 ---
 
@@ -15,7 +16,7 @@ Kontakt. Vollständig auf Deutsch und Englisch (Knopf oben rechts).
 Der Webseiten-Ordner ist gleichzeitig das Git-Repository. Nach einer Änderung:
 
 ```bash
-cd "C:\Users\Falk\Desktop\KI-Workflow\Projekte\Webseiten\Webseite"
+cd "C:\Users\Falk\Desktop\KI-Workflow\Projekte\Web\Webseiten\Webseite"
 git add -A
 git commit -m "Was du geändert hast"
 git push
@@ -37,6 +38,9 @@ automatisch ausgelassen.
 | `style.css` | Aussehen |
 | `start.css` · `start.js` | Nur die Startseite: Produktkarten, Filter nach Stand, Verteilungsbalken |
 | `produkt.css` · `produkt.js` | Gerüst aller Produktseiten: Kopf mit Symbol, Stand und Store-Knöpfen, Abschnittsleiste, gekürzte Funktionslisten |
+| `aufbau.js` · `aufbau.css` · `daten/<app>.js` | Der Inhalt jeder Produktseite: eine Vorlage, befüllt aus einer Datendatei je App (DE + EN) |
+| `runde.js` | Zahlen der echten Tipprunde, erzeugt mit `python _werkzeuge_runde_bauen.py` aus `Projekte\Apps\FaNiCa Fun\Google Play Webseite und Webversion\daten.json` |
+| `live.js` | Nächstes Rennen und Countdown, bei jedem Aufruf frisch aus einer öffentlichen Quelle |
 | `wege.js` | Store- und Download-Knöpfe aus `BEZUG` für Startseite und Produktseiten |
 | `gemeinsam.css` · `uebergang.js` | Alle Seiten: weicher Seitenwechsel (App-Symbol wandert mit) und das Menü „Die Apps“ auf den Produktseiten |
 | `impressum.html` · `datenschutz.html` · `bildquellen.html` | Rechtsseiten |
@@ -61,7 +65,7 @@ Doppelklick auf `index.html` reicht **nicht** ganz — die Seite lädt Dateien n
 Besser ein kleiner lokaler Server:
 
 ```bash
-python -m http.server 8899 --directory "C:\Users\Falk\Desktop\KI-Workflow\Projekte\Webseiten\Webseite"
+python -m http.server 8899 --directory "C:\Users\Falk\Desktop\KI-Workflow\Projekte\Web\Webseiten\Webseite"
 ```
 
 Dann im Browser: `http://127.0.0.1:8899`
@@ -102,11 +106,9 @@ falls du eine andere wählst, dort anpassen.
 - **Ein echtes kleines Spiel:** Der NeonPunkt im dritten Kapitel funktioniert
   wirklich — antippen, er wächst, wechselt die Farbe, zählt mit.
 - **QR-Codes** zu den Web-Fassungen, im Browser selbst erzeugt (kein fremder Dienst).
-- **Zweisprachig vorbereitet, aber noch nicht freigeschaltet:** Die ganze Technik
-  steht — der englische Block in `texte.js` ist aber erst zu 7 % gefüllt (15 von 227
-  Textstellen). Deshalb ist der EN-Knopf oben rechts derzeit **ausgeblendet**
-  (`hidden` im `index.html`). Sobald der `en:`-Block in `texte.js` vollständig ist,
-  einfach das `hidden` entfernen — mehr ist nicht nötig.
+- **Zweisprachig:** Deutsch und Englisch vollständig, umschaltbar oben rechts. Neuer
+  Text braucht immer einen Eintrag in beiden Sprachblöcken (`texte.js` bzw. der
+  Datendatei der App).
 - **Nichts von fremden Servern:** keine Cookies, keine Schriften, keine Skripte,
   kein Tracking. Deshalb braucht die Seite auch kein Zustimmungsbanner.
 - **Scharf auf großen Bildschirmen:** Alle Screenshots liegen zusätzlich in
@@ -114,22 +116,11 @@ falls du eine andere wählst, dort anpassen.
 
 ---
 
-## Wenn du später bessere Screenshots hast
+## Wenn du neue Screenshots hast
 
-Drei Instinct-Funktionen (Parcours, Ausrüstung, Statistik) zeigen derzeit **kein**
-Bild, sondern eine Erklärkarte. Grund: Die vorhandenen Screenshots zeigen nur den
-leeren Zustand („Noch keine Bögen."). Das lässt die App ärmer aussehen, als sie ist.
-
-Nimmst du irgendwann Screenshots mit echtem Inhalt auf — ein paar Runden geschossen,
-Bögen angelegt, ein Parcours eingetragen —, dann in `texte.js` beim jeweiligen Block
-statt `bild: null` wieder den Pfad eintragen:
-
-```js
-bild: "bilder/instinct/statistik.webp",
-alt: "Instinct Scoring: Statistik mit Punkteschnitt und Verlauf"
-```
-
-Dasselbe gilt für den FaNiCa-Chat (`_nicht-verwendet/chat.webp`).
+Die Bildergalerie jeder Produktseite steht in `daten/<app>.js`. Nur echte
+App-Aufnahmen im Dunkelmodus und keine leeren Zustände („Noch keine Einträge") —
+eine App ohne passende Aufnahmen zeigt lieber keine Galerie.
 
 ---
 
@@ -137,12 +128,11 @@ Dasselbe gilt für den FaNiCa-Chat (`_nicht-verwendet/chat.webp`).
 
 Alle Angaben sind aus dem Quellcode der Apps gelesen, nicht geschätzt:
 
-- Wertungssysteme und Punkte → `builtin_scoring_systems.dart`
-- Premium-Stufen und Preise → `upgrade_page.dart`, `premium_service.dart`
-- Spine-Rechner → `spine_calculator.dart`
-- FaNiCa-Trophäen und Punkteregeln → `Rechner.js`, `Daten.js`
-- Rennkalender (22 Rennen, 6 mit Sprint) → `Daten.js`
-- NeonPunkt (48 Stunden, 16 Farben, 500 Freiklicks) → `Parameter.kt`, `Spiel.kt`
+- Instinct: Wertungssysteme → `builtin_scoring_systems.dart`, Preise →
+  `upgrade_page.dart`, `premium_service.dart`, Spine-Rechner → `spine_calculator.dart`
+- FaNiCa Fun: Punkte und Trophäen → `lib/rechner.dart`, `lib/modelle.dart`, Preise →
+  `lib/kasse.dart`
+- NeonPunkt: `Parameter.kt`, `Spiel.kt`
 
-**Ändert sich etwas in einer App, muss es hier nachgezogen werden.** Die Stellen
-sind in `texte.js` mit Kommentaren markiert.
+**Ändert sich etwas in einer App — Preis, Version, Kennzahl —, muss es hier
+nachgezogen werden**, in `texte.js` und `daten/<app>.js`, jeweils DE und EN.

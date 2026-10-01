@@ -3,7 +3,13 @@ window.PRODUKT_DATEN = {
   app: "familie", seite: "instinct-familie", stil: "b-grass",
   symbol: "bilder/marke/app-familie.webp",
   familie: true,
-  bilder: [],
+  bilder: [
+    { datei: "bilder/app/familie-start.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/familie-module.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/familie-analyse.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/familie-zielwerte.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/familie-modul.webp", b: 540, h: 1200 }
+  ],
   de: {
     fakten: ["Neun Apps in einer", "Eine Analyse über alle", "Daten bleiben auf dem Gerät"],
     blickSatz: "Eine Dach-App für den Bogensport: die Instinct-Apps unter einem Start, verbunden über eine gemeinsame Drehscheibe.",
@@ -14,6 +20,13 @@ window.PRODUKT_DATEN = {
       { symbol: "schild", titel: "Ehrlich statt geraten", text: "Ohne Daten keine Wertung — und jede Angabe sagt, ob sie gemessen ist oder aus Fachliteratur stammt." }
     ],
     erlebnis: { titel: "Die Drehscheibe, live", kurz: "Drehscheibe", text: "Sie sammelt die Werte aller Apps ein, lässt sie vom Coach bewerten und schickt jede Empfehlung an die App, die sie umsetzen kann." },
+    galerie: { text: "Fünf Aufnahmen aus Fassung 1.0.0 im Dunkelmodus, die der Systemeinstellung folgt.", bilder: [
+      { titel: "Der Start", text: "Oben das Logo, darunter die Analyse und die Apps mit Nummer, Symbol und Zweckzeile — „enthalten“ oder „in Arbeit“." },
+      { titel: "Die Apps", text: "Weiter unten Coach, Community, Trade, Range, Tune, Pack und Weather, jede mit eigener Farbe und der Zahl ihrer Funktionen." },
+      { titel: "Die Analyse", text: "Alles, was deine Apps wissen, an einem Ort: Deine Daten, Statistik und die Hinweise, was du tun solltest." },
+      { titel: "Wo du stehst", text: "Jede Kennzahl gegen ihren Zielbereich, mit Angabe der App, aus der sie stammt — hier Beispielwerte." },
+      { titel: "Eine App öffnet sich", text: "Ein Tipp auf Scoring öffnet die echte App mit voller Funktion; der Familien-Knopf führt zurück." }
+    ] },
     familieSatz: "Jede App hat einen klaren Zweck und steht für sich — die Dach-App führt sie zusammen.",
     funktionen: [
       { gruppe: "Start", symbol: "ebenen", liste: [
@@ -61,6 +74,13 @@ window.PRODUKT_DATEN = {
       { symbol: "schild", titel: "Honest, not guessed", text: "No data, no rating — and every figure says whether it was measured or comes from the literature." }
     ],
     erlebnis: { titel: "The hub, live", kurz: "Hub", text: "It collects the values of all apps, has the coach rate them and sends each recommendation to the app that can act on it." },
+    galerie: { text: "Five captures of version 1.0.0 in dark mode, which follows the system setting.", bilder: [
+      { titel: "The start", text: "The logo at the top, then the analysis and the apps with number, icon and purpose line — “included” or “in progress”." },
+      { titel: "The apps", text: "Further down Coach, Community, Trade, Range, Tune, Pack and Weather, each in its own colour with its number of functions." },
+      { titel: "The analysis", text: "Everything your apps know in one place: your data, statistics and hints on what to do." },
+      { titel: "Where you stand", text: "Every figure against its target range, with the app it comes from — example values here." },
+      { titel: "An app opens", text: "A tap on Scoring opens the real app with full function; the Family button leads back." }
+    ] },
     familieSatz: "Every app has one clear purpose and stands on its own — the umbrella app brings them together.",
     funktionen: [
       { gruppe: "Start", symbol: "ebenen", liste: [

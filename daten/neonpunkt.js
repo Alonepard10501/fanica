@@ -2,7 +2,11 @@
 window.PRODUKT_DATEN = {
   app: "neonpunkt", seite: "neonpunkt", stil: "b-helix",
   symbol: "bilder/marke/app-neonpunkt.webp",
-  bilder: [],
+  bilder: [
+    { datei: "bilder/app/neonpunkt-start.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/neonpunkt-spiel.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/neonpunkt-bestenliste.webp", b: 540, h: 1200 }
+  ],
   de: {
     fakten: ["Android", "Ohne Konto", "Spielt offline"],
     blickSatz: "Ein Neonpunkt wächst 48 Stunden lang, bis er den Bildschirm füllt — wer ihn antippt, schickt ihn klein und in neuer Farbe zurück an den Start.",
@@ -13,6 +17,11 @@ window.PRODUKT_DATEN = {
       { symbol: "schild", titel: "Ohne Beiwerk", text: "Kein Konto, keine Werbung, und gespielt wird ohne Internet." }
     ],
     erlebnis: { titel: "48 Stunden in zwölf Sekunden", kurz: "Zeitraffer", text: "So wächst der Punkt wirklich, nur im Zeitraffer — und darunter liegt ein echter Punkt zum Antippen." },
+    galerie: { text: "Drei Aufnahmen aus Fassung 2.30 auf einem Android-Gerät.", bilder: [
+      { titel: "Der Start", text: "Die Runde dauert 48 Stunden — es sei denn, du klickst den Punkt an. Oben stellst du die Sprache ein, unten wartet die Einführung." },
+      { titel: "Das Spielfeld", text: "Oben rechts wächst der Punkt; links oben stehen Klicks und Spielzeit in Wochen, Tagen, Stunden, Minuten und Sekunden, unten der Gesamtzähler." },
+      { titel: "Die Bestenliste", text: "Bestenliste, Meiste Klicks pro Sitzung und Durchschnitt gehören zu Premium; ohne Premium zeigt die Seite einen Hinweis." }
+    ] },
     funktionen: [
       { gruppe: "Das Spiel", symbol: "ziel", liste: [
         { symbol: "punkt", name: "Der wachsende Punkt", text: "Von zwölf Punkt Radius bis bildschirmfüllend, gleichmäßig über 48 Stunden." },
@@ -71,6 +80,11 @@ window.PRODUKT_DATEN = {
       { symbol: "schild", titel: "Nothing extra", text: "No account, no ads, and you play without internet." }
     ],
     erlebnis: { titel: "48 hours in twelve seconds", kurz: "Time-lapse", text: "This is how the dot really grows, only in time-lapse — and below sits a real dot to tap." },
+    galerie: { text: "Three captures of version 2.30 on an Android device.", bilder: [
+      { titel: "The start", text: "A round lasts 48 hours — unless you click the dot. Language is set at the top, the introduction waits at the bottom." },
+      { titel: "The playfield", text: "The dot grows at the top right; top left shows clicks and play time in weeks, days, hours, minutes and seconds, the total counter at the bottom." },
+      { titel: "The leaderboard", text: "The leaderboard, most clicks per session and the average belong to Premium; without Premium the page shows a note." }
+    ] },
     funktionen: [
       { gruppe: "The game", symbol: "ziel", liste: [
         { symbol: "punkt", name: "The growing dot", text: "From a radius of twelve points to full screen, evenly over 48 hours." },

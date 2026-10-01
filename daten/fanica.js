@@ -3,9 +3,10 @@ window.PRODUKT_DATEN = {
   app: "fanica", seite: "fanica-fun", stil: "b-ripple",
   symbol: "bilder/marke/app-fanica.webp",
   bilder: [
-    { datei: "bilder/fanica/startseite.webp", b: 620, h: 1341 },
-    { datei: "bilder/fanica/ergebnis.webp", b: 620, h: 1341 },
-    { datei: "bilder/fanica/karriere.webp", b: 620, h: 1341 }
+    { datei: "bilder/app/fanica-start.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/fanica-tippen.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/fanica-ergebnisse.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/fanica-fahrerwahl.webp", b: 540, h: 1200 }
   ],
   de: {
     fakten: ["Android · iOS", "Ohne Geldeinsatz", "Bis zu zehn Spieler je Runde"],
@@ -17,10 +18,11 @@ window.PRODUKT_DATEN = {
       { symbol: "sync", titel: "Ergebnis kommt selbst", text: "Die App holt Ergebnis und Startaufstellung aus öffentlichen Datenquellen und rechnet die Punkte aus." }
     ],
     erlebnis: { titel: "Das nächste Rennen und eine echte Runde", kurz: "Live", text: "Der Countdown zum nächsten Lauf und die Zahlen der Tipprunde, für die FaNiCa Fun gebaut wurde." },
-    galerie: { text: "Aufnahmen aus einer laufenden Saison.", bilder: [
-      { titel: "Start und Tabelle", text: "Countdown zum Tippschluss, Führung und die Rangliste der Runde mit Trophäen." },
-      { titel: "Ein Rennwochenende", text: "Ergebnis, Qualifying, Treppchen und die Tipps der Runde auf einen Blick." },
-      { titel: "Die Karriere", text: "Punkte, Trefferquote, Rekorde und Auszeichnungen eines Spielers je Saison." }
+    galerie: { text: "Vier Aufnahmen aus Fassung 1.200.0 im Dunkelmodus, mit einem Prüfkonto ohne echte Mitspieler.", bilder: [
+      { titel: "Start und Tabelle", text: "Countdown zum Tippschluss, die Führung der Runde, deine Platzierung und darunter die Rangliste mit Trefferquote und Punkten." },
+      { titel: "Dein Top-5-Tipp", text: "Fünf Fahrer in der Reihenfolge wählen; die Quali-Top-5 oder die Startaufstellung lassen sich zum Tippschluss automatisch eintragen." },
+      { titel: "Die letzten Rennen", text: "Ergebnis und Qualifying des gewählten Rennens nebeneinander, darunter die Tipps der Runde und das Wochenende als PDF." },
+      { titel: "Fahrerwahl in Teamfarben", text: "Die Liste zeigt jeden Fahrer in der Farbe seines Teams; ein bereits gewählter Fahrer fällt aus der Auswahl." }
     ] },
     funktionen: [
       { gruppe: "Tippen", symbol: "ziel", liste: [
@@ -100,10 +102,11 @@ window.PRODUKT_DATEN = {
       { symbol: "sync", titel: "Results arrive by themselves", text: "The app fetches the result and starting grid from public data sources and works out the points." }
     ],
     erlebnis: { titel: "The next race and a real round", kurz: "Live", text: "The countdown to the next race and the numbers of the prediction round FaNiCa Fun was built for." },
-    galerie: { text: "Screens from a running season.", bilder: [
-      { titel: "Home and table", text: "Countdown to the deadline, the leader and the round’s table with trophies." },
-      { titel: "A race weekend", text: "Result, qualifying, podium and the round’s picks at a glance." },
-      { titel: "The career", text: "A player’s points, hit rate, records and awards per season." }
+    galerie: { text: "Four captures of version 1.200.0 in dark mode, from a test account without real fellow players.", bilder: [
+      { titel: "Home and table", text: "Countdown to the deadline, the round’s leader, your position and below it the table with hit rate and points." },
+      { titel: "Your top-five pick", text: "Choose five drivers in order; the qualifying top five or the starting grid can be entered automatically at the deadline." },
+      { titel: "The latest races", text: "Result and qualifying of the chosen race side by side, below them the round’s picks and the weekend as a PDF." },
+      { titel: "Driver list in team colours", text: "The list shows every driver in his team’s colour; a driver who is already picked drops out of the choice." }
     ] },
     funktionen: [
       { gruppe: "Predicting", symbol: "ziel", liste: [

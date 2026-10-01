@@ -2,7 +2,14 @@
 window.PRODUKT_DATEN = {
   app: "ablesbar", seite: "ablesbar", stil: "b-lantern",
   symbol: "bilder/marke/app-ablesbar.webp",
-  bilder: [],
+  bilder: [
+    { datei: "bilder/app/ablesbar-anlage.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/ablesbar-uebersicht.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/ablesbar-eingabe.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/ablesbar-zaehler.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/ablesbar-kostensaetze.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/ablesbar-rechnung.webp", b: 540, h: 1200 }
+  ],
   de: {
     fakten: ["Android", "Gas · Wasser · Strom", "Ohne Server"],
     blickSatz: "Einmal im Monat jeden Zähler ablesen — die App rechnet Verbrauch und Kosten je Abrechnungsperiode und stellt sie den gezahlten Abschlägen gegenüber.",
@@ -13,6 +20,14 @@ window.PRODUKT_DATEN = {
       { symbol: "schloss", titel: "Bleibt auf dem Gerät", text: "Kein Server, kein fremdes Konto — das Netz braucht nur der Update-Knopf." }
     ],
     erlebnis: { titel: "Ein Zählerwerk zum Ausprobieren", kurz: "Zähler", text: "Die Rollen drehen vom Stand des Vormonats auf den neuen — daraus werden Monatsverbrauch und Stand gegen die Abschläge. Die Werte sind Beispiele." },
+    galerie: { text: "Sechs Aufnahmen aus Fassung 1.4.0 im Dunkelmodus, mit Beispielwerten: erst die Erstanlage, dann Übersicht, Eingabe, Zähler, Kostensätze und Rechnung.", bilder: [
+      { titel: "Die Erstanlage", text: "Der Assistent beginnt mit Bezeichnung und Art des Objekts — Mietwohnung, Zweifamilienhaus oder Mehrfamilienhaus. Pflicht ist nur die Bezeichnung." },
+      { titel: "Die Übersicht", text: "Gas, Wasser, Strom und Nebenkosten als Kacheln mit Verbrauch und Kosten, darunter der Monat mit der Zahl der Ablesungen und die laufende Periode." },
+      { titel: "Die Eingabe", text: "Ein Ablesedatum, darunter jeder aktive Zähler mit seinem letzten Stand und einem Feld für den neuen — oder dem Kamera-Knopf." },
+      { titel: "Zähler und Objekt", text: "Der Reiter Objekt zeigt Adresse und Zähler, getrennt nach Wohnung und Haus; jeder Zähler lässt sich abschalten, „Neues Objekt (Umzug)“ legt einen eigenen Datenraum an." },
+      { titel: "Die Kostensätze", text: "Fixkosten je Posten für Gebäude oder Wohnung, darunter Preise je Einheit und die Abschläge — gepflegt je Periode." },
+      { titel: "Die Rechnung", text: "Gesamtwerte der Periode mit Guthaben oder Nachzahlung, dazu die Monatsübersicht mit dem Saldo bis zum Monat." }
+    ] },
     funktionen: [
       { gruppe: "Ablesen", symbol: "zaehler", liste: [
         { symbol: "kamera", name: "Foto-Ablesung", text: "Zähler fotografieren oder ein Bild aus der Galerie wählen — erkannt wird auf dem Gerät." },
@@ -25,7 +40,7 @@ window.PRODUKT_DATEN = {
         { symbol: "stift", name: "Erstanlage in fünf Schritten", text: "Art, Adresse, Wohnung, Mietvertrag mit Stichtag und Zähler — Pflicht ist nur die Bezeichnung." },
         { symbol: "haus", name: "Wohnsituation", text: "Mietwohnung, Zweifamilienhaus mit eigener Wohnung oder Mehrfamilienhaus — das Zähler-Set passt sich an." },
         { symbol: "ebenen", name: "Wohnung und Haus", text: "Wohnungs- und Hauszähler getrennt, eigene Zähler lassen sich ergänzen oder abschalten." },
-        { symbol: "kalender", name: "Freier Stichtag", text: "Die Abrechnungsperiode endet standardmäßig am 31. Mai; der Stichtag ist frei wählbar." },
+        { symbol: "kalender", name: "Freier Stichtag", text: "Die Abrechnungsperiode endet zum Kalenderjahr (31.12.) oder an einem eigenen Stichtag, etwa dem 31. Mai laut Mietvertrag." },
         { symbol: "ordner", name: "Mehrere Objekte", text: "„Neues Objekt (Umzug)“ legt einen eigenen Datenraum an, das alte bleibt einsehbar." }
       ] },
       { gruppe: "Kosten", symbol: "euro", liste: [
@@ -75,6 +90,14 @@ window.PRODUKT_DATEN = {
       { symbol: "schloss", titel: "Stays on the device", text: "No server, no outside account — only the update button needs the network." }
     ],
     erlebnis: { titel: "A meter to try", kurz: "Meter", text: "The wheels turn from last month’s reading to the new one — that gives the monthly consumption and the balance against the instalments. The values are examples." },
+    galerie: { text: "Six captures of version 1.4.0 in dark mode, with example values: first the set-up, then overview, entry, meters, cost rates and statement.", bilder: [
+      { titel: "The set-up", text: "The assistant starts with a name and the type of property — rented flat, two-family house or apartment building. Only the name is required." },
+      { titel: "The overview", text: "Gas, water, electricity and running costs as tiles with consumption and cost, below them the month with the number of readings and the current period." },
+      { titel: "The entry screen", text: "One reading date, then every active meter with its last reading and a field for the new one — or the camera button." },
+      { titel: "Meters and property", text: "The Property tab shows the address and meters, split into flat and house; each meter can be switched off, and “New property (move)” creates a data space of its own." },
+      { titel: "The cost rates", text: "Fixed costs per item for building or flat, then prices per unit and the instalments — kept per period." },
+      { titel: "The statement", text: "Totals for the period with credit or back payment, plus the monthly overview with the balance up to each month." }
+    ] },
     funktionen: [
       { gruppe: "Reading", symbol: "zaehler", liste: [
         { symbol: "kamera", name: "Photo reading", text: "Photograph the meter or pick an image from the gallery — recognition runs on the device." },
@@ -87,7 +110,7 @@ window.PRODUKT_DATEN = {
         { symbol: "stift", name: "Set-up in five steps", text: "Type, address, flat, tenancy with cut-off date and meters — only the name is required." },
         { symbol: "haus", name: "Living situation", text: "Rented flat, two-family house you live in or apartment building — the meter set adapts." },
         { symbol: "ebenen", name: "Flat and building", text: "Flat and building meters kept apart; add your own meters or switch some off." },
-        { symbol: "kalender", name: "Free cut-off date", text: "The billing period ends on 31 May by default; the cut-off date can be chosen freely." },
+        { symbol: "kalender", name: "Free cut-off date", text: "The billing period ends with the calendar year (31 December) or on a cut-off date of your own, such as 31 May from the lease." },
         { symbol: "ordner", name: "Several properties", text: "“New property (move)” creates its own data space; the old one stays viewable." }
       ] },
       { gruppe: "Costs", symbol: "euro", liste: [

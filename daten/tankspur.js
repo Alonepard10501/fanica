@@ -3,8 +3,11 @@ window.PRODUKT_DATEN = {
   app: "tankspur", seite: "tankspur", stil: "b-heat",
   symbol: "bilder/marke/app-tankspur.webp",
   bilder: [
-    { datei: "bilder/app/tankspur-6-statistik.webp", b: 540, h: 1200 },
-    { datei: "bilder/app/tankspur-7-auto.webp", b: 540, h: 1200 }
+    { datei: "bilder/app/tankspur-uebersicht.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/tankspur-eintraege.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/tankspur-jahre.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/tankspur-preis.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/tankspur-auto.webp", b: 540, h: 1200 }
   ],
   de: {
     fakten: ["Android · iOS", "Kostenlos, ohne Werbung", "Deutsch und Englisch"],
@@ -16,8 +19,11 @@ window.PRODUKT_DATEN = {
       { symbol: "schild", titel: "Nichts wird geschätzt", text: "Fehlt eine Angabe, bleibt das Feld leer. Die App rechnet nur mit dem, was eingetragen ist." }
     ],
     erlebnis: { titel: "Preis mal Liter", kurz: "Säule", text: "Der Literpreis steht fest, Menge und Betrag laufen mit — genau diese Rechnung prüft Tankspur bei jedem Beleg." },
-    galerie: { text: "Zwei Aufnahmen aus der laufenden Fassung im Dunkelmodus, mit den fünf Reitern der App.", bilder: [
+    galerie: { text: "Fünf Aufnahmen aus Fassung 1.0.0 im Dunkelmodus, mit den fünf Reitern der App. Die Betankungen darin sind erfundene Beispieldaten.", bilder: [
+      { titel: "Die Übersicht", text: "Letzte Betankung, Preis-Trend gegen die letzten zwölf Betankungen und die Zahlen des Jahres: Ausgaben, Strecke, Getankt, Verbrauch." },
+      { titel: "Die Einträge", text: "Jede Betankung mit Datum, Tankstelle, Literpreis, Menge und Strecke — rechts Gesamtpreis und Verbrauch auf 100 km." },
       { titel: "Jahre im Vergleich", text: "Ausgaben und Kilometer je Jahr in einem Diagramm, darunter der Verbrauch je Jahr." },
+      { titel: "Literpreis im Verlauf", text: "Der Preis über alle Betankungen, darunter günstigster und teuerster Preis sowie der Mittelwert." },
       { titel: "Meine Fahrzeuge", text: "Das aktive Fahrzeug mit Kraftstoff, Fahrzeugdaten und letzter Tankfüllung — gewechselt wird per Knopf." }
     ] },
     funktionen: [
@@ -75,9 +81,12 @@ window.PRODUKT_DATEN = {
       { symbol: "schild", titel: "Nothing is guessed", text: "If a value is missing, the field stays empty. The app only works with what you entered." }
     ],
     erlebnis: { titel: "Price times litres", kurz: "Pump", text: "The price per litre is fixed, quantity and amount run along — exactly the sum Tankspur checks on every receipt." },
-    galerie: { text: "Two screens from the current build in dark mode, with the app’s five tabs.", bilder: [
-      { titel: "Years compared", text: "Spending and kilometres per year in one chart, consumption per year below." },
-      { titel: "My vehicles", text: "The active vehicle with fuel, vehicle data and last fill-up — switch with one button." }
+    galerie: { text: "Five screens from version 1.0.0 in dark mode, with the app’s five tabs. The fill-ups shown are made-up sample data.", bilder: [
+      { titel: "The overview", text: "Last fill-up, price trend against the last twelve fill-ups and the year’s figures: spending, distance, fuel, consumption." },
+      { titel: "The entries", text: "Every fill-up with date, station, price per litre, amount and distance — on the right total price and consumption per 100 km." },
+      { titel: "Years compared", text: "Spending and kilometres per year in one chart, with consumption per year below." },
+      { titel: "Price over time", text: "The price across all fill-ups, with cheapest and dearest price and the average below." },
+      { titel: "My vehicles", text: "The active vehicle with fuel, vehicle data and last fill-up — switched with a button." }
     ] },
     funktionen: [
       { gruppe: "Logging", symbol: "zapfsaeule", liste: [

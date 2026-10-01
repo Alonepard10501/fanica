@@ -75,7 +75,7 @@
 }
 .gal-spur::-webkit-scrollbar { display: none; }
 .gal-spur:focus-visible { outline: 2px solid var(--akzent-hell); outline-offset: 4px; border-radius: 12px; }
-.galerie-neu.wenige .gal-spur { justify-content: center; }
+.gal-spur { justify-content: safe center; }
 .gal-teil { scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px; }
 .gal-telefon {
   display: block; width: 100%; padding: 7px; cursor: zoom-in;

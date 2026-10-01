@@ -3,9 +3,12 @@ window.PRODUKT_DATEN = {
   app: "scheinbar", seite: "scheinbar", stil: "b-lantern",
   symbol: "bilder/marke/app-scheinbar.webp",
   bilder: [
-    { datei: "bilder/app/scheinbar-1-start.webp", b: 540, h: 1200 },
-    { datei: "bilder/app/scheinbar-4-ziehungen.webp", b: 540, h: 1200 },
-    { datei: "bilder/app/scheinbar-5-statistik.webp", b: 540, h: 1200 }
+    { datei: "bilder/app/scheinbar-start.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/scheinbar-scheine.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/scheinbar-erfassen.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/scheinbar-schein.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/scheinbar-ziehungen.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/scheinbar-statistik.webp", b: 540, h: 1200 }
   ],
   de: {
     fakten: ["Android", "BINGO! · Lotto · Eurojackpot", "Daten nur auf dem Gerät"],
@@ -18,11 +21,14 @@ window.PRODUKT_DATEN = {
     ],
     erlebnis: { titel: "Eine BINGO!-Ziehung zum Ausprobieren", kurz: "Trommel", text: "Die Trommel zieht Kugel um Kugel auf eine Beispielkarte und zählt mit, welche Reihe voll wird — so prüft die App jeden BINGO!-Schein." },
     galerie: {
-      text: "Drei Aufnahmen aus der Testfassung im Dunkelmodus. Die Scheine darin sind Beispiele.",
+      text: "Sechs Aufnahmen aus Fassung 1.0.16 im Dunkelmodus. Die Scheine darin sind Beispiele; die Statistik ist ein Premium-Bereich und stammt aus einer früheren Testfassung.",
       bilder: [
         { titel: "Der Einstieg", text: "Scannen, von Hand eingeben oder BINGO! live — darunter die aktiven Scheine, unten die vier Bereiche." },
-        { titel: "Alle Ziehungen", text: "BINGO!, Lotto 6aus49 und Eurojackpot je mit eigenem Reiter, jede Ziehung mit Datum und Zusatzzahl." },
-        { titel: "Was die Zahlen sagen", text: "Häufigste Zahlen mit Zähler — umschaltbar auf eigene Zahlen und Gewinne, je Zeitfenster und Ziehungstag." }
+        { titel: "Die Scheine", text: "Nach Teilnahmezeitraum gruppiert, je Schein ein Zeichen: Uhr bei ausstehender Ziehung, Pokal bei Gewinn. Aktiv und Archiv liegen hinter einem Schalter." },
+        { titel: "Schein erfassen", text: "Spielart, Teilnahmezeitraum, Losnummer, Zusatzspiele, Superzahl und das Zahlenraster — grau hinterlegt, was zuletzt gezogen wurde." },
+        { titel: "Der Schein im Detail", text: "Oben der Stand mit Gewinnklasse, darunter die gezogenen Zahlen je Ziehung und dein Feld mit den Treffern." },
+        { titel: "Alle Ziehungen", text: "BINGO!, Lotto 6aus49 und Eurojackpot je mit eigenem Reiter, jede Ziehung mit Datum und Zusatzzahl; ohne Premium sind es die letzten zehn." },
+        { titel: "Was die Zahlen sagen", text: "Premium: häufigste Zahlen mit Zähler — umschaltbar auf eigene Zahlen und Gewinne, je Zeitfenster und Ziehungstag." }
       ]
     },
     funktionen: [
@@ -86,11 +92,14 @@ window.PRODUKT_DATEN = {
     ],
     erlebnis: { titel: "A BINGO! draw to try", kurz: "Drum", text: "The drum draws ball after ball onto a sample card and counts which line fills up — the same way the app checks every BINGO! ticket." },
     galerie: {
-      text: "Three shots from the test build in dark mode. The tickets in them are examples.",
+      text: "Six captures of version 1.0.16 in dark mode. The tickets in them are examples; the statistics are a Premium area and come from an earlier test build.",
       bilder: [
         { titel: "The starting point", text: "Scan, type it in or BINGO! live — your active tickets below, the four areas at the bottom." },
-        { titel: "Every draw", text: "BINGO!, Lotto 6aus49 and Eurojackpot each on their own tab, every draw with date and bonus number." },
-        { titel: "What the numbers say", text: "Most frequent numbers with their count — switchable to your own numbers and wins, per time window and draw day." }
+        { titel: "Your tickets", text: "Grouped by participation period, one sign per ticket: a clock while the draw is pending, a trophy for a win. Active and archive sit behind one switch." },
+        { titel: "Capture a ticket", text: "Game, participation period, lot number, extra games, super number and the number grid — greyed out are the numbers drawn most recently." },
+        { titel: "The ticket in detail", text: "At the top the status with prize class, below the drawn numbers per draw and your field with its hits." },
+        { titel: "Every draw", text: "BINGO!, Lotto 6aus49 and Eurojackpot each on their own tab, every draw with date and bonus number; without Premium it is the last ten." },
+        { titel: "What the numbers say", text: "Premium: most frequent numbers with their count — switchable to your own numbers and wins, per time window and draw day." }
       ]
     },
     funktionen: [

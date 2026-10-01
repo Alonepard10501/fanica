@@ -1351,10 +1351,10 @@
     const knopf   = document.getElementById("saeule-knopf");
 
     const TANKUNGEN = [
-      { datum: "2021-06-29", ort: "Oil Husum",     preis: 1.540, liter: 60.67 },
-      { datum: "2021-07-23", ort: "BFT Hattstedt", preis: 1.580, liter: 12.67 },
-      { datum: "2021-07-28", ort: "Oil Husum",     preis: 1.620, liter: 18.52 },
-      { datum: "2021-08-01", ort: "BFT Hattstedt", preis: 1.600, liter: 15.67 }
+      { datum: "2026-03-04", ort: "Nordtank Musterstadt", preis: 1.689, liter: 48.36 },
+      { datum: "2026-03-19", ort: "Deichtank Beispielort", preis: 1.749, liter: 22.15 },
+      { datum: "2026-04-02", ort: "Nordtank Musterstadt", preis: 1.859, liter: 41.80 },
+      { datum: "2026-04-21", ort: "Kreuztank Probedorf",  preis: 1.629, liter: 35.04 }
     ];
 
     const ZAPF_MS = 5200;

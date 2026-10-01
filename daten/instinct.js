@@ -4,7 +4,6 @@ window.PRODUKT_DATEN = {
   symbol: "bilder/marke/app-instinct.webp",
   bilder: [
     { datei: "bilder/app/instinct-1-start.webp", b: 540, h: 1170 },
-    { datei: "bilder/instinct/runde.webp", b: 580, h: 1341 },
     { datei: "bilder/app/instinct-2-ziel.webp", b: 540, h: 1170 },
     { datei: "bilder/app/instinct-3-statistik.webp", b: 540, h: 1170 }
   ],
@@ -20,7 +19,6 @@ window.PRODUKT_DATEN = {
     erlebnis: { titel: "Fünf Wertungssysteme, eine Scheibe", kurz: "Scheibe", text: "Tipp auf eine Zone — du siehst sofort, was sie in jedem System zählt. Genau diese Umrechnung nimmt dir die App im Parcours ab." },
     galerie: { text: "Aufnahmen aus der laufenden App, im Dunkelmodus.", bilder: [
       { titel: "Die Startseite", text: "Neue Runde, Profil, Spine-Rechner und Statistik — der grüne Knopf führt direkt zur Runde." },
-      { titel: "Runde einrichten", text: "Wertungssystem, Variante, Modus, Duell, Gruppe, Schützen und Parcours auf einer Seite." },
       { titel: "Ziel für Ziel", text: "Entfernung, Pflock und Steigung oben, darunter das Zielfoto und die großen Trefferzonen." },
       { titel: "Die Statistik", text: "Punkteschnitt, Trefferquote je Zone und Rekord, filterbar nach Schütze, Zuggewicht und Modus." }
     ] },
@@ -98,7 +96,6 @@ window.PRODUKT_DATEN = {
     erlebnis: { titel: "Five scoring systems, one target", kurz: "Target", text: "Tap a zone and see at once what it counts in every system. That is exactly the conversion the app does for you on the course." },
     galerie: { text: "Screens from the running app, in dark mode.", bilder: [
       { titel: "The home screen", text: "New round, profile, spine calculator and statistics — the green button leads straight to the round." },
-      { titel: "Setting up a round", text: "Scoring system, variant, mode, duel, group, archers and course on one page." },
       { titel: "Target by target", text: "Distance, peg and slope at the top, below them the target photo and the large hit zones." },
       { titel: "The statistics", text: "Average score, hit rate per zone and record, filtered by archer, draw weight and mode." }
     ] },

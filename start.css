@@ -26,7 +26,12 @@ body.start {
 .start .hero-logos { gap: clamp(var(--s4), 3vw, var(--s7)); margin-bottom: var(--s5); }
 .start .hero-logo { width: clamp(140px, min(17vw, 26vh), 300px); margin: 0; }
 .start .hero-logo-klein { width: clamp(88px, min(10.5vw, 16vh), 186px); }
-.start .hero .kennung { margin: 0 0 var(--s4); }
+.start .hero .kennung { margin: 0 0 var(--s3); }
+.start .hero-studio {
+  display: block; width: auto; height: clamp(60px, 8.5vh, 96px);
+  margin: 0 auto var(--s3);
+  filter: drop-shadow(0 0 10px rgba(214, 92, 255, .55)) drop-shadow(0 0 26px rgba(168, 40, 220, .35));
+}
 .start .hero-text { margin-top: 0; }
 .start .hero-text::after { margin-top: var(--s5); }
 .hero-knopf { margin-top: var(--s5); }
@@ -34,6 +39,13 @@ body.start {
 /* ----------------------------------------------------------- Karussell */
 .start .karussell { margin: var(--s6) auto 0; }
 @media (min-width: 701px) and (max-height: 900px) {
+  .start .hero { padding-top: clamp(88px, 12vh, 140px); }
+  .start .hero-logos { margin-bottom: var(--s4); }
+  .start .hero-logo { width: clamp(140px, min(17vw, 22vh), 300px); }
+  .start .hero-logo-klein { width: clamp(88px, min(10.5vw, 13.5vh), 186px); }
+  .start .hero-studio { height: clamp(52px, 7.5vh, 66px); }
+  .hero-knopf { margin-top: var(--s4); }
+  .start .karussell { margin-top: var(--s5); }
   .start .hero .kennung { margin-bottom: var(--s3); }
   .start .hero-text::after { margin-top: var(--s4); }
   .start .hero-text { line-height: 1.45; }
@@ -266,6 +278,7 @@ body.start {
   .start .vergleich thead th[class^="app-"] { width: calc((100% - 7.5rem) / 10); }
   .start .vergleich tbody th { font-size: .8rem; }
   .start .hero { padding-top: 96px; }
+  .start .hero-studio { height: clamp(44px, 7vh, 60px); }
   .start .karussell { margin-top: var(--s6); }
   .filterleiste { flex-direction: column; align-items: stretch; }
   .verteilung { flex: none; max-width: none; }
