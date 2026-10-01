@@ -23,6 +23,7 @@
        "live"    = öffentlich erreichbar, wird zum Knopf
        "test"    = Google Play, geschlossener Test
        "pruefung"= Apple prüft noch
+       "spaeter" = Store-Weg ruht, kommt später
      Geprüft 12.08.: FaNiCa Play 200 ✓ · FaNiCa Apple ✓ (1.170) ·
      Instinct Apple ✓ (1.0.1) · Instinct Play 404 · NeonPunkt
      Play/Apple 404. Sobald etwas freigegeben ist, hier auf "live"
@@ -59,7 +60,7 @@
          `neonpunkt-info` — `neonpunkt` daneben ist das SPIEL, nicht
          die Seite. Beide liegen im selben Repo, nicht verwechseln. */
       webseite: "https://alonepard10501.github.io/fanica-fun/neonpunkt-info/",
-      standAndroid: "test", standApple: "pruefung", stil: "b-helix"
+      standAndroid: "test", standApple: "spaeter", stil: "b-helix"
     },
     /* 🔴 SetUpLeiste ist ein WINDOWS-PROGRAMM, kein Store-Produkt.
        Statt Android/Apple gibt es genau einen Weg: die Installations-
@@ -105,8 +106,8 @@
         knopf: hol("aktion.webseiteKnopf"), unter: hol("aktion.webseiteUnter") });
     }
     /* Beschriftung und Erklärung je Zustand */
-    const wartetext = (stand) => stand === "test"
-      ? hol("aktion.standTest") : hol("aktion.standPruefung");
+    const wartetext = (stand) => stand === "test" ? hol("aktion.standTest")
+      : stand === "spaeter" ? hol("aktion.standSpaeter") : hol("aktion.standPruefung");
     const offen = wege.filter(w => w.stand !== "live");
 
     return `
@@ -179,6 +180,8 @@
       <circle cx="8.3" cy="6.3" r=".85" fill="currentColor" stroke="none"/>
       <path d="M6 12.4h9M6 16h6"/></svg>`
   };
+
+  window.BEZUG_ZEICHEN = ZEICHEN;
 
   function bauen() {
     const t = TEXTE[window.SPRACHE] && TEXTE[window.SPRACHE].instinct

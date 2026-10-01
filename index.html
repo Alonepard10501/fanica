@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FaNiCa — Apps und Werkzeuge aus einem Ein-Mann-Studio in Nordfriesland</title>
-<meta name="description" content="Vier fertige Produkte, sechs im Test und eines im Bau — aus einem Ein-Mann-Medienstudio: FaNiCa Fun (Tipprunde), Instinct Scoring (Bogensport), NeonPunkt (Klick-Spiel), die SetUpLeiste für Windows sowie Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AbleseBar und die Instinct Familie.">
+<meta name="description" content="Elf Produkte aus einem Ein-Mann-Medienstudio — drei erhältlich, sechs im Test, zwei in Arbeit: FaNiCa Fun (Tipprunde), Instinct Scoring (Bogensport), NeonPunkt (Klick-Spiel), die SetUpLeiste für Windows sowie Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AbleseBar und die Instinct Familie.">
 <meta name="author" content="FaNiCa">
 <meta name="theme-color" content="#07070A">
 <meta name="color-scheme" content="dark">
@@ -21,12 +21,23 @@
 <meta name="twitter:description" content="FaNiCa Fun, Instinct Scoring, NeonPunkt, die SetUpLeiste und sieben weitere — ohne Tracking, ohne Konto.">
 <meta name="twitter:image" content="bilder/marke/og-bild.png">
 
+<link rel="canonical" href="https://alonepard10501.github.io/fanica/">
 <link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+  {"@type": "WebSite", "@id": "https://alonepard10501.github.io/fanica/#website", "url": "https://alonepard10501.github.io/fanica/", "name": "FaNiCa", "inLanguage": ["de", "en"], "publisher": {"@id": "https://alonepard10501.github.io/fanica/#falk"}},
+  {"@type": "Person", "@id": "https://alonepard10501.github.io/fanica/#falk", "name": "Falk Carstensen", "email": "mailto:fanicafuntipp@gmail.com", "address": {"@type": "PostalAddress", "addressRegion": "Nordfriesland", "addressCountry": "DE"}},
+  {"@type": "ItemList", "name": "Produkte", "numberOfItems": 11, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "FaNiCa Fun", "url": "https://alonepard10501.github.io/fanica/fanica-fun.html"}, {"@type": "ListItem", "position": 2, "name": "Instinct Scoring", "url": "https://alonepard10501.github.io/fanica/instinct-scoring.html"}, {"@type": "ListItem", "position": 3, "name": "NeonPunkt", "url": "https://alonepard10501.github.io/fanica/neonpunkt.html"}, {"@type": "ListItem", "position": 4, "name": "SetUpLeiste", "url": "https://alonepard10501.github.io/fanica/setupleiste.html"}, {"@type": "ListItem", "position": 5, "name": "Campus Clash", "url": "https://alonepard10501.github.io/fanica/campus-clash.html"}, {"@type": "ListItem", "position": 6, "name": "YourFilm", "url": "https://alonepard10501.github.io/fanica/yourfilm.html"}, {"@type": "ListItem", "position": 7, "name": "ZeitAnker", "url": "https://alonepard10501.github.io/fanica/zeitwissen.html"}, {"@type": "ListItem", "position": 8, "name": "Instinct Familie", "url": "https://alonepard10501.github.io/fanica/instinct-familie.html"}, {"@type": "ListItem", "position": 9, "name": "Tankspur", "url": "https://alonepard10501.github.io/fanica/tankspur.html"}, {"@type": "ListItem", "position": 10, "name": "ScheinBar", "url": "https://alonepard10501.github.io/fanica/scheinbar.html"}, {"@type": "ListItem", "position": 11, "name": "AbleseBar", "url": "https://alonepard10501.github.io/fanica/ablesebar.html"}]}
+]}
+</script>
 <link rel="apple-touch-icon" href="bilder/marke/icon-192.png">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="start.css">
+<link rel="stylesheet" href="gemeinsam.css">
+<script src="uebergang.js"></script>
 </head>
 
-<body>
+<body class="start">
 
 <a class="sprunglink" href="#inhalt" data-t="nav.sprung">Zum Inhalt springen</a>
 
@@ -44,7 +55,8 @@
     <span>FaNiCa<b>.</b></span>
   </a>
   <nav class="kopf-nav" aria-label="Hauptnavigation">
-    <a href="#fanica" data-t="nav.apps">Die Apps</a>
+    <a href="#produkte" data-t="nav.apps">Die Apps</a>
+    <a href="#vergleich" data-t="nav.vergleich">Vergleich</a>
     <a href="#ueber" data-t="nav.ueber">Über mich</a>
     <a href="#kontakt" data-t="nav.kontakt">Kontakt</a>
     <button class="sprachknopf" id="sprachknopf" data-t="meta.sprachknopf"
@@ -56,22 +68,24 @@
 <main id="inhalt">
 
 <section class="hero abschnitt" id="oben" data-kapitel="intro">
-  <div class="licht licht-intro" aria-hidden="true"><span></span><span></span></div>
-
   <div class="hero-logos">
     <img class="hero-logo" src="bilder/marke/logo-fanica.webp"
          alt="FaNiCa Fun — Logo" width="420" height="225" fetchpriority="high">
     <img class="hero-logo hero-logo-klein" src="bilder/marke/logo-kooperation.webp"
-         alt="In Kooperation mit Bogensport Instinct" width="300" height="264"
-         loading="lazy">
+         alt="In Kooperation mit Bogensport Instinct" width="300" height="264">
   </div>
 
   <p class="kennung zentriert" data-t="hero.augenbraue">Ein-Mann-Medienstudio</p>
 
   <h1 class="gross hero-text" data-t="hero.text"></h1>
 
-  <div class="karussell" aria-label="Die Produkte">
+  <a class="nbtn b-kante hero-knopf" href="#produkte">
+    <span data-t="start.alleProdukte">Alle Produkte im Überblick</span></a>
+
+  <div class="karussell" role="region" aria-roledescription="Karussell"
+       data-t="start.karussellName" data-t-attr="aria-label" aria-label="Die Produkte">
     <button class="karussell-pfeil links" type="button"
+            data-t="start.karussellLinks" data-t-attr="aria-label"
             aria-label="Nach links drehen">‹</button>
 
     <div class="karussell-buehne">
@@ -168,490 +182,316 @@
     </div>
 
     <button class="karussell-pfeil rechts" type="button"
+            data-t="start.karussellRechts" data-t-attr="aria-label"
             aria-label="Nach rechts drehen">›</button>
-
-    <p class="karussell-hinweis" data-t="hero.karussellHinweis"></p>
   </div>
 
-  <div class="scrollhinweis" aria-hidden="true"><span data-t="hero.scrollHinweis">Scrollen</span></div>
+  <div class="karussell-punkte" id="karussell-punkte"
+       role="group" data-t="start.karussellWahl" data-t-attr="aria-label"></div>
+  <p class="karussell-hinweis" data-t="hero.karussellHinweis"></p>
+  <p class="unsichtbar" id="karussell-stand" aria-live="polite"></p>
 </section>
 
-<section class="abschnitt" id="fanica" data-kapitel="fanica" data-nr="01" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-spuren" aria-hidden="true"><span></span><span></span></div>
-  <div class="spuren" aria-hidden="true"></div>
-
+<section class="abschnitt start-abschnitt" id="produkte" data-kapitel="produkte">
   <div class="huelle">
+    <header class="abschnitt-kopf auf">
+      <p class="kennung" data-t="start.produkteKennung">Die Produkte</p>
+      <h2 data-t="start.produkteTitel">Elf Produkte, ein Studio</h2>
+      <p data-t="start.produkteText"></p>
+    </header>
 
-    <div class="kapitelkopf auf">
-      <p class="status-pille" data-t="fanica.statusPille"></p>
-      <img class="kapitel-logo" src="bilder/marke/logo-fanica.webp"
-           alt="FaNiCa Fun — Logo" width="380" height="204" loading="lazy">
-      <h2 data-t="fanica.name">FaNiCa Fun</h2>
-      <p class="kooperationszeile" data-t="fanica.untertitel"></p>
+    <div class="filterleiste auf">
+      <div class="filter" id="produkt-filter" role="group"
+           data-t="start.filterName" data-t-attr="aria-label"></div>
+      <div class="verteilung" id="produkt-verteilung" aria-hidden="true"></div>
     </div>
 
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-fanica.webp" alt="FaNiCa Fun — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
+    <div class="produkte" id="produkt-liste">
 
-    <div class="huelle-schmal mittig auf">
-      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
-        <span data-t="fanica.claim">Tippe die ersten Fünf.</span><br>
-        <span class="leise" data-t="fanica.claimZwei"></span>
-      </h3>
-      <p class="gross" data-t="fanica.positionierung"></p>
-    </div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-ripple" href="fanica-fun.html">
-        <span data-t="fanica.mehrKnopf">Alles über FaNiCa Fun</span></a>
-      <a class="nbtn b-kante" href="https://alonepard10501.github.io/fanica-fun/"
-         target="_blank" rel="noopener">
-        <span data-t="aktion.zurWebseite">Zur App-Webseite ↗</span></a>
-      <p class="weiter-hinweis" data-t="fanica.mehrText"></p>
-    </div>
-
-    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
-      <h3 class="bezug-titel" data-t="aktion.holenTitel">Wo es die App gibt</h3>
-      <div id="bezug-fanica"></div>
-      <p class="preis" data-t="fanica.preis"></p>
-      <div class="hinweis">
-        <p data-t="fanica.hinweis"></p>
-        <p data-t="fanica.unabhaengig"></p>
+    <article class="produkt auf" id="fanica" data-kapitel="fanica" data-stufe="live">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">01</span>
+        <span class="produkt-stufe" data-t="fanica.karteStatus"></span>
       </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="instinct" data-kapitel="instinct" data-nr="02" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-wald" aria-hidden="true"><span></span><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf auf">
-      <p class="status-pille" data-t="instinct.statusPille"></p>
-
-      <div class="logo-paar">
-        <img class="kapitel-logo" src="bilder/marke/logo-instinct.webp"
-             alt="Instinct Scoring — Logo" width="260" height="260" loading="lazy">
-        <span class="logo-mal" aria-hidden="true">×</span>
-        <img class="kapitel-logo kapitel-logo-klein" src="bilder/marke/logo-kooperation.webp"
-             alt="In Kooperation mit Bogensport Instinct" width="240" height="211"
-             loading="lazy">
-      </div>
-      <h2 data-t="instinct.name">Instinct Scoring</h2>
-      <p class="kooperationszeile" data-t="instinct.kooperation"></p>
-    </div>
-
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-instinct.webp" alt="Instinct Scoring — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
-
-    <div class="huelle-schmal mittig auf">
-      <div class="claim" aria-label="Track. Score. Improve.">
-        <span>TRACK.</span><span>SCORE.</span><span>IMPROVE.</span>
-      </div>
-      <p class="gross leise" data-t="instinct.claimDeutsch"></p>
-      <blockquote class="zitat" data-t="instinct.zitat"></blockquote>
-      <p class="gross" data-t="instinct.positionierung"></p>
-    </div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-grass" href="instinct-scoring.html">
-        <span data-t="instinct.mehrKnopf">Alles über Instinct Scoring</span></a>
-      <a class="nbtn b-kante" href="https://alonepard10501.github.io/instinct-scoring-web/"
-         target="_blank" rel="noopener">
-        <span data-t="aktion.zurWebseite">Zur App-Webseite ↗</span></a>
-      <p class="weiter-hinweis" data-t="instinct.mehrText"></p>
-    </div>
-
-    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
-      <h3 class="bezug-titel" data-t="aktion.holenTitel">Wo es die App gibt</h3>
-      <div id="bezug-instinct"></div>
-      <p class="preis" data-t="instinct.preis"></p>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="neonpunkt" data-kapitel="neonpunkt" data-nr="03" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf mitte auf">
-      <p class="status-pille" data-t="neonpunkt.statusPille"></p>
-      <img class="kapitel-logo kapitel-logo-klein" src="bilder/marke/app-neonpunkt.webp"
-           alt="NeonPunkt — App-Symbol" width="150" height="150" loading="lazy">
-      <h2 data-t="neonpunkt.name">NeonPunkt</h2>
-      <p class="kooperationszeile" data-t="neonpunkt.untertitel"></p>
-    </div>
-
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-neonpunkt.webp" alt="NeonPunkt — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
-
-    <div class="huelle-schmal mittig auf">
-      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
-        <span data-t="neonpunkt.claim">Ein Punkt. 48 Stunden.</span><br>
-        <span class="leise" data-t="neonpunkt.claimZwei"></span>
-      </h3>
-      <p class="gross" data-t="neonpunkt.positionierung"></p>
-    </div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-helix" href="neonpunkt.html">
-        <span data-t="neonpunkt.mehrKnopf">Alles über NeonPunkt</span></a>
-      <a class="nbtn b-kante" href="https://alonepard10501.github.io/fanica-fun/neonpunkt-info/"
-         target="_blank" rel="noopener">
-        <span data-t="aktion.zurWebseite">Zur App-Webseite ↗</span></a>
-      <p class="weiter-hinweis" data-t="neonpunkt.mehrText"></p>
-    </div>
-
-    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
-      <h3 class="bezug-titel" data-t="aktion.holenTitel">Wo es die App gibt</h3>
-      <div id="bezug-neonpunkt"></div>
-      <p class="preis" data-t="neonpunkt.preis"></p>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="setupleiste" data-kapitel="setupleiste" data-nr="04" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf mitte auf">
-      <p class="status-pille" data-t="setupleiste.statusPille"></p>
-      <h2 data-t="setupleiste.name">SetUpLeiste</h2>
-      <p class="kooperationszeile" data-t="setupleiste.untertitel"></p>
-    </div>
-
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-setupleiste.webp" alt="SetUpLeiste — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
-
-    <div class="huelle-schmal mittig auf">
-      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
-        <span data-t="setupleiste.claim">Was dein Rechner gerade tut.</span><br>
-        <span class="leise" data-t="setupleiste.claimZwei"></span>
-      </h3>
-      <p class="gross" data-t="setupleiste.positionierung"></p>
-    </div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-lantern" href="setupleiste.html">
-        <span data-t="setupleiste.mehrKnopf">Alles über die SetUpLeiste</span></a>
-      <p class="weiter-hinweis" data-t="setupleiste.mehrText"></p>
-    </div>
-
-    <div class="auf" style="margin-top:clamp(2.4rem,5vw,3.4rem)">
-      <h3 class="bezug-titel" data-t="aktion.holenTitelProgramm">Wo es das Programm gibt</h3>
-      <div id="bezug-setupleiste"></div>
-      <p class="preis" data-t="setupleiste.preis"></p>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="campus" data-kapitel="campus" data-nr="05" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf mitte auf">
-      <p class="status-pille" data-t="campus.statusPille"></p>
-      <h2 data-t="campus.name">Campus Clash</h2>
-      <p class="kooperationszeile" data-t="campus.untertitel"></p>
-    </div>
-
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-campus.webp" alt="Campus Clash — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
-
-    <div class="huelle-schmal mittig auf">
-      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
-        <span data-t="campus.claim">Deine Schulzeit läuft weiter.</span><br>
-        <span class="leise" data-t="campus.claimZwei"></span>
-      </h3>
-      <p class="gross" data-t="campus.positionierung"></p>
-      <p class="preis" data-t="campus.inArbeit"></p>
-    </div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-heat" href="campus-clash.html">
-        <span data-t="campus.mehrKnopf">Alles über Campus Clash</span></a>
-      <p class="weiter-hinweis" data-t="campus.mehrText"></p>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="yourfilm" data-kapitel="yourfilm" data-nr="06" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf mitte auf">
-      <p class="status-pille" data-t="yourfilm.statusPille"></p>
-      <h2 data-t="yourfilm.name">YourFilm</h2>
-      <p class="kooperationszeile" data-t="yourfilm.untertitel"></p>
-    </div>
-
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-yourfilm.webp" alt="YourFilm — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
-
-    <div class="huelle-schmal mittig auf">
-      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
-        <span data-t="yourfilm.claim">Scannen. Einsortieren. Fertig.</span><br>
-        <span class="leise" data-t="yourfilm.claimZwei"></span>
-      </h3>
-      <p class="gross" data-t="yourfilm.positionierung"></p>
-      <p class="preis" data-t="yourfilm.inArbeit"></p>
-    </div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-heat" href="yourfilm.html">
-        <span data-t="yourfilm.mehrKnopf">Alles über YourFilm</span></a>
-      <p class="weiter-hinweis" data-t="yourfilm.mehrText"></p>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="zeitwissen" data-kapitel="zeitwissen" data-nr="07" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf mitte auf">
-      <p class="status-pille" data-t="zeitwissen.statusPille"></p>
-      <h2 data-t="zeitwissen.name">ZeitAnker</h2>
-      <p class="kooperationszeile" data-t="zeitwissen.untertitel"></p>
-    </div>
-
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-zeitwissen.webp" alt="ZeitAnker — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
-
-    <div class="huelle-schmal mittig auf">
-      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
-        <span data-t="zeitwissen.claim">Einstempeln. Fertig.</span><br>
-        <span class="leise" data-t="zeitwissen.claimZwei"></span>
-      </h3>
-      <p class="gross" data-t="zeitwissen.positionierung"></p>
-      <p class="preis" data-t="zeitwissen.inArbeit"></p>
-    </div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-heat" href="zeitwissen.html">
-        <span data-t="zeitwissen.mehrKnopf">Alles über ZeitAnker</span></a>
-      <p class="weiter-hinweis" data-t="zeitwissen.mehrText"></p>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="familie" data-kapitel="familie" data-nr="08" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-wald" aria-hidden="true"><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf mitte auf">
-      <p class="status-pille" data-t="familie.statusPille"></p>
-      <h2 data-t="familie.name">Instinct Familie</h2>
-      <p class="kooperationszeile" data-t="familie.untertitel"></p>
-    </div>
-
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-familie.webp" alt="Instinct Familie — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
-
-    <div class="huelle-schmal mittig auf">
-      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
-        <span data-t="familie.claim">Zehn Apps. Ein Bogensport.</span><br>
-        <span class="leise" data-t="familie.claimZwei"></span>
-      </h3>
-      <p class="gross" data-t="familie.positionierung"></p>
-      <p class="preis" data-t="familie.inArbeit"></p>
-    </div>
-
-    <div class="familie-apps auf" id="familie-apps"></div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-grass" href="instinct-familie.html">
-        <span data-t="familie.mehrKnopf">Alles über die Instinct Familie</span></a>
-      <p class="weiter-hinweis" data-t="familie.mehrText"></p>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="tankspur" data-kapitel="tankspur" data-nr="09" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf mitte auf">
-      <p class="status-pille" data-t="tankspur.statusPille"></p>
-      <h2 data-t="tankspur.name">Tankspur</h2>
-      <p class="kooperationszeile" data-t="tankspur.untertitel"></p>
-    </div>
-
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-tankspur.webp" alt="Tankspur — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
-
-    <div class="huelle-schmal mittig auf">
-      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
-        <span data-t="tankspur.claim">Tanken. Eintippen.</span><br>
-        <span class="leise" data-t="tankspur.claimZwei"></span>
-      </h3>
-      <p class="gross" data-t="tankspur.positionierung"></p>
-      <p class="preis" data-t="tankspur.inArbeit"></p>
-    </div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-heat" href="tankspur.html">
-        <span data-t="tankspur.mehrKnopf">Alles über Tankspur</span></a>
-      <p class="weiter-hinweis" data-t="tankspur.mehrText"></p>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="scheinbar" data-kapitel="scheinbar" data-nr="10" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf mitte auf">
-      <p class="status-pille" data-t="scheinbar.statusPille"></p>
-      <h2 data-t="scheinbar.name">ScheinBar</h2>
-      <p class="kooperationszeile" data-t="scheinbar.untertitel"></p>
-    </div>
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-scheinbar.webp" alt="ScheinBar — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
-
-    <div class="huelle-schmal mittig auf">
-      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
-        <span data-t="scheinbar.claim">Fotografieren.</span><br>
-        <span class="leise" data-t="scheinbar.claimZwei"></span>
-      </h3>
-      <p class="gross" data-t="scheinbar.positionierung"></p>
-      <p class="preis" data-t="scheinbar.inArbeit"></p>
-    </div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-lantern" href="scheinbar.html">
-        <span data-t="scheinbar.mehrKnopf">Alles über ScheinBar</span></a>
-      <p class="weiter-hinweis" data-t="scheinbar.mehrText"></p>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="ablesebar" data-kapitel="ablesebar" data-nr="11" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="licht licht-punkt" aria-hidden="true"><span></span></div>
-
-  <div class="huelle">
-
-    <div class="kapitelkopf mitte auf">
-      <p class="status-pille" data-t="ablesebar.statusPille"></p>
-      <h2 data-t="ablesebar.name">AbleseBar</h2>
-      <p class="kooperationszeile" data-t="ablesebar.untertitel"></p>
-    </div>
-    <div class="app-symbol auf">
-      <img src="bilder/marke/app-ablesebar.webp" alt="AbleseBar — App-Symbol"
-           width="128" height="128" loading="lazy" decoding="async">
-    </div>
-
-    <div class="huelle-schmal mittig auf">
-      <h3 style="font-size:clamp(1.5rem,4vw,2.7rem)">
-        <span data-t="ablesebar.claim">Ablesen. Abrechnen. Fertig.</span><br>
-        <span class="leise" data-t="ablesebar.claimZwei"></span>
-      </h3>
-      <p class="gross" data-t="ablesebar.positionierung"></p>
-      <p class="preis" data-t="ablesebar.inArbeit"></p>
-    </div>
-
-    <div class="auf weiterlesen">
-      <a class="nbtn b-lantern" href="ablesebar.html">
-        <span data-t="ablesebar.mehrKnopf">Alles über AbleseBar</span></a>
-      <p class="weiter-hinweis" data-t="ablesebar.mehrText"></p>
-    </div>
-
-  </div>
-</section>
-
-<section class="abschnitt" id="vergleich" data-kapitel="vergleich">
-  <div class="licht licht-intro" aria-hidden="true"><span></span><span></span></div>
-
-  <div class="huelle">
-    <div class="kapitelkopf auf">
-      <p class="kennung" data-t="vergleich.kennung">Auf einen Blick</p>
-      <h2 data-t="vergleich.titel">Welche App ist für dich?</h2>
-    </div>
-    <p class="gross leise auf" style="max-width:62ch" data-t="vergleich.text"></p>
-
-    <div class="tabelle-huelle auf" id="vergleich-tabelle"></div>
-    <p class="preis auf" style="margin-top:1.2rem" data-t="vergleich.fuss"></p>
-
-    <div class="auf" style="margin-top:clamp(2.6rem,5vw,4rem)">
-      <p class="kennung" data-t="fragen.kennung">Häufige Fragen</p>
-      <h2 style="font-size:clamp(1.6rem,3.4vw,2.6rem)" data-t="fragen.titel">Was oft gefragt wird</h2>
-      <div class="fragen" id="fragen-liste"></div>
-    </div>
-  </div>
-</section>
-
-<section class="abschnitt" id="ueber" data-kapitel="ueber">
-  <div class="licht licht-intro" aria-hidden="true"><span></span><span></span></div>
-
-  <div class="huelle">
-    <div class="block">
-      <div class="block-text auf">
-        <p class="kennung" data-t="ueber.kennung">Kapitel 04</p>
-        <h2 data-t="ueber.titel">Ein Mensch, ein Studio</h2>
-        <p class="gross" data-t="ueber.text"></p>
-        <div class="zahlen" id="ueber-zahlen" style="margin-top:2.2rem"></div>
-      </div>
-
-      <div class="block-bild auf v2">
-        <div class="hero-logos hero-logos-klein">
-          <img src="bilder/marke/logo-fanica.webp" alt="FaNiCa Fun — Logo"
-               width="260" height="140" loading="lazy">
-          <img src="bilder/marke/logo-kooperation.webp"
-               alt="In Kooperation mit Bogensport Instinct"
-               width="220" height="194" loading="lazy">
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="fanica-fun.html" src="bilder/marke/app-fanica.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>FaNiCa Fun</h3>
+          <p class="produkt-art" data-t="fanica.untertitel"></p>
         </div>
       </div>
+      <p class="produkt-claim"><b data-t="fanica.claim"></b>
+        <span data-t="fanica.claimZwei"></span></p>
+      <div class="produkt-wege" data-wege="fanica"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-ripple" href="fanica-fun.html"><span data-t="fanica.mehrKnopf">Alles über FaNiCa Fun</span></a>
+        <a class="produkt-extern" href="https://alonepard10501.github.io/fanica-fun/" target="_blank" rel="noopener"
+           data-t="aktion.zurWebseite">Zur App-Webseite ↗</a>
+      </div>
+    </article>
+
+    <article class="produkt auf" id="instinct" data-kapitel="instinct" data-stufe="live">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">02</span>
+        <span class="produkt-stufe" data-t="instinct.karteStatus"></span>
+      </div>
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="instinct-scoring.html" src="bilder/marke/app-instinct.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>Instinct Scoring</h3>
+          <p class="produkt-art" data-t="instinct.kooperation"></p>
+        </div>
+      </div>
+      <p class="produkt-claim"><b>Track. Score. Improve.</b>
+        <span data-t="instinct.claimDeutsch"></span></p>
+      <div class="produkt-wege" data-wege="instinct"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-grass" href="instinct-scoring.html"><span data-t="instinct.mehrKnopf">Alles über Instinct Scoring</span></a>
+        <a class="produkt-extern" href="https://alonepard10501.github.io/instinct-scoring-web/" target="_blank" rel="noopener"
+           data-t="aktion.zurWebseite">Zur App-Webseite ↗</a>
+      </div>
+    </article>
+
+    <article class="produkt auf" id="neonpunkt" data-kapitel="neonpunkt" data-stufe="test">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">03</span>
+        <span class="produkt-stufe" data-t="neonpunkt.karteStatus"></span>
+      </div>
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="neonpunkt.html" src="bilder/marke/app-neonpunkt.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>NeonPunkt</h3>
+          <p class="produkt-art" data-t="neonpunkt.untertitel"></p>
+        </div>
+      </div>
+      <p class="produkt-claim"><b data-t="neonpunkt.claim"></b>
+        <span data-t="neonpunkt.claimZwei"></span></p>
+      <div class="produkt-wege" data-wege="neonpunkt"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-helix" href="neonpunkt.html"><span data-t="neonpunkt.mehrKnopf">Alles über NeonPunkt</span></a>
+        <a class="produkt-extern" href="https://alonepard10501.github.io/fanica-fun/neonpunkt-info/" target="_blank" rel="noopener"
+           data-t="aktion.zurWebseite">Zur App-Webseite ↗</a>
+      </div>
+    </article>
+
+    <article class="produkt auf" id="setupleiste" data-kapitel="setupleiste" data-stufe="live">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">04</span>
+        <span class="produkt-stufe" data-t="setupleiste.karteStatus"></span>
+      </div>
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="setupleiste.html" src="bilder/marke/app-setupleiste.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>SetUpLeiste</h3>
+          <p class="produkt-art" data-t="setupleiste.untertitel"></p>
+        </div>
+      </div>
+      <p class="produkt-claim"><b data-t="setupleiste.claim"></b>
+        <span data-t="setupleiste.claimZwei"></span></p>
+      <div class="produkt-wege" data-wege="setupleiste"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-lantern" href="setupleiste.html"><span data-t="setupleiste.mehrKnopf">Alles über SetUpLeiste</span></a>
+      </div>
+    </article>
+
+    <article class="produkt auf" id="campus" data-kapitel="campus" data-stufe="bau">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">05</span>
+        <span class="produkt-stufe" data-t="campus.karteStatus"></span>
+      </div>
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="campus-clash.html" src="bilder/marke/app-campus.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>Campus Clash</h3>
+          <p class="produkt-art" data-t="campus.untertitel"></p>
+        </div>
+      </div>
+      <p class="produkt-claim"><b data-t="campus.claim"></b>
+        <span data-t="campus.claimZwei"></span></p>
+      <div class="produkt-wege" data-wege="campus"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-heat" href="campus-clash.html"><span data-t="campus.mehrKnopf">Alles über Campus Clash</span></a>
+      </div>
+    </article>
+
+    <article class="produkt auf" id="yourfilm" data-kapitel="yourfilm" data-stufe="test">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">06</span>
+        <span class="produkt-stufe" data-t="yourfilm.karteStatus"></span>
+      </div>
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="yourfilm.html" src="bilder/marke/app-yourfilm.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>YourFilm</h3>
+          <p class="produkt-art" data-t="yourfilm.untertitel"></p>
+        </div>
+      </div>
+      <p class="produkt-claim"><b data-t="yourfilm.claim"></b>
+        <span data-t="yourfilm.claimZwei"></span></p>
+      <div class="produkt-wege" data-wege="yourfilm"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-heat" href="yourfilm.html"><span data-t="yourfilm.mehrKnopf">Alles über YourFilm</span></a>
+      </div>
+    </article>
+
+    <article class="produkt auf" id="zeitwissen" data-kapitel="zeitwissen" data-stufe="test">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">07</span>
+        <span class="produkt-stufe" data-t="zeitwissen.karteStatus"></span>
+      </div>
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="zeitwissen.html" src="bilder/marke/app-zeitwissen.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>ZeitAnker</h3>
+          <p class="produkt-art" data-t="zeitwissen.untertitel"></p>
+        </div>
+      </div>
+      <p class="produkt-claim"><b data-t="zeitwissen.claim"></b>
+        <span data-t="zeitwissen.claimZwei"></span></p>
+      <div class="produkt-wege" data-wege="zeitwissen"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-heat" href="zeitwissen.html"><span data-t="zeitwissen.mehrKnopf">Alles über ZeitAnker</span></a>
+      </div>
+    </article>
+
+    <article class="produkt auf" id="familie" data-kapitel="familie" data-stufe="bau">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">08</span>
+        <span class="produkt-stufe" data-t="familie.karteStatus"></span>
+      </div>
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="instinct-familie.html" src="bilder/marke/app-familie.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>Instinct Familie</h3>
+          <p class="produkt-art" data-t="familie.untertitel"></p>
+        </div>
+      </div>
+      <p class="produkt-claim"><b data-t="familie.claim"></b>
+        <span data-t="familie.claimZwei"></span></p>
+      <div class="produkt-wege" data-wege="familie"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-grass" href="instinct-familie.html"><span data-t="familie.mehrKnopf">Alles über Instinct Familie</span></a>
+      </div>
+    </article>
+
+    <article class="produkt auf" id="tankspur" data-kapitel="tankspur" data-stufe="test">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">09</span>
+        <span class="produkt-stufe" data-t="tankspur.karteStatus"></span>
+      </div>
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="tankspur.html" src="bilder/marke/app-tankspur.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>Tankspur</h3>
+          <p class="produkt-art" data-t="tankspur.untertitel"></p>
+        </div>
+      </div>
+      <p class="produkt-claim"><b data-t="tankspur.claim"></b>
+        <span data-t="tankspur.claimZwei"></span></p>
+      <div class="produkt-wege" data-wege="tankspur"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-heat" href="tankspur.html"><span data-t="tankspur.mehrKnopf">Alles über Tankspur</span></a>
+      </div>
+    </article>
+
+    <article class="produkt auf" id="scheinbar" data-kapitel="scheinbar" data-stufe="test">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">10</span>
+        <span class="produkt-stufe" data-t="scheinbar.karteStatus"></span>
+      </div>
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="scheinbar.html" src="bilder/marke/app-scheinbar.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>ScheinBar</h3>
+          <p class="produkt-art" data-t="scheinbar.untertitel"></p>
+        </div>
+      </div>
+      <p class="produkt-claim"><b data-t="scheinbar.claim"></b>
+        <span data-t="scheinbar.claimZwei"></span></p>
+      <div class="produkt-wege" data-wege="scheinbar"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-lantern" href="scheinbar.html"><span data-t="scheinbar.mehrKnopf">Alles über ScheinBar</span></a>
+      </div>
+    </article>
+
+    <article class="produkt auf" id="ablesebar" data-kapitel="ablesebar" data-stufe="test">
+      <div class="produkt-kopf">
+        <span class="produkt-nr">11</span>
+        <span class="produkt-stufe" data-t="ablesebar.karteStatus"></span>
+      </div>
+      <div class="produkt-marke">
+        <img class="produkt-symbol" data-seite="ablesebar.html" src="bilder/marke/app-ablesebar.webp" alt=""
+             width="64" height="64" loading="lazy" decoding="async">
+        <div>
+          <h3>AbleseBar</h3>
+          <p class="produkt-art" data-t="ablesebar.untertitel"></p>
+        </div>
+      </div>
+      <p class="produkt-claim"><b data-t="ablesebar.claim"></b>
+        <span data-t="ablesebar.claimZwei"></span></p>
+      <div class="produkt-wege" data-wege="ablesebar"></div>
+      <div class="produkt-fuss">
+        <a class="nbtn b-lantern" href="ablesebar.html"><span data-t="ablesebar.mehrKnopf">Alles über AbleseBar</span></a>
+      </div>
+    </article>
+
+    </div>
+    <p class="filter-leer" id="filter-stand" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="abschnitt start-abschnitt" id="vergleich" data-kapitel="vergleich">
+  <div class="huelle">
+    <header class="abschnitt-kopf auf">
+      <p class="kennung" data-t="vergleich.kennung">Auf einen Blick</p>
+      <h2 data-t="vergleich.titel">Welche App ist für dich?</h2>
+      <p data-t="vergleich.text"></p>
+    </header>
+
+    <div class="tabelle-huelle auf" id="vergleich-tabelle"></div>
+    <p class="preis tabelle-fuss auf" data-t="vergleich.fuss"></p>
+  </div>
+</section>
+
+<section class="abschnitt start-abschnitt" id="ueber" data-kapitel="ueber">
+  <div class="huelle">
+    <div class="ueber-raster">
+      <div class="auf">
+        <p class="kennung" data-t="ueber.kennung">Über mich</p>
+        <h2 data-t="ueber.titel">Ein Mensch, ein Studio</h2>
+        <p class="ueber-text" data-t="ueber.text"></p>
+      </div>
+      <div class="zahlen auf v2" id="ueber-zahlen"></div>
     </div>
 
     <div class="auf">
-      <h3 style="margin-top:clamp(2.2rem,4vw,3rem)" data-t="ueber.ablaufTitel">
-        Wie ein Projekt entsteht</h3>
+      <h3 class="ablauf-titel" data-t="ueber.ablaufTitel">Wie ein Projekt entsteht</h3>
       <div class="ablauf" id="ueber-ablauf"></div>
     </div>
   </div>
 </section>
 
-<section class="abschnitt kontakt" id="kontakt" data-kapitel="schluss">
-  <div class="licht licht-intro" aria-hidden="true"><span></span><span></span></div>
+<section class="abschnitt start-abschnitt" id="fragen" data-kapitel="vergleich">
+  <div class="huelle">
+    <header class="abschnitt-kopf auf">
+      <p class="kennung" data-t="fragen.kennung">Häufige Fragen</p>
+      <h2 data-t="fragen.titel">Was oft gefragt wird</h2>
+    </header>
+    <div class="fragen auf" id="fragen-liste"></div>
+  </div>
+</section>
+
+<section class="abschnitt start-abschnitt kontakt" id="kontakt" data-kapitel="schluss">
   <div class="huelle-schmal auf">
     <h2 data-t="kontakt.titel">Schreib mir</h2>
     <p class="gross" data-t="kontakt.text"></p>
@@ -734,9 +574,8 @@
 </footer>
 
 <script src="texte.js"></script>
-<script src="runde.js"></script>
 <script src="inhalte.js"></script>
 <script src="app.js"></script>
-<script src="live.js"></script>
+<script src="start.js"></script>
 </body>
 </html>

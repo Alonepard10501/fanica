@@ -19,6 +19,7 @@ de: {
 
   nav: {
     apps: "Die Apps",
+    vergleich: "Vergleich",
     ueber: "Über mich",
     kontakt: "Kontakt",
     sprung: "Zum Inhalt springen"
@@ -46,7 +47,7 @@ de: {
     appFamilie: "Coming Soon",
     appTankspur: "Im Test",
     scrollHinweis: "Scrollen",
-    karussellHinweis: "Antippen führt direkt zur App — die Pfeile drehen die Auswahl."
+    karussellHinweis: "Wischen oder die Pfeile drehen das Karussell — Antippen öffnet das Produkt."
   },
 
   /* ====================== KAPITEL 1 — INSTINCT SCORING ================ */
@@ -845,7 +846,7 @@ de: {
 
   /* ============ KAPITEL 4 — SETUPLEISTE (Windows-Programm) ============
      Alle Angaben aus dem Quellcode und der LIESMICH.txt des Programms:
-     Werkzeugkasten\Programme\PC Featers\SetUpLeiste     Messwerte-Liste = enum RekordId in sensoren.h (11 Eintraege),
+     KI-Workflow\Programme\SetUpLeiste     Messwerte-Liste = enum RekordId in sensoren.h (11 Eintraege),
      Version + Herausgeber aus installer.iss. ============================ */
   setupleiste: {
     vorschauTitel: "So sieht die Leiste aus",
@@ -1182,13 +1183,13 @@ de: {
     kennung: "Kapitel 06 · Im Test",
     karteKurz: "Filmsammlung scannen und ordnen",
     karteStatus: "Im Test",
-    statusPille: "Im Test — geschlossen bei Google Play",
+    statusPille: "Im Test — noch nicht in den Stores",
     name: "YourFilm",
     untertitel: "Deine Filmsammlung im Griff",
     claim: "Scannen. Einsortieren. Fertig.",
     claimZwei: "Deine Sammlung, sauber geordnet.",
     positionierung: "Eine Filmsammlungs-App für DVDs und Blu-rays: Barcode scannen, die App ordnet den Film automatisch zu — das Werk, die Ausgabe, dein Exemplar. Vier getrennte Preise zeigen, was deine Sammlung gekostet hat und was sie heute wert ist. Komplett auf dem Gerät, ohne Konto.",
-    inArbeit: "🧪 Im Test: Die App läuft im geschlossenen Test bei Google Play und wird dabei an echten Discs erprobt. Installieren kann sie nur, wer dafür freigeschaltet ist — öffentlich im Store steht sie noch nicht, und zu kaufen gibt es nichts.",
+    inArbeit: "🧪 Im Test: Die App wird als Testfassung außerhalb der Stores an echten Discs erprobt. In Google Play und im App Store steht sie noch nicht, und zu kaufen gibt es nichts.",
 
     kernTitel: "Der Kniff",
     kernText: "Ein Film ist nicht sein Datenträger: YourFilm trennt das Werk (der Film selbst), die Ausgabe (Steelbook, Erstauflage, Neuauflage) und dein Exemplar (dein Stück im Regal). Drei Ausgaben desselben Films sind EIN Eintrag in der Liste — nicht drei. Und der Barcode-Scan ordnet automatisch zu, ohne Suchen und ohne Tipperei.",
@@ -1237,7 +1238,7 @@ de: {
 
     mehrKnopf: "Alles über YourFilm",
     mehrText: "Die Dreiteilung, die Barcode-Kette, die vier Preise — und was bis zur Veröffentlichung noch passiert.",
-    hinweis: "YourFilm läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+    hinweis: "YourFilm ist im Test und steht noch nicht in den Stores. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
 
   zeitwissen: {
@@ -1302,13 +1303,13 @@ de: {
     kennung: "Kapitel 07 · Im Test",
     karteKurz: "Arbeitszeit mit Zeitkonto",
     karteStatus: "Im Test",
-    statusPille: "Im Test — geschlossen bei Google Play",
+    statusPille: "Im Test — noch nicht in den Stores",
     name: "ZeitAnker",
     untertitel: "Arbeitszeit, die sich selbst erklärt",
     claim: "Einstempeln. Fertig.",
     claimZwei: "Den Rest rechnet die App.",
     positionierung: "Eine Arbeitszeit-App mit Zeitkonto: einstempeln, ausstempeln — Über- und Fehlstunden laufen von allein mit. Wer will, teilt die Zeit auf Projekte und Aufgaben auf und holt am Monatsende einen Bericht als Excel, PDF oder HTML heraus. Komplett auf dem Gerät, ohne Konto.",
-    inArbeit: "🧪 Im Test: Die App läuft im geschlossenen Test bei Google Play. Installieren kann sie nur, wer dafür freigeschaltet ist — öffentlich im Store steht sie noch nicht, und zu kaufen gibt es nichts.",
+    inArbeit: "🧪 Im Test: Die App wird gerade erprobt. In Google Play und im App Store steht sie noch nicht, und zu kaufen gibt es nichts.",
 
     kernTitel: "Der Kniff",
     kernText: "Die Gesamtzeit läuft vom Ein- bis zum Ausstempeln — Aufgaben laufen innerhalb davon und teilen diese Zeit nur auf, sie verlängern sie nicht. Wer drei Aufgaben nacheinander antippt, hat am Ende trotzdem genau seinen Arbeitstag. Und das Projekt-Soll ist vom persönlichen Soll getrennt: Arbeitest du in einem Monat an zwei Projekten, zählt jede Stunde für ihr Projekt und zusätzlich in deine Gesamtzeit.",
@@ -1356,7 +1357,7 @@ de: {
 
     mehrKnopf: "Alles über ZeitAnker",
     mehrText: "Das Zeitkonto, die Trennung von Projekt- und Personen-Soll — und was bis zur Veröffentlichung noch passiert.",
-    hinweis: "ZeitAnker läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+    hinweis: "ZeitAnker ist im Test und steht noch nicht in den Stores. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
   familie: {
     drehDaten: [
@@ -1559,13 +1560,13 @@ de: {
     kennung: "Kapitel 09 · Im Test",
     karteKurz: "Was das Auto wirklich kostet",
     karteStatus: "Im Test",
-    statusPille: "Im Test — geschlossen bei Google Play",
+    statusPille: "Im Test — noch nicht in den Stores",
     name: "Tankspur",
     untertitel: "Was das Auto wirklich kostet",
     claim: "Tanken. Eintippen.",
     claimZwei: "Den Rest rechnet die App.",
     positionierung: "Eine Tankspur, die mitdenkt: Preis je Liter und Liter eintragen — den Gesamtpreis füllt die App selbst aus. Aus Kilometern und Litern wird der Verbrauch, aus Verbrauch und Preis werden die Kosten je 100 Kilometer. Am Jahresende steht da, was das Fahren wirklich gekostet hat. Komplett auf dem Gerät.",
-    inArbeit: "🧪 Im Test: Die App läuft im geschlossenen Test bei Google Play. Installieren kann sie nur, wer dafür freigeschaltet ist — öffentlich im Store steht sie noch nicht, und zu kaufen gibt es nichts.",
+    inArbeit: "🧪 Im Test: Die App wird gerade erprobt. In Google Play und im App Store steht sie noch nicht, und zu kaufen gibt es nichts.",
 
     kernTitel: "Der Kniff",
     kernText: "Drei Werte hängen zusammen: Preis je Liter, Liter, Gesamtpreis. Wer zwei davon einträgt, bekommt den dritten geschenkt — egal welche zwei. Das klingt klein, entscheidet aber, ob man an der Zapfsäule wirklich alles einträgt oder es sein lässt. Und weil die App den Verbrauch je Betankung mitrechnet, sieht man Ausreißer sofort, statt sie erst im Jahresmittel zu bemerken.",
@@ -1614,7 +1615,7 @@ de: {
 
     mehrKnopf: "Alles über Tankspur",
     mehrText: "Die drei Werte, der Verbrauch je Betankung, die Jahresbilanz — und was bis zur Veröffentlichung noch passiert.",
-    hinweis: "Tankspur läuft im geschlossenen Test bei Google Play — installieren kann die App nur, wer für den Test freigeschaltet ist. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
+    hinweis: "Tankspur ist im Test und steht noch nicht in den Stores. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern."
   },
 
   scheinbar: {
@@ -1682,8 +1683,8 @@ de: {
     untertitel: "Schein fotografieren, Gewinn sehen",
     claim: "Fotografieren.",
     claimZwei: "Nachrechnen übernimmt die App.",
-    positionierung: "Ein Begleiter für BINGO!, Lotto 6aus49 und Eurojackpot: Spielschein abfotografieren, Zahlen kurz prüfen, fertig. Die Ziehungen holt sich die App selbst — beim ersten Start die letzten sechs Monate, danach laufend die neuen. Sie sagt Ihnen, ob und in welcher Gewinnklasse etwas dabei ist. Die Texterkennung läuft auf dem Gerät, gespeichert wird ausschließlich dort.",
-    inArbeit: "🧪 Im Test: ScheinBar läuft als Testfassung außerhalb der Stores. In den Stores steht sie noch nicht, und der Abopreis ist noch nicht festgelegt.",
+    positionierung: "Ein Begleiter für BINGO!, Lotto 6aus49 und Eurojackpot: Spielschein abfotografieren, Zahlen kurz prüfen, fertig. Die Ziehungen holt sich die App selbst — beim ersten Start die letzten sechs Monate, danach laufend die neuen. Sie sagt dir, ob und in welcher Gewinnklasse etwas dabei ist. Die Texterkennung läuft auf dem Gerät, gespeichert wird ausschließlich dort.",
+    inArbeit: "🧪 Im Test: ScheinBar läuft als Testfassung außerhalb der Stores. In den Stores steht sie noch nicht; Premium wird 0,49 € je 4 Wochen oder 4,99 € im Jahr kosten.",
 
     kernTitel: "Der Kniff",
     kernText: "Ein Gewinn ist kein gespeicherter Wert, sondern ein Ergebnis aus Schein und Ziehung. Das klingt nach einem Detail, entscheidet aber alles: Trägt man eine Ziehung nach oder berichtigt eine Zahl, stimmt der Status jedes betroffenen Scheins sofort — auch rückwirkend, ohne dass man irgendetwas noch einmal prüfen müsste. Und weil die Erkennung nur einen Vorschlag liefert, den man bestätigt, steht am Ende immer das, was wirklich auf dem Schein steht.",
@@ -1730,7 +1731,7 @@ de: {
 
     mehrKnopf: "Alles über ScheinBar",
     mehrText: "Die drei Spiele, die Gewinnklassen, die Statistik — und was bis zur Veröffentlichung noch offen ist.",
-    hinweis: "ScheinBar liegt als Testfassung außerhalb der Stores vor. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern. Der Abopreis steht noch nicht fest."
+    hinweis: "ScheinBar liegt als Testfassung außerhalb der Stores vor. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern. Premium wird 0,49 € je 4 Wochen oder 4,99 € im Jahr kosten."
   },
 
   ablesebar: {
@@ -1809,6 +1810,25 @@ de: {
   },
 
   /* ============ LIVE — automatisch geladene Renndaten ============ */
+  start: {
+    alleProdukte: "Alle Produkte im Überblick",
+    karussellName: "Die Produkte als Karussell",
+    karussellLinks: "Nach links drehen",
+    karussellRechts: "Nach rechts drehen",
+    karussellWahl: "Produkt nach vorn holen",
+    karussellStand: "{name} vorn — {nr} von {anzahl}",
+    produkteKennung: "Die Produkte",
+    produkteTitel: "Elf Produkte, ein Studio",
+    produkteText: "Apps fürs Handy und ein Programm für Windows — jedes mit eigener Farbe und eigener Seite. Hier steht das Wichtigste in einem Satz, alle Einzelheiten stehen auf der Seite des Produkts.",
+    filterName: "Produkte nach Stand filtern",
+    filterAlle: "Alle",
+    filterLive: "Erhältlich",
+    filterTest: "Im Test",
+    filterBau: "In Arbeit",
+    filterStand: "{anzahl} Produkte angezeigt",
+    wegWindows: "Download für Windows · {groesse}"
+  },
+
   live: {
     naechstesTitel: "Das nächste Rennen",
     lauf: "Lauf",
@@ -1855,7 +1875,8 @@ de: {
     windowsHinweis: "Windows 10 und 11 (64 Bit). Die Datei installiert das Programm mit Desktop-Symbol und Deinstallation — kein Konto, keine Werbung, nichts wird übertragen.",
     standTest: "im Test",
     standPruefung: "in Prüfung",
-    bezugHinweis: "Jeder Weg, der schon freigegeben ist, ist hier ein echter Knopf. Steht „im Test“ oder „in Prüfung“ dabei, ist die Fassung beim jeweiligen Store noch nicht öffentlich — der Knopf wird freigeschaltet, sobald es so weit ist.",
+    standSpaeter: "kommt später",
+    bezugHinweis: "Jeder Weg, der schon freigegeben ist, ist hier ein echter Knopf. Steht „im Test“, „in Prüfung“ oder „kommt später“ dabei, ist die Fassung beim jeweiligen Store noch nicht öffentlich — der Knopf wird freigeschaltet, sobald es so weit ist.",
     pruefungKurz: "in Prüfung",
     // ENTFERNT 12.08.2026 (Falk-Entscheid): "Im Browser spielen/testen" ist auf ALLEN Seiten raus.
     // Nicht wieder einbauen — die Apps zeigen nur Android · Apple · eigene Webseite.
@@ -1891,21 +1912,21 @@ de: {
   vergleich: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
-    text: "Zehn Produkte, zehn völlig verschiedene Zwecke — vier zu haben, fünf im Test, eines noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie sammeln nichts über dich und verlangen kein Konto bei uns. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
+    text: "Zehn Produkte, zehn völlig verschiedene Zwecke — drei zu haben, sechs im Test, eines noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie sammeln nichts über dich und verlangen kein Konto bei uns. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AbleseBar"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten", "Spielscheine prüfen und auswerten", "Zählerstände ablesen, Nebenkosten prüfen"] },
-      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "Im Test bei Google Play", "Im Test bei Google Play", "Im Test bei Google Play", "Testfassung außerhalb der Stores", "Testfassung außerhalb der Stores"] },
+      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Testfassung außerhalb der Stores", "Testfassung außerhalb der Stores"] },
       { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Allein", "Allein", "Allein", "Allein", "Allein"] },
       { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten (freiwillig)", "Nie", "Nie", "Nur fürs Abo und Nachladen", "Nur für die Update-Prüfung"] },
       { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein", "Nein", "Ja — einmal anlegen", "Ja — einmal anlegen", "Konto oder Gast — beides geht"] },
       { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer", "13 Bildschirme", "14 Bildschirme", "5 Bildschirme", "12 Bildschirme · 3 Spiele", "18 Bildschirme"] },
       { name: "Sprachen",      werte: ["2", "2", "16", "1", "1", "1", "1", "1", "2", "2"] },
-      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Alles — es gibt noch nichts zu kaufen", "Alles — die ganze App", "Alles — die ganze App", "Zwei Scheine · Prüfung & Archiv", "Alles — es gibt noch nichts zu kaufen"] },
-      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "noch offen", "—", "—", "noch offen", "noch offen"] },
+      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Alles — es gibt noch nichts zu kaufen", "Stempeln, Zeitkonto, Tag bis Monat", "Alles — die ganze App", "10 Scheine · letzte 10 Ziehungen", "Alles — es gibt noch nichts zu kaufen"] },
+      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "noch offen", "0,49 € / 4 Wochen", "—", "0,49 € / 4 Wochen", "noch offen"] },
       { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
-    fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash, YourFilm, ScheinBar und AbleseBar steht noch nicht fest, ob und was etwas kosten wird."
+    fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash, YourFilm und AbleseBar steht noch nicht fest, ob und was etwas kosten wird."
   },
 
   fragen: {
@@ -1919,7 +1940,7 @@ de: {
       { f: "Was passiert mit meinen Daten?",
         a: "Sie bleiben auf deinem Gerät. Keine der Apps hat Werbung, Analyse-Werkzeuge oder Datenweitergabe. Das ist keine Marketing-Aussage, sondern eine bewusste Entscheidung — Einnahmen kommen ausschließlich aus den Abos." },
       { f: "Was kostet mich das?",
-        a: "Jede App ist kostenlos nutzbar. Premium schaltet Zusatzfunktionen frei und beginnt bei 0,49 € je vier Wochen; die ersten sieben Tage sind immer kostenlos, ohne dass du kündigen musst. Die SetUpLeiste kostet gar nichts, und bei den Apps im Test steht noch nicht fest, ob und was etwas kosten wird." },
+        a: "Jede App ist kostenlos nutzbar. Premium schaltet Zusatzfunktionen frei und beginnt bei 0,49 € je vier Wochen; die ersten sieben Tage sind immer kostenlos, ohne dass du kündigen musst. Die SetUpLeiste kostet gar nichts, und bei Campus Clash, YourFilm und AbleseBar steht noch nicht fest, ob und was etwas kosten wird." },
       { f: "Verliere ich meine Daten, wenn ich nicht bezahle?",
         a: "Nein. Ohne Abo werden nur Funktionen gesperrt, nichts gelöscht. Bei NeonPunkt pausiert das Spiel nach 500 Klicks — Zähler und Bestenlisten bleiben erhalten." },
       { f: "Wer steckt hinter den Apps?",
@@ -2013,6 +2034,7 @@ en: {
 
   nav: {
     apps: "The apps",
+    vergleich: "Compare",
     ueber: "About me",
     kontakt: "Contact",
     sprung: "Skip to content"
@@ -2040,7 +2062,7 @@ en: {
     appFamilie: "Coming soon",
     appTankspur: "In testing",
     scrollHinweis: "Scroll",
-    karussellHinweis: "Tap to go straight to the app — the arrows turn the selection."
+    karussellHinweis: "Swipe or use the arrows to turn the carousel — tap to open a product."
   },
 
   /* ====================== CHAPTER 1 — INSTINCT SCORING ================ */
@@ -3139,13 +3161,13 @@ en: {
     kennung: "Chapter 06 · In testing",
     karteKurz: "Scan and sort your film collection",
     karteStatus: "In testing",
-    statusPille: "In testing — closed on Google Play",
+    statusPille: "In testing — not in the stores yet",
     name: "YourFilm",
     untertitel: "Your film collection, under control",
     claim: "Scan. Shelve. Done.",
     claimZwei: "Your collection, neatly organised.",
     positionierung: "A collection app for DVDs and Blu-rays: scan the barcode and the app files the film automatically — the work, the edition, your copy. Four separate prices show what your collection cost and what it is worth today. Entirely on your device, no account.",
-    inArbeit: "🧪 In testing: the app is in closed testing on Google Play and being tried out with real discs. Only testers who have been given access can install it — it is not publicly listed yet, and nothing to buy.",
+    inArbeit: "🧪 In testing: the app is being tried out with real discs as a test build outside the stores. It is not on Google Play or the App Store yet, and there is nothing to buy.",
 
     kernTitel: "The trick",
     kernText: "A film is not its disc: YourFilm separates the work (the film itself), the edition (steelbook, first pressing, reissue) and your copy (the one on your shelf). Three editions of the same film are ONE entry in the list — not three. And the barcode scan files everything automatically, no searching, no typing.",
@@ -3194,7 +3216,7 @@ en: {
 
     mehrKnopf: "Everything about YourFilm",
     mehrText: "The three-level model, the barcode chain, the four prices — and what happens before release.",
-    hinweis: "YourFilm is in closed testing on Google Play — only testers who have been given access can install it. All details describe the current build state and may change before release."
+    hinweis: "YourFilm is in testing and not in the stores yet. All details describe the current build state and may change before release."
   },
 
   zeitwissen: {
@@ -3259,13 +3281,13 @@ en: {
     kennung: "Chapter 07 · In testing",
     karteKurz: "Working hours with a running balance",
     karteStatus: "In testing",
-    statusPille: "In testing — closed on Google Play",
+    statusPille: "In testing — not in the stores yet",
     name: "ZeitAnker",
     untertitel: "Working hours that explain themselves",
     claim: "Clock in. Done.",
     claimZwei: "The app does the rest of the maths.",
     positionierung: "A working-hours app with a running balance: clock in, clock out — overtime and shortfall are tracked for you. If you want, split your time across projects and tasks and export a report as Excel, PDF or HTML at the end of the month. Entirely on your device, no account.",
-    inArbeit: "🧪 In testing: the app is in closed testing on Google Play. Only testers who have been given access can install it — it is not publicly listed yet, and there is nothing to buy.",
+    inArbeit: "🧪 In testing: the app is being tried out right now. It is not on Google Play or the App Store yet, and there is nothing to buy.",
 
     kernTitel: "The trick",
     kernText: "Total time runs from clocking in to clocking out — tasks run inside that window and only divide it up, they never extend it. Tap three tasks in a row and you still end up with exactly your working day. And project hours are kept apart from your personal target: work on two projects in a month and every hour counts towards its project and towards your total.",
@@ -3313,7 +3335,7 @@ en: {
 
     mehrKnopf: "All about ZeitAnker",
     mehrText: "The time balance, keeping project and personal targets apart — and what still happens before release.",
-    hinweis: "ZeitAnker is in closed testing on Google Play — only testers who have been given access can install it. All details describe the current build and may change before release."
+    hinweis: "ZeitAnker is in testing and not in the stores yet. All details describe the current build and may change before release."
   },
   familie: {
     drehDaten: [
@@ -3516,13 +3538,13 @@ en: {
     kennung: "Chapter 09 · In testing",
     karteKurz: "What the car actually costs",
     karteStatus: "In testing",
-    statusPille: "In testing — closed on Google Play",
+    statusPille: "In testing — not in the stores yet",
     name: "Tankspur",
     untertitel: "What the car actually costs",
     claim: "Fill up. Type it in.",
     claimZwei: "The app does the rest of the maths.",
     positionierung: "A fuel log that thinks along: enter price per litre and litres — the app fills in the total itself. Kilometres and litres become consumption; consumption and price become cost per 100 kilometres. At the end of the year it tells you what driving really cost. Entirely on your device.",
-    inArbeit: "🧪 In testing: the app is in closed testing on Google Play. Only testers who have been given access can install it — it is not publicly listed yet, and there is nothing to buy.",
+    inArbeit: "🧪 In testing: the app is being tried out right now. It is not on Google Play or the App Store yet, and there is nothing to buy.",
 
     kernTitel: "The trick",
     kernText: "Three values belong together: price per litre, litres, total. Enter any two and the third comes free. That sounds small, but it decides whether you actually log every fill-up at the pump or give up on it. And because the app works out consumption for each fill-up, outliers show immediately instead of hiding in the yearly average.",
@@ -3571,7 +3593,7 @@ en: {
 
     mehrKnopf: "All about Tankspur",
     mehrText: "The three values, consumption per fill-up, the yearly balance — and what still happens before release.",
-    hinweis: "Tankspur is in closed testing on Google Play — only testers who have been given access can install it. All details describe the current build and may change before release."
+    hinweis: "Tankspur is in testing and not in the stores yet. All details describe the current build and may change before release."
   },
 
   scheinbar: {
@@ -3640,7 +3662,7 @@ en: {
     claim: "Take a photo.",
     claimZwei: "The app does the checking.",
     positionierung: "A companion for BINGO!, Lotto 6aus49 and Eurojackpot: photograph the ticket, check the numbers, done. The app fetches the draws itself — the past six months on first start, the new ones from then on. It tells you whether anything came up and in which prize tier. Text recognition runs on the device, and everything is stored there and nowhere else.",
-    inArbeit: "🧪 In testing: ScheinBar is a test build outside the stores. It is not yet listed, and the subscription price has not been set.",
+    inArbeit: "🧪 In testing: ScheinBar is a test build outside the stores. It is not listed yet; Premium will cost €0.49 per 4 weeks or €4.99 a year.",
 
     kernTitel: "The trick",
     kernText: "A win is not a stored value but a result derived from ticket and draw. That sounds like a detail but decides everything: add a draw later or correct a number, and the status of every affected ticket is right at once — retroactively, without anything having to be re-checked. And because recognition only ever offers a suggestion to confirm, what ends up saved is what the ticket actually says.",
@@ -3687,7 +3709,7 @@ en: {
 
     mehrKnopf: "All about ScheinBar",
     mehrText: "The three games, the prize tiers, the statistics — and what is still open before release.",
-    hinweis: "ScheinBar exists as a test build outside the stores. All details describe the current build and may change before release. The subscription price has not been set."
+    hinweis: "ScheinBar exists as a test build outside the stores. All details describe the current build and may change before release. Premium will cost €0.49 per 4 weeks or €4.99 a year."
   },
 
   ablesebar: {
@@ -3766,6 +3788,25 @@ en: {
   },
 
   /* ============ LIVE — automatically loaded race data ============ */
+  start: {
+    alleProdukte: "All products at a glance",
+    karussellName: "The products as a carousel",
+    karussellLinks: "Turn left",
+    karussellRechts: "Turn right",
+    karussellWahl: "Bring a product to the front",
+    karussellStand: "{name} in front — {nr} of {anzahl}",
+    produkteKennung: "The products",
+    produkteTitel: "Eleven products, one studio",
+    produkteText: "Apps for your phone and one program for Windows — each with its own colour and its own page. Here is the gist in one sentence; every detail is on the product's own page.",
+    filterName: "Filter products by status",
+    filterAlle: "All",
+    filterLive: "Available",
+    filterTest: "In testing",
+    filterBau: "In progress",
+    filterStand: "{anzahl} products shown",
+    wegWindows: "Windows download · {groesse}"
+  },
+
   live: {
     naechstesTitel: "The next race",
     lauf: "Round",
@@ -3810,7 +3851,8 @@ en: {
     windowsHinweis: "Windows 10 and 11 (64-bit). The file installs the program with a desktop icon and an uninstaller — no account, no advertising, nothing is transmitted.",
     standTest: "in testing",
     standPruefung: "in review",
-    bezugHinweis: "Every route that has been released is a real button here. Where it says “in testing” or “in review”, that version is not public on its store yet — the button goes live as soon as it is.",
+    standSpaeter: "coming later",
+    bezugHinweis: "Every route that has been released is a real button here. Where it says “in testing”, “in review” or “coming later”, that version is not public on its store yet — the button goes live as soon as it is.",
     pruefungKurz: "in review",
     // ENTFERNT 12.08.2026 (Falk-Entscheid): "Im Browser spielen/testen" ist auf ALLEN Seiten raus.
     // Nicht wieder einbauen — die Apps zeigen nur Android · Apple · eigene Webseite.
@@ -3822,21 +3864,21 @@ en: {
   vergleich: {
     kennung: "At a glance",
     titel: "Which app is for you?",
-    text: "Ten products, ten entirely different purposes — four finished, five in testing, one still being built. What they share: their core works offline, they collect nothing about you, and they ask for no account with us. The Instinct Family is not listed here: it is not a single app but ten, and none of them is available yet.",
+    text: "Ten products, ten entirely different purposes — three available, six in testing, one still being built. What they share: their core works offline, they collect nothing about you, and they ask for no account with us. The Instinct Family is not listed here: it is not a single app but ten, and none of them is available yet.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AbleseBar"],
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view", "Checking and analysing lottery tickets", "Reading meters, checking utility bills"] },
-      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In closed testing on Google Play", "In closed testing on Google Play", "In closed testing on Google Play", "Test build outside the stores", "Test build outside the stores"] },
+      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In testing · not in a store yet", "In testing · not in a store yet", "In testing · not in a store yet", "Test build outside the stores", "Test build outside the stores"] },
       { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Alone", "Alone", "Alone", "Alone", "Alone"] },
       { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never", "Only for film data (optional)", "Never", "Never", "Only for the subscription and downloads", "Only for the update check"] },
       { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No", "No", "No", "Yes — created once", "Yes — created once", "Account or guest — both work"] },
       { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects", "13 screens", "14 screens", "5 screens", "12 screens · 3 games", "18 screens"] },
       { name: "Languages",      werte: ["2", "2", "16", "1", "1", "1", "1", "1", "2", "2"] },
-      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Everything — nothing to buy yet", "Everything — the whole app", "Everything — the whole app", "Two tickets · checking & archive", "Everything — nothing to buy yet"] },
-      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "not decided yet", "—", "—", "not decided yet", "not decided yet"] },
+      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Everything — nothing to buy yet", "Clocking, time account, day to month", "Everything — the whole app", "10 tickets · last 10 draws", "Everything — nothing to buy yet"] },
+      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "not decided yet", "€0.49 / 4 weeks", "—", "€0.49 / 4 weeks", "not decided yet"] },
       { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
-    fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash, YourFilm, ScheinBar and AbleseBar it is not yet decided whether anything will cost money."
+    fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash, YourFilm and AbleseBar it is not yet decided whether anything will cost money."
   },
 
   fragen: {
@@ -3850,7 +3892,7 @@ en: {
       { f: "What happens to my data?",
         a: "It stays on your device. None of the apps has ads, analytics or data sharing. That is not a marketing line but a deliberate decision — the income comes purely from subscriptions." },
       { f: "What does it cost me?",
-        a: "Every app is free to use. Premium unlocks extra features and starts at €0.49 per four weeks; the first seven days are always free, with nothing to cancel. SetUpLeiste costs nothing at all, and for the apps in testing it is not yet decided whether anything will cost money." },
+        a: "Every app is free to use. Premium unlocks extra features and starts at €0.49 per four weeks; the first seven days are always free, with nothing to cancel. SetUpLeiste costs nothing at all, and for Campus Clash, YourFilm and AbleseBar it is not yet decided whether anything will cost money." },
       { f: "Do I lose my data if I don't pay?",
         a: "No. Without a subscription features are locked, nothing is deleted. In NeonPunkt the game pauses after 500 taps — counters and leaderboards stay intact." },
       { f: "Who is behind the apps?",

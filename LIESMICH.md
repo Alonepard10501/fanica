@@ -35,6 +35,8 @@ automatisch ausgelassen.
 | `inhalte.js` | Baut Karten und Listen aus `texte.js` |
 | `app.js` | Verhalten: Kapitelfarben, Zeitraffer, Spiel, Zielscheibe, QR-Codes |
 | `style.css` | Aussehen |
+| `start.css` · `start.js` | Nur die Startseite: Produktkarten, Filter nach Stand, Verteilungsbalken |
+| `gemeinsam.css` · `uebergang.js` | Alle Seiten: weicher Seitenwechsel (App-Symbol wandert mit) und das Menü „Die Apps“ auf den Produktseiten |
 | `impressum.html` · `datenschutz.html` · `bildquellen.html` | Rechtsseiten |
 | `bilder/` | Screenshots und Logos, je in normaler und doppelter Auflösung |
 | `_nicht-verwendet/` | Beiseite gelegte Dateien — nichts gelöscht, siehe LIESMICH dort |

@@ -110,6 +110,10 @@
       grund: "linear-gradient(180deg, #06070A, #0C0E13 55%, #07080B)",
       akzent: "#8E97A3", akzentHell: "#D7DDE4"
     },
+    produkte: {
+      grund: "linear-gradient(180deg, #06070A, #0C0E13 55%, #07080B)",
+      akzent: "#8E97A3", akzentHell: "#D7DDE4"
+    },
     ueber: {
       grund: "linear-gradient(180deg, #06060A, #0B0A10 55%, #08060A)",
       akzent: "#E4192B", akzentHell: "#FF4257"
@@ -123,7 +127,7 @@
   function kapitelEinrichten() {
     const kulisse = document.querySelector(".kulisse");
     const wurzel = document.documentElement;
-    const abschnitte = [...document.querySelectorAll("[data-kapitel]")];
+    const abschnitte = [...document.querySelectorAll("[data-kapitel]:not(.produkt)")];
     if (!kulisse || !abschnitte.length) return;
 
     let aktuell = "";
@@ -221,12 +225,49 @@
     if (!karten.length) return;
 
     const schritt = 360 / karten.length;
+    const anzahl = karten.length;
     let dreh = 0;
+    const punkte = document.getElementById("karussell-punkte");
+    const stand = document.getElementById("karussell-stand");
 
-    const setze = () => ring.style.setProperty("--dreh", dreh + "deg");
-    setze();
+    const vorn = () => ((Math.round(-dreh / schritt) % anzahl) + anzahl) % anzahl;
+
+    const setze = () => {
+      ring.style.setProperty("--dreh", dreh + "deg");
+      const v = vorn();
+      karten.forEach((k, i) => {
+        k.classList.toggle("vorn", i === v);
+        k.tabIndex = i === v ? 0 : -1;
+      });
+      punkte?.querySelectorAll("button").forEach((p, i) =>
+        p.setAttribute("aria-current", i === v ? "true" : "false"));
+      if (stand) {
+        stand.textContent = (T("start.karussellStand") || "")
+          .replace("{name}", karten[v].querySelector("b")?.textContent || "")
+          .replace("{nr}", v + 1).replace("{anzahl}", anzahl);
+      }
+    };
 
     const drehen = (richtung) => { dreh += schritt * richtung; setze(); };
+
+    const zeige = (ziel) => {
+      let weg = (-ziel * schritt - dreh) % 360;
+      if (weg > 180) weg -= 360;
+      if (weg < -180) weg += 360;
+      dreh += weg;
+      setze();
+    };
+
+    if (punkte) {
+      punkte.innerHTML = [...karten].map((k, i) => `
+        <button type="button" style="--af:${k.style.getPropertyValue("--af")}"
+                aria-label="${k.querySelector("b")?.textContent || i + 1}"></button>`).join("");
+      punkte.querySelectorAll("button").forEach((p, i) =>
+        p.addEventListener("click", () => zeige(i)));
+    }
+    ring.style.setProperty("--karten", anzahl);
+    ring.classList.add("bereit");
+    setze();
 
     document.querySelector(".karussell-pfeil.links")
       ?.addEventListener("click", () => drehen(1));
@@ -292,8 +333,14 @@
 
     /* Tastatur: Pfeiltasten drehen, sobald eine Karte den Fokus hat. */
     ring.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") { drehen(1); e.preventDefault(); }
-      if (e.key === "ArrowRight") { drehen(-1); e.preventDefault(); }
+      const tasten = { ArrowLeft: 1, ArrowRight: -1 };
+      if (e.key in tasten) {
+        drehen(tasten[e.key]);
+        karten[vorn()].focus({ preventScroll: true });
+        e.preventDefault();
+      }
+      if (e.key === "Home") { zeige(0); karten[0].focus({ preventScroll: true }); e.preventDefault(); }
+      if (e.key === "End") { zeige(anzahl - 1); karten[anzahl - 1].focus({ preventScroll: true }); e.preventDefault(); }
     });
   }
 
@@ -2501,6 +2548,15 @@
     });
   }
 
+  function produktwahlEinrichten() {
+    const wahl = document.querySelector(".produktwahl");
+    if (!wahl) return;
+    document.addEventListener("click", (e) => { if (!wahl.contains(e.target)) wahl.open = false; });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && wahl.open) { wahl.open = false; wahl.querySelector("summary").focus(); }
+    });
+  }
+
   /* ======================================================== START */
   function start() {
     texteEinsetzen();
@@ -2531,6 +2587,7 @@
     kontoEinrichten();
     saeuleEinrichten();
     leisteEinrichten();
+    produktwahlEinrichten();
   }
 
   if (document.readyState === "loading") {

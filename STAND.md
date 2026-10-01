@@ -2,7 +2,7 @@
 name: stand-entwickler-website
 description: "Die eine Stand-Datei für die Entwickler-Website: aktueller Stand, geltende Regeln der Seite, echte offene Punkte."
 tags: [projekt, webseite, stand]
-stand: 2026-09-28
+stand: 2026-10-01
 ---
 
 # STAND — Entwickler-Website
@@ -23,19 +23,28 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 |---|---|
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
-| Git | `2a68505` = `origin/main`, nichts ungepusht (geprüft 28.09.2026 per `git ls-remote`) |
-| Nicht committet | `.gitignore` (Schlüsselmuster), `LIESMICH.md` und `_werkzeuge_runde_bauen.py` (halber Pfadumzug, Pfade noch falsch — Offen 4), Ablösung der Weitermachen-Datei durch diese Datei |
+| Git | `origin/main` = `2a68505`; lokal zwei Commits voraus (Stand-Datei 28.09. und Überarbeitung 01.10.2026) — Push nur auf Falks Wort |
 | Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AbleseBar 11 |
-| Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `pruefung` · SetUpLeiste GitHub-Release 1.0.0 |
-| Store-Gegenprobe 28.09.2026 | FaNiCa Play + Apple 200 · Instinct Apple 200 (DE-Lookup `resultCount 1`), Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` — Einträge stimmen |
+| Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
+| Store-Gegenprobe 01.10.2026 | FaNiCa Play 200, Apple 1.200.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` · SetUpLeiste-Download 200 |
+| Stand je Produkt | erhältlich: FaNiCa Fun, Instinct Scoring, SetUpLeiste · im Test (nicht in den Stores): NeonPunkt (Play-Test), YourFilm, ZeitAnker, Tankspur, ScheinBar, AbleseBar · in Arbeit: Campus Clash, Instinct Familie — steht als `data-stufe` an jeder Produktkarte in `index.html` |
 
 ## So arbeitet die Seite heute (nicht brechen)
 
 **Inhalt und Aufbau**
 - Alle Texte DE + EN stehen in `texte.js` — nur dort Inhalte ändern, neuer Text immer in
   beiden Sprachblöcken.
-- Startseite kurz: Kapitelkopf, Status-Pille, Kernsatz, Knöpfe, Bezugsleiste. Alles
-  Ausführliche steht auf der Unterseite je Produkt. Kapitelreihenfolge ist fest.
+- Startseite seit 01.10.2026: Hero mit Karussell → „Die Produkte“ (elf Karten im Raster,
+  Filter Alle/Erhältlich/Im Test/In Arbeit, Verteilungsbalken) → Vergleich → Über mich →
+  Fragen → Kontakt. Je Karte: Nummer, Stand, Symbol, Name, Kernsatz, Bezugswege aus `BEZUG`,
+  Knopf mit Falks Hover-Effekt. Alles Ausführliche steht auf der Unterseite je Produkt.
+  Kapitelreihenfolge ist fest; die Karten tragen die alten Anker (`#fanica` …).
+- Neue Startseiten-Teile liegen in `start.css`/`start.js`, nicht in `style.css`/`app.js`.
+- Produktseiten: Kopf mit „← Startseite“ und dem Menü „Die Apps“ (`.produktwahl`) statt
+  elf Einzellinks.
+- Seitenwechsel per View Transitions (`gemeinsam.css`, `uebergang.js`): das App-Symbol
+  wandert zwischen Karte und Produktseite; ohne Browserunterstützung normaler Wechsel,
+  bei reduzierter Bewegung aus.
 - Jede Unterseite hat ein eigenes Kapitel-Erlebnis im ersten Bildschirm.
   → [[kapitel-erlebnis-je-app-statt-gleicher-kopf]]
 - Vergleichstabelle „Welche App ist für dich?“ führt zehn Produkte in voller Länge; die
@@ -77,16 +86,12 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   eigenen Kopien von CSS, JS und Bildern — Instinct-Änderungen betreffen oft beide.
 
 ## Bekannt und bewusst belassen
-- Die Karussell-Überlappung auf dem Handy ist der gewollte 3D-Effekt.
+- Karussell auf dem Handy: seit 01.10.2026 ohne Überlappung (eigener Radius in `start.css`, Winkel aus `--karten`, das setzt `app.js`); die hinteren Karten sind gedimmt, die vordere leuchtet.
 - Zwei Instinct-Screenshots sind schon in Falks Originalaufnahme rechts angeschnitten; nur
   per Neuaufnahme zu beheben, kein Blocker.
 
 ## Offen
-1. **ScheinBar-Preis nachziehen:** Falk hat entschieden (0,49 € / 4 Wochen oder 4,99 € / Jahr,
-   [[scheinbar]]), die Seite zeigt noch „noch offen“ — `texte.js` `vergleich.zeilen` „Premium ab“
-   (Zeile 1905) bzw. EN „Premium from“ (Zeile 3836): dort den **9. Wert** in `werte` ändern
-   (ScheinBar, Spalte `app-9`). Der 10. Wert gehört AbleseBar und bleibt „noch offen“. Dazu
-   `vergleich.fuss` in beiden Sprachen (Zeilen 1908 und 3839).
+1. **Neue Fassung pushen** (Falks Wort): die Überarbeitung vom 01.10.2026 ist lokal committet.
 2. **Store-Wege freischalten**, sobald Instinct Play bzw. NeonPunkt (Play und Apple) live sind:
    `standAndroid`/`standApple` in `inhalte.js`, vorher die Adresse prüfen.
 3. **Bild unter „Ein-Mann-Medienstudio“** im Hero von `index.html` einbauen (Falks Auftrag aus
@@ -97,8 +102,12 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
    beide gibt es nicht. Richtig: `Projekte\Apps\FaNiCa Fun\Google Play\5 Webseite und
    Webversion\daten.json` und `Projekte\Web\Webseiten\Webseite\runde.js`. Dieselbe falsche
    Ordnerangabe steht in `LIESMICH.md`. Vor dem nächsten Lauf berichtigen.
-5. **Git (Falks Wort), erst nach Punkt 4:** die Änderungen aus „Nicht committet“ sind weder
-   committet noch gepusht. Vorher die Pfade berichtigen, sonst schreibt der Commit falsche
-   Pfade fest.
+5. **FaNiCa „Neu in der App“** nennt „Stand Version 1.181“, live ist 1.200 — die Liste
+   `fanica.neuListe` gegen 1.182–1.200 prüfen, dann Zahl in DE und EN anheben.
+6. **Campus Clash:** 4.13.0 liegt seit 30.09.2026 als öffentliches GitHub-Release vor; die Seite
+   nennt keinen Bezugsweg (Falks Entscheidung, ob verlinkt wird). Plattform „Android · iOS“ in der
+   Vergleichstabelle ist für iOS nicht belegt.
+7. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
+   nächsten Produkt mitziehen.
 
 **Wissen:** Skill `entwickler-website` · [[statische-website-bauen-und-veroeffentlichen]]
