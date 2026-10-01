@@ -1811,7 +1811,18 @@ de: {
   produkt: {
     inhaltName: "Auf dieser Seite",
     alleZeigen: "Alle {anzahl} anzeigen",
-    weniger: "Weniger anzeigen"
+    weniger: "Weniger anzeigen",
+    kurz: {
+      kniff: "Der Kniff",
+      trophaeen: "Trophäen",
+      rennen: "Rennen",
+      familie: "Warum eine Familie",
+      scheibe: "Zielscheibe",
+      parcours: "Parcours-Begriffe",
+      verbaende: "Verbände",
+      gemessen: "Gemessen oder gerechnet",
+      knoepfe: "Drei Knöpfe"
+    }
   },
 
   start: {
@@ -3793,7 +3804,18 @@ en: {
   produkt: {
     inhaltName: "On this page",
     alleZeigen: "Show all {anzahl}",
-    weniger: "Show less"
+    weniger: "Show less",
+    kurz: {
+      kniff: "The trick",
+      trophaeen: "Trophies",
+      rennen: "Races",
+      familie: "Why a family",
+      scheibe: "Target",
+      parcours: "Course terms",
+      verbaende: "Associations",
+      gemessen: "Measured or calculated",
+      knoepfe: "Three buttons"
+    }
   },
 
   start: {

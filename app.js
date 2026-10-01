@@ -22,6 +22,23 @@
     document.documentElement.lang = window.SPRACHE;
   }
 
+  function seitenkopfUebersetzen() {
+    if (window.SPRACHE === "de") return;
+    const k = document.body.dataset.kapitel;
+    const name = document.querySelector(".produktkopf h1")?.textContent.trim();
+    let titel = null, text = null;
+    if (k && name && T(k + ".untertitel")) {
+      titel = name + " — " + T(k + ".untertitel");
+      const lang = T(k + ".positionierung") || "";
+      text = lang.length > 158 ? lang.slice(0, lang.lastIndexOf(" ", 155)) + " …" : lang;
+    } else if (document.body.classList.contains("start")) {
+      titel = T("meta.titel");
+      text = T("meta.beschreibung");
+    }
+    if (titel) document.title = titel;
+    if (text) document.querySelector('meta[name="description"]')?.setAttribute("content", text);
+  }
+
   /* Sprache umschalten (Gerüst: EN füllt sich, sobald texte.js ergänzt ist) */
   function spracheEinrichten() {
     const knopf = document.getElementById("sprachknopf");
@@ -2560,6 +2577,7 @@
   /* ======================================================== START */
   function start() {
     texteEinsetzen();
+    seitenkopfUebersetzen();
     spracheEinrichten();
     kopfEinrichten();
     kapitelEinrichten();

@@ -13,14 +13,22 @@
     if (bloecke.length < 3) { leiste.remove(); return; }
 
     bloecke.forEach((b, i) => { if (!b.id) b.id = "abschnitt-" + (i + 1); });
-    leiste.innerHTML = bloecke.map(b =>
-      `<a href="#${b.id}">${sicher(b.querySelector(":scope > h2").textContent.trim())}</a>`).join("");
+    const name = (b) => (b.dataset.kurz && T(b.dataset.kurz))
+      || b.querySelector(":scope > h2").textContent.trim();
+    leiste.innerHTML = `<div class="seiten-inhalt-spur">${bloecke.map(b =>
+      `<a href="#${b.id}">${sicher(name(b))}</a>`).join("")}</div>`;
+    const spur = leiste.firstElementChild;
+    const rand = () => spur.classList.toggle("laeuft-weiter",
+      spur.scrollLeft + spur.clientWidth < spur.scrollWidth - 4);
+    spur.addEventListener("scroll", rand, { passive: true });
+    addEventListener("resize", rand, { passive: true });
+    rand();
 
     const links = [...leiste.querySelectorAll("a")];
     const markieren = (id) => links.forEach(a => {
       const an = a.getAttribute("href") === "#" + id;
       a.setAttribute("aria-current", an ? "true" : "false");
-      if (an) leiste.scrollTo({ left: a.offsetLeft - 16, behavior: "smooth" });
+      if (an) spur.scrollTo({ left: a.offsetLeft - 16, behavior: "smooth" });
     });
 
     const beobachter = new IntersectionObserver((eintraege) => {

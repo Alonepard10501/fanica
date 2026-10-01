@@ -47,8 +47,8 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   „Alle N anzeigen“. Kopfzeile mit „← Startseite“ und Menü „Die Apps“ (`.produktwahl`).
   Die Geister-Ziffer „KAPITEL NN“ ist dort entfallen (`data-nr` steht nicht mehr am `<main>`).
 - App-Symbole in `bilder/marke/app-*.webp` sind die echten Launcher-Icons (FaNiCa, Instinct,
-  Campus Clash am 01.10.2026 aus dem iOS-AppIcon 1024 übernommen, alte Fassungen in
-  `_ZUM_LOESCHEN\2026-10-02-webseite\bilder-marke-alt\`).
+  Campus Clash, Tankspur am 01.10.2026 aus dem iOS-AppIcon 1024 übernommen, alte Fassungen in
+  `_ZUM_LOESCHEN\2026-10-01-webseite\bilder-marke-alt\`).
 - Seitenwechsel per View Transitions (`gemeinsam.css`, `uebergang.js`): das App-Symbol
   wandert zwischen Karte und Produktseite; ohne Browserunterstützung normaler Wechsel,
   bei reduzierter Bewegung aus.
