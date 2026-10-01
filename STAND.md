@@ -40,9 +40,11 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   Knopf mit Falks Hover-Effekt. Alles Ausführliche steht auf der Unterseite je Produkt.
   Kapitelreihenfolge ist fest; die Karten tragen die alten Anker (`#fanica` …).
 - Neue Startseiten-Teile liegen in `start.css`/`start.js`, nicht in `style.css`/`app.js`.
-- Unter „Ein-Mann-Medienstudio“ im Hero steht Falks Neon-Schriftzug „STUDIO“
-  (`bilder/marke/studio-neon.webp`, Blender-Render, freigestellt). Höhe in `start.css` je
-  Bildschirmklasse gedeckelt — bei 1366×768 beginnt das Karussell bei 513 px.
+- Kopf der Startseite: Logos, darunter der Neon-Schriftzug „STUDIO“ als reines CSS
+  (`.studio-neon` in `start.css`, einmaliges Einschalt-Flackern, bei reduzierter Bewegung
+  aus) mit „Ein-Mann-Medienstudio · Nordfriesland“ als Unterzeile — beides zusammen ist
+  die H1. Kein Knopf und kein Satz im Kopf; der Leitsatz steht als Abschluss unter dem
+  Produktraster (`start.leitsatz`). Karussell bei 1366×768 ab 366 px.
 - Produktseiten (alle elf) auf einem Gerüst: Kopfkarte (`produkt.css`, `wege.js`) und darunter
   alles aus EINER Vorlage `aufbau.js` + `aufbau.css`, befüllt aus `daten/<app>.js` (DE + EN,
   Symbole aus `symbole.js`). Reihenfolge: Auf einen Blick → Erlebnis (der app-eigene Block, steht

@@ -612,36 +612,6 @@ p:last-child { margin-bottom: 0; }
 }
 .hero p.gross { max-width: 56ch; margin-inline: auto; color: var(--grau-hell); }
 
-/* Ohne Titelzeile trägt dieser Satz den Hero allein — größer, heller,
-   mittig. (Falk 30.07.) */
-h1.hero-text,
-.hero-text {
-  /* Falk 30.07.: Schriftgröße wie vor dem Umbau (.gross) — nur zentriert.
-     Das Element ist die H1 der Seite (Suchmaschinen/Screenreader brauchen
-     genau eine), soll aber NICHT wie eine Überschrift aussehen. */
-  font-size: clamp(1.1rem, 1.9vw, 1.6rem);
-  line-height: 1.55;
-  font-family: var(--schrift-text);
-  font-weight: 400;
-  color: var(--grau-hell) !important;
-  max-width: 56ch !important;
-  margin: clamp(.8rem, 2.4vw, 1.6rem) auto 0;
-  text-align: center;
-  text-wrap: balance;
-}
-.hero-text::after {           /* feiner Strich als Abschluss */
-  content: ""; display: block;
-  width: clamp(60px, 8vw, 110px); height: 3px;
-  margin: clamp(1.4rem, 3vw, 2.2rem) auto 0;
-  border-radius: 3px;
-  background: linear-gradient(90deg, transparent, var(--akzent), transparent);
-}
-
-.hero-knoepfe {
-  display: flex; flex-wrap: wrap; gap: .9rem;
-  justify-content: center; margin-top: 2.4rem;
-}
-
 /* Marken-Punkte am unteren Rand */
 .markenpunkte {
   display: flex; gap: clamp(1rem, 4vw, 2.6rem);

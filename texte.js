@@ -26,8 +26,8 @@ de: {
   },
 
   hero: {
-    augenbraue: "Ein-Mann-Medienstudio · Nordfriesland",
-    text: "Von der ersten Idee bis in Google Play und den App Store. Ohne Team, ohne Agentur, ohne Buzzwords.",
+    augenbraue: "Ein-Mann-Medienstudio",
+    ort: "Nordfriesland",
     karussellHinweis: "Wischen oder die Pfeile drehen das Karussell — Antippen öffnet das Produkt."
   },
 
@@ -354,7 +354,7 @@ de: {
   },
 
   start: {
-    alleProdukte: "Alle Produkte im Überblick",
+    leitsatz: "Von der ersten Idee bis in Google Play und den App Store. Ohne Team, ohne Agentur, ohne Buzzwords.",
     karussellName: "Die Produkte als Karussell",
     karussellLinks: "Nach links drehen",
     karussellRechts: "Nach rechts drehen",
@@ -534,8 +534,8 @@ en: {
   },
 
   hero: {
-    augenbraue: "One-man media studio · Northern Germany",
-    text: "From the first idea all the way into Google Play and the App Store. No team, no agency, no buzzwords.",
+    augenbraue: "One-man media studio",
+    ort: "Northern Germany",
     karussellHinweis: "Swipe or use the arrows to turn the carousel — tap to open a product."
   },
 
@@ -855,7 +855,7 @@ en: {
   },
 
   start: {
-    alleProdukte: "All products at a glance",
+    leitsatz: "From the first idea all the way into Google Play and the App Store. No team, no agency, no buzzwords.",
     karussellName: "The products as a carousel",
     karussellLinks: "Turn left",
     karussellRechts: "Turn right",
