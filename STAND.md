@@ -48,7 +48,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   der App → Gratis und Premium → Häufige Fragen → Abschluss-Band mit Store-Knöpfen und
   vorige/nächste App. Ein Abschnitt ohne Daten entfällt. Inhalte ändern = nur die Datendatei;
   `texte.js` trägt nur noch Kopfkarte und Erlebnis-Texte. Leiste „Auf dieser Seite“ liest
-  `data-kurztext`. Alte Seiten: `_ZUM_LOESCHEN6-10-01-webseite\produktseiten-vor-neuaufbau\`.
+  `data-kurztext`. Alte Seiten: `_ZUM_LOESCHEN\2026-10-01-webseite\produktseiten-vor-neuaufbau\`.
 - App-Symbole in `bilder/marke/app-*.webp` sind die echten Launcher-Icons (FaNiCa, Instinct,
   Campus Clash, Tankspur am 01.10.2026 aus dem iOS-AppIcon 1024 übernommen, alte Fassungen in
   `_ZUM_LOESCHEN\2026-10-01-webseite\bilder-marke-alt\`).
