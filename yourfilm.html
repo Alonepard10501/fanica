@@ -10,6 +10,7 @@
 <link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="gemeinsam.css">
+<link rel="stylesheet" href="produkt.css">
 </head>
 <body data-kapitel="yourfilm">
 
@@ -49,20 +50,29 @@
  </div>
 </header>
 
-<main id="inhalt" class="unterseite" data-nr="06" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="kapitel-licht" aria-hidden="true"></div>
+<main id="inhalt" class="unterseite produktseite">
   <div class="huelle">
 
-    <div class="kapitelkopf">
-      <p class="status-pille" data-t="yourfilm.statusPille"></p>
-
+    <header class="produktkopf">
       <div class="app-symbol">
         <img class="symbol-bild" src="bilder/marke/app-yourfilm.webp"
              alt="YourFilm — App-Symbol" width="128" height="128">
       </div>
+      <div class="produktkopf-text">
+        <p class="produktkopf-zeile">
+          <span class="produktkopf-nr"><span data-t="meta.kapitelWort">Kapitel</span> 06</span>
+          <span class="produkt-stufe" data-stufe="test" data-t="start.filterTest">Im Test</span></p>
+        <h1>YourFilm</h1>
+        <p class="produktkopf-art" data-t="yourfilm.untertitel"></p>
+        <p class="produktkopf-claim"><b data-t="yourfilm.claim"></b>
+          <span data-t="yourfilm.claimZwei"></span></p>
+        <p class="produktkopf-stand" data-t="yourfilm.statusPille"></p>
+        <div class="produkt-wege" data-wege="yourfilm" data-webseite></div>
+      </div>
+    </header>
 
-      <h1 data-t="yourfilm.untertitel">Deine Filmsammlung im Griff</h1>
-    </div>
+    <nav class="seiten-inhalt" id="seiten-inhalt" data-t="produkt.inhaltName" data-t-attr="aria-label"
+         aria-label="Auf dieser Seite"></nav>
 
     <section class="scanlauf" id="scanlauf" aria-labelledby="scanlauf-titel">
       <h2 class="scanlauf-titel" id="scanlauf-titel" data-t="yourfilm.scanTitel"></h2>
@@ -196,6 +206,8 @@
 
 <script src="texte.js"></script>
 <script src="inhalte.js"></script>
+<script src="wege.js"></script>
 <script src="app.js"></script>
+<script src="produkt.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@
 <link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="gemeinsam.css">
+<link rel="stylesheet" href="produkt.css">
 </head>
 <body data-kapitel="scheinbar">
 
@@ -49,19 +50,29 @@
  </div>
 </header>
 
-<main id="inhalt" class="unterseite" data-nr="10" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="kapitel-licht" aria-hidden="true"></div>
+<main id="inhalt" class="unterseite produktseite">
   <div class="huelle">
 
-    <div class="kapitelkopf">
-      <p class="status-pille" data-t="scheinbar.statusPille"></p>
+    <header class="produktkopf">
       <div class="app-symbol">
         <img class="symbol-bild" src="bilder/marke/app-scheinbar.webp"
              alt="ScheinBar — App-Symbol" width="128" height="128">
       </div>
+      <div class="produktkopf-text">
+        <p class="produktkopf-zeile">
+          <span class="produktkopf-nr"><span data-t="meta.kapitelWort">Kapitel</span> 10</span>
+          <span class="produkt-stufe" data-stufe="test" data-t="start.filterTest">Im Test</span></p>
+        <h1>ScheinBar</h1>
+        <p class="produktkopf-art" data-t="scheinbar.untertitel"></p>
+        <p class="produktkopf-claim"><b data-t="scheinbar.claim"></b>
+          <span data-t="scheinbar.claimZwei"></span></p>
+        <p class="produktkopf-stand" data-t="scheinbar.statusPille"></p>
+        <div class="produkt-wege" data-wege="scheinbar" data-webseite></div>
+      </div>
+    </header>
 
-      <h1 data-t="scheinbar.untertitel">Schein fotografieren, Gewinn sehen</h1>
-    </div>
+    <nav class="seiten-inhalt" id="seiten-inhalt" data-t="produkt.inhaltName" data-t-attr="aria-label"
+         aria-label="Auf dieser Seite"></nav>
 
     <div class="trommel" id="trommel">
       <div class="trommel-karte" id="trommel-karte" aria-hidden="true"></div>
@@ -173,6 +184,8 @@
 
 <script src="texte.js"></script>
 <script src="inhalte.js"></script>
+<script src="wege.js"></script>
 <script src="app.js"></script>
+<script src="produkt.js"></script>
 </body>
 </html>

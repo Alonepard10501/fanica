@@ -10,6 +10,7 @@
 <link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="gemeinsam.css">
+<link rel="stylesheet" href="produkt.css">
 </head>
 <body data-kapitel="fanica">
 
@@ -49,24 +50,29 @@
  </div>
 </header>
 
-<main id="inhalt" class="unterseite" data-nr="01" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="kapitel-licht" aria-hidden="true"></div>
+<main id="inhalt" class="unterseite produktseite">
   <div class="huelle">
 
-    <div class="kapitelkopf">
-      <p class="kennung">FaNiCa Fun</p>
-      <p class="status-pille" data-t="fanica.statusPille"></p>
-      <img class="kapitel-logo" src="bilder/marke/logo-fanica.webp"
-           alt="FaNiCa Fun — Logo" width="340" height="182">
-
+    <header class="produktkopf">
       <div class="app-symbol">
         <img class="symbol-bild" src="bilder/marke/app-fanica.webp"
              alt="FaNiCa Fun — App-Symbol" width="128" height="128">
       </div>
+      <div class="produktkopf-text">
+        <p class="produktkopf-zeile">
+          <span class="produktkopf-nr"><span data-t="meta.kapitelWort">Kapitel</span> 01</span>
+          <span class="produkt-stufe" data-stufe="live" data-t="start.filterLive">Erhältlich</span></p>
+        <h1>FaNiCa Fun</h1>
+        <p class="produktkopf-art" data-t="fanica.untertitel"></p>
+        <p class="produktkopf-claim"><b data-t="fanica.claim"></b>
+          <span data-t="fanica.claimZwei"></span></p>
+        <p class="produktkopf-stand" data-t="fanica.statusPille"></p>
+        <div class="produkt-wege" data-wege="fanica" data-webseite></div>
+      </div>
+    </header>
 
-      <h1 data-t="fanica.untertitel">Die Tipprunde für Motorsport-Freunde</h1>
-
-    </div>
+    <nav class="seiten-inhalt" id="seiten-inhalt" data-t="produkt.inhaltName" data-t-attr="aria-label"
+         aria-label="Auf dieser Seite"></nav>
 
     <div id="naechstes-rennen" class="live-feld"></div>
 
@@ -210,7 +216,9 @@
 <script src="texte.js"></script>
 <script src="runde.js"></script>
 <script src="inhalte.js"></script>
+<script src="wege.js"></script>
 <script src="app.js"></script>
+<script src="produkt.js"></script>
 <script src="live.js"></script>
 </body>
 </html>

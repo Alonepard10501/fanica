@@ -1808,6 +1808,12 @@ de: {
   },
 
   /* ============ LIVE — automatisch geladene Renndaten ============ */
+  produkt: {
+    inhaltName: "Auf dieser Seite",
+    alleZeigen: "Alle {anzahl} anzeigen",
+    weniger: "Weniger anzeigen"
+  },
+
   start: {
     alleProdukte: "Alle Produkte im Überblick",
     karussellName: "Die Produkte als Karussell",
@@ -3784,6 +3790,12 @@ en: {
   },
 
   /* ============ LIVE — automatically loaded race data ============ */
+  produkt: {
+    inhaltName: "On this page",
+    alleZeigen: "Show all {anzahl}",
+    weniger: "Show less"
+  },
+
   start: {
     alleProdukte: "All products at a glance",
     karussellName: "The products as a carousel",

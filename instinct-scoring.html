@@ -10,6 +10,7 @@
 <link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="gemeinsam.css">
+<link rel="stylesheet" href="produkt.css">
 </head>
 <body data-kapitel="instinct">
 
@@ -49,25 +50,33 @@
  </div>
 </header>
 
-<main id="inhalt" class="unterseite" data-nr="02" data-wort="Kapitel" data-t="meta.kapitelWort" data-t-attr="data-wort">
-  <div class="kapitel-licht" aria-hidden="true"></div>
+<main id="inhalt" class="unterseite produktseite">
   <div class="huelle">
 
-    <div class="kapitelkopf">
-      <p class="kennung">Instinct Scoring</p>
-      <p class="status-pille" data-t="instinct.statusPille"></p>
-      <div class="logo-paar">
-        <img class="kapitel-logo" src="bilder/marke/logo-instinct.webp"
-             alt="Instinct Scoring — Logo" width="220" height="220">
-        <span class="logo-mal" aria-hidden="true">×</span>
-        <div class="app-symbol">
-        <img class="symbol-bild" src="bilder/marke/logo-kooperation.webp"
-             alt="In Kooperation mit Bogensport Instinct" width="200" height="176">
+    <header class="produktkopf">
+      <div class="app-symbol">
+        <img class="symbol-bild" src="bilder/marke/app-instinct.webp"
+             alt="Instinct Scoring — App-Symbol" width="128" height="128">
       </div>
+      <div class="produktkopf-text">
+        <p class="produktkopf-zeile">
+          <span class="produktkopf-nr"><span data-t="meta.kapitelWort">Kapitel</span> 02</span>
+          <span class="produkt-stufe" data-stufe="live" data-t="start.filterLive">Erhältlich</span></p>
+        <h1>Instinct Scoring</h1>
+        <p class="produktkopf-art" data-t="instinct.untertitel"></p>
+        <p class="produktkopf-partner">
+          <img src="bilder/marke/logo-kooperation.webp" alt="In Kooperation mit Bogensport Instinct"
+               width="240" height="211" loading="lazy">
+          <span data-t="instinct.kooperation"></span></p>
+        <p class="produktkopf-claim"><b>Track. Score. Improve.</b>
+          <span data-t="instinct.claimDeutsch"></span></p>
+        <p class="produktkopf-stand" data-t="instinct.statusPille"></p>
+        <div class="produkt-wege" data-wege="instinct" data-webseite></div>
       </div>
-      <h1 data-t="instinct.untertitel">Die Scoring-App für Bogensport</h1>
-      <p class="kooperationszeile" data-t="instinct.kooperation"></p>
-    </div>
+    </header>
+
+    <nav class="seiten-inhalt" id="seiten-inhalt" data-t="produkt.inhaltName" data-t-attr="aria-label"
+         aria-label="Auf dieser Seite"></nav>
 
     <section class="unter-block" id="zielscheibe">
       <h2 data-t="instinct.scheibeTitel">Fünf Wertungssysteme, eine Scheibe</h2>
@@ -225,6 +234,8 @@
 
 <script src="texte.js"></script>
 <script src="inhalte.js"></script>
+<script src="wege.js"></script>
 <script src="app.js"></script>
+<script src="produkt.js"></script>
 </body>
 </html>

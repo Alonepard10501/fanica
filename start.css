@@ -160,24 +160,6 @@ body.start {
   font: 700 .78rem/1 var(--schrift-kopf); letter-spacing: .22em;
   color: color-mix(in srgb, var(--akzent-hell) 65%, var(--grau));
 }
-.produkt-stufe {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 5px 10px; border-radius: 999px;
-  font: 700 .68rem/1.2 var(--schrift-kopf); letter-spacing: .1em; text-transform: uppercase;
-  color: var(--akzent-hell);
-  border: 1px solid color-mix(in srgb, var(--akzent-hell) 42%, transparent);
-}
-.produkt-stufe::before {
-  content: ""; flex: none; width: 7px; height: 7px; border-radius: 50%;
-  background: currentColor;
-}
-.produkt[data-stufe="live"] .produkt-stufe {
-  background: color-mix(in srgb, var(--akzent) 22%, transparent);
-  box-shadow: 0 0 16px -8px var(--akzent-hell);
-}
-.produkt[data-stufe="bau"] .produkt-stufe { border-style: dashed; }
-.produkt[data-stufe="bau"] .produkt-stufe::before { background: none; box-shadow: inset 0 0 0 1.5px currentColor; }
-
 .produkt-marke { display: flex; align-items: center; gap: var(--s4); }
 .produkt-symbol {
   flex: none; width: 64px; height: 64px; border-radius: 16px;
@@ -192,26 +174,6 @@ body.start {
   font: 700 1.14rem/1.3 var(--schrift-kopf); letter-spacing: .01em;
   color: var(--akzent-hell);
 }
-
-.produkt-wege { display: flex; flex-wrap: wrap; gap: var(--s2); }
-.produkt-wege:empty { display: none; }
-.weg {
-  display: inline-flex; align-items: center; gap: 6px;
-  min-height: 36px; padding: 6px 11px;
-  border-radius: 10px; border: 1px solid var(--linie);
-  font-size: .8rem; line-height: 1.2; color: var(--grau-hell); text-decoration: none;
-}
-.weg svg { width: 16px; height: 16px; flex: none; }
-.weg em { font-style: normal; color: var(--grau); }
-a.weg {
-  color: var(--creme);
-  border-color: color-mix(in srgb, var(--akzent-hell) 45%, transparent);
-  background: color-mix(in srgb, var(--akzent) 10%, transparent);
-  transition: background .25s var(--weich), border-color .25s var(--weich);
-}
-a.weg:hover { border-color: var(--akzent-hell); background: color-mix(in srgb, var(--akzent) 24%, transparent); }
-a.weg:focus-visible { outline: 2px solid var(--akzent-hell); outline-offset: 2px; }
-.weg-wartet { border-style: dashed; }
 
 .produkt-fuss {
   margin-top: auto; padding-top: var(--s2);

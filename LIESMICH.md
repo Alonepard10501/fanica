@@ -36,6 +36,8 @@ automatisch ausgelassen.
 | `app.js` | Verhalten: Kapitelfarben, Zeitraffer, Spiel, Zielscheibe, QR-Codes |
 | `style.css` | Aussehen |
 | `start.css` · `start.js` | Nur die Startseite: Produktkarten, Filter nach Stand, Verteilungsbalken |
+| `produkt.css` · `produkt.js` | Gerüst aller Produktseiten: Kopf mit Symbol, Stand und Store-Knöpfen, Abschnittsleiste, gekürzte Funktionslisten |
+| `wege.js` | Store- und Download-Knöpfe aus `BEZUG` für Startseite und Produktseiten |
 | `gemeinsam.css` · `uebergang.js` | Alle Seiten: weicher Seitenwechsel (App-Symbol wandert mit) und das Menü „Die Apps“ auf den Produktseiten |
 | `impressum.html` · `datenschutz.html` · `bildquellen.html` | Rechtsseiten |
 | `bilder/` | Screenshots und Logos, je in normaler und doppelter Auflösung |

@@ -40,8 +40,15 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   Knopf mit Falks Hover-Effekt. Alles Ausführliche steht auf der Unterseite je Produkt.
   Kapitelreihenfolge ist fest; die Karten tragen die alten Anker (`#fanica` …).
 - Neue Startseiten-Teile liegen in `start.css`/`start.js`, nicht in `style.css`/`app.js`.
-- Produktseiten: Kopf mit „← Startseite“ und dem Menü „Die Apps“ (`.produktwahl`) statt
-  elf Einzellinks.
+- Produktseiten (alle elf) auf einem Gerüst (`produkt.css`, `produkt.js`, `wege.js`): Kopfkarte
+  mit echtem App-Symbol, Kapitelnummer, Stand-Marke (Erhältlich/Im Test/In Arbeit), Name als
+  `<h1>`, Kernsatz, Stand-Zeile und Store-Knöpfen aus `BEZUG`; darunter die klebende
+  Abschnittsleiste „Auf dieser Seite“; Funktionslisten über neun Einträge zeigen sechs und
+  „Alle N anzeigen“. Kopfzeile mit „← Startseite“ und Menü „Die Apps“ (`.produktwahl`).
+  Die Geister-Ziffer „KAPITEL NN“ ist dort entfallen (`data-nr` steht nicht mehr am `<main>`).
+- App-Symbole in `bilder/marke/app-*.webp` sind die echten Launcher-Icons (FaNiCa, Instinct,
+  Campus Clash am 01.10.2026 aus dem iOS-AppIcon 1024 übernommen, alte Fassungen in
+  `_ZUM_LOESCHEN\2026-10-02-webseite\bilder-marke-alt\`).
 - Seitenwechsel per View Transitions (`gemeinsam.css`, `uebergang.js`): das App-Symbol
   wandert zwischen Karte und Produktseite; ohne Browserunterstützung normaler Wechsel,
   bei reduzierter Bewegung aus.
