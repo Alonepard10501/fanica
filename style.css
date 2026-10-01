@@ -218,7 +218,7 @@ p:last-child { margin-bottom: 0; }
   --akzent-hell: #FF5FA8;
 }
 [data-kapitel="ablesebar"] {
-  --akzent: #2E7FC2;      /* AbleseBar: Blau wie das Zifferblatt */
+  --akzent: #2E7FC2;      /* AblesBar: Blau wie das Zifferblatt */
   --akzent-hell: #6BB4EE;
 }
 [data-kapitel="fanica"],
@@ -1819,7 +1819,7 @@ body[data-kapitel="neonpunkt"] .raffer-kopf .nbtn[hidden] { display: none; }
 .vergleich thead th.app-7 { color: #3FD0D0; }   /* ZeitWissen   */
 .vergleich thead th.app-8 { color: #E8944F; }   /* Tankspur     */
 .vergleich thead th.app-9 { color: #FF5FA8; }   /* ScheinBar    */
-.vergleich thead th.app-10 { color: #6BB4EE; }  /* AbleseBar    */
+.vergleich thead th.app-10 { color: #6BB4EE; }  /* AblesBar    */
 .vergleich tbody th {
   font-family: var(--schrift-text); font-weight: 600;
   font-size: .86rem; color: var(--grau);
@@ -4814,7 +4814,7 @@ body[data-kapitel="tankspur"] main.unterseite .kapitelkopf {
 }
 
 /* ══════════════════════════════════════════════════════════════════════
-   ZAEHLERWERK — AbleseBar: ein Rollenwerk mit nach oben wegrollenden Ziffern
+   ZAEHLERWERK — AblesBar: ein Rollenwerk mit nach oben wegrollenden Ziffern
    ══════════════════════════════════════════════════════════════════════ */
 
 .zaehlerwerk {

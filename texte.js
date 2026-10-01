@@ -12,7 +12,7 @@ de: {
   meta: {
     kapitelWort: "Kapitel",
     titel: "FaNiCa — Falk Carstensen · Apps aus einem Ein-Mann-Studio",
-    beschreibung: "Elf Produkte aus einem Ein-Mann-Medienstudio: FaNiCa Fun, Instinct Scoring, NeonPunkt, die SetUpLeiste für Windows sowie Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AbleseBar und die Instinct Familie.",
+    beschreibung: "Elf Produkte aus einem Ein-Mann-Medienstudio: FaNiCa Fun, Instinct Scoring, NeonPunkt, die SetUpLeiste für Windows sowie Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar und die Instinct Familie.",
     sprachknopf: "EN",
     sprachtitel: "Switch to English"
   },
@@ -1753,16 +1753,16 @@ de: {
       { bild: "ablesebar-5-rechnung", titel: "Die Abrechnung", text: "Betriebs- und Heizkosten getrennt, die gezahlten Abschläge dagegen, dazu jede Monatszeile einzeln." },
     ],
     kennung: "Kapitel 11 · Im Test",
-    hinweis: "AbleseBar liegt als Testfassung außerhalb der Stores vor. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern.",
+    hinweis: "AblesBar liegt als Testfassung außerhalb der Stores vor. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern.",
     karteKurz: "Ablesen, fotografieren, abrechnen",
     karteStatus: "Im Test",
     statusPille: "Im Test — Testfassung außerhalb der Stores",
-    name: "AbleseBar",
+    name: "AblesBar",
     untertitel: "Zählerstände ablesen, Betriebskosten prüfen",
     claim: "Ablesen. Abrechnen. Fertig.",
     claimZwei: "Einmal im Monat jeden Zähler fotografieren — den Rest rechnet die App.",
     positionierung: "Anfang des Monats ein Foto je Zähler — Gas, Wasser, Strom. Die App liest die Ziffern, rechnet den Verbrauch je Monat und je Abrechnungsperiode und stellt die Kosten den gezahlten Abschlägen gegenüber. So steht jederzeit da, ob eine Nachzahlung oder ein Guthaben aufläuft.",
-    inArbeit: "🧪 Im Test: AbleseBar läuft als Testfassung außerhalb der Stores. Die Verteilung geht über einen Update-Knopf in der App.",
+    inArbeit: "🧪 Im Test: AblesBar läuft als Testfassung außerhalb der Stores. Die Verteilung geht über einen Update-Knopf in der App.",
     kennzahlen: [{ zahl: "8", text: "Zähler von Anfang an angelegt" }, { zahl: "16", text: "Kostenfelder je Periode" }, { zahl: "3", text: "Statistik-Diagramme" }, { zahl: "3", text: "CSV-Formate erkannt" }],
     ablaufTitel: "So fängst du an",
     ablaufSchritte: [
@@ -1803,7 +1803,7 @@ de: {
       { name: "Vorjahres-Vergleich", text: "Sobald es eine Vorperiode mit Ablesungen gibt, steht der Periodenverbrauch je Bereich dem der Vorperiode gegenüber, mit Prozentwert." },
     ],
     preis: "Kostenlos in der Testfassung.",
-    mehrKnopf: "Alles über AbleseBar",
+    mehrKnopf: "Alles über AblesBar",
     mehrText: "Die Zähler, die Kostensätze, die Abschlagsrechnung — und was bis zur Veröffentlichung noch offen ist.",
   },
 
@@ -1917,7 +1917,7 @@ de: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
     text: "Zehn Produkte, zehn völlig verschiedene Zwecke — drei zu haben, sechs im Test, eines noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie sammeln nichts über dich und verlangen kein Konto bei uns. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AbleseBar"],
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten", "Spielscheine prüfen und auswerten", "Zählerstände ablesen, Nebenkosten prüfen"] },
       { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Arbeit", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Testfassung außerhalb der Stores", "Testfassung außerhalb der Stores"] },
@@ -1930,7 +1930,7 @@ de: {
       { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "noch offen", "0,49 € / 4 Wochen", "—", "0,49 € / 4 Wochen", "noch offen"] },
       { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
-    fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash, YourFilm und AbleseBar steht noch nicht fest, ob und was etwas kosten wird."
+    fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash, YourFilm und AblesBar steht noch nicht fest, ob und was etwas kosten wird."
   },
 
   fragen: {
@@ -1938,13 +1938,13 @@ de: {
     titel: "Was oft gefragt wird",
     liste: [
       { f: "Brauche ich für die Apps ein Konto?",
-        a: "Bei den meisten nicht — du installierst und legst los. Ein Profil brauchen nur FaNiCa Fun (mehrere Leute tippen in derselben Runde), Tankspur, ScheinBar und AbleseBar (mehrere Fahrer, Spieler oder Haushalte auf einem Gerät — AbleseBar geht auch als Gast). Diese Profile liegen auf dem Gerät, nicht bei uns." },
+        a: "Bei den meisten nicht — du installierst und legst los. Ein Profil brauchen nur FaNiCa Fun (mehrere Leute tippen in derselben Runde), Tankspur, ScheinBar und AblesBar (mehrere Fahrer, Spieler oder Haushalte auf einem Gerät — AblesBar geht auch als Gast). Diese Profile liegen auf dem Gerät, nicht bei uns." },
       { f: "Funktionieren die Apps ohne Internet?",
-        a: "Der Kern jeder App läuft ohne Verbindung, und alle Daten liegen auf dem Gerät. Netz braucht nur, was von außen kommt: die Rennergebnisse und der Abgleich mit den Mitspielern bei FaNiCa Fun, die Filmdaten bei YourFilm, das Nachladen der Ziehungen bei ScheinBar. NeonPunkt, ZeitAnker, Tankspur und AbleseBar kommen ganz ohne aus." },
+        a: "Der Kern jeder App läuft ohne Verbindung, und alle Daten liegen auf dem Gerät. Netz braucht nur, was von außen kommt: die Rennergebnisse und der Abgleich mit den Mitspielern bei FaNiCa Fun, die Filmdaten bei YourFilm, das Nachladen der Ziehungen bei ScheinBar. NeonPunkt, ZeitAnker, Tankspur und AblesBar kommen ganz ohne aus." },
       { f: "Was passiert mit meinen Daten?",
         a: "Sie bleiben auf deinem Gerät. Keine der Apps hat Werbung, Analyse-Werkzeuge oder Datenweitergabe. Das ist keine Marketing-Aussage, sondern eine bewusste Entscheidung — Einnahmen kommen ausschließlich aus den Abos." },
       { f: "Was kostet mich das?",
-        a: "Jede App ist kostenlos nutzbar. Premium schaltet Zusatzfunktionen frei und beginnt bei 0,49 € je vier Wochen; die ersten sieben Tage sind immer kostenlos, ohne dass du kündigen musst. Die SetUpLeiste kostet gar nichts, und bei Campus Clash, YourFilm und AbleseBar steht noch nicht fest, ob und was etwas kosten wird." },
+        a: "Jede App ist kostenlos nutzbar. Premium schaltet Zusatzfunktionen frei und beginnt bei 0,49 € je vier Wochen; die ersten sieben Tage sind immer kostenlos, ohne dass du kündigen musst. Die SetUpLeiste kostet gar nichts, und bei Campus Clash, YourFilm und AblesBar steht noch nicht fest, ob und was etwas kosten wird." },
       { f: "Verliere ich meine Daten, wenn ich nicht bezahle?",
         a: "Nein. Ohne Abo werden nur Funktionen gesperrt, nichts gelöscht. Bei NeonPunkt pausiert das Spiel nach 500 Klicks — Zähler und Bestenlisten bleiben erhalten." },
       { f: "Wer steckt hinter den Apps?",
@@ -2031,7 +2031,7 @@ en: {
   meta: {
     kapitelWort: "Chapter",
     titel: "FaNiCa — Falk Carstensen · Apps from a one-man studio",
-    beschreibung: "Eleven products from a one-man media studio: FaNiCa Fun, Instinct Scoring, NeonPunkt, the SetUpLeiste for Windows, plus Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AbleseBar and the Instinct family.",
+    beschreibung: "Eleven products from a one-man media studio: FaNiCa Fun, Instinct Scoring, NeonPunkt, the SetUpLeiste for Windows, plus Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar and the Instinct family.",
     sprachknopf: "DE",
     sprachtitel: "Auf Deutsch umschalten"
   },
@@ -3735,16 +3735,16 @@ en: {
       { bild: "ablesebar-5-rechnung", titel: "The settlement", text: "Running and heating costs kept apart, the instalments you paid set against them, plus every monthly line on its own." },
     ],
     kennung: "Chapter 11 · In testing",
-    hinweis: "AbleseBar is a test build outside the stores. All details describe the current build and may change before release.",
+    hinweis: "AblesBar is a test build outside the stores. All details describe the current build and may change before release.",
     karteKurz: "Read, photograph, settle up",
     karteStatus: "In testing",
     statusPille: "In testing — test build outside the stores",
-    name: "AbleseBar",
+    name: "AblesBar",
     untertitel: "Read your meters, check your utility bill",
     claim: "Read it. Settle it. Done.",
     claimZwei: "Photograph each meter once a month — the app works out the rest.",
     positionierung: "One photo per meter at the start of the month — gas, water, electricity. The app reads the digits, works out consumption per month and per billing period, and sets the costs against the instalments you have paid. So you always know whether a top-up payment or a refund is building up.",
-    inArbeit: "🧪 In testing: AbleseBar runs as a test build outside the stores. It is distributed through an update button inside the app.",
+    inArbeit: "🧪 In testing: AblesBar runs as a test build outside the stores. It is distributed through an update button inside the app.",
     kennzahlen: [{ zahl: "8", text: "meters set up from the start" }, { zahl: "16", text: "cost fields per period" }, { zahl: "3", text: "statistics charts" }, { zahl: "3", text: "CSV formats recognised" }],
     ablaufTitel: "How to get started",
     ablaufSchritte: [
@@ -3785,7 +3785,7 @@ en: {
       { name: "Year-on-year", text: "Once a previous period with readings exists, period consumption per area is set against the previous one, with a percentage." },
     ],
     preis: "Free while in testing.",
-    mehrKnopf: "All about AbleseBar",
+    mehrKnopf: "All about AblesBar",
     mehrText: "The meters, the cost rates, the instalment calculation — and what is still open before release.",
   },
 
@@ -3873,7 +3873,7 @@ en: {
     kennung: "At a glance",
     titel: "Which app is for you?",
     text: "Ten products, ten entirely different purposes — three available, six in testing, one still being built. What they share: their core works offline, they collect nothing about you, and they ask for no account with us. The Instinct Family is not listed here: it is not a single app but ten, and none of them is available yet.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AbleseBar"],
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar"],
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view", "Checking and analysing lottery tickets", "Reading meters, checking utility bills"] },
       { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In testing · not in a store yet", "In testing · not in a store yet", "In testing · not in a store yet", "Test build outside the stores", "Test build outside the stores"] },
@@ -3886,7 +3886,7 @@ en: {
       { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "not decided yet", "€0.49 / 4 weeks", "—", "€0.49 / 4 weeks", "not decided yet"] },
       { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
-    fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash, YourFilm and AbleseBar it is not yet decided whether anything will cost money."
+    fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash, YourFilm and AblesBar it is not yet decided whether anything will cost money."
   },
 
   fragen: {
@@ -3894,13 +3894,13 @@ en: {
     titel: "What people usually ask",
     liste: [
       { f: "Do I need an account for the apps?",
-        a: "For most of them, no — you install them and start. A profile is only needed for FaNiCa Fun (several people predict in the same group), Tankspur, ScheinBar and AbleseBar (several drivers, players or households on one device — AbleseBar also works as a guest). Those profiles live on the device, not with us." },
+        a: "For most of them, no — you install them and start. A profile is only needed for FaNiCa Fun (several people predict in the same group), Tankspur, ScheinBar and AblesBar (several drivers, players or households on one device — AblesBar also works as a guest). Those profiles live on the device, not with us." },
       { f: "Do the apps work without internet?",
-        a: "The core of every app works without a connection, and all data sits on your device. A connection is only needed for what comes from outside: race results and syncing other players in FaNiCa Fun, film data in YourFilm, downloading draws in ScheinBar. NeonPunkt, ZeitAnker, Tankspur and AbleseBar need none at all." },
+        a: "The core of every app works without a connection, and all data sits on your device. A connection is only needed for what comes from outside: race results and syncing other players in FaNiCa Fun, film data in YourFilm, downloading draws in ScheinBar. NeonPunkt, ZeitAnker, Tankspur and AblesBar need none at all." },
       { f: "What happens to my data?",
         a: "It stays on your device. None of the apps has ads, analytics or data sharing. That is not a marketing line but a deliberate decision — the income comes purely from subscriptions." },
       { f: "What does it cost me?",
-        a: "Every app is free to use. Premium unlocks extra features and starts at €0.49 per four weeks; the first seven days are always free, with nothing to cancel. SetUpLeiste costs nothing at all, and for Campus Clash, YourFilm and AbleseBar it is not yet decided whether anything will cost money." },
+        a: "Every app is free to use. Premium unlocks extra features and starts at €0.49 per four weeks; the first seven days are always free, with nothing to cancel. SetUpLeiste costs nothing at all, and for Campus Clash, YourFilm and AblesBar it is not yet decided whether anything will cost money." },
       { f: "Do I lose my data if I don't pay?",
         a: "No. Without a subscription features are locked, nothing is deleted. In NeonPunkt the game pauses after 500 taps — counters and leaderboards stay intact." },
       { f: "Who is behind the apps?",

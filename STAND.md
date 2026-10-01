@@ -24,10 +24,10 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
 | Git | `origin/main` = `2a68505`; lokal zwei Commits voraus (Stand-Datei 28.09. und Überarbeitung 01.10.2026) — Push nur auf Falks Wort |
-| Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AbleseBar 11 |
+| Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
 | Store-Gegenprobe 01.10.2026 | FaNiCa Play 200, Apple 1.200.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` · SetUpLeiste-Download 200 |
-| Stand je Produkt | erhältlich: FaNiCa Fun, Instinct Scoring, SetUpLeiste · im Test (nicht in den Stores): NeonPunkt (Play-Test), YourFilm, ZeitAnker, Tankspur, ScheinBar, AbleseBar · in Arbeit: Campus Clash, Instinct Familie — steht als `data-stufe` an jeder Produktkarte in `index.html` |
+| Stand je Produkt | erhältlich: FaNiCa Fun, Instinct Scoring, SetUpLeiste · im Test (nicht in den Stores): NeonPunkt (Play-Test), YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar · in Arbeit: Campus Clash, Instinct Familie — steht als `data-stufe` an jeder Produktkarte in `index.html` |
 
 ## So arbeitet die Seite heute (nicht brechen)
 
@@ -91,6 +91,8 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 **Nachbarn**
 - Die Instinct-Seite ist ein eigenes Repo (`Projekte\Web\Webseiten\Webseite-Instinct\`) mit
   eigenen Kopien von CSS, JS und Bildern — Instinct-Änderungen betreffen oft beide.
+
+- App-Name „AblesBar“ (Falks Entscheidung 01.10.2026); Datei und Adresse bleiben `ablesebar.html`.
 
 ## Bekannt und bewusst belassen
 - Karussell auf dem Handy: seit 01.10.2026 ohne Überlappung (eigener Radius in `start.css`, Winkel aus `--karten`, das setzt `app.js`); die hinteren Karten sind gedimmt, die vordere leuchtet.
