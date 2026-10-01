@@ -5803,7 +5803,7 @@ body[data-kapitel="scheinbar"] .trommel-fuss { padding-top: 0; }
   display: flex; flex-wrap: wrap; align-items: baseline;
   justify-content: space-between; gap: .5rem .9rem;
 }
-.drehscheibe-kopf h2 {
+.drehscheibe-kopf h2, .drehscheibe-kopf h3 {
   margin: 0; font-size: clamp(.95rem, 1.9vw, 1.15rem); line-height: 1.2;
 }
 
@@ -6040,7 +6040,7 @@ body[data-kapitel="familie"] .kapitelkopf h1 { font-size: clamp(1.3rem, 3.2vw, 2
   body[data-kapitel="familie"] .status-pille { font-size: .48rem; padding: .18rem .5rem; }
   body[data-kapitel="familie"] .drehscheibe { margin-top: .4rem; padding: .45rem .55rem .5rem; }
   body[data-kapitel="familie"] .drehscheibe-kopf { flex-wrap: nowrap; gap: .3rem; }
-  body[data-kapitel="familie"] .drehscheibe-kopf h2 { font-size: .78rem; }
+  body[data-kapitel="familie"] .drehscheibe-kopf h3 { font-size: .78rem; }
   body[data-kapitel="familie"] .drehscheibe-phasen { display: none; }
   body[data-kapitel="familie"] .drehscheibe-buehne { height: 100px; margin-top: .25rem; }
   body[data-kapitel="familie"] .drehscheibe-mitte { width: 46px; }

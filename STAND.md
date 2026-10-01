@@ -40,12 +40,15 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   Knopf mit Falks Hover-Effekt. Alles Ausführliche steht auf der Unterseite je Produkt.
   Kapitelreihenfolge ist fest; die Karten tragen die alten Anker (`#fanica` …).
 - Neue Startseiten-Teile liegen in `start.css`/`start.js`, nicht in `style.css`/`app.js`.
-- Produktseiten (alle elf) auf einem Gerüst (`produkt.css`, `produkt.js`, `wege.js`): Kopfkarte
-  mit echtem App-Symbol, Kapitelnummer, Stand-Marke (Erhältlich/Im Test/In Arbeit), Name als
-  `<h1>`, Kernsatz, Stand-Zeile und Store-Knöpfen aus `BEZUG`; darunter die klebende
-  Abschnittsleiste „Auf dieser Seite“; Funktionslisten über neun Einträge zeigen sechs und
-  „Alle N anzeigen“. Kopfzeile mit „← Startseite“ und Menü „Die Apps“ (`.produktwahl`).
-  Die Geister-Ziffer „KAPITEL NN“ ist dort entfallen (`data-nr` steht nicht mehr am `<main>`).
+- Produktseiten (alle elf) auf einem Gerüst: Kopfkarte (`produkt.css`, `wege.js`) und darunter
+  alles aus EINER Vorlage `aufbau.js` + `aufbau.css`, befüllt aus `daten/<app>.js` (DE + EN,
+  Symbole aus `symbole.js`). Reihenfolge: Auf einen Blick → Erlebnis (der app-eigene Block, steht
+  als `<section class="erlebnis">` im HTML) → So sieht es aus (Galerie im Telefonrahmen, Pfeile,
+  Wischen, Tastatur, Großansicht) → Funktionen (Reiter) → So funktioniert's (3 Schritte) → Neu in
+  der App → Gratis und Premium → Häufige Fragen → Abschluss-Band mit Store-Knöpfen und
+  vorige/nächste App. Ein Abschnitt ohne Daten entfällt. Inhalte ändern = nur die Datendatei;
+  `texte.js` trägt nur noch Kopfkarte und Erlebnis-Texte. Leiste „Auf dieser Seite“ liest
+  `data-kurztext`. Alte Seiten: `_ZUM_LOESCHEN6-10-01-webseite\produktseiten-vor-neuaufbau\`.
 - App-Symbole in `bilder/marke/app-*.webp` sind die echten Launcher-Icons (FaNiCa, Instinct,
   Campus Clash, Tankspur am 01.10.2026 aus dem iOS-AppIcon 1024 übernommen, alte Fassungen in
   `_ZUM_LOESCHEN\2026-10-01-webseite\bilder-marke-alt\`).
@@ -113,7 +116,12 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
    Ordnerangabe steht in `LIESMICH.md`. Vor dem nächsten Lauf berichtigen.
 5. **Campus Clash:** 4.13.0 liegt seit 30.09.2026 als öffentliches GitHub-Release vor; die Seite
    nennt keinen Bezugsweg (Falks Entscheidung, ob verlinkt wird).
-6. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
+6. **Neue Dunkelmodus-Aufnahmen fehlen** (Galerie entfällt bis dahin): Campus Clash (alle alten
+   Bilder zeigen den Stand vor 4.x), YourFilm (Reiter „Suche“ statt „Freunde“), AblesBar (Reiter
+   „Zähler“ statt „Objekt“, alte Gas-Zählermiete), Instinct Familie (nur Hellmodus), NeonPunkt
+   (nur gerenderte Bilder). Tankspur hat nur zwei, ScheinBar drei, FaNiCa drei aktuelle.
+7. **Zapfsäule Tankspur** (`app.js`, `TANKUNGEN`) zeigt echte Tankstellennamen aus Falks Daten.
+8. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
    nächsten Produkt mitziehen.
 
 **Wissen:** Skill `entwickler-website` · [[statische-website-bauen-und-veroeffentlichen]]

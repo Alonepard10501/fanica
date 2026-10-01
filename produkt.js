@@ -13,7 +13,7 @@
     if (bloecke.length < 3) { leiste.remove(); return; }
 
     bloecke.forEach((b, i) => { if (!b.id) b.id = "abschnitt-" + (i + 1); });
-    const name = (b) => (b.dataset.kurz && T(b.dataset.kurz))
+    const name = (b) => b.dataset.kurztext || (b.dataset.kurz && T(b.dataset.kurz))
       || b.querySelector(":scope > h2").textContent.trim();
     leiste.innerHTML = `<div class="seiten-inhalt-spur">${bloecke.map(b =>
       `<a href="#${b.id}">${sicher(name(b))}</a>`).join("")}</div>`;

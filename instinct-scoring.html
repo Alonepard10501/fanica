@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="gemeinsam.css">
 <link rel="stylesheet" href="produkt.css">
+<link rel="stylesheet" href="aufbau.css">
 </head>
 <body data-kapitel="instinct">
 
@@ -78,143 +79,17 @@
     <nav class="seiten-inhalt" id="seiten-inhalt" data-t="produkt.inhaltName" data-t-attr="aria-label"
          aria-label="Auf dieser Seite"></nav>
 
-    <section class="unter-block" data-kurz="produkt.kurz.scheibe" id="zielscheibe">
-      <h2 data-t="instinct.scheibeTitel">Fünf Wertungssysteme, eine Scheibe</h2>
-      <p class="leise" style="max-width:60ch" data-t="instinct.scheibeText"></p>
-      <div class="scheibe-block">
-        <div class="scheibe-buehne" id="scheibe-buehne"></div>
-        <div>
-          <div id="scheibe-tafel"></div>
-          <p class="preis" style="margin-top:1.2rem" data-t="instinct.scheibeFussnote"></p>
-        </div>
-      </div>
-    </section>
-
-    <p class="gross" style="max-width:64ch" data-t="instinct.positionierung"></p>
-    <blockquote class="zitat" data-t="instinct.zitat">Der Schütze entscheidet. Die App dokumentiert.</blockquote>
-
-    <section class="unter-block">
-      <h2 data-t="instinct.startTitel">Die Startseite</h2>
-      <p class="leise" style="max-width:64ch" data-t="instinct.startText"></p>
-      <div class="startseite">
-        <div class="startseite-bild">
-          <div class="handy" data-neigen>
-            <img src="bilder/instinct/start.webp"
-                 srcset="bilder/instinct/start.webp 1x, bilder/instinct/start@2x.webp 2x"
-                 width="300" height="649" loading="lazy" decoding="async"
-                 data-t="instinct.bildStart2Alt" data-t-attr="alt" alt="">
-            <div class="handy-glanz" aria-hidden="true"></div>
+    <div class="aufbau" id="aufbau">
+      <section class="erlebnis" id="erlebnis">
+        <div class="scheibe-block">
+          <div class="scheibe-buehne" id="scheibe-buehne"></div>
+          <div>
+            <div id="scheibe-tafel"></div>
+            <p class="preis" style="margin-top:1.2rem" data-t="instinct.scheibeFussnote"></p>
           </div>
         </div>
-        <div class="startseite-text">
-          <ol class="startpunkte" id="instinct-start-punkte"></ol>
-          <p class="startzeile" data-t="instinct.startZeile"></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="instinct.umfangTitel">Was drinsteckt</h2>
-      <div class="zahlen" id="instinct-umfang-zahlen" style="margin-bottom:1.6rem"></div>
-      <p class="leise" style="max-width:64ch" data-t="instinct.umfangText"></p>
-      <div class="funktionen" id="instinct-umfang-liste"></div>
-      <h3 style="margin-top:clamp(1.8rem,3.4vw,2.6rem)"
-          data-t="instinct.umfangAnzeigenTitel"></h3>
-      <ul class="anzeigen" id="instinct-umfang-anzeigen"></ul>
-      <p class="preis" data-t="instinct.umfangFilter"></p>
-    </section>
-
-    <section class="unter-block" id="dsb">
-      <p class="status-pille" style="margin-bottom:.9rem">🚧 <span data-t="instinct.dsbTitel">In Arbeit: die DSB-Fassung</span></p>
-      <p class="gross" style="max-width:64ch" data-t="instinct.dsbText"></p>
-
-      <h3 style="margin-top:2rem" data-t="instinct.dsbWasTitel">Was „DSB-konform“ bedeutet</h3>
-      <p class="leise" style="max-width:64ch" data-t="instinct.dsbWasText"></p>
-
-      <h3 style="margin-top:2rem" data-t="instinct.dsbDazuTitel">Was dazukommt</h3>
-      <div class="funktionen" id="instinct-dsb-dazu"></div>
-    </section>
-
-    <section class="unter-block">
-      <div id="instinct-bloecke"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="instinct.boegenTitel">Für welche Bögen?</h2>
-      <p class="leise" style="max-width:62ch" data-t="instinct.boegenText"></p>
-      <div class="boegen" id="instinct-boegen"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="instinct.pfeileTitel">Und was am Pfeil zählt</h2>
-      <p class="leise" style="max-width:62ch" data-t="instinct.pfeileText"></p>
-      <div class="begriffe zwei" id="instinct-pfeile"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="instinct.spineTitel">Der Spine-Rechner</h2>
-      <div class="spine">
-        <div>
-          <h3 data-t="instinct.spineFrage">Was ist Spine überhaupt?</h3>
-          <p data-t="instinct.spineAntwort"></p>
-          <p data-t="instinct.spineWarum"></p>
-          <h3 style="margin-top:1.6rem" data-t="instinct.spineErgebnisTitel"></h3>
-          <p data-t="instinct.spineErgebnis"></p>
-          <p class="preis" data-t="instinct.spineHinweis"></p>
-        </div>
-        <div>
-          <h3 data-t="instinct.spineEingabeTitel">Das gibst du ein</h3>
-          <div class="spine-felder" id="instinct-spine-felder"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="instinct.glossarTitel">Die Begriffe am Bogen</h2>
-      <p class="leise" style="max-width:64ch" data-t="instinct.glossarText"></p>
-      <div class="begriffe drei" id="instinct-glossar"></div>
-    </section>
-
-    <section class="unter-block" data-kurz="produkt.kurz.verbaende">
-      <h2 data-t="instinct.verbaendeTitel">Wer legt die Wertungen fest?</h2>
-      <div class="verbaende" id="instinct-verbaende"></div>
-    </section>
-
-    <section class="unter-block" data-kurz="produkt.kurz.parcours">
-      <h2 data-t="instinct.parcoursTitel">Parcours, Pflock, Duell</h2>
-      <div class="begriffe drei" id="instinct-begriffe"></div>
-    </section>
-
-    <section class="unter-block">
-      <div class="karte">
-        <h2 style="font-size:clamp(1.3rem,2.6vw,1.8rem)"
-            data-t="instinct.datenTitel">Deine Daten gehören dir</h2>
-        <p data-t="instinct.datenText"></p>
-        <ul class="liste" id="instinct-daten"></ul>
-      </div>
-      <h3 style="margin-top:clamp(1.8rem,3.4vw,2.6rem)"
-          data-t="instinct.versprechenTitel">Gebaut für draußen</h3>
-      <div class="zahlen" id="instinct-versprechen"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="instinct.stufenTitel">Drei Stufen</h2>
-      <p class="leise" style="max-width:60ch" data-t="instinct.stufenText"></p>
-      <div class="stufen" id="instinct-stufen"></div>
-      <div class="marken" id="instinct-zielgruppe" style="margin-top:1.8rem"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="aktion.holenTitel">Wo es die App gibt</h2>
-      <p class="leise" style="max-width:62ch" data-t="aktion.holenText"></p>
-      <div id="bezug-instinct"></div>
-      <div class="aktionen" style="margin-top:1.6rem">
-        <a class="nbtn b-scratch" href="index.html#instinct">
-          <span data-t="zurueckKnopf">← Zurück zur Startseite</span></a>
-      </div>
-      <p class="preis" data-t="instinct.preis"></p>
-    </section>
-
+      </section>
+    </div>
   </div>
 </main>
 
@@ -234,6 +109,9 @@
 
 <script src="texte.js"></script>
 <script src="inhalte.js"></script>
+<script src="symbole.js"></script>
+<script src="daten/instinct.js"></script>
+<script src="aufbau.js"></script>
 <script src="wege.js"></script>
 <script src="app.js"></script>
 <script src="produkt.js"></script>

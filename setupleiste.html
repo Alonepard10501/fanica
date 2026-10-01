@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="gemeinsam.css">
 <link rel="stylesheet" href="produkt.css">
+<link rel="stylesheet" href="aufbau.css">
 </head>
 <body data-kapitel="setupleiste">
 
@@ -74,84 +75,12 @@
     <nav class="seiten-inhalt" id="seiten-inhalt" data-t="produkt.inhaltName" data-t-attr="aria-label"
          aria-label="Auf dieser Seite"></nav>
 
-    <div class="leisten-vorschau" id="setupleiste-vorschau"></div>
-    <p class="leise leisten-fuss" data-t="setupleiste.vorschauText"></p>
-
-    <p class="gross" style="max-width:64ch" data-t="setupleiste.positionierung"></p>
-
-    <div class="karte" style="max-width:64ch; margin-top:1.6rem">
-      <h4 data-t="setupleiste.kernTitel">Der Unterschied</h4>
-      <p data-t="setupleiste.kernText"></p>
+    <div class="aufbau" id="aufbau">
+      <section class="erlebnis" id="erlebnis">
+        <div class="leisten-vorschau" id="setupleiste-vorschau"></div>
+        <p class="leise leisten-fuss" data-t="setupleiste.vorschauText"></p>
+      </section>
     </div>
-
-
-    <section class="unter-block">
-      <div class="zahlen" id="setupleiste-kennzahlen"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="setupleiste.ablaufTitel">So fängst du an</h2>
-      <div class="schritte" id="setupleiste-ablauf"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="setupleiste.kniffTitel">Der Kniff</h2>
-      <p class="gross" style="max-width:66ch" data-t="setupleiste.kniffText"></p>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="setupleiste.koennenTitel">Was drinsteckt</h2>
-      <div class="funktionen" id="setupleiste-koennen"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="setupleiste.umfangTitel">Was angezeigt wird</h2>
-      <p class="leise" style="max-width:64ch" data-t="setupleiste.umfangText"></p>
-      <div class="zahlen" id="setupleiste-umfang-zahlen"></div>
-      <div class="funktionen" id="setupleiste-umfang-liste"
-           style="margin-top:clamp(1.8rem,3.4vw,2.6rem)"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="setupleiste.vorschauTitel">So sieht die Leiste aus</h2>
-      <div class="funktionen" id="setupleiste-vorschau-erklaerung"
-           style="margin-top:clamp(1.6rem,3vw,2.4rem)"></div>
-    </section>
-
-    <section class="unter-block" data-kurz="produkt.kurz.knoepfe">
-      <h2 data-t="setupleiste.knoepfeTitel">Drei Knöpfe, mehr braucht es nicht</h2>
-      <div class="trophaeen" id="setupleiste-knoepfe"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="setupleiste.bestwerteTitel">Bestwerte, die mitlaufen</h2>
-      <p class="gross" style="max-width:64ch" data-t="setupleiste.bestwerteText"></p>
-    </section>
-
-    <section class="unter-block" data-kurz="produkt.kurz.gemessen">
-      <h2 data-t="setupleiste.ehrlichTitel">Was gemessen ist — und was gerechnet</h2>
-      <p class="leise" style="max-width:64ch" data-t="setupleiste.ehrlichText"></p>
-      <div class="funktionen" id="setupleiste-ehrlich"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="setupleiste.technikTitel">Technisch</h2>
-      <div class="funktionen" id="setupleiste-technik"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="aktion.holenTitelProgramm">Wo es das Programm gibt</h2>
-      <div id="bezug-setupleiste"></div>
-      <div class="aktionen" style="margin-top:1.6rem">
-        <a class="nbtn b-scratch" href="index.html#setupleiste">
-          <span data-t="zurueckKnopf">← Zurück zur Startseite</span></a>
-      </div>
-      <p class="preis" data-t="setupleiste.preis"></p>
-      <div class="hinweis">
-        <p data-t="setupleiste.hinweis"></p>
-      </div>
-    </section>
-
   </div>
 </main>
 
@@ -171,6 +100,9 @@
 
 <script src="texte.js"></script>
 <script src="inhalte.js"></script>
+<script src="symbole.js"></script>
+<script src="daten/setupleiste.js"></script>
+<script src="aufbau.js"></script>
 <script src="wege.js"></script>
 <script src="app.js"></script>
 <script src="produkt.js"></script>

@@ -603,7 +603,7 @@ de: {
     galerieTitel: "Ein Blick in die App",
     rundeTitel: "Wie es wirklich aussieht",
     rundeText: "Das hier ist keine Vorführ-Runde mit ausgedachten Namen. Es sind die echten Zahlen aus der Gruppe, für die ich die App überhaupt gebaut habe — seit 2022, mittlerweile im fünften Jahr.",
-    rundeQuelle: "Stand: nach neun von zweiundzwanzig Rennen der Saison 2026. Die Namen sind hier anonymisiert, alles andere ist unverändert.",
+    rundeQuelle: "Stand: nach neun von zweiundzwanzig Rennen der Saison 2026. Echte Zahlen einer laufenden Runde, mit den Profilnamen der Mitspieler.",
 
 
     rundeZahlen: [
@@ -1458,7 +1458,7 @@ de: {
       { zahl: "0", text: "Konten nötig" }
     ],
     apps: [
-      { bild: "scoring", name: "Instinct Scoring", rolle: "Der Kern — live im Store", text: "Runden werten auf 3D- und Feldparcours. Die einzige App der Familie, die es schon gibt." },
+      { bild: "scoring", name: "Instinct Scoring", rolle: "Der Kern — im App Store", text: "Runden werten auf 3D- und Feldparcours. Die einzige App der Familie, die schon im Store steht." },
       { bild: "coach", name: "Instinct Coach", rolle: "In Arbeit", text: "Trainingsbegleitung, die sich dem Schützen anpasst — statt eines festen Plans für alle." },
       { bild: "builder", name: "Instinct Builder", rolle: "In Arbeit", text: "Pfeile zusammenstellen und verwalten: Spine, Länge, Befiederung, Farben." },
       { bild: "tune", name: "Instinct Tune", rolle: "In Arbeit", text: "Bögen einstellen und den Verlauf festhalten — mit Fotovergleich über die Zeit." },
@@ -2610,7 +2610,7 @@ en: {
     galerieTitel: "A look inside the app",
     rundeTitel: "What it actually looks like",
     rundeText: "This is not a demo round with made-up names. These are the real numbers from the group I built the app for in the first place — running since 2022, now in its fifth year.",
-    rundeQuelle: "As of race nine of twenty-two in the 2026 season. Names are anonymised here; everything else is unchanged.",
+    rundeQuelle: "As of race nine of twenty-two in the 2026 season. Real figures from a running round, with the players’ profile names.",
 
 
     rundeZahlen: [
@@ -3451,7 +3451,7 @@ en: {
       { zahl: "0", text: "accounts needed" }
     ],
     apps: [
-      { bild: "scoring", name: "Instinct Scoring", rolle: "The core — live in the store", text: "Scoring rounds on 3D and field courses. The only app in the family that already exists." },
+      { bild: "scoring", name: "Instinct Scoring", rolle: "The core — on the App Store", text: "Scoring rounds on 3D and field courses. The only app in the family already in a store." },
       { bild: "coach", name: "Instinct Coach", rolle: "In progress", text: "Training guidance that adapts to the archer, instead of one fixed plan for everyone." },
       { bild: "builder", name: "Instinct Builder", rolle: "In progress", text: "Building and managing arrows: spine, length, fletching, colours." },
       { bild: "tune", name: "Instinct Tune", rolle: "In progress", text: "Tuning bows and keeping the history — with photo comparison over time." },

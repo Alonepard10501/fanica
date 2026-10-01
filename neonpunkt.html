@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="gemeinsam.css">
 <link rel="stylesheet" href="produkt.css">
+<link rel="stylesheet" href="aufbau.css">
 </head>
 <body data-kapitel="neonpunkt">
 
@@ -74,123 +75,48 @@
     <nav class="seiten-inhalt" id="seiten-inhalt" data-t="produkt.inhaltName" data-t-attr="aria-label"
          aria-label="Auf dieser Seite"></nav>
 
-    <div class="raffer" id="raffer">
-      <div class="raffer-kopf">
-        <div>
-          <h3 data-t="neonpunkt.rafferTitel">48 Stunden in zwölf Sekunden</h3>
-          <p data-t="neonpunkt.rafferText"></p>
-          <p id="raffer-statisch" hidden data-t="neonpunkt.rafferStatisch"></p>
-        </div>
-        <button class="nbtn b-heat" id="raffer-knopf" aria-pressed="false">
-          <span data-t="neonpunkt.rafferKnopfStart">▶ Zeitraffer starten</span></button>
-      </div>
+    <div class="aufbau" id="aufbau">
+      <section class="erlebnis" id="erlebnis">
+        <div class="raffer" id="raffer">
+          <div class="raffer-kopf">
+            <div>
+              <h3 data-t="neonpunkt.rafferTitel">48 Stunden in zwölf Sekunden</h3>
+              <p data-t="neonpunkt.rafferText"></p>
+              <p id="raffer-statisch" hidden data-t="neonpunkt.rafferStatisch"></p>
+            </div>
+            <button class="nbtn b-heat" id="raffer-knopf" aria-pressed="false">
+              <span data-t="neonpunkt.rafferKnopfStart">▶ Zeitraffer starten</span></button>
+          </div>
 
-      <div class="raffer-buehne" id="raffer-buehne" role="button" tabindex="0"
-           aria-label="Zeitraffer: Punkt antippen setzt ihn zurück">
-        <div class="raffer-punkt" id="raffer-punkt" aria-hidden="true"></div>
-        <div class="raffer-anzeige">
-          <span><em data-t="neonpunkt.rafferZeit">Vergangen</em>
-                <b id="raffer-zeit">0 Std 00 Min</b></span>
-          <span><em data-t="neonpunkt.rafferGroesse">Größe</em>
-                <b id="raffer-prozent">0 %</b></span>
+          <div class="raffer-buehne" id="raffer-buehne" role="button" tabindex="0"
+               aria-label="Zeitraffer: Punkt antippen setzt ihn zurück">
+            <div class="raffer-punkt" id="raffer-punkt" aria-hidden="true"></div>
+            <div class="raffer-anzeige">
+              <span><em data-t="neonpunkt.rafferZeit">Vergangen</em>
+                    <b id="raffer-zeit">0 Std 00 Min</b></span>
+              <span><em data-t="neonpunkt.rafferGroesse">Größe</em>
+                    <b id="raffer-prozent">0 %</b></span>
+            </div>
+            <div class="raffer-balken" aria-hidden="true"><i id="raffer-fortschritt"></i></div>
+            <div class="raffer-hinweis" id="raffer-hinweis"
+                 data-t="neonpunkt.rafferHinweis">Tipp den Punkt an, während er läuft</div>
+          </div>
         </div>
-        <div class="raffer-balken" aria-hidden="true"><i id="raffer-fortschritt"></i></div>
-        <div class="raffer-hinweis" id="raffer-hinweis"
-             data-t="neonpunkt.rafferHinweis">Tipp den Punkt an, während er läuft</div>
-      </div>
+
+          <div class="spielfeld" id="spielfeld" role="button" tabindex="0"
+               aria-label="Neon-Punkt zum Antippen">
+            <div class="spielzaehler">
+              <span><span data-t="neonpunkt.spielKlicks">Klicks</span>
+                    <b id="spiel-klicks">0</b></span>
+              <span><span data-t="neonpunkt.spielFarbe">Farbe</span>
+                    <b id="spiel-farbe">1</b>
+                    <span data-t="neonpunkt.spielVon">von 16</span></span>
+            </div>
+            <div class="spielpunkt" aria-hidden="true"></div>
+            <div class="spielhinweis" data-t="neonpunkt.spielHinweis">Tipp den Punkt an</div>
+          </div>
+      </section>
     </div>
-
-    <section class="unter-block">
-      <div class="zahlen" id="neonpunkt-kennzahlen"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="neonpunkt.ablaufTitel">So fängst du an</h2>
-      <div class="schritte" id="neonpunkt-ablauf"></div>
-    </section>
-
-    <section class="unter-block" data-kurz="produkt.kurz.kniff">
-      <h2 data-t="neonpunkt.kniffTitel">Der Kniff</h2>
-      <p class="gross" style="max-width:66ch" data-t="neonpunkt.kniffText"></p>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="neonpunkt.koennenTitel">Was drinsteckt</h2>
-      <div class="funktionen" id="neonpunkt-koennen"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="neonpunkt.worumTitel">Worum geht es eigentlich?</h2>
-      <p class="gross" style="max-width:64ch" data-t="neonpunkt.worumText"></p>
-      <p style="max-width:64ch" data-t="neonpunkt.worumZwei"></p>
-    </section>
-
-    <div class="zahlen" id="neonpunkt-zahlen" style="margin-top:1.6rem"></div>
-
-    <section class="unter-block">
-      <h2 data-t="neonpunkt.spielTitel">Probier es hier aus</h2>
-      <p class="leise" style="max-width:62ch" data-t="neonpunkt.spielText"></p>
-      <div class="spielfeld" id="spielfeld" role="button" tabindex="0"
-           aria-label="Neon-Punkt zum Antippen">
-        <div class="spielzaehler">
-          <span><span data-t="neonpunkt.spielKlicks">Klicks</span>
-                <b id="spiel-klicks">0</b></span>
-          <span><span data-t="neonpunkt.spielFarbe">Farbe</span>
-                <b id="spiel-farbe">1</b>
-                <span data-t="neonpunkt.spielVon">von 16</span></span>
-        </div>
-        <div class="spielpunkt" aria-hidden="true"></div>
-        <div class="spielhinweis" data-t="neonpunkt.spielHinweis">Tipp den Punkt an</div>
-      </div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="neonpunkt.reglnTitel">Die ganzen Regeln</h2>
-      <div class="begriffe drei" id="neonpunkt-regeln"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="neonpunkt.umfangTitel">Klein, aber vollständig</h2>
-      <p class="leise" style="max-width:64ch" data-t="neonpunkt.umfangText"></p>
-      <div class="funktionen" id="neonpunkt-umfang-liste"></div>
-      <h3 style="margin-top:clamp(1.8rem,3.4vw,2.6rem)"
-          data-t="neonpunkt.umfangAnzeigenTitel"></h3>
-      <ul class="anzeigen" id="neonpunkt-umfang-anzeigen"></ul>
-      <p class="preis" data-t="neonpunkt.umfangFilter"></p>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="neonpunkt.farbenTitel">Die sechzehn Farben</h2>
-      <p class="leise" data-t="neonpunkt.farbenText"></p>
-      <div class="farbreihe" id="neonpunkt-farben"></div>
-    </section>
-
-    <section class="unter-block">
-      <div class="galerie" id="neonpunkt-galerie"></div>
-    </section>
-
-    <section class="unter-block">
-      <div class="raster raster-2" id="neonpunkt-bloecke"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="neonpunkt.stufenTitel">Gratis und Premium</h2>
-      <p class="leise" style="max-width:60ch" data-t="neonpunkt.stufenText"></p>
-      <div class="stufen" id="neonpunkt-stufen"></div>
-    </section>
-
-    <section class="unter-block">
-      <h2 data-t="aktion.holenTitel">Wo es die App gibt</h2>
-      <p class="leise" style="max-width:62ch" data-t="aktion.holenText"></p>
-      <div id="bezug-neonpunkt"></div>
-      <div class="aktionen" style="margin-top:1.6rem">
-        <a class="nbtn b-scratch" href="index.html#neonpunkt">
-          <span data-t="zurueckKnopf">← Zurück zur Startseite</span></a>
-      </div>
-      <p class="preis" data-t="neonpunkt.preis"></p>
-      <p class="preis" data-t="neonpunkt.zahlenFuss"></p>
-    </section>
-
   </div>
 </main>
 
@@ -210,6 +136,9 @@
 
 <script src="texte.js"></script>
 <script src="inhalte.js"></script>
+<script src="symbole.js"></script>
+<script src="daten/neonpunkt.js"></script>
+<script src="aufbau.js"></script>
 <script src="wege.js"></script>
 <script src="app.js"></script>
 <script src="produkt.js"></script>
