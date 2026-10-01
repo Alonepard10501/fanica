@@ -1042,7 +1042,7 @@ de: {
     untertitel: "Das endlose Schulspiel",
     claim: "Deine Schulzeit läuft weiter.",
     claimZwei: "Auch wenn du das Handy weglegst.",
-    positionierung: "Ein endloses Schul-Aufstiegsspiel: Du entwickelst einen Schüler über Jahre — lernst Fächer, verdienst mit Jobs Geld, steigst Klasse um Klasse auf. Trainiert wird mit echter Zeit, und das Training läuft weiter, wenn die App geschlossen ist. Komplett offline, ohne Konto und ohne Server.",
+    positionierung: "Ein endloses Schul-Aufstiegsspiel: Du entwickelst einen Schüler über Jahre — lernst Fächer, verdienst mit Jobs Geld, steigst Level um Level auf. Trainiert wird mit echter Zeit, und das Training läuft weiter, wenn die App geschlossen ist. Das Einzelspiel läuft offline, ohne Konto und ohne eigenen Server.",
     inArbeit: "🚧 In Arbeit: Die App ist spielbar gebaut und wird gerade geprüft. Es gibt noch keinen Store-Eintrag — und nichts zu kaufen.",
 
     kernTitel: "Der Kniff",
@@ -3035,7 +3035,7 @@ en: {
     untertitel: "The endless school game",
     claim: "Your school days keep running.",
     claimZwei: "Even when you put the phone down.",
-    positionierung: "An endless school progression game: you develop a student over the years — learning subjects, earning money with jobs, climbing grade by grade. Training runs on real time and keeps going while the app is closed. Fully offline, no account, no server.",
+    positionierung: "An endless school progression game: you develop a student over the years — learning subjects, earning money with jobs, climbing level by level. Training runs on real time and keeps going while the app is closed. The single-player game runs offline, with no account and no server of our own.",
     inArbeit: "🚧 In progress: the app is built and playable, and currently being tested. There is no store listing yet — and nothing to buy.",
 
     kernTitel: "The trick",

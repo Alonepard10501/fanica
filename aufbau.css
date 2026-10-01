@@ -75,7 +75,7 @@
 }
 .gal-spur::-webkit-scrollbar { display: none; }
 .gal-spur:focus-visible { outline: 2px solid var(--akzent-hell); outline-offset: 4px; border-radius: 12px; }
-.galerie-neu.wenige .gal-spur { justify-content: start; }
+.galerie-neu.wenige .gal-spur { justify-content: center; }
 .gal-teil { scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px; }
 .gal-telefon {
   display: block; width: 100%; padding: 7px; cursor: zoom-in;
@@ -152,10 +152,10 @@
 .reiter button:focus-visible { outline: 2px solid var(--creme); outline-offset: 2px; }
 .tafel:focus-visible { outline: 2px solid var(--akzent-hell); outline-offset: 6px; border-radius: 12px; }
 .fkt {
-  display: grid; gap: 12px; margin: 0; padding: 0; list-style: none;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none;
 }
 .fkt li {
+  flex: 1 1 min(100%, 300px);
   display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px;
   border-radius: 16px; border: 1px solid var(--linie); background: rgba(255, 255, 255, .02);
   transition: border-color .25s var(--weich), background .25s var(--weich);

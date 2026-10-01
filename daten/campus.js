@@ -2,9 +2,14 @@
 window.PRODUKT_DATEN = {
   app: "campus", seite: "campus-clash", stil: "b-heat",
   symbol: "bilder/marke/app-campus.webp",
-  bilder: [],
+  bilder: [
+    { datei: "bilder/app/campus-start.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/campus-lernplan.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/campus-markt.webp", b: 540, h: 1200 },
+    { datei: "bilder/app/campus-schmiede.webp", b: 540, h: 1200 }
+  ],
   de: {
-    fakten: ["Android · iOS", "Ohne Konto", "Einzelspiel offline"],
+    fakten: ["Für Android und iOS gebaut", "Ohne Konto", "Einzelspiel offline"],
     blickSatz: "Ein endloses Aufstiegsspiel: vom Schüler über Studium oder Ausbildung bis zum eigenen Unternehmen — in echter Zeit.",
     vorteile: [
       { symbol: "uhr", titel: "Echte Zeit", text: "Lernen, Jobs und Vorräte laufen mit der Uhr weiter, auch wenn die App geschlossen ist." },
@@ -12,6 +17,12 @@ window.PRODUKT_DATEN = {
       { symbol: "gruppe", titel: "Gemeinsam stärker", text: "Freunde per Code, Allianzen mit bis zu zehn Mitgliedern, Wochenprojekt und Turnier." },
       { symbol: "schild", titel: "Fair und privat", text: "Kein Konto, kein eigener Server, kein Pay-to-Win: Premium kauft Komfort, nie Werte." }
     ],
+    galerie: { text: "Vier Aufnahmen aus der Fassung 4.13.0 im Dunkelmodus, aus einem frischen Spielstand mit Beispielwerten.", bilder: [
+      { titel: "Der Start", text: "Oben Level, Diamanten, Gesundheit, Energie und Geld; darunter Aufgaben und die laufenden Fächer." },
+      { titel: "Der Lernplan", text: "Jedes Fach zeigt Dauer, Level und Restzeit; drei Plätze im Werdegang laufen gemeinsam." },
+      { titel: "Markt und Ausrüstung", text: "Sechs Angebote je Tag; Gekauftes erscheint unter „Was du trägst“ und erhöht die Stärke." },
+      { titel: "Die Schmiede", text: "Gegenstände mit Diamanten eine Seltenheit höher aufwerten, bis Mythisch." }
+    ] },
     erlebnis: { titel: "Die Uhr läuft weiter", kurz: "Live", text: "Jedes Training hat einen festen Endzeitpunkt. Beim nächsten Öffnen rechnet das Spiel die vergangene Zeit nach." },
     funktionen: [
       { gruppe: "Werdegang", symbol: "hut", liste: [
@@ -24,7 +35,7 @@ window.PRODUKT_DATEN = {
       { gruppe: "Alltag und Markt", symbol: "muenze", liste: [
         { symbol: "muenze", name: "Alltag", text: "Vereine, Nebenjobs, Aufträge und Jobs bringen Geld — jeder Bereich mit eigener Seite." },
         { symbol: "stapel", name: "Markt und Serien", text: "Ausrüstung kaufen und anlegen; ein vollständiges Set gibt 20 % Bonus." },
-        { symbol: "werkzeug", name: "Schmiede", text: "Gegenstände mit Diamanten bis zur Stufe Rot aufwerten — das Level bleibt." },
+        { symbol: "werkzeug", name: "Schmiede", text: "Gegenstände mit Diamanten eine Seltenheit höher aufwerten, bis Mythisch — das Level bleibt." },
         { symbol: "geschenk", name: "Kisten und Truhen", text: "Jeder Levelaufstieg bringt drei verdeckte Kisten: Geld, Diamanten oder einen 24-Stunden-Schub." },
         { symbol: "spiel", name: "Fünf Minispiele", text: "Münzwurf, Rot oder Schwarz, Schere-Stein-Papier, Vier gewinnt und Paare — um Diamanten." }
       ] },
@@ -65,7 +76,7 @@ window.PRODUKT_DATEN = {
     abschluss: { titel: "Deine Schulzeit läuft weiter.", text: "Auch wenn du das Handy weglegst.", stand: "In Arbeit — noch in keinem Store und nichts zu kaufen." }
   },
   en: {
-    fakten: ["Android · iOS", "No account", "Single player offline"],
+    fakten: ["Built for Android and iOS", "No account", "Single player offline"],
     blickSatz: "An endless progression game: from pupil to university or apprenticeship to your own company — in real time.",
     vorteile: [
       { symbol: "uhr", titel: "Real time", text: "Studying, jobs and supplies keep running on the clock, even when the app is closed." },
@@ -73,6 +84,12 @@ window.PRODUKT_DATEN = {
       { symbol: "gruppe", titel: "Stronger together", text: "Friends by code, alliances of up to ten members, a weekly project and a tournament." },
       { symbol: "schild", titel: "Fair and private", text: "No account, no own server, no pay-to-win: Premium buys comfort, never stats." }
     ],
+    galerie: { text: "Four screenshots from version 4.13.0 in dark mode, taken from a fresh save with sample values.", bilder: [
+      { titel: "The start", text: "Level, diamonds, health, energy and money on top; below them tasks and the subjects that are running." },
+      { titel: "The study plan", text: "Every subject shows its duration, level and time left; three career slots run together." },
+      { titel: "Market and gear", text: "Six offers a day; what you buy shows up under “What you wear” and raises your strength." },
+      { titel: "The forge", text: "Upgrade items with diamonds one rarity higher, up to mythic." }
+    ] },
     erlebnis: { titel: "The clock keeps running", kurz: "Live", text: "Every training has a fixed end time. The next time you open the app, the game settles the time that has passed." },
     funktionen: [
       { gruppe: "Career", symbol: "hut", liste: [
@@ -85,7 +102,7 @@ window.PRODUKT_DATEN = {
       { gruppe: "Daily life and market", symbol: "muenze", liste: [
         { symbol: "muenze", name: "Daily life", text: "Clubs, side jobs, assignments and jobs earn money — each area with its own page." },
         { symbol: "stapel", name: "Market and sets", text: "Buy and equip gear; a complete set gives a 20 % bonus." },
-        { symbol: "werkzeug", name: "Forge", text: "Upgrade items with diamonds up to tier red — the level stays." },
+        { symbol: "werkzeug", name: "Forge", text: "Upgrade items with diamonds one rarity higher, up to mythic — the level stays." },
         { symbol: "geschenk", name: "Crates and chests", text: "Every level-up brings three hidden crates: money, diamonds or a 24-hour boost." },
         { symbol: "spiel", name: "Five mini games", text: "Coin toss, red or black, rock-paper-scissors, four in a row and pairs — for diamonds." }
       ] },
