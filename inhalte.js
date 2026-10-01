@@ -878,7 +878,7 @@
        Die SetUpLeiste laeuft mit — sie hat Zahlen und Liste, aber keine
        `umfangAnzeigen`; der Baustein ueberspringt fehlende Container. */
     ["instinct", "fanica", "neonpunkt", "setupleiste", "campus", "yourfilm", "zeitwissen", "familie", "tankspur",
-     "scheinbar", "ablesebar"].forEach(app => {
+     "scheinbar", "ablesbar"].forEach(app => {
       const zahlen = el(app + "-umfang-zahlen");
       if (zahlen) {
         zahlen.innerHTML = hol(app + ".umfangZahlen").map(z => `

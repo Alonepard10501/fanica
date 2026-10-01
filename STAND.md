@@ -92,7 +92,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 - Die Instinct-Seite ist ein eigenes Repo (`Projekte\Web\Webseiten\Webseite-Instinct\`) mit
   eigenen Kopien von CSS, JS und Bildern — Instinct-Änderungen betreffen oft beide.
 
-- App-Name „AblesBar“ (Falks Entscheidung 01.10.2026); Datei und Adresse bleiben `ablesebar.html`.
+- App-Name „AblesBar“ (Falks Entscheidung 01.10.2026); Datei `ablesbar.html`; `ablesebar.html` ist nur noch eine Weiterleitung für alte Links.
 
 ## Bekannt und bewusst belassen
 - Karussell auf dem Handy: seit 01.10.2026 ohne Überlappung (eigener Radius in `start.css`, Winkel aus `--karten`, das setzt `app.js`); die hinteren Karten sind gedimmt, die vordere leuchtet.

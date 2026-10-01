@@ -116,7 +116,7 @@
       grund: "linear-gradient(180deg, #0D050A, #180814 50%, #0D0509)",
       akzent: "#D6247E", akzentHell: "#FF5FA8"
     },
-    ablesebar: {
+    ablesbar: {
       grund: "linear-gradient(180deg, #05080C, #0D1420 52%, #070A10)",
       akzent: "#2E7FC2", akzentHell: "#6BB4EE"
     },
@@ -1584,8 +1584,8 @@
       if (balken) balken.style.width = (anteil * 100).toFixed(1) + "%";
 
       if (aVorlesen && (rasten || anteil === 0)) {
-        aVorlesen.textContent = T("ablesebar.zaehlerwerkVorlesen")
-          .replace("{bereich}", T("ablesebar.zaehlerwerk" +
+        aVorlesen.textContent = T("ablesbar.zaehlerwerkVorlesen")
+          .replace("{bereich}", T("ablesbar.zaehlerwerk" +
             name.charAt(0).toUpperCase() + name.slice(1)))
           .replace("{stand}", menge(Math.round(stand), b.einheit))
           .replace("{verbrauch}", menge(verbrauch, b.einheit));

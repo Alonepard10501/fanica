@@ -1732,7 +1732,7 @@ de: {
     hinweis: "ScheinBar liegt als Testfassung außerhalb der Stores vor. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern. Premium wird 0,49 € je 4 Wochen oder 4,99 € im Jahr kosten."
   },
 
-  ablesebar: {
+  ablesbar: {
     zaehlerwerkStand: "Zählerstand",
     zaehlerwerkVerbrauch: "Verbrauch im Monat",
     zaehlerwerkVormonat: "Stand im Vormonat",
@@ -1746,11 +1746,11 @@ de: {
     bilderTitel: "Ein Blick in die App",
     bilderText: "Fünf Aufnahmen aus der laufenden Fassung. Die Zahlen darin sind Beispielwerte.",
     bilder: [
-      { bild: "ablesebar-1-uebersicht", titel: "Alles auf einen Blick", text: "Gas, Wasser, Strom und Nebenkosten als Kacheln — Monatsverbrauch groß, darunter Periodensumme und Kosten. Rechts unten steht, ob ein Guthaben aufläuft." },
-      { bild: "ablesebar-2-eingabe", titel: "Alle Zähler auf einer Seite", text: "Ein gemeinsames Ablesedatum, darunter jeder aktive Zähler mit Feld und Kamera-Knopf — der farbige Streifen zeigt den Bereich." },
-      { bild: "ablesebar-3-zaehler", titel: "Acht Zähler von Anfang an", text: "Wohnung und Haus getrennt, jeder Zähler mit Bereichsfarbe und Einheit. Abschalten, was nicht zutrifft — Eigenes kommt dazu." },
-      { bild: "ablesebar-4-kosten", titel: "Die Kostensätze", text: "Grundsteuer, Versicherung, Müll, Zählermieten — jedes Feld beschriftet, dazu eigene Posten je Periode." },
-      { bild: "ablesebar-5-rechnung", titel: "Die Abrechnung", text: "Betriebs- und Heizkosten getrennt, die gezahlten Abschläge dagegen, dazu jede Monatszeile einzeln." },
+      { bild: "ablesbar-1-uebersicht", titel: "Alles auf einen Blick", text: "Gas, Wasser, Strom und Nebenkosten als Kacheln — Monatsverbrauch groß, darunter Periodensumme und Kosten. Rechts unten steht, ob ein Guthaben aufläuft." },
+      { bild: "ablesbar-2-eingabe", titel: "Alle Zähler auf einer Seite", text: "Ein gemeinsames Ablesedatum, darunter jeder aktive Zähler mit Feld und Kamera-Knopf — der farbige Streifen zeigt den Bereich." },
+      { bild: "ablesbar-3-zaehler", titel: "Acht Zähler von Anfang an", text: "Wohnung und Haus getrennt, jeder Zähler mit Bereichsfarbe und Einheit. Abschalten, was nicht zutrifft — Eigenes kommt dazu." },
+      { bild: "ablesbar-4-kosten", titel: "Die Kostensätze", text: "Grundsteuer, Versicherung, Müll, Zählermieten — jedes Feld beschriftet, dazu eigene Posten je Periode." },
+      { bild: "ablesbar-5-rechnung", titel: "Die Abrechnung", text: "Betriebs- und Heizkosten getrennt, die gezahlten Abschläge dagegen, dazu jede Monatszeile einzeln." },
     ],
     kennung: "Kapitel 11 · Im Test",
     hinweis: "AblesBar liegt als Testfassung außerhalb der Stores vor. Alle Angaben beschreiben den aktuellen Bau-Stand und können sich bis zur Veröffentlichung ändern.",
@@ -3725,7 +3725,7 @@ en: {
     hinweis: "ScheinBar exists as a test build outside the stores. All details describe the current build and may change before release. Premium will cost €0.49 per 4 weeks or €4.99 a year."
   },
 
-  ablesebar: {
+  ablesbar: {
     zaehlerwerkStand: "Meter reading",
     zaehlerwerkVerbrauch: "Consumption this month",
     zaehlerwerkVormonat: "Last month's reading",
@@ -3739,11 +3739,11 @@ en: {
     bilderTitel: "A look inside",
     bilderText: "Five shots from the running build. The figures in them are sample values.",
     bilder: [
-      { bild: "ablesebar-1-uebersicht", titel: "Everything at a glance", text: "Gas, water, electricity and utilities as tiles — monthly consumption large, period total and cost below. Bottom right says whether a refund is building up." },
-      { bild: "ablesebar-2-eingabe", titel: "Every meter on one page", text: "A shared reading date, then each active meter with its field and camera button — the coloured stripe marks the area." },
-      { bild: "ablesebar-3-zaehler", titel: "Eight meters from the start", text: "Flat and building kept apart, every meter with its area colour and unit. Switch off what does not apply, add your own." },
-      { bild: "ablesebar-4-kosten", titel: "The cost rates", text: "Property tax, insurance, refuse, meter rentals — every field labelled, plus your own items per period." },
-      { bild: "ablesebar-5-rechnung", titel: "The settlement", text: "Running and heating costs kept apart, the instalments you paid set against them, plus every monthly line on its own." },
+      { bild: "ablesbar-1-uebersicht", titel: "Everything at a glance", text: "Gas, water, electricity and utilities as tiles — monthly consumption large, period total and cost below. Bottom right says whether a refund is building up." },
+      { bild: "ablesbar-2-eingabe", titel: "Every meter on one page", text: "A shared reading date, then each active meter with its field and camera button — the coloured stripe marks the area." },
+      { bild: "ablesbar-3-zaehler", titel: "Eight meters from the start", text: "Flat and building kept apart, every meter with its area colour and unit. Switch off what does not apply, add your own." },
+      { bild: "ablesbar-4-kosten", titel: "The cost rates", text: "Property tax, insurance, refuse, meter rentals — every field labelled, plus your own items per period." },
+      { bild: "ablesbar-5-rechnung", titel: "The settlement", text: "Running and heating costs kept apart, the instalments you paid set against them, plus every monthly line on its own." },
     ],
     kennung: "Chapter 11 · In testing",
     hinweis: "AblesBar is a test build outside the stores. All details describe the current build and may change before release.",

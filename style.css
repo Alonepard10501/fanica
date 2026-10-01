@@ -217,7 +217,7 @@ p:last-child { margin-bottom: 0; }
   --akzent: #D6247E;      /* ScheinBar: Magenta */
   --akzent-hell: #FF5FA8;
 }
-[data-kapitel="ablesebar"] {
+[data-kapitel="ablesbar"] {
   --akzent: #2E7FC2;      /* AblesBar: Blau wie das Zifferblatt */
   --akzent-hell: #6BB4EE;
 }
@@ -5028,51 +5028,51 @@ body[data-kapitel="tankspur"] main.unterseite .kapitelkopf {
 }
 
 /* Kapitelkopf nur dieser Seite: das Werk bleibt im ersten Bildschirm */
-body[data-kapitel="ablesebar"] main.unterseite .kapitelkopf {
+body[data-kapitel="ablesbar"] main.unterseite .kapitelkopf {
   margin-bottom: clamp(.5rem, 1.4vw, 1rem);
 }
 
 @media (max-height: 820px) and (min-width: 720px) {
-  body[data-kapitel="ablesebar"] main.unterseite[data-nr] > .huelle {
+  body[data-kapitel="ablesbar"] main.unterseite[data-nr] > .huelle {
     padding-top: calc(var(--nr-oben) + clamp(1rem, 2.6vw, 2rem));
   }
-  body[data-kapitel="ablesebar"] main.unterseite .kapitelkopf {
+  body[data-kapitel="ablesbar"] main.unterseite .kapitelkopf {
     gap: .2rem; margin-bottom: .5rem;
   }
-  body[data-kapitel="ablesebar"] main.unterseite .kapitelkopf .app-symbol {
+  body[data-kapitel="ablesbar"] main.unterseite .kapitelkopf .app-symbol {
     width: clamp(56px, 5vw, 72px);
   }
-  body[data-kapitel="ablesebar"] main.unterseite .kapitelkopf h1 {
+  body[data-kapitel="ablesbar"] main.unterseite .kapitelkopf h1 {
     font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.14;
   }
 }
 
 @media (max-width: 720px) {
-  body[data-kapitel="ablesebar"] main.unterseite[data-nr] > .huelle {
+  body[data-kapitel="ablesbar"] main.unterseite[data-nr] > .huelle {
     padding-top: calc(var(--nr-oben) + 3vw);
   }
-  body[data-kapitel="ablesebar"] main.unterseite .kapitelkopf {
+  body[data-kapitel="ablesbar"] main.unterseite .kapitelkopf {
     gap: .15rem; margin-bottom: .4rem;
   }
-  body[data-kapitel="ablesebar"] main.unterseite .kapitelkopf .status-pille {
+  body[data-kapitel="ablesbar"] main.unterseite .kapitelkopf .status-pille {
     margin: 0; font-size: .62rem;
   }
-  body[data-kapitel="ablesebar"] main.unterseite .kapitelkopf .app-symbol {
+  body[data-kapitel="ablesbar"] main.unterseite .kapitelkopf .app-symbol {
     width: 48px; margin: .2rem auto;
   }
-  body[data-kapitel="ablesebar"] main.unterseite .kapitelkopf h1 {
+  body[data-kapitel="ablesbar"] main.unterseite .kapitelkopf h1 {
     margin: 0; font-size: clamp(1.15rem, 5.4vw, 1.55rem); line-height: 1.12;
   }
 }
 
 @media (max-height: 620px) and (max-width: 420px) {
-  body[data-kapitel="ablesebar"] main.unterseite[data-nr] > .huelle {
+  body[data-kapitel="ablesbar"] main.unterseite[data-nr] > .huelle {
     padding-top: calc(var(--nr-oben) - .6rem);
   }
-  body[data-kapitel="ablesebar"] main.unterseite .kapitelkopf .app-symbol {
+  body[data-kapitel="ablesbar"] main.unterseite .kapitelkopf .app-symbol {
     width: 38px; margin: .1rem auto;
   }
-  body[data-kapitel="ablesebar"] main.unterseite .kapitelkopf h1 {
+  body[data-kapitel="ablesbar"] main.unterseite .kapitelkopf h1 {
     font-size: clamp(1rem, 4.8vw, 1.25rem);
   }
 }
