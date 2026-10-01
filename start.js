@@ -76,6 +76,7 @@
     };
 
     const ruhig = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let laufend = null;
     leiste.addEventListener("click", (e) => {
       const knopf = e.target.closest("button[data-filter]");
       if (!knopf || knopf.getAttribute("aria-pressed") === "true") return;
@@ -83,8 +84,12 @@
       karten.forEach(k => k.classList.add("da"));
       if (ruhig || !document.startViewTransition) { anwenden(stufe); return; }
       karten.forEach(k => { k.style.viewTransitionName = "produkt-" + k.id; });
-      document.startViewTransition(() => anwenden(stufe)).finished
-        .finally(() => karten.forEach(k => { k.style.viewTransitionName = ""; }));
+      const wechsel = document.startViewTransition(() => anwenden(stufe));
+      laufend = wechsel;
+      wechsel.ready.catch(() => {});
+      wechsel.finished.catch(() => {}).finally(() => {
+        if (laufend === wechsel) karten.forEach(k => { k.style.viewTransitionName = ""; });
+      });
     });
   }
 

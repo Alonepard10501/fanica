@@ -41,10 +41,10 @@ de: {
     appInstinct: "Bogensport",
     appNeon: "Klick-Spiel",
     appSetup: "PC-Anzeige",
-    appCampus: "In Bearbeitung",
+    appCampus: "In Arbeit",
     appYourfilm: "Im Test",
     appZeitwissen: "Im Test",
-    appFamilie: "Coming Soon",
+    appFamilie: "In Arbeit",
     appTankspur: "Im Test",
     scrollHinweis: "Scrollen",
     karussellHinweis: "Wischen oder die Pfeile drehen das Karussell — Antippen öffnet das Produkt."
@@ -550,15 +550,13 @@ de: {
 
     /* --- Neu in der App (Stand 1.181, aus dem Quellcode) --- */
     neuTitel: "Neu in der App",
-    neuText: "Was mit den letzten Updates dazugekommen ist — Stand Version 1.181.",
+    neuText: "Was mit den letzten Updates dazugekommen ist — Stand Version 1.200.",
     neuListe: [
-      { name: "Wochenend-PDF", text: "Nach jedem gewerteten Rennwochenende baut die App eine PDF-Seite: die Tipps aller Spieler nebeneinander, das echte Ergebnis, die Punkte und der Tabellenstand — zum Teilen in die Gruppe." },
-      { name: "Zwei Startbildschirm-Widgets", text: "Die Rangliste (Platz 1 bis 10 mit Farbe, Punkten und Trophäen) und das nächste Rennen mit Flagge, Ort und Startzeit — direkt auf dem Android-Homescreen." },
-      { name: "Ganze Saison im Diagramm", text: "Das Vollbild-Diagramm zeigt jetzt die komplette Saison auf einen Blick — umschaltbar auf die breite Ansicht zum Durchscrollen." },
-      { name: "54 Spielerfarben", text: "Die Farbpalette wurde auf 54 Töne erweitert: 15 Grundfarben sind frei, die Neontöne gehören zu Premium. Die erste Wahl beim Beitritt bleibt immer frei." },
-      { name: "Countdown führt in den Kalender", text: "Ein Tipp auf den Countdown öffnet den Rennkalender direkt beim aktuellen Rennen." },
-      { name: "Runde starten mit einem Knopf", text: "Der Organisator startet die Runde direkt von der Startseite — ab dem nächsten Rennen zählt jeder Tipp, alle beginnen gemeinsam bei null." },
-      { name: "Genauere Durchschnitte", text: "Punkteschnitte werden mit Nachkommastelle angezeigt — 8,4 und 8,5 sind jetzt unterscheidbar." }
+      { name: "Einführung mit Rundgang", text: "Wer neu ist, bekommt sechs Karten und einen Rundgang an den echten Reitern — jederzeit erneut über Profil › Hilfe." },
+      { name: "Tippen ab der Qualifikation", text: "Getippt wird ab dem Start der Qualifikation — mit genau den Fahrern, die dort antreten, Ersatzfahrer eingeschlossen." },
+      { name: "Haken statt Vergessen", text: "Wer keine Zeit hat, setzt den Haken für Quali-Ergebnis oder Startaufstellung — zum Tippschluss trägt die App daraus den Tipp ein." },
+      { name: "Ergebnis schneller da", text: "Fehlt das amtliche Ergebnis noch, springt ab der Zielflagge die Live-Zeitmessung ein." },
+      { name: "Eigene Schriftfarbe", text: "Weiß, Schwarz oder die eigene Profilfarbe — sie gilt überall, auch im Widget. Der Farbwähler ordnet die Töne nach Farbfamilien." }
     ],
 
     /* --- Gratis und Premium (Werte aus kasse.dart / gratis_grenze.dart) --- */
@@ -1036,16 +1034,16 @@ de: {
       { name: "🛒  Markt", text: "Der Flohmarkt — Angebot wechselt dreimal am Tag." },
       { name: "👤  Profil", text: "Skills, Ausrüstung, Premium und Einstellungen." },
     ],
-    kennung: "Kapitel 05 · In Bearbeitung",
+    kennung: "Kapitel 05 · In Arbeit",
     karteKurz: "Endlos aufsteigen im Schulspiel",
-    karteStatus: "In Bearbeitung",
-    statusPille: "In Bearbeitung — spielbar gebaut",
+    karteStatus: "In Arbeit",
+    statusPille: "In Arbeit — spielbar gebaut",
     name: "Campus Clash",
     untertitel: "Das endlose Schulspiel",
     claim: "Deine Schulzeit läuft weiter.",
     claimZwei: "Auch wenn du das Handy weglegst.",
     positionierung: "Ein endloses Schul-Aufstiegsspiel: Du entwickelst einen Schüler über Jahre — lernst Fächer, verdienst mit Jobs Geld, steigst Klasse um Klasse auf. Trainiert wird mit echter Zeit, und das Training läuft weiter, wenn die App geschlossen ist. Komplett offline, ohne Konto und ohne Server.",
-    inArbeit: "🚧 In Bearbeitung: Die App ist spielbar gebaut und wird gerade geprüft. Es gibt noch keinen Store-Eintrag — und nichts zu kaufen.",
+    inArbeit: "🚧 In Arbeit: Die App ist spielbar gebaut und wird gerade geprüft. Es gibt noch keinen Store-Eintrag — und nichts zu kaufen.",
 
     kernTitel: "Der Kniff",
     kernText: "Es gibt keine Obergrenze: Klassen, Fächer-Stufen und Allianz-Level sind endlos. Jede Klasse kostet mehr Einsatz als die vorige — Klasse 2 hast du nach ein paar Minuten, Klasse 10 kostet einen halben Tag Training. Und nichts davon lässt sich kaufen.",
@@ -1437,16 +1435,16 @@ de: {
       { name: "🔬  Belastbarkeit ausgewiesen", text: "Zu jeder Angabe steht, worauf sie beruht: gemessen, Fachliteratur oder Erfahrungswert." },
       { name: "🌗  Hell und dunkel", text: "Die Oberfläche folgt der Systemeinstellung und stellt sich auf helle oder dunkle Darstellung ein." },
     ],
-    kennung: "Kapitel 08 · In Bearbeitung",
+    kennung: "Kapitel 08 · In Arbeit",
     karteKurz: "Zehn Apps rund um den Bogensport",
-    karteStatus: "Coming Soon",
-    statusPille: "Coming Soon — im Bau",
+    karteStatus: "In Arbeit",
+    statusPille: "In Arbeit — die Apps entstehen gerade",
     name: "Instinct Familie",
     untertitel: "Aus einer App wird eine Familie",
     claim: "Zehn Apps. Ein Bogensport.",
     claimZwei: "Jede für sich. Alle zusammen.",
     positionierung: "Instinct Scoring deckt eine Sache ab: die Runde werten. Aber zum Bogenschießen gehört mehr — Training, Material, Wetter, Ausrüstung, Gemeinschaft. Daraus wird eine Familie eigenständiger Apps, die dieselbe Sprache sprechen und ihre Daten miteinander teilen können. Wer nur werten will, nimmt weiter nur Instinct Scoring.",
-    inArbeit: "🚧 Coming Soon: Die Apps sind angelegt und werden gebaut. Noch gibt es keine Inhalte zu zeigen und keinen Store-Eintrag — dieser Abschnitt sagt nur, was kommt.",
+    inArbeit: "🚧 In Arbeit: Die Apps sind angelegt und werden gebaut. Noch gibt es keine Inhalte zu zeigen und keinen Store-Eintrag — dieser Abschnitt sagt nur, was kommt.",
 
     kernTitel: "Warum eine Familie und nicht eine große App",
     kernText: "Eine App, die alles kann, kann am Ende nichts richtig — und wer nur seine Runde werten will, müsste sich durch neun Bereiche wühlen, die ihn nicht interessieren. Deshalb bleibt jede Sache ihre eigene App: klein, verständlich, für sich benutzbar. Wer mehrere hat, bekommt sie über eine Dach-App zusammengeführt; die Apps teilen sich eine gemeinsame Grundlage, damit Schützen, Bögen und Ergebnisse überall dieselben sind und nicht doppelt gepflegt werden müssen.",
@@ -1461,15 +1459,15 @@ de: {
     ],
     apps: [
       { bild: "scoring", name: "Instinct Scoring", rolle: "Der Kern — live im Store", text: "Runden werten auf 3D- und Feldparcours. Die einzige App der Familie, die es schon gibt." },
-      { bild: "coach", name: "Instinct Coach", rolle: "Coming Soon", text: "Trainingsbegleitung, die sich dem Schützen anpasst — statt eines festen Plans für alle." },
-      { bild: "builder", name: "Instinct Builder", rolle: "Coming Soon", text: "Pfeile zusammenstellen und verwalten: Spine, Länge, Befiederung, Farben." },
-      { bild: "tune", name: "Instinct Tune", rolle: "Coming Soon", text: "Bögen einstellen und den Verlauf festhalten — mit Fotovergleich über die Zeit." },
-      { bild: "weather", name: "Instinct Weather", rolle: "Coming Soon", text: "Wetter am Parcours: Wind, Licht, Temperatur — die Bedingungen, unter denen geschossen wurde." },
-      { bild: "pack", name: "Instinct Pack", rolle: "Coming Soon", text: "Ausrüstung im Blick: Inventar führen und Packlisten, damit vor dem Turnier nichts fehlt." },
-      { bild: "range", name: "Instinct Range", rolle: "Coming Soon", text: "Training auf dem Platz: Einheiten festhalten und auswerten, getrennt vom Parcours." },
-      { bild: "community", name: "Instinct Community", rolle: "Coming Soon", text: "Der Austausch mit anderen Schützen — Verein, Gruppe, gemeinsame Termine." },
-      { bild: "trade", name: "Instinct Trade", rolle: "Coming Soon", text: "Material weitergeben: anbieten, suchen, finden — Bogensport-Zubehör aus zweiter Hand." },
-      { bild: "ai", name: "AI-Instinct", rolle: "Coming Soon", text: "Fachberatung zum traditionellen Bogenschießen — fragen statt suchen." },
+      { bild: "coach", name: "Instinct Coach", rolle: "In Arbeit", text: "Trainingsbegleitung, die sich dem Schützen anpasst — statt eines festen Plans für alle." },
+      { bild: "builder", name: "Instinct Builder", rolle: "In Arbeit", text: "Pfeile zusammenstellen und verwalten: Spine, Länge, Befiederung, Farben." },
+      { bild: "tune", name: "Instinct Tune", rolle: "In Arbeit", text: "Bögen einstellen und den Verlauf festhalten — mit Fotovergleich über die Zeit." },
+      { bild: "weather", name: "Instinct Weather", rolle: "In Arbeit", text: "Wetter am Parcours: Wind, Licht, Temperatur — die Bedingungen, unter denen geschossen wurde." },
+      { bild: "pack", name: "Instinct Pack", rolle: "In Arbeit", text: "Ausrüstung im Blick: Inventar führen und Packlisten, damit vor dem Turnier nichts fehlt." },
+      { bild: "range", name: "Instinct Range", rolle: "In Arbeit", text: "Training auf dem Platz: Einheiten festhalten und auswerten, getrennt vom Parcours." },
+      { bild: "community", name: "Instinct Community", rolle: "In Arbeit", text: "Der Austausch mit anderen Schützen — Verein, Gruppe, gemeinsame Termine." },
+      { bild: "trade", name: "Instinct Trade", rolle: "In Arbeit", text: "Material weitergeben: anbieten, suchen, finden — Bogensport-Zubehör aus zweiter Hand." },
+      { bild: "ai", name: "AI-Instinct", rolle: "In Arbeit", text: "Fachberatung zum traditionellen Bogenschießen — fragen statt suchen." },
       { bild: "familie", name: "Instinct Familie", rolle: "Die Dach-App", text: "Führt zusammen, was in den einzelnen Apps liegt: ein Blick auf alle Schützen, alle Ergebnisse, das Zusammenspiel." }
     ],
 
@@ -1916,7 +1914,7 @@ de: {
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AbleseBar"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten", "Spielscheine prüfen und auswerten", "Zählerstände ablesen, Nebenkosten prüfen"] },
-      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Bearbeitung", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Testfassung außerhalb der Stores", "Testfassung außerhalb der Stores"] },
+      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Arbeit", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Testfassung außerhalb der Stores", "Testfassung außerhalb der Stores"] },
       { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Allein", "Allein", "Allein", "Allein", "Allein"] },
       { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten (freiwillig)", "Nie", "Nie", "Nur fürs Abo und Nachladen", "Nur für die Update-Prüfung"] },
       { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein", "Nein", "Ja — einmal anlegen", "Ja — einmal anlegen", "Konto oder Gast — beides geht"] },
@@ -1924,7 +1922,7 @@ de: {
       { name: "Sprachen",      werte: ["2", "2", "16", "1", "1", "1", "1", "1", "2", "2"] },
       { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Alles — es gibt noch nichts zu kaufen", "Stempeln, Zeitkonto, Tag bis Monat", "Alles — die ganze App", "10 Scheine · letzte 10 Ziehungen", "Alles — es gibt noch nichts zu kaufen"] },
       { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "noch offen", "0,49 € / 4 Wochen", "—", "0,49 € / 4 Wochen", "noch offen"] },
-      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
+      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
     fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash, YourFilm und AbleseBar steht noch nicht fest, ob und was etwas kosten wird."
   },
@@ -2059,7 +2057,7 @@ en: {
     appCampus: "In progress",
     appYourfilm: "In testing",
     appZeitwissen: "In testing",
-    appFamilie: "Coming soon",
+    appFamilie: "In progress",
     appTankspur: "In testing",
     scrollHinweis: "Scroll",
     karussellHinweis: "Swipe or use the arrows to turn the carousel — tap to open a product."
@@ -2450,15 +2448,13 @@ en: {
 
     /* --- New in the app (version 1.181, from the source code) --- */
     neuTitel: "New in the app",
-    neuText: "What the latest updates brought — as of version 1.181.",
+    neuText: "What the latest updates brought — as of version 1.200.",
     neuListe: [
-      { name: "Weekend PDF", text: "After every scored race weekend the app builds a PDF page: everyone's predictions side by side, the real result, the points and the standings — ready to share with the group." },
-      { name: "Two home-screen widgets", text: "The standings (positions 1 to 10 with colour, points and trophies) and the next race with flag, location and start time — right on your Android home screen." },
-      { name: "The whole season in one chart", text: "The full-screen chart now shows the complete season at a glance — switchable to the wide view for scrolling through." },
-      { name: "54 player colours", text: "The palette grew to 54 colours: 15 base colours are free, the neon shades are part of Premium. Your first pick when joining is always free." },
-      { name: "Countdown opens the calendar", text: "Tapping the countdown takes you straight to the race calendar at the current race." },
-      { name: "Start the round with one button", text: "The organiser starts the round right from the home page — from the next race on every prediction counts, everyone starts together at zero." },
-      { name: "More precise averages", text: "Point averages now show one decimal place — 8.4 and 8.5 are no longer the same number." }
+      { name: "Intro with a guided tour", text: "Newcomers get six cards and a tour along the real tabs — available again any time under Profile › Help." },
+      { name: "Predict from qualifying", text: "Predictions open when qualifying starts — with exactly the drivers taking part, reserve drivers included." },
+      { name: "A tick instead of forgetting", text: "Short on time? Tick qualifying result or starting grid — at the deadline the app turns it into your prediction." },
+      { name: "Results sooner", text: "If the official result is not in yet, live timing steps in from the chequered flag." },
+      { name: "Your own text colour", text: "White, black or your profile colour — it applies everywhere, the widget included. The colour picker groups shades into families." }
     ],
 
     /* --- Free and Premium (values from kasse.dart / gratis_grenze.dart) --- */
@@ -3417,14 +3413,14 @@ en: {
     ],
     kennung: "Chapter 08 · In progress",
     karteKurz: "Ten apps around archery",
-    karteStatus: "Coming soon",
-    statusPille: "Coming soon — in the works",
+    karteStatus: "In progress",
+    statusPille: "In progress — the apps are being built",
     name: "Instinct Family",
     untertitel: "One app becomes a family",
     claim: "Ten apps. One sport.",
     claimZwei: "Each on its own. All together.",
     positionierung: "Instinct Scoring covers one thing: scoring the round. But archery is more than that — training, arrows, weather, kit, community. That is becoming a family of standalone apps that speak the same language and can share their data. If all you want is scoring, you still just take Instinct Scoring.",
-    inArbeit: "🚧 Coming soon: the apps exist and are being built. There is no content to show yet and no store listing — this section only says what is coming.",
+    inArbeit: "🚧 In progress: the apps exist and are being built. There is no content to show yet and no store listing — this section only says what is coming.",
 
     kernTitel: "Why a family and not one big app",
     kernText: "An app that does everything ends up doing nothing well — and someone who only wants to score a round would have to wade through nine areas that do not concern them. So each thing stays its own app: small, understandable, usable on its own. Anyone with several gets them tied together by a parent app; the apps share a common foundation so that archers, bows and results are the same everywhere instead of being maintained twice.",
@@ -3439,15 +3435,15 @@ en: {
     ],
     apps: [
       { bild: "scoring", name: "Instinct Scoring", rolle: "The core — live in the store", text: "Scoring rounds on 3D and field courses. The only app in the family that already exists." },
-      { bild: "coach", name: "Instinct Coach", rolle: "Coming soon", text: "Training guidance that adapts to the archer, instead of one fixed plan for everyone." },
-      { bild: "builder", name: "Instinct Builder", rolle: "Coming soon", text: "Building and managing arrows: spine, length, fletching, colours." },
-      { bild: "tune", name: "Instinct Tune", rolle: "Coming soon", text: "Tuning bows and keeping the history — with photo comparison over time." },
-      { bild: "weather", name: "Instinct Weather", rolle: "Coming soon", text: "Weather at the course: wind, light, temperature — the conditions you shot in." },
-      { bild: "pack", name: "Instinct Pack", rolle: "Coming soon", text: "Keeping track of kit: an inventory and packing lists, so nothing is missing before a tournament." },
-      { bild: "range", name: "Instinct Range", rolle: "Coming soon", text: "Training on the range: recording and reviewing sessions, kept apart from course rounds." },
-      { bild: "community", name: "Instinct Community", rolle: "Coming soon", text: "Talking to other archers — club, group, shared dates." },
-      { bild: "trade", name: "Instinct Trade", rolle: "Coming soon", text: "Passing kit on: offer, search, find — second-hand archery gear." },
-      { bild: "ai", name: "AI-Instinct", rolle: "Coming soon", text: "Expert advice on traditional archery — ask instead of search." },
+      { bild: "coach", name: "Instinct Coach", rolle: "In progress", text: "Training guidance that adapts to the archer, instead of one fixed plan for everyone." },
+      { bild: "builder", name: "Instinct Builder", rolle: "In progress", text: "Building and managing arrows: spine, length, fletching, colours." },
+      { bild: "tune", name: "Instinct Tune", rolle: "In progress", text: "Tuning bows and keeping the history — with photo comparison over time." },
+      { bild: "weather", name: "Instinct Weather", rolle: "In progress", text: "Weather at the course: wind, light, temperature — the conditions you shot in." },
+      { bild: "pack", name: "Instinct Pack", rolle: "In progress", text: "Keeping track of kit: an inventory and packing lists, so nothing is missing before a tournament." },
+      { bild: "range", name: "Instinct Range", rolle: "In progress", text: "Training on the range: recording and reviewing sessions, kept apart from course rounds." },
+      { bild: "community", name: "Instinct Community", rolle: "In progress", text: "Talking to other archers — club, group, shared dates." },
+      { bild: "trade", name: "Instinct Trade", rolle: "In progress", text: "Passing kit on: offer, search, find — second-hand archery gear." },
+      { bild: "ai", name: "AI-Instinct", rolle: "In progress", text: "Expert advice on traditional archery — ask instead of search." },
       { bild: "familie", name: "Instinct Family", rolle: "The parent app", text: "Brings together what sits in the individual apps: one view of all archers, all results, how it fits together." }
     ],
 
@@ -3876,7 +3872,7 @@ en: {
       { name: "Languages",      werte: ["2", "2", "16", "1", "1", "1", "1", "1", "2", "2"] },
       { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Everything — nothing to buy yet", "Clocking, time account, day to month", "Everything — the whole app", "10 tickets · last 10 draws", "Everything — nothing to buy yet"] },
       { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "not decided yet", "€0.49 / 4 weeks", "—", "€0.49 / 4 weeks", "not decided yet"] },
-      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android · iOS", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
+      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
     fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash, YourFilm and AbleseBar it is not yet decided whether anything will cost money."
   },

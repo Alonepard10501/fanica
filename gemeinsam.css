@@ -68,3 +68,6 @@ main.unterseite .app-symbol .symbol-bild { view-transition-name: app-symbol; }
   .produktwahl > summary { padding: 0 10px; font-size: .74rem; }
   .produktwahl ul { right: -6px; min-width: 210px; }
 }
+
+#fanica-neu { display: flex; flex-wrap: wrap; }
+#fanica-neu > * { flex: 1 1 200px; }

@@ -102,12 +102,9 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
    beide gibt es nicht. Richtig: `Projekte\Apps\FaNiCa Fun\Google Play\5 Webseite und
    Webversion\daten.json` und `Projekte\Web\Webseiten\Webseite\runde.js`. Dieselbe falsche
    Ordnerangabe steht in `LIESMICH.md`. Vor dem nächsten Lauf berichtigen.
-5. **FaNiCa „Neu in der App“** nennt „Stand Version 1.181“, live ist 1.200 — die Liste
-   `fanica.neuListe` gegen 1.182–1.200 prüfen, dann Zahl in DE und EN anheben.
-6. **Campus Clash:** 4.13.0 liegt seit 30.09.2026 als öffentliches GitHub-Release vor; die Seite
-   nennt keinen Bezugsweg (Falks Entscheidung, ob verlinkt wird). Plattform „Android · iOS“ in der
-   Vergleichstabelle ist für iOS nicht belegt.
-7. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
+5. **Campus Clash:** 4.13.0 liegt seit 30.09.2026 als öffentliches GitHub-Release vor; die Seite
+   nennt keinen Bezugsweg (Falks Entscheidung, ob verlinkt wird).
+6. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
    nächsten Produkt mitziehen.
 
 **Wissen:** Skill `entwickler-website` · [[statische-website-bauen-und-veroeffentlichen]]
