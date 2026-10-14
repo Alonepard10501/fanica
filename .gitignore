@@ -24,3 +24,8 @@ key.properties
 *.keystore
 *.p12
 *.p8
+
+# Token-Bilanz
+/Veroeffentlichen/Token-Bilanz.xlsx
+/Veroeffentlichen/Token-Buch.csv
+/Veroeffentlichen/~$Token-Bilanz.xlsx
