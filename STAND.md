@@ -103,7 +103,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   → [[bewegte-weichzeichner-sind-die-bremse]]
 
 **Nachbarn**
-- Die Instinct-Seite ist ein eigenes Repo (`Projekte\Web\Webseiten\Webseite-Instinct\`) mit
+- Die Instinct-Seite ist ein eigenes Repo (`Projekte\Web\Instinct-Website\`) mit
   eigenen Kopien von CSS, JS und Bildern — Instinct-Änderungen betreffen oft beide.
 
 - Campus Clash wird nicht verlinkt — die GitHub-Fassung ist privat (Falk 01.10.2026).
