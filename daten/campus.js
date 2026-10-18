@@ -59,12 +59,12 @@ window.PRODUKT_DATEN = {
       { titel: "Plätze belegen", text: "Fächer und Alltag starten. Die Zeit läuft, auch wenn das Handy in der Tasche steckt." },
       { titel: "Abholen und aufsteigen", text: "Fertiges abholen, eine der drei Kisten wählen und das nächste Level freischalten." }
     ],
-    neu: { version: "4.13.0", datum: "30.09.2026", punkte: [
-      "Zwei neue Minispiele: Vier gewinnt und das Paare-Spiel",
-      "Turnierwochenende mit eigener Rot-oder-Schwarz-Runde",
-      "Eine Spiel-Truhe nach jedem gewonnenen Minispiel",
-      "Die Schmiede als eigener Bereich für die Item-Aufwertung",
-      "Das Tagesereignis steht über „Dein Werdegang“, die Figur wieder in voller Größe"
+    neu: { version: "4.18.0", datum: "04.10.2026", punkte: [
+      "Schule: Werdegang und Alltag stehen ganz oben, die Laufbahn zeigt eine kurze Übersicht",
+      "Markt: Inventar und Serien stehen direkt unter der Schmiede",
+      "Diamanten-Shop: jede Truhe einmal, ohne Stufen, nach Seltenheit sortiert — der Inhalt richtet sich nach deinem Level",
+      "Tonarten von günstig nach teuer, vor dem Kauf anhörbar",
+      "Allianz: acht weitere Mitgliedsfarben, Turnierspiel jede halbe Stunde, neu gestaltete Mauer-Seite"
     ] },
     fragen: [
       { frage: "Kostet Campus Clash etwas?", antwort: "Gespielt wird kostenlos. Ein Premium mit doppelten Plätzen, Direktnachrichten unter Freunden und weiteren App-Symbolen ist vorbereitet, aber noch nicht käuflich." },
@@ -126,12 +126,12 @@ window.PRODUKT_DATEN = {
       { titel: "Fill your slots", text: "Start subjects and daily life. Time keeps running while the phone is in your pocket." },
       { titel: "Collect and level up", text: "Collect what is done, pick one of three crates and unlock the next level." }
     ],
-    neu: { version: "4.13.0", datum: "30 Sep 2026", punkte: [
-      "Two new mini games: four in a row and pairs",
-      "Tournament weekend with its own red-or-black round",
-      "A game chest for every mini game you win",
-      "The forge as its own area for item upgrades",
-      "The daily event sits above “Your career”, the character back at full height"
+    neu: { version: "4.18.0", datum: "4 Oct 2026", punkte: [
+      "School: your career and everyday life sit at the top, the career card shows a short overview",
+      "Market: inventory and series sit right below the forge",
+      "Diamond shop: every chest once, without tiers, sorted by rarity — the contents follow your level",
+      "Sound sets from cheap to expensive, playable before buying",
+      "Alliance: eight more member colours, tournament game every half hour, redesigned wall page"
     ] },
     fragen: [
       { frage: "Does Campus Clash cost anything?", antwort: "Playing is free. A Premium with doubled slots, direct messages between friends and extra app icons is prepared but cannot be bought yet." },

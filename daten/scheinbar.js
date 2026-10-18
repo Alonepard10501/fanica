@@ -65,12 +65,12 @@ window.PRODUKT_DATEN = {
       { titel: "Prüfen und speichern", text: "Erkannte Angaben kontrollieren, Teilnahmezeitraum setzen — nur echte Ziehungstage sind wählbar." },
       { titel: "Ergebnis ablesen", text: "Der Schein zeigt je Ziehung Treffer und Gewinnklasse, die Zusatzspiele auf eigener Karte." }
     ],
-    neu: { version: "1.0.16", datum: "22.09.2026", punkte: [
-      "Aus einem Foto kommen Tippzahlen, Superzahl, Losnummer, Teilnahme, Einsatz und Quittungsnummer",
-      "Nach dem Scan steht über dem Formular, welche Angaben aus dem Bild kamen",
-      "Erkannte Einzelzahlen werden vorgewählt, auch wenn kein volles Feld zusammenkommt",
-      "GlücksSpirale und Sieger-Chance lassen sich am Schein vermerken",
-      "Der Code auf der Quittung wird als Scheinkennung gespeichert"
+    neu: { version: "1.0.19", datum: "08.10.2026", punkte: [
+      "Gewinnanzeige neu geordnet: gezogene Zahlen neutral, eigene Treffer farbig, Nieten blass",
+      "Superzahl und Eurozahlen stehen getrennt und zählen als Treffer",
+      "BINGO! als festes Raster mit Spaltenköpfen, volle Reihen umrandet",
+      "Der BINGO!-Scan liest nach der Lage im Bild — verlesene Zahlen bleiben leer statt falsch",
+      "Ein Schein gilt als offen, solange der Teilnahmezeitraum läuft"
     ] },
     fragen: [
       { frage: "Ist ScheinBar ein Glücksspiel?", antwort: "Nein. Die App nimmt keine Tipps an, verkauft und vermittelt keine Scheine, lost nichts aus und zahlt nichts aus. Sie verwaltet Scheine, die schon gespielt sind." },
@@ -136,12 +136,12 @@ window.PRODUKT_DATEN = {
       { titel: "Check and save", text: "Review what was recognised and set the entry period — only real draw days can be picked." },
       { titel: "Read the result", text: "The ticket shows hits and prize tier for every draw, the extra games on a card of their own." }
     ],
-    neu: { version: "1.0.16", datum: "22 Sep 2026", punkte: [
-      "One photo yields numbers, bonus ball, ticket number, entry date, stake and receipt number",
-      "After a scan, the form says which details came from the image",
-      "Single recognised numbers are preselected, even when no full field comes together",
-      "GlücksSpirale and Sieger-Chance can be noted on the ticket",
-      "The code on the receipt is stored as the ticket ID"
+    neu: { version: "1.0.19", datum: "8 Oct 2026", punkte: [
+      "Results reordered: drawn numbers neutral, your own hits in colour, misses faded",
+      "Bonus ball and Euro numbers shown separately and counted as hits",
+      "BINGO! as a fixed grid with column headers, full lines outlined",
+      "The BINGO! scan reads by position in the image — misread numbers stay empty instead of wrong",
+      "A ticket counts as open while its entry period is still running"
     ] },
     fragen: [
       { frage: "Is ScheinBar gambling?", antwort: "No. The app takes no bets, neither sells nor brokers tickets, draws nothing and pays nothing out. It manages tickets that have already been played." },

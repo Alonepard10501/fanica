@@ -63,12 +63,12 @@ window.PRODUKT_DATEN = {
       { titel: "Runde gründen oder beitreten", text: "Eine eigene Runde gründen oder mit dem Beitritts-Code des Organisators dazukommen." },
       { titel: "Tippen und abwarten", text: "Bis acht Stunden vor dem Start tippen — Ergebnis, Punkte und Tabelle kommen von selbst." }
     ],
-    neu: { version: "1.200.0", datum: "27.09.2026", punkte: [
-      "Neue Einführung mit Rundgang an den echten Reitern, jederzeit über Profil › Hilfe",
-      "Haken für Quali-Top-5 oder Startaufstellung: der Tipp wird zum Tippschluss eingetragen",
-      "Die Tipps der anderen werden erst mit dem Rennstart sichtbar",
-      "Erfolge je Strecke und gesamt, Karriere je Saison",
-      "Symbol- und Schriftfarbe wählbar, Farbwähler nach Farbfamilien"
+    neu: { version: "1.208.0", datum: "15.10.2026", punkte: [
+      "Gleiche Bestenliste beim Öffnen, auch ohne Organisator",
+      "Nach dem Ergebnis sofort das nächste Rennen tippen",
+      "Der Blitz-Haken zählt nur, wenn du ihn selbst setzt — auch nach dem Ergebnis",
+      "Saisonende: Der Endstand bleibt und steht sofort in der Karriere",
+      "Abgesagte Rennen werden übersprungen"
     ] },
     preise: {
       satz: "Tippen kostet nichts, dauerhaft. Premium öffnet den Rückblick.",
@@ -147,12 +147,12 @@ window.PRODUKT_DATEN = {
       { titel: "Start or join a round", text: "Start your own round or join with the organizer’s join code." },
       { titel: "Predict and wait", text: "Pick until eight hours before the start — result, points and table follow by themselves." }
     ],
-    neu: { version: "1.200.0", datum: "27 Sep 2026", punkte: [
-      "New introduction with a tour of the real tabs, any time via Profile › Help",
-      "Tick for qualifying top five or starting grid: your pick is filled in at the deadline",
-      "Everyone else’s picks only appear when the race starts",
-      "Achievements per track and overall, career per season",
-      "Symbol and text colour to choose, colour picker sorted by colour family"
+    neu: { version: "1.208.0", datum: "15 Oct 2026", punkte: [
+      "Same standings when opening the app, even without the organiser",
+      "Pick the next race right after the result",
+      "The lightning tick only counts when you set it yourself — also after the result",
+      "Season end: the final standings stay and show in your career at once",
+      "Cancelled races are skipped"
     ] },
     preise: {
       satz: "Predicting is free, for good. Premium opens the look back.",
