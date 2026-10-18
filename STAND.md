@@ -23,7 +23,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 |---|---|
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
-| Git | `origin/main` = `4584e8c` (Überarbeitung vom 01.10.2026, online); lokal drei Commits voraus (Pfade nach dem Umzug, Token-Bilanz aus Git genommen, Neu-Blöcke vom 18.10.2026 `76cc2f2`) — Push nur auf Falks Wort |
+| Git | `origin/main` = `84eaf7c`, gepusht am 18.10.2026 auf Falks Wort (Neu-Blöcke, Stand-Datei, Pfade, Token-Bilanz aus Git genommen); lokal nur diese Stand-Datei danach — Push nur auf Falks Wort |
 | Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
 | Store-Gegenprobe 18.10.2026 | FaNiCa Play 200, Apple 1.208.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` (SetUpLeiste-Download zuletzt 01.10.2026: 200) |
@@ -117,22 +117,21 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   per Neuaufnahme zu beheben, kein Blocker.
 
 ## Offen
-1. **Neue Fassung pushen** (Falks Wort): drei lokale Commits sind nicht online — Pfade nach dem Umzug, Token-Bilanz aus Git genommen, Neu-Blöcke FaNiCa 1.208 / Campus Clash 4.18 / ScheinBar 1.0.19 (18.10.2026).
-2. **Store-Wege freischalten**, sobald Instinct Play bzw. NeonPunkt (Play und Apple) live sind:
+1. **Store-Wege freischalten**, sobald Instinct Play bzw. NeonPunkt (Play und Apple) live sind:
    `standAndroid`/`standApple` in `inhalte.js`, vorher die Adresse prüfen. Gegenprobe
    01.10.2026 nachmittags: Instinct Play 404, NeonPunkt Play 404, NeonPunkt Apple-Lookup
    `resultCount 0` — bleibt `test`/`spaeter`.
-3. **Toter Code in `inhalte.js`:** die alten Bausteine (Funktionsblöcke, Umfang-Schleife,
+2. **Toter Code in `inhalte.js`:** die alten Bausteine (Funktionsblöcke, Umfang-Schleife,
    Bögen, Spine-Rechner, Trophäen, Bezugsleiste mit QR …) greifen auf Container, die es auf
    keiner Seite mehr gibt; ihre Texte sind aus `texte.js` entfernt. Beim nächsten Umbau
    mitentfernen.
-4. **Neue Dunkelmodus-Aufnahmen fehlen** (Galerie entfällt bis dahin): Campus Clash (alle alten
+3. **Neue Dunkelmodus-Aufnahmen fehlen** (Galerie entfällt bis dahin): Campus Clash (alle alten
    Bilder zeigen den Stand vor 4.x), YourFilm (Reiter „Suche“ statt „Freunde“), AblesBar (Reiter
    „Zähler“ statt „Objekt“, alte Gas-Zählermiete), Instinct Familie (nur Hellmodus), NeonPunkt
    (nur gerenderte Bilder). Tankspur hat nur zwei, ScheinBar drei, FaNiCa drei aktuelle.
-5. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
+4. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
    nächsten Produkt mitziehen.
-6. **Grow All-In-One** (1.2.1+4, GitHub-Release seit 07.09.2026) und **AI-Instinct** (frühe Bauphase)
+5. **Grow All-In-One** (1.2.1+4, GitHub-Release seit 07.09.2026) und **AI-Instinct** (frühe Bauphase)
    stehen nicht auf der Seite — ob Grow dazukommt, entscheidet Falk; bis dahin nichts anlegen.
 
 **Wissen:** Skill `entwickler-website` · [[statische-website-bauen-und-veroeffentlichen]]
