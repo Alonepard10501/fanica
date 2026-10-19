@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  const BREITE = 640, HOEHE = 128, GRUNDLINIE = 104, WORT = "STUDIO";
+  const BREITE = 960, HOEHE = 448, GRUNDLINIE = 280, WORT = "STUDIO";
   const SCHRIFT = '800 104px "Saira", "Bahnschrift", "DIN Alternate", "Segoe UI", system-ui, sans-serif';
   const ABSTAND = 104 * 0.04;
   const FARBE = { linie: "#FF8A95", neon: "#FF4257", tief: "#E4192B", cyan: "#17E9E0", cyanHell: "#9FF6FF", deck: "#110D18",
@@ -37,7 +37,15 @@
     glut.width = leinwand.width; glut.height = leinwand.height;
     const g = glut.getContext("2d");
     vorbereiten(g);
-    [[FARBE.gruenTief, 90], [FARBE.gruenTief, 54], [FARBE.gruen, 30], [FARBE.gruen, 20], [FARBE.gruenHell, 9], ["#FFFFFF", 2.5]].forEach(([farbe, weich]) => {
+    g.save();
+    g.translate(BREITE / 2, GRUNDLINIE - 40);
+    g.scale(1, 0.5);
+    const strahlen = g.createRadialGradient(0, 0, 0, 0, 0, 470);
+    [[0, "rgba(57,255,20,.62)"], [.3, "rgba(57,255,20,.38)"], [.62, "rgba(31,179,0,.17)"], [1, "rgba(31,179,0,0)"]].forEach(([p, farbe]) => strahlen.addColorStop(p, farbe));
+    g.fillStyle = strahlen;
+    g.fillRect(-470, -470, 940, 940);
+    g.restore();
+    [[FARBE.gruenTief, 170], [FARBE.gruenTief, 120], [FARBE.gruen, 80], [FARBE.gruen, 50], [FARBE.gruen, 30], [FARBE.gruenHell, 14], ["#FFFFFF", 2.5]].forEach(([farbe, weich]) => {
       g.save();
       g.shadowColor = farbe; g.shadowBlur = weich * dpr; g.shadowOffsetX = 2000 * dpr;
       g.fillStyle = farbe;
