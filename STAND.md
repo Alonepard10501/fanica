@@ -23,7 +23,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 |---|---|
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
-| Git | `origin/main` = `a75d2a2` (19.10.2026): Schriftzug als SVG mit Größe und Farben als Attribute, Stylesheet mit Versionszusatz; Falk hat den Effekt auf dem Handy bestätigt — Push nur auf Falks Wort |
+| Git | `origin/main` = Effekt von `3d3cc90` wiederhergestellt plus Rückfall-Ring und Versionszusatz (19.10.2026), live nachgemessen — Push nur auf Falks Wort |
 | Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
 | Store-Gegenprobe 18.10.2026 | FaNiCa Play 200, Apple 1.208.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` (SetUpLeiste-Download zuletzt 01.10.2026: 200) |
@@ -45,18 +45,18 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   (`.studio-neon` in `start.css`, einmaliges Einschalt-Flackern, bei reduzierter Bewegung
   aus) mit „Ein-Mann-Medienstudio · Nordfriesland“ als Unterzeile — beides zusammen ist
   die H1. Seit 19.10.2026 mit dem Knopf-Effekt aus dem Grow-Intro (`_TitelPille`): hohle
-  dunkle Buchstaben, Schein in Rot und Cyan, beim Laden läuft ein Licht an den Konturen der
-  Buchstaben entlang und bleibt dann als Verlaufsrand Rot→Cyan stehen. Umgesetzt als Inline-SVG
-  in `index.html` mit vier `<text>`-Schichten (`studio-glut` Schein über SVG-Filter,
-  `studio-lauf` weiße Strichkontur mit `stroke-dasharray`-Lauf, `studio-rand` Kontur mit
-  Verlaufs-Stroke, `studio-deck` Füllung in `#110D18`), Regeln in `start.css`. Die erste
-  CSS-Fassung über `background-clip: text` auf einer `-webkit-text-stroke` zeigte den Rand
-  auf dem Handy nicht (WebKit legt den Hintergrund nicht auf die Kontur) — deshalb SVG. Bei
-  reduzierter Bewegung steht der Rand sofort. Größe, Schrift und Farben stehen zusätzlich als
-  Attribute an den `<text>`-Elementen, und `start.css` wird mit Versionszusatz (`?v=…`) geladen:
-  GitHub Pages hält CSS zehn Minuten, mit altem CSS war das Wort auf Falks Handy nur ein „Pixel“.
-  Bei jeder CSS-Änderung an der Startseite den Zusatz hochzählen. Die Magenta-Fassung mit
-  Spiegelung (`0ad4574`) hat Falk verworfen. Kein Knopf und kein Satz im Kopf; der Leitsatz steht als Abschluss unter dem
+  dunkle Buchstaben, Schein in Rot und Cyan, beim Laden läuft je Buchstabe ein Licht (Conic-
+  Verlauf um die Buchstabenmitte, Start um .2 s versetzt, S zuerst) zwei Runden um die
+  Umrandung und bleibt dann als Verlaufsrand Rot→Cyan stehen — von Falk abgenommen, nicht
+  verändern. Fünf Schichten im HTML, jede mit sechs Buchstaben-Spans `.z` (alle Schichten
+  gleich geteilt, sonst verschiebt die Unterschneidung die Ebenen): `studio-glut` Schein,
+  `studio-ring` fester Schattenring als Rückfall, `studio-lauf` mit `@property --winkel` je
+  Buchstabe, `studio-rand` fester Verlauf, `studio-deck` Füllung in `--deck`; Rand über
+  `background-clip: text` auf einer `-webkit-text-stroke` — nie `background:`-Kurzform danach.
+  `start.css` wird mit Versionszusatz (`?v=…`) geladen und der Zusatz bei jeder Änderung
+  hochgezählt: GitHub Pages hält CSS zehn Minuten, mit altem CSS sah Falk den Effekt nicht.
+  Bei reduzierter Bewegung steht der Rand sofort. Verworfen: Magenta mit Spiegelung
+  (`0ad4574`) und der SVG-Umweg (`7ba0e4b`, `a75d2a2`) — Falk wollte den abgenommenen Effekt. Kein Knopf und kein Satz im Kopf; der Leitsatz steht als Abschluss unter dem
   Produktraster (`start.leitsatz`). Karussell bei 1366×768 ab 366 px.
 - Produktseiten (alle elf) auf einem Gerüst: Kopfkarte (`produkt.css`, `wege.js`) und darunter
   alles aus EINER Vorlage `aufbau.js` + `aufbau.css`, befüllt aus `daten/<app>.js` (DE + EN,

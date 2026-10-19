@@ -30,23 +30,44 @@ body.start {
   display: flex; flex-direction: column; align-items: center; gap: var(--s3);
   max-width: 100%; margin: 0 auto; font-size: 1rem; line-height: 1; letter-spacing: normal;
 }
+@property --winkel { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
 .studio-neon {
-  display: block; overflow: visible; margin: 0 auto; flex: none;
-  width: min(100%, clamp(17rem, 38vw, 28rem)); height: auto; aspect-ratio: 640 / 128;
+  --neon: #FF4257; --neon-tief: #E4192B; --linie: #FF8A95;
+  --cyan: #17E9E0; --deck: #110D18;
+  position: relative; display: inline-block;
+  font-family: var(--schrift-kopf); font-weight: 800; text-transform: uppercase;
+  font-size: clamp(2.8rem, min(8.5vw, 10vh), 6rem);
+  letter-spacing: .06em; line-height: 1; padding: .08em .12em .08em .18em;
   animation: studio-an .9s ease .2s both;
 }
-.studio-neon text {
-  font-family: var(--schrift-kopf); font-weight: 800; font-size: 104px; letter-spacing: .04em;
-  paint-order: stroke fill;
+.studio-neon > span { display: block; }
+.studio-glut {
+  color: var(--linie);
+  filter: drop-shadow(0 0 2px #FFFFFF) drop-shadow(0 0 8px var(--neon))
+          drop-shadow(0 0 20px var(--cyan)) drop-shadow(0 0 46px var(--neon-tief));
 }
-.studio-glut { fill: #FF8A95; filter: url(#studio-schein); }
-.studio-lauf, .studio-rand { fill: none; stroke-width: 10; stroke-linejoin: round; stroke-linecap: round; }
-.studio-lauf {
-  stroke: #FFFFFF; stroke-dasharray: 90 330;
-  animation: studio-umlauf 2.2s linear 1.1s 1 both, studio-lauf-aus .45s ease 3.1s 1 both;
+.studio-ring, .studio-lauf, .studio-rand, .studio-deck { position: absolute; inset: 0; padding: inherit; }
+.studio-ring {
+  color: transparent;
+  text-shadow:
+    2px 0 0 var(--linie), -2px 0 0 var(--linie), 0 2px 0 var(--linie), 0 -2px 0 var(--linie),
+    1.5px 1.5px 0 var(--linie), -1.5px 1.5px 0 var(--linie), 1.5px -1.5px 0 var(--linie), -1.5px -1.5px 0 var(--linie);
 }
-.studio-rand { stroke: url(#studio-verlauf); animation: studio-rand-an .7s ease 3.2s 1 both; }
-.studio-deck { fill: #110D18; }
+.studio-neon .z { display: inline-block; }
+.studio-lauf, .studio-rand { color: transparent; -webkit-text-stroke: .09em transparent; }
+.studio-rand, .studio-lauf .z { -webkit-background-clip: text; background-clip: text; }
+.studio-lauf .z {
+  background-image: conic-gradient(from var(--winkel) at 50% 50%,
+    #FFFFFF 0deg, #FFFFFF 34deg, #FF8A95 60deg, #FF4257 110deg, #7A0C16 180deg,
+    #0A5E5A 250deg, #17E9E0 300deg, #9FF6FF 335deg, #FFFFFF 360deg);
+  animation: studio-umlauf 1.5s linear calc(1.1s + var(--n) * .2s) 1 both,
+             studio-lauf-aus .45s ease calc(2.6s + var(--n) * .2s) 1 both;
+}
+.studio-rand {
+  background-image: linear-gradient(137deg, #FF4257 0%, #FFB3BA 30%, #B8FAFF 62%, #17E9E0 100%);
+  animation: studio-rand-an .7s ease 3.2s 1 both;
+}
+.studio-deck { color: var(--deck); }
 .studio-zeichen .kennung {
   width: auto; max-width: 100%; margin: 0; padding: 0; border: 0; background: none; box-shadow: none;
   line-height: 1.7; text-align: center; text-wrap: balance;
@@ -57,7 +78,7 @@ body.start {
 .studio-zeichen .kennung > span { display: inline; }
 .studio-ort::before { content: "· "; }
 @keyframes studio-an { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-@keyframes studio-umlauf { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -2520; } }
+@keyframes studio-umlauf { from { --winkel: 0deg; } to { --winkel: 720deg; } }
 @keyframes studio-lauf-aus { to { opacity: 0; } }
 @keyframes studio-rand-an { from { opacity: 0; } to { opacity: 1; } }
   4%, 8%, 14%, 20%, 30%, 100% { opacity: 1; }
@@ -311,6 +332,7 @@ body.start {
   .start .vergleich thead th[class^="app-"] { width: calc((100% - 7.5rem) / 10); }
   .start .vergleich tbody th { font-size: .8rem; }
   .start .hero { padding-top: 96px; }
+  .studio-neon { letter-spacing: .04em; padding: .08em .1em .08em .14em; }
   .studio-zeichen .kennung { letter-spacing: .24em; padding-left: .24em; }
   .studio-zeichen .kennung > .studio-ort { display: block; }
   .studio-ort::before { content: none; }
