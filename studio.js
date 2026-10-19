@@ -5,7 +5,8 @@
   const BREITE = 640, HOEHE = 128, GRUNDLINIE = 104, WORT = "STUDIO";
   const SCHRIFT = '800 104px "Saira", "Bahnschrift", "DIN Alternate", "Segoe UI", system-ui, sans-serif';
   const ABSTAND = 104 * 0.04;
-  const FARBE = { linie: "#FF8A95", neon: "#FF4257", tief: "#E4192B", cyan: "#17E9E0", cyanHell: "#9FF6FF", deck: "#110D18" };
+  const FARBE = { linie: "#FF8A95", neon: "#FF4257", tief: "#E4192B", cyan: "#17E9E0", cyanHell: "#9FF6FF", deck: "#110D18",
+    gruenTief: "#1FB300", gruen: "#39FF14", gruenHell: "#A6FF8A" };
   const RAND = [[0, "#FF4257"], [.3, "#FFB3BA"], [.62, "#B8FAFF"], [1, "#17E9E0"]];
   const LAUF = [[0, "#FFFFFF"], [34 / 360, "#FFFFFF"], [60 / 360, FARBE.linie], [110 / 360, FARBE.neon], [180 / 360, "#7A0C16"],
     [250 / 360, "#0A5E5A"], [300 / 360, FARBE.cyan], [335 / 360, FARBE.cyanHell], [1, "#FFFFFF"]];
@@ -36,7 +37,7 @@
     glut.width = leinwand.width; glut.height = leinwand.height;
     const g = glut.getContext("2d");
     vorbereiten(g);
-    [[FARBE.tief, 90], [FARBE.tief, 54], [FARBE.neon, 30], [FARBE.cyan, 24], [FARBE.neon, 10], ["#FFFFFF", 2.5]].forEach(([farbe, weich]) => {
+    [[FARBE.gruenTief, 90], [FARBE.gruenTief, 54], [FARBE.gruen, 30], [FARBE.gruen, 20], [FARBE.gruenHell, 9], ["#FFFFFF", 2.5]].forEach(([farbe, weich]) => {
       g.save();
       g.shadowColor = farbe; g.shadowBlur = weich; g.shadowOffsetX = 2000 * dpr;
       g.fillStyle = farbe;
