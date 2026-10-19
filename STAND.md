@@ -23,7 +23,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 |---|---|
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
-| Git | `origin/main` = `9429489` (19.10.2026): Schriftzug als Canvas, live nachgemessen; Falks Sichtprüfung am Handy offen — Push nur auf Falks Wort |
+| Git | `origin/main` = `6bad833` (19.10.2026): Schriftzug als Canvas, live nachgemessen und von Falk am Handy bestätigt — Push nur auf Falks Wort |
 | Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
 | Store-Gegenprobe 18.10.2026 | FaNiCa Play 200, Apple 1.208.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` (SetUpLeiste-Download zuletzt 01.10.2026: 200) |
