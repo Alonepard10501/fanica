@@ -23,7 +23,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 |---|---|
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
-| Git | `origin/main` = `b2f18c5` (18.10.2026); lokal ein Commit voraus: Neon-Schriftzug nach der Vorlage (19.10.2026) — Push nur auf Falks Wort |
+| Git | `origin/main` = `b2f18c5` (18.10.2026); lokal zwei Commits voraus: Neon-Schriftzug (`0ad4574`, verworfen) und Lauflicht-Fassung `1c73852` (19.10.2026) — Push nur auf Falks Wort |
 | Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
 | Store-Gegenprobe 18.10.2026 | FaNiCa Play 200, Apple 1.208.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` (SetUpLeiste-Download zuletzt 01.10.2026: 200) |
@@ -44,11 +44,14 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 - Kopf der Startseite: Logos, darunter der Neon-Schriftzug „STUDIO“ als reines CSS
   (`.studio-neon` in `start.css`, einmaliges Einschalt-Flackern, bei reduzierter Bewegung
   aus) mit „Ein-Mann-Medienstudio · Nordfriesland“ als Unterzeile — beides zusammen ist
-  die H1. Seit 19.10.2026 nach Falks Blender-Vorlage (`studio-neon.webp`, Commit `a2ee4d1`):
-  weiße fette Buchstaben, magentafarben leuchtender Rand (`-webkit-text-stroke` mit
-  `paint-order: stroke fill`, sonst Strichreste an Buchstabenüberlappungen) und eine
-  gespiegelte, weichgezeichnete Spiegelung als `::after` aus `data-text`. Farbe der Vorlage,
-  nicht das FaNiCa-Rot. Kein Knopf und kein Satz im Kopf; der Leitsatz steht als Abschluss unter dem
+  die H1. Seit 19.10.2026 mit dem Knopf-Effekt aus dem Grow-Intro (`_TitelPille`): hohle
+  dunkle Buchstaben, Schein in Rot und Cyan, beim Laden läuft ein Licht zwei Runden um die
+  Umrandung und bleibt dann als Verlaufsrand Rot→Cyan stehen. Vier Schichten im HTML
+  (`studio-glut` Schein, `studio-lauf` Conic-Verlauf mit `@property --winkel`, `studio-rand`
+  fester Verlauf, `studio-deck` Füllung in `--deck`); Rand über `background-clip: text` auf
+  einer `-webkit-text-stroke` — nie `background:`-Kurzform danach, sie setzt den Clip zurück.
+  Bei reduzierter Bewegung steht der Rand sofort. Die Magenta-Fassung mit Spiegelung
+  (`0ad4574`) hat Falk verworfen. Kein Knopf und kein Satz im Kopf; der Leitsatz steht als Abschluss unter dem
   Produktraster (`start.leitsatz`). Karussell bei 1366×768 ab 366 px.
 - Produktseiten (alle elf) auf einem Gerüst: Kopfkarte (`produkt.css`, `wege.js`) und darunter
   alles aus EINER Vorlage `aufbau.js` + `aufbau.css`, befüllt aus `daten/<app>.js` (DE + EN,
