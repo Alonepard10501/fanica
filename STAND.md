@@ -2,7 +2,7 @@
 name: stand-entwickler-website
 description: "Die eine Stand-Datei für die Entwickler-Website: aktueller Stand, geltende Regeln der Seite, echte offene Punkte."
 tags: [projekt, webseite, stand]
-stand: 2026-10-18
+stand: 2026-10-19
 ---
 
 # STAND — Entwickler-Website
@@ -23,7 +23,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 |---|---|
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
-| Git | `origin/main` = `84eaf7c`, gepusht am 18.10.2026 auf Falks Wort (Neu-Blöcke, Stand-Datei, Pfade, Token-Bilanz aus Git genommen); lokal nur diese Stand-Datei danach — Push nur auf Falks Wort |
+| Git | `origin/main` = `b2f18c5` (18.10.2026); lokal ein Commit voraus: Neon-Schriftzug nach der Vorlage (19.10.2026) — Push nur auf Falks Wort |
 | Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
 | Store-Gegenprobe 18.10.2026 | FaNiCa Play 200, Apple 1.208.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` (SetUpLeiste-Download zuletzt 01.10.2026: 200) |
@@ -44,7 +44,11 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 - Kopf der Startseite: Logos, darunter der Neon-Schriftzug „STUDIO“ als reines CSS
   (`.studio-neon` in `start.css`, einmaliges Einschalt-Flackern, bei reduzierter Bewegung
   aus) mit „Ein-Mann-Medienstudio · Nordfriesland“ als Unterzeile — beides zusammen ist
-  die H1. Kein Knopf und kein Satz im Kopf; der Leitsatz steht als Abschluss unter dem
+  die H1. Seit 19.10.2026 nach Falks Blender-Vorlage (`studio-neon.webp`, Commit `a2ee4d1`):
+  weiße fette Buchstaben, magentafarben leuchtender Rand (`-webkit-text-stroke` mit
+  `paint-order: stroke fill`, sonst Strichreste an Buchstabenüberlappungen) und eine
+  gespiegelte, weichgezeichnete Spiegelung als `::after` aus `data-text`. Farbe der Vorlage,
+  nicht das FaNiCa-Rot. Kein Knopf und kein Satz im Kopf; der Leitsatz steht als Abschluss unter dem
   Produktraster (`start.leitsatz`). Karussell bei 1366×768 ab 366 px.
 - Produktseiten (alle elf) auf einem Gerüst: Kopfkarte (`produkt.css`, `wege.js`) und darunter
   alles aus EINER Vorlage `aufbau.js` + `aufbau.css`, befüllt aus `daten/<app>.js` (DE + EN,
