@@ -39,9 +39,9 @@
     vorbereiten(g);
     [[FARBE.gruenTief, 90], [FARBE.gruenTief, 54], [FARBE.gruen, 30], [FARBE.gruen, 20], [FARBE.gruenHell, 9], ["#FFFFFF", 2.5]].forEach(([farbe, weich]) => {
       g.save();
-      g.shadowColor = farbe; g.shadowBlur = weich; g.shadowOffsetX = 2000 * dpr;
+      g.shadowColor = farbe; g.shadowBlur = weich * dpr; g.shadowOffsetX = 2000 * dpr;
       g.fillStyle = farbe;
-      buchstaben.forEach(b => g.fillText(b.z, b.x - 2000 * dpr, GRUNDLINIE));
+      buchstaben.forEach(b => g.fillText(b.z, b.x - 2000, GRUNDLINIE));
       g.restore();
     });
 
