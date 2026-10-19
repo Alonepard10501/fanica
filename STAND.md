@@ -23,7 +23,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 |---|---|
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
-| Git | `origin/main` = `6bad833` (19.10.2026): Schriftzug als Canvas, live nachgemessen und von Falk am Handy bestätigt — Push nur auf Falks Wort |
+| Git | `origin/main` = Canvas-Schriftzug mit stärkerem Schein (19.10.2026), live nachgemessen; die Canvas-Fassung hat Falk am Handy bestätigt — Push nur auf Falks Wort |
 | Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
 | Store-Gegenprobe 18.10.2026 | FaNiCa Play 200, Apple 1.208.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` (SetUpLeiste-Download zuletzt 01.10.2026: 200) |
@@ -49,7 +49,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   versetzt, S zuerst) zwei Runden um die Umrandung und bleibt dann als Verlaufsrand Rot→Cyan
   stehen — von Falk abgenommen, nicht verändern. Gezeichnet in `studio.js` auf ein
   `<canvas class="studio-neon">` (640×128 logisch, DPR-skaliert): Schein einmal in eine
-  Nebenfläche (vier Schatten-Lagen), je Bild Rand per `strokeText` mit Verlauf, Lauflicht per
+  Nebenfläche (sechs Schatten-Lagen, auf Falks Wunsch kräftig), je Bild Rand per `strokeText` mit Verlauf, Lauflicht per
   `createConicGradient` je Buchstabe, Deckfüllung `#110D18` obenauf; Zeitplan .2 s Einblenden,
   Lauf ab 1,1 s, Rand ab 3,2 s, Ende 4,2 s; bei reduzierter Bewegung nur das Endbild.
   Grund für Canvas: Samsung Internet dunkelt Seiten trotz `color-scheme: dark` nach — die
@@ -144,10 +144,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
    (nur gerenderte Bilder). Tankspur hat nur zwei, ScheinBar drei, FaNiCa drei aktuelle.
 4. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
    nächsten Produkt mitziehen.
-5. **Leuchteffekt hinter STUDIO stärker** (Falk 19.10.2026, nach dem Push: „Der Hintergrund-Leuchteffekt wird
-   noch stärker vom Wort STUDIO“) — gemeint ist der Schein der Schicht `studio-glut` (`drop-shadow`-Kette in
-   `start.css`); wartet auf Falks Startzeichen, nichts gebaut.
-6. **Grow All-In-One** (1.2.1+4, GitHub-Release seit 07.09.2026) und **AI-Instinct** (frühe Bauphase)
+5. **Grow All-In-One** (1.2.1+4, GitHub-Release seit 07.09.2026) und **AI-Instinct** (frühe Bauphase)
    stehen nicht auf der Seite — ob Grow dazukommt, entscheidet Falk; bis dahin nichts anlegen.
 
 **Wissen:** Skill `entwickler-website` · [[statische-website-bauen-und-veroeffentlichen]]

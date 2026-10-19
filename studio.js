@@ -36,7 +36,7 @@
     glut.width = leinwand.width; glut.height = leinwand.height;
     const g = glut.getContext("2d");
     vorbereiten(g);
-    [[FARBE.tief, 46], [FARBE.cyan, 20], [FARBE.neon, 8], ["#FFFFFF", 2]].forEach(([farbe, weich]) => {
+    [[FARBE.tief, 90], [FARBE.tief, 54], [FARBE.neon, 30], [FARBE.cyan, 24], [FARBE.neon, 10], ["#FFFFFF", 2.5]].forEach(([farbe, weich]) => {
       g.save();
       g.shadowColor = farbe; g.shadowBlur = weich; g.shadowOffsetX = 2000 * dpr;
       g.fillStyle = farbe;
