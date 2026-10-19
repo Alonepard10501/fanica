@@ -30,39 +30,38 @@ body.start {
   display: flex; flex-direction: column; align-items: center; gap: var(--s3);
   max-width: 100%; margin: 0 auto; font-size: 1rem; line-height: 1; letter-spacing: normal;
 }
+@property --winkel { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
 .studio-neon {
-  --neon: #FF4DF0;
-  --neon-hell: #FFB8F9;
-  --neon-tief: #D317C4;
+  --neon: #FF4257; --neon-tief: #E4192B; --linie: #FF8A95;
+  --cyan: #17E9E0; --deck: #110D18;
   position: relative; display: inline-block;
   font-family: var(--schrift-kopf); font-weight: 800; text-transform: uppercase;
   font-size: clamp(2.8rem, min(8.5vw, 10vh), 6rem);
-  letter-spacing: .06em; padding-left: .06em; line-height: 1;
-  margin-bottom: .42em;
-  color: #FFFFFF;
-  -webkit-text-stroke: 1.6px var(--neon-hell); paint-order: stroke fill;
-  text-shadow:
-    0 0 2px #FFFFFF,
-    0 0 6px var(--neon-hell),
-    0 0 14px var(--neon),
-    0 0 28px var(--neon),
-    0 0 56px var(--neon-tief),
-    0 0 96px color-mix(in oklab, var(--neon-tief) 60%, transparent);
-  animation: neon-an 2.2s step-end .35s 1 both;
+  letter-spacing: .06em; line-height: 1; padding: .08em .12em .08em .18em;
+  animation: studio-an .9s ease .2s both;
 }
-.studio-neon::after {
-  content: attr(data-text);
-  position: absolute; left: 0; top: 100%; width: 100%;
-  transform: scaleY(-1) translateY(.06em);
-  color: var(--neon);
-  -webkit-text-stroke: 0;
-  text-shadow: 0 0 8px var(--neon-hell), 0 0 18px var(--neon), 0 0 36px var(--neon-tief);
-  filter: blur(5px);
-  opacity: .85;
-  -webkit-mask-image: linear-gradient(to top, #000, transparent 82%);
-  mask-image: linear-gradient(to top, #000, transparent 82%);
-  pointer-events: none;
+.studio-neon > span { display: block; }
+.studio-glut {
+  color: var(--linie);
+  filter: drop-shadow(0 0 2px #FFFFFF) drop-shadow(0 0 8px var(--neon))
+          drop-shadow(0 0 20px var(--cyan)) drop-shadow(0 0 46px var(--neon-tief));
 }
+.studio-lauf, .studio-rand, .studio-deck { position: absolute; inset: 0; padding: inherit; }
+.studio-lauf, .studio-rand {
+  color: transparent; -webkit-text-stroke: .09em transparent;
+  -webkit-background-clip: text; background-clip: text;
+}
+.studio-lauf {
+  background-image: conic-gradient(from var(--winkel) at 50% 50%,
+    #FF4257 0deg, #FFFFFF 30deg, #FFFFFF 50deg, #FF4257 90deg, #7A0C16 150deg,
+    #17E9E0 180deg, #FFFFFF 210deg, #FFFFFF 230deg, #17E9E0 270deg, #0A5E5A 330deg, #FF4257 360deg);
+  animation: studio-umlauf 2s linear 1.1s 1 both, studio-lauf-aus .5s ease 3.1s 1 both;
+}
+.studio-rand {
+  background-image: linear-gradient(137deg, #FF4257 0%, #FFB3BA 30%, #B8FAFF 62%, #17E9E0 100%);
+  animation: studio-rand-an .7s ease 3s 1 both;
+}
+.studio-deck { color: var(--deck); }
 .studio-zeichen .kennung {
   width: auto; max-width: 100%; margin: 0; padding: 0; border: 0; background: none; box-shadow: none;
   line-height: 1.7; text-align: center; text-wrap: balance;
@@ -72,8 +71,10 @@ body.start {
 }
 .studio-zeichen .kennung > span { display: inline; }
 .studio-ort::before { content: "· "; }
-@keyframes neon-an {
-  0%, 6%, 10%, 18%, 23% { opacity: .18; text-shadow: none; }
+@keyframes studio-an { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes studio-umlauf { from { --winkel: 0deg; } to { --winkel: 720deg; } }
+@keyframes studio-lauf-aus { to { opacity: 0; } }
+@keyframes studio-rand-an { from { opacity: 0; } to { opacity: 1; } }
   4%, 8%, 14%, 20%, 30%, 100% { opacity: 1; }
 }
 
@@ -325,7 +326,7 @@ body.start {
   .start .vergleich thead th[class^="app-"] { width: calc((100% - 7.5rem) / 10); }
   .start .vergleich tbody th { font-size: .8rem; }
   .start .hero { padding-top: 96px; }
-  .studio-neon { letter-spacing: .04em; padding-left: .04em; }
+  .studio-neon { letter-spacing: .04em; padding: .08em .1em .08em .14em; }
   .studio-zeichen .kennung { letter-spacing: .24em; padding-left: .24em; }
   .studio-zeichen .kennung > .studio-ort { display: block; }
   .studio-ort::before { content: none; }
@@ -344,7 +345,8 @@ body.start {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .studio-neon { animation: none; }
+  .studio-neon, .studio-rand { animation: none; }
+  .studio-lauf { display: none; }
   .produkt, .produkt:hover, .produkt:focus-within { transform: none; transition: none; }
   .start .karussell-ring.bereit .app-karte,
   .karussell-punkte button::before,
