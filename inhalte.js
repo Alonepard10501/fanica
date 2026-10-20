@@ -1045,7 +1045,7 @@
       fr.innerHTML = hol("fragen.liste").map((q, i) => `
         <details class="frage"${i === 0 ? " open" : ""}>
           <summary>${sicher(q.f)}</summary>
-          <p>${sicher(q.a)}</p>
+          <p>${sicher(q.a)}${q.l ? ` <a href="datenschutz.html">${sicher(q.l)}</a>` : ""}</p>
         </details>`).join("");
     }
 
