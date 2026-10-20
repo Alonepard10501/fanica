@@ -63,12 +63,12 @@ window.PRODUKT_DATEN = {
       { titel: "Runde gründen oder beitreten", text: "Eine eigene Runde gründen oder mit dem Beitritts-Code des Organisators dazukommen." },
       { titel: "Tippen und abwarten", text: "Bis acht Stunden vor dem Start tippen — Ergebnis, Punkte und Tabelle kommen von selbst." }
     ],
-    neu: { version: "1.208.0", datum: "15.10.2026", punkte: [
-      "Gleiche Bestenliste beim Öffnen, auch ohne Organisator",
-      "Nach dem Ergebnis sofort das nächste Rennen tippen",
-      "Der Blitz-Haken zählt nur, wenn du ihn selbst setzt — auch nach dem Ergebnis",
-      "Saisonende: Der Endstand bleibt und steht sofort in der Karriere",
-      "Abgesagte Rennen werden übersprungen"
+    neu: { version: "1.209.0", datum: "19.10.2026", punkte: [
+      "Ausführlicher Rennbericht im Gruppenchat mit Ergebnis, Punkten des Tages, Tabelle und Ausblick",
+      "Tippbar sind an jedem Wochenende genau die Fahrer, die auch fahren — Ersatzfahrer eingeschlossen",
+      "Neue Saison: Rookies und Teamwechsel werden automatisch richtig übernommen",
+      "In den eigenen Kalender: Quali, Tippschluss und Rennen einzeln wählbar",
+      "Nach dem letzten Rennen zeigt die Organisator-Seite „Saison beendet“"
     ] },
     preise: {
       satz: "Tippen kostet nichts, dauerhaft. Premium öffnet den Rückblick.",
@@ -147,12 +147,12 @@ window.PRODUKT_DATEN = {
       { titel: "Start or join a round", text: "Start your own round or join with the organizer’s join code." },
       { titel: "Predict and wait", text: "Pick until eight hours before the start — result, points and table follow by themselves." }
     ],
-    neu: { version: "1.208.0", datum: "15 Oct 2026", punkte: [
-      "Same standings when opening the app, even without the organiser",
-      "Pick the next race right after the result",
-      "The lightning tick only counts when you set it yourself — also after the result",
-      "Season end: the final standings stay and show in your career at once",
-      "Cancelled races are skipped"
+    neu: { version: "1.209.0", datum: "19 Oct 2026", punkte: [
+      "Detailed race report in the group chat with result, points of the day, table and outlook",
+      "Every weekend you can pick exactly the drivers who race — reserve drivers included",
+      "New season: rookies and team changes are carried over correctly by themselves",
+      "Add to your own calendar: qualifying, pick deadline and race, each selectable",
+      "After the last race the organiser page marks the season as finished"
     ] },
     preise: {
       satz: "Predicting is free, for good. Premium opens the look back.",

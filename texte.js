@@ -71,7 +71,7 @@ de: {
 
     mehrKnopf: "Alles über FaNiCa Fun",
     rundeTitel: "Wie es wirklich aussieht",
-    rundeQuelle: "Stand: nach neun von zweiundzwanzig Rennen der Saison 2026. Echte Zahlen einer laufenden Runde, mit den Profilnamen der Mitspieler.",
+    rundeQuelle: "Momentaufnahme nach Rennen {n} der Saison {saison} ({ort}, {stand}): echte Zahlen einer laufenden Runde, mit den Profilnamen der Mitspieler.",
 
     rundeZahlen: [
       { einheit: "Jahre",   text: "läuft die Runde schon" },
@@ -424,7 +424,7 @@ de: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
     tabelleName: "Vergleich der Produkte, waagerecht scrollbar",
-    text: "Zehn Produkte, zehn völlig verschiedene Zwecke — drei zu haben, sechs im Test, eines noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie sammeln nichts über dich und verlangen kein Konto bei uns. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
+    text: "Zehn Produkte, zehn völlig verschiedene Zwecke — drei zu haben, sechs im Test, eines noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie sammeln nichts über dich und verlangen kein Konto bei uns. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und außer Instinct Scoring ist noch keine davon zu haben.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten", "Spielscheine prüfen und auswerten", "Zählerstände ablesen, Nebenkosten prüfen"] },
@@ -450,7 +450,7 @@ de: {
       { f: "Funktionieren die Apps ohne Internet?",
         a: "Der Kern jeder App läuft ohne Verbindung, und alle Daten liegen auf dem Gerät. Netz braucht nur, was von außen kommt: die Rennergebnisse und der Abgleich mit den Mitspielern bei FaNiCa Fun, die Filmdaten und der Freunde-Abgleich bei YourFilm, das Nachladen der Ziehungen bei ScheinBar. NeonPunkt, ZeitAnker, Tankspur und AblesBar kommen ganz ohne aus." },
       { f: "Was passiert mit meinen Daten?",
-        a: "Sie bleiben auf deinem Gerät. Keine der Apps hat Werbung, Analyse-Werkzeuge oder Datenweitergabe. Das ist keine Marketing-Aussage, sondern eine bewusste Entscheidung — Einnahmen kommen ausschließlich aus den Abos." },
+        a: "Sie bleiben auf deinem Gerät. Keine der Apps hat Werbung, Analyse-Werkzeuge oder Datenweitergabe. Das ist keine Marketing-Aussage, sondern eine bewusste Entscheidung — Einnahmen kommen ausschließlich aus Käufen in den Apps: den Abos und bei FaNiCa Fun einem freiwilligen Trinkgeld." },
       { f: "Was kostet mich das?",
         a: "Jede App ist kostenlos nutzbar. Premium schaltet Zusatzfunktionen frei und beginnt bei 0,49 € je vier Wochen; die ersten sieben Tage sind immer kostenlos, ohne dass du kündigen musst. Die SetUpLeiste kostet gar nichts, YourFilm ist bis 40 Exemplare kostenlos, und bei Campus Clash und AblesBar steht noch nicht fest, ob und was etwas kosten wird." },
       { f: "Verliere ich meine Daten, wenn ich nicht bezahle?",
@@ -458,7 +458,7 @@ de: {
       { f: "Wer steckt hinter den Apps?",
         a: "Ich, Falk Carstensen. Keine Firma, kein Team, kein Investor. Wenn du eine Mail schreibst, lese und beantworte ich sie selbst." },
       { f: "Kann ich meine Daten mitnehmen?",
-        a: "Bei Instinct Scoring ja: vollständiges Backup als Datei, dazu Export als CSV und Rundenberichte als PDF. Ein Backup wird vor dem Einspielen geprüft — Beschädigtes wird nie übernommen." },
+        a: "Bei Instinct Scoring ja: Runden, Schützen und Parcours als Sicherungsdatei, dazu Export als CSV und Rundenberichte als PDF. Ein Backup wird vor dem Einspielen geprüft — Beschädigtes wird nie übernommen." },
       { f: "Kommen noch Updates?",
         a: "Ja, alle Apps werden weiterentwickelt. Updates laufen über den Store, aus dem du die App installiert hast; die Apps in der Testphase außerhalb der Stores melden eine neue Fassung selbst." }
     ]
@@ -583,7 +583,7 @@ en: {
 
     mehrKnopf: "Everything about FaNiCa Fun",
     rundeTitel: "What it actually looks like",
-    rundeQuelle: "As of race nine of twenty-two in the 2026 season. Real figures from a running round, with the players’ profile names.",
+    rundeQuelle: "Snapshot after race {n} of the {saison} season ({ort}, {stand}): real figures from a running round, with the players’ profile names.",
 
     rundeZahlen: [
       { einheit: "years",   text: "the round has been running" },
@@ -906,7 +906,7 @@ en: {
     kennung: "At a glance",
     titel: "Which app is for you?",
     tabelleName: "Comparison of the products, scrolls sideways",
-    text: "Ten products, ten entirely different purposes — three available, six in testing, one still being built. What they share: their core works offline, they collect nothing about you, and they ask for no account with us. The Instinct Family is not listed here: it is not a single app but ten, and none of them is available yet.",
+    text: "Ten products, ten entirely different purposes — three available, six in testing, one still being built. What they share: their core works offline, they collect nothing about you, and they ask for no account with us. The Instinct Family is not listed here: it is not a single app but ten, and apart from Instinct Scoring none of them is available yet.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar"],
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view", "Checking and analysing lottery tickets", "Reading meters, checking utility bills"] },
@@ -932,7 +932,7 @@ en: {
       { f: "Do the apps work without internet?",
         a: "The core of every app works without a connection, and all data sits on your device. A connection is only needed for what comes from outside: race results and syncing other players in FaNiCa Fun, film data and syncing with friends in YourFilm, downloading draws in ScheinBar. NeonPunkt, ZeitAnker, Tankspur and AblesBar need none at all." },
       { f: "What happens to my data?",
-        a: "It stays on your device. None of the apps has ads, analytics or data sharing. That is not a marketing line but a deliberate decision — the income comes purely from subscriptions." },
+        a: "It stays on your device. None of the apps has ads, analytics or data sharing. That is not a marketing line but a deliberate decision — the income comes purely from in-app purchases: the subscriptions and, in FaNiCa Fun, an optional tip." },
       { f: "What does it cost me?",
         a: "Every app is free to use. Premium unlocks extra features and starts at €0.49 per four weeks; the first seven days are always free, with nothing to cancel. SetUpLeiste costs nothing at all, YourFilm is free up to 40 copies, and for Campus Clash and AblesBar it is not yet decided whether anything will cost money." },
       { f: "Do I lose my data if I don't pay?",
@@ -940,7 +940,7 @@ en: {
       { f: "Who is behind the apps?",
         a: "Me, Falk Carstensen. No company, no team, no investor. If you write an email, I read and answer it myself." },
       { f: "Can I take my data with me?",
-        a: "In Instinct Scoring, yes: a full backup as a file, plus CSV export and round reports as PDF. A backup is verified before being restored — nothing damaged is ever imported." },
+        a: "In Instinct Scoring, yes: rounds, archers and courses as a backup file, plus CSV export and round reports as PDF. A backup is verified before being restored — nothing damaged is ever imported." },
       { f: "Will there be more updates?",
         a: "Yes, all the apps are still being developed. Updates come through the store you installed the app from; the apps still in testing outside the stores report a new version themselves." }
     ]

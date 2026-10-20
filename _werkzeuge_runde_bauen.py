@@ -21,7 +21,7 @@ STUDIO = os.path.join("C:", os.sep, "Users", "Falk", "Desktop", "KI-Workflow")
 
 QUELLE = os.path.join(STUDIO, "Projekte", "Apps", "FaNiCa Fun",
                       "Google Play", "5 Webseite und Webversion", "daten.json")
-ZIEL = os.path.join(STUDIO, "Projekte", "Web", "Webseiten", "Webseite", "runde.js")
+ZIEL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "runde.js")
 
 d = json.loads(io.open(QUELLE, encoding="utf-8").read())
 W = d["wertung"]; R = d["rennen"]; S = d["saisons"]; ST = d["spielerstats"]
@@ -105,6 +105,8 @@ orte = [e["stadt"] for e in sorted(W, key=lambda x: -x["punkte"])[0]["serie"]]
 daten = {
     "saison": d["saison"],
     "gefahren": GEF,
+    "stand": R[GEF - 1]["datum"],
+    "zuletzt": R[GEF - 1]["stadt"],
     "rennenGesamt": len(R),
     "spieler": len(W),
     "jahre": len(jahre),
@@ -135,7 +137,7 @@ kopf = """/* ============================================================
    gerechnet. Es stehen nur Spieler-VORNAMEN darin, wie in jeder
    Sport-Tabelle; keine Nachnamen, Mails, Orte oder Beitrittscodes.
 
-   Aktualisieren: Skript `runde_bauen.py` erneut laufen lassen,
+   Aktualisieren: Skript `_werkzeuge_runde_bauen.py` erneut laufen lassen,
    sobald daten.json neuer ist.
    ============================================================ */
 window.RUNDE = """ % (GEF, len(R), d["saison"])

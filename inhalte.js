@@ -747,6 +747,15 @@
        geladen ist — sonst bleiben die Container leer und unsichtbar. */
     const RU = window.RUNDE;
     if (RU) {
+      const rQuelle = el("runde-quelle");
+      if (rQuelle) {
+        const stand = RU.stand ? new Date(RU.stand + "T12:00:00Z")
+          .toLocaleDateString(window.SPRACHE, { month: "long", year: "numeric" }) : "";
+        rQuelle.textContent = hol("fanica.rundeQuelle")
+          .replace("{n}", RU.gefahren).replace("{saison}", RU.saison)
+          .replace("{ort}", RU.zuletzt || "").replace("{stand}", stand);
+      }
+
       const rZahlen = el("runde-zahlen");
       if (rZahlen) {
         /* 🔴 Beschriftungen aus texte.js, NICHT hier fest eintippen

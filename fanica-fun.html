@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FaNiCa Fun — die Tipprunde für Motorsport-Freunde</title>
-<meta name="description" content="Alles über FaNiCa Fun: fünf Trophäen mit ihren Bedingungen, der Ablauf einer Renn-Woche, 22 Strecken, 16 Karriere-Kennzahlen.">
+<meta name="description" content="Alles über FaNiCa Fun: Top-5-Tipp für jedes Rennen, private Runden per Code, vier Trophäen, Karriere und Erfolge, Rennkalender und Widgets — ohne Geldeinsatz.">
 <meta name="theme-color" content="#07070A">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="bilder/marke/favicon.svg" type="image/svg+xml">
@@ -81,7 +81,7 @@
 
         <div class="runde-echt">
           <h3 data-t="fanica.rundeTitel">Wie es wirklich aussieht</h3>
-          <p class="leise" data-t="fanica.rundeQuelle"></p>
+          <p class="leise" id="runde-quelle"></p>
           <div class="zahlen" id="runde-zahlen"></div>
           <div class="runde-paar">
             <div>
@@ -103,7 +103,7 @@
 <footer class="fuss">
   <div class="huelle">
     <div class="fuss-unten">
-      <nav class="fuss-links" aria-label="Rechtliches">
+      <nav class="fuss-links" data-t="fuss.rechtliches" data-t-attr="aria-label" aria-label="Rechtliches">
         <a href="index.html" data-t="startseiteFuss">Startseite</a>
         <a href="impressum.html" data-t="fuss.impressum">Impressum</a>
         <a href="datenschutz.html" data-t="fuss.datenschutz">Datenschutz</a>

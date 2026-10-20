@@ -49,7 +49,7 @@ window.PRODUKT_DATEN = {
       ] },
       { gruppe: "Daten und Turniere", symbol: "schild", liste: [
         { symbol: "offline", name: "Ohne Internet", text: "Werten, Parcours und Statistik laufen ohne Netz; das Profil liegt nur auf dem Gerät." },
-        { symbol: "download", name: "Backup als Datei", text: "Vollständige Sicherung mit Prüfsumme, jederzeit wieder einspielbar." },
+        { symbol: "download", name: "Backup als Datei", text: "Runden, Schützen und Parcours als Sicherung mit Prüfsumme, jederzeit wieder einspielbar." },
         { symbol: "teilen", name: "Bericht als PDF", text: "Den Rundenbericht als PDF teilen." },
         { symbol: "kalender", name: "Turniere", text: "Termine aus einer Turnierliste verfolgen und eigene Turniere anlegen (Premium)." },
         { symbol: "globus", name: "Deutsch und Englisch", text: "Die Sprache lässt sich in den Einstellungen wechseln." }
@@ -77,7 +77,7 @@ window.PRODUKT_DATEN = {
     },
     fragen: [
       { frage: "Was kostet Instinct Scoring?", antwort: "Die App ist gratis, und Runden werten bleibt kostenlos. Premium kostet 1,99 € je 4 Wochen, Premium+ 2,99 € — im Jahr 19,99 € bzw. 29,99 €." },
-      { frage: "Brauche ich Internet oder ein Konto?", antwort: "Nein. Die App läuft komplett offline; das Profil liegt nur auf deinem Gerät. Für ein anderes Gerät gibt es die Sicherungsdatei." },
+      { frage: "Brauche ich Internet oder ein Konto?", antwort: "Nein. Die App läuft komplett offline; das Profil liegt nur auf deinem Gerät. Auf ein anderes Gerät nimmt die Sicherungsdatei Runden, Schützen und Parcours mit." },
       { frage: "Welche Wertungen kennt die App?", antwort: "IFAA Hunter und Animal mit 20/16/12, WA 3D mit 11/10/8/5, dazu „Scheibe“ und „Freizeit 3D“. Die beiden letzten sind Vereinsvarianten, keine Verbandsregeln." },
       { frage: "Kann die App nach DSB-Regeln werten?", antwort: "Noch nicht in der Store-Fassung. Eine Fassung für den Wettkampf nach der DSB-Sportordnung entsteht — mit Klassen aus dem Jahrgang, Turnierleitung, gesperrten Passen und Übergabe per QR-Code." },
       { frage: "Wer steckt hinter der App?", antwort: "Instinct Scoring entsteht in Kooperation von Bogensport Instinct und FaNiCa Fun — entwickelt von Bogenschützen für Bogenschützen." }
@@ -126,7 +126,7 @@ window.PRODUKT_DATEN = {
       ] },
       { gruppe: "Data and tournaments", symbol: "schild", liste: [
         { symbol: "offline", name: "No internet needed", text: "Scoring, courses and statistics work without a connection; the profile stays on the device." },
-        { symbol: "download", name: "Backup as a file", text: "A complete backup with checksum, restorable at any time." },
+        { symbol: "download", name: "Backup as a file", text: "Rounds, archers and courses as a backup with checksum, restorable at any time." },
         { symbol: "teilen", name: "Report as PDF", text: "Share the round report as a PDF." },
         { symbol: "kalender", name: "Tournaments", text: "Follow dates from a tournament list and create your own tournaments (Premium)." },
         { symbol: "globus", name: "German and English", text: "Switch the language in the settings." }
@@ -154,7 +154,7 @@ window.PRODUKT_DATEN = {
     },
     fragen: [
       { frage: "What does Instinct Scoring cost?", antwort: "The app is free, and scoring rounds stays free. Premium costs €1.99 per 4 weeks, Premium+ €2.99 — or €19.99 and €29.99 a year." },
-      { frage: "Do I need internet or an account?", antwort: "No. The app runs fully offline; the profile stays on your device only. For another device there is the backup file." },
+      { frage: "Do I need internet or an account?", antwort: "No. The app runs fully offline; the profile stays on your device only. The backup file takes rounds, archers and courses to another device." },
       { frage: "Which scoring systems does it know?", antwort: "IFAA Hunter and Animal with 20/16/12, WA 3D with 11/10/8/5, plus “target face” and “leisure 3D”. The last two are club variants, not federation rules." },
       { frage: "Can the app score under DSB rules?", antwort: "Not in the store version yet. A version for competition under the DSB sports regulations is in the works — with classes from the year of birth, a tournament director role, locked ends and hand-over by QR code." },
       { frage: "Who is behind the app?", antwort: "Instinct Scoring is a cooperation between Bogensport Instinct and FaNiCa Fun — made by archers for archers." }

@@ -8,12 +8,14 @@
    gerechnet. Es stehen nur Spieler-VORNAMEN darin, wie in jeder
    Sport-Tabelle; keine Nachnamen, Mails, Orte oder Beitrittscodes.
 
-   Aktualisieren: Skript `runde_bauen.py` erneut laufen lassen,
+   Aktualisieren: Skript `_werkzeuge_runde_bauen.py` erneut laufen lassen,
    sobald daten.json neuer ist.
    ============================================================ */
 window.RUNDE = {
   "saison": 2026,
   "gefahren": 9,
+  "stand": "2026-07-05",
+  "zuletzt": "Silverstone",
   "rennenGesamt": 22,
   "spieler": 10,
   "jahre": 5,

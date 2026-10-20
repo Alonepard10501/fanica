@@ -26,8 +26,8 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 | Git | `origin/main` = Canvas-Schriftzug, grünes Strahlen bis zu den Logos (19.10.2026, Falk: „pushen, dass es wirklich sichtbar ist“), live nachgemessen — Push nur auf Falks Wort |
 | Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
-| Store-Gegenprobe 18.10.2026 | FaNiCa Play 200, Apple 1.208.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` (SetUpLeiste-Download zuletzt 01.10.2026: 200) |
-| „Neu in der App“ (`daten/<app>.js`) | FaNiCa 1.208.0 · Campus Clash 4.18.0 · ScheinBar 1.0.19 · YourFilm 2.8.0 · AblesBar 1.4.0 · Instinct 1.0.1 — `aufbau.js` zeigt höchstens fünf Punkte, DE und EN |
+| Store-Gegenprobe 18.10.2026 | FaNiCa (20.10.2026) Play 1.209.0, Apple 1.209.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` (SetUpLeiste-Download zuletzt 01.10.2026: 200) |
+| „Neu in der App“ (`daten/<app>.js`) | FaNiCa 1.209.0 · Campus Clash 4.18.0 · ScheinBar 1.0.19 · YourFilm 2.8.0 · AblesBar 1.4.0 · Instinct 1.0.1 — `aufbau.js` zeigt höchstens fünf Punkte, DE und EN |
 | Stand je Produkt | erhältlich: FaNiCa Fun, Instinct Scoring, SetUpLeiste · im Test (nicht in den Stores): NeonPunkt (Play-Test), YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar · in Arbeit: Campus Clash, Instinct Familie — steht als `data-stufe` an jeder Produktkarte in `index.html` |
 
 ## So arbeitet die Seite heute (nicht brechen)
@@ -106,7 +106,10 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 **Zahlen und Aussagen**
 - Tipprunden-Zahlen kommen aus `runde.js`, erzeugt von `_werkzeuge_runde_bauen.py` mit
   `ANONYM = False` (echte Profilnamen — Falks Entscheidung). `live.js` legt nächstes Rennen und
-  Countdown aus Jolpica obendrauf; ohne Netz bleibt die Kachel unsichtbar.
+  Countdown aus Jolpica obendrauf; ohne Netz bleibt die Kachel unsichtbar. Der Satz über dem Block
+  nennt sich „Momentaufnahme“ und setzt Rennen, Ort und Monat aus `runde.js` ein (`stand`, `zuletzt`).
+- Instinct Scoring sichert nur Runden, Schützen und Parcours (`backup_actions.dart`) — die Seite
+  verspricht keine vollständige Sicherung, bis die App mehr mitnimmt.
 - Der DSB-Abschnitt auf `instinct-scoring.html` darf nur stehen, solange
   `assets/regeln/dsb-2026.json` der Instinct-App `"geprueft": true` trägt (heute: true).
 - Alle Zahlen und Preise aus dem App-Code, nie geschätzt. Jede Preis-, Versions- oder
@@ -153,5 +156,8 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
    nächsten Produkt mitziehen.
 5. **Grow All-In-One** (1.2.1+4, GitHub-Release seit 07.09.2026) und **AI-Instinct** (frühe Bauphase)
    stehen nicht auf der Seite — ob Grow dazukommt, entscheidet Falk; bis dahin nichts anlegen.
+6. **Tipprunden-Quelle veraltet:** `daten.json` der FaNiCa-Webversion endet nach Rennen 9
+   (Silverstone, Juli 2026), ebenso `rundendaten.json` der App. Neue Zahlen erst, wenn eine
+   aktuelle Quelle vorliegt; dann `_werkzeuge_runde_bauen.py` laufen lassen.
 
 **Wissen:** Skill `entwickler-website` · [[statische-website-bauen-und-veroeffentlichen]]
