@@ -424,7 +424,7 @@ de: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
     tabelleName: "Vergleich der Produkte, waagerecht scrollbar",
-    text: "Zehn Produkte, zehn völlig verschiedene Zwecke — drei zu haben, sechs im Test, eines noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie sammeln nichts über dich und verlangen kein Konto bei uns. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und außer Instinct Scoring ist noch keine davon zu haben.",
+    text: "Zehn Produkte, zehn völlig verschiedene Zwecke — drei zu haben, sechs im Test, eines noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie werten dich nicht aus, und ein Konto bei uns gibt es nicht — Profile wie bei FaNiCa Fun liegen auf dem Gerät. An mich geht nur, was du selbst abschickst, etwa eine Rückmeldung oder Diagnose. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und außer Instinct Scoring ist noch keine davon zu haben.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten", "Spielscheine prüfen und auswerten", "Zählerstände ablesen, Nebenkosten prüfen"] },
@@ -907,7 +907,7 @@ en: {
     kennung: "At a glance",
     titel: "Which app is for you?",
     tabelleName: "Comparison of the products, scrolls sideways",
-    text: "Ten products, ten entirely different purposes — three available, six in testing, one still being built. What they share: their core works offline, they collect nothing about you, and they ask for no account with us. The Instinct Family is not listed here: it is not a single app but ten, and apart from Instinct Scoring none of them is available yet.",
+    text: "Ten products, ten entirely different purposes — three available, six in testing, one still being built. What they share: their core works offline, they don’t profile you, and there is no account with us — profiles such as in FaNiCa Fun live on the device. I only receive what you send yourself, such as feedback or diagnostics. The Instinct Family is not listed here: it is not a single app but ten, and apart from Instinct Scoring none of them is available yet.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar"],
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view", "Checking and analysing lottery tickets", "Reading meters, checking utility bills"] },
