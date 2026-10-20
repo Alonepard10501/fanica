@@ -988,7 +988,7 @@
          nicht erreichen (WCAG 2.1.1). */
       vTab.setAttribute("tabindex", "0");
       vTab.setAttribute("role", "region");
-      vTab.setAttribute("aria-label", "Vergleich der Produkte, waagerecht scrollbar");
+      vTab.setAttribute("aria-label", hol("vergleich.tabelleName"));
       const sp = hol("vergleich.spalten");
       const ze = hol("vergleich.zeilen");
       vTab.innerHTML = `

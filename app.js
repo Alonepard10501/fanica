@@ -47,8 +47,9 @@
     const titel = T("meta.sprachtitel");
     if (titel) knopf.setAttribute("title", titel);
     knopf.addEventListener("click", () => {
-      window.SPRACHE = (window.SPRACHE === "de") ? "en" : "de";
-      localStorage.setItem("fanica_sprache", window.SPRACHE);
+      window.SPRACHE = (window.SPRACHE === "en") ? "de" : "en";
+      try { localStorage.setItem("fanica_sprache", window.SPRACHE); }
+      catch (e) { window.name = "fanica_sprache=" + window.SPRACHE; }
       location.reload();
     });
   }
@@ -294,19 +295,27 @@
     /* Ziehen mit Maus oder Finger. Erst ab 40 px gilt es als Drehen —
        darunter bleibt es ein Klick auf die Karte, sonst oeffnet jedes
        versehentliche Wischen eine App. */
-    let start = null;
+    let start = null, gezogen = false;
     const buehne = document.querySelector(".karussell-buehne");
-    const anfang = (x) => { start = x; };
+    const anfang = (x) => { start = x; gezogen = false; };
     const ende = (x) => {
       if (start === null) return;
       const weg = x - start;
       start = null;
-      if (Math.abs(weg) > 40) drehen(weg > 0 ? 1 : -1);
+      if (Math.abs(weg) > 40) { gezogen = true; drehen(weg > 0 ? 1 : -1); }
     };
 
-    buehne?.addEventListener("pointerdown", (e) => anfang(e.clientX));
-    buehne?.addEventListener("pointerup", (e) => ende(e.clientX));
+    buehne?.addEventListener("pointerdown", (e) => { if (e.pointerType !== "touch") anfang(e.clientX); });
+    buehne?.addEventListener("pointerup", (e) => { if (e.pointerType !== "touch") ende(e.clientX); });
     buehne?.addEventListener("pointercancel", () => { start = null; });
+    buehne?.addEventListener("dragstart", (e) => e.preventDefault());
+    window.addEventListener("click", (e) => {
+      if (!gezogen) return;
+      gezogen = false;
+      if (!buehne?.contains(e.target)) return;
+      e.preventDefault();
+      e.stopPropagation();
+    }, true);
 
     /* 🔴 Finger-Wischen braucht EIGENE Behandlung (Falk 22.08.2026,
        gemessen): Mit nur pointerdown/-up passierte auf dem Handy
@@ -905,7 +914,10 @@
       e.preventDefault();
 
       const fehlt = !name.value.trim() || !text.value.trim();
-      if (fehler) fehler.hidden = !fehlt;
+      if (fehler) {
+        fehler.textContent = T("kontakt.formFehlt");
+        fehler.hidden = !fehlt;
+      }
       if (fehlt) {
         (!name.value.trim() ? name : text).focus();
         return;
@@ -919,9 +931,18 @@
         (mail.value.trim() ? "\nAntwort an: " + mail.value.trim() : "") +
         "\nGesendet ueber die FaNiCa-Website";
 
-      window.location.href = "mailto:" + KONTAKT_MAIL +
+      const adresse = "mailto:" + KONTAKT_MAIL +
         "?subject=" + encodeURIComponent(betreff) +
         "&body=" + encodeURIComponent(koerper);
+      if (adresse.length > 1900) {
+        if (fehler) {
+          fehler.textContent = T("kontakt.formZuLang");
+          fehler.hidden = false;
+        }
+        text.focus();
+        return;
+      }
+      window.location.href = adresse;
     });
 
     // Tippt jemand nach einer Fehlermeldung weiter, verschwindet sie

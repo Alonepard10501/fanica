@@ -22,7 +22,8 @@ de: {
     vergleich: "Vergleich",
     ueber: "Über mich",
     kontakt: "Kontakt",
-    sprung: "Zum Inhalt springen"
+    sprung: "Zum Inhalt springen",
+    name: "Hauptnavigation"
   },
 
   hero: {
@@ -321,7 +322,7 @@ de: {
     untertitel: "Schein fotografieren, Gewinn sehen",
     claim: "Fotografieren.",
     claimZwei: "Nachrechnen übernimmt die App.",
-    positionierung: "Ein Begleiter für BINGO!, Lotto 6aus49 und Eurojackpot: Spielschein abfotografieren, Zahlen kurz prüfen, fertig. Die Ziehungen holt sich die App selbst — beim ersten Start die letzten sechs Monate, danach laufend die neuen. Sie sagt dir, ob und in welcher Gewinnklasse etwas dabei ist. Die Texterkennung läuft auf dem Gerät, gespeichert wird ausschließlich dort.",
+    positionierung: "Ein Begleiter für BINGO!, Lotto 6aus49 und Eurojackpot: Spielschein abfotografieren, Zahlen kurz prüfen, fertig. Die Ziehungen holt sich die App selbst — beim ersten Start die letzten zwölf Monate, danach laufend die neuen. Sie sagt dir, ob und in welcher Gewinnklasse etwas dabei ist. Die Texterkennung läuft auf dem Gerät, gespeichert wird ausschließlich dort.",
 
     mehrKnopf: "Alles über ScheinBar"
   },
@@ -422,21 +423,22 @@ de: {
   vergleich: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
+    tabelleName: "Vergleich der Produkte, waagerecht scrollbar",
     text: "Zehn Produkte, zehn völlig verschiedene Zwecke — drei zu haben, sechs im Test, eines noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie sammeln nichts über dich und verlangen kein Konto bei uns. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und noch ist keine davon zu haben.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten", "Spielscheine prüfen und auswerten", "Zählerstände ablesen, Nebenkosten prüfen"] },
       { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Arbeit", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Testfassung außerhalb der Stores", "Testfassung außerhalb der Stores"] },
-      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Allein", "Allein", "Allein", "Allein", "Allein"] },
-      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten (freiwillig)", "Nie", "Nie", "Nur fürs Abo und Nachladen", "Nur für die Update-Prüfung"] },
+      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Beides — mit Freunden & Ausleihe", "Allein", "Allein", "Allein", "Allein"] },
+      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten und Freunde (freiwillig)", "Nie", "Nie", "Nur fürs Abo und Nachladen", "Nur für die Update-Prüfung"] },
       { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein", "Nein", "Ja — einmal anlegen", "Ja — einmal anlegen", "Konto oder Gast — beides geht"] },
       { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer", "13 Bildschirme", "14 Bildschirme", "5 Bildschirme", "12 Bildschirme · 3 Spiele", "18 Bildschirme"] },
-      { name: "Sprachen",      werte: ["2", "2", "16", "1", "1", "1", "1", "1", "2", "2"] },
-      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Alles — es gibt noch nichts zu kaufen", "Stempeln, Zeitkonto, Tag bis Monat", "Alles — die ganze App", "10 Scheine · letzte 10 Ziehungen", "Alles — es gibt noch nichts zu kaufen"] },
-      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "noch offen", "0,49 € / 4 Wochen", "—", "0,49 € / 4 Wochen", "noch offen"] },
+      { name: "Sprachen",      werte: ["2", "2", "16", "1", "1", "2", "1", "1", "2", "2"] },
+      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Bis 40 Exemplare", "Stempeln, Zeitkonto, Tag bis Monat", "Alles — die ganze App", "10 Scheine · letzte 10 Ziehungen", "Alles — es gibt noch nichts zu kaufen"] },
+      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "0,99 € / 4 Wochen", "0,49 € / 4 Wochen", "—", "0,49 € / 4 Wochen", "noch offen"] },
       { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
-    fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash, YourFilm und AblesBar steht noch nicht fest, ob und was etwas kosten wird."
+    fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test; bei YourFilm sind stattdessen 40 Exemplare frei, sein Abo steht noch in keinem Store. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash und AblesBar steht noch nicht fest, ob und was etwas kosten wird."
   },
 
   fragen: {
@@ -446,11 +448,11 @@ de: {
       { f: "Brauche ich für die Apps ein Konto?",
         a: "Bei den meisten nicht — du installierst und legst los. Ein Profil brauchen nur FaNiCa Fun (mehrere Leute tippen in derselben Runde), Tankspur, ScheinBar und AblesBar (mehrere Fahrer, Spieler oder Haushalte auf einem Gerät — AblesBar geht auch als Gast). Diese Profile liegen auf dem Gerät, nicht bei uns." },
       { f: "Funktionieren die Apps ohne Internet?",
-        a: "Der Kern jeder App läuft ohne Verbindung, und alle Daten liegen auf dem Gerät. Netz braucht nur, was von außen kommt: die Rennergebnisse und der Abgleich mit den Mitspielern bei FaNiCa Fun, die Filmdaten bei YourFilm, das Nachladen der Ziehungen bei ScheinBar. NeonPunkt, ZeitAnker, Tankspur und AblesBar kommen ganz ohne aus." },
+        a: "Der Kern jeder App läuft ohne Verbindung, und alle Daten liegen auf dem Gerät. Netz braucht nur, was von außen kommt: die Rennergebnisse und der Abgleich mit den Mitspielern bei FaNiCa Fun, die Filmdaten und der Freunde-Abgleich bei YourFilm, das Nachladen der Ziehungen bei ScheinBar. NeonPunkt, ZeitAnker, Tankspur und AblesBar kommen ganz ohne aus." },
       { f: "Was passiert mit meinen Daten?",
         a: "Sie bleiben auf deinem Gerät. Keine der Apps hat Werbung, Analyse-Werkzeuge oder Datenweitergabe. Das ist keine Marketing-Aussage, sondern eine bewusste Entscheidung — Einnahmen kommen ausschließlich aus den Abos." },
       { f: "Was kostet mich das?",
-        a: "Jede App ist kostenlos nutzbar. Premium schaltet Zusatzfunktionen frei und beginnt bei 0,49 € je vier Wochen; die ersten sieben Tage sind immer kostenlos, ohne dass du kündigen musst. Die SetUpLeiste kostet gar nichts, und bei Campus Clash, YourFilm und AblesBar steht noch nicht fest, ob und was etwas kosten wird." },
+        a: "Jede App ist kostenlos nutzbar. Premium schaltet Zusatzfunktionen frei und beginnt bei 0,49 € je vier Wochen; die ersten sieben Tage sind immer kostenlos, ohne dass du kündigen musst. Die SetUpLeiste kostet gar nichts, YourFilm ist bis 40 Exemplare kostenlos, und bei Campus Clash und AblesBar steht noch nicht fest, ob und was etwas kosten wird." },
       { f: "Verliere ich meine Daten, wenn ich nicht bezahle?",
         a: "Nein. Ohne Abo werden nur Funktionen gesperrt, nichts gelöscht. Bei NeonPunkt pausiert das Spiel nach 500 Klicks — Zähler und Bestenlisten bleiben erhalten." },
       { f: "Wer steckt hinter den Apps?",
@@ -490,6 +492,7 @@ de: {
     formKnopf: "Nachricht schreiben",
     formHinweis: "Es öffnet sich dein E-Mail-Programm mit allem schon eingetragen. Nichts wird von dieser Seite aus verschickt oder gespeichert.",
     formFehlt: "Bitte fülle Thema, Name und Nachricht aus.",
+    formZuLang: "Die Nachricht ist zu lang für dein E-Mail-Programm. Kürze sie bitte oder schreib direkt an die Adresse oben.",
     wobei: [
       { was: "Fehler gefunden", text: "Schreib mir, welche App, welches Gerät und was passiert ist. Ein Screenshot hilft sehr." },
       { was: "Funktion gewünscht", text: "Sag mir, was dir fehlt und warum. Vieles ist schneller gebaut, als man denkt." },
@@ -505,7 +508,8 @@ de: {
     bildquellen: "Bildquellen",
     kooperation: "Instinct Scoring ist eine Kooperation mit Bogensport Instinct.",
     kein: "Diese Seite setzt keine Cookies und misst nichts. Einzige Verbindung nach außen sind die öffentlichen F1-Renndaten.",
-    zurueck: "Nach oben"
+    zurueck: "Nach oben",
+    rechtliches: "Rechtliches"
   },
 
   startseiteKurz: "← Startseite",
@@ -530,7 +534,8 @@ en: {
     vergleich: "Compare",
     ueber: "About me",
     kontakt: "Contact",
-    sprung: "Skip to content"
+    sprung: "Skip to content",
+    name: "Main navigation"
   },
 
   hero: {
@@ -822,7 +827,7 @@ en: {
     untertitel: "Photograph the ticket, see the win",
     claim: "Take a photo.",
     claimZwei: "The app does the checking.",
-    positionierung: "A companion for BINGO!, Lotto 6aus49 and Eurojackpot: photograph the ticket, check the numbers, done. The app fetches the draws itself — the past six months on first start, the new ones from then on. It tells you whether anything came up and in which prize tier. Text recognition runs on the device, and everything is stored there and nowhere else.",
+    positionierung: "A companion for BINGO!, Lotto 6aus49 and Eurojackpot: photograph the ticket, check the numbers, done. The app fetches the draws itself — the past twelve months on first start, the new ones from then on. It tells you whether anything came up and in which prize tier. Text recognition runs on the device, and everything is stored there and nowhere else.",
 
     mehrKnopf: "All about ScheinBar"
   },
@@ -900,21 +905,22 @@ en: {
   vergleich: {
     kennung: "At a glance",
     titel: "Which app is for you?",
+    tabelleName: "Comparison of the products, scrolls sideways",
     text: "Ten products, ten entirely different purposes — three available, six in testing, one still being built. What they share: their core works offline, they collect nothing about you, and they ask for no account with us. The Instinct Family is not listed here: it is not a single app but ten, and none of them is available yet.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar"],
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view", "Checking and analysing lottery tickets", "Reading meters, checking utility bills"] },
       { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In testing · not in a store yet", "In testing · not in a store yet", "In testing · not in a store yet", "Test build outside the stores", "Test build outside the stores"] },
-      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Alone", "Alone", "Alone", "Alone", "Alone"] },
-      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never", "Only for film data (optional)", "Never", "Never", "Only for the subscription and downloads", "Only for the update check"] },
+      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Both — friends & lending", "Alone", "Alone", "Alone", "Alone"] },
+      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never", "Only for film data and friends (optional)", "Never", "Never", "Only for the subscription and downloads", "Only for the update check"] },
       { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No", "No", "No", "Yes — created once", "Yes — created once", "Account or guest — both work"] },
       { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects", "13 screens", "14 screens", "5 screens", "12 screens · 3 games", "18 screens"] },
-      { name: "Languages",      werte: ["2", "2", "16", "1", "1", "1", "1", "1", "2", "2"] },
-      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Everything — nothing to buy yet", "Clocking, time account, day to month", "Everything — the whole app", "10 tickets · last 10 draws", "Everything — nothing to buy yet"] },
-      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "not decided yet", "€0.49 / 4 weeks", "—", "€0.49 / 4 weeks", "not decided yet"] },
+      { name: "Languages",      werte: ["2", "2", "16", "1", "1", "2", "1", "1", "2", "2"] },
+      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Up to 40 copies", "Clocking, time account, day to month", "Everything — the whole app", "10 tickets · last 10 draws", "Everything — nothing to buy yet"] },
+      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "€0.99 / 4 weeks", "€0.49 / 4 weeks", "—", "€0.49 / 4 weeks", "not decided yet"] },
       { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
     ],
-    fuss: "Prices apply to the apps with Premium, each with a seven-day free trial. SetUpLeiste is entirely free; for Campus Clash, YourFilm and AblesBar it is not yet decided whether anything will cost money."
+    fuss: "Prices apply to the apps with Premium, each with a seven-day free trial; YourFilm instead is free up to 40 copies, and its subscription is not in any store yet. SetUpLeiste is entirely free; for Campus Clash and AblesBar it is not yet decided whether anything will cost money."
   },
 
   fragen: {
@@ -924,11 +930,11 @@ en: {
       { f: "Do I need an account for the apps?",
         a: "For most of them, no — you install them and start. A profile is only needed for FaNiCa Fun (several people predict in the same group), Tankspur, ScheinBar and AblesBar (several drivers, players or households on one device — AblesBar also works as a guest). Those profiles live on the device, not with us." },
       { f: "Do the apps work without internet?",
-        a: "The core of every app works without a connection, and all data sits on your device. A connection is only needed for what comes from outside: race results and syncing other players in FaNiCa Fun, film data in YourFilm, downloading draws in ScheinBar. NeonPunkt, ZeitAnker, Tankspur and AblesBar need none at all." },
+        a: "The core of every app works without a connection, and all data sits on your device. A connection is only needed for what comes from outside: race results and syncing other players in FaNiCa Fun, film data and syncing with friends in YourFilm, downloading draws in ScheinBar. NeonPunkt, ZeitAnker, Tankspur and AblesBar need none at all." },
       { f: "What happens to my data?",
         a: "It stays on your device. None of the apps has ads, analytics or data sharing. That is not a marketing line but a deliberate decision — the income comes purely from subscriptions." },
       { f: "What does it cost me?",
-        a: "Every app is free to use. Premium unlocks extra features and starts at €0.49 per four weeks; the first seven days are always free, with nothing to cancel. SetUpLeiste costs nothing at all, and for Campus Clash, YourFilm and AblesBar it is not yet decided whether anything will cost money." },
+        a: "Every app is free to use. Premium unlocks extra features and starts at €0.49 per four weeks; the first seven days are always free, with nothing to cancel. SetUpLeiste costs nothing at all, YourFilm is free up to 40 copies, and for Campus Clash and AblesBar it is not yet decided whether anything will cost money." },
       { f: "Do I lose my data if I don't pay?",
         a: "No. Without a subscription features are locked, nothing is deleted. In NeonPunkt the game pauses after 500 taps — counters and leaderboards stay intact." },
       { f: "Who is behind the apps?",
@@ -988,6 +994,7 @@ en: {
     formKnopf: "Write the message",
     formHinweis: "Your email program opens with everything filled in. Nothing is sent or stored from this page.",
     formFehlt: "Please fill in topic, name and message.",
+    formZuLang: "The message is too long for your email program. Please shorten it or write directly to the address above.",
     wobei: [
       { was: "Found a bug", text: "Tell me which app, which device and what happened. A screenshot helps a lot." },
       { was: "Want a feature", text: "Tell me what's missing and why. Plenty of things are quicker to build than you'd think." },
@@ -1003,7 +1010,8 @@ en: {
     bildquellen: "Image credits",
     kooperation: "Instinct Scoring is a cooperation with Bogensport Instinct.",
     kein: "This site sets no cookies and measures nothing. Its only outside connection is the public F1 race data.",
-    zurueck: "Back to top"
+    zurueck: "Back to top",
+    rechtliches: "Legal"
   },
 
   startseiteKurz: "← Home",
@@ -1012,7 +1020,12 @@ en: {
 };
 
 /* Sprache bestimmen und Rückfall auf Deutsch, wenn eine Übersetzung fehlt. */
-window.SPRACHE = (localStorage.getItem("fanica_sprache") === "en") ? "en" : "de";
+window.SPRACHE = (function () {
+  let wahl = null;
+  try { wahl = localStorage.getItem("fanica_sprache"); }
+  catch (e) { wahl = (/^fanica_sprache=(en|de)$/.exec(window.name) || [])[1]; }
+  return wahl === "en" ? "en" : "de";
+})();
 
 function T(pfad) {
   const teile = pfad.split(".");

@@ -2,7 +2,7 @@
 name: stand-entwickler-website
 description: "Die eine Stand-Datei für die Entwickler-Website: aktueller Stand, geltende Regeln der Seite, echte offene Punkte."
 tags: [projekt, webseite, stand]
-stand: 2026-10-19
+stand: 2026-10-20
 ---
 
 # STAND — Entwickler-Website
@@ -90,6 +90,11 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 - Die Zapfsäule auf `tankspur.html` (`TANKUNGEN` in `app.js`) zeigt erfundene Beispieldaten —
   nie Daten aus Falks Tankbuch, die sind privat.
 - `einladung.html` heißt „Motorsport-Tipprunde“ — „F1“ ist keine Produktbezeichnung.
+- Karussell: Finger laufen nur über `touchstart`/`touchend`, Maus und Stift über Pointer-Ereignisse
+  (`pointerType "touch"` wird dort übergangen) — sonst dreht ein Wisch zwei Karten. Ein Maus-Zug
+  über 40 px schluckt den folgenden Klick, damit keine Produktseite aufgeht.
+- Sprachwahl: `localStorage` (`fanica_sprache`); ist der Speicher gesperrt, hält `window.name`
+  die Wahl für den offenen Tab.
 
 **Bezugswege**
 - Alle Store- und App-Adressen stehen an EINER Stelle: `const BEZUG` in `inhalte.js`. Ein Weg

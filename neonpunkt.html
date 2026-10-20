@@ -89,7 +89,8 @@
           </div>
 
           <div class="raffer-buehne" id="raffer-buehne" role="button" tabindex="0"
-               aria-label="Zeitraffer: Punkt antippen setzt ihn zurück">
+               data-t="neonpunkt.rafferHinweis" data-t-attr="aria-label"
+               aria-label="Tipp den Punkt an, während er läuft">
             <div class="raffer-punkt" id="raffer-punkt" aria-hidden="true"></div>
             <div class="raffer-anzeige">
               <span><em data-t="neonpunkt.rafferZeit">Vergangen</em>
@@ -104,7 +105,8 @@
         </div>
 
           <div class="spielfeld" id="spielfeld" role="button" tabindex="0"
-               aria-label="Neon-Punkt zum Antippen">
+               data-t="neonpunkt.spielHinweis" data-t-attr="aria-label"
+               aria-label="Tipp den Punkt an">
             <div class="spielzaehler">
               <span><span data-t="neonpunkt.spielKlicks">Klicks</span>
                     <b id="spiel-klicks">0</b></span>
@@ -123,7 +125,7 @@
 <footer class="fuss">
   <div class="huelle">
     <div class="fuss-unten">
-      <nav class="fuss-links" aria-label="Rechtliches">
+      <nav class="fuss-links" data-t="fuss.rechtliches" data-t-attr="aria-label" aria-label="Rechtliches">
         <a href="index.html" data-t="startseiteFuss">Startseite</a>
         <a href="impressum.html" data-t="fuss.impressum">Impressum</a>
         <a href="datenschutz.html" data-t="fuss.datenschutz">Datenschutz</a>
