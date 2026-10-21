@@ -161,8 +161,12 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
    11.10.2026. Neue Dunkelmodus-Aufnahmen brauchen Falks Gerät bzw. das laufende Spiel.
 4. **Zahlwort „Zwölf Produkte“** steht in `start.produkteTitel` und an weiteren Stellen (DE + EN) —
    beim nächsten Produkt mit dem Suchlauf aus dem Skill mitziehen.
-5. **Grow All-In-One** (1.2.1+4, GitHub-Release seit 07.09.2026) und **AI-Instinct** (frühe Bauphase)
-   stehen nicht auf der Seite — ob Grow dazukommt, entscheidet Falk; bis dahin nichts anlegen.
+5. **Grow All-In-One als 13. Produkt einbauen — beauftragt** (Falk 21.10.2026, 21:47: „Grow all in One
+   mit aufnehmen“). Wegen der Abschaltung um 22:00 nicht mehr begonnen. Weg wie bei PROJECT EMPIRE:
+   volle Checkliste im Skill (Karte, Karussell, Seite `grow-all-in-one.html` + `daten/grow.js`,
+   Vergleichsspalte `app-12`, Zahlwörter „Dreizehn“, og-bild, Karussell-Radius), Inhalte nur aus dem
+   Code (`Projekte\Apps\Grow All-In-One`, 1.2.1+4, GitHub-Release seit 07.09.2026) und dem Skill
+   `grow-all-in-one`, danach Abnahme. AI-Instinct (frühe Bauphase) bleibt draußen, bis Falk es sagt.
 6. **Tipprunden-Quelle veraltet:** `daten.json` der FaNiCa-Webversion endet nach Rennen 9
    (Silverstone, Juli 2026), ebenso `rundendaten.json` der App. Neue Zahlen erst, wenn eine
    aktuelle Quelle vorliegt; dann `_werkzeuge_runde_bauen.py` laufen lassen.
