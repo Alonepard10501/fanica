@@ -30,10 +30,12 @@ body.start {
   display: flex; flex-direction: column; align-items: center; gap: var(--s3);
   max-width: 100%; margin: 0 auto; font-size: 1rem; line-height: 1; letter-spacing: normal;
 }
+.start .hero { overflow-x: clip; }
+.start .hero-logos { position: relative; z-index: 2; }
 .studio-neon {
-  --sb: min(100%, clamp(25rem, 57vw, 42rem));
-  display: block; width: var(--sb); height: auto; aspect-ratio: 960 / 448;
-  margin: calc(var(--sb) * -0.19) auto calc(var(--sb) * -0.13);
+  --sb: calc(min(100vw - 2rem, 1300px) * 1.8519);
+  display: block; flex: none; width: var(--sb); max-width: none; height: auto; aspect-ratio: 1600 / 1000;
+  margin: calc(var(--sb) * -0.25) calc((100% - var(--sb)) / 2) calc(var(--sb) * -0.22);
   pointer-events: none; position: relative; z-index: 1;
   color: #FFFFFF; font-family: var(--schrift-kopf); font-weight: 800; text-align: center;
 }

@@ -2,9 +2,9 @@
 (function () {
   "use strict";
 
-  const BREITE = 960, HOEHE = 448, GRUNDLINIE = 280, WORT = "STUDIO";
-  const SCHRIFT = '800 104px "Saira", "Bahnschrift", "DIN Alternate", "Segoe UI", system-ui, sans-serif';
-  const ABSTAND = 104 * 0.04;
+  const BREITE = 1600, HOEHE = 1000, GRUNDLINIE = 600, WORT = "STUDIO", WORTBREITE = 864;
+  const FAMILIE = '"Saira", "Bahnschrift", "DIN Alternate", "Segoe UI", system-ui, sans-serif';
+  const ENG = 0.025;
   const FARBE = { linie: "#FF8A95", neon: "#FF4257", tief: "#E4192B", cyan: "#17E9E0", cyanHell: "#9FF6FF", deck: "#110D18",
     gruenTief: "#1FB300", gruen: "#39FF14", gruenHell: "#A6FF8A" };
   const RAND = [[0, "#FF4257"], [.3, "#FFB3BA"], [.62, "#B8FAFF"], [1, "#17E9E0"]];
@@ -18,11 +18,20 @@
     const ctx = leinwand.getContext("2d");
     if (!ctx) return null;
     const ruhig = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const dpr = Math.min(3, window.devicePixelRatio || 1);
-    leinwand.width = BREITE * dpr;
-    leinwand.height = HOEHE * dpr;
+    const anzeige = leinwand.getBoundingClientRect().width || BREITE;
+    const dpr = Math.min(3, window.devicePixelRatio || 1) * Math.min(2, Math.max(0.4, anzeige / BREITE));
+    leinwand.width = Math.round(BREITE * dpr);
+    leinwand.height = Math.round(HOEHE * dpr);
 
-    const vorbereiten = (c) => { c.setTransform(dpr, 0, 0, dpr, 0, 0); c.font = SCHRIFT; c.textBaseline = "alphabetic"; c.lineJoin = "round"; c.lineWidth = 9; };
+    ctx.font = "800 100px " + FAMILIE;
+    const roh = [...WORT].reduce((a, z) => a + ctx.measureText(z).width, 0);
+    const groesse = WORTBREITE / (roh / 100 + ENG * (WORT.length - 1));
+    const k = groesse / 104;
+    const SCHRIFT = "800 " + groesse.toFixed(1) + "px " + FAMILIE;
+    const ABSTAND = groesse * ENG;
+    const weich = 1;
+
+    const vorbereiten = (c) => { c.setTransform(dpr, 0, 0, dpr, 0, 0); c.font = SCHRIFT; c.textBaseline = "alphabetic"; c.lineJoin = "round"; c.lineWidth = 9 * k; };
     vorbereiten(ctx);
     const breiten = [...WORT].map(z => ctx.measureText(z).width);
     const gesamt = breiten.reduce((a, b) => a + b, 0) + ABSTAND * (WORT.length - 1);
@@ -38,25 +47,26 @@
     const g = glut.getContext("2d");
     vorbereiten(g);
     g.save();
-    g.translate(BREITE / 2, GRUNDLINIE - 40);
+    const R = 470;
+    g.translate(BREITE / 2, GRUNDLINIE - 40 * k);
     g.scale(1, 0.5);
-    const strahlen = g.createRadialGradient(0, 0, 0, 0, 0, 470);
-    [[0, "rgba(57,255,20,.62)"], [.3, "rgba(57,255,20,.38)"], [.62, "rgba(31,179,0,.17)"], [1, "rgba(31,179,0,0)"]].forEach(([p, farbe]) => strahlen.addColorStop(p, farbe));
+    const strahlen = g.createRadialGradient(0, 0, 0, 0, 0, R);
+    [[0, "rgba(57,255,20,.3)"], [.3, "rgba(57,255,20,.17)"], [.62, "rgba(31,179,0,.07)"], [1, "rgba(31,179,0,0)"]].forEach(([p, farbe]) => strahlen.addColorStop(p, farbe));
     g.fillStyle = strahlen;
-    g.fillRect(-470, -470, 940, 940);
+    g.fillRect(-R, -R, 2 * R, 2 * R);
     g.restore();
-    [[FARBE.gruenTief, 170], [FARBE.gruenTief, 120], [FARBE.gruen, 80], [FARBE.gruen, 50], [FARBE.gruen, 30], [FARBE.gruenHell, 14], ["#FFFFFF", 2.5]].forEach(([farbe, weich]) => {
+    [[FARBE.gruenTief, 120], [FARBE.gruen, 80], [FARBE.gruen, 50], [FARBE.gruen, 30], [FARBE.gruenHell, 14], ["#FFFFFF", 2.5]].forEach(([farbe, unschaerfe]) => {
       g.save();
-      g.shadowColor = farbe; g.shadowBlur = weich * dpr; g.shadowOffsetX = 2000 * dpr;
+      g.shadowColor = farbe; g.shadowBlur = unschaerfe * weich * dpr; g.shadowOffsetX = 4000 * dpr;
       g.fillStyle = farbe;
-      buchstaben.forEach(b => g.fillText(b.z, b.x - 2000, GRUNDLINIE));
+      buchstaben.forEach(b => g.fillText(b.z, b.x - 4000, GRUNDLINIE));
       g.restore();
     });
 
-    const randVerlauf = ctx.createLinearGradient(buchstaben[0].x, GRUNDLINIE - 90, buchstaben[5].x + buchstaben[5].breite, GRUNDLINIE + 10);
+    const randVerlauf = ctx.createLinearGradient(buchstaben[0].x, GRUNDLINIE - 90 * k, buchstaben[5].x + buchstaben[5].breite, GRUNDLINIE + 10 * k);
     RAND.forEach(([p, farbe]) => randVerlauf.addColorStop(p, farbe));
     const laufVerlauf = (b, winkel) => {
-      const v = ctx.createConicGradient(winkel - Math.PI / 2, b.mitte, GRUNDLINIE - 38);
+      const v = ctx.createConicGradient(winkel - Math.PI / 2, b.mitte, GRUNDLINIE - 38 * k);
       LAUF.forEach(([p, farbe]) => v.addColorStop(p, farbe));
       return v;
     };

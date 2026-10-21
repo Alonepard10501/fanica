@@ -27,7 +27,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 | Produkte | zwölf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 · PROJECT EMPIRE 12 (PC-Spiel, seit 21.10.2026) |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
 | Store-Gegenprobe 21.10.2026 | FaNiCa Play 1.209.0 (18.10.2026), Apple 1.210.0 (20.10.2026) · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` · SetUpLeiste-Download 206 auf Teilabruf, einziges Release `setupleiste-v1.0.0` |
-| „Neu in der App“ (`daten/<app>.js`) | FaNiCa 1.210.0 (App Store; Play hat 1.209.0 — nach dem Play-Update den Zusatz und den Play-Hinweis bei den Sprachen entfernen) · Campus Clash 4.18.0 · ScheinBar 1.0.19 · YourFilm 2.8.0 · AblesBar 1.4.0 · Instinct 1.0.1 — `aufbau.js` zeigt höchstens fünf Punkte, DE und EN |
+| „Neu in der App“ (`daten/<app>.js`) | FaNiCa 1.210.0 (App Store; Play hat 1.209.0 — nach dem Play-Update den Zusatz „(App Store)“ und den funktionenSatz in daten/fanica.js anpassen) · Campus Clash 4.18.0 · ScheinBar 1.0.19 · YourFilm 2.8.0 · AblesBar 1.4.0 · Instinct 1.0.1 — `aufbau.js` zeigt höchstens fünf Punkte, DE und EN |
 | Stand je Produkt | erhältlich: FaNiCa Fun, Instinct Scoring, SetUpLeiste · im Test (nicht in den Stores): NeonPunkt (Play-Test), YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar · in Arbeit: Campus Clash, Instinct Familie, PROJECT EMPIRE — steht als `data-stufe` an jeder Produktkarte in `index.html` |
 
 ## So arbeitet die Seite heute (nicht brechen)
@@ -48,7 +48,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   dunkle Buchstaben, Schein in Neon-Grün (Falk 19.10.2026), beim Laden läuft je Buchstabe ein Licht (um .2 s
   versetzt, S zuerst) zwei Runden um die Umrandung und bleibt dann als Verlaufsrand Rot→Cyan
   stehen — von Falk abgenommen, nicht verändern. Gezeichnet in `studio.js` auf ein
-  `<canvas class="studio-neon">` (960×448 logisch, Grundlinie 280, DPR-skaliert; die Fläche ragt per negativem Rand über Wort und Kennung hinaus, damit das Strahlen bis zu den Logos reicht — Radialverlauf so bemessen, dass er innerhalb der Fläche auf null ausläuft, sonst gibt es eine Kante): Schein einmal in eine
+  `<canvas class="studio-neon">` (seit 21.10.2026 auf Falks Wunsch fast über die ganze Breite mit engen Buchstaben: 1600×1000 logisch, Grundlinie 600, Schriftgröße per `measureText` so, dass das Wort 864 von 1600 Einheiten füllt, Abstand 2,5 % der Schriftgröße — 1300 px breit bei 1440, 356 px bei 390; Strahlen-Radius fest 470 und Schatten-Weichzeichnung NICHT mit der Schrift wachsen lassen, sonst flutet das Grün am Desktop den ganzen Kopf; Logos per `z-index: 2` über dem Schein; DPR-skaliert; die Fläche ragt per negativem Rand über Wort und Kennung hinaus, damit das Strahlen bis zu den Logos reicht — Radialverlauf so bemessen, dass er innerhalb der Fläche auf null ausläuft, sonst gibt es eine Kante): Schein einmal in eine
   Nebenfläche (sechs Schatten-Lagen, auf Falks Wunsch kräftig; `shadowBlur` und `shadowOffsetX` mit
   `dpr` multiplizieren — Canvas-Schatten folgen der Transformation nicht, sonst fehlt der Schein auf
   dem Handy), je Bild Rand per `strokeText` mit Verlauf, Lauflicht per
