@@ -23,7 +23,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 |---|---|
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
-| Git | `origin/main` = Canvas-Schriftzug, grünes Strahlen bis zu den Logos (19.10.2026, Falk: „pushen, dass es wirklich sichtbar ist“), live nachgemessen — Push nur auf Falks Wort |
+| Git | `origin/main` = `a227d78` (21.10.2026: PROJECT EMPIRE als Kapitel 12, Abgleich aller Produktseiten, STUDIO fast über die ganze Breite), live nachgemessen — Push nur auf Falks Wort |
 | Produkte | zwölf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 · PROJECT EMPIRE 12 (PC-Spiel, seit 21.10.2026) |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
 | Store-Gegenprobe 21.10.2026 | FaNiCa Play 1.209.0 (18.10.2026), Apple 1.210.0 (20.10.2026) · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` · SetUpLeiste-Download 206 auf Teilabruf, einziges Release `setupleiste-v1.0.0` |
