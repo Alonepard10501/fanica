@@ -1,0 +1,128 @@
+/* Erlebnis PROJECT EMPIRE: Lauf durch die acht Epochen. */
+
+.epochenlauf {
+  position: relative;
+  display: grid; gap: clamp(.9rem, 2vw, 1.3rem);
+  margin: 0 0 clamp(1.2rem, 2.6vw, 2rem);
+  padding: clamp(.9rem, 2.2vw, 1.4rem) clamp(1rem, 2.4vw, 1.6rem);
+  border-radius: var(--radius-gross);
+  border: 1px solid color-mix(in srgb, var(--akzent) 30%, transparent);
+  background:
+    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--akzent) 11%, transparent), transparent 62%),
+    linear-gradient(180deg, #07101D, #03070D);
+  box-shadow: 0 26px 60px -34px #000;
+  overflow: hidden;
+}
+
+.el-kopf { display: flex; align-items: center; gap: clamp(.8rem, 2vw, 1.2rem); min-height: 64px; }
+.el-ring {
+  position: relative; flex: none; display: grid; place-items: center;
+  width: clamp(58px, 7vw, 72px); aspect-ratio: 1;
+}
+.el-ring svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.el-ring circle { fill: none; stroke-width: 3; }
+.el-ring-grund { stroke: rgba(255, 255, 255, .1); }
+.el-ring-lauf {
+  stroke: var(--akzent-hell); stroke-linecap: round;
+  stroke-dasharray: 131.95; stroke-dashoffset: 131.95;
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--akzent) 80%, transparent));
+}
+.el-ring b {
+  position: relative; font: 700 clamp(1rem, 2.1vw, 1.25rem)/1 var(--schrift-kopf);
+  letter-spacing: .04em; color: var(--akzent-hell);
+}
+.el-titel { min-width: 0; }
+.el-nr {
+  display: block; font-size: .68rem; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--grau);
+}
+.el-titel h3 {
+  margin: .25rem 0 0; font-size: clamp(1.15rem, 2.6vw, 1.6rem); line-height: 1.15;
+  color: var(--creme); text-wrap: balance;
+}
+.el-titel h3.frisch { animation: el-frisch .7s ease-out 1; }
+@keyframes el-frisch {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.el-leiste { position: relative; }
+.el-leiste ol {
+  position: relative; display: flex; justify-content: space-between;
+  margin: 0; padding: 0; list-style: none;
+}
+.el-spur {
+  position: absolute; left: 15px; right: 15px; top: 50%; height: 2px;
+  transform: translateY(-50%); background: rgba(255, 255, 255, .12); border-radius: 2px;
+}
+.el-spur i {
+  position: absolute; inset: 0; border-radius: 2px;
+  background: linear-gradient(90deg, var(--akzent), var(--akzent-hell));
+  box-shadow: 0 0 10px -1px var(--akzent);
+  transform-origin: 0 50%; transform: scaleX(var(--fuell, 0));
+}
+.el-leiste button {
+  position: relative; display: grid; place-items: center;
+  width: 30px; height: 30px; padding: 0; cursor: pointer;
+  border-radius: 50%; border: 1px solid rgba(255, 255, 255, .2);
+  background: #060A11; color: var(--grau);
+  font: 700 .6rem/1 var(--schrift-kopf); letter-spacing: .02em;
+  transition: background .35s var(--weich), border-color .35s var(--weich), color .35s var(--weich), box-shadow .35s var(--weich);
+}
+.el-leiste button::after { content: ""; position: absolute; inset: -7px; }
+.el-leiste button.erreicht {
+  border-color: color-mix(in srgb, var(--akzent) 65%, transparent);
+  color: var(--akzent-hell); background: #0B0F14;
+}
+.el-leiste button[aria-current="step"] {
+  background: var(--akzent-hell); border-color: var(--akzent-hell); color: #0A0905;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--akzent) 22%, transparent), 0 0 18px -2px var(--akzent);
+}
+.el-leiste button:hover { border-color: var(--akzent-hell); color: var(--creme); }
+.el-leiste button[aria-current="step"]:hover { color: #0A0905; }
+.el-leiste button:focus-visible { outline: 2px solid var(--creme); outline-offset: 3px; }
+
+.el-felder { display: grid; grid-template-columns: 1.2fr 1fr; gap: .8rem 1.6rem; margin: 0; }
+.el-felder dt {
+  margin-bottom: .4rem; font-size: .62rem; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--grau);
+}
+.el-felder dd { margin: 0; font-size: .95rem; line-height: 1.45; color: var(--creme); }
+.el-stoffe { display: flex; flex-wrap: wrap; gap: .35rem; }
+.el-stoffe span {
+  padding: .2rem .6rem; border-radius: 999px; font-size: .76rem; line-height: 1.3;
+  border: 1px solid color-mix(in srgb, var(--akzent) 45%, transparent);
+  background: color-mix(in srgb, var(--akzent) 10%, transparent);
+  color: var(--akzent-hell);
+  transition: opacity .5s var(--weich), border-color .5s var(--weich), color .5s var(--weich), background .5s var(--weich);
+}
+.el-stoffe span.aus {
+  opacity: .45; border-color: rgba(255, 255, 255, .14);
+  background: transparent; color: var(--grau);
+}
+.el-fuss {
+  margin: 0; font-size: .7rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--grau);
+}
+.el-vorlesen {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .epochenlauf { padding: .8rem .8rem .9rem; gap: .8rem; }
+  .el-felder { grid-template-columns: 1fr; gap: .7rem; }
+  .el-felder dd { font-size: .88rem; }
+  .el-leiste button { width: 28px; height: 28px; font-size: .56rem; }
+  .el-spur { left: 14px; right: 14px; }
+  .el-fuss { font-size: .62rem; letter-spacing: .08em; }
+}
+@media (max-width: 340px) {
+  .el-leiste button { width: 26px; height: 26px; font-size: .52rem; }
+  .el-spur { left: 13px; right: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .el-titel h3.frisch { animation: none; }
+  .el-leiste button, .el-stoffe span { transition: none; }
+}

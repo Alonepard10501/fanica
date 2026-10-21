@@ -12,7 +12,7 @@ de: {
   meta: {
     kapitelWort: "Kapitel",
     titel: "FaNiCa — Falk Carstensen · Apps aus einem Ein-Mann-Studio",
-    beschreibung: "Elf Produkte aus einem Ein-Mann-Medienstudio: FaNiCa Fun, Instinct Scoring, NeonPunkt, die SetUpLeiste für Windows sowie Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar und die Instinct Familie.",
+    beschreibung: "Zwölf Produkte aus einem Ein-Mann-Medienstudio: FaNiCa Fun, Instinct Scoring, NeonPunkt, die SetUpLeiste für Windows sowie Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar, die Instinct Familie und das PC-Strategiespiel PROJECT EMPIRE.",
     sprachknopf: "EN",
     sprachtitel: "Switch to English"
   },
@@ -194,7 +194,7 @@ de: {
     untertitel: "Deine Filmsammlung im Griff",
     claim: "Scannen. Einsortieren. Fertig.",
     claimZwei: "Deine Sammlung, sauber geordnet.",
-    positionierung: "Eine Filmsammlungs-App für DVDs und Blu-rays: Barcode scannen, die App ordnet den Film automatisch zu — das Werk, die Ausgabe, dein Exemplar. Vier getrennte Preise zeigen, was deine Sammlung gekostet hat und was sie heute wert ist. Komplett auf dem Gerät, ohne Konto.",
+    positionierung: "Eine Filmsammlungs-App für DVDs und Blu-rays: Barcode scannen, die App ordnet den Film automatisch zu — das Werk, die Ausgabe, dein Exemplar. Vier getrennte Preise zeigen, was deine Sammlung gekostet hat und was sie heute wert ist. Die Sammlung liegt auf dem Gerät, ohne Konto.",
 
     mehrKnopf: "Alles über YourFilm"
   },
@@ -347,6 +347,33 @@ de: {
     mehrKnopf: "Alles über AblesBar"
   },
 
+  empire: {
+    laufEpoche: "Epoche {n} von {von}",
+    laufTruppen: "Neu ausgebildet",
+    laufRohstoffe: "Rohstoffe",
+    laufWahl: "Epoche wählen",
+    laufFuss: "Tippe eine Epoche an, um sie dir anzusehen.",
+    laufStoffe: ["Nahrung", "Holz", "Stein", "Gold", "Öl", "Daten"],
+    epochen: [
+      { name: "Stammeszeit", truppen: "Keulenkrieger · Speerträger · Schleuderer" },
+      { name: "Antike", truppen: "Schildkämpfer · Bogenschütze · Schwerer Reiter" },
+      { name: "Mittelalter", truppen: "Waffenknecht · Armbrustschütze · Ritter" },
+      { name: "Renaissance", truppen: "Musketier · Pikenier-Regiment · Kürassier" },
+      { name: "Industriezeitalter", truppen: "Linieninfanterie · Feldgeschütz · Kampfpanzer" },
+      { name: "Maschinen- und Atomzeitalter", truppen: "Soldat · Jagdflugzeug · Flak" },
+      { name: "Informations- und KI-Zeitalter", truppen: "Moderne Infanterie · Kampfdrohne · Vernetzter Kampfpanzer" },
+      { name: "Zukunftszeitalter", truppen: "Exo-Soldat · Schwebepanzer · Energiewaffen-Plattform" }
+    ],
+
+    karteKurz: "Ein Reich durch acht Epochen führen",
+    statusPille: "In Arbeit — Testfassung nur privat",
+    untertitel: "Echtzeitstrategie für den PC",
+    claim: "Eine Welt. Acht Epochen.",
+    claimZwei: "Deine Strategie.",
+    positionierung: "Ein Echtzeit-Strategiespiel für Windows: Du führst ein Volk von der Stammeszeit bis ins Zukunftszeitalter. Allein gegen den Computer oder mit bis zu drei Mitspielern, ohne Anmeldung.",
+    mehrKnopf: "Alles über PROJECT EMPIRE"
+  },
+
   /* ============ LIVE — automatisch geladene Renndaten ============ */
   produkt: {
     inhaltName: "Auf dieser Seite",
@@ -362,8 +389,8 @@ de: {
     karussellWahl: "Produkt nach vorn holen",
     karussellStand: "{name} vorn — {nr} von {anzahl}",
     produkteKennung: "Die Produkte",
-    produkteTitel: "Elf Produkte, ein Studio",
-    produkteText: "Apps fürs Handy und ein Programm für Windows — jedes mit eigener Farbe und eigener Seite. Hier steht das Wichtigste in einem Satz, alle Einzelheiten stehen auf der Seite des Produkts.",
+    produkteTitel: "Zwölf Produkte, ein Studio",
+    produkteText: "Apps fürs Handy, ein Programm und ein Strategiespiel für Windows — jedes mit eigener Farbe und eigener Seite. Hier steht das Wichtigste in einem Satz, alle Einzelheiten stehen auf der Seite des Produkts.",
     filterName: "Produkte nach Stand filtern",
     filterAlle: "Alle",
     filterLive: "Erhältlich",
@@ -413,7 +440,7 @@ de: {
     ],
 
     zahlen: [
-      { zahl: "11", text: "Produkte" },
+      { zahl: "12", text: "Produkte" },
       { zahl: "2", text: "Stores" },
       { zahl: "16", text: "Sprachen" }
     ]
@@ -424,21 +451,21 @@ de: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
     tabelleName: "Vergleich der Produkte, waagerecht scrollbar",
-    text: "Zehn Produkte, zehn völlig verschiedene Zwecke — drei zu haben, sechs im Test, eines noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie werten dich nicht aus, und ein Konto bei uns gibt es nicht — Profile wie bei FaNiCa Fun liegen auf dem Gerät. An mich geht nur, was du selbst auslöst: eine Rückmeldung, eine Diagnose oder bei FaNiCa Fun die E-Mail-Adressen für Codes und Einladungen. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und außer Instinct Scoring ist noch keine davon zu haben.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar"],
+    text: "Elf Produkte, elf völlig verschiedene Zwecke — drei zu haben, sechs im Test, zwei noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie werten dich nicht aus, und ein Konto bei uns gibt es nicht — Profile wie bei FaNiCa Fun liegen auf dem Gerät. An mich geht nur, was du selbst auslöst: eine Rückmeldung, eine Diagnose oder bei FaNiCa Fun die E-Mail-Adressen für Codes und Einladungen. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und außer Instinct Scoring ist noch keine davon zu haben.",
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUp­Leiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar", "PROJECT EMPIRE"],
     zeilen: [
-      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten", "Spielscheine prüfen und auswerten", "Zählerstände ablesen, Nebenkosten prüfen"] },
-      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Arbeit", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Testfassung außerhalb der Stores", "Testfassung außerhalb der Stores"] },
-      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Beides — mit Freunden & Ausleihe", "Allein", "Allein", "Allein", "Allein"] },
-      { name: "Internet nötig", werte: ["Nur zum Abgleich", "Nur für Turniere", "Nie", "Nur zum Messen der Leitung", "Nie", "Nur für Filmdaten und Freunde (freiwillig)", "Nie", "Nie", "Nur fürs Abo und Nachladen", "Nur für die Update-Prüfung"] },
-      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein", "Nein", "Ja — einmal anlegen", "Ja — einmal anlegen", "Konto oder Gast — beides geht"] },
-      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer", "13 Bildschirme", "14 Bildschirme", "5 Bildschirme", "12 Bildschirme · 3 Spiele", "18 Bildschirme"] },
-      { name: "Sprachen",      werte: ["2", "2", "16", "1", "1", "2", "1", "1", "2", "2"] },
-      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Bis 40 Exemplare", "Stempeln, Zeitkonto, Tag bis Monat", "Alles — die ganze App", "10 Scheine · letzte 10 Ziehungen", "Alles — es gibt noch nichts zu kaufen"] },
-      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "0,99 € / 4 Wochen", "0,49 € / 4 Wochen", "—", "0,49 € / 4 Wochen", "noch offen"] },
-      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
+      { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten", "Spielscheine prüfen und auswerten", "Zählerstände ablesen, Nebenkosten prüfen", "Ein Reich durch acht Epochen führen"] },
+      { name: "Stand",        werte: ["Live in beiden Stores", "Im App Store · Play im Test", "Im Store-Test", "Fertig zum Download", "In Arbeit", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Im Test · noch nicht im Store", "Testfassung außerhalb der Stores", "Testfassung außerhalb der Stores", "In Arbeit · nur private Testfassung"] },
+      { name: "Allein oder zu mehreren", werte: ["Beides — allein oder in der Gruppe", "Beides", "Allein", "Allein", "Beides — mit Freunden & Allianz", "Beides — mit Freunden & Ausleihe", "Allein", "Allein", "Allein", "Allein", "Beides — bis zu vier Spieler"] },
+      { name: "Internet nötig", werte: ["Nur für Anmeldecode, Renndaten, Abgleich", "Nur für Turniere, Parcours-Suche, Updates", "Nur für den Premium-Kauf", "Nur für Ping und Leitungs­messung", "Nur für Freunde, Allianz und Updates", "Nur für Filmdaten, Freunde und Updates", "Nur für den Premium-Kauf", "Nur für die Update-Prüfung", "Nur für Ziehungen, Abo und Update-Prüfung", "Nur für die Update-Prüfung", "Nur fürs Spiel übers Internet"] },
+      { name: "Profil nötig",  werte: ["Ja — einmal anlegen", "Nein", "Nein", "Nein", "Nein", "Nein", "Nein", "Profil oder Gast — beides geht", "Nein — freiwillig", "Konto oder Gast — beides geht", "Nein"] },
+      { name: "Umfang",        werte: ["13 Ansichten", "23 Bildschirme", "1 Bildschirm", "11 Messwerte", "8 Bereiche · 40 Fächer", "13 Bildschirme", "14 Bildschirme", "5 Reiter · 8 Auswertungen", "12 Bildschirme · 3 Spiele", "20 Bildschirme", "8 Epochen · 2 Völker spielbar"] },
+      { name: "Sprachen",      werte: ["13 · bei Play bis zum Update 2", "2", "16", "1", "1", "2", "1", "2", "2", "2", "1"] },
+      { name: "Kostenlos nutzbar", werte: ["Tippen — aktuelles und letztes Rennen", "Runden schießen & werten", "Die ersten 500 Klicks", "Alles — das ganze Programm", "Alles — es gibt noch nichts zu kaufen", "Bis 40 Exemplare", "Stempeln, Zeitkonto, Tag bis Monat", "Alles — die ganze App", "10 Scheine · letzte 10 Ziehungen", "Alles — es gibt noch nichts zu kaufen", "Noch nicht erhältlich"] },
+      { name: "Premium ab",    werte: ["1,99 € / 4 Wochen", "1,99 € — Plus 2,99 €", "0,49 € / 4 Wochen", "—", "noch offen", "0,99 € / 4 Wochen", "0,49 € / 4 Wochen", "—", "0,49 € / 4 Wochen", "noch offen", "—"] },
+      { name: "Plattform",     werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android", "Android", "Android · iOS", "Android · iOS", "Android", "Android", "Windows"] }
     ],
-    fuss: "Preise gelten für die Apps mit Premium, jeweils mit sieben Tagen kostenlosem Test; bei YourFilm sind stattdessen 40 Exemplare frei, sein Abo steht noch in keinem Store. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash und AblesBar steht noch nicht fest, ob und was etwas kosten wird."
+    fuss: "Preise gelten für die Apps mit Premium. Instinct Scoring, NeonPunkt und ScheinBar lassen sich sieben Tage kostenlos testen, die Probe endet von selbst; FaNiCa Fun hat keine Probezeit, bei YourFilm sind stattdessen 40 Exemplare frei. Noch in keinem Store zu kaufen sind die Abos von NeonPunkt (bei Google Play erst im Test), YourFilm, ZeitAnker und ScheinBar. Die SetUpLeiste ist ganz kostenlos; bei Campus Clash und AblesBar steht noch nicht fest, ob und was etwas kosten wird. PROJECT EMPIRE ist noch nicht erhältlich."
   },
 
   fragen: {
@@ -446,22 +473,22 @@ de: {
     titel: "Was oft gefragt wird",
     liste: [
       { f: "Brauche ich für die Apps ein Konto?",
-        a: "Bei den meisten nicht — du installierst und legst los. Ein Profil brauchen nur FaNiCa Fun (mehrere Leute tippen in derselben Runde), Tankspur, ScheinBar und AblesBar (mehrere Fahrer, Spieler oder Haushalte auf einem Gerät — AblesBar geht auch als Gast). Diese Profile liegen auf dem Gerät, nicht bei uns." },
+        a: "Bei den meisten nicht — du installierst und legst los. Ein Profil braucht nur FaNiCa Fun (mehrere Leute tippen in derselben Runde). Tankspur und AblesBar bieten eins an, damit mehrere Fahrer oder Haushalte auf einem Gerät getrennte Daten haben — beide gehen auch ohne Profil. Bei ScheinBar ist das Profil freiwillig und trennt keine Daten. Diese Profile liegen auf dem Gerät, nicht bei uns. PROJECT EMPIRE braucht auch für das Spiel übers Internet kein Konto." },
       { f: "Funktionieren die Apps ohne Internet?",
-        a: "Der Kern jeder App läuft ohne Verbindung, und alle Daten liegen auf dem Gerät. Netz braucht nur, was von außen kommt: die Rennergebnisse und der Abgleich mit den Mitspielern bei FaNiCa Fun, die Filmdaten und der Freunde-Abgleich bei YourFilm, das Nachladen der Ziehungen bei ScheinBar. NeonPunkt, ZeitAnker, Tankspur und AblesBar kommen ganz ohne aus." },
+        a: "Der Kern jeder App läuft ohne Verbindung, und alle Daten liegen auf dem Gerät. Netz braucht nur, was von außen kommt: die Rennergebnisse, der Abgleich mit den Mitspielern und beim Anlegen des Profils der Bestätigungscode bei FaNiCa Fun, Turniere und Parcours-Suche bei Instinct Scoring, Freunde und Allianz bei Campus Clash, die Filmdaten und der Freunde-Abgleich bei YourFilm, das Nachladen der Ziehungen bei ScheinBar, Ping und Leitungsmessung bei der SetUpLeiste und das Spiel mit Mitspielern übers Internet bei PROJECT EMPIRE. ZeitAnker und NeonPunkt brauchen Netz nur für den Premium-Kauf im Store. Campus Clash, YourFilm, Tankspur, ScheinBar und AblesBar fragen in der Testfassung außerdem auf Knopfdruck nach Updates." },
       { f: "Was passiert mit meinen Daten?",
-        a: "Sie liegen auf deinem Gerät. Keine der Apps hat Werbung oder eigene Analyse-Werkzeuge, und Daten werden nicht verkauft — Einnahmen kommen ausschließlich aus Käufen in den Apps: den Abos und bei FaNiCa Fun einem freiwilligen Trinkgeld. Das Wichtigste, was doch hinausgeht: FaNiCa Fun, Campus Clash und YourFilm gleichen Tipprunden, Freunde und Allianzen über die Weiterleitungs-Server ntfy.sh und ntfy.envs.net ab. FaNiCa Fun schickt außerdem deine E-Mail-Adresse für Bestätigungs- und Passwort-Codes an meinen Mail-Dienst bei Google (Apps Script), bei Einladungen auch die Adresse des Eingeladenen; Rückmeldungen kommen per Mail und über ntfy bei mir an, die Diagnose auf Knopfdruck über ntfy. Die Parcours-Suche von Instinct Scoring schickt die Postleitzahl an Nominatim und die Koordinaten an Overpass (beides Dienste für OpenStreetMap-Daten). Wo die Kamera Text oder Codes liest — Campus Clash, YourFilm, Tankspur, ScheinBar und AblesBar —, sendet eine mitgelieferte Komponente aus Googles ML Kit technische Nutzungsdaten an Google. Alles Weitere steht in der Datenschutzerklärung jeder App.",
+        a: "Sie liegen auf deinem Gerät. Keine der Apps hat Werbung oder eigene Analyse-Werkzeuge, und Daten werden nicht verkauft — Einnahmen kommen ausschließlich aus Käufen in den Apps: den Abos und bei FaNiCa Fun einem freiwilligen Trinkgeld. Das Wichtigste, was doch hinausgeht: FaNiCa Fun, Campus Clash und YourFilm gleichen Tipprunden, Freunde und Allianzen über die Weiterleitungs-Server ntfy.sh und ntfy.envs.net ab; YourFilm schickt dafür einen Auszug deiner Sammlung bei jedem Start und nach Änderungen dorthin, auch ohne verbundenen Freund. FaNiCa Fun schickt außerdem deine E-Mail-Adresse für Bestätigungs- und Passwort-Codes an meinen Mail-Dienst bei Google (Apps Script), bei Einladungen auch die Adresse des Eingeladenen; Rückmeldungen kommen per Mail und über ntfy bei mir an, die Diagnose auf Knopfdruck über ntfy. Die Parcours-Suche von Instinct Scoring schickt die Postleitzahl an Nominatim und die Koordinaten an Overpass (beides Dienste für OpenStreetMap-Daten). Die SetUpLeiste fragt für ihre Ping-Anzeige laufend 1.1.1.1 bei Cloudflare an und lädt für die Leitungsmessung nur auf Knopfdruck Testdaten von dort. PROJECT EMPIRE tauscht für ein Internet-Spiel die Netzwerkadressen von Gastgeber und Mitspielern verschlüsselt über dieselben ntfy-Server aus und erfragt die eigene Adresse bei öffentlichen STUN-Servern (unter anderem von Google und Cloudflare); gespielt wird direkt zwischen den Rechnern. Wo die Kamera Text oder Codes liest — Campus Clash, YourFilm, Tankspur, ScheinBar und AblesBar —, sendet eine mitgelieferte Komponente aus Googles ML Kit technische Nutzungsdaten an Google. Die Android-Sicherung (in deinem Google-Konto, sofern eingeschaltet, und beim Umzug auf ein neues Gerät) nimmt die Daten von FaNiCa Fun, Instinct Scoring, der Instinct Familie, ZeitAnker, Tankspur, ScheinBar und AblesBar mit, bei NeonPunkt nur den Spielstand; Campus Clash und YourFilm sind davon ausgenommen. Alles Weitere steht in der Datenschutzerklärung jeder App.",
         l: "Datenschutz und die Erklärungen aller Apps" },
       { f: "Was kostet mich das?",
-        a: "Jede App ist kostenlos nutzbar. Premium schaltet Zusatzfunktionen frei und beginnt bei 0,49 € je vier Wochen; die ersten sieben Tage sind immer kostenlos, ohne dass du kündigen musst. Die SetUpLeiste kostet gar nichts, YourFilm ist bis 40 Exemplare kostenlos, und bei Campus Clash und AblesBar steht noch nicht fest, ob und was etwas kosten wird." },
+        a: "Jede App ist kostenlos nutzbar. Premium schaltet Zusatzfunktionen frei und beginnt bei 0,49 € je vier Wochen. Instinct Scoring, NeonPunkt und ScheinBar kannst du sieben Tage kostenlos testen; die Probe endet von selbst, kündigen musst du nichts. FaNiCa Fun hat keine Probezeit. Die SetUpLeiste kostet gar nichts, YourFilm ist bis 40 Exemplare kostenlos, und bei Campus Clash und AblesBar steht noch nicht fest, ob und was etwas kosten wird. PROJECT EMPIRE ist noch nicht erhältlich." },
       { f: "Verliere ich meine Daten, wenn ich nicht bezahle?",
         a: "Nein. Ohne Abo werden nur Funktionen gesperrt, nichts gelöscht. Bei NeonPunkt pausiert das Spiel nach 500 Klicks — Zähler und Bestenlisten bleiben erhalten." },
       { f: "Wer steckt hinter den Apps?",
         a: "Ich, Falk Carstensen. Keine Firma, kein Team, kein Investor. Wenn du eine Mail schreibst, lese und beantworte ich sie selbst." },
       { f: "Kann ich meine Daten mitnehmen?",
-        a: "Bei Instinct Scoring ja: Runden, Schützen und Parcours als Sicherungsdatei, dazu Export als CSV und Rundenberichte als PDF. Ein Backup wird vor dem Einspielen geprüft — Beschädigtes wird nie übernommen." },
+        a: "Bei mehreren Apps ja. Instinct Scoring sichert Runden, Schützen und Parcours als Datei, dazu CSV-Export und Rundenberichte als PDF; ein Backup wird vor dem Einspielen geprüft. YourFilm, ScheinBar und AblesBar legen eine Sicherungsdatei an und spielen sie wieder ein, Campus Clash sichert den Spielstand als Text, Tankspur teilt die Tankungen als CSV." },
       { f: "Kommen noch Updates?",
-        a: "Ja, alle Apps werden weiterentwickelt. Updates laufen über den Store, aus dem du die App installiert hast; die Apps in der Testphase außerhalb der Stores melden eine neue Fassung selbst." }
+        a: "Ja, alle Apps werden weiterentwickelt. Updates laufen über den Store, aus dem du die App installiert hast; Campus Clash, YourFilm, Tankspur, ScheinBar und AblesBar prüfen in ihrer Testfassung außerhalb der Stores auf Knopfdruck selbst, ob es eine neue Fassung gibt." }
     ]
   },
 
@@ -508,7 +535,7 @@ de: {
     datenschutz: "Datenschutz",
     bildquellen: "Bildquellen",
     kooperation: "Instinct Scoring ist eine Kooperation mit Bogensport Instinct.",
-    kein: "Diese Seite setzt keine Cookies und misst nichts. Einzige Verbindung nach außen sind die öffentlichen F1-Renndaten.",
+    kein: "Diese Seite setzt keine Cookies und misst nichts. Verbindung nach außen gibt es nur auf der FaNiCa-Fun-Seite: die öffentlichen Renndaten.",
     zurueck: "Nach oben",
     rechtliches: "Rechtliches"
   },
@@ -525,7 +552,7 @@ en: {
   meta: {
     kapitelWort: "Chapter",
     titel: "FaNiCa — Falk Carstensen · Apps from a one-man studio",
-    beschreibung: "Eleven products from a one-man media studio: FaNiCa Fun, Instinct Scoring, NeonPunkt, the SetUpLeiste for Windows, plus Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar and the Instinct family.",
+    beschreibung: "Twelve products from a one-man media studio: FaNiCa Fun, Instinct Scoring, NeonPunkt, the SetUpLeiste for Windows, plus Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar, the Instinct family and the PC strategy game PROJECT EMPIRE.",
     sprachknopf: "DE",
     sprachtitel: "Auf Deutsch umschalten"
   },
@@ -700,7 +727,7 @@ en: {
     untertitel: "Your film collection, under control",
     claim: "Scan. Shelve. Done.",
     claimZwei: "Your collection, neatly organised.",
-    positionierung: "A collection app for DVDs and Blu-rays: scan the barcode and the app files the film automatically — the work, the edition, your copy. Four separate prices show what your collection cost and what it is worth today. Entirely on your device, no account.",
+    positionierung: "A collection app for DVDs and Blu-rays: scan the barcode and the app files the film automatically — the work, the edition, your copy. Four separate prices show what your collection cost and what it is worth today. Your collection stays on your device, no account.",
 
     mehrKnopf: "Everything about YourFilm"
   },
@@ -853,6 +880,33 @@ en: {
     mehrKnopf: "All about AblesBar"
   },
 
+  empire: {
+    laufEpoche: "Era {n} of {von}",
+    laufTruppen: "Newly trained",
+    laufRohstoffe: "Resources",
+    laufWahl: "Choose an era",
+    laufFuss: "Tap an era to take a look.",
+    laufStoffe: ["Food", "Wood", "Stone", "Gold", "Oil", "Data"],
+    epochen: [
+      { name: "Tribal Age", truppen: "Club warrior · Spearman · Slinger" },
+      { name: "Antiquity", truppen: "Shield fighter · Archer · Heavy rider" },
+      { name: "Middle Ages", truppen: "Man-at-arms · Crossbowman · Knight" },
+      { name: "Renaissance", truppen: "Musketeer · Pike regiment · Cuirassier" },
+      { name: "Industrial Age", truppen: "Line infantry · Field gun · Battle tank" },
+      { name: "Machine and Atomic Age", truppen: "Soldier · Fighter plane · Flak" },
+      { name: "Information and AI Age", truppen: "Modern infantry · Combat drone · Networked battle tank" },
+      { name: "Future Age", truppen: "Exo soldier · Hover tank · Energy weapon platform" }
+    ],
+
+    karteKurz: "Lead an empire through eight eras",
+    statusPille: "In progress — private test build only",
+    untertitel: "Real-time strategy for the PC",
+    claim: "One world. Eight eras.",
+    claimZwei: "Your strategy.",
+    positionierung: "Real-time strategy for Windows: lead a nation from the Tribal Age to the Future Age, alone against the computer or with up to three others. No sign-up.",
+    mehrKnopf: "All about PROJECT EMPIRE"
+  },
+
   /* ============ LIVE — automatically loaded race data ============ */
   produkt: {
     inhaltName: "On this page",
@@ -868,8 +922,8 @@ en: {
     karussellWahl: "Bring a product to the front",
     karussellStand: "{name} in front — {nr} of {anzahl}",
     produkteKennung: "The products",
-    produkteTitel: "Eleven products, one studio",
-    produkteText: "Apps for your phone and one program for Windows — each with its own colour and its own page. Here is the gist in one sentence; every detail is on the product's own page.",
+    produkteTitel: "Twelve products, one studio",
+    produkteText: "Apps for your phone, plus a program and a strategy game for Windows — each with its own colour and its own page. Here is the gist in one sentence; every detail is on the product's own page.",
     filterName: "Filter products by status",
     filterAlle: "All",
     filterLive: "Available",
@@ -907,21 +961,21 @@ en: {
     kennung: "At a glance",
     titel: "Which app is for you?",
     tabelleName: "Comparison of the products, scrolls sideways",
-    text: "Ten products, ten entirely different purposes — three available, six in testing, one still being built. What they share: their core works offline, they don’t profile you, and there is no account with us — profiles such as in FaNiCa Fun live on the device. I only receive what you trigger yourself: feedback, diagnostics or, in FaNiCa Fun, the e-mail addresses for codes and invitations. The Instinct Family is not listed here: it is not a single app but ten, and apart from Instinct Scoring none of them is available yet.",
-    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUpLeiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar"],
+    text: "Eleven products, eleven entirely different purposes — three available, six in testing, two still being built. What they share: their core works offline, they don’t profile you, and there is no account with us — profiles such as in FaNiCa Fun live on the device. I only receive what you trigger yourself: feedback, diagnostics or, in FaNiCa Fun, the e-mail addresses for codes and invitations. The Instinct Family is not listed here: it is not a single app but ten, and apart from Instinct Scoring none of them is available yet.",
+    spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUp­Leiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar", "PROJECT EMPIRE"],
     zeilen: [
-      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view", "Checking and analysing lottery tickets", "Reading meters, checking utility bills"] },
-      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In testing · not in a store yet", "In testing · not in a store yet", "In testing · not in a store yet", "Test build outside the stores", "Test build outside the stores"] },
-      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Both — friends & lending", "Alone", "Alone", "Alone", "Alone"] },
-      { name: "Internet needed", werte: ["Only to sync", "Only for tournaments", "Never", "Only to measure the line", "Never", "Only for film data and friends (optional)", "Never", "Never", "Only for the subscription and downloads", "Only for the update check"] },
-      { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No", "No", "No", "Yes — created once", "Yes — created once", "Account or guest — both work"] },
-      { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects", "13 screens", "14 screens", "5 screens", "12 screens · 3 games", "18 screens"] },
-      { name: "Languages",      werte: ["2", "2", "16", "1", "1", "2", "1", "1", "2", "2"] },
-      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Up to 40 copies", "Clocking, time account, day to month", "Everything — the whole app", "10 tickets · last 10 draws", "Everything — nothing to buy yet"] },
-      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "€0.99 / 4 weeks", "€0.49 / 4 weeks", "—", "€0.49 / 4 weeks", "not decided yet"] },
-      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android", "Android", "Android · iOS", "Android · iOS", "Android · iOS", "Android · iOS"] }
+      { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view", "Checking and analysing lottery tickets", "Reading meters, checking utility bills", "Leading an empire through eight eras"] },
+      { name: "Status",         werte: ["Live in both stores", "On the App Store · Play in testing", "In store testing", "Finished, ready to download", "In progress", "In testing · not in a store yet", "In testing · not in a store yet", "In testing · not in a store yet", "Test build outside the stores", "Test build outside the stores", "In progress · private test build only"] },
+      { name: "Alone or together", werte: ["Both — solo or in a group", "Both", "Alone", "Alone", "Both — friends & alliance", "Both — friends & lending", "Alone", "Alone", "Alone", "Alone", "Both — up to four players"] },
+      { name: "Internet needed", werte: ["Only for sign-up code, race results, sync", "Only for tournaments, course search, updates", "Only to buy Premium", "Only for ping and the line test", "Only for friends, alliance and updates", "Only for film data, friends and updates", "Only to buy Premium", "Only for the update check", "Only for draws, subscription and update check", "Only for the update check", "Only to play over the internet"] },
+      { name: "Profile needed", werte: ["Yes — created once", "No", "No", "No", "No", "No", "No", "Profile or guest — both work", "No — optional", "Account or guest — both work", "No"] },
+      { name: "Size",           werte: ["13 views", "23 screens", "1 screen", "11 readings", "8 areas · 40 subjects", "13 screens", "14 screens", "5 tabs · 8 analyses", "12 screens · 3 games", "20 screens", "8 eras · 2 nations playable"] },
+      { name: "Languages",      werte: ["13 · 2 on Play until the update", "2", "16", "1", "1", "2", "1", "2", "2", "2", "1"] },
+      { name: "Free to use",    werte: ["Predicting — current and last race", "Shooting & scoring rounds", "The first 500 taps", "Everything — the whole program", "Everything — nothing to buy yet", "Up to 40 copies", "Clocking, time account, day to month", "Everything — the whole app", "10 tickets · last 10 draws", "Everything — nothing to buy yet", "Not available yet"] },
+      { name: "Premium from",   werte: ["€1.99 / 4 weeks", "€1.99 — Plus €2.99", "€0.49 / 4 weeks", "—", "not decided yet", "€0.99 / 4 weeks", "€0.49 / 4 weeks", "—", "€0.49 / 4 weeks", "not decided yet", "—"] },
+      { name: "Platform",       werte: ["Android · iOS", "Android · iOS", "Android · iOS", "Windows", "Android", "Android", "Android · iOS", "Android · iOS", "Android", "Android", "Windows"] }
     ],
-    fuss: "Prices apply to the apps with Premium, each with a seven-day free trial; YourFilm instead is free up to 40 copies, and its subscription is not in any store yet. SetUpLeiste is entirely free; for Campus Clash and AblesBar it is not yet decided whether anything will cost money."
+    fuss: "Prices apply to the apps with Premium. Instinct Scoring, NeonPunkt and ScheinBar can be tried free for seven days, and the trial ends on its own; FaNiCa Fun has no trial, and YourFilm is free up to 40 copies instead. The subscriptions of NeonPunkt (only in testing on Google Play so far), YourFilm, ZeitAnker and ScheinBar cannot be bought in any store yet. SetUpLeiste is entirely free; for Campus Clash and AblesBar it is not yet decided whether anything will cost money. PROJECT EMPIRE is not available yet."
   },
 
   fragen: {
@@ -929,22 +983,22 @@ en: {
     titel: "What people usually ask",
     liste: [
       { f: "Do I need an account for the apps?",
-        a: "For most of them, no — you install them and start. A profile is only needed for FaNiCa Fun (several people predict in the same group), Tankspur, ScheinBar and AblesBar (several drivers, players or households on one device — AblesBar also works as a guest). Those profiles live on the device, not with us." },
+        a: "For most of them, no — you install them and start. A profile is only needed for FaNiCa Fun (several people predict in the same group). Tankspur and AblesBar offer one so that several drivers or households on one device keep their data apart — both also work without a profile. In ScheinBar the profile is optional and keeps no data apart. Those profiles live on the device, not with us. PROJECT EMPIRE needs no account, not even for playing over the internet." },
       { f: "Do the apps work without internet?",
-        a: "The core of every app works without a connection, and all data sits on your device. A connection is only needed for what comes from outside: race results and syncing other players in FaNiCa Fun, film data and syncing with friends in YourFilm, downloading draws in ScheinBar. NeonPunkt, ZeitAnker, Tankspur and AblesBar need none at all." },
+        a: "The core of every app works without a connection, and all data sits on your device. A connection is only needed for what comes from outside: race results, syncing other players and the confirmation code when creating a profile in FaNiCa Fun, tournaments and the course search in Instinct Scoring, friends and alliance in Campus Clash, film data and syncing with friends in YourFilm, downloading draws in ScheinBar, ping and the line test in SetUpLeiste, and playing with others over the internet in PROJECT EMPIRE. ZeitAnker and NeonPunkt only need a connection to buy Premium in the store. Campus Clash, YourFilm, Tankspur, ScheinBar and AblesBar also check for updates in their test builds at the push of a button." },
       { f: "What happens to my data?",
-        a: "It is kept on your device. None of the apps has ads or analytics of its own, and no data is sold — the income comes purely from in-app purchases: the subscriptions and, in FaNiCa Fun, an optional tip. The main things that do leave the device: FaNiCa Fun, Campus Clash and YourFilm sync prediction rounds, friends and alliances via the relay servers ntfy.sh and ntfy.envs.net. FaNiCa Fun also sends your e-mail address for confirmation and password codes to my mail service at Google (Apps Script), and for invitations the invitee’s address too; feedback reaches me by e-mail and via ntfy, diagnostics via ntfy at the press of a button. The course search in Instinct Scoring sends the postcode to Nominatim and the coordinates to Overpass (both services for OpenStreetMap data). Where the camera reads text or codes — Campus Clash, YourFilm, Tankspur, ScheinBar and AblesBar — a bundled component of Google’s ML Kit sends technical usage data to Google. Everything else is in each app’s privacy policy.",
+        a: "It is kept on your device. None of the apps has ads or analytics of its own, and no data is sold — the income comes purely from in-app purchases: the subscriptions and, in FaNiCa Fun, an optional tip. The main things that do leave the device: FaNiCa Fun, Campus Clash and YourFilm sync prediction rounds, friends and alliances via the relay servers ntfy.sh and ntfy.envs.net; YourFilm sends an excerpt of your collection there on every start and after changes, even without a connected friend. FaNiCa Fun also sends your e-mail address for confirmation and password codes to my mail service at Google (Apps Script), and for invitations the invitee’s address too; feedback reaches me by e-mail and via ntfy, diagnostics via ntfy at the press of a button. The course search in Instinct Scoring sends the postcode to Nominatim and the coordinates to Overpass (both services for OpenStreetMap data). SetUpLeiste contacts Cloudflare’s 1.1.1.1 continuously for its ping reading and only loads test data from there for the line test at the push of a button. For an internet match, PROJECT EMPIRE exchanges the network addresses of host and players encrypted via the same ntfy servers and asks public STUN servers (including Google’s and Cloudflare’s) for its own address; the match runs directly between the computers. Where the camera reads text or codes — Campus Clash, YourFilm, Tankspur, ScheinBar and AblesBar — a bundled component of Google’s ML Kit sends technical usage data to Google. Android’s backup (in your Google account, if switched on, and when moving to a new device) takes along the data of FaNiCa Fun, Instinct Scoring, the Instinct Family, ZeitAnker, Tankspur, ScheinBar and AblesBar, and only the game state of NeonPunkt; Campus Clash and YourFilm are excluded from it. Everything else is in each app’s privacy policy.",
         l: "Privacy and the statements of every app" },
       { f: "What does it cost me?",
-        a: "Every app is free to use. Premium unlocks extra features and starts at €0.49 per four weeks; the first seven days are always free, with nothing to cancel. SetUpLeiste costs nothing at all, YourFilm is free up to 40 copies, and for Campus Clash and AblesBar it is not yet decided whether anything will cost money." },
+        a: "Every app is free to use. Premium unlocks extra features and starts at €0.49 per four weeks. Instinct Scoring, NeonPunkt and ScheinBar can be tried free for seven days; the trial ends on its own, with nothing to cancel. FaNiCa Fun has no trial. SetUpLeiste costs nothing at all, YourFilm is free up to 40 copies, and for Campus Clash and AblesBar it is not yet decided whether anything will cost money. PROJECT EMPIRE is not available yet." },
       { f: "Do I lose my data if I don't pay?",
         a: "No. Without a subscription features are locked, nothing is deleted. In NeonPunkt the game pauses after 500 taps — counters and leaderboards stay intact." },
       { f: "Who is behind the apps?",
         a: "Me, Falk Carstensen. No company, no team, no investor. If you write an email, I read and answer it myself." },
       { f: "Can I take my data with me?",
-        a: "In Instinct Scoring, yes: rounds, archers and courses as a backup file, plus CSV export and round reports as PDF. A backup is verified before being restored — nothing damaged is ever imported." },
+        a: "In several apps, yes. Instinct Scoring backs up rounds, archers and courses as a file, plus CSV export and round reports as PDF; a backup is verified before it is restored. YourFilm, ScheinBar and AblesBar create a backup file and restore it, Campus Clash saves the game state as text, and Tankspur shares fill-ups as CSV." },
       { f: "Will there be more updates?",
-        a: "Yes, all the apps are still being developed. Updates come through the store you installed the app from; the apps still in testing outside the stores report a new version themselves." }
+        a: "Yes, all the apps are still being developed. Updates come through the store you installed the app from; in their test builds outside the stores, Campus Clash, YourFilm, Tankspur, ScheinBar and AblesBar check for a new version themselves at the push of a button." }
     ]
   },
 
@@ -964,7 +1018,7 @@ en: {
     ],
 
     zahlen: [
-      { zahl: "11", text: "products" },
+      { zahl: "12", text: "products" },
       { zahl: "2", text: "stores" },
       { zahl: "16", text: "languages" }
     ]
@@ -1011,7 +1065,7 @@ en: {
     datenschutz: "Privacy",
     bildquellen: "Image credits",
     kooperation: "Instinct Scoring is a cooperation with Bogensport Instinct.",
-    kein: "This site sets no cookies and measures nothing. Its only outside connection is the public F1 race data.",
+    kein: "This site sets no cookies and measures nothing. The only outside connection is the public race data on the FaNiCa Fun page.",
     zurueck: "Back to top",
     rechtliches: "Legal"
   },

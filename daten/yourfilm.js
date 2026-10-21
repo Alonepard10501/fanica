@@ -1,4 +1,4 @@
-/// Inhalte der Produktseite YourFilm (Stand 2.8.0, 26.09.2026).
+/// Inhalte der Produktseite YourFilm.
 window.PRODUKT_DATEN = {
   app: "yourfilm", seite: "yourfilm", stil: "b-heat",
   symbol: "bilder/marke/app-yourfilm.webp",
@@ -16,11 +16,11 @@ window.PRODUKT_DATEN = {
       { symbol: "barcode", titel: "Scannen statt tippen", text: "Der Barcode auf der Hülle führt über einen Warenkatalog und Wikidata zum Film — jeder Vorschlag will bestätigt werden." },
       { symbol: "ebenen", titel: "Drei Ebenen", text: "Film, Veröffentlichung und Exemplar bleiben getrennt: Blu-ray, 4K und Steelbook desselben Films sind ein Eintrag." },
       { symbol: "euro", titel: "Vier getrennte Preise", text: "UVP und damaliger Ladenpreis an der Ausgabe, Kaufpreis und heutiger Wert am eigenen Stück — keiner wird aus einem anderen abgeleitet." },
-      { symbol: "schloss", titel: "Ohne Konto", text: "Kein Konto, kein eigener Server: Die Sammlung liegt in einer Datenbank auf deinem Handy." }
+      { symbol: "schloss", titel: "Ohne Konto", text: "Kein Konto, kein eigener Server: Die Sammlung liegt in einer Datenbank auf deinem Handy. Ein Auszug ohne Preise, Standort und Notizen liegt für Freunde auf öffentlichen Weiterleitungs-Servern." }
     ],
     erlebnis: { titel: "Vom Barcode zum Regalplatz", kurz: "Scan", text: "Die App prüft die Prüfziffer und ordnet danach Film, Ausgabe und Exemplar zu — hier mit erfundenen Beispielen." },
     galerie: { text: "Fünf Aufnahmen aus Fassung 2.8.0 im Dunkelmodus. Die Filme darin sind Beispiele; die Cover zeigen den Platzhalter der App.", bilder: [
-      { titel: "Die Startseite", text: "Anzahl der Filme, Exemplare und Formate, darunter Film scannen, Sammlung öffnen und Suchen — dazu Ungesehen, Verliehen, Statistik sowie Schauspieler und Regie." },
+      { titel: "Die Startseite", text: "Anzahl der Filme, Exemplare und Formate, darunter Film scannen, Sammlung öffnen und Suchen — dazu Noch ungesehen, Verliehen, Statistik sowie Schauspieler & Regie." },
       { titel: "Die Sammlung", text: "Alle Filme als Cover-Raster mit Schnellfiltern, Formatplakette und Herz für Favoriten; oben schaltest du auf Liste, Sortierung und Filter." },
       { titel: "Die Filmseite", text: "Der Steckbrief mit Jahr, Laufzeit, Land, Freigabe und Exemplaren, mit Knöpfen für Favorit und Gesehen — darunter Handlung, Veröffentlichungen und Besetzung." },
       { titel: "Zimmer, Regal, Fach", text: "Der Reiter Regal gliedert die Sammlung nach Standort; jedes Fach zeigt seine Filme und deren Zahl. Neue Standorte legst du oben an." },
@@ -51,7 +51,7 @@ window.PRODUKT_DATEN = {
       ] },
       { gruppe: "Freunde und Ausleihe", symbol: "gruppe", liste: [
         { symbol: "teilen", name: "Freundescode", text: "Freunde verbinden sich per QR-Code oder Text — gibt einer den Code ein, sind beide verbunden." },
-        { symbol: "regal", name: "Sammlungen ansehen", text: "Die Sammlung eines Freundes erscheint auch dann, wenn eure Apps nie gleichzeitig offen sind." },
+        { symbol: "regal", name: "Sammlungen ansehen", text: "Ein Auszug der Sammlung reist über öffentliche Weiterleitungs-Server (ntfy) und kommt auch an, wenn eure Apps nicht gleichzeitig offen sind — solange zwischen euren Starts höchstens zwölf Stunden liegen." },
         { symbol: "chat", name: "Ausleihe anfragen", text: "Einen Film anfragen; der Besitzer verleiht oder lehnt im Postfach ab." },
         { symbol: "glocke", name: "Benachrichtigungen", text: "Anfragen, Zusagen, Absagen und neue Freundschaften erscheinen als Hinweis und als Benachrichtigung des Telefons." },
         { symbol: "kalender", name: "Verleih festhalten", text: "An wen die Disc ging, seit wann und bis wann sie zurück sein soll." }
@@ -74,6 +74,7 @@ window.PRODUKT_DATEN = {
       { frage: "Zählt ein Film oder eine Disc?", antwort: "Gezählt werden Exemplare, also deine Stücke. Läuft ein Abo später ab, bleiben die 40 zuerst erfassten sichtbar; Ausfuhr und Sicherung gehen immer." },
       { frage: "Brauche ich ein Konto oder einen Schlüssel?", antwort: "Nein. Die Filmdaten kommen ohne Anmeldung aus Wikidata und Wikipedia. Ein TMDb-Schlüssel ist freiwillig und wird nur auf dem Gerät gespeichert." },
       { frage: "Was, wenn der Barcode nicht gefunden wird?", antwort: "Nicht jeder Code steht im Warenkatalog. Dann führt die App durch Fotos von Vorder- und Rückseite, oder du trägst den Film von Hand ein." },
+      { frage: "Was geht von meiner Sammlung hinaus?", antwort: "Titel, Jahr, Format, Ausgabe, Freigabe, Genres, Bewertung, Gesehen, Favorit, die Cover-Adresse aus dem Netz und ob ein Exemplar verliehen ist — nie Kaufpreis, Kaufdatum, Standort, Notizen oder eigene Fotos. Die App schickt diesen Auszug bei jedem Start und nach Änderungen per HTTPS an ntfy.sh bzw. ntfy.envs.net, auch ohne verbundenen Freund und nicht Ende-zu-Ende-verschlüsselt." },
       { frage: "Wann kommt die App in die Stores?", antwort: "YourFilm ist im Test. In Google Play und im App Store steht die App noch nicht; bis dahin kann sich am Umfang noch einiges ändern." }
     ],
     abschluss: { titel: "Deine Sammlung, sauber geordnet.", text: "Vom Barcode bis zum Regalfach.", stand: "Im Test — noch in keinem Store und nichts zu kaufen." }
@@ -85,10 +86,10 @@ window.PRODUKT_DATEN = {
       { symbol: "barcode", titel: "Scan, don’t type", text: "The barcode on the case leads through a product catalogue and Wikidata to the film — every suggestion needs your confirmation." },
       { symbol: "ebenen", titel: "Three layers", text: "Film, release and copy stay separate: Blu-ray, 4K and steelbook of the same film are one entry." },
       { symbol: "euro", titel: "Four separate prices", text: "RRP and original shop price belong to the release, purchase price and current value to your copy — none is derived from another." },
-      { symbol: "schloss", titel: "No account", text: "No account, no own server: the collection lives in a database on your phone." }
+      { symbol: "schloss", titel: "No account", text: "No account, no own server: the collection lives in a database on your phone. An excerpt without prices, location or notes is kept on public relay servers for friends." }
     ],
     erlebnis: { titel: "From barcode to shelf", kurz: "Scan", text: "The app checks the check digit, then assigns film, release and copy — shown here with made-up examples." },
-    galerie: { text: "Five captures of version 2.8.0 in dark mode. The films shown are examples; the covers show the app’s placeholder.", bilder: [
+    galerie: { text: "Five captures of version 2.8.0 in dark mode, with the German interface. The films shown are examples; the covers show the app’s placeholder.", bilder: [
       { titel: "The home screen", text: "Number of films, copies and formats, then Scan movie, Open collection and Search — plus Not watched yet, Lent out, Statistics and Cast & crew." },
       { titel: "The collection", text: "All films as a cover grid with quick filters, format badge and a heart for favourites; the top bar switches to a list, sorting and filters." },
       { titel: "The film page", text: "The fact sheet with year, running time, country, age rating and copies, with buttons for Favorite and Watched — below it plot, releases and cast." },
@@ -120,7 +121,7 @@ window.PRODUKT_DATEN = {
       ] },
       { gruppe: "Friends and loans", symbol: "gruppe", liste: [
         { symbol: "teilen", name: "Friend code", text: "Friends connect by QR code or text — once one enters the code, both are connected." },
-        { symbol: "regal", name: "Browse collections", text: "A friend’s collection shows up even if your apps are never open at the same time." },
+        { symbol: "regal", name: "Browse collections", text: "An excerpt of the collection travels via public relay servers (ntfy) and arrives even if your apps are not open at the same time — as long as no more than twelve hours pass between your starts." },
         { symbol: "chat", name: "Ask to borrow", text: "Request a film; the owner lends or declines in the inbox." },
         { symbol: "glocke", name: "Notifications", text: "Requests, approvals, refusals and new friendships appear as a hint and as a phone notification." },
         { symbol: "kalender", name: "Track loans", text: "Who has the disc, since when and when it is due back." }
@@ -143,6 +144,7 @@ window.PRODUKT_DATEN = {
       { frage: "Does it count films or discs?", antwort: "It counts copies, i.e. your items. If a subscription ends later, the first 40 copies stay visible; export and backup always work." },
       { frage: "Do I need an account or a key?", antwort: "No. Film data comes from Wikidata and Wikipedia without sign-up. A TMDb key is optional and stored only on the device." },
       { frage: "What if the barcode is not found?", antwort: "Not every code is in the product catalogue. The app then guides you through photos of front and back, or you enter the film by hand." },
+      { frage: "What of my collection leaves the device?", antwort: "Title, year, format, edition, age rating, genres, rating, watched, favourite, the online cover address and whether a copy is on loan — never purchase price, purchase date, location, notes or your own photos. The app sends this excerpt over HTTPS to ntfy.sh or ntfy.envs.net on every start and after changes, even without a connected friend and not end-to-end encrypted." },
       { frage: "When will it be in the stores?", antwort: "YourFilm is in testing and not yet on Google Play or the App Store; until then the scope may still change." }
     ],
     abschluss: { titel: "Your collection, neatly sorted.", text: "From barcode to shelf compartment.", stand: "In testing — not in any store yet and nothing to buy." }

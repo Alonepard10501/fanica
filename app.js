@@ -121,6 +121,10 @@
       grund: "linear-gradient(180deg, #05080C, #0D1420 52%, #070A10)",
       akzent: "#2E7FC2", akzentHell: "#6BB4EE"
     },
+    empire: {
+      grund: "linear-gradient(180deg, #02060D, #071324 52%, #03070E)",
+      akzent: "#E6C80B", akzentHell: "#FFDE26"
+    },
     // „Auf einen Blick" vergleicht alle drei Apps — bewusst NEUTRAL,
     // damit die Tabelle nicht nach einer einzelnen App aussieht.
     // (Falk 31.07.: „hat noch die falschen Farben in der Überschrift".)

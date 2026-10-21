@@ -1,4 +1,4 @@
-/// Inhalte der Produktseite ScheinBar (Stand 1.0.16, 22.09.2026).
+/// Inhalte der Produktseite ScheinBar.
 window.PRODUKT_DATEN = {
   app: "scheinbar", seite: "scheinbar", stil: "b-lantern",
   symbol: "bilder/marke/app-scheinbar.webp",
@@ -21,7 +21,7 @@ window.PRODUKT_DATEN = {
     ],
     erlebnis: { titel: "Eine BINGO!-Ziehung zum Ausprobieren", kurz: "Trommel", text: "Die Trommel zieht Kugel um Kugel auf eine Beispielkarte und zählt mit, welche Reihe voll wird — so prüft die App jeden BINGO!-Schein." },
     galerie: {
-      text: "Sechs Aufnahmen aus Fassung 1.0.16 im Dunkelmodus. Die Scheine darin sind Beispiele; die Statistik ist ein Premium-Bereich und stammt aus einer früheren Testfassung.",
+      text: "Sechs Aufnahmen aus Fassung 1.0.16 im Dunkelmodus — die Gewinnanzeige im Schein-Detail ist seit 1.0.17 neu geordnet. Die Scheine darin sind Beispiele; die Statistik ist ein Premium-Bereich und stammt aus einer früheren Testfassung.",
       bilder: [
         { titel: "Der Einstieg", text: "Scannen, von Hand eingeben oder BINGO! live — darunter die aktiven Scheine, unten die vier Bereiche." },
         { titel: "Die Scheine", text: "Nach Teilnahmezeitraum gruppiert, je Schein ein Zeichen: Uhr bei ausstehender Ziehung, Pokal bei Gewinn. Aktiv und Archiv liegen hinter einem Schalter." },
@@ -33,21 +33,21 @@ window.PRODUKT_DATEN = {
     },
     funktionen: [
       { gruppe: "Erfassen", symbol: "scan", liste: [
-        { symbol: "kamera", name: "Schein fotografieren", text: "Aus Kamera oder Galerie; nach der Texterkennung wird die Bildkopie gelöscht." },
-        { symbol: "stift", name: "Korrigieren statt raten", text: "Das Erkannte landet immer zuerst in der Erfassung und kann vor dem Speichern geändert werden." },
-        { symbol: "liste", name: "Scan erklärt sich", text: "Über dem Formular steht, welche Angaben aus dem Bild kamen — einzelne Zahlen werden vorgewählt." },
+        { symbol: "kamera", name: "Schein fotografieren", text: "Aus Kamera oder Galerie; ist der Text gelesen, löscht die App die Bildkopie." },
+        { symbol: "stift", name: "Korrigieren statt raten", text: "Das Erkannte landet immer zuerst in der Erfassung; beim BINGO!-Schein bleiben unsicher gelesene Felder leer statt falsch." },
+        { symbol: "liste", name: "Scan erklärt sich", text: "Über dem Formular steht, welche Angaben aus dem Bild kamen — bei BINGO! auch, wie viele der 25 Zahlen sicher gelesen sind." },
         { symbol: "rechner", name: "Auch von Hand", text: "Zahlen im Raster antippen ist ein gleichwertiger Weg, kein Notbehelf." },
         { symbol: "schein", name: "Alles vom Schein", text: "Losnummer, Einsatz, Quittungsnummer und die angekreuzten Zusatzlotterien werden mit erfasst." }
       ] },
       { gruppe: "Prüfen", symbol: "pokal", liste: [
-        { symbol: "pokal", name: "Gewinnklasse je Ziehung", text: "Neun Klassen bei Lotto, zwölf bei Eurojackpot — je Ziehung im Teilnahmezeitraum." },
-        { symbol: "ebenen", name: "BINGO!-Reihen", text: "Volle Reihen der 25er-Karte zählen: waagerecht, senkrecht und diagonal." },
+        { symbol: "pokal", name: "Gewinnklasse je Ziehung", text: "Neun Klassen bei Lotto, zwölf bei Eurojackpot — je Ziehung im Teilnahmezeitraum, die neueste oben, eigene Treffer farbig." },
+        { symbol: "ebenen", name: "BINGO!-Reihen", text: "Volle Reihen der 25er-Karte zählen — waagerecht, senkrecht und diagonal; das B-I-N-G-O-Raster zeigt sie umrandet." },
         { symbol: "ziel", name: "Zusatzspiele", text: "Spiel 77, SUPER 6 und die BINGO!-Superchance werden aus Losnummer, Serie und Los mitgerechnet." },
         { symbol: "wiederholen", name: "Immer frisch gerechnet", text: "Gewinne werden nie gespeichert — kommt eine Ziehung dazu, stimmt jeder Schein sofort." },
         { symbol: "auge", name: "Zuletzt gezogen", text: "Zahlen aus den letzten fünf Ziehungen sind grau hinterlegt, per Augen-Symbol abschaltbar." }
       ] },
       { gruppe: "Ziehungen", symbol: "kugel", liste: [
-        { symbol: "download", name: "Automatisch nachladen", text: "Eine gepflegte Liste der letzten zwölf Monate kommt beim Start, Vorhandenes bleibt unberührt." },
+        { symbol: "download", name: "Automatisch nachladen", text: "Die Liste der letzten zwölf Monate kommt bei jedem Start und, liegt der letzte Abruf sechs Stunden zurück, auch beim Zurückkehren in die App; Vorhandenes bleibt unberührt." },
         { symbol: "kalender", name: "Archiv je Spiel", text: "BINGO!, Lotto 6aus49 und Eurojackpot getrennt, jede Ziehung mit Datum und Zusatzzahl." },
         { symbol: "kugel", name: "BINGO! live", text: "Während der Sendung Zahlen im B-I-N-G-O-Raster antippen; gespeichert wird ab 22 Zahlen." },
         { symbol: "offline", name: "Auf dem Gerät", text: "Geholte Ziehungen liegen lokal — Prüfen und Auswerten gehen auch ohne Verbindung." }
@@ -75,8 +75,8 @@ window.PRODUKT_DATEN = {
     fragen: [
       { frage: "Ist ScheinBar ein Glücksspiel?", antwort: "Nein. Die App nimmt keine Tipps an, verkauft und vermittelt keine Scheine, lost nichts aus und zahlt nichts aus. Sie verwaltet Scheine, die schon gespielt sind." },
       { frage: "Sagt die Statistik Zahlen voraus?", antwort: "Nein. Sie beschreibt, was gezogen wurde, und verspricht keine besseren Gewinnchancen." },
-      { frage: "Kostet ScheinBar etwas?", antwort: "Scannen, Gewinnprüfung, BINGO! live, Sicherung, zehn aktive Scheine und die letzten zehn Ziehungen je Spiel sind frei. Premium öffnet die Statistik, das Zwölf-Monats-Archiv, unbegrenzt viele Scheine und den Excel-Import; kaufen lässt es sich erst über den Store." },
-      { frage: "Brauche ich Internet?", antwort: "Nur zum Holen der Ziehungen, für einen Abo-Kauf und die Update-Prüfung. Erfassen, Prüfen und Auswerten laufen ohne Verbindung." },
+      { frage: "Kostet ScheinBar etwas?", antwort: "Scannen, Gewinnprüfung, BINGO! live, Sicherung, zehn aktive Scheine und die letzten zehn Ziehungen je Spiel sind frei. Premium öffnet die Statistik, das Zwölf-Monats-Archiv, unbegrenzt viele Scheine und den Excel-Import und lässt sich einmalig sieben Tage kostenlos testen; kaufen lässt es sich erst, wenn die Abos im Store freigeschaltet sind." },
+      { frage: "Brauche ich Internet?", antwort: "Nur zum Holen der Ziehungen, für einen Abo-Kauf und die Update-Prüfung. Erfassen, Prüfen und Auswerten laufen ohne Verbindung. Googles ML Kit, das die Texterkennung mitbringt, kann technische Nutzungsdaten an Google senden — Foto, Zahlen und Scheine gehören nicht dazu." },
       { frage: "Wann kommt die App in die Stores?", antwort: "ScheinBar läuft als Testfassung außerhalb der Stores und kommt über einen Update-Knopf in der App. Ein Store-Eintrag steht noch aus." }
     ],
     abschluss: { titel: "Dein Schein, nachgerechnet.", text: "Fotografieren genügt — den Rest prüft die App.", stand: "Im Test — Testfassung außerhalb der Stores, noch nichts zu kaufen." }
@@ -92,7 +92,7 @@ window.PRODUKT_DATEN = {
     ],
     erlebnis: { titel: "A BINGO! draw to try", kurz: "Drum", text: "The drum draws ball after ball onto a sample card and counts which line fills up — the same way the app checks every BINGO! ticket." },
     galerie: {
-      text: "Six captures of version 1.0.16 in dark mode. The tickets in them are examples; the statistics are a Premium area and come from an earlier test build.",
+      text: "Six captures of version 1.0.16 in dark mode — the results in the ticket detail have been rearranged since 1.0.17. The tickets in them are examples; the statistics are a Premium area and come from an earlier test build.",
       bilder: [
         { titel: "The starting point", text: "Scan, type it in or BINGO! live — your active tickets below, the four areas at the bottom." },
         { titel: "Your tickets", text: "Grouped by participation period, one sign per ticket: a clock while the draw is pending, a trophy for a win. Active and archive sit behind one switch." },
@@ -104,21 +104,21 @@ window.PRODUKT_DATEN = {
     },
     funktionen: [
       { gruppe: "Capture", symbol: "scan", liste: [
-        { symbol: "kamera", name: "Photograph the ticket", text: "From camera or gallery; the image copy is deleted after text recognition." },
-        { symbol: "stift", name: "Correct, do not guess", text: "What was recognised always lands in the entry form first and can be changed before saving." },
-        { symbol: "liste", name: "The scan explains itself", text: "Above the form it says which details came from the image — single numbers are preselected." },
+        { symbol: "kamera", name: "Photograph the ticket", text: "From camera or gallery; once the text is read, the app deletes the image copy." },
+        { symbol: "stift", name: "Correct, do not guess", text: "What was recognised always lands in the entry form first; on a BINGO! ticket, uncertain cells stay empty instead of wrong." },
+        { symbol: "liste", name: "The scan explains itself", text: "Above the form it says which details came from the image — for BINGO! also how many of the 25 numbers were read reliably." },
         { symbol: "rechner", name: "By hand as well", text: "Tapping numbers in the grid is an equal route, not a fallback." },
         { symbol: "schein", name: "Everything on the ticket", text: "Ticket number, stake, receipt number and the ticked extra lotteries are captured too." }
       ] },
       { gruppe: "Check", symbol: "pokal", liste: [
-        { symbol: "pokal", name: "Prize tier per draw", text: "Nine tiers for Lotto, twelve for Eurojackpot — for every draw in the entry period." },
-        { symbol: "ebenen", name: "BINGO! lines", text: "Full lines on the 25-number card count: across, down and diagonal." },
+        { symbol: "pokal", name: "Prize tier per draw", text: "Nine tiers for Lotto, twelve for Eurojackpot — for every draw in the entry period, newest first, your own hits in colour." },
+        { symbol: "ebenen", name: "BINGO! lines", text: "Full lines on the 25-number card count — across, down and diagonal; the B-I-N-G-O grid shows them outlined." },
         { symbol: "ziel", name: "Extra games", text: "Spiel 77, SUPER 6 and the BINGO! Superchance are worked out from ticket number, series and draw number." },
         { symbol: "wiederholen", name: "Always freshly calculated", text: "Wins are never stored — when a draw is added, every ticket is right at once." },
         { symbol: "auge", name: "Recently drawn", text: "Numbers from the last five draws are greyed, switchable with the eye icon." }
       ] },
       { gruppe: "Draws", symbol: "kugel", liste: [
-        { symbol: "download", name: "Fetched automatically", text: "A maintained list of the last twelve months arrives on start; what is there stays untouched." },
+        { symbol: "download", name: "Fetched automatically", text: "The list of the last twelve months arrives on every start and, if the last fetch was six hours ago, also when you return to the app; what is there stays untouched." },
         { symbol: "kalender", name: "Archive per game", text: "BINGO!, Lotto 6aus49 and Eurojackpot apart, every draw with date and bonus number." },
         { symbol: "kugel", name: "BINGO! live", text: "Tap the numbers in the B-I-N-G-O grid during the broadcast; saving works from 22 numbers." },
         { symbol: "offline", name: "On the device", text: "Fetched draws are stored locally — checking and analysing work without a connection." }
@@ -146,8 +146,8 @@ window.PRODUKT_DATEN = {
     fragen: [
       { frage: "Is ScheinBar gambling?", antwort: "No. The app takes no bets, neither sells nor brokers tickets, draws nothing and pays nothing out. It manages tickets that have already been played." },
       { frage: "Do the statistics predict numbers?", antwort: "No. They describe what was drawn and promise no better chances of winning." },
-      { frage: "Does ScheinBar cost anything?", antwort: "Scanning, checking wins, BINGO! live, backups, ten active tickets and the last ten draws per game are free. Premium unlocks the statistics, the twelve-month archive, unlimited tickets and the Excel import; it can only be bought through the store." },
-      { frage: "Do I need internet?", antwort: "Only to fetch draws, for a subscription purchase and the update check. Capturing, checking and analysing work offline." },
+      { frage: "Does ScheinBar cost anything?", antwort: "Scanning, checking wins, BINGO! live, backups, ten active tickets and the last ten draws per game are free. Premium unlocks the statistics, the twelve-month archive, unlimited tickets and the Excel import, and can be tried once for seven days free of charge; it can only be bought once the subscriptions are live in the store." },
+      { frage: "Do I need internet?", antwort: "Only to fetch draws, for a subscription purchase and the update check. Capturing, checking and analysing work offline. Google’s ML Kit, which provides the text recognition, may send technical usage data to Google — photos, numbers and tickets are not part of it." },
       { frage: "When will it be in the stores?", antwort: "ScheinBar runs as a test build outside the stores and is updated through a button inside the app. A store listing is still to come." }
     ],
     abschluss: { titel: "Your ticket, checked.", text: "A photo is enough — the app checks the rest.", stand: "In testing — test build outside the stores, nothing to buy yet." }

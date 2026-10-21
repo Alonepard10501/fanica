@@ -42,7 +42,7 @@
     Diese Seite setzt <strong>keine Cookies</strong>, bindet <strong>keine Schriften oder
     Skripte von fremden Servern</strong> ein, misst nichts und legt kein Profil über dich
     an. Einzige Verbindung nach außen sind die unten beschriebenen Live-Renndaten von
-    api.jolpi.ca, die beim Seitenaufruf automatisch geladen werden.
+    api.jolpi.ca, die die FaNiCa-Fun-Seite beim Aufruf lädt.
     Es gibt kein Kontaktformular, keine Anmeldung und keine Analyse-Werkzeuge. Deshalb
     erscheint auch kein Zustimmungsbanner — es gibt nichts, dem du zustimmen müsstest.
   </p>
@@ -67,15 +67,25 @@
     Die Apps speichern deine Inhalte grundsätzlich auf deinem Gerät und brauchen kein
     Konto. Einzelne Funktionen sprechen jedoch Dienste im Internet an — etwa
     F1-Renndaten bei FaNiCa Fun, die Filmdatenbanken bei YourFilm, ntfy-Relais für den
-    Runden- bzw. Freunde-Abgleich bei FaNiCa Fun, Campus Clash und YourFilm sowie Turnier-
-    und Update-Abfragen bei Instinct Scoring. Verbindest du in YourFilm Freunde, gehen ein
-    Auszug deiner Sammlung und die Ausleih-Nachrichten über ntfy.sh bzw. ntfy.envs.net an
-    sie — per HTTPS, aber nicht Ende-zu-Ende-verschlüsselt. Wo die Kamera Text oder Codes
+    Runden- bzw. Freunde-Abgleich bei FaNiCa Fun, Campus Clash und YourFilm, Turnier- und
+    Update-Abfragen bei Instinct Scoring, das Nachladen der Ziehungen und die Abo-Abfrage bei
+    ScheinBar sowie die Update-Abfrage auf Knopfdruck bei Campus Clash, YourFilm, Tankspur,
+    ScheinBar und AblesBar (bei GitHub). YourFilm schickt einen Auszug deiner Sammlung bei
+    jedem Start und nach Änderungen über ntfy.sh bzw. ntfy.envs.net, damit verbundene Freunde
+    ihn sehen; die Ausleih-Nachrichten laufen ebenso — per HTTPS, aber nicht
+    Ende-zu-Ende-verschlüsselt. Die SetUpLeiste für Windows
+    fragt für ihre Ping-Anzeige laufend den Cloudflare-Server 1.1.1.1 an und lädt für die
+    Leitungsmessung nur auf Knopfdruck Testdaten von speed.cloudflare.com; ihre Werte
+    bleiben in %APPDATA%\SetUpLeiste. Wo die Kamera Text oder Codes
     liest — bei Campus Clash, YourFilm, Tankspur, ScheinBar und AblesBar —, ist Googles
     ML&nbsp;Kit eingebaut. Eine mitgelieferte Komponente (Google Data Transport) sendet
     technische Nutzungsdaten an Google, ohne Zutun der App und ohne Abschaltmöglichkeit;
-    Bilder und deine Eingaben gehören laut Google nicht dazu, ich erhalte davon nichts. Was
-    genau, steht in der Erklärung der jeweiligen App:
+    Bilder und deine Eingaben gehören laut Google nicht dazu, ich erhalte davon nichts. Die
+    Android-Sicherung (in deinem Google-Konto, sofern eingeschaltet, und beim Umzug auf ein
+    neues Gerät) nimmt die Daten von FaNiCa Fun, Instinct Scoring, der Instinct Familie,
+    ZeitAnker, Tankspur, ScheinBar und AblesBar mit, bei NeonPunkt nur den Spielstand;
+    Campus Clash und YourFilm sind davon ausgenommen. Was genau, steht in der Erklärung der
+    jeweiligen App:
   </p>
   <ul>
     <li>
@@ -112,13 +122,22 @@
     </li>
     <li>
       <a href="https://alonepard10501.github.io/fanica-fun/ablesebar-datenschutz.html"
-         target="_blank" rel="noopener">AblesBar — Datenschutzerklärung</a>
+         target="_blank" rel="noopener">AblesBar — Datenschutzerklärung (dort noch unter dem alten Namen AbleseBar)</a>
     </li>
   </ul>
+  <p>
+    PROJECT EMPIRE ist noch nicht veröffentlicht und hat deshalb noch keine eigene
+    Erklärung. Die Testfassung braucht kein Konto und sendet nur beim Spiel über das
+    Internet etwas: Gastgeber und Mitspieler tauschen ihre Netzwerkadressen verschlüsselt über
+    ntfy.sh und ntfy.envs.net aus, das Spiel fragt öffentliche STUN-Server von Google,
+    Cloudflare, Nextcloud und sipgate nach der eigenen Adresse, und der Gastgeber bittet seinen
+    Router um eine Portfreigabe. Die Partie selbst läuft direkt
+    zwischen den Rechnern; ich erhalte davon nichts.
+  </p>
 
   <h2>Live-Renndaten (api.jolpi.ca)</h2>
   <p>
-    Die Startseite und die FaNiCa-Fun-Seite laden aktuelle F1-Daten (Kalender, Ergebnisse,
+    Die FaNiCa-Fun-Seite lädt aktuelle Renndaten (Kalender, Ergebnisse,
     nächstes Rennen) automatisch von der öffentlichen Quelle api.jolpi.ca (Jolpica/Ergast).
     Dabei erhält deren Server technisch bedingt deine IP-Adresse — weitere Daten gehen
     nicht mit. Die abgerufenen Renndaten werden bis zu 6 Stunden lokal in deinem Browser
@@ -152,7 +171,7 @@
     Falk Carstensen · <a href="mailto:fanicafuntipp@gmail.com">fanicafuntipp@gmail.com</a><br>
     Vollständige Anschrift im <a href="impressum.html">Impressum</a>.
   </p>
-  <p class="leise">Stand: 20. Oktober 2026</p>
+  <p class="leise">Stand: 21. Oktober 2026</p>
 
   <p style="margin-top:3rem">
     <a class="knopf knopf-rand" href="index.html">← Zurück zur Startseite</a>

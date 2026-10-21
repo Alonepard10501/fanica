@@ -1,4 +1,4 @@
-/// Inhalte der Produktseite Instinct Familie (Stand 1.0.0, 28.09.2026).
+/// Inhalte der Produktseite Instinct Familie.
 window.PRODUKT_DATEN = {
   app: "familie", seite: "instinct-familie", stil: "b-grass",
   symbol: "bilder/marke/app-familie.webp",

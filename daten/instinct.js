@@ -1,4 +1,4 @@
-/// Inhalte der Produktseite Instinct Scoring (Stand 1.0.1, 04.08.2026).
+/// Inhalte der Produktseite Instinct Scoring.
 window.PRODUKT_DATEN = {
   app: "instinct", seite: "instinct-scoring", stil: "b-grass",
   symbol: "bilder/marke/app-instinct.webp",
@@ -33,7 +33,6 @@ window.PRODUKT_DATEN = {
       ] },
       { gruppe: "Parcours und Ausrüstung", symbol: "ort", liste: [
         { symbol: "ort", name: "Eigene Parcours", text: "Jedes Ziel mit Tiermotiv, Entfernung, Pflock und Steigung — einmal angelegt, immer in der Runde." },
-        { symbol: "kamera", name: "Foto je Ziel", text: "Das Zielfoto direkt aus der App aufnehmen." },
         { symbol: "suche", name: "Parcours-Suche", text: "Parcours in der Nähe nach Postleitzahl und Umkreis finden (Premium+)." },
         { symbol: "pfeil", name: "Bögen und Pfeilsetups", text: "Typ, Zuggewicht, Standhöhe und Tiller, dazu Schaft, Spine, Länge, FOC, Befiederung und Spitze." },
         { symbol: "stapel", name: "Ausrüstung je Runde", text: "Die Ausrüstung wird je Runde festgehalten — die Historie stimmt auch nach einem Umbau." },
@@ -110,7 +109,6 @@ window.PRODUKT_DATEN = {
       ] },
       { gruppe: "Courses and gear", symbol: "ort", liste: [
         { symbol: "ort", name: "Your own courses", text: "Every target with animal, distance, peg and slope — set up once, always in the round." },
-        { symbol: "kamera", name: "Photo per target", text: "Take the target photo straight from the app." },
         { symbol: "suche", name: "Course search", text: "Find courses nearby by postcode and radius (Premium+)." },
         { symbol: "pfeil", name: "Bows and arrow setups", text: "Type, draw weight, brace height and tiller, plus shaft, spine, length, FOC, fletching and point." },
         { symbol: "stapel", name: "Gear per round", text: "The gear is recorded for each round — the history stays right even after a change." },

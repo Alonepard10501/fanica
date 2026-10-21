@@ -1,4 +1,4 @@
-/// Inhalte der Produktseite SetUpLeiste (Stand 1.0.0, 19.08.2026).
+/// Inhalte der Produktseite SetUpLeiste.
 window.PRODUKT_DATEN = {
   app: "setupleiste", seite: "setupleiste", stil: "b-lantern",
   symbol: "bilder/marke/app-setupleiste.webp",
@@ -51,7 +51,7 @@ window.PRODUKT_DATEN = {
       { frage: "Warum fehlen bei mir die Grafikkarten-Felder?", antwort: "Die vier GPU-Felder brauchen eine NVIDIA-Karte. Auf Rechnern mit AMD- oder nur Intel-Grafik blenden sie sich aus." },
       { frage: "Warum bleibt die Prozessor-Temperatur leer?", antwort: "Windows gibt sie nur mit Administratorrechten heraus. Die Grafikkarten-Temperatur kommt immer." },
       { frage: "Sind alle Werte gemessen?", antwort: "Nein. Die Prozessor-Watt sind aus der Auslastung geschätzt, die Akku-mAh umgerechnet. Der Stromverbrauch zählt nur Grafikkarte und Prozessor, nicht den ganzen Rechner." },
-      { frage: "Wo liegen meine Daten?", antwort: "In drei Textdateien unter %APPDATA%\\SetUpLeiste. Übertragen wird nichts; nur die Geschwindigkeitsmessung lädt auf Knopfdruck kurz Testdaten." }
+      { frage: "Wo liegen meine Daten?", antwort: "In drei Textdateien unter %APPDATA%\\SetUpLeiste. Über dich wird nichts übertragen: Für den Ping fragt die Leiste etwa alle zwei Sekunden den Cloudflare-Server 1.1.1.1 an, und die Geschwindigkeitsmessung lädt nur auf Knopfdruck kurz Testdaten von Cloudflare." }
     ],
     abschluss: { titel: "Was dein Rechner gerade tut.", text: "Eine schmale Zeile, ganz oben." }
   },
@@ -102,8 +102,9 @@ window.PRODUKT_DATEN = {
       { frage: "What does SetUpLeiste cost?", antwort: "Nothing. SetUpLeiste is free, with no account and no ads." },
       { frage: "Is it available in English?", antwort: "No. The program and its installer are in German only." },
       { frage: "Why are the graphics card fields missing?", antwort: "The four GPU fields need an NVIDIA card. On machines with AMD or Intel-only graphics they hide themselves." },
+      { frage: "Why does the processor temperature stay empty?", antwort: "Windows only reveals it with administrator rights. The graphics card temperature always shows." },
       { frage: "Are all values measured?", antwort: "No. Processor watts are estimated from the load, battery mAh is converted. Power consumption counts only graphics card and processor, not the whole machine." },
-      { frage: "Where is my data stored?", antwort: "In three text files under %APPDATA%\\SetUpLeiste. Nothing is sent; only the speed test briefly loads test data at the push of a button." }
+      { frage: "Where is my data stored?", antwort: "In three text files under %APPDATA%\\SetUpLeiste. Nothing about you is sent: for the ping the bar contacts Cloudflare’s server 1.1.1.1 about every two seconds, and the speed test only briefly loads test data from Cloudflare at the push of a button." }
     ],
     abschluss: { titel: "What your machine is doing.", text: "One slim line, right at the top." }
   }

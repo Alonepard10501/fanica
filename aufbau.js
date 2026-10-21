@@ -40,7 +40,7 @@
     ["fanica-fun", "FaNiCa Fun"], ["instinct-scoring", "Instinct Scoring"], ["neonpunkt", "NeonPunkt"],
     ["setupleiste", "SetUpLeiste"], ["campus-clash", "Campus Clash"], ["yourfilm", "YourFilm"],
     ["zeitwissen", "ZeitAnker"], ["instinct-familie", "Instinct Familie"], ["tankspur", "Tankspur"],
-    ["scheinbar", "ScheinBar"], ["ablesbar", "AblesBar"]
+    ["scheinbar", "ScheinBar"], ["ablesbar", "AblesBar"], ["project-empire", "PROJECT EMPIRE"]
   ];
 
   const sym = (name) => {
@@ -96,7 +96,7 @@
         <button type="button" class="gal-pfeil" data-schritt="1" aria-label="${WORTE.weiter}">${sym("rechts")}</button>
       </div>` : "";
     const s = abschnitt("bilder", WORTE.bilder, `
-      <div class="galerie-neu${bilder.length < 3 ? " wenige" : ""}">
+      <div class="galerie-neu${bilder.length < 3 ? " wenige" : ""}${D.quer ? " quer" : ""}">
         <ul class="gal-spur" tabindex="0" aria-label="${sicher(WORTE.bilder[0])}">${teile}</ul>${steuer}
       </div>`, (hol("galerie") || {}).text);
     return s;
@@ -141,7 +141,7 @@
     const texte = (hol("galerie") || {}).bilder || [];
     if (!dialog) {
       dialog = document.createElement("dialog");
-      dialog.className = "gal-gross";
+      dialog.className = "gal-gross" + (D.quer ? " quer" : "");
       dialog.setAttribute("aria-label", WORTE.bilder[0]);
       dialog.innerHTML = `
         <button type="button" class="gg-zu" aria-label="${WORTE.schliessen}">${sym("kreuz")}</button>

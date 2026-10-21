@@ -1,4 +1,4 @@
-/// Inhalte der Produktseite NeonPunkt (Stand 2.30, 08.09.2026).
+/// Inhalte der Produktseite NeonPunkt.
 window.PRODUKT_DATEN = {
   app: "neonpunkt", seite: "neonpunkt", stil: "b-helix",
   symbol: "bilder/marke/app-neonpunkt.webp",

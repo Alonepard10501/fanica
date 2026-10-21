@@ -2,7 +2,7 @@
 name: stand-entwickler-website
 description: "Die eine Stand-Datei für die Entwickler-Website: aktueller Stand, geltende Regeln der Seite, echte offene Punkte."
 tags: [projekt, webseite, stand]
-stand: 2026-10-20
+stand: 2026-10-21
 ---
 
 # STAND — Entwickler-Website
@@ -24,18 +24,18 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
 | Git | `origin/main` = Canvas-Schriftzug, grünes Strahlen bis zu den Logos (19.10.2026, Falk: „pushen, dass es wirklich sichtbar ist“), live nachgemessen — Push nur auf Falks Wort |
-| Produkte | elf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 |
+| Produkte | zwölf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 · PROJECT EMPIRE 12 (PC-Spiel, seit 21.10.2026) |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
-| Store-Gegenprobe 18.10.2026 | FaNiCa (20.10.2026) Play 1.209.0, Apple 1.209.0 · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` (SetUpLeiste-Download zuletzt 01.10.2026: 200) |
-| „Neu in der App“ (`daten/<app>.js`) | FaNiCa 1.209.0 · Campus Clash 4.18.0 · ScheinBar 1.0.19 · YourFilm 2.8.0 · AblesBar 1.4.0 · Instinct 1.0.1 — `aufbau.js` zeigt höchstens fünf Punkte, DE und EN |
-| Stand je Produkt | erhältlich: FaNiCa Fun, Instinct Scoring, SetUpLeiste · im Test (nicht in den Stores): NeonPunkt (Play-Test), YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar · in Arbeit: Campus Clash, Instinct Familie — steht als `data-stufe` an jeder Produktkarte in `index.html` |
+| Store-Gegenprobe 21.10.2026 | FaNiCa Play 1.209.0 (18.10.2026), Apple 1.210.0 (20.10.2026) · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` · SetUpLeiste-Download 206 auf Teilabruf, einziges Release `setupleiste-v1.0.0` |
+| „Neu in der App“ (`daten/<app>.js`) | FaNiCa 1.210.0 (App Store; Play hat 1.209.0 — nach dem Play-Update den Zusatz und den Play-Hinweis bei den Sprachen entfernen) · Campus Clash 4.18.0 · ScheinBar 1.0.19 · YourFilm 2.8.0 · AblesBar 1.4.0 · Instinct 1.0.1 — `aufbau.js` zeigt höchstens fünf Punkte, DE und EN |
+| Stand je Produkt | erhältlich: FaNiCa Fun, Instinct Scoring, SetUpLeiste · im Test (nicht in den Stores): NeonPunkt (Play-Test), YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar · in Arbeit: Campus Clash, Instinct Familie, PROJECT EMPIRE — steht als `data-stufe` an jeder Produktkarte in `index.html` |
 
 ## So arbeitet die Seite heute (nicht brechen)
 
 **Inhalt und Aufbau**
 - Alle Texte DE + EN stehen in `texte.js` — nur dort Inhalte ändern, neuer Text immer in
   beiden Sprachblöcken.
-- Startseite seit 01.10.2026: Hero mit Karussell → „Die Produkte“ (elf Karten im Raster,
+- Startseite seit 01.10.2026: Hero mit Karussell → „Die Produkte“ (zwölf Karten im Raster,
   Filter Alle/Erhältlich/Im Test/In Arbeit, Verteilungsbalken) → Vergleich → Über mich →
   Fragen → Kontakt. Je Karte: Nummer, Stand, Symbol, Name, Kernsatz, Bezugswege aus `BEZUG`,
   Knopf mit Falks Hover-Effekt. Alles Ausführliche steht auf der Unterseite je Produkt.
@@ -61,7 +61,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   Verworfen: Magenta mit Spiegelung (`0ad4574`), SVG-Umweg (`7ba0e4b`), reine CSS-Schichten
   (`3d3cc90`, `aa4027e`). Kein Knopf und kein Satz im Kopf; der Leitsatz steht als Abschluss unter dem
   Produktraster (`start.leitsatz`). Karussell bei 1366×768 ab 366 px.
-- Produktseiten (alle elf) auf einem Gerüst: Kopfkarte (`produkt.css`, `wege.js`) und darunter
+- Produktseiten (alle zwölf) auf einem Gerüst: Kopfkarte (`produkt.css`, `wege.js`) und darunter
   alles aus EINER Vorlage `aufbau.js` + `aufbau.css`, befüllt aus `daten/<app>.js` (DE + EN,
   Symbole aus `symbole.js`). Reihenfolge: Auf einen Blick → Erlebnis (der app-eigene Block, steht
   als `<section class="erlebnis">` im HTML) → So sieht es aus (Galerie im Telefonrahmen, Pfeile,
@@ -78,7 +78,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   bei reduzierter Bewegung aus.
 - Jede Unterseite hat ein eigenes Kapitel-Erlebnis im ersten Bildschirm.
   → [[kapitel-erlebnis-je-app-statt-gleicher-kopf]]
-- Vergleichstabelle „Welche App ist für dich?“ führt zehn Produkte in voller Länge; die
+- Vergleichstabelle „Welche App ist für dich?“ führt elf Produkte (`app-1` … `app-11`, PROJECT EMPIRE ist `app-11`) in voller Länge; die
   Instinct Familie steht bewusst nicht drin (keine einzelne App). Farbe und Breite hängen an
   der Spaltennummer `app-N`, nicht am Namen.
 - Ein neues Produkt braucht die volle Checkliste im Skill.
@@ -132,6 +132,13 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 
 - Campus Clash wird nicht verlinkt — die GitHub-Fassung ist privat (Falk 01.10.2026).
 
+- PROJECT EMPIRE (`project-empire.html`, `daten/empire.js`, Erlebnis `epochenlauf.js`/`.css`, Farbe
+  Gold `#FFDE26`/`#E6C80B`, Knopf `b-heat`): kurz und knapp, KEIN anderes Spiel und keine Spielmarke
+  nennen (Falk 21.10.2026, rechtlich) → [[project-empire-oeffentlich-kurz-und-ohne-fremde-spiele]].
+  Stand „In Arbeit“, kein Download, kein Preis. Bilder nur echte Spielaufnahmen ohne private Daten
+  (die Internet-Lobby-Aufnahme zeigt Falks IP-Adresse und bleibt draußen). Fakten aus den
+  Spieldaten (`Content\Empire\Data`, `Core\data`), nie aus der Planung.
+
 - App-Name „AblesBar“ (Falks Entscheidung 01.10.2026); Datei `ablesbar.html`; `ablesebar.html` ist nur noch eine Weiterleitung für alte Links.
 
 ## Bekannt und bewusst belassen
@@ -148,12 +155,12 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
    Bögen, Spine-Rechner, Trophäen, Bezugsleiste mit QR …) greifen auf Container, die es auf
    keiner Seite mehr gibt; ihre Texte sind aus `texte.js` entfernt. Beim nächsten Umbau
    mitentfernen.
-3. **Neue Dunkelmodus-Aufnahmen fehlen** (Galerie entfällt bis dahin): Campus Clash (alle alten
-   Bilder zeigen den Stand vor 4.x), YourFilm (Reiter „Suche“ statt „Freunde“), AblesBar (Reiter
-   „Zähler“ statt „Objekt“, alte Gas-Zählermiete), Instinct Familie (nur Hellmodus), NeonPunkt
-   (nur gerenderte Bilder). Tankspur hat nur zwei, ScheinBar drei, FaNiCa drei aktuelle.
-4. **Zahlwort „Elf Produkte“** steht jetzt auch in `start.produkteTitel` (DE + EN) — beim
-   nächsten Produkt mitziehen.
+3. **Galerien mit älterer Fassung** (die Galerie-Texte sagen das): Campus Clash zeigt 4.13.0
+   (Schule und Markt seit 4.16/4.18 neu geordnet), ScheinBar 1.0.16 (Schein-Detail vor 1.0.17) und
+   eine Statistik aus einer früheren Testfassung, FaNiCa 1.200.0, PROJECT EMPIRE die Testfassung vom
+   11.10.2026. Neue Dunkelmodus-Aufnahmen brauchen Falks Gerät bzw. das laufende Spiel.
+4. **Zahlwort „Zwölf Produkte“** steht in `start.produkteTitel` und an weiteren Stellen (DE + EN) —
+   beim nächsten Produkt mit dem Suchlauf aus dem Skill mitziehen.
 5. **Grow All-In-One** (1.2.1+4, GitHub-Release seit 07.09.2026) und **AI-Instinct** (frühe Bauphase)
    stehen nicht auf der Seite — ob Grow dazukommt, entscheidet Falk; bis dahin nichts anlegen.
 6. **Tipprunden-Quelle veraltet:** `daten.json` der FaNiCa-Webversion endet nach Rennen 9

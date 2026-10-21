@@ -1,4 +1,4 @@
-/// Inhalte der Produktseite ZeitAnker (Stand 1.0.0, 06.09.2026).
+/// Inhalte der Produktseite ZeitAnker.
 window.PRODUKT_DATEN = {
   app: "zeitwissen", seite: "zeitwissen", stil: "b-heat",
   symbol: "bilder/marke/app-zeitwissen.webp",
@@ -18,7 +18,7 @@ window.PRODUKT_DATEN = {
       { symbol: "rechner", titel: "Eine Rechenstelle", text: "Jede Zahl kommt aus derselben Stelle im Code — der Bericht sagt nie etwas anderes als der Bildschirm." }
     ],
     erlebnis: { titel: "Die Woche gegen das Soll", kurz: "Konto", text: "Jeder abgeschlossene Tag rechnet gearbeitet minus Soll; der laufende Tag zählt erst mit, wenn du ausstempelst." },
-    galerie: { text: "Vier Aufnahmen aus der laufenden Fassung im Dunkelmodus. Die Zeiten darin sind Beispiele.", bilder: [
+    galerie: { text: "Vier Aufnahmen aus Fassung 1.0.0 im Dunkelmodus. Die Zeiten darin sind Beispiele.", bilder: [
       { titel: "Die Stempeluhr", text: "Einstempeln, das aktuelle Projekt, der heutige Stand und das Zeitkonto auf einem Schirm." },
       { titel: "Tag, Woche, Monat, Jahr", text: "Gearbeitet, Soll und Differenz oben, darunter jeder Tag mit seinem eigenen Saldo." },
       { titel: "Projekte und Aufgaben", text: "Zeiten unter Projekten bündeln, je Projekt mit eigenen Aufgaben — ohne Premium sind es drei Projekte." },
@@ -56,7 +56,7 @@ window.PRODUKT_DATEN = {
     fragen: [
       { frage: "Was ist kostenlos?", antwort: "Stempeln, Aufgaben, Pausen, Zeitkonto, Tages-, Wochen- und Monatsansicht sowie drei Projekte. Premium öffnet Bericht, Verdienst, Jahresübersicht, Urlaub, beliebig viele Projekte und auf Android das Widget." },
       { frage: "Kann ich Premium schon kaufen?", antwort: "Nein. ZeitAnker steht noch in keinem Store; der Preis kommt später allein aus dem Store." },
-      { frage: "Brauche ich ein Konto oder Internet?", antwort: "Ein Konto gibt es nicht. Das Erfassen läuft ohne Verbindung; die Daten bleiben auf dem Gerät." },
+      { frage: "Brauche ich ein Konto oder Internet?", antwort: "Ein Konto gibt es nicht. Das Erfassen läuft ohne Verbindung; die Daten bleiben auf dem Gerät. Netz braucht nur der Abo-Kauf über den Store." },
       { frage: "Warum zählt der laufende Tag noch nicht?", antwort: "Er steht neutral auf der Soll-Linie, bis du ausstempelst — sonst stündest du jeden Morgen im Minus." },
       { frage: "Gibt es die App auf Englisch?", antwort: "Nein, die Oberfläche ist bisher nur auf Deutsch." }
     ],
@@ -72,7 +72,7 @@ window.PRODUKT_DATEN = {
       { symbol: "rechner", titel: "One place to calculate", text: "Every figure comes from the same place in the code — the report never says anything other than the screen." }
     ],
     erlebnis: { titel: "The week against the target", kurz: "Account", text: "Every finished day counts worked minus target; the running day only counts once you clock out." },
-    galerie: { text: "Four screens from the current build in dark mode. The times shown are examples. The app itself is in German.", bilder: [
+    galerie: { text: "Four screens from version 1.0.0 in dark mode. The times shown are examples. The app itself is in German.", bilder: [
       { titel: "The time clock", text: "Clock in, the current project, today’s status and the time account on one screen." },
       { titel: "Day, week, month, year", text: "Worked, target and difference at the top, below each day with its own balance." },
       { titel: "Projects and tasks", text: "Group times under projects, each with its own tasks — three projects without Premium." },
@@ -110,7 +110,7 @@ window.PRODUKT_DATEN = {
     fragen: [
       { frage: "What is free?", antwort: "Clocking, tasks, breaks, time account, day, week and month views and three projects. Premium unlocks the report, earnings, year overview, holidays, unlimited projects and the widget on Android." },
       { frage: "Can I buy Premium yet?", antwort: "No. ZeitAnker is not in any store yet; the price will come from the store alone." },
-      { frage: "Do I need an account or internet?", antwort: "There is no account. Tracking works without a connection; the data stays on the device." },
+      { frage: "Do I need an account or internet?", antwort: "There is no account. Tracking works without a connection; the data stays on the device. Only buying the subscription through the store needs a connection." },
       { frage: "Why does today not count yet?", antwort: "It sits neutrally on the target line until you clock out — otherwise you would start every morning in the minus." },
       { frage: "Is the app available in English?", antwort: "No, the interface is in German only so far." }
     ],

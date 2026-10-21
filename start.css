@@ -249,7 +249,7 @@ body.start {
   .start .vergleich thead th { font-size: .84rem; }
   .start .vergleich tbody th { font-size: .78rem; }
   .start .vergleich thead th:first-child { width: 8.5rem; }
-  .start .vergleich thead th[class^="app-"] { width: calc((100% - 8.5rem) / 10); }
+  .start .vergleich thead th[class^="app-"] { width: calc((100% - 8.5rem) / 11); }
   .start .vergleich thead th:first-child,
   .start .vergleich tbody th { position: static; background: none; }
 }
@@ -289,12 +289,12 @@ body.start {
   .start .karussell-buehne { perspective: 1000px; }
   .start .karussell-ring { width: 150px; height: 214px; }
   .start .app-karte {
-    --radius: 268px; padding: .8rem .6rem;
-    transform: rotateY(calc(360deg / var(--karten, 11) * var(--i))) translateZ(var(--radius));
+    --radius: 290px; padding: .8rem .6rem;
+    transform: rotateY(calc(360deg / var(--karten, 12) * var(--i))) translateZ(var(--radius));
   }
   .karussell-punkte button { width: 26px; }
   .start .vergleich thead th:first-child { width: 7.5rem; }
-  .start .vergleich thead th[class^="app-"] { width: calc((100% - 7.5rem) / 10); }
+  .start .vergleich thead th[class^="app-"] { width: calc((100% - 7.5rem) / 11); }
   .start .vergleich tbody th { font-size: .8rem; }
   .start .hero { padding-top: 96px; }
   .studio-zeichen .kennung { letter-spacing: .24em; padding-left: .24em; }
@@ -309,7 +309,7 @@ body.start {
 
 @media (max-width: 360px) {
   .start .karussell-ring { width: 136px; height: 200px; }
-  .start .app-karte { --radius: 250px; }
+  .start .app-karte { --radius: 268px; }
   .karussell-punkte { gap: 0; }
   .karussell-punkte button { width: 25px; }
 }

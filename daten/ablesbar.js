@@ -1,4 +1,4 @@
-/// Inhalte der Produktseite AblesBar (Stand 1.4.0, 07.09.2026).
+/// Inhalte der Produktseite AblesBar.
 window.PRODUKT_DATEN = {
   app: "ablesbar", seite: "ablesbar", stil: "b-lantern",
   symbol: "bilder/marke/app-ablesbar.webp",
@@ -17,10 +17,10 @@ window.PRODUKT_DATEN = {
       { symbol: "kamera", titel: "Foto statt Abschreiben", text: "Die Texterkennung auf dem Gerät schlägt die Ziffern vor, bestätigt wird in der Korrektur-Ansicht." },
       { symbol: "euro", titel: "Guthaben oder Nachzahlung", text: "Monat für Monat stehen die Kosten gegen die anteiligen Abschläge — die Differenz ist jederzeit sichtbar." },
       { symbol: "rechner", titel: "Ohne Rundungsfehler", text: "Stände in Tausendstel, Beträge in Cent: Die App rechnet in ganzen Zahlen, nichts summiert sich auf." },
-      { symbol: "schloss", titel: "Bleibt auf dem Gerät", text: "Kein Server, kein fremdes Konto — das Netz braucht nur der Update-Knopf." }
+      { symbol: "schloss", titel: "Bleibt auf dem Gerät", text: "Kein Server, kein fremdes Konto — die App selbst geht nur für den Update-Knopf ins Netz." }
     ],
     erlebnis: { titel: "Ein Zählerwerk zum Ausprobieren", kurz: "Zähler", text: "Die Rollen drehen vom Stand des Vormonats auf den neuen — daraus werden Monatsverbrauch und Stand gegen die Abschläge. Die Werte sind Beispiele." },
-    galerie: { text: "Sechs Aufnahmen aus Fassung 1.4.0 im Dunkelmodus, mit Beispielwerten: erst die Erstanlage, dann Übersicht, Eingabe, Zähler, Kostensätze und Rechnung.", bilder: [
+    galerie: { text: "Sechs Aufnahmen aus dem noch nicht ausgelieferten Stand nach 1.4.0 im Dunkelmodus, schon mit dem neuen Namen AblesBar und mit Beispielwerten: erst die Erstanlage, dann Übersicht, Eingabe, Zähler, Kostensätze und Rechnung.", bilder: [
       { titel: "Die Erstanlage", text: "Der Assistent beginnt mit Bezeichnung und Art des Objekts — Mietwohnung, Zweifamilienhaus oder Mehrfamilienhaus. Pflicht ist nur die Bezeichnung." },
       { titel: "Die Übersicht", text: "Gas, Wasser, Strom und Nebenkosten als Kacheln mit Verbrauch und Kosten, darunter der Monat mit der Zahl der Ablesungen und die laufende Periode." },
       { titel: "Die Eingabe", text: "Ein Ablesedatum, darunter jeder aktive Zähler mit seinem letzten Stand und einem Feld für den neuen — oder dem Kamera-Knopf." },
@@ -75,8 +75,8 @@ window.PRODUKT_DATEN = {
       { frage: "Kostet AblesBar etwas?", antwort: "Die Testfassung ist kostenlos; eine Bezahlfunktion gibt es in der App nicht." },
       { frage: "Muss ich jeden Zähler fotografieren?", antwort: "Nein. Die Eingabe von Hand ist gleichwertig. Ein Foto liefert nur einen Vorschlag, den du bestätigst oder korrigierst." },
       { frage: "Kann ich damit für Mieter abrechnen?", antwort: "Noch nicht. Die App rechnet die eigene Wohnung; Kosten auf weitere Wohneinheiten verteilt sie bisher nicht." },
-      { frage: "Wo liegen meine Daten?", antwort: "Nur auf dem Gerät. Es gibt keinen Server und kein externes Konto; das Netz wird allein für den Update-Knopf genutzt." },
-      { frage: "Wann kommt die App in die Stores?", antwort: "AblesBar läuft als Android-Testfassung außerhalb der Stores und kommt über einen Update-Knopf in der App. Ein Store-Eintrag steht noch aus." }
+      { frage: "Wo liegen meine Daten?", antwort: "Auf dem Gerät — ohne Server und ohne externes Konto, und jedes Profil wie auch der Gast hat einen eigenen Datenraum. Die App selbst geht nur für den Update-Knopf ins Netz. Googles ML Kit, das die Texterkennung mitbringt, kann technische Nutzungsdaten an Google senden, nie das Foto und nie die Ziffern; und ist die Android-Sicherung ins Google-Konto eingeschaltet, nimmt Android die App-Daten darin auf." },
+      { frage: "Wann kommt die App in die Stores?", antwort: "AblesBar läuft als Android-Testfassung außerhalb der Stores und kommt über einen Update-Knopf in der App. Die Testfassung 1.4.0 trägt noch den alten Namen AbleseBar; ein Store-Eintrag steht noch aus." }
     ],
     abschluss: { titel: "Jeder Zähler, jeder Monat.", text: "Ablesen genügt — den Rest rechnet die App.", stand: "Im Test — Testfassung außerhalb der Stores, nichts zu kaufen." }
   },
@@ -87,10 +87,10 @@ window.PRODUKT_DATEN = {
       { symbol: "kamera", titel: "Photo, not copying", text: "On-device text recognition suggests the digits; you confirm them in the correction view." },
       { symbol: "euro", titel: "Refund or top-up", text: "Month by month, costs stand against the share of instalments — the difference is always visible." },
       { symbol: "rechner", titel: "No rounding errors", text: "Readings in thousandths, amounts in cents: the app calculates in whole numbers, nothing adds up wrong." },
-      { symbol: "schloss", titel: "Stays on the device", text: "No server, no outside account — only the update button needs the network." }
+      { symbol: "schloss", titel: "Stays on the device", text: "No server, no outside account — the app itself only goes online for the update button." }
     ],
     erlebnis: { titel: "A meter to try", kurz: "Meter", text: "The wheels turn from last month’s reading to the new one — that gives the monthly consumption and the balance against the instalments. The values are examples." },
-    galerie: { text: "Six captures of version 1.4.0 in dark mode, with example values: first the set-up, then overview, entry, meters, cost rates and statement.", bilder: [
+    galerie: { text: "Six captures of the not yet released state after 1.4.0 in dark mode, already with the new name AblesBar and with example values: first the set-up, then overview, entry, meters, cost rates and statement.", bilder: [
       { titel: "The set-up", text: "The assistant starts with a name and the type of property — rented flat, two-family house or apartment building. Only the name is required." },
       { titel: "The overview", text: "Gas, water, electricity and running costs as tiles with consumption and cost, below them the month with the number of readings and the current period." },
       { titel: "The entry screen", text: "One reading date, then every active meter with its last reading and a field for the new one — or the camera button." },
@@ -145,8 +145,8 @@ window.PRODUKT_DATEN = {
       { frage: "Does AblesBar cost anything?", antwort: "The test build is free; the app has no payment function." },
       { frage: "Do I have to photograph every meter?", antwort: "No. Typing by hand is just as good. A photo only gives a suggestion that you confirm or correct." },
       { frage: "Can I bill tenants with it?", antwort: "Not yet. The app calculates your own flat; it does not yet split costs across further units." },
-      { frage: "Where is my data?", antwort: "Only on the device. There is no server and no outside account; the network is used for the update button alone." },
-      { frage: "When will it be in the stores?", antwort: "AblesBar runs as an Android test build outside the stores and is updated through a button inside the app. A store listing is still to come." }
+      { frage: "Where is my data?", antwort: "On the device — no server and no outside account, and every profile as well as the guest has a data space of its own. The app itself only goes online for the update button. Google’s ML Kit, which provides the text recognition, may send technical usage data to Google, never the photo and never the digits; and if Android backup to your Google account is switched on, Android includes the app data in it." },
+      { frage: "When will it be in the stores?", antwort: "AblesBar runs as an Android test build outside the stores and is updated through a button inside the app. Test build 1.4.0 still carries the old name AbleseBar; a store listing is still to come." }
     ],
     abschluss: { titel: "Every meter, every month.", text: "Just read it — the app works out the rest.", stand: "In testing — test build outside the stores, nothing to buy." }
   }
