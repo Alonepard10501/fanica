@@ -167,6 +167,10 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
    Vergleichsspalte `app-12`, Zahlwörter „Dreizehn“, og-bild, Karussell-Radius), Inhalte nur aus dem
    Code (`Projekte\Apps\Grow All-In-One`, 1.2.1+4, GitHub-Release seit 07.09.2026) und dem Skill
    `grow-all-in-one`, danach Abnahme. AI-Instinct (frühe Bauphase) bleibt draußen, bis Falk es sagt.
+   Gestoppt 21.10.2026 21:50 vor dem Bau: Das echte App-Symbol zeigt Cannabisblätter, und für
+   Cannabis gilt das Werbeverbot (KCanG § 6). Falk entscheidet: (1) welches Symbol auf der Seite
+   erscheint (echtes Icon oder neutrales Pflanzen-/Tagebuch-Symbol ohne Blatt), (2) ob die Seite rein
+   sachlich als Anbau-Tagebuch und Lernhilfe für Erwachsene erscheinen soll.
 6. **Tipprunden-Quelle veraltet:** `daten.json` der FaNiCa-Webversion endet nach Rennen 9
    (Silverstone, Juli 2026), ebenso `rundendaten.json` der App. Neue Zahlen erst, wenn eine
    aktuelle Quelle vorliegt; dann `_werkzeuge_runde_bauen.py` laufen lassen.
