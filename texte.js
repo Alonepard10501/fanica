@@ -12,7 +12,7 @@ de: {
   meta: {
     kapitelWort: "Kapitel",
     titel: "FaNiCa — Falk Carstensen · Apps aus einem Ein-Mann-Studio",
-    beschreibung: "Zwölf Produkte aus einem Ein-Mann-Medienstudio: FaNiCa Fun, Instinct Scoring, NeonPunkt, die SetUpLeiste für Windows sowie Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar, die Instinct Familie und das PC-Strategiespiel PROJECT EMPIRE.",
+    beschreibung: "Zwölf Produkte aus einem Ein-Mann-Medienstudio: FaNiCa Fun, Instinct Scoring, NeonPunkt, die SetUpLeiste für Windows sowie Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar, die Instinct Familie, das PC-Strategiespiel PROJECT EMPIRE und Grow All-In-One.",
     sprachknopf: "EN",
     sprachtitel: "Switch to English"
   },
@@ -374,6 +374,16 @@ de: {
     mehrKnopf: "Alles über PROJECT EMPIRE"
   },
 
+  grow: {
+    karteKurz: "Anbau-Tagebuch und Lernhilfe",
+    statusPille: "Im Test — in keinem Store",
+    untertitel: "Anbau-Tagebuch und Lernhilfe für Erwachsene",
+    claim: "Festhalten. Planen. Lernen.",
+    claimZwei: "Nur für Erwachsene, im Rahmen der geltenden Gesetze.",
+    positionierung: "Ein Anbau-Tagebuch mit Planung und Lernteil für Erwachsene, im Rahmen der geltenden Gesetze. Ohne Konto, die Daten bleiben auf dem Gerät.",
+    mehrKnopf: "Alles über Grow All-In-One"
+  },
+
   /* ============ LIVE — automatisch geladene Renndaten ============ */
   produkt: {
     inhaltName: "Auf dieser Seite",
@@ -389,7 +399,7 @@ de: {
     karussellWahl: "Produkt nach vorn holen",
     karussellStand: "{name} vorn — {nr} von {anzahl}",
     produkteKennung: "Die Produkte",
-    produkteTitel: "Zwölf Produkte, ein Studio",
+    produkteTitel: "Dreizehn Produkte, ein Studio",
     produkteText: "Apps fürs Handy, ein Programm und ein Strategiespiel für Windows — jedes mit eigener Farbe und eigener Seite. Hier steht das Wichtigste in einem Satz, alle Einzelheiten stehen auf der Seite des Produkts.",
     filterName: "Produkte nach Stand filtern",
     filterAlle: "Alle",
@@ -440,7 +450,7 @@ de: {
     ],
 
     zahlen: [
-      { zahl: "12", text: "Produkte" },
+      { zahl: "13", text: "Produkte" },
       { zahl: "2", text: "Stores" },
       { zahl: "16", text: "Sprachen" }
     ]
@@ -451,7 +461,7 @@ de: {
     kennung: "Auf einen Blick",
     titel: "Welche App ist für dich?",
     tabelleName: "Vergleich der Produkte, waagerecht scrollbar",
-    text: "Elf Produkte, elf völlig verschiedene Zwecke — drei zu haben, sechs im Test, zwei noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie werten dich nicht aus, und ein Konto bei uns gibt es nicht — Profile wie bei FaNiCa Fun liegen auf dem Gerät. An mich geht nur, was du selbst auslöst: eine Rückmeldung, eine Diagnose oder bei FaNiCa Fun die E-Mail-Adressen für Codes und Einladungen. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und außer Instinct Scoring ist noch keine davon zu haben.",
+    text: "Elf Produkte, elf völlig verschiedene Zwecke — drei zu haben, sechs im Test, zwei noch im Bau. Was sie verbindet: Ihr Kern läuft ohne Netz, sie werten dich nicht aus, und ein Konto bei uns gibt es nicht — Profile wie bei FaNiCa Fun liegen auf dem Gerät. An mich geht nur, was du selbst auslöst: eine Rückmeldung, eine Diagnose oder bei FaNiCa Fun die E-Mail-Adressen für Codes und Einladungen. Die Instinct Familie steht hier nicht mit drin — sie ist keine einzelne App, sondern zehn, und außer Instinct Scoring ist noch keine davon zu haben. Grow All-In-One fehlt in der Tabelle ebenfalls; es ist eine Testfassung für Erwachsene, ohne Konto, mit Daten auf dem Gerät.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUp­Leiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar", "PROJECT EMPIRE"],
     zeilen: [
       { name: "Wofür",        werte: ["Mit Freunden tippen", "Bogensport dokumentieren", "Nichts. Genau das ist der Reiz.", "Sehen, was der Rechner gerade tut", "Endlos aufsteigen im Schulspiel", "Filmsammlung ordnen und bewerten", "Arbeitszeit erfassen und nachweisen", "Spritkosten im Blick behalten", "Spielscheine prüfen und auswerten", "Zählerstände ablesen, Nebenkosten prüfen", "Ein Reich durch acht Epochen führen"] },
@@ -475,9 +485,9 @@ de: {
       { f: "Brauche ich für die Apps ein Konto?",
         a: "Bei den meisten nicht — du installierst und legst los. Ein Profil braucht nur FaNiCa Fun (mehrere Leute tippen in derselben Runde). Tankspur und AblesBar bieten eins an, damit mehrere Fahrer oder Haushalte auf einem Gerät getrennte Daten haben — beide gehen auch ohne Profil. Bei ScheinBar ist das Profil freiwillig und trennt keine Daten. Diese Profile liegen auf dem Gerät, nicht bei uns. PROJECT EMPIRE braucht auch für das Spiel übers Internet kein Konto." },
       { f: "Funktionieren die Apps ohne Internet?",
-        a: "Der Kern jeder App läuft ohne Verbindung, und alle Daten liegen auf dem Gerät. Netz braucht nur, was von außen kommt: die Rennergebnisse, der Abgleich mit den Mitspielern und beim Anlegen des Profils der Bestätigungscode bei FaNiCa Fun, Turniere und Parcours-Suche bei Instinct Scoring, Freunde und Allianz bei Campus Clash, die Filmdaten und der Freunde-Abgleich bei YourFilm, das Nachladen der Ziehungen bei ScheinBar, Ping und Leitungsmessung bei der SetUpLeiste und das Spiel mit Mitspielern übers Internet bei PROJECT EMPIRE. ZeitAnker und NeonPunkt brauchen Netz nur für den Premium-Kauf im Store. Campus Clash, YourFilm, Tankspur, ScheinBar und AblesBar fragen in der Testfassung außerdem auf Knopfdruck nach Updates." },
+        a: "Der Kern jeder App läuft ohne Verbindung, und alle Daten liegen auf dem Gerät. Netz braucht nur, was von außen kommt: die Rennergebnisse, der Abgleich mit den Mitspielern und beim Anlegen des Profils der Bestätigungscode bei FaNiCa Fun, Turniere und Parcours-Suche bei Instinct Scoring, Freunde und Allianz bei Campus Clash, die Filmdaten und der Freunde-Abgleich bei YourFilm, das Nachladen der Ziehungen bei ScheinBar, Ping und Leitungsmessung bei der SetUpLeiste und das Spiel mit Mitspielern übers Internet bei PROJECT EMPIRE. ZeitAnker und NeonPunkt brauchen Netz nur für den Premium-Kauf im Store. Campus Clash, YourFilm, Tankspur, ScheinBar und AblesBar fragen in der Testfassung außerdem auf Knopfdruck nach Updates. Grow All-In-One braucht Netz nur für die freiwillige Bildanalyse und die Update-Prüfung." },
       { f: "Was passiert mit meinen Daten?",
-        a: "Sie liegen auf deinem Gerät. Keine der Apps hat Werbung oder eigene Analyse-Werkzeuge, und Daten werden nicht verkauft — Einnahmen kommen ausschließlich aus Käufen in den Apps: den Abos und bei FaNiCa Fun einem freiwilligen Trinkgeld. Das Wichtigste, was doch hinausgeht: FaNiCa Fun, Campus Clash und YourFilm gleichen Tipprunden, Freunde und Allianzen über die Weiterleitungs-Server ntfy.sh und ntfy.envs.net ab; YourFilm schickt dafür einen Auszug deiner Sammlung bei jedem Start und nach Änderungen dorthin, auch ohne verbundenen Freund. FaNiCa Fun schickt außerdem deine E-Mail-Adresse für Bestätigungs- und Passwort-Codes an meinen Mail-Dienst bei Google (Apps Script), bei Einladungen auch die Adresse des Eingeladenen; Rückmeldungen kommen per Mail und über ntfy bei mir an, die Diagnose auf Knopfdruck über ntfy. Die Parcours-Suche von Instinct Scoring schickt die Postleitzahl an Nominatim und die Koordinaten an Overpass (beides Dienste für OpenStreetMap-Daten). Die SetUpLeiste fragt für ihre Ping-Anzeige laufend 1.1.1.1 bei Cloudflare an und lädt für die Leitungsmessung nur auf Knopfdruck Testdaten von dort. PROJECT EMPIRE tauscht für ein Internet-Spiel die Netzwerkadressen von Gastgeber und Mitspielern verschlüsselt über dieselben ntfy-Server aus und erfragt die eigene Adresse bei öffentlichen STUN-Servern (unter anderem von Google und Cloudflare); gespielt wird direkt zwischen den Rechnern. Wo die Kamera Text oder Codes liest — Campus Clash, YourFilm, Tankspur, ScheinBar und AblesBar —, sendet eine mitgelieferte Komponente aus Googles ML Kit technische Nutzungsdaten an Google. Die Android-Sicherung (in deinem Google-Konto, sofern eingeschaltet, und beim Umzug auf ein neues Gerät) nimmt die Daten von FaNiCa Fun, Instinct Scoring, der Instinct Familie, ZeitAnker, Tankspur, ScheinBar und AblesBar mit, bei NeonPunkt nur den Spielstand; Campus Clash und YourFilm sind davon ausgenommen. Alles Weitere steht in der Datenschutzerklärung jeder App.",
+        a: "Sie liegen auf deinem Gerät. Keine der Apps hat Werbung oder eigene Analyse-Werkzeuge, und Daten werden nicht verkauft — Einnahmen kommen ausschließlich aus Käufen in den Apps: den Abos und bei FaNiCa Fun einem freiwilligen Trinkgeld. Das Wichtigste, was doch hinausgeht: FaNiCa Fun, Campus Clash und YourFilm gleichen Tipprunden, Freunde und Allianzen über die Weiterleitungs-Server ntfy.sh und ntfy.envs.net ab; YourFilm schickt dafür einen Auszug deiner Sammlung bei jedem Start und nach Änderungen dorthin, auch ohne verbundenen Freund. FaNiCa Fun schickt außerdem deine E-Mail-Adresse für Bestätigungs- und Passwort-Codes an meinen Mail-Dienst bei Google (Apps Script), bei Einladungen auch die Adresse des Eingeladenen; Rückmeldungen kommen per Mail und über ntfy bei mir an, die Diagnose auf Knopfdruck über ntfy. Die Parcours-Suche von Instinct Scoring schickt die Postleitzahl an Nominatim und die Koordinaten an Overpass (beides Dienste für OpenStreetMap-Daten). Die SetUpLeiste fragt für ihre Ping-Anzeige laufend 1.1.1.1 bei Cloudflare an und lädt für die Leitungsmessung nur auf Knopfdruck Testdaten von dort. Grow All-In-One schickt Fotos nur, wenn du die Bildanalyse mit eigenem Schlüssel einschaltest, an Anthropic oder an deinen eigenen Rechner. PROJECT EMPIRE tauscht für ein Internet-Spiel die Netzwerkadressen von Gastgeber und Mitspielern verschlüsselt über dieselben ntfy-Server aus und erfragt die eigene Adresse bei öffentlichen STUN-Servern (unter anderem von Google und Cloudflare); gespielt wird direkt zwischen den Rechnern. Wo die Kamera Text oder Codes liest — Campus Clash, YourFilm, Tankspur, ScheinBar und AblesBar —, sendet eine mitgelieferte Komponente aus Googles ML Kit technische Nutzungsdaten an Google. Die Android-Sicherung (in deinem Google-Konto, sofern eingeschaltet, und beim Umzug auf ein neues Gerät) nimmt die Daten von FaNiCa Fun, Instinct Scoring, der Instinct Familie, ZeitAnker, Tankspur, ScheinBar und AblesBar mit, bei NeonPunkt nur den Spielstand; Campus Clash und YourFilm sind davon ausgenommen. Alles Weitere steht in der Datenschutzerklärung jeder App.",
         l: "Datenschutz und die Erklärungen aller Apps" },
       { f: "Was kostet mich das?",
         a: "Jede App ist kostenlos nutzbar. Premium schaltet Zusatzfunktionen frei und beginnt bei 0,49 € je vier Wochen. Instinct Scoring, NeonPunkt und ScheinBar kannst du sieben Tage kostenlos testen; die Probe endet von selbst, kündigen musst du nichts. FaNiCa Fun hat keine Probezeit. Die SetUpLeiste kostet gar nichts, YourFilm ist bis 40 Exemplare kostenlos, und bei Campus Clash und AblesBar steht noch nicht fest, ob und was etwas kosten wird. PROJECT EMPIRE ist noch nicht erhältlich." },
@@ -552,7 +562,7 @@ en: {
   meta: {
     kapitelWort: "Chapter",
     titel: "FaNiCa — Falk Carstensen · Apps from a one-man studio",
-    beschreibung: "Twelve products from a one-man media studio: FaNiCa Fun, Instinct Scoring, NeonPunkt, the SetUpLeiste for Windows, plus Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar, the Instinct family and the PC strategy game PROJECT EMPIRE.",
+    beschreibung: "Twelve products from a one-man media studio: FaNiCa Fun, Instinct Scoring, NeonPunkt, the SetUpLeiste for Windows, plus Campus Clash, YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar, the Instinct family, the PC strategy game PROJECT EMPIRE and Grow All-In-One.",
     sprachknopf: "DE",
     sprachtitel: "Auf Deutsch umschalten"
   },
@@ -907,6 +917,16 @@ en: {
     mehrKnopf: "All about PROJECT EMPIRE"
   },
 
+  grow: {
+    karteKurz: "Growing diary and learning aid",
+    statusPille: "In testing — in no store",
+    untertitel: "Growing diary and learning aid for adults",
+    claim: "Record. Plan. Learn.",
+    claimZwei: "Adults only, within the applicable laws.",
+    positionierung: "A growing diary with planning and a learning section for adults, within the applicable laws. No account, your data stays on the device.",
+    mehrKnopf: "All about Grow All-In-One"
+  },
+
   /* ============ LIVE — automatically loaded race data ============ */
   produkt: {
     inhaltName: "On this page",
@@ -922,7 +942,7 @@ en: {
     karussellWahl: "Bring a product to the front",
     karussellStand: "{name} in front — {nr} of {anzahl}",
     produkteKennung: "The products",
-    produkteTitel: "Twelve products, one studio",
+    produkteTitel: "Thirteen products, one studio",
     produkteText: "Apps for your phone, plus a program and a strategy game for Windows — each with its own colour and its own page. Here is the gist in one sentence; every detail is on the product's own page.",
     filterName: "Filter products by status",
     filterAlle: "All",
@@ -961,7 +981,7 @@ en: {
     kennung: "At a glance",
     titel: "Which app is for you?",
     tabelleName: "Comparison of the products, scrolls sideways",
-    text: "Eleven products, eleven entirely different purposes — three available, six in testing, two still being built. What they share: their core works offline, they don’t profile you, and there is no account with us — profiles such as in FaNiCa Fun live on the device. I only receive what you trigger yourself: feedback, diagnostics or, in FaNiCa Fun, the e-mail addresses for codes and invitations. The Instinct Family is not listed here: it is not a single app but ten, and apart from Instinct Scoring none of them is available yet.",
+    text: "Eleven products, eleven entirely different purposes — three available, six in testing, two still being built. What they share: their core works offline, they don’t profile you, and there is no account with us — profiles such as in FaNiCa Fun live on the device. I only receive what you trigger yourself: feedback, diagnostics or, in FaNiCa Fun, the e-mail addresses for codes and invitations. The Instinct Family is not listed here: it is not a single app but ten, and apart from Instinct Scoring none of them is available yet. Grow All-In-One is not in the table either; it is a test build for adults, with no account and data on the device.",
     spalten: ["", "FaNiCa Fun", "Instinct Scoring", "NeonPunkt", "SetUp­Leiste", "Campus Clash", "YourFilm", "ZeitAnker", "Tankspur", "ScheinBar", "AblesBar", "PROJECT EMPIRE"],
     zeilen: [
       { name: "What for",       werte: ["Predicting with friends", "Recording archery", "Nothing. That's the appeal.", "Seeing what your PC is doing", "Endless school progression", "Organise and value a film collection", "Tracking and proving working hours", "Keeping fuel costs in view", "Checking and analysing lottery tickets", "Reading meters, checking utility bills", "Leading an empire through eight eras"] },
@@ -985,9 +1005,9 @@ en: {
       { f: "Do I need an account for the apps?",
         a: "For most of them, no — you install them and start. A profile is only needed for FaNiCa Fun (several people predict in the same group). Tankspur and AblesBar offer one so that several drivers or households on one device keep their data apart — both also work without a profile. In ScheinBar the profile is optional and keeps no data apart. Those profiles live on the device, not with us. PROJECT EMPIRE needs no account, not even for playing over the internet." },
       { f: "Do the apps work without internet?",
-        a: "The core of every app works without a connection, and all data sits on your device. A connection is only needed for what comes from outside: race results, syncing other players and the confirmation code when creating a profile in FaNiCa Fun, tournaments and the course search in Instinct Scoring, friends and alliance in Campus Clash, film data and syncing with friends in YourFilm, downloading draws in ScheinBar, ping and the line test in SetUpLeiste, and playing with others over the internet in PROJECT EMPIRE. ZeitAnker and NeonPunkt only need a connection to buy Premium in the store. Campus Clash, YourFilm, Tankspur, ScheinBar and AblesBar also check for updates in their test builds at the push of a button." },
+        a: "The core of every app works without a connection, and all data sits on your device. A connection is only needed for what comes from outside: race results, syncing other players and the confirmation code when creating a profile in FaNiCa Fun, tournaments and the course search in Instinct Scoring, friends and alliance in Campus Clash, film data and syncing with friends in YourFilm, downloading draws in ScheinBar, ping and the line test in SetUpLeiste, and playing with others over the internet in PROJECT EMPIRE. ZeitAnker and NeonPunkt only need a connection to buy Premium in the store. Campus Clash, YourFilm, Tankspur, ScheinBar and AblesBar also check for updates in their test builds at the push of a button. Grow All-In-One only needs a connection for the optional image analysis and the update check." },
       { f: "What happens to my data?",
-        a: "It is kept on your device. None of the apps has ads or analytics of its own, and no data is sold — the income comes purely from in-app purchases: the subscriptions and, in FaNiCa Fun, an optional tip. The main things that do leave the device: FaNiCa Fun, Campus Clash and YourFilm sync prediction rounds, friends and alliances via the relay servers ntfy.sh and ntfy.envs.net; YourFilm sends an excerpt of your collection there on every start and after changes, even without a connected friend. FaNiCa Fun also sends your e-mail address for confirmation and password codes to my mail service at Google (Apps Script), and for invitations the invitee’s address too; feedback reaches me by e-mail and via ntfy, diagnostics via ntfy at the press of a button. The course search in Instinct Scoring sends the postcode to Nominatim and the coordinates to Overpass (both services for OpenStreetMap data). SetUpLeiste contacts Cloudflare’s 1.1.1.1 continuously for its ping reading and only loads test data from there for the line test at the push of a button. For an internet match, PROJECT EMPIRE exchanges the network addresses of host and players encrypted via the same ntfy servers and asks public STUN servers (including Google’s and Cloudflare’s) for its own address; the match runs directly between the computers. Where the camera reads text or codes — Campus Clash, YourFilm, Tankspur, ScheinBar and AblesBar — a bundled component of Google’s ML Kit sends technical usage data to Google. Android’s backup (in your Google account, if switched on, and when moving to a new device) takes along the data of FaNiCa Fun, Instinct Scoring, the Instinct Family, ZeitAnker, Tankspur, ScheinBar and AblesBar, and only the game state of NeonPunkt; Campus Clash and YourFilm are excluded from it. Everything else is in each app’s privacy policy.",
+        a: "It is kept on your device. None of the apps has ads or analytics of its own, and no data is sold — the income comes purely from in-app purchases: the subscriptions and, in FaNiCa Fun, an optional tip. The main things that do leave the device: FaNiCa Fun, Campus Clash and YourFilm sync prediction rounds, friends and alliances via the relay servers ntfy.sh and ntfy.envs.net; YourFilm sends an excerpt of your collection there on every start and after changes, even without a connected friend. FaNiCa Fun also sends your e-mail address for confirmation and password codes to my mail service at Google (Apps Script), and for invitations the invitee’s address too; feedback reaches me by e-mail and via ntfy, diagnostics via ntfy at the press of a button. The course search in Instinct Scoring sends the postcode to Nominatim and the coordinates to Overpass (both services for OpenStreetMap data). SetUpLeiste contacts Cloudflare’s 1.1.1.1 continuously for its ping reading and only loads test data from there for the line test at the push of a button. Grow All-In-One only sends photos if you switch on the image analysis with your own key, to Anthropic or to your own computer. For an internet match, PROJECT EMPIRE exchanges the network addresses of host and players encrypted via the same ntfy servers and asks public STUN servers (including Google’s and Cloudflare’s) for its own address; the match runs directly between the computers. Where the camera reads text or codes — Campus Clash, YourFilm, Tankspur, ScheinBar and AblesBar — a bundled component of Google’s ML Kit sends technical usage data to Google. Android’s backup (in your Google account, if switched on, and when moving to a new device) takes along the data of FaNiCa Fun, Instinct Scoring, the Instinct Family, ZeitAnker, Tankspur, ScheinBar and AblesBar, and only the game state of NeonPunkt; Campus Clash and YourFilm are excluded from it. Everything else is in each app’s privacy policy.",
         l: "Privacy and the statements of every app" },
       { f: "What does it cost me?",
         a: "Every app is free to use. Premium unlocks extra features and starts at €0.49 per four weeks. Instinct Scoring, NeonPunkt and ScheinBar can be tried free for seven days; the trial ends on its own, with nothing to cancel. FaNiCa Fun has no trial. SetUpLeiste costs nothing at all, YourFilm is free up to 40 copies, and for Campus Clash and AblesBar it is not yet decided whether anything will cost money. PROJECT EMPIRE is not available yet." },
@@ -1018,7 +1038,7 @@ en: {
     ],
 
     zahlen: [
-      { zahl: "12", text: "products" },
+      { zahl: "13", text: "products" },
       { zahl: "2", text: "stores" },
       { zahl: "16", text: "languages" }
     ]

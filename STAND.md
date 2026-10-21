@@ -24,18 +24,18 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 | Adresse | https://alonepard10501.github.io/fanica/ |
 | Repo | `Alonepard10501/fanica`, Zweig `main`, Pages aus der Wurzel |
 | Git | `origin/main` = Schriftzug STUDIO am Desktop auf 46rem begrenzt (21.10.2026, nach PROJECT EMPIRE als Kapitel 12 und Abgleich aller Produktseiten), live nachgemessen — Push nur auf Falks Wort |
-| Produkte | zwölf Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 · PROJECT EMPIRE 12 (PC-Spiel, seit 21.10.2026) |
+| Produkte | dreizehn Kapitel: FaNiCa Fun 01 · Instinct Scoring 02 · NeonPunkt 03 · SetUpLeiste 04 · Campus Clash 05 · YourFilm 06 · ZeitAnker 07 · Instinct Familie 08 · Tankspur 09 · ScheinBar 10 · AblesBar 11 · PROJECT EMPIRE 12 (PC-Spiel, seit 21.10.2026) · Grow All-In-One 13 (seit 21.10.2026) |
 | Store-Wege (`BEZUG` in `inhalte.js`) | FaNiCa Play + Apple `live` · Instinct Apple `live`, Play `test` · NeonPunkt Play `test`, Apple `spaeter` (ruht nach Ablehnung) · SetUpLeiste GitHub-Release 1.0.0 |
 | Store-Gegenprobe 21.10.2026 | FaNiCa Play 1.209.0 (18.10.2026), Apple 1.210.0 (20.10.2026) · Instinct Apple 1.0.1, Play 404 · NeonPunkt Play 404, Apple-Lookup `resultCount 0` · SetUpLeiste-Download 206 auf Teilabruf, einziges Release `setupleiste-v1.0.0` |
 | „Neu in der App“ (`daten/<app>.js`) | FaNiCa 1.210.0 (App Store; Play hat 1.209.0 — nach dem Play-Update den Zusatz „(App Store)“ und den funktionenSatz in daten/fanica.js anpassen) · Campus Clash 4.18.0 · ScheinBar 1.0.19 · YourFilm 2.8.0 · AblesBar 1.4.0 · Instinct 1.0.1 — `aufbau.js` zeigt höchstens fünf Punkte, DE und EN |
-| Stand je Produkt | erhältlich: FaNiCa Fun, Instinct Scoring, SetUpLeiste · im Test (nicht in den Stores): NeonPunkt (Play-Test), YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar · in Arbeit: Campus Clash, Instinct Familie, PROJECT EMPIRE — steht als `data-stufe` an jeder Produktkarte in `index.html` |
+| Stand je Produkt | erhältlich: FaNiCa Fun, Instinct Scoring, SetUpLeiste · im Test (nicht in den Stores): NeonPunkt (Play-Test), YourFilm, ZeitAnker, Tankspur, ScheinBar, AblesBar, Grow All-In-One · in Arbeit: Campus Clash, Instinct Familie, PROJECT EMPIRE — steht als `data-stufe` an jeder Produktkarte in `index.html` |
 
 ## So arbeitet die Seite heute (nicht brechen)
 
 **Inhalt und Aufbau**
 - Alle Texte DE + EN stehen in `texte.js` — nur dort Inhalte ändern, neuer Text immer in
   beiden Sprachblöcken.
-- Startseite seit 01.10.2026: Hero mit Karussell → „Die Produkte“ (zwölf Karten im Raster,
+- Startseite seit 01.10.2026: Hero mit Karussell → „Die Produkte“ (dreizehn Karten im Raster,
   Filter Alle/Erhältlich/Im Test/In Arbeit, Verteilungsbalken) → Vergleich → Über mich →
   Fragen → Kontakt. Je Karte: Nummer, Stand, Symbol, Name, Kernsatz, Bezugswege aus `BEZUG`,
   Knopf mit Falks Hover-Effekt. Alles Ausführliche steht auf der Unterseite je Produkt.
@@ -61,7 +61,7 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
   Verworfen: Magenta mit Spiegelung (`0ad4574`), SVG-Umweg (`7ba0e4b`), reine CSS-Schichten
   (`3d3cc90`, `aa4027e`). Kein Knopf und kein Satz im Kopf; der Leitsatz steht als Abschluss unter dem
   Produktraster (`start.leitsatz`). Karussell bei 1366×768 ab 366 px.
-- Produktseiten (alle zwölf) auf einem Gerüst: Kopfkarte (`produkt.css`, `wege.js`) und darunter
+- Produktseiten (alle dreizehn) auf einem Gerüst: Kopfkarte (`produkt.css`, `wege.js`) und darunter
   alles aus EINER Vorlage `aufbau.js` + `aufbau.css`, befüllt aus `daten/<app>.js` (DE + EN,
   Symbole aus `symbole.js`). Reihenfolge: Auf einen Blick → Erlebnis (der app-eigene Block, steht
   als `<section class="erlebnis">` im HTML) → So sieht es aus (Galerie im Telefonrahmen, Pfeile,
@@ -132,6 +132,12 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
 
 - Campus Clash wird nicht verlinkt — die GitHub-Fassung ist privat (Falk 01.10.2026).
 
+- Grow All-In-One (`grow-all-in-one.html`, `daten/grow.js`, Grün `#2EB872`/`#1E8F55`, Knopf `b-grass`):
+  Cannabis-Anbau → Werbeverbot (KCanG § 6). Darum (Falk 21.10.2026): neutrales, selbst gezeichnetes
+  Keimling-Symbol statt des echten Icons mit Cannabisblatt, rein sachlich als Anbau-Tagebuch und
+  Lernhilfe, Hinweis „Nur für Erwachsene, im Rahmen der geltenden Gesetze“, kein Download-Link, kein Preis,
+  kein Konsum, keine Wirkungen.
+
 - PROJECT EMPIRE (`project-empire.html`, `daten/empire.js`, Erlebnis `epochenlauf.js`/`.css`, Farbe
   Gold `#FFDE26`/`#E6C80B`, Knopf `b-heat`): kurz und knapp, KEIN anderes Spiel und keine Spielmarke
   nennen (Falk 21.10.2026, rechtlich) → [[project-empire-oeffentlich-kurz-und-ohne-fremde-spiele]].
@@ -161,16 +167,10 @@ Geprüft wird nur über einen echten lokalen Server, nie per Datei-URL.
    11.10.2026. Neue Dunkelmodus-Aufnahmen brauchen Falks Gerät bzw. das laufende Spiel.
 4. **Zahlwort „Zwölf Produkte“** steht in `start.produkteTitel` und an weiteren Stellen (DE + EN) —
    beim nächsten Produkt mit dem Suchlauf aus dem Skill mitziehen.
-5. **Grow All-In-One als 13. Produkt einbauen — beauftragt** (Falk 21.10.2026, 21:47: „Grow all in One
-   mit aufnehmen“). Wegen der Abschaltung um 22:00 nicht mehr begonnen. Weg wie bei PROJECT EMPIRE:
-   volle Checkliste im Skill (Karte, Karussell, Seite `grow-all-in-one.html` + `daten/grow.js`,
-   Vergleichsspalte `app-12`, Zahlwörter „Dreizehn“, og-bild, Karussell-Radius), Inhalte nur aus dem
-   Code (`Projekte\Apps\Grow All-In-One`, 1.2.1+4, GitHub-Release seit 07.09.2026) und dem Skill
-   `grow-all-in-one`, danach Abnahme. AI-Instinct (frühe Bauphase) bleibt draußen, bis Falk es sagt.
-   Gestoppt 21.10.2026 21:50 vor dem Bau: Das echte App-Symbol zeigt Cannabisblätter, und für
-   Cannabis gilt das Werbeverbot (KCanG § 6). Falk entscheidet: (1) welches Symbol auf der Seite
-   erscheint (echtes Icon oder neutrales Pflanzen-/Tagebuch-Symbol ohne Blatt), (2) ob die Seite rein
-   sachlich als Anbau-Tagebuch und Lernhilfe für Erwachsene erscheinen soll.
+5. **Grow All-In-One ergänzen:** seit 21.10.2026 Kapitel 13 (Falk: „Mache das fertig und Pushe“), ohne
+   Vergleichsspalte, Erlebnis-Block und Galerie — `vergleich.text` sagt, dass Grow nicht in der Tabelle
+   steht. Bei Gelegenheit Spalte `app-12`, eine Zeile in `bildquellen.html` zum selbst gezeichneten
+   Symbol und eine Abnahme nachholen. AI-Instinct bleibt draußen, bis Falk es sagt.
 6. **Tipprunden-Quelle veraltet:** `daten.json` der FaNiCa-Webversion endet nach Rennen 9
    (Silverstone, Juli 2026), ebenso `rundendaten.json` der App. Neue Zahlen erst, wenn eine
    aktuelle Quelle vorliegt; dann `_werkzeuge_runde_bauen.py` laufen lassen.

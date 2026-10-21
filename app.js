@@ -125,6 +125,10 @@
       grund: "linear-gradient(180deg, #02060D, #071324 52%, #03070E)",
       akzent: "#E6C80B", akzentHell: "#FFDE26"
     },
+    grow: {
+      grund: "linear-gradient(180deg, #040A07, #0A1A12 52%, #050C08)",
+      akzent: "#1E8F55", akzentHell: "#2EB872"
+    },
     // „Auf einen Blick" vergleicht alle drei Apps — bewusst NEUTRAL,
     // damit die Tabelle nicht nach einer einzelnen App aussieht.
     // (Falk 31.07.: „hat noch die falschen Farben in der Überschrift".)

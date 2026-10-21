@@ -225,6 +225,10 @@ p:last-child { margin-bottom: 0; }
   --akzent: #E6C80B;
   --akzent-hell: #FFDE26;
 }
+[data-kapitel="grow"] {
+  --akzent: #1E8F55;
+  --akzent-hell: #2EB872;
+}
 [data-kapitel="fanica"],
 [data-kapitel="intro"],
 [data-kapitel="ueber"],
@@ -3324,7 +3328,7 @@ a.bezug-weg.bezug-webseite .bezug-zeichen {
      über die gesamte breite erstrecken"). Vorher stand hier fest
      300px — dadurch blieb der Kreis bei 1600 px Fenster genauso eng
      wie bei 900 px. */
-  transform: rotateY(calc(360deg / 12 * var(--i))) translateZ(var(--radius, 300px));
+  transform: rotateY(calc(360deg / 13 * var(--i))) translateZ(var(--radius, 300px));
   backface-visibility: hidden;
   transition: border-color .3s var(--weich), box-shadow .3s var(--weich);
 }
@@ -3384,12 +3388,12 @@ a.bezug-weg.bezug-webseite .bezug-zeichen {
 @media (max-width: 900px) {
   .karussell-buehne { height: 270px; }
   .karussell-ring { width: 180px; height: 230px; }
-  .app-karte { transform: rotateY(calc(360deg / 12 * var(--i))) translateZ(250px); }
+  .app-karte { transform: rotateY(calc(360deg / 13 * var(--i))) translateZ(250px); }
 }
 @media (max-width: 560px) {
   .karussell-buehne { height: 250px; perspective: 1100px; }
   .karussell-ring { width: 160px; height: 210px; }
-  .app-karte { transform: rotateY(calc(360deg / 12 * var(--i))) translateZ(200px); }
+  .app-karte { transform: rotateY(calc(360deg / 13 * var(--i))) translateZ(200px); }
   .app-karte img { width: 48px; height: 48px; }
   .karte-kurz { display: none; }     /* auf dem Handy nur Name + Status */
   .karussell-pfeil { width: 40px; height: 40px; font-size: 1.4rem; }

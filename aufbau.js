@@ -40,7 +40,7 @@
     ["fanica-fun", "FaNiCa Fun"], ["instinct-scoring", "Instinct Scoring"], ["neonpunkt", "NeonPunkt"],
     ["setupleiste", "SetUpLeiste"], ["campus-clash", "Campus Clash"], ["yourfilm", "YourFilm"],
     ["zeitwissen", "ZeitAnker"], ["instinct-familie", "Instinct Familie"], ["tankspur", "Tankspur"],
-    ["scheinbar", "ScheinBar"], ["ablesbar", "AblesBar"], ["project-empire", "PROJECT EMPIRE"]
+    ["scheinbar", "ScheinBar"], ["ablesbar", "AblesBar"], ["project-empire", "PROJECT EMPIRE"], ["grow-all-in-one", "Grow All-In-One"]
   ];
 
   const sym = (name) => {
